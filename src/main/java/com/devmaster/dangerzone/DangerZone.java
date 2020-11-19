@@ -1,6 +1,8 @@
 package com.devmaster.dangerzone;
 
+import com.devmaster.dangerzone.init.Items;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -19,8 +21,7 @@ public class DangerZone {
 
         public static boolean debug;
 
-        public static ItemGroup DEFAULT_GROUP;
-        public static ItemGroup EGG_ORE_GROUP;
+
 
         //public static DangerZoneConfig config;
 
@@ -34,8 +35,6 @@ public class DangerZone {
             FMLJavaModLoadingContext.get().getModEventBus().addListener(this::finishLoading);
             MinecraftForge.EVENT_BUS.register(this);
 
-            //DEFAULT_GROUP = new ItemGroupDangerZone.DangerZoneGroup();
-           // EGG_ORE_GROUP = new ItemGroupDangerZone.EggOreGroup();
         }
 
         private void setup(final FMLCommonSetupEvent event) {
@@ -61,6 +60,20 @@ public class DangerZone {
             ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, configBuilder.build(), MODID + ".toml");
         }
 
-    }
+    public static final ItemGroup TAB = new ItemGroup("dangerzonetab") {
 
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(Items.AMETHYST.getItem());
+        }
+    };
+
+        public static final ItemGroup PETRIFIED_ORES = new ItemGroup("dangerzonepetrified_ores") {
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(Items.AMETHYST.getItem());
+        }
+    };
+}
 //}
