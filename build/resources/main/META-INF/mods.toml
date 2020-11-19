@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+issueTrackerURL="https://github.com/KingOfTheGamesYT/DangerZone/issues"
+
+[[mods]]
+modId="dangerzone"
+version="${file.jarVersion}"
+displayName="DangerZone"
+# A URL to query for updates for this mod. See the JSON update specification <here>
+#updateJSONURL="http://myurl.me/" #optional
+
+displayURL="https://www.curseforge.com/minecraft/mc-mods/dangerzone"
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="testz.jpg" #optional
+
+credits="Thanks for this mod goes to TheyCallMeDanger for making DangerZone the game" #optional
+authors="RedRoseWarrior aka DevMaster1015"
+description='''
+Brings the game DangerZone to Minecraft
+'''
+
+[[dependencies.insanityoverworld]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.insanityoverworld]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
