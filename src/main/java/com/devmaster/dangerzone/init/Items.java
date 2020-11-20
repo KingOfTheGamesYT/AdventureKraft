@@ -232,6 +232,7 @@ public class Items {
 	public static Item PILLAGER_EGG_ORE;
 	public static Item RAVAGER_EGG_ORE;
 	public static Item SHULKER_EGG_ORE;
+	public static Item MULE_EGG_ORE;
 
 	public static Item ENDER_EYE_BLOCK;
 	public static Item ENDER_PEARL_BLOCK;
@@ -435,7 +436,9 @@ public class Items {
 				GHAST_EGG_ORE = registerItemBlockMobOre(Blocks.GHAST_EGG_ORE),
 				PILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.PILLAGER_EGG_ORE),
 				RAVAGER_EGG_ORE = registerItemBlockMobOre(Blocks.RAVAGER_EGG_ORE),
-				SHULKER_EGG_ORE = registerItemBlockMobOre(Blocks.SHULKER_EGG_ORE)
+				SHULKER_EGG_ORE = registerItemBlockMobOre(Blocks.SHULKER_EGG_ORE),
+				MULE_EGG_ORE = registerItemBlockMobOre(Blocks.MULE_EGG_ORE)
+
 				//endregion
 
 			//	ENDER_EYE_BLOCK = registerItemBlock(Blocks.ENDER_EYE_BLOCK),
