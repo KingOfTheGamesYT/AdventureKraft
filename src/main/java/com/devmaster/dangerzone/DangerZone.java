@@ -1,5 +1,6 @@
 package com.devmaster.dangerzone;
 
+import com.devmaster.dangerzone.init.Blocks;
 import com.devmaster.dangerzone.init.DangerZoneConfig;
 import com.devmaster.dangerzone.init.Items;
 import com.devmaster.dangerzone.world.gen.WorldGenOres;
@@ -73,7 +74,7 @@ public class DangerZone {
 
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(Items.AMETHYST.getItem());
+            return new ItemStack(Blocks.MULE_EGG_ORE);
         }
     };
 }
