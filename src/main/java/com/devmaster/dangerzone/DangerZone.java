@@ -1,6 +1,8 @@
 package com.devmaster.dangerzone;
 
+import com.devmaster.dangerzone.init.DangerZoneConfig;
 import com.devmaster.dangerzone.init.Items;
+import com.devmaster.dangerzone.world.gen.WorldGenOres;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -22,8 +24,7 @@ public class DangerZone {
         public static boolean debug;
 
 
-
-        //public static DangerZoneConfig config;
+        public static DangerZoneConfig config;
 
         public DangerZone() {
 
@@ -39,7 +40,7 @@ public class DangerZone {
 
         private void setup(final FMLCommonSetupEvent event) {
           //  CalendarUtils.dayCheck();
-          //  WorldGenOres.setupOreGen();
+            WorldGenOres.setupOreGen();
         }
 
         private void clientSetup(final FMLClientSetupEvent event) {
@@ -55,7 +56,7 @@ public class DangerZone {
         private void setupConfig() {
             ForgeConfigSpec.Builder configBuilder = new ForgeConfigSpec.Builder();
 
-          //  config = new DangerZoneConfig(configBuilder);
+            config = new DangerZoneConfig(configBuilder);
 
             ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, configBuilder.build(), MODID + ".toml");
         }

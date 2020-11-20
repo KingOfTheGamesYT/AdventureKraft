@@ -1,1 +1,117 @@
 
+#General settings
+[general]
+	#The length and height of the Instant Stair items
+	#Range: 0 ~ 128
+	stairHeight = 32
+	#The length of the Instant Bridge Item
+	#Range: 0 ~ 128
+	bridgeLength = 32
+
+#World gen
+[world_gen]
+	#Should Petrified Spawn Eggs generate
+	ShouldEggOresGenerate = true
+
+[egg_ore_world_gen]
+	#Should Petrified Blaze Spawn Egg generate.
+	blazeOre = true
+	#Should Petrified Turtle Spawn Egg generate.
+	turtleOre = true
+	#Should Petrified Ender Dragon Spawn Egg generate.
+	enderDragonOre = true
+	#Should Petrified Zombie Pigman Spawn Egg generate.
+	zombiePigmanOre = true
+	#Should Petrified Magma Cube Spawn Egg generate.
+	magmaCubeOre = true
+	#Should Petrified Ghast Spawn Egg generate.
+	ghastOre = true
+	#Should Petrified Ocelot Spawn Egg generate.
+	ocelotOre = true
+	#Should Petrified Cow Spawn Egg generate.
+	cowOre = true
+	#Should Petrified Vindicator Spawn Egg generate.
+	vindicatorOre = true
+	#Should Petrified Villager Spawn Egg generate.
+	villagerOre = true
+	#Should Petrified Enderman Spawn Egg generate.
+	endermanOre = true
+	#Should Petrified Chicken Spawn Egg generate.
+	chickenOre = true
+	#Should Petrified Horse Spawn Egg generate.
+	horseOre = true
+	#Should Petrified Wolf Spawn Egg generate.
+	wolfOre = true
+	#Should Petrified Polar Bear Spawn Egg generate.
+	polarBearOre = true
+	#Should Petrified Zombie Spawn Egg generate.
+	zombieOre = true
+	#Should Petrified Spider Spawn Egg generate.
+	spiderOre = true
+	#Should Petrified Shulker Spawn Egg generate.
+	shulkerOre = true
+	#Should Petrified Dolphin Spawn Egg generate.
+	dolphinOre = true
+	#Should Petrified Donkey Spawn Egg generate.
+	donkeyOre = true
+	#Should Petrified Evoker Spawn Egg generate.
+	evokerOre = true
+	#Should Petrified Squid Spawn Egg generate.
+	squidOre = true
+	#Should Petrified Witch Spawn Egg generate.
+	witchOre = true
+	#Should Petrified Iron Golem Spawn Egg generate.
+	ironGolemOre = true
+	#Should Petrified Snow Golem Spawn Egg generate.
+	snowGolemOre = true
+	#Should Petrified Mooshroom Spawn Egg generate.
+	mooshroomOre = true
+	#Should Petrified Ravager Spawn Egg generate.
+	ravagerOre = true
+	#Should Petrified Llama Spawn Egg generate.
+	llamaOre = true
+	#Should Petrified Elder Guardian Spawn Egg generate.
+	elderGuardianOre = true
+	#Should Petrified Husk Spawn Egg generate.
+	huskOre = true
+	#Should Petrified Bat Spawn Egg generate.
+	batOre = true
+	#Should Petrified Sheep Spawn Egg generate.
+	sheepOre = true
+	#Should Petrified Rabbit Spawn Egg generate.
+	rabbitOre = true
+	#Should Petrified Drowned Spawn Egg generate.
+	drownedOre = true
+	#Should Petrified Parrot Spawn Egg generate.
+	parrotOre = true
+	#Should Petrified Cat Spawn Egg generate.
+	catOre = true
+	#Should Petrified Skeleton Spawn Egg generate.
+	skeletonOre = true
+	#Should Petrified Wither Spawn Egg generate.
+	witherOre = true
+	#Should Petrified Cave Spider Spawn Egg generate.
+	caveSpiderOre = true
+	#Should Petrified Endermite Spawn Egg generate.
+	endermiteOre = true
+	#Should Petrified Slime Spawn Egg generate.
+	slimeOre = true
+	#Should Petrified Pig Spawn Egg generate.
+	pigOre = true
+	#Should Petrified Panda Bear Spawn Egg generate.
+	pandaBearOre = true
+	#Should Petrified Stray Spawn Egg generate.
+	strayOre = true
+	#Should Petrified Wither Skeleton Spawn Egg generate.
+	witherSkeletonOre = true
+	#Should Petrified Fox Spawn Egg generate.
+	foxOre = true
+	#Should Petrified Pillager Spawn Egg generate.
+	pillagerOre = true
+	#Should Petrified Phantom Spawn Egg generate.
+	phantomOre = true
+	#Should Petrified Creeper Spawn Egg generate.
+	creeperOre = true
+	#Should Petrified Guardian Spawn Egg generate.
+	guardianOre = true
+

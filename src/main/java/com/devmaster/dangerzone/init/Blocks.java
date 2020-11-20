@@ -3,6 +3,7 @@ package com.devmaster.dangerzone.init;
 import com.devmaster.dangerzone.DangerZone;
 import com.devmaster.dangerzone.blocks.AmethystBlock;
 import com.devmaster.dangerzone.blocks.AmethystOreBlock;
+import com.devmaster.dangerzone.blocks.BlockMobOre;
 import net.minecraft.block.Block;
 import net.minecraft.block.GlassBlock;
 import net.minecraft.block.MushroomBlock;
@@ -88,21 +89,18 @@ public class Blocks {
 	public static Block PILLAGER_EGG_ORE;
 	public static Block RAVAGER_EGG_ORE;
 	public static Block SHULKER_EGG_ORE;
-
-
-	//maybe we will add them later
-	//public static Block codEggOre;
-	//public static Block muleEggOre;
-	//public static Block pufferfishEggOre;
-	//public static Block salmonEggOre;
-	//public static Block silverfishEggOre;
-	//public static Block skeletonHorseEggOre;
-	//public static Block traderLlamaEggOre;
-	//public static Block tropicalFishEggOre;
-	//public static Block vexEggOre;
-	//public static Block wanderingTraderEggOre;
-	//public static Block zombieHorseEggOre;
-	//public static Block villagerZombieEggOre;
+	public static Block COD_EGG_ORE;
+	public static Block MULE_EGG_ORE;
+	public static Block PUFFER_FISH_EGG_ORE;
+	public static Block SALMON_EGG_ORE;
+	public static Block SILVERFISH_EGG_ORE;
+	public static Block SKELETON_HORSE_EGG_ORE;
+	public static Block TRADER_LLAMA_EGG_ORE;
+	public static Block TROPICAL_FISH_EGG_ORE;
+	public static Block VEX_EGG_ORE;
+	public static Block WANDERING_TRADER_EGG_ORE;
+	public static Block ZOMBIE_HORSE_EGG_ORE;
+	public static Block VILLAGER_ZOMBIE_EGG_ORE;
 	//endregion
 
 	//region misc
@@ -124,7 +122,7 @@ public class Blocks {
 		event.getRegistry().registerAll(
 				//region Materials
 				AMETHYST_BLOCK = new AmethystBlock().setRegistryName("amethyst_block"),
-				AMETHYST_ORE_BLOCK = new AmethystOreBlock().setRegistryName("amethyst_ore_block")
+				AMETHYST_ORE_BLOCK = new AmethystOreBlock().setRegistryName("amethyst_ore_block"),
 			//	RUBY_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_block"),
 				//RUBY_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_ore"),
 
@@ -142,57 +140,56 @@ public class Blocks {
 
 
 				//region vanilla eggs
-				//BAT_EGG_ORE = new BlockMobOre(getLocation("bat_ore")),
-				//BLAZE_EGG_ORE = new BlockMobOre(getLocation("blaze_ore")),
-				//CAVE_SPIDER_EGG_ORE = new BlockMobOre(getLocation("cavespider_ore")),
-			//	CHICKEN_EGG_ORE = new BlockMobOre(getLocation("chicken_ore")),
-			//	COW_EGG_ORE = new BlockMobOre(getLocation("cow_ore")),
-			//	CREEPER_EGG_ORE = new BlockMobOre(getLocation("creeper_ore")),
-			//	DOLPHIN_EGG_ORE = new BlockMobOre(getLocation("dolphin_ore")),
-			//	DONKEY_EGG_ORE = new BlockMobOre(getLocation("donkey_ore")),
-				//DROWNED_EGG_ORE = new BlockMobOre(getLocation("drowned_ore")),
-			//	ELDER_GUARDIAN_EGG_ORE = new BlockMobOre(getLocation("elder_guardian_ore")),
-			//	ENDER_DRAGON_EGG_ORE = new BlockMobOre(getLocation("enderdragon_ore")),
-			//	ENDERMAN_EGG_ORE = new BlockMobOre(getLocation("enderman_ore")),
-				//EVOKER_EGG_ORE = new BlockMobOre(getLocation("evoker_ore")),
-			//	GUARDIAN_EGG_ORE = new BlockMobOre(getLocation("guardian_ore")),
-				//HORSE_EGG_ORE = new BlockMobOre(getLocation("horse_ore")),
-			//	HUSK_EGG_ORE = new BlockMobOre(getLocation("husk_ore")),
-			//	IRON_GOLEM_EGG_ORE = new BlockMobOre(getLocation("iron_golem_ore")),
-			//	LLAMA_EGG_ORE = new BlockMobOre(getLocation("llama_ore")),
-			//	MAGMA_CUBE_EGG_ORE = new BlockMobOre(getLocation("magmacube_ore")),
-			//	MOOSHROOM_EGG_ORE = new BlockMobOre(getLocation("mooshroom_ore")),
-			//	OCELOT_EGG_ORE = new BlockMobOre(getLocation("ocelot_ore")),
-			//	PANDA_EGG_ORE = new BlockMobOre(getLocation("panda_ore")),
-			//	PARROT_EGG_ORE = new BlockMobOre(getLocation("parrot_ore")),
-			//	PHANTOM_EGG_ORE = new BlockMobOre(getLocation("phantom_ore")),
-			//	PIG_EGG_ORE = new BlockMobOre(getLocation("pig_ore")),
-			//	POLAR_BEAR_EGG_ORE = new BlockMobOre(getLocation("polarbear_ore")),
-				//RABBIT_EGG_ORE = new BlockMobOre(getLocation("rabbit_ore")),
-			//	SHEEP_EGG_ORE = new BlockMobOre(getLocation("sheep_ore")),
-			//	SKELETON_EGG_ORE = new BlockMobOre(getLocation("skeleton_ore")),
-			//	SLIME_EGG_ORE = new BlockMobOre(getLocation("slime_ore")),
-			//	SNOW_GOLEM_EGG_ORE = new BlockMobOre(getLocation("snow_golem_ore")),
-				//SPIDER_EGG_ORE = new BlockMobOre(getLocation("spider_ore")),
-			//	SQUID_EGG_ORE = new BlockMobOre(getLocation("squid_ore")),
-			//	STRAY_EGG_ORE = new BlockMobOre(getLocation("stray_ore")),
-			//	TURTLE_EGG_ORE = new BlockMobOre(getLocation("turtle_ore")),
-			//	VILLAGER_EGG_ORE = new BlockMobOre(getLocation("villager_ore")),
-			//	VINDICATOR_EGG_ORE = new BlockMobOre(getLocation("vindicator_ore")),
-			//	WITCH_EGG_ORE = new BlockMobOre(getLocation("witch_ore")),
-			//	WITHER_EGG_ORE = new BlockMobOre(getLocation("wither_ore")),
-			//	WITHER_SKELETON_EGG_ORE = new BlockMobOre(getLocation("wither_skeleton_ore")),
-			//	WOLF_EGG_ORE = new BlockMobOre(getLocation("wolf_ore")),
-				//ZOMBIE_EGG_ORE = new BlockMobOre(getLocation("zombie_ore")),
-				//ZOMBIE_PIGMAN_EGG_ORE = new BlockMobOre(getLocation("zombie_pigman_ore")),
-
-				//CAT_EGG_ORE = new BlockMobOre(getLocation("cat_ore")),
-			//	ENDERMITE_EGG_ORE = new BlockMobOre(getLocation("endermite_ore")),
-			//	FOX_EGG_ORE = new BlockMobOre(getLocation("fox_ore")),
-			//	GHAST_EGG_ORE = new BlockMobOre(getLocation("ghast_ore")),
-			//	PILLAGER_EGG_ORE = new BlockMobOre(getLocation("pillager_ore")),
-			//	RAVAGER_EGG_ORE = new BlockMobOre(getLocation("ravager_ore")),
-			//	SHULKER_EGG_ORE = new BlockMobOre(getLocation("shulker_ore")),
+				BAT_EGG_ORE = new BlockMobOre(getLocation("bat_ore")),
+				BLAZE_EGG_ORE = new BlockMobOre(getLocation("blaze_ore")),
+				CAVE_SPIDER_EGG_ORE = new BlockMobOre(getLocation("cavespider_ore")),
+				CHICKEN_EGG_ORE = new BlockMobOre(getLocation("chicken_ore")),
+				COW_EGG_ORE = new BlockMobOre(getLocation("cow_ore")),
+				CREEPER_EGG_ORE = new BlockMobOre(getLocation("creeper_ore")),
+				DOLPHIN_EGG_ORE = new BlockMobOre(getLocation("dolphin_ore")),
+				DONKEY_EGG_ORE = new BlockMobOre(getLocation("donkey_ore")),
+				DROWNED_EGG_ORE = new BlockMobOre(getLocation("drowned_ore")),
+				ELDER_GUARDIAN_EGG_ORE = new BlockMobOre(getLocation("elder_guardian_ore")),
+				ENDER_DRAGON_EGG_ORE = new BlockMobOre(getLocation("enderdragon_ore")),
+				ENDERMAN_EGG_ORE = new BlockMobOre(getLocation("enderman_ore")),
+				EVOKER_EGG_ORE = new BlockMobOre(getLocation("evoker_ore")),
+				GUARDIAN_EGG_ORE = new BlockMobOre(getLocation("guardian_ore")),
+				HORSE_EGG_ORE = new BlockMobOre(getLocation("horse_ore")),
+				HUSK_EGG_ORE = new BlockMobOre(getLocation("husk_ore")),
+				IRON_GOLEM_EGG_ORE = new BlockMobOre(getLocation("iron_golem_ore")),
+				LLAMA_EGG_ORE = new BlockMobOre(getLocation("llama_ore")),
+				MAGMA_CUBE_EGG_ORE = new BlockMobOre(getLocation("magmacube_ore")),
+				MOOSHROOM_EGG_ORE = new BlockMobOre(getLocation("mooshroom_ore")),
+				OCELOT_EGG_ORE = new BlockMobOre(getLocation("ocelot_ore")),
+				PANDA_EGG_ORE = new BlockMobOre(getLocation("panda_ore")),
+				PARROT_EGG_ORE = new BlockMobOre(getLocation("parrot_ore")),
+				PHANTOM_EGG_ORE = new BlockMobOre(getLocation("phantom_ore")),
+				PIG_EGG_ORE = new BlockMobOre(getLocation("pig_ore")),
+				POLAR_BEAR_EGG_ORE = new BlockMobOre(getLocation("polarbear_ore")),
+				RABBIT_EGG_ORE = new BlockMobOre(getLocation("rabbit_ore")),
+				SHEEP_EGG_ORE = new BlockMobOre(getLocation("sheep_ore")),
+				SKELETON_EGG_ORE = new BlockMobOre(getLocation("skeleton_ore")),
+				SLIME_EGG_ORE = new BlockMobOre(getLocation("slime_ore")),
+				SNOW_GOLEM_EGG_ORE = new BlockMobOre(getLocation("snow_golem_ore")),
+				SPIDER_EGG_ORE = new BlockMobOre(getLocation("spider_ore")),
+				SQUID_EGG_ORE = new BlockMobOre(getLocation("squid_ore")),
+				STRAY_EGG_ORE = new BlockMobOre(getLocation("stray_ore")),
+				TURTLE_EGG_ORE = new BlockMobOre(getLocation("turtle_ore")),
+				VILLAGER_EGG_ORE = new BlockMobOre(getLocation("villager_ore")),
+				VINDICATOR_EGG_ORE = new BlockMobOre(getLocation("vindicator_ore")),
+				WITCH_EGG_ORE = new BlockMobOre(getLocation("witch_ore")),
+				WITHER_EGG_ORE = new BlockMobOre(getLocation("wither_ore")),
+				WITHER_SKELETON_EGG_ORE = new BlockMobOre(getLocation("wither_skeleton_ore")),
+				WOLF_EGG_ORE = new BlockMobOre(getLocation("wolf_ore")),
+				ZOMBIE_EGG_ORE = new BlockMobOre(getLocation("zombie_ore")),
+				ZOMBIE_PIGMAN_EGG_ORE = new BlockMobOre(getLocation("zombie_pigman_ore")),
+				CAT_EGG_ORE = new BlockMobOre(getLocation("cat_ore")),
+				ENDERMITE_EGG_ORE = new BlockMobOre(getLocation("endermite_ore")),
+				FOX_EGG_ORE = new BlockMobOre(getLocation("fox_ore")),
+				GHAST_EGG_ORE = new BlockMobOre(getLocation("ghast_ore")),
+				PILLAGER_EGG_ORE = new BlockMobOre(getLocation("pillager_ore")),
+				RAVAGER_EGG_ORE = new BlockMobOre(getLocation("ravager_ore")),
+				SHULKER_EGG_ORE = new BlockMobOre(getLocation("shulker_ore"))
 				//endregion
 
 				//region misc

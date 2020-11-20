@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.init;
 
 import com.devmaster.dangerzone.DangerZone;
+import com.devmaster.dangerzone.blocks.BlockItemMobOre;
 import com.devmaster.dangerzone.items.Amethyst;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
@@ -370,7 +371,7 @@ public class Items {
 
 				//region Blocks
 				AMETHYST_BLOCK = registerItemBlock(Blocks.AMETHYST_BLOCK),
-				AMETHYST_ORE = registerItemBlock(Blocks.AMETHYST_ORE_BLOCK)
+				AMETHYST_ORE = registerItemBlock(Blocks.AMETHYST_ORE_BLOCK),
 			//	RUBY_BLOCK = registerItemBlock(Blocks.RUBY_BLOCK),
 				//RUBY_ORE = registerItemBlock(Blocks.RUBY_ORE),
 			//	TITANIUM_BLOCK = registerItemBlock(Blocks.TITANIUM_BLOCK),
@@ -383,56 +384,56 @@ public class Items {
 				//TIGER_EYE_ORE = registerItemBlock(Blocks.TIGER_EYE_ORE),
 
 				//region Egg Ores
-				//BAT_EGG_ORE = registerItemBlockMobOre(Blocks.BAT_EGG_ORE),
-			//	BLAZE_EGG_ORE = registerItemBlockMobOre(Blocks.BLAZE_EGG_ORE),
-				//CAVE_SPIDER_EGG_ORE = registerItemBlockMobOre(Blocks.CAVE_SPIDER_EGG_ORE),
-				//CHICKEN_EGG_ORE = registerItemBlockMobOre(Blocks.CHICKEN_EGG_ORE),
-			//	COW_EGG_ORE = registerItemBlockMobOre(Blocks.COW_EGG_ORE),
-				//CREEPER_EGG_ORE = registerItemBlockMobOre(Blocks.CREEPER_EGG_ORE),
-				//DOLPHIN_EGG_ORE = registerItemBlockMobOre(Blocks.DOLPHIN_EGG_ORE),
-				//DONKEY_EGG_ORE = registerItemBlockMobOre(Blocks.DONKEY_EGG_ORE),
-				//DROWNED_EGG_ORE = registerItemBlockMobOre(Blocks.DROWNED_EGG_ORE),
-				//ELDER_GUARDIAN_EGG_ORE = registerItemBlockMobOre(Blocks.ELDER_GUARDIAN_EGG_ORE),
-				//ENDER_DRAGON_EGG_ORE = registerItemBlockMobOre(Blocks.ENDER_DRAGON_EGG_ORE),
-				//ENDERMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ENDERMAN_EGG_ORE),
-				//EVOKER_EGG_ORE = registerItemBlockMobOre(Blocks.EVOKER_EGG_ORE),
-				//GUARDIAN_EGG_ORE = registerItemBlockMobOre(Blocks.GUARDIAN_EGG_ORE),
-				//HORSE_EGG_ORE = registerItemBlockMobOre(Blocks.HORSE_EGG_ORE),
-				//HUSK_EGG_ORE = registerItemBlockMobOre(Blocks.HUSK_EGG_ORE),
-				//IRON_GOLEM_EGG_ORE = registerItemBlockMobOre(Blocks.IRON_GOLEM_EGG_ORE),
-				//LLAMA_EGG_ORE = registerItemBlockMobOre(Blocks.LLAMA_EGG_ORE),
-				//MAGMA_CUBE_EGG_ORE = registerItemBlockMobOre(Blocks.MAGMA_CUBE_EGG_ORE),
-				//MOOSHROOM_EGG_ORE = registerItemBlockMobOre(Blocks.MOOSHROOM_EGG_ORE),
-				//OCELOT_EGG_ORE = registerItemBlockMobOre(Blocks.OCELOT_EGG_ORE)
-				//PANDA_EGG_ORE = registerItemBlockMobOre(Blocks.PANDA_EGG_ORE),
-				//PARROT_EGG_ORE = registerItemBlockMobOre(Blocks.PARROT_EGG_ORE),
-			//	PHANTOM_EGG_ORE = registerItemBlockMobOre(Blocks.PHANTOM_EGG_ORE),
-				//PIG_EGG_ORE = registerItemBlockMobOre(Blocks.PIG_EGG_ORE),
-				//POLAR_BEAR_EGG_ORE = registerItemBlockMobOre(Blocks.POLAR_BEAR_EGG_ORE),
-				//RABBIT_EGG_ORE = registerItemBlockMobOre(Blocks.RABBIT_EGG_ORE),
-				//SHEEP_EGG_ORE = registerItemBlockMobOre(Blocks.SHEEP_EGG_ORE),
-				//SKELETON_EGG_ORE = registerItemBlockMobOre(Blocks.SKELETON_EGG_ORE),
-				//SLIME_EGG_ORE = registerItemBlockMobOre(Blocks.SLIME_EGG_ORE),
-				//SNOW_GOLEM_EGG_ORE = registerItemBlockMobOre(Blocks.SNOW_GOLEM_EGG_ORE),
-				//SPIDER_EGG_ORE = registerItemBlockMobOre(Blocks.SPIDER_EGG_ORE),
-			//	SQUID_EGG_ORE = registerItemBlockMobOre(Blocks.SQUID_EGG_ORE),
-			//	STRAY_EGG_ORE = registerItemBlockMobOre(Blocks.STRAY_EGG_ORE),
-			//	TURTLE_EGG_ORE = registerItemBlockMobOre(Blocks.TURTLE_EGG_ORE),
-			//	VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.VILLAGER_EGG_ORE),
-			//	VINDICATOR_EGG_ORE = registerItemBlockMobOre(Blocks.VINDICATOR_EGG_ORE),
-			//	WITCH_EGG_ORE = registerItemBlockMobOre(Blocks.WITCH_EGG_ORE),
-			//	WITHER_EGG_ORE = registerItemBlockMobOre(Blocks.WITHER_EGG_ORE),
-			//	WITHER_SKELETON_EGG_ORE = registerItemBlockMobOre(Blocks.WITHER_SKELETON_EGG_ORE),
-			//	WOLF_EGG_ORE = registerItemBlockMobOre(Blocks.WOLF_EGG_ORE),
-				//ZOMBIE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_EGG_ORE),
-				//ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_PIGMAN_EGG_ORE),
-				//CAT_EGG_ORE = registerItemBlockMobOre(Blocks.CAT_EGG_ORE),
-			//	ENDERMITE_EGG_ORE = registerItemBlockMobOre(Blocks.ENDERMITE_EGG_ORE),
-			//	FOX_EGG_ORE = registerItemBlockMobOre(Blocks.FOX_EGG_ORE),
-				//GHAST_EGG_ORE = registerItemBlockMobOre(Blocks.GHAST_EGG_ORE),
-			//	PILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.PILLAGER_EGG_ORE),
-			//	RAVAGER_EGG_ORE = registerItemBlockMobOre(Blocks.RAVAGER_EGG_ORE),
-			//	SHULKER_EGG_ORE = registerItemBlockMobOre(Blocks.SHULKER_EGG_ORE),
+				BAT_EGG_ORE = registerItemBlockMobOre(Blocks.BAT_EGG_ORE),
+				BLAZE_EGG_ORE = registerItemBlockMobOre(Blocks.BLAZE_EGG_ORE),
+				CAVE_SPIDER_EGG_ORE = registerItemBlockMobOre(Blocks.CAVE_SPIDER_EGG_ORE),
+				CHICKEN_EGG_ORE = registerItemBlockMobOre(Blocks.CHICKEN_EGG_ORE),
+				COW_EGG_ORE = registerItemBlockMobOre(Blocks.COW_EGG_ORE),
+				CREEPER_EGG_ORE = registerItemBlockMobOre(Blocks.CREEPER_EGG_ORE),
+				DOLPHIN_EGG_ORE = registerItemBlockMobOre(Blocks.DOLPHIN_EGG_ORE),
+				DONKEY_EGG_ORE = registerItemBlockMobOre(Blocks.DONKEY_EGG_ORE),
+				DROWNED_EGG_ORE = registerItemBlockMobOre(Blocks.DROWNED_EGG_ORE),
+				ELDER_GUARDIAN_EGG_ORE = registerItemBlockMobOre(Blocks.ELDER_GUARDIAN_EGG_ORE),
+				ENDER_DRAGON_EGG_ORE = registerItemBlockMobOre(Blocks.ENDER_DRAGON_EGG_ORE),
+				ENDERMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ENDERMAN_EGG_ORE),
+				EVOKER_EGG_ORE = registerItemBlockMobOre(Blocks.EVOKER_EGG_ORE),
+				GUARDIAN_EGG_ORE = registerItemBlockMobOre(Blocks.GUARDIAN_EGG_ORE),
+				HORSE_EGG_ORE = registerItemBlockMobOre(Blocks.HORSE_EGG_ORE),
+				HUSK_EGG_ORE = registerItemBlockMobOre(Blocks.HUSK_EGG_ORE),
+				IRON_GOLEM_EGG_ORE = registerItemBlockMobOre(Blocks.IRON_GOLEM_EGG_ORE),
+				LLAMA_EGG_ORE = registerItemBlockMobOre(Blocks.LLAMA_EGG_ORE),
+				MAGMA_CUBE_EGG_ORE = registerItemBlockMobOre(Blocks.MAGMA_CUBE_EGG_ORE),
+				MOOSHROOM_EGG_ORE = registerItemBlockMobOre(Blocks.MOOSHROOM_EGG_ORE),
+				OCELOT_EGG_ORE = registerItemBlockMobOre(Blocks.OCELOT_EGG_ORE),
+				PANDA_EGG_ORE = registerItemBlockMobOre(Blocks.PANDA_EGG_ORE),
+				PARROT_EGG_ORE = registerItemBlockMobOre(Blocks.PARROT_EGG_ORE),
+				PHANTOM_EGG_ORE = registerItemBlockMobOre(Blocks.PHANTOM_EGG_ORE),
+				PIG_EGG_ORE = registerItemBlockMobOre(Blocks.PIG_EGG_ORE),
+				POLAR_BEAR_EGG_ORE = registerItemBlockMobOre(Blocks.POLAR_BEAR_EGG_ORE),
+				RABBIT_EGG_ORE = registerItemBlockMobOre(Blocks.RABBIT_EGG_ORE),
+				SHEEP_EGG_ORE = registerItemBlockMobOre(Blocks.SHEEP_EGG_ORE),
+				SKELETON_EGG_ORE = registerItemBlockMobOre(Blocks.SKELETON_EGG_ORE),
+				SLIME_EGG_ORE = registerItemBlockMobOre(Blocks.SLIME_EGG_ORE),
+				SNOW_GOLEM_EGG_ORE = registerItemBlockMobOre(Blocks.SNOW_GOLEM_EGG_ORE),
+				SPIDER_EGG_ORE = registerItemBlockMobOre(Blocks.SPIDER_EGG_ORE),
+				SQUID_EGG_ORE = registerItemBlockMobOre(Blocks.SQUID_EGG_ORE),
+				STRAY_EGG_ORE = registerItemBlockMobOre(Blocks.STRAY_EGG_ORE),
+				TURTLE_EGG_ORE = registerItemBlockMobOre(Blocks.TURTLE_EGG_ORE),
+				VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.VILLAGER_EGG_ORE),
+				VINDICATOR_EGG_ORE = registerItemBlockMobOre(Blocks.VINDICATOR_EGG_ORE),
+				WITCH_EGG_ORE = registerItemBlockMobOre(Blocks.WITCH_EGG_ORE),
+				WITHER_EGG_ORE = registerItemBlockMobOre(Blocks.WITHER_EGG_ORE),
+				WITHER_SKELETON_EGG_ORE = registerItemBlockMobOre(Blocks.WITHER_SKELETON_EGG_ORE),
+				WOLF_EGG_ORE = registerItemBlockMobOre(Blocks.WOLF_EGG_ORE),
+				ZOMBIE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_EGG_ORE),
+				ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_PIGMAN_EGG_ORE),
+				CAT_EGG_ORE = registerItemBlockMobOre(Blocks.CAT_EGG_ORE),
+				ENDERMITE_EGG_ORE = registerItemBlockMobOre(Blocks.ENDERMITE_EGG_ORE),
+				FOX_EGG_ORE = registerItemBlockMobOre(Blocks.FOX_EGG_ORE),
+				GHAST_EGG_ORE = registerItemBlockMobOre(Blocks.GHAST_EGG_ORE),
+				PILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.PILLAGER_EGG_ORE),
+				RAVAGER_EGG_ORE = registerItemBlockMobOre(Blocks.RAVAGER_EGG_ORE),
+				SHULKER_EGG_ORE = registerItemBlockMobOre(Blocks.SHULKER_EGG_ORE)
 				//endregion
 
 			//	ENDER_EYE_BLOCK = registerItemBlock(Blocks.ENDER_EYE_BLOCK),
@@ -453,9 +454,9 @@ public class Items {
 		return new BlockItem(block, new Item.Properties().group(TAB)).setRegistryName(block.getRegistryName());
 	}
 
-	//private static Item registerItemBlockMobOre(Block block) {
-	//	return new BlockItemMobOre(block);
-	//}
+	private static Item registerItemBlockMobOre(Block block) {
+		return new BlockItemMobOre(block);
+	}
 
 
 }
