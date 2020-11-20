@@ -186,6 +186,7 @@ public class Items {
 	public static Item CAVE_SPIDER_EGG_ORE;
 	public static Item CHICKEN_EGG_ORE;
 	public static Item COW_EGG_ORE;
+	public static Item COD_EGG_ORE;
 	public static Item CREEPER_EGG_ORE;
 	public static Item DOLPHIN_EGG_ORE;
 	public static Item DONKEY_EGG_ORE;
@@ -389,6 +390,7 @@ public class Items {
 				CAVE_SPIDER_EGG_ORE = registerItemBlockMobOre(Blocks.CAVE_SPIDER_EGG_ORE),
 				CHICKEN_EGG_ORE = registerItemBlockMobOre(Blocks.CHICKEN_EGG_ORE),
 				COW_EGG_ORE = registerItemBlockMobOre(Blocks.COW_EGG_ORE),
+				COD_EGG_ORE = registerItemBlockMobOre(Blocks.COD_EGG_ORE),
 				CREEPER_EGG_ORE = registerItemBlockMobOre(Blocks.CREEPER_EGG_ORE),
 				DOLPHIN_EGG_ORE = registerItemBlockMobOre(Blocks.DOLPHIN_EGG_ORE),
 				DONKEY_EGG_ORE = registerItemBlockMobOre(Blocks.DONKEY_EGG_ORE),

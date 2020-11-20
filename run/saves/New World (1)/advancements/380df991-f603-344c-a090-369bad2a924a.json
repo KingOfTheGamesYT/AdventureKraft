@@ -1,16 +1,4 @@
 {
-  "minecraft:recipes/transportation/acacia_boat": {
-    "criteria": {
-      "in_water": "2020-11-19 17:25:21 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/oak_boat": {
-    "criteria": {
-      "in_water": "2020-11-19 17:25:21 -0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/food/dried_kelp_from_smelting": {
     "criteria": {
       "has_kelp": "2020-11-19 17:39:42 -0500"
@@ -35,21 +23,51 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/dried_kelp_from_campfire_cooking": {
+    "criteria": {
+      "has_kelp": "2020-11-19 17:39:42 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2020-11-19 17:25:21 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2020-11-19 17:25:21 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_cod_from_campfire_cooking": {
+    "criteria": {
+      "has_cod": "2020-11-19 21:33:57 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_cod_from_smoking": {
+    "criteria": {
+      "has_cod": "2020-11-19 21:33:57 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/jungle_boat": {
     "criteria": {
       "in_water": "2020-11-19 17:25:21 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/spruce_boat": {
+  "minecraft:recipes/food/cooked_cod": {
     "criteria": {
-      "in_water": "2020-11-19 17:25:21 -0500"
+      "has_cod": "2020-11-19 21:33:57 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/food/dried_kelp_from_campfire_cooking": {
+  "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
-      "has_kelp": "2020-11-19 17:39:42 -0500"
+      "in_water": "2020-11-19 17:25:21 -0500"
     },
     "done": true
   },

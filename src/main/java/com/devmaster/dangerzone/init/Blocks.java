@@ -189,7 +189,8 @@ public class Blocks {
 				GHAST_EGG_ORE = new BlockMobOre(getLocation("ghast_ore")),
 				PILLAGER_EGG_ORE = new BlockMobOre(getLocation("pillager_ore")),
 				RAVAGER_EGG_ORE = new BlockMobOre(getLocation("ravager_ore")),
-				SHULKER_EGG_ORE = new BlockMobOre(getLocation("shulker_ore"))
+				SHULKER_EGG_ORE = new BlockMobOre(getLocation("shulker_ore")),
+				COD_EGG_ORE = new BlockMobOre(getLocation("cod_ore"))
 				//endregion
 
 				//region misc
