@@ -234,6 +234,7 @@ public class Items {
 	public static Item ZOMBIE_EGG_ORE;
 	public static Item ZOMBIE_HORSE_EGG_ORE;
 	public static Item ZOMBIE_PIGMAN_EGG_ORE;
+	public static Item ZOMBIE_VILLAGER_EGG_ORE;
 
 	public static Item ENDER_EYE_BLOCK;
 	public static Item ENDER_PEARL_BLOCK;
@@ -439,7 +440,8 @@ public class Items {
 				WOLF_EGG_ORE = registerItemBlockMobOre(Blocks.WOLF_EGG_ORE),
 				ZOMBIE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_EGG_ORE),
 				ZOMBIE_HORSE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_HORSE_EGG_ORE),
-				ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_PIGMAN_EGG_ORE)
+				ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_PIGMAN_EGG_ORE),
+				ZOMBIE_VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_VILLAGER_EGG_ORE)
 
 
 				//endregion
