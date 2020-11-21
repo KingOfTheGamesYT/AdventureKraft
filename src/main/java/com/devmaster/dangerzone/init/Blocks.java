@@ -83,6 +83,7 @@ public class Blocks {
 	public static Block SQUID_EGG_ORE;
 	public static Block STRAY_EGG_ORE;
 	public static Block TURTLE_EGG_ORE;
+	public static Block VEX_EGG_ORE;
 	public static Block VILLAGER_EGG_ORE;
 	public static Block VINDICATOR_EGG_ORE;
 	public static Block WANDERING_TRADER_EGG_ORE;
@@ -101,7 +102,6 @@ public class Blocks {
 	public static Block SKELETON_HORSE_EGG_ORE;
 	public static Block TRADER_LLAMA_EGG_ORE;
 	public static Block TROPICAL_FISH_EGG_ORE;
-	public static Block VEX_EGG_ORE;
 	//endregion
 
 	//region misc
@@ -185,6 +185,7 @@ public class Blocks {
 				SQUID_EGG_ORE = new BlockMobOre(getLocation("squid_ore")),
 				STRAY_EGG_ORE = new BlockMobOre(getLocation("stray_ore")),
 				TURTLE_EGG_ORE = new BlockMobOre(getLocation("turtle_ore")),
+				VEX_EGG_ORE = new BlockMobOre(getLocation("vex_ore")),
 				VILLAGER_EGG_ORE = new BlockMobOre(getLocation("villager_ore")),
 				VINDICATOR_EGG_ORE = new BlockMobOre(getLocation("vindicator_ore")),
 				WANDERING_TRADER_EGG_ORE = new BlockMobOre(getLocation("wandering_trader_ore")),

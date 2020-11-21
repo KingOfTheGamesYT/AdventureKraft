@@ -225,6 +225,7 @@ public class Items {
 	public static Item SQUID_EGG_ORE;
 	public static Item STRAY_EGG_ORE;
 	public static Item TURTLE_EGG_ORE;
+	public static Item VEX_EGG_ORE;
 	public static Item VILLAGER_EGG_ORE;
 	public static Item VINDICATOR_EGG_ORE;
 	public static Item WANDERING_TRADER_EGG_ORE;
@@ -433,6 +434,7 @@ public class Items {
 				SQUID_EGG_ORE = registerItemBlockMobOre(Blocks.SQUID_EGG_ORE),
 				STRAY_EGG_ORE = registerItemBlockMobOre(Blocks.STRAY_EGG_ORE),
 				TURTLE_EGG_ORE = registerItemBlockMobOre(Blocks.TURTLE_EGG_ORE),
+				VEX_EGG_ORE = registerItemBlockMobOre(Blocks.VEX_EGG_ORE),
 				VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.VILLAGER_EGG_ORE),
 				VINDICATOR_EGG_ORE = registerItemBlockMobOre(Blocks.VINDICATOR_EGG_ORE),
 				WANDERING_TRADER_EGG_ORE = registerItemBlockMobOre(Blocks.WANDERING_TRADER_EGG_ORE),
