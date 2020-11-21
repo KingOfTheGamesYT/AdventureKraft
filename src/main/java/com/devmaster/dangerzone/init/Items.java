@@ -214,6 +214,7 @@ public class Items {
 	public static Item PIG_EGG_ORE;
 	public static Item PILLAGER_EGG_ORE;
 	public static Item POLAR_BEAR_EGG_ORE;
+	public static Item PUFFERFISH_EGG_ORE;
 	public static Item RABBIT_EGG_ORE;
 	public static Item RAVAGER_EGG_ORE;
 	public static Item SHEEP_EGG_ORE;
@@ -423,6 +424,7 @@ public class Items {
 				PIG_EGG_ORE = registerItemBlockMobOre(Blocks.PIG_EGG_ORE),
 				PILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.PILLAGER_EGG_ORE),
 				POLAR_BEAR_EGG_ORE = registerItemBlockMobOre(Blocks.POLAR_BEAR_EGG_ORE),
+				PUFFERFISH_EGG_ORE = registerItemBlockMobOre(Blocks.PUFFERFISH_EGG_ORE),
 				RABBIT_EGG_ORE = registerItemBlockMobOre(Blocks.RABBIT_EGG_ORE),
 				RAVAGER_EGG_ORE = registerItemBlockMobOre(Blocks.RAVAGER_EGG_ORE),
 				SHEEP_EGG_ORE = registerItemBlockMobOre(Blocks.SHEEP_EGG_ORE),
