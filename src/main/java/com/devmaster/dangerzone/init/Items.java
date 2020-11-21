@@ -185,6 +185,7 @@ public class Items {
 	public static Item BLAZE_EGG_ORE;
 	public static Item CAVE_SPIDER_EGG_ORE;
 	public static Item CHICKEN_EGG_ORE;
+	public static Item CAT_EGG_ORE;
 	public static Item COW_EGG_ORE;
 	public static Item COD_EGG_ORE;
 	public static Item CREEPER_EGG_ORE;
@@ -194,7 +195,10 @@ public class Items {
 	public static Item ELDER_GUARDIAN_EGG_ORE;
 	public static Item ENDER_DRAGON_EGG_ORE;
 	public static Item ENDERMAN_EGG_ORE;
+	public static Item ENDERMITE_EGG_ORE;
 	public static Item EVOKER_EGG_ORE;
+	public static Item FOX_EGG_ORE;
+	public static Item GHAST_EGG_ORE;
 	public static Item GUARDIAN_EGG_ORE;
 	public static Item HORSE_EGG_ORE;
 	public static Item HUSK_EGG_ORE;
@@ -202,14 +206,18 @@ public class Items {
 	public static Item LLAMA_EGG_ORE;
 	public static Item MAGMA_CUBE_EGG_ORE;
 	public static Item MOOSHROOM_EGG_ORE;
+	public static Item MULE_EGG_ORE;
 	public static Item OCELOT_EGG_ORE;
 	public static Item PANDA_EGG_ORE;
 	public static Item PARROT_EGG_ORE;
 	public static Item PHANTOM_EGG_ORE;
 	public static Item PIG_EGG_ORE;
+	public static Item PILLAGER_EGG_ORE;
 	public static Item POLAR_BEAR_EGG_ORE;
 	public static Item RABBIT_EGG_ORE;
+	public static Item RAVAGER_EGG_ORE;
 	public static Item SHEEP_EGG_ORE;
+	public static Item SHULKER_EGG_ORE;
 	public static Item SKELETON_EGG_ORE;
 	public static Item SLIME_EGG_ORE;
 	public static Item SNOW_GOLEM_EGG_ORE;
@@ -224,15 +232,8 @@ public class Items {
 	public static Item WITHER_SKELETON_EGG_ORE;
 	public static Item WOLF_EGG_ORE;
 	public static Item ZOMBIE_EGG_ORE;
+	public static Item ZOMBIE_HORSE_EGG_ORE;
 	public static Item ZOMBIE_PIGMAN_EGG_ORE;
-	public static Item CAT_EGG_ORE;
-	public static Item ENDERMITE_EGG_ORE;
-	public static Item FOX_EGG_ORE;
-	public static Item GHAST_EGG_ORE;
-	public static Item PILLAGER_EGG_ORE;
-	public static Item RAVAGER_EGG_ORE;
-	public static Item SHULKER_EGG_ORE;
-	public static Item MULE_EGG_ORE;
 
 	public static Item ENDER_EYE_BLOCK;
 	public static Item ENDER_PEARL_BLOCK;
@@ -388,6 +389,7 @@ public class Items {
 				//region Egg Ores
 				BAT_EGG_ORE = registerItemBlockMobOre(Blocks.BAT_EGG_ORE),
 				BLAZE_EGG_ORE = registerItemBlockMobOre(Blocks.BLAZE_EGG_ORE),
+				CAT_EGG_ORE = registerItemBlockMobOre(Blocks.CAT_EGG_ORE),
 				CAVE_SPIDER_EGG_ORE = registerItemBlockMobOre(Blocks.CAVE_SPIDER_EGG_ORE),
 				CHICKEN_EGG_ORE = registerItemBlockMobOre(Blocks.CHICKEN_EGG_ORE),
 				COW_EGG_ORE = registerItemBlockMobOre(Blocks.COW_EGG_ORE),
@@ -399,7 +401,10 @@ public class Items {
 				ELDER_GUARDIAN_EGG_ORE = registerItemBlockMobOre(Blocks.ELDER_GUARDIAN_EGG_ORE),
 				ENDER_DRAGON_EGG_ORE = registerItemBlockMobOre(Blocks.ENDER_DRAGON_EGG_ORE),
 				ENDERMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ENDERMAN_EGG_ORE),
+				ENDERMITE_EGG_ORE = registerItemBlockMobOre(Blocks.ENDERMITE_EGG_ORE),
 				EVOKER_EGG_ORE = registerItemBlockMobOre(Blocks.EVOKER_EGG_ORE),
+				FOX_EGG_ORE = registerItemBlockMobOre(Blocks.FOX_EGG_ORE),
+				GHAST_EGG_ORE = registerItemBlockMobOre(Blocks.GHAST_EGG_ORE),
 				GUARDIAN_EGG_ORE = registerItemBlockMobOre(Blocks.GUARDIAN_EGG_ORE),
 				HORSE_EGG_ORE = registerItemBlockMobOre(Blocks.HORSE_EGG_ORE),
 				HUSK_EGG_ORE = registerItemBlockMobOre(Blocks.HUSK_EGG_ORE),
@@ -407,14 +412,18 @@ public class Items {
 				LLAMA_EGG_ORE = registerItemBlockMobOre(Blocks.LLAMA_EGG_ORE),
 				MAGMA_CUBE_EGG_ORE = registerItemBlockMobOre(Blocks.MAGMA_CUBE_EGG_ORE),
 				MOOSHROOM_EGG_ORE = registerItemBlockMobOre(Blocks.MOOSHROOM_EGG_ORE),
+				MULE_EGG_ORE = registerItemBlockMobOre(Blocks.MULE_EGG_ORE),
 				OCELOT_EGG_ORE = registerItemBlockMobOre(Blocks.OCELOT_EGG_ORE),
 				PANDA_EGG_ORE = registerItemBlockMobOre(Blocks.PANDA_EGG_ORE),
 				PARROT_EGG_ORE = registerItemBlockMobOre(Blocks.PARROT_EGG_ORE),
 				PHANTOM_EGG_ORE = registerItemBlockMobOre(Blocks.PHANTOM_EGG_ORE),
 				PIG_EGG_ORE = registerItemBlockMobOre(Blocks.PIG_EGG_ORE),
+				PILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.PILLAGER_EGG_ORE),
 				POLAR_BEAR_EGG_ORE = registerItemBlockMobOre(Blocks.POLAR_BEAR_EGG_ORE),
 				RABBIT_EGG_ORE = registerItemBlockMobOre(Blocks.RABBIT_EGG_ORE),
+				RAVAGER_EGG_ORE = registerItemBlockMobOre(Blocks.RAVAGER_EGG_ORE),
 				SHEEP_EGG_ORE = registerItemBlockMobOre(Blocks.SHEEP_EGG_ORE),
+				SHULKER_EGG_ORE = registerItemBlockMobOre(Blocks.SHULKER_EGG_ORE),
 				SKELETON_EGG_ORE = registerItemBlockMobOre(Blocks.SKELETON_EGG_ORE),
 				SLIME_EGG_ORE = registerItemBlockMobOre(Blocks.SLIME_EGG_ORE),
 				SNOW_GOLEM_EGG_ORE = registerItemBlockMobOre(Blocks.SNOW_GOLEM_EGG_ORE),
@@ -429,15 +438,9 @@ public class Items {
 				WITHER_SKELETON_EGG_ORE = registerItemBlockMobOre(Blocks.WITHER_SKELETON_EGG_ORE),
 				WOLF_EGG_ORE = registerItemBlockMobOre(Blocks.WOLF_EGG_ORE),
 				ZOMBIE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_EGG_ORE),
-				ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_PIGMAN_EGG_ORE),
-				CAT_EGG_ORE = registerItemBlockMobOre(Blocks.CAT_EGG_ORE),
-				ENDERMITE_EGG_ORE = registerItemBlockMobOre(Blocks.ENDERMITE_EGG_ORE),
-				FOX_EGG_ORE = registerItemBlockMobOre(Blocks.FOX_EGG_ORE),
-				GHAST_EGG_ORE = registerItemBlockMobOre(Blocks.GHAST_EGG_ORE),
-				PILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.PILLAGER_EGG_ORE),
-				RAVAGER_EGG_ORE = registerItemBlockMobOre(Blocks.RAVAGER_EGG_ORE),
-				SHULKER_EGG_ORE = registerItemBlockMobOre(Blocks.SHULKER_EGG_ORE),
-				MULE_EGG_ORE = registerItemBlockMobOre(Blocks.MULE_EGG_ORE)
+				ZOMBIE_HORSE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_HORSE_EGG_ORE),
+				ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_PIGMAN_EGG_ORE)
+
 
 				//endregion
 

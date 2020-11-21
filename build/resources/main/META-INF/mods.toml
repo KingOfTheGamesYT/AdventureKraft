@@ -4,7 +4,7 @@ issueTrackerURL="https://github.com/KingOfTheGamesYT/DangerZone/issues"
 
 [[mods]]
 modId="dangerzone"
-version="${file.jarVersion}"
+version="1.0.0"
 displayName="DangerZone"
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
@@ -19,13 +19,13 @@ description='''
 Brings the game DangerZone to Minecraft
 '''
 
-[[dependencies.insanityoverworld]]
+[[dependencies.dangerzone]]
     modId="forge"
     mandatory=true
     versionRange="[31,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.insanityoverworld]]
+[[dependencies.dangerzone]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"
