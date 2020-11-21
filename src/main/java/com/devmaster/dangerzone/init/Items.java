@@ -220,6 +220,7 @@ public class Items {
 	public static Item SALMON_EGG_ORE;
 	public static Item SHEEP_EGG_ORE;
 	public static Item SHULKER_EGG_ORE;
+	public static Item SILVERFISH_EGG_ORE;
 	public static Item SKELETON_EGG_ORE;
 	public static Item SLIME_EGG_ORE;
 	public static Item SNOW_GOLEM_EGG_ORE;
@@ -431,6 +432,7 @@ public class Items {
 				SALMON_EGG_ORE = registerItemBlockMobOre(Blocks.SALMON_EGG_ORE),
 				SHEEP_EGG_ORE = registerItemBlockMobOre(Blocks.SHEEP_EGG_ORE),
 				SHULKER_EGG_ORE = registerItemBlockMobOre(Blocks.SHULKER_EGG_ORE),
+				SILVERFISH_EGG_ORE = registerItemBlockMobOre(Blocks.SILVERFISH_EGG_ORE),
 				SKELETON_EGG_ORE = registerItemBlockMobOre(Blocks.SKELETON_EGG_ORE),
 				SLIME_EGG_ORE = registerItemBlockMobOre(Blocks.SLIME_EGG_ORE),
 				SNOW_GOLEM_EGG_ORE = registerItemBlockMobOre(Blocks.SNOW_GOLEM_EGG_ORE),
