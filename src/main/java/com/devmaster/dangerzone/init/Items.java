@@ -227,6 +227,7 @@ public class Items {
 	public static Item TURTLE_EGG_ORE;
 	public static Item VILLAGER_EGG_ORE;
 	public static Item VINDICATOR_EGG_ORE;
+	public static Item WANDERING_TRADER_EGG_ORE;
 	public static Item WITCH_EGG_ORE;
 	public static Item WITHER_EGG_ORE;
 	public static Item WITHER_SKELETON_EGG_ORE;
@@ -434,6 +435,7 @@ public class Items {
 				TURTLE_EGG_ORE = registerItemBlockMobOre(Blocks.TURTLE_EGG_ORE),
 				VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.VILLAGER_EGG_ORE),
 				VINDICATOR_EGG_ORE = registerItemBlockMobOre(Blocks.VINDICATOR_EGG_ORE),
+				WANDERING_TRADER_EGG_ORE = registerItemBlockMobOre(Blocks.WANDERING_TRADER_EGG_ORE),
 				WITCH_EGG_ORE = registerItemBlockMobOre(Blocks.WITCH_EGG_ORE),
 				WITHER_EGG_ORE = registerItemBlockMobOre(Blocks.WITHER_EGG_ORE),
 				WITHER_SKELETON_EGG_ORE = registerItemBlockMobOre(Blocks.WITHER_SKELETON_EGG_ORE),
