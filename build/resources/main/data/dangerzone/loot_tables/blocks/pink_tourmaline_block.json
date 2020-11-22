@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:pink_tourmaline_block"
+          "name": "dangerzone:pink_tourmaline_block"
         }
       ],
       "conditions": [

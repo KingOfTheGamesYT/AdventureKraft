@@ -1,14 +1,14 @@
 {
-  "parent": "insanityoverworld:egg_ore/root",
+  "parent": "dangerzone:egg_ore/root",
   "display": {
     "icon": {
-      "item": "insanityoverworld:chicken_ore"
+      "item": "dangerzone:chicken_ore"
     },
     "title": {
-      "translate": "advancements.insanityoverworld.egg_ore.chicken_ore.title"
+      "translate": "advancements.dangerzone.egg_ore.chicken_ore.title"
     },
     "description": {
-      "translate": "advancements.insanityoverworld.egg_ore.chicken_ore.description"
+      "translate": "advancements.dangerzone.egg_ore.chicken_ore.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "item": "insanityoverworld:chicken_ore"
+            "item": "dangerzone:chicken_ore"
           }
         ]
       }

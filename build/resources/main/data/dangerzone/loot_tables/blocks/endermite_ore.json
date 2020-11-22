@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:endermite_ore"
+          "name": "dangerzone:endermite_ore"
         }
       ],
       "conditions": [

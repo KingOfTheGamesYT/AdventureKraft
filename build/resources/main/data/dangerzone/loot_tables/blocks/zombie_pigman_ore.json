@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:zombie_pigman_ore"
+          "name": "dangerzone:zombie_pigman_ore"
         }
       ],
       "conditions": [

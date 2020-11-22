@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:guardian_ore"
+          "name": "dangerzone:guardian_ore"
         }
       ],
       "conditions": [

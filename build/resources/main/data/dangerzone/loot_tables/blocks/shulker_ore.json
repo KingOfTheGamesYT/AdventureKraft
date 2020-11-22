@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:shulker_ore"
+          "name": "dangerzone:shulker_ore"
         }
       ],
       "conditions": [

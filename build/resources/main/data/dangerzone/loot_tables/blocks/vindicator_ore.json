@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:vindicator_ore"
+          "name": "dangerzone:vindicator_ore"
         }
       ],
       "conditions": [

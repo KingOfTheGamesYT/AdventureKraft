@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:drowned_ore"
+          "name": "dangerzone:drowned_ore"
         }
       ],
       "conditions": [

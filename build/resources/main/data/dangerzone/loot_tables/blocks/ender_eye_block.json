@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:ender_eye_block"
+          "name": "dangerzone:ender_eye_block"
         }
       ],
       "conditions": [

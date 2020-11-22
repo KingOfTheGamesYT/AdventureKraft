@@ -1,13 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "insanityoverworld:bat_ore"
+      "item": "dangerzone:bat_ore"
     },
     "title": {
-      "translate": "advancements.insanityoverworld.egg_ore.root.title"
+      "translate": "advancements.dangerzone.egg_ore.root.title"
     },
     "description": {
-      "translate": "advancements.insanityoverworld.egg_ore.root.description"
+      "translate": "advancements.dangerzone.egg_ore.root.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "insanityoverworld:spawn_egg_ores"
+            "tag": "dangerzone:spawn_egg_ores"
           }
         ]
       }

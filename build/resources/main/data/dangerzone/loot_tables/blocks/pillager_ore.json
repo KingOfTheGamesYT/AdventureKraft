@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:pillager_ore"
+          "name": "dangerzone:pillager_ore"
         }
       ],
       "conditions": [

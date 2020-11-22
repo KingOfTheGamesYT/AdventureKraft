@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:elder_guardian_ore"
+          "name": "dangerzone:elder_guardian_ore"
         }
       ],
       "conditions": [

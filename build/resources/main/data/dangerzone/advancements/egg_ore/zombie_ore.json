@@ -1,14 +1,14 @@
 {
-  "parent": "insanityoverworld:egg_ore/root",
+  "parent": "dangerzone:egg_ore/root",
   "display": {
     "icon": {
-      "item": "insanityoverworld:zombie_ore"
+      "item": "dangerzone:zombie_ore"
     },
     "title": {
-      "translate": "advancements.insanityoverworld.egg_ore.zombie_ore.title"
+      "translate": "advancements.dangerzone.egg_ore.zombie_ore.title"
     },
     "description": {
-      "translate": "advancements.insanityoverworld.egg_ore.zombie_ore.description"
+      "translate": "advancements.dangerzone.egg_ore.zombie_ore.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "item": "insanityoverworld:zombie_ore"
+            "item": "dangerzone:zombie_ore"
           }
         ]
       }

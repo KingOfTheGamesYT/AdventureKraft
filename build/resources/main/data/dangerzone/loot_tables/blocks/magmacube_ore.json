@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:magmacube_ore"
+          "name": "dangerzone:magmacube_ore"
         }
       ],
       "conditions": [

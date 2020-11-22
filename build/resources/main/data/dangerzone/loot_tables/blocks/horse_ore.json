@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:horse_ore"
+          "name": "dangerzone:horse_ore"
         }
       ],
       "conditions": [

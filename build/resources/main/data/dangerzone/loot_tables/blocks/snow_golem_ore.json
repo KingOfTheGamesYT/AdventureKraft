@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:snow_golem_ore"
+          "name": "dangerzone:snow_golem_ore"
         }
       ],
       "conditions": [

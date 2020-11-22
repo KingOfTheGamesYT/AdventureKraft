@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:llama_ore"
+          "name": "dangerzone:llama_ore"
         }
       ],
       "conditions": [

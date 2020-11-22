@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:ravager_ore"
+          "name": "dangerzone:ravager_ore"
         }
       ],
       "conditions": [

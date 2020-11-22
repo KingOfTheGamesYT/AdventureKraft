@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:squid_ore"
+          "name": "dangerzone:squid_ore"
         }
       ],
       "conditions": [

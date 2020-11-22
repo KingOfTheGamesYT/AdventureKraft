@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:chicken_ore"
+          "name": "dangerzone:chicken_ore"
         }
       ],
       "conditions": [

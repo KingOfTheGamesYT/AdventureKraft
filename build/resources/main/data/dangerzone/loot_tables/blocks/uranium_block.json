@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:uranium_block"
+          "name": "dangerzone:uranium_block"
         }
       ],
       "conditions": [

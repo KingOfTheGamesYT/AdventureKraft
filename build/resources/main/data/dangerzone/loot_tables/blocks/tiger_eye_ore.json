@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:tiger_eye_ore"
+          "name": "dangerzone:tiger_eye_ore"
         }
       ],
       "conditions": [

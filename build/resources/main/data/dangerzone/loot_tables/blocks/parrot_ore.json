@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:parrot_ore"
+          "name": "dangerzone:parrot_ore"
         }
       ],
       "conditions": [

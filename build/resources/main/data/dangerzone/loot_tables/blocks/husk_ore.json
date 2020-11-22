@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:husk_ore"
+          "name": "dangerzone:husk_ore"
         }
       ],
       "conditions": [

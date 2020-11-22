@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:ocelot_ore"
+          "name": "dangerzone:ocelot_ore"
         }
       ],
       "conditions": [

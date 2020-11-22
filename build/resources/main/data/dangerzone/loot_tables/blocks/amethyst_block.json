@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:amethyst_block"
+          "name": "dangerzone:amethyst_block"
         }
       ],
       "conditions": [

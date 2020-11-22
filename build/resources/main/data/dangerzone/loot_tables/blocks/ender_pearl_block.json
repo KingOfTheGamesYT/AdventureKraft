@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:ender_pearl_block"
+          "name": "dangerzone:ender_pearl_block"
         }
       ],
       "conditions": [

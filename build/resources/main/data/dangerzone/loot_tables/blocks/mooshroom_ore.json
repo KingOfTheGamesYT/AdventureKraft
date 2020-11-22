@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:mooshroom_ore"
+          "name": "dangerzone:mooshroom_ore"
         }
       ],
       "conditions": [

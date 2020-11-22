@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:evoker_ore"
+          "name": "dangerzone:evoker_ore"
         }
       ],
       "conditions": [

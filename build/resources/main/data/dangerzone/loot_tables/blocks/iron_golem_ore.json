@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:iron_golem_ore"
+          "name": "dangerzone:iron_golem_ore"
         }
       ],
       "conditions": [

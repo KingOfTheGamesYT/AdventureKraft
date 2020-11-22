@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:enderdragon_ore"
+          "name": "dangerzone:enderdragon_ore"
         }
       ],
       "conditions": [

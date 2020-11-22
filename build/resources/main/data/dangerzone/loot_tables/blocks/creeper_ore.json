@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:creeper_ore"
+          "name": "dangerzone:creeper_ore"
         }
       ],
       "conditions": [

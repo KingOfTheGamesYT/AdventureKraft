@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:ruby_block"
+          "name": "dangerzone:ruby_block"
         }
       ],
       "conditions": [

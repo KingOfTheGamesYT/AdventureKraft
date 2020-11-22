@@ -1,14 +1,14 @@
 {
-  "parent": "insanityoverworld:egg_ore/root",
+  "parent": "dangerzone:egg_ore/root",
   "display": {
     "icon": {
-      "item": "insanityoverworld:villager_ore"
+      "item": "dangerzone:villager_ore"
     },
     "title": {
-      "translate": "advancements.insanityoverworld.egg_ore.villager_ore.title"
+      "translate": "advancements.dangerzone.egg_ore.villager_ore.title"
     },
     "description": {
-      "translate": "advancements.insanityoverworld.egg_ore.villager_ore.description"
+      "translate": "advancements.dangerzone.egg_ore.villager_ore.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "item": "insanityoverworld:villager_ore"
+            "item": "dangerzone:villager_ore"
           }
         ]
       }

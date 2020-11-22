@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:wither_skeleton_ore"
+          "name": "dangerzone:wither_skeleton_ore"
         }
       ],
       "conditions": [

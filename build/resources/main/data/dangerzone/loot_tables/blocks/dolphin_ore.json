@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:dolphin_ore"
+          "name": "dangerzone:dolphin_ore"
         }
       ],
       "conditions": [

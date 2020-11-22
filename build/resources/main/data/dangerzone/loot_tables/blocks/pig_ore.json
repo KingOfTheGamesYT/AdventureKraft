@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:pig_ore"
+          "name": "dangerzone:pig_ore"
         }
       ],
       "conditions": [

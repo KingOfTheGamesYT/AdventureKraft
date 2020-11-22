@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:turtle_ore"
+          "name": "dangerzone:turtle_ore"
         }
       ],
       "conditions": [

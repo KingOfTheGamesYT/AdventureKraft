@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:witch_ore"
+          "name": "dangerzone:witch_ore"
         }
       ],
       "conditions": [

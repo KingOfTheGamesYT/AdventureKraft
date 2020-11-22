@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "insanityoverworld:amethyst_ore"
+              "name": "dangerzone:amethyst_ore"
             },
             {
               "type": "minecraft:item",
@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "insanityoverworld:amethyst"
+              "name": "dangerzone:amethyst"
             }
           ]
         }

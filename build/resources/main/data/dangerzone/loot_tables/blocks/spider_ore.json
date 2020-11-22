@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:spider_ore"
+          "name": "dangerzone:spider_ore"
         }
       ],
       "conditions": [
