@@ -20,8 +20,12 @@
 	turtleOre = true
 	#Should Petrified Ender Dragon Spawn Egg generate.
 	enderDragonOre = true
+	#Should Petrified Trader Llama Spawn Egg generate.
+	traderLlamaOre = true
 	#Should Petrified Zombie Pigman Spawn Egg generate.
 	zombiePigmanOre = true
+	#Should Petrified Zombie Horse Spawn Egg generate.
+	zombieHorseOre = true
 	#Should Petrified Magma Cube Spawn Egg generate.
 	magmaCubeOre = true
 	#Should Petrified Ghast Spawn Egg generate.
@@ -30,6 +34,8 @@
 	ocelotOre = true
 	#Should Petrified Cow Spawn Egg generate.
 	cowOre = true
+	#Should Petrified Salmon Spawn Egg generate.
+	salmonOre = true
 	#Should Petrified Vindicator Spawn Egg generate.
 	vindicatorOre = true
 	#Should Petrified Villager Spawn Egg generate.
@@ -38,10 +44,14 @@
 	endermanOre = true
 	#Should Petrified Chicken Spawn Egg generate.
 	chickenOre = true
+	#Should Petrified Skeleton Horse Spawn Egg generate.
+	skeletonHorseOre = true
 	#Should Petrified Horse Spawn Egg generate.
 	horseOre = true
 	#Should Petrified Wolf Spawn Egg generate.
 	wolfOre = true
+	#Should Petrified Pufferfish Spawn Egg generate.
+	pufferfishOre = true
 	#Should Petrified Polar Bear Spawn Egg generate.
 	polarBearOre = true
 	#Should Petrified Zombie Spawn Egg generate.
@@ -50,6 +60,8 @@
 	spiderOre = true
 	#Should Petrified Shulker Spawn Egg generate.
 	shulkerOre = true
+	#Should Petrified Wandering Trader Spawn Egg generate.
+	wanderingTraderOre = true
 	#Should Petrified Dolphin Spawn Egg generate.
 	dolphinOre = true
 	#Should Petrified Donkey Spawn Egg generate.
@@ -80,6 +92,8 @@
 	sheepOre = true
 	#Should Petrified Rabbit Spawn Egg generate.
 	rabbitOre = true
+	#Should Petrified Mule Spawn Egg generate.
+	muleOre = true
 	#Should Petrified Drowned Spawn Egg generate.
 	drownedOre = true
 	#Should Petrified Parrot Spawn Egg generate.
@@ -90,10 +104,16 @@
 	skeletonOre = true
 	#Should Petrified Wither Spawn Egg generate.
 	witherOre = true
+	#Should Petrified Tropical Fish Spawn Egg generate.
+	tropicalFishOre = true
+	#Should Petrified Zombie Villager Spawn Egg generate.
+	zombieVillagerOre = true
 	#Should Petrified Cave Spider Spawn Egg generate.
 	caveSpiderOre = true
 	#Should Petrified Endermite Spawn Egg generate.
 	endermiteOre = true
+	#Should Petrified Vex Spawn Egg generate.
+	vexOre = true
 	#Should Petrified Slime Spawn Egg generate.
 	slimeOre = true
 	#Should Petrified Pig Spawn Egg generate.
@@ -104,6 +124,8 @@
 	strayOre = true
 	#Should Petrified Wither Skeleton Spawn Egg generate.
 	witherSkeletonOre = true
+	#Should Petrified Cod Spawn Egg generate.
+	codOre = true
 	#Should Petrified Fox Spawn Egg generate.
 	foxOre = true
 	#Should Petrified Pillager Spawn Egg generate.
@@ -112,6 +134,8 @@
 	phantomOre = true
 	#Should Petrified Creeper Spawn Egg generate.
 	creeperOre = true
+	#Should Petrified Silverfish Spawn Egg generate.
+	silverfishOre = true
 	#Should Petrified Guardian Spawn Egg generate.
 	guardianOre = true
 
