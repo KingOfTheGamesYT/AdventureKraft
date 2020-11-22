@@ -1,0 +1,35 @@
+{
+  "parent": "dangerzone:egg_ore/root",
+  "display": {
+    "icon": {
+      "item": "dangerzone:parrot_ore"
+    },
+    "title": {
+      "translate": "advancements.dangerzone.egg_ore.parrot_ore.title"
+    },
+    "description": {
+      "translate": "advancements.dangerzone.egg_ore.parrot_ore.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_egg_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "dangerzone:parrot_ore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_egg_ore"
+    ]
+  ]
+}

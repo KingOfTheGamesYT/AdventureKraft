@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "dangerzone:bat_ore"
+    },
+    "title": {
+      "translate": "advancements.dangerzone.egg_ore.root.title"
+    },
+    "description": {
+      "translate": "advancements.dangerzone.egg_ore.root.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "get_egg_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "dangerzone:spawn_egg_ores"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_egg_ore"
+    ]
+  ]
+}
