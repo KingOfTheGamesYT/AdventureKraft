@@ -229,6 +229,7 @@ public class Items {
 	public static Item SQUID_EGG_ORE;
 	public static Item STRAY_EGG_ORE;
 	public static Item TRADER_LLAMA_EGG_ORE;
+	public static Item TROPICAL_FISH_EGG_ORE;
 	public static Item TURTLE_EGG_ORE;
 	public static Item VEX_EGG_ORE;
 	public static Item VILLAGER_EGG_ORE;
@@ -443,6 +444,7 @@ public class Items {
 				SQUID_EGG_ORE = registerItemBlockMobOre(Blocks.SQUID_EGG_ORE),
 				STRAY_EGG_ORE = registerItemBlockMobOre(Blocks.STRAY_EGG_ORE),
 				TRADER_LLAMA_EGG_ORE = registerItemBlockMobOre(Blocks.TRADER_LLAMA_EGG_ORE),
+				TROPICAL_FISH_EGG_ORE = registerItemBlockMobOre(Blocks.TROPICAL_FISH_EGG_ORE),
 				TURTLE_EGG_ORE = registerItemBlockMobOre(Blocks.TURTLE_EGG_ORE),
 				VEX_EGG_ORE = registerItemBlockMobOre(Blocks.VEX_EGG_ORE),
 				VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.VILLAGER_EGG_ORE),

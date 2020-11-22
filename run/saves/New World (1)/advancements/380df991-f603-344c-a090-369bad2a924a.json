@@ -1,4 +1,16 @@
 {
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2020-11-21 21:20:57 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cake": {
+    "criteria": {
+      "has_egg": "2020-11-21 21:20:57 -0500"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:wooded_hills": "2020-11-20 20:38:41 -0500",
