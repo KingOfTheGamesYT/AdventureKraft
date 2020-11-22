@@ -1,0 +1,35 @@
+{
+  "parent": "insanityoverworld:egg_ore/root",
+  "display": {
+    "icon": {
+      "item": "insanityoverworld:panda_ore"
+    },
+    "title": {
+      "translate": "advancements.insanityoverworld.egg_ore.panda_ore.title"
+    },
+    "description": {
+      "translate": "advancements.insanityoverworld.egg_ore.panda_ore.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_egg_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "insanityoverworld:panda_ore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_egg_ore"
+    ]
+  ]
+}

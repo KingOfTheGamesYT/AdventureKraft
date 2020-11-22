@@ -1,0 +1,35 @@
+{
+  "parent": "insanityoverworld:egg_ore/root",
+  "display": {
+    "icon": {
+      "item": "insanityoverworld:vindicator_ore"
+    },
+    "title": {
+      "translate": "advancements.insanityoverworld.egg_ore.vindicator_ore.title"
+    },
+    "description": {
+      "translate": "advancements.insanityoverworld.egg_ore.vindicator_ore.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_egg_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "insanityoverworld:vindicator_ore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_egg_ore"
+    ]
+  ]
+}

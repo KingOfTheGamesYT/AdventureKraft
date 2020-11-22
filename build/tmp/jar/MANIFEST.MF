@@ -3,7 +3,7 @@ Implementation-Title: DangerZone
 Implementation-Version: 1.15.2-1.0.0.1-pre_alpha
 Specification-Vendor: examplemodsareus
 Specification-Title: insanityoverworld
-Implementation-Timestamp: 2020-11-21T23:38:17-0500
+Implementation-Timestamp: 2020-11-22T00:04:37-0500
 Specification-Version: 1
 Implementation-Vendor: examplemodsareus
 

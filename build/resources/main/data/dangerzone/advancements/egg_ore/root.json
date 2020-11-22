@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "insanityoverworld:bat_ore"
+    },
+    "title": {
+      "translate": "advancements.insanityoverworld.egg_ore.root.title"
+    },
+    "description": {
+      "translate": "advancements.insanityoverworld.egg_ore.root.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "get_egg_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "insanityoverworld:spawn_egg_ores"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_egg_ore"
+    ]
+  ]
+}
