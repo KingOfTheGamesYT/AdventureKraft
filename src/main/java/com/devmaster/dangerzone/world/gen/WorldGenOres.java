@@ -66,6 +66,7 @@ public class WorldGenOres {
 				addMobOres(biome, BLAZE_EGG_ORE, config.blazeOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 				addMobOres(biome, CAVE_SPIDER_EGG_ORE, config.cavespiderOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 				addMobOres(biome, CHICKEN_EGG_ORE, config.chickenOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, COD_EGG_ORE, config.codOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 				addMobOres(biome, COW_EGG_ORE, config.cowOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 				addMobOres(biome, CREEPER_EGG_ORE, config.creeperOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 				addMobOres(biome, DOLPHIN_EGG_ORE, config.dolphinOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
@@ -112,6 +113,17 @@ public class WorldGenOres {
 				addMobOres(biome, PILLAGER_EGG_ORE, config.pillagerOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 				addMobOres(biome, RAVAGER_EGG_ORE, config.ravagerOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 				addMobOres(biome, SHULKER_EGG_ORE, config.shulkerOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, MULE_EGG_ORE, config.muleOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, PUFFERFISH_EGG_ORE, config.pufferfishOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, SALMON_EGG_ORE, config.salmonOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, SILVERFISH_EGG_ORE, config.silverfishOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, SKELETON_HORSE_EGG_ORE, config.skeletonHorseOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, TRADER_LLAMA_EGG_ORE, config.traderLlamaOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, TROPICAL_FISH_EGG_ORE, config.tropicalFishOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, VEX_EGG_ORE, config.vexOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, WANDERING_TRADER_EGG_ORE, config.wanderingTraderOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, ZOMBIE_VILLAGER_EGG_ORE, config.zombieVillagerOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, ZOMBIE_HORSE_EGG_ORE, config.zombieHorseOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 
 				//endregion
 			}
