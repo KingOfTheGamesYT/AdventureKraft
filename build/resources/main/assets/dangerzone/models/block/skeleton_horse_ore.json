@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+      "all": "dangerzone:blocks/skeleton_horse_ore"
+   }
+}

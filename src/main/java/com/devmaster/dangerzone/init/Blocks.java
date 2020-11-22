@@ -80,6 +80,7 @@ public class Blocks {
 	public static Block SHULKER_EGG_ORE;
 	public static Block SILVERFISH_EGG_ORE;
 	public static Block SKELETON_EGG_ORE;
+	public static Block SKELETON_HORSE_EGG_ORE;
 	public static Block SLIME_EGG_ORE;
 	public static Block SNOW_GOLEM_EGG_ORE;
 	public static Block SPIDER_EGG_ORE;
@@ -99,7 +100,6 @@ public class Blocks {
 	public static Block ZOMBIE_PIGMAN_EGG_ORE;
 	public static Block ZOMBIE_VILLAGER_EGG_ORE;
 
-	public static Block SKELETON_HORSE_EGG_ORE;
 	public static Block TRADER_LLAMA_EGG_ORE;
 	public static Block TROPICAL_FISH_EGG_ORE;
 	//endregion
@@ -182,6 +182,7 @@ public class Blocks {
 				SHULKER_EGG_ORE = new BlockMobOre(getLocation("shulker_ore")),
 				SILVERFISH_EGG_ORE = new BlockMobOre(getLocation("silverfish_ore")),
 				SKELETON_EGG_ORE = new BlockMobOre(getLocation("skeleton_ore")),
+				SKELETON_HORSE_EGG_ORE = new BlockMobOre(getLocation("skeleton_horse_ore")),
 				SLIME_EGG_ORE = new BlockMobOre(getLocation("slime_ore")),
 				SNOW_GOLEM_EGG_ORE = new BlockMobOre(getLocation("snow_golem_ore")),
 				SPIDER_EGG_ORE = new BlockMobOre(getLocation("spider_ore")),
