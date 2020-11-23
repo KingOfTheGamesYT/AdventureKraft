@@ -1,56 +1,40 @@
-[22Nov2020 13:04:46.411] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20200515.085601, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 31.2.46, --version, MOD_DEV, --assetIndex, 1.15, --assetsDir, C:\Users\minec\.gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ????????, --userProperties, {}]
-[22Nov2020 13:04:46.415] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.1.2+70+master.2845bb9 starting: java version 1.8.0_251 by Oracle Corporation
-[22Nov2020 13:04:46.894] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[22Nov2020 13:04:46.931] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/C:/Users/minec/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.2/1cf212283d26f706fd3074318870bebd14d2a9ed/mixin-0.8.2.jar Service=ModLauncher Env=CLIENT
-[22Nov2020 13:04:48.514] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\minec\.gradle\caches\forge_gradle\assets, --assetIndex, 1.15, --username, Dev, --accessToken, ????????, --userProperties, {}]
-[22Nov2020 13:04:50.455] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[22Nov2020 13:05:00.816] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
-[22Nov2020 13:05:01.843] [modloading-worker-3/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.2.46, for MC 1.15.2 with MCP 20200515.085601
-[22Nov2020 13:05:01.843] [modloading-worker-3/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.2.46 Initialized
-[22Nov2020 13:05:04.009] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[22Nov2020 13:05:05.380] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[22Nov2020 13:05:05.558] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[22Nov2020 13:05:05.947] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 31.2.46 Target: null
-[22Nov2020 13:05:09.241] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[22Nov2020 13:05:09.242] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[22Nov2020 13:05:09.380] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[22Nov2020 13:05:09.456] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
-[22Nov2020 13:05:09.456] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[22Nov2020 13:05:09.457] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[22Nov2020 13:05:09.458] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[22Nov2020 13:05:09.458] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[22Nov2020 13:05:09.458] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[22Nov2020 13:05:09.906] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[22Nov2020 13:05:09.907] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[22Nov2020 13:05:09.908] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[22Nov2020 13:05:10.367] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[22Nov2020 13:05:32.466] [Render thread/INFO] [net.minecraft.world.storage.SaveFormat/]: Deleting level New World (1)
-[22Nov2020 13:05:32.466] [Render thread/INFO] [net.minecraft.world.storage.SaveFormat/]: Attempt 1...
-[22Nov2020 13:05:40.178] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[22Nov2020 13:05:40.179] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[22Nov2020 13:05:40.179] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[22Nov2020 13:05:40.180] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[22Nov2020 13:05:40.180] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[22Nov2020 13:05:40.311] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.15.2
-[22Nov2020 13:05:40.311] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Generating keypair
-[22Nov2020 13:05:40.386] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\New World (1)\serverconfig\forge-server.toml is not correct. Correcting
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to SimpleCommentedConfig:{}
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to false
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringTileEntities was corrected from null to false
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to false
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.zombieBaseSummonChance was corrected from null to 0.1
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.zombieBabyChance was corrected from null to 0.05
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.logCascadingWorldGeneration was corrected from null to true
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.fixVanillaCascading was corrected from null to false
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.dimensionUnloadQueueDelay was corrected from null to 0
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.clumpingThreshold was corrected from null to 64
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.treatEmptyTagsAsAir was corrected from null to false
-[22Nov2020 13:05:40.387] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.fixAdvancementLoading was corrected from null to true
-[22Nov2020 13:05:40.703] [Server thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this SERVER instance
-[22Nov2020 13:05:40.869] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Found new data pack vanilla, loading it automatically
-[22Nov2020 13:05:40.869] [Server thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, main, forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar
-[22Nov2020 13:05:41.612] [Server thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 6 recipes
-[22Nov2020 13:05:42.024] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/tiger_eye_block
+[22Nov2020 19:29:21.970] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20200515.085601, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 31.2.46, --version, MOD_DEV, --assetIndex, 1.15, --assetsDir, C:\Users\minec\.gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[22Nov2020 19:29:21.974] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.1.2+70+master.2845bb9 starting: java version 1.8.0_251 by Oracle Corporation
+[22Nov2020 19:29:22.464] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[22Nov2020 19:29:22.506] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/C:/Users/minec/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.2/1cf212283d26f706fd3074318870bebd14d2a9ed/mixin-0.8.2.jar Service=ModLauncher Env=CLIENT
+[22Nov2020 19:29:23.858] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\minec\.gradle\caches\forge_gradle\assets, --assetIndex, 1.15, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[22Nov2020 19:29:26.122] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[22Nov2020 19:29:36.720] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
+[22Nov2020 19:29:37.733] [modloading-worker-3/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.2.46, for MC 1.15.2 with MCP 20200515.085601
+[22Nov2020 19:29:37.733] [modloading-worker-3/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.2.46 Initialized
+[22Nov2020 19:29:41.343] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[22Nov2020 19:29:41.477] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[22Nov2020 19:29:41.663] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[22Nov2020 19:29:42.229] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 31.2.46 Target: null
+[22Nov2020 19:29:45.309] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[22Nov2020 19:29:45.310] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[22Nov2020 19:29:45.420] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[22Nov2020 19:29:45.496] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
+[22Nov2020 19:29:45.496] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[22Nov2020 19:29:45.496] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[22Nov2020 19:29:45.497] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[22Nov2020 19:29:45.498] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[22Nov2020 19:29:45.498] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[22Nov2020 19:29:45.969] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[22Nov2020 19:29:45.970] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[22Nov2020 19:29:45.970] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[22Nov2020 19:29:46.256] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[22Nov2020 19:29:52.985] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[22Nov2020 19:29:52.986] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[22Nov2020 19:29:52.987] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[22Nov2020 19:29:52.987] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[22Nov2020 19:29:52.988] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[22Nov2020 19:29:53.136] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.15.2
+[22Nov2020 19:29:53.137] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Generating keypair
+[22Nov2020 19:29:53.300] [Server thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this SERVER instance
+[22Nov2020 19:29:53.703] [Server thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, main, forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar
+[22Nov2020 19:29:54.500] [Server thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 6 recipes
+[22Nov2020 19:29:54.779] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/tiger_eye_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:tiger_eye_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -111,7 +95,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.118] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ender_eye_block
+[22Nov2020 19:29:55.020] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ender_eye_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:ender_eye_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -172,7 +156,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.281] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ender_pearl_block
+[22Nov2020 19:29:55.221] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ender_pearl_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:ender_pearl_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -233,7 +217,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.283] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/pink_tourmaline_block
+[22Nov2020 19:29:55.225] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/pink_tourmaline_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:pink_tourmaline_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -294,7 +278,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.297] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/pink_tourmaline_ore
+[22Nov2020 19:29:55.238] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/pink_tourmaline_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:pink_tourmaline_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -355,7 +339,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.407] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/amethyst_ore
+[22Nov2020 19:29:55.348] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/amethyst_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:amethyst_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -428,7 +412,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.419] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:chests/inject/end_city_treasure
+[22Nov2020 19:29:55.360] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:chests/inject/end_city_treasure
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'insanityoverworld:titanium_ingot'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -489,7 +473,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.437] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:chests/inject/simple_dungeon
+[22Nov2020 19:29:55.378] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:chests/inject/simple_dungeon
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'insanityoverworld:blank_disc'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -550,7 +534,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.442] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/titanium_block
+[22Nov2020 19:29:55.382] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/titanium_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:titanium_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -611,7 +595,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.454] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/uranium_block
+[22Nov2020 19:29:55.396] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/uranium_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:uranium_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -672,7 +656,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.496] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/uranium_ore
+[22Nov2020 19:29:55.444] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/uranium_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:uranium_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -733,7 +717,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.548] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/titanium_ore
+[22Nov2020 19:29:55.507] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/titanium_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:titanium_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -794,7 +778,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.560] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ruby_block
+[22Nov2020 19:29:55.518] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ruby_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:ruby_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -855,7 +839,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.572] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ruby_ore
+[22Nov2020 19:29:55.532] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ruby_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:ruby_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -928,7 +912,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.574] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/tiger_eye_ore
+[22Nov2020 19:29:55.534] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/tiger_eye_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:tiger_eye_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.46_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -989,57 +973,31 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[22Nov2020 13:05:42.834] [Server thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 875 advancements
-[22Nov2020 13:05:45.891] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[22Nov2020 13:05:45.976] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[22Nov2020 13:05:46.427] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 1%
-[22Nov2020 13:05:46.927] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 4%
-[22Nov2020 13:05:47.460] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 5%
-[22Nov2020 13:05:47.941] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 12%
-[22Nov2020 13:05:48.443] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 16%
-[22Nov2020 13:05:48.942] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 27%
-[22Nov2020 13:05:49.442] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 27%
-[22Nov2020 13:05:49.926] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 39%
-[22Nov2020 13:05:50.426] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 42%
-[22Nov2020 13:05:50.926] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 55%
-[22Nov2020 13:05:51.425] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 62%
-[22Nov2020 13:05:52.576] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 70%
-[22Nov2020 13:05:52.576] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 70%
-[22Nov2020 13:05:52.942] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 86%
-[22Nov2020 13:05:53.443] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 96%
-[22Nov2020 13:05:53.609] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 7700 ms
-[22Nov2020 13:05:54.175] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[22Nov2020 13:05:54.176] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[22Nov2020 13:05:54.179] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
-[22Nov2020 13:05:55.431] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
-[22Nov2020 13:05:55.480] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@1313ed0d
-[22Nov2020 13:05:55.490] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:205f57e4] logged in with entity id 248 at (235.5, 67.0, 176.5)
-[22Nov2020 13:05:55.517] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[22Nov2020 13:05:56.067] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[22Nov2020 13:05:56.080] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[22Nov2020 13:05:56.193] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 0 advancements
-[22Nov2020 13:06:00.548] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[22Nov2020 13:06:00.550] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[22Nov2020 13:06:08.582] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Creative Mode]
-[22Nov2020 13:06:08.599] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Set own game mode to Creative Mode
-[22Nov2020 13:06:12.831] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [advancements.dangerzone.egg_ore.root.title]
-[22Nov2020 13:06:12.832] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [advancements.dangerzone.egg_ore.bat_ore.title]
-[22Nov2020 13:06:12.843] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev has made the advancement [advancements.dangerzone.egg_ore.root.title]
-[22Nov2020 13:06:12.843] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev has made the advancement [advancements.dangerzone.egg_ore.bat_ore.title]
-[22Nov2020 13:06:12.860] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 50 advancements
-[22Nov2020 13:06:30.898] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[22Nov2020 13:06:30.901] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[22Nov2020 13:06:50.798] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[22Nov2020 13:06:50.805] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[22Nov2020 13:17:35.199] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[22Nov2020 13:17:35.207] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[22Nov2020 13:17:36.457] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
-[22Nov2020 13:17:36.457] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[22Nov2020 13:17:36.460] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
-[22Nov2020 13:17:36.510] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[22Nov2020 13:17:36.510] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[22Nov2020 13:17:36.510] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[22Nov2020 13:17:36.510] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[22Nov2020 13:17:36.692] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
-[22Nov2020 13:17:36.699] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
-[22Nov2020 13:17:37.537] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[22Nov2020 19:29:55.816] [Server thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 875 advancements
+[22Nov2020 19:29:56.304] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[22Nov2020 19:29:57.123] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[22Nov2020 19:29:57.123] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[22Nov2020 19:29:57.424] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 1084 ms
+[22Nov2020 19:29:59.570] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[22Nov2020 19:29:59.573] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[22Nov2020 19:29:59.576] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
+[22Nov2020 19:29:59.579] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2060ms or 41 ticks behind
+[22Nov2020 19:30:00.981] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[22Nov2020 19:30:01.056] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@1c681f5d
+[22Nov2020 19:30:01.069] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:745526d1] logged in with entity id 219 at (265.7946442786111, 55.0, 205.9490817879167)
+[22Nov2020 19:30:01.098] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[22Nov2020 19:30:01.532] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[22Nov2020 19:30:01.539] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[22Nov2020 19:30:01.640] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 106 advancements
+[22Nov2020 21:22:58.607] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[22Nov2020 21:22:58.619] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[22Nov2020 21:23:00.013] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
+[22Nov2020 21:23:00.013] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[22Nov2020 21:23:00.018] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[22Nov2020 21:23:00.060] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[22Nov2020 21:23:00.061] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[22Nov2020 21:23:00.061] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[22Nov2020 21:23:00.061] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[22Nov2020 21:23:00.220] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[22Nov2020 21:23:00.229] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[22Nov2020 21:23:01.008] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
