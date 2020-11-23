@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: DangerZone
-Implementation-Version: 1.15.2-1.0.0.1-pre_alpha
+Implementation-Version: 1.0
 Specification-Vendor: examplemodsareus
-Specification-Title: insanityoverworld
-Implementation-Timestamp: 2020-11-22T21:45:01-0500
+Specification-Title: dangerzone
+Implementation-Timestamp: 2020-11-23T14:55:03-0500
 Specification-Version: 1
 Implementation-Vendor: examplemodsareus
 
