@@ -6,13 +6,13 @@
    ],
    "key": {
       "~": {
-         "item": "insanityoverworld:titanium_ingot"
+         "item": "dangerzone:titanium_ingot"
       },
       "-": {
-         "item": "insanityoverworld:uranium_ingot"
+         "item": "dangerzone:uranium_ingot"
       }
    },
    "result": {
-      "item": "insanityoverworld:ultimate_boots"
+      "item": "dangerzone:ultimate_boots"
    }
 }

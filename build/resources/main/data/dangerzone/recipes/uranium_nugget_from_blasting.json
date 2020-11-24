@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "insanityoverworld:uranium_ore"
+    "item": "dangerzone:uranium_ore"
   },
-  "result": "insanityoverworld:uranium_nugget",
+  "result": "dangerzone:uranium_nugget",
   "experience": 1.0,
   "cookingtime": 100
 }

@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "insanityoverworld:titanium_ingot"
+      "item": "dangerzone:titanium_ingot"
     }
   },
   "result": {
-    "item": "insanityoverworld:titanium_block"
+    "item": "dangerzone:titanium_block"
   }
 }

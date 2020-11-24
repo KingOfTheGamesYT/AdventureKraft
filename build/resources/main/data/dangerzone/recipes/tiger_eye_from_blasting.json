@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "insanityoverworld:tiger_eye_ore"
+    "item": "dangerzone:tiger_eye_ore"
   },
-  "result": "insanityoverworld:tiger_eye",
+  "result": "dangerzone:tiger_eye",
   "experience": 1.0,
   "cookingtime": 100
 }

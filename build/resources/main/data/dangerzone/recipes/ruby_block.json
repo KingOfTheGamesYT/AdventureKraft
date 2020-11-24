@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "insanityoverworld:ruby"
+      "item": "dangerzone:ruby"
     }
   },
   "result": {
-    "item": "insanityoverworld:ruby_block"
+    "item": "dangerzone:ruby_block"
   }
 }

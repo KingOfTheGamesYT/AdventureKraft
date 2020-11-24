@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:titanium_ingot"
+      "item": "dangerzone:titanium_ingot"
     }
   ],
   "result": {
-    "item": "insanityoverworld:titanium_nugget",
+    "item": "dangerzone:titanium_nugget",
     "count": 9
   }
 }

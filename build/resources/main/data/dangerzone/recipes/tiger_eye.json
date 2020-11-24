@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:tiger_eye_block"
+      "item": "dangerzone:tiger_eye_block"
     }
   ],
   "result": {
-    "item": "insanityoverworld:tiger_eye",
+    "item": "dangerzone:tiger_eye",
     "count": 9
   }
 }

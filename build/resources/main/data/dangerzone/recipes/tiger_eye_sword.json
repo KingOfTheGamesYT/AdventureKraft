@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "insanityoverworld:tiger_eye"
+      "item": "dangerzone:tiger_eye"
     }
   },
   "result": {
-    "item": "insanityoverworld:tiger_eye_sword"
+    "item": "dangerzone:tiger_eye_sword"
   }
 }

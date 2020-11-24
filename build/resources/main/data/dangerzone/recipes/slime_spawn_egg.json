@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:slime_ore"
+      "item": "dangerzone:slime_ore"
     },
     {
       "item": "minecraft:water_bucket"

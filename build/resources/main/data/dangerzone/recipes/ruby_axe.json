@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "insanityoverworld:ruby"
+      "item": "dangerzone:ruby"
     }
   },
   "result": {
-    "item": "insanityoverworld:ruby_axe"
+    "item": "dangerzone:ruby_axe"
   }
 }

@@ -3,13 +3,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:wither_ore"
+      "item": "dangerzone:wither_ore"
     },
     {
       "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "insanityoverworld:wither_spawn_egg"
+    "item": "dangerzone:wither_spawn_egg"
   }
 }

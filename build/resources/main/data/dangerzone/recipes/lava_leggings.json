@@ -7,10 +7,10 @@
   ],
   "key": {
     "X": {
-      "item": "insanityoverworld:lava_crystal"
+      "item": "dangerzone:lava_crystal"
     }
   },
   "result": {
-    "item": "insanityoverworld:lava_leggings"
+    "item": "dangerzone:lava_leggings"
   }
 }

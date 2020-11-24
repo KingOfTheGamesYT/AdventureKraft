@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "insanityoverworld:uranium_ingot"
+      "item": "dangerzone:uranium_ingot"
     }
   },
   "result": {
-    "item": "insanityoverworld:uranium_block"
+    "item": "dangerzone:uranium_block"
   }
 }

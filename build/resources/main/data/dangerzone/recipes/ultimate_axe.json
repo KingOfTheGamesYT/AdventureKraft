@@ -10,13 +10,13 @@
          "item": "minecraft:iron_ingot"
       },
       "~": {
-         "item": "insanityoverworld:titanium_ingot"
+         "item": "dangerzone:titanium_ingot"
       },
       "-": {
-         "item": "insanityoverworld:uranium_ingot"
+         "item": "dangerzone:uranium_ingot"
       }
    },
    "result": {
-      "item": "insanityoverworld:ultimate_axe"
+      "item": "dangerzone:ultimate_axe"
    }
 }

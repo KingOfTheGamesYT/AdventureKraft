@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:uranium_block"
+      "item": "dangerzone:uranium_block"
     }
   ],
   "result": {
-    "item": "insanityoverworld:uranium_ingot",
+    "item": "dangerzone:uranium_ingot",
     "count": 9
   }
 }

@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "insanityoverworld:pink_tourmaline"
+      "item": "dangerzone:pink_tourmaline"
     }
   },
   "result": {
-    "item": "insanityoverworld:pink_tourmaline_axe"
+    "item": "dangerzone:pink_tourmaline_axe"
   }
 }

@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "insanityoverworld:titanium_ore"
+    "item": "dangerzone:titanium_ore"
   },
-  "result": "insanityoverworld:titanium_nugget",
+  "result": "dangerzone:titanium_nugget",
   "experience": 1.0,
   "cookingtime": 100
 }

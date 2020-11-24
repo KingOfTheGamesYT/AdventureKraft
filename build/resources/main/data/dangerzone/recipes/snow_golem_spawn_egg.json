@@ -3,13 +3,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:snow_golem_ore"
+      "item": "dangerzone:snow_golem_ore"
     },
     {
       "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "insanityoverworld:snow_golem_spawn_egg"
+    "item": "dangerzone:snow_golem_spawn_egg"
   }
 }

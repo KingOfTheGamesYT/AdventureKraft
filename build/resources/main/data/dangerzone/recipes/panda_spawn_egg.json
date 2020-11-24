@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:panda_ore"
+      "item": "dangerzone:panda_ore"
     },
     {
       "item": "minecraft:water_bucket"

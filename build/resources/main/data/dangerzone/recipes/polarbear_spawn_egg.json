@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:polarbear_ore"
+      "item": "dangerzone:polarbear_ore"
     },
     {
       "item": "minecraft:water_bucket"
