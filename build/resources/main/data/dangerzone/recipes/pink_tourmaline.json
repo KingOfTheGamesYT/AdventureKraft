@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "insanityoverworld:pink_tourmaline_block"
+    }
+  ],
+  "result": {
+    "item": "insanityoverworld:pink_tourmaline",
+    "count": 9
+  }
+}

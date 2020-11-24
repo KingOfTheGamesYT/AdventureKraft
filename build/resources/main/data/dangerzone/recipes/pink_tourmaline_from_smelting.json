@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "insanityoverworld:pink_tourmaline_ore"
+  },
+  "result": "insanityoverworld:pink_tourmaline",
+  "experience": 1.0,
+  "cookingtime": 200
+}

@@ -1,0 +1,23 @@
+{
+   "type": "minecraft:crafting_shaped",
+   "pattern": [
+      "XYX",
+      "YZY",
+      "XYX"
+   ],
+   "key": {
+      "X": {
+         "item": "minecraft:lava_bucket"
+      },
+      "Y": {
+         "item": "minecraft:fire_charge"
+      },
+      "Z": {
+         "item": "minecraft:stone"
+      }
+   },
+   "result": {
+      "item": "insanityoverworld:lava_crystal",
+      "count": 3
+   }
+}

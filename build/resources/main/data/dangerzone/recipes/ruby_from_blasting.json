@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "insanityoverworld:ruby_ore"
+  },
+  "result": "insanityoverworld:ruby",
+  "experience": 1.0,
+  "cookingtime": 100
+}

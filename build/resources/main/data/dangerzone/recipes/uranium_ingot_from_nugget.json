@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "insanityoverworld:uranium_nugget"
+    }
+  },
+  "result": {
+    "item": "insanityoverworld:uranium_ingot"
+  }
+}

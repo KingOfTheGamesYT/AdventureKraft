@@ -1,0 +1,18 @@
+{
+   "type": "minecraft:crafting_shaped",
+   "pattern": [
+      "~ ~",
+      "- -"
+   ],
+   "key": {
+      "~": {
+         "item": "insanityoverworld:titanium_ingot"
+      },
+      "-": {
+         "item": "insanityoverworld:uranium_ingot"
+      }
+   },
+   "result": {
+      "item": "insanityoverworld:ultimate_boots"
+   }
+}

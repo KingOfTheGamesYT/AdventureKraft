@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "insanityoverworld:tiger_eye_block"
+    }
+  ],
+  "result": {
+    "item": "insanityoverworld:tiger_eye",
+    "count": 9
+  }
+}

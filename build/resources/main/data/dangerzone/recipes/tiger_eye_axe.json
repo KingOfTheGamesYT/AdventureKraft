@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "insanityoverworld:tiger_eye"
+    }
+  },
+  "result": {
+    "item": "insanityoverworld:tiger_eye_axe"
+  }
+}

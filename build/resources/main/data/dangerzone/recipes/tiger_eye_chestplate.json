@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "insanityoverworld:tiger_eye"
+    }
+  },
+  "result": {
+    "item": "insanityoverworld:tiger_eye_chestplate"
+  }
+}

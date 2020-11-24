@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "insanityoverworld:uranium_block"
+    }
+  ],
+  "result": {
+    "item": "insanityoverworld:uranium_ingot",
+    "count": 9
+  }
+}

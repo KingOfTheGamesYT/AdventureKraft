@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PDP",
+    "LLL"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:oak_planks"
+    },
+    "L": {
+      "item": "minecraft:oak_log"
+    },
+    "D": {
+      "item": "minecraft:oak_door"
+    }
+  },
+  "result": {
+    "item": "insanityoverworld:insta_shelter"
+  }
+}
