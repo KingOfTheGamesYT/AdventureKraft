@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:ender_eye_block"
+      "item": "dangerzone:eye_of_ender_block"
     }
   ],
   "result": {

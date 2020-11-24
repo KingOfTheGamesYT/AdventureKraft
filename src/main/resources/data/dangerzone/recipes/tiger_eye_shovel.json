@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "dangerzone:tiger_eye"
+    }
+  },
+  "result": {
+    "item": "dangerzone:tiger_eye_shovel"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dangerzone:tiger_eye"
+    }
+  },
+  "result": {
+    "item": "dangerzone:tiger_eye_chestplate"
+  }
+}

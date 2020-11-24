@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dangerzone:tiger_eye_block"
+    }
+  ],
+  "result": {
+    "item": "dangerzone:tiger_eye",
+    "count": 9
+  }
+}

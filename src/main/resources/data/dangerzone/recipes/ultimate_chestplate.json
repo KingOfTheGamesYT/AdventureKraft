@@ -1,0 +1,22 @@
+{
+   "type": "minecraft:crafting_shaped",
+   "pattern": [
+      "# #",
+      "~~~",
+      "---"
+   ],
+   "key": {
+      "#": {
+         "item": "minecraft:iron_ingot"
+      },
+      "~": {
+         "item": "dangerzone:titanium_ingot"
+      },
+      "-": {
+         "item": "dangerzone:uranium_ingot"
+      }
+   },
+   "result": {
+      "item": "dangerzone:ultimate_chestplate"
+   }
+}

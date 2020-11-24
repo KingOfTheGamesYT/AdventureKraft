@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "dangerzone:uranium_ore"
+  },
+  "result": "dangerzone:uranium_nugget",
+  "experience": 1.0,
+  "cookingtime": 200
+}

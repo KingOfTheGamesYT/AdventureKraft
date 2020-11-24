@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dangerzone:pink_tourmaline"
+    }
+  },
+  "result": {
+    "item": "dangerzone:pink_tourmaline_chestplate"
+  }
+}

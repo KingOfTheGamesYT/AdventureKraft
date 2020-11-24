@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "dangerzone:tiger_eye_ore"
+  },
+  "result": "dangerzone:tiger_eye",
+  "experience": 1.0,
+  "cookingtime": 200
+}

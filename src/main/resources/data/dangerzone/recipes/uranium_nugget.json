@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dangerzone:uranium_ingot"
+    }
+  ],
+  "result": {
+    "item": "dangerzone:uranium_nugget",
+    "count": 9
+  }
+}
