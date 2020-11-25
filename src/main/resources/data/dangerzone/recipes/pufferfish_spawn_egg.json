@@ -3,13 +3,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "dangerzone:endermite_ore"
+      "item": "dangerzone:pufferfish_ore"
     },
     {
       "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "minecraft:endermite_spawn_egg"
+    "item": "minecraft:pufferfish_spawn_egg"
   }
 }

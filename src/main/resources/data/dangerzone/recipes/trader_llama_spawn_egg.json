@@ -3,13 +3,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "dangerzone:endermite_ore"
+      "item": "dangerzone:trader_llama_ore"
     },
     {
       "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "minecraft:endermite_spawn_egg"
+    "item": "minecraft:trader_llama_spawn_egg"
   }
 }
