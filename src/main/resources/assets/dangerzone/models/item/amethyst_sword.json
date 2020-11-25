@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "insanityoverworld:item/amethyst_sword"
+        "layer0": "dangerzone:item/amethyst_sword"
     }
 }
