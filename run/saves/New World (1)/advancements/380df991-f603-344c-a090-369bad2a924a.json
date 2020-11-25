@@ -1,304 +1,112 @@
 {
-  "minecraft:recipes/building_blocks/pink_concrete_powder": {
+  "minecraft:recipes/decorations/campfire": {
     "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
+      "has_stick": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/red_concrete_powder": {
+  "minecraft:recipes/misc/charcoal": {
     "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
+      "has_log": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/smoker": {
+  "minecraft:recipes/combat/wooden_sword": {
     "criteria": {
-      "has_furnace": "2020-11-24 09:54:29 -0500"
+      "has_stick": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/redstone/lever": {
+  "minecraft:recipes/tools/wooden_pickaxe": {
     "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
+      "has_stick": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/purple_concrete_powder": {
+  "minecraft:recipes/tools/wooden_axe": {
     "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/cobblestone_stairs_from_cobblestone_stonecutting": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/magenta_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/lime_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
-    },
-    "done": true
-  },
-  "minecraft:story/mine_stone": {
-    "criteria": {
-      "get_stone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stone": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/furnace": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/yellow_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/brewing/cauldron": {
-    "criteria": {
-      "has_water_bucket": "2020-11-24 14:26:21 -0500"
-    },
-    "done": true
-  },
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:beach": "2020-11-22 15:17:34 -0500",
-      "minecraft:plains": "2020-11-22 13:05:55 -0500"
-    },
-    "done": false
-  },
-  "minecraft:recipes/building_blocks/cobblestone_slab_from_cobblestone_stonecutting": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/birch_boat": {
-    "criteria": {
-      "in_water": "2020-11-22 15:18:51 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/chest": {
-    "criteria": {
-      "has_lots_of_items": "2020-11-24 09:18:21 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/brown_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/combat/stone_sword": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/cobblestone_wall": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/green_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/acacia_boat": {
-    "criteria": {
-      "in_water": "2020-11-22 15:18:51 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/torch": {
-    "criteria": {
-      "has_stone_pickaxe": "2020-11-23 22:05:54 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/stone_pickaxe": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "dangerzone:egg_ore/bat_ore": {
-    "criteria": {
-      "get_egg_ore": "2020-11-22 13:06:12 -0500"
-    },
-    "done": true
-  },
-  "dangerzone:egg_ore/root": {
-    "criteria": {
-      "get_egg_ore": "2020-11-22 13:06:12 -0500"
-    },
-    "done": true
-  },
-  "minecraft:adventure/root": {
-    "criteria": {
-      "killed_something": "2020-11-22 15:20:09 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/jungle_boat": {
-    "criteria": {
-      "in_water": "2020-11-22 15:18:51 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/spruce_boat": {
-    "criteria": {
-      "in_water": "2020-11-22 15:18:51 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/cobblestone_wall_from_cobblestone_stonecutting": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/white_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/stone_shovel": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/blue_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/stone_hoe": {
-    "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/gray_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
+      "has_stick": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
   "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
-      "in_water": "2020-11-22 15:18:51 -0500"
+      "in_water": "2020-11-24 20:55:48 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cobblestone_slab": {
+  "minecraft:recipes/decorations/ladder": {
     "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
+      "has_stick": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cobblestone_stairs": {
+  "minecraft:recipes/transportation/birch_boat": {
     "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
+      "in_water": "2020-11-24 20:55:48 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/black_concrete_powder": {
+  "minecraft:recipes/building_blocks/dark_oak_planks": {
     "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
+      "has_logs": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/coarse_dirt": {
+  "minecraft:recipes/tools/wooden_shovel": {
     "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
+      "has_stick": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "minecraft:story/upgrade_tools": {
+  "minecraft:recipes/transportation/acacia_boat": {
     "criteria": {
-      "stone_pickaxe": "2020-11-23 22:05:55 -0500"
-    },
-    "done": true
-  },
-  "minecraft:story/root": {
-    "criteria": {
-      "crafting_table": "2020-11-24 09:56:13 -0500"
+      "in_water": "2020-11-24 20:55:48 -0500"
     },
     "done": true
   },
   "minecraft:recipes/transportation/oak_boat": {
     "criteria": {
-      "in_water": "2020-11-22 15:18:51 -0500"
+      "in_water": "2020-11-24 20:55:48 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/light_gray_concrete_powder": {
+  "minecraft:recipes/combat/crossbow": {
     "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
+      "has_stick": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/light_blue_concrete_powder": {
+  "minecraft:recipes/building_blocks/dark_oak_wood": {
     "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
+      "has_log": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "dangerzone:egg_ore/parrot_ore": {
+  "minecraft:recipes/tools/wooden_hoe": {
     "criteria": {
-      "get_egg_ore": "2020-11-22 15:21:16 -0500"
+      "has_stick": "2020-11-24 20:56:00 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/tools/stone_axe": {
+  "minecraft:recipes/transportation/jungle_boat": {
     "criteria": {
-      "has_cobblestone": "2020-11-22 15:20:14 -0500"
+      "in_water": "2020-11-24 20:55:48 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/misc/coal": {
+  "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
-      "has_coal_block": "2020-11-24 09:54:40 -0500"
+      "in_water": "2020-11-24 20:55:48 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/orange_concrete_powder": {
+  "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
+      "minecraft:river": "2020-11-24 20:55:16 -0500",
+      "minecraft:stone_shore": "2020-11-24 20:55:46 -0500"
     },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/cyan_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2020-11-22 15:18:36 -0500"
-    },
-    "done": true
+    "done": false
   },
   "DataVersion": 2230
 }
