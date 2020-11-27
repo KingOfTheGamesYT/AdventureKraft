@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 
 import static com.devmaster.dangerzone.init.Items.*;
 
-public class InsanityMaterialStats {
+public class MaterialStats {
 
 
-	public enum InsanityToolTier implements IItemTier {
+	public enum ToolTier implements IItemTier {
 		AMETHYST_TIER(11f, 11f, 2000, 4, 19, AMETHYST),
 		RUBY_TIER(16f, 11f, 1500, 5, 21, RUBY),
 		ULTIMATE_TIER(36f, 18f, 3000, 10, 30, null),
@@ -36,7 +36,7 @@ public class InsanityMaterialStats {
 		private int durability, harvestLevel, enchantability;
 		private Item repairItem;
 
-		InsanityToolTier(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, @Nullable Item repairItem) {
+		ToolTier(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, @Nullable Item repairItem) {
 			this.attackDamage = attackDamage;
 			this.efficiency = efficiency;
 			this.durability = durability;
@@ -77,7 +77,7 @@ public class InsanityMaterialStats {
 		}
 	}
 
-	public enum InsanityArmorMaterials implements IArmorMaterial {
+	public enum ArmorMaterials implements IArmorMaterial {
 		//Chestplate durability = 16 * durability
 		AMETHYST_ARMOR("amethyst", 44, new int[]{4, 7, 8, 4}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, AMETHYST),
 		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, RUBY),
@@ -96,7 +96,7 @@ public class InsanityMaterialStats {
 		private int[] damageRedutionAmount; //{boots, leggings, chestplate, helmet}
 		private float toughness;
 
-		InsanityArmorMaterials(String name, int durability, int[] damageReductionAmount, int enchantability, SoundEvent equipSound, float toughness, Item repairItem) {
+		ArmorMaterials(String name, int durability, int[] damageReductionAmount, int enchantability, SoundEvent equipSound, float toughness, Item repairItem) {
 			this.name = name;
 			this.durability = durability;
 			this.damageRedutionAmount = damageReductionAmount;
