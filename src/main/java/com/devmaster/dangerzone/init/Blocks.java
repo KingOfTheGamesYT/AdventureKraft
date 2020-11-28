@@ -105,7 +105,7 @@ public class Blocks {
 	//endregion
 
 	//region misc
-	public static Block ENDER_EYE_BLOCK;
+	public static Block EYE_OF_ENDER_BLOCK;
 	public static Block ENDER_PEARL_BLOCK;
 
 	//endregion
@@ -202,12 +202,12 @@ public class Blocks {
 				ZOMBIE_EGG_ORE = new BlockMobOre(getLocation("zombie_ore")),
 				ZOMBIE_HORSE_EGG_ORE = new BlockMobOre(getLocation("zombie_horse_ore")),
 				ZOMBIE_PIGMAN_EGG_ORE = new BlockMobOre(getLocation("zombie_pigman_ore")),
-				ZOMBIE_VILLAGER_EGG_ORE = new BlockMobOre(getLocation("zombie_villager_ore"))
+				ZOMBIE_VILLAGER_EGG_ORE = new BlockMobOre(getLocation("zombie_villager_ore")),
 
 				//endregion
 
 				//region misc
-			//	ENDER_EYE_BLOCK = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_eye_block"),
+				EYE_OF_ENDER_BLOCK = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_eye_block")
 			//	ENDER_PEARL_BLOCK = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_pearl_block"),
 				//endregion
 
