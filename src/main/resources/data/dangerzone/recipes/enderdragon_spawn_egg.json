@@ -3,13 +3,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:enderdragon_ore"
+      "item": "dangerzone:enderdragon_ore"
     },
     {
       "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "insanityoverworld:enderdragon_spawn_egg"
+    "item": "dangerzone:enderdragon_spawn_egg"
   }
 }
