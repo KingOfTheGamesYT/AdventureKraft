@@ -3,6 +3,8 @@ package com.devmaster.dangerzone.init;
 import com.devmaster.dangerzone.DangerZone;
 import com.devmaster.dangerzone.blocks.BlockItemMobOre;
 import com.devmaster.dangerzone.items.Amethyst;
+import com.devmaster.dangerzone.items.HammerItem;
+import com.devmaster.dangerzone.items.ToolItemProperties;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -12,13 +14,15 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.util.function.Supplier;
+
 import static com.devmaster.dangerzone.DangerZone.TAB;
+import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.AMETHYST_TIER;
 
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(DangerZone.MODID)
 public class Items {
-
 	static Item DEBUG;
 	static Item DEV_STICK;
 
@@ -32,6 +36,7 @@ public class Items {
 	public static Item AMETHYST_CHESTPLATE;
 	public static Item AMETHYST_LEGGINGS;
 	public static Item AMETHYST_BOOTS;
+	//private static Supplier<ToolItemProperties> AMETHYST_HAMMER = () -> new ToolItemProperties().attackDamage(6).attackSpeed(-3.5f).tier(AMETHYST_TIER).width(1).setGroup(TAB);
 
 	public static Item RUBY;
 	public static Item RUBY_PICKAXE;
@@ -244,7 +249,7 @@ public class Items {
 	public static Item ZOMBIE_PIGMAN_EGG_ORE;
 	public static Item ZOMBIE_VILLAGER_EGG_ORE;
 
-	public static Item ENDER_EYE_BLOCK;
+	public static Item EYE_OF_ENDER_BLOCK;
 	public static Item ENDER_PEARL_BLOCK;
 
 
@@ -258,15 +263,15 @@ public class Items {
 			//		DEV_STICK = new ItemDevStick().setRegistryName("dev_stick")
 					//);
 	//	}
-
 		event.getRegistry().registerAll(
 
 				//region materials
 				AMETHYST = new Amethyst().setRegistryName("amethyst"),
-			//	AMETHYST_PICKAXE = new PickaxeItem(AMETHYST_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_pickaxe"),
-			//	AMETHYST_AXE = new AxeItem(AMETHYST_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_axe"),
-			//	AMETHYST_SHOVEL = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_shovel"),
-			//	AMETHYST_SWORD = new SwordItem(AMETHYST_TIER, 3, -2F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_sword"),
+				AMETHYST_PICKAXE = new PickaxeItem(AMETHYST_TIER, 1, -2.8F, new Item.Properties().group(TAB)).setRegistryName("amethyst_pickaxe"),
+				AMETHYST_AXE = new AxeItem(AMETHYST_TIER, 2, -3F, new Item.Properties().group(TAB)).setRegistryName("amethyst_axe"),
+			//	AMETHYST_HAMMER = new HammerItem().setReistryName("amethyst_hammer"),
+				//AMETHYST_SHOVEL = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_shovel"),
+				AMETHYST_SWORD = new SwordItem(AMETHYST_TIER, 3, -2F, new Item.Properties().group(TAB)).setRegistryName("amethyst_sword"),
 			//	AMETHYST_HELMET = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_helmet"),
 			//	AMETHYST_CHESTPLATE = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_chestplate"),
 			//	AMETHYST_LEGGINGS = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_leggings"),
@@ -372,10 +377,10 @@ public class Items {
 
 			//	RED_SHOE = new ShoeItem().setRegistryName("red_shoe"),
 
-			//	ENDER_DRAGON_SPAWN_EGG = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
-				//WITHER_SPAWN_EGG = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg"),
-			//	IRON_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.IRON_GOLEM, 13545366, 14144467, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("iron_golem_spawn_egg"),
-			//	SNOW_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.SNOW_GOLEM, 15921906, 15690005, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("snow_golem_spawn_egg"),
+				ENDER_DRAGON_SPAWN_EGG = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
+				WITHER_SPAWN_EGG = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg"),
+				IRON_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.IRON_GOLEM, 13545366, 14144467, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("iron_golem_spawn_egg"),
+				SNOW_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.SNOW_GOLEM, 15921906, 15690005, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("snow_golem_spawn_egg"),
 
 			//	BLANK_DISC = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("blank_disc"),
 
@@ -457,12 +462,12 @@ public class Items {
 				ZOMBIE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_EGG_ORE),
 				ZOMBIE_HORSE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_HORSE_EGG_ORE),
 				ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_PIGMAN_EGG_ORE),
-				ZOMBIE_VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_VILLAGER_EGG_ORE)
+				ZOMBIE_VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_VILLAGER_EGG_ORE),
 
 
 				//endregion
 
-			//	ENDER_EYE_BLOCK = registerItemBlock(Blocks.ENDER_EYE_BLOCK),
+				EYE_OF_ENDER_BLOCK = registerItemBlock(Blocks.EYE_OF_ENDER_BLOCK)
 			//	ENDER_PEARL_BLOCK = registerItemBlock(Blocks.ENDER_PEARL_BLOCK)
 
 				//endregion
