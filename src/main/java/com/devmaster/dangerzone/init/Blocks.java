@@ -207,7 +207,7 @@ public class Blocks {
 				//endregion
 
 				//region misc
-				EYE_OF_ENDER_BLOCK = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_eye_block")
+				EYE_OF_ENDER_BLOCK = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("eye_of_ender_block")
 			//	ENDER_PEARL_BLOCK = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_pearl_block"),
 				//endregion
 
