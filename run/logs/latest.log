@@ -1,40 +1,39 @@
-[29Nov2020 01:49:43.158] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20200515.085601, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 31.2.45, --version, MOD_DEV, --assetIndex, 1.15, --assetsDir, C:\Users\minec\.gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ????????, --userProperties, {}]
-[29Nov2020 01:49:43.162] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.1.2+70+master.2845bb9 starting: java version 1.8.0_251 by Oracle Corporation
-[29Nov2020 01:49:43.647] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[29Nov2020 01:49:43.689] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/C:/Users/minec/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.2/1cf212283d26f706fd3074318870bebd14d2a9ed/mixin-0.8.2.jar Service=ModLauncher Env=CLIENT
-[29Nov2020 01:49:45.049] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\minec\.gradle\caches\forge_gradle\assets, --assetIndex, 1.15, --username, Dev, --accessToken, ????????, --userProperties, {}]
-[29Nov2020 01:49:47.076] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[29Nov2020 01:49:56.669] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
-[29Nov2020 01:49:57.518] [modloading-worker-3/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.2.45, for MC 1.15.2 with MCP 20200515.085601
-[29Nov2020 01:49:57.518] [modloading-worker-3/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.2.45 Initialized
-[29Nov2020 01:50:01.029] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[29Nov2020 01:50:01.107] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[29Nov2020 01:50:01.266] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[29Nov2020 01:50:01.671] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 31.2.45 Target: 31.2.46
-[29Nov2020 01:50:05.298] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[29Nov2020 01:50:05.299] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[29Nov2020 01:50:05.479] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[29Nov2020 01:50:05.553] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
-[29Nov2020 01:50:05.554] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[29Nov2020 01:50:05.554] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[29Nov2020 01:50:05.555] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[29Nov2020 01:50:05.555] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[29Nov2020 01:50:05.555] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[29Nov2020 01:50:05.929] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[29Nov2020 01:50:05.930] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[29Nov2020 01:50:05.930] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[29Nov2020 01:50:06.233] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[29Nov2020 01:50:12.351] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[29Nov2020 01:50:12.351] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[29Nov2020 01:50:12.352] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[29Nov2020 01:50:12.352] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[29Nov2020 01:50:12.352] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[29Nov2020 01:50:12.486] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.15.2
-[29Nov2020 01:50:12.486] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Generating keypair
-[29Nov2020 01:50:12.628] [Server thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this SERVER instance
-[29Nov2020 01:50:12.692] [Server thread/WARN] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Item: Object did not get ID it asked for. Name: dangerzone:trex_tooth Expected: 892 Got: 962
-[29Nov2020 01:50:12.802] [Server thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, main, forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar
-[29Nov2020 01:50:13.517] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_block
+[29Nov2020 13:19:18.994] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20200515.085601, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 31.2.45, --version, MOD_DEV, --assetIndex, 1.15, --assetsDir, C:\Users\minec\.gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[29Nov2020 13:19:18.997] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.1.2+70+master.2845bb9 starting: java version 1.8.0_251 by Oracle Corporation
+[29Nov2020 13:19:19.490] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[29Nov2020 13:19:19.527] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/C:/Users/minec/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.2/1cf212283d26f706fd3074318870bebd14d2a9ed/mixin-0.8.2.jar Service=ModLauncher Env=CLIENT
+[29Nov2020 13:19:21.007] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\minec\.gradle\caches\forge_gradle\assets, --assetIndex, 1.15, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[29Nov2020 13:19:22.886] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[29Nov2020 13:19:32.662] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
+[29Nov2020 13:19:33.725] [modloading-worker-3/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.2.45, for MC 1.15.2 with MCP 20200515.085601
+[29Nov2020 13:19:33.725] [modloading-worker-3/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.2.45 Initialized
+[29Nov2020 13:19:37.268] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[29Nov2020 13:19:37.344] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[29Nov2020 13:19:37.480] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[29Nov2020 13:19:37.860] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 31.2.45 Target: 31.2.46
+[29Nov2020 13:19:41.565] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[29Nov2020 13:19:41.566] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[29Nov2020 13:19:41.776] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[29Nov2020 13:19:41.851] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
+[29Nov2020 13:19:41.851] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[29Nov2020 13:19:41.851] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[29Nov2020 13:19:41.852] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[29Nov2020 13:19:41.852] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[29Nov2020 13:19:41.853] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[29Nov2020 13:19:42.227] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[29Nov2020 13:19:42.229] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[29Nov2020 13:19:42.229] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[29Nov2020 13:19:42.515] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[29Nov2020 13:19:55.715] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[29Nov2020 13:19:55.716] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[29Nov2020 13:19:55.717] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[29Nov2020 13:19:55.717] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[29Nov2020 13:19:55.718] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[29Nov2020 13:19:55.856] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.15.2
+[29Nov2020 13:19:55.856] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Generating keypair
+[29Nov2020 13:19:55.990] [Server thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this SERVER instance
+[29Nov2020 13:19:56.146] [Server thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, main, forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar
+[29Nov2020 13:19:57.164] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_block
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -69,7 +68,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.518] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_nugget_from_smelting
+[29Nov2020 13:19:57.166] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_nugget_from_smelting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -102,7 +101,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ore'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.519] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_helmet
+[29Nov2020 13:19:57.167] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_helmet'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -132,7 +131,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_helmet'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.520] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ender_pearl
+[29Nov2020 13:19:57.168] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ender_pearl
 com.google.gson.JsonSyntaxException: Unknown item 'insanityoverworld:ender_pearl_block'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -166,7 +165,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'insanityoverworld:ender_pearl
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.521] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_shovel
+[29Nov2020 13:19:57.169] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_shovel
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -201,7 +200,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.522] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_helmet
+[29Nov2020 13:19:57.170] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -236,7 +235,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.522] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_chestplate
+[29Nov2020 13:19:57.171] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_chestplate'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -266,7 +265,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_chestplate'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.523] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_leggings
+[29Nov2020 13:19:57.172] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -301,7 +300,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.524] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_leggings
+[29Nov2020 13:19:57.173] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -336,7 +335,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.525] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:insta_shelter
+[29Nov2020 13:19:57.174] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:insta_shelter
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:insta_shelter'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -366,7 +365,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:insta_shelter'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.525] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_crystal
+[29Nov2020 13:19:57.174] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_crystal
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -396,7 +395,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.527] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_sword
+[29Nov2020 13:19:57.175] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_sword
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -431,7 +430,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.531] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_ingot_from_nugget
+[29Nov2020 13:19:57.180] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_ingot_from_nugget
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_nugget'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -466,7 +465,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_nugget'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.532] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_ingot_from_nugget
+[29Nov2020 13:19:57.181] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_ingot_from_nugget
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_nugget'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -501,7 +500,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_nugget'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.533] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_nugget
+[29Nov2020 13:19:57.182] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_nugget
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -535,7 +534,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.534] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_chestplate
+[29Nov2020 13:19:57.184] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -570,7 +569,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.534] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_boots
+[29Nov2020 13:19:57.184] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_boots
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -605,7 +604,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.535] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:miners_dream
+[29Nov2020 13:19:57.185] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:miners_dream
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:miners_dream'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -635,7 +634,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:miners_dream'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.535] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_shovel
+[29Nov2020 13:19:57.186] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_shovel
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_shovel'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -665,7 +664,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_shovel'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.536] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_helmet
+[29Nov2020 13:19:57.186] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -700,7 +699,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.536] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_shovel
+[29Nov2020 13:19:57.187] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_shovel
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -735,7 +734,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.537] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_pickaxe
+[29Nov2020 13:19:57.188] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_pickaxe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -770,7 +769,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.538] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_pickaxe
+[29Nov2020 13:19:57.188] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_pickaxe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -805,7 +804,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.538] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_leggings
+[29Nov2020 13:19:57.189] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_leggings'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -835,7 +834,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_leggings'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.539] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_helmet
+[29Nov2020 13:19:57.189] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -870,7 +869,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.539] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_pickaxe
+[29Nov2020 13:19:57.190] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_pickaxe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -905,7 +904,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.541] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_leggings
+[29Nov2020 13:19:57.191] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -940,7 +939,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.542] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_axe
+[29Nov2020 13:19:57.191] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_axe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -975,7 +974,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.542] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ender_pearl_block
+[29Nov2020 13:19:57.192] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ender_pearl_block
 com.google.gson.JsonSyntaxException: Unknown item 'insanityoverworld:ender_pearl_block'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1005,7 +1004,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'insanityoverworld:ender_pearl
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.543] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_nugget
+[29Nov2020 13:19:57.192] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_nugget
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1039,7 +1038,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.544] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_block
+[29Nov2020 13:19:57.193] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_block
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1074,7 +1073,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.545] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_axe
+[29Nov2020 13:19:57.194] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_axe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1109,7 +1108,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.545] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_ingot_from_block
+[29Nov2020 13:19:57.195] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_ingot_from_block
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_block'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1143,7 +1142,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_block'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.545] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_leggings
+[29Nov2020 13:19:57.195] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1178,7 +1177,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.546] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_ingot_from_block
+[29Nov2020 13:19:57.196] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_ingot_from_block
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_block'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1212,7 +1211,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_block'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.547] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_sword
+[29Nov2020 13:19:57.196] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_sword
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1247,7 +1246,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.547] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_boots
+[29Nov2020 13:19:57.197] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_boots
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1282,7 +1281,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.548] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_helmet
+[29Nov2020 13:19:57.197] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1317,7 +1316,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.548] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_nugget_from_blasting
+[29Nov2020 13:19:57.198] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_nugget_from_blasting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1350,7 +1349,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_ore'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.549] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_chestplate
+[29Nov2020 13:19:57.199] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1385,7 +1384,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.549] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_block
+[29Nov2020 13:19:57.199] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_block
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1420,7 +1419,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.550] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_boots
+[29Nov2020 13:19:57.200] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_boots
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_boots'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1450,7 +1449,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_boots'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.550] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_from_smelting
+[29Nov2020 13:19:57.200] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_from_smelting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1483,7 +1482,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye_ore'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.551] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_shovel
+[29Nov2020 13:19:57.201] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_shovel
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1518,7 +1517,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.551] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:insta_nether_portal
+[29Nov2020 13:19:57.201] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:insta_nether_portal
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:insta_nether_portal'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1548,7 +1547,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:insta_nether_porta
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.552] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_boots
+[29Nov2020 13:19:57.202] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_boots
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1583,7 +1582,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.553] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_block
+[29Nov2020 13:19:57.203] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_block
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1618,7 +1617,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.554] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_pickaxe
+[29Nov2020 13:19:57.204] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_pickaxe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1653,7 +1652,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.555] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_boots
+[29Nov2020 13:19:57.205] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_boots
 com.google.gson.JsonSyntaxException: Pattern references symbol '#' but it's not defined in the key
 	at net.minecraft.item.crafting.ShapedRecipe.deserializeIngredients(ShapedRecipe.java:168) ~[?:?]
 	at net.minecraft.item.crafting.ShapedRecipe.access$200(ShapedRecipe.java:24) ~[?:?]
@@ -1682,7 +1681,7 @@ com.google.gson.JsonSyntaxException: Pattern references symbol '#' but it's not 
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.556] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye
+[29Nov2020 13:19:57.205] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye_block'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1716,7 +1715,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye_block'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.556] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_block
+[29Nov2020 13:19:57.206] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_block
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1751,7 +1750,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.557] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_from_blasting
+[29Nov2020 13:19:57.206] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_from_blasting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1784,7 +1783,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby_ore'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.557] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_axe
+[29Nov2020 13:19:57.207] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_axe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1819,7 +1818,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.558] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_from_smelting
+[29Nov2020 13:19:57.207] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_from_smelting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1852,7 +1851,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline_or
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.562] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_shovel
+[29Nov2020 13:19:57.208] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_shovel
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1887,7 +1886,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.565] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_leggings
+[29Nov2020 13:19:57.209] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:amethyst_leggings'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1917,7 +1916,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:amethyst_leggings'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.566] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_pickaxe
+[29Nov2020 13:19:57.210] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_pickaxe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_pickaxe'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1947,7 +1946,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_pickaxe'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.566] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby
+[29Nov2020 13:19:57.210] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby_block'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -1981,7 +1980,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby_block'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.567] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_axe
+[29Nov2020 13:19:57.211] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_axe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2016,7 +2015,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.567] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_from_blasting
+[29Nov2020 13:19:57.211] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_from_blasting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2049,7 +2048,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline_or
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.568] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_chestplate
+[29Nov2020 13:19:57.212] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:amethyst_chestplate'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2079,7 +2078,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:amethyst_chestplat
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.568] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:insta_garden
+[29Nov2020 13:19:57.212] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:insta_garden
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:insta_garden'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2109,7 +2108,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:insta_garden'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.568] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline
+[29Nov2020 13:19:57.213] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline_block'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2143,7 +2142,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline_bl
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.569] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_helmet
+[29Nov2020 13:19:57.213] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2178,7 +2177,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.569] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_sword
+[29Nov2020 13:19:57.213] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_sword
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2213,7 +2212,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.569] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_chestplate
+[29Nov2020 13:19:57.214] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2248,7 +2247,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.570] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_leggings
+[29Nov2020 13:19:57.214] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_leggings
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2283,7 +2282,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.570] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_chestplate
+[29Nov2020 13:19:57.216] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2318,7 +2317,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.571] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_nugget_from_smelting
+[29Nov2020 13:19:57.217] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:uranium_nugget_from_smelting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2351,7 +2350,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:uranium_ore'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.572] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_from_blasting
+[29Nov2020 13:19:57.217] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:tiger_eye_from_blasting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2384,7 +2383,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:tiger_eye_ore'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.572] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_sword
+[29Nov2020 13:19:57.218] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_sword
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_sword'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2414,7 +2413,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_sword'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.573] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_shovel
+[29Nov2020 13:19:57.218] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_shovel
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:amethyst_shovel'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2444,7 +2443,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:amethyst_shovel'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.573] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_boots
+[29Nov2020 13:19:57.219] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lava_boots
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2479,7 +2478,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lava_crystal'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.574] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_axe
+[29Nov2020 13:19:57.219] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:lapis_axe
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_axe'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2509,7 +2508,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:lapis_axe'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.575] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_from_smelting
+[29Nov2020 13:19:57.220] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ruby_from_smelting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2542,7 +2541,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:ruby_ore'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.576] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_sword
+[29Nov2020 13:19:57.220] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:pink_tourmaline_sword
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2577,7 +2576,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:pink_tourmaline'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.576] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_helmet
+[29Nov2020 13:19:57.221] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:amethyst_helmet
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:amethyst_helmet'
 	at net.minecraft.item.crafting.ShapedRecipe.lambda$deserializeItem$0(ShapedRecipe.java:286) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2607,7 +2606,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:amethyst_helmet'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.577] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_chestplate
+[29Nov2020 13:19:57.221] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_chestplate
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2642,7 +2641,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.577] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_boots
+[29Nov2020 13:19:57.222] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:ultimate_boots
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2677,7 +2676,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ingot'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.578] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_nugget_from_blasting
+[29Nov2020 13:19:57.222] [Server thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe dangerzone:titanium_nugget_from_blasting
 com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ore'
 	at net.minecraft.item.crafting.Ingredient.lambda$deserializeItemList$12(Ingredient.java:214) ~[?:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2710,8 +2709,8 @@ com.google.gson.JsonSyntaxException: Unknown item 'dangerzone:titanium_ore'
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:13.579] [Server thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 6 recipes
-[29Nov2020 01:50:14.016] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/tiger_eye_block
+[29Nov2020 13:19:57.223] [Server thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 6 recipes
+[29Nov2020 13:19:57.649] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/tiger_eye_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:tiger_eye_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2772,7 +2771,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.109] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ender_eye_block
+[29Nov2020 13:19:57.747] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ender_eye_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:ender_eye_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2833,7 +2832,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.270] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/pink_tourmaline_block
+[29Nov2020 13:19:57.920] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/pink_tourmaline_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:pink_tourmaline_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2894,7 +2893,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.283] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/pink_tourmaline_ore
+[29Nov2020 13:19:57.938] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/pink_tourmaline_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:pink_tourmaline_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -2955,7 +2954,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.392] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:chests/inject/end_city_treasure
+[29Nov2020 13:19:58.063] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:chests/inject/end_city_treasure
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'insanityoverworld:titanium_ingot'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -3016,7 +3015,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.407] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:chests/inject/simple_dungeon
+[29Nov2020 13:19:58.079] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:chests/inject/simple_dungeon
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'insanityoverworld:blank_disc'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -3077,7 +3076,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.411] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/titanium_block
+[29Nov2020 13:19:58.083] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/titanium_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:titanium_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -3138,7 +3137,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.423] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/uranium_block
+[29Nov2020 13:19:58.095] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/uranium_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:uranium_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -3199,7 +3198,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.463] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/uranium_ore
+[29Nov2020 13:19:58.139] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/uranium_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:uranium_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -3260,7 +3259,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.511] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/titanium_ore
+[29Nov2020 13:19:58.194] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/titanium_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:titanium_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -3321,7 +3320,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.522] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ruby_block
+[29Nov2020 13:19:58.208] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ruby_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:ruby_block'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -3382,7 +3381,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.535] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ruby_ore
+[29Nov2020 13:19:58.222] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/ruby_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:ruby_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -3455,7 +3454,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.537] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/tiger_eye_ore
+[29Nov2020 13:19:58.225] [Server thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager/]: Couldn't parse loot table dangerzone:blocks/tiger_eye_ore
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'dangerzone:tiger_eye_ore'
 	at net.minecraft.util.JSONUtils.lambda$getItem$0(JSONUtils.java:112) ~[forge-1.15.2-31.2.45_mapped_snapshot_20201116-1.15.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:290) ~[?:1.8.0_251]
@@ -3516,34 +3515,40 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:99) [?:?]
 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:638) [?:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-[29Nov2020 01:50:14.790] [Server thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 887 advancements
-[29Nov2020 01:50:15.463] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[29Nov2020 01:50:16.041] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[29Nov2020 01:50:16.041] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[29Nov2020 01:50:16.374] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 900 ms
-[29Nov2020 01:50:16.609] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[29Nov2020 01:50:16.610] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[29Nov2020 01:50:16.613] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
-[29Nov2020 01:50:17.972] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
-[29Nov2020 01:50:18.036] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@3baa6232
-[29Nov2020 01:50:18.051] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:40564e08] logged in with entity id 175 at (125.08289550312483, 73.0, 55.04931305925145)
-[29Nov2020 01:50:18.076] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[29Nov2020 01:50:18.415] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[29Nov2020 01:50:18.429] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[29Nov2020 01:50:18.483] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 150 advancements
-[29Nov2020 01:50:21.042] [Render thread/WARN] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Unable to play empty soundEvent: minecraft:entity.snow_golem.ambient
-[29Nov2020 01:51:25.346] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Saved screenshot as 2020-11-29_01.51.25.png
-[29Nov2020 01:51:27.417] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[29Nov2020 01:51:27.427] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[29Nov2020 01:51:35.017] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[29Nov2020 01:51:35.020] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[29Nov2020 01:53:23.278] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
-[29Nov2020 01:53:23.279] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[29Nov2020 01:53:23.288] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
-[29Nov2020 01:53:23.334] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[29Nov2020 01:53:23.334] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[29Nov2020 01:53:23.334] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[29Nov2020 01:53:23.334] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[29Nov2020 01:53:23.827] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
-[29Nov2020 01:53:23.840] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
-[29Nov2020 01:53:24.565] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[29Nov2020 13:19:58.504] [Server thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 887 advancements
+[29Nov2020 13:19:59.228] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[29Nov2020 13:19:59.902] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[29Nov2020 13:19:59.902] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[29Nov2020 13:20:00.300] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 1049 ms
+[29Nov2020 13:20:00.457] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[29Nov2020 13:20:00.459] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[29Nov2020 13:20:00.461] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
+[29Nov2020 13:20:01.835] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[29Nov2020 13:20:01.921] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@56e12de8
+[29Nov2020 13:20:01.939] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:04307109] logged in with entity id 175 at (125.08289550312483, 73.0, 55.04931305925145)
+[29Nov2020 13:20:01.966] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[29Nov2020 13:20:02.425] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[29Nov2020 13:20:02.436] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[29Nov2020 13:20:02.481] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 150 advancements
+[29Nov2020 13:20:59.819] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[29Nov2020 13:20:59.836] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[29Nov2020 13:21:08.000] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Survival Mode]
+[29Nov2020 13:21:08.021] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Set own game mode to Survival Mode
+[29Nov2020 13:21:25.173] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev was slain by Iron Golem
+[29Nov2020 13:21:25.184] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev was slain by Iron Golem
+[29Nov2020 13:21:53.832] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Creative Mode]
+[29Nov2020 13:21:53.834] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Set own game mode to Creative Mode
+[29Nov2020 13:23:18.519] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[29Nov2020 13:23:18.528] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[29Nov2020 13:24:07.621] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[29Nov2020 13:24:07.631] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[29Nov2020 13:24:09.128] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
+[29Nov2020 13:24:09.128] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[29Nov2020 13:24:09.132] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[29Nov2020 13:24:09.171] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[29Nov2020 13:24:09.171] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[29Nov2020 13:24:09.171] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[29Nov2020 13:24:09.171] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[29Nov2020 13:24:09.373] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[29Nov2020 13:24:09.381] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[29Nov2020 13:24:10.135] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

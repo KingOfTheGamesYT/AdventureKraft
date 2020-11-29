@@ -4,6 +4,7 @@ import com.devmaster.dangerzone.DangerZone;
 import com.devmaster.dangerzone.blocks.BlockItemMobOre;
 import com.devmaster.dangerzone.items.Amethyst;
 import com.devmaster.dangerzone.items.HammerItem;
+import com.devmaster.dangerzone.items.SpecialSwordItem;
 import com.devmaster.dangerzone.items.ToolItemProperties;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
@@ -18,6 +19,7 @@ import java.util.function.Supplier;
 
 import static com.devmaster.dangerzone.DangerZone.TAB;
 import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.AMETHYST_TIER;
+import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.MANTIS_CLAW_TIER;
 
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -355,7 +357,7 @@ public class Items {
 			//	KRAKEN_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("kraken_tooth"),
 			//	TRIFFID_GOO = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("triffid_goo"),
 
-			//	MANTIS_CLAW = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("mantis_claw"),
+				MANTIS_CLAW = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(TAB)).setRegistryName("mantis_claw"),
 			//	SCORPION_TAIL = new SpecialSwordItem(SCORPION_TAIL_TIER, 3, -2.4f, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("scorpion_tail"),
 
 				//endregion
