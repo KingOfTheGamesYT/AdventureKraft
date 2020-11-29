@@ -8,6 +8,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
 import static com.devmaster.dangerzone.init.Items.MANTIS_CLAW;
+import static com.devmaster.dangerzone.init.Items.SCORPION_TAIL;
 
 
 public class SpecialSwordItem extends SwordItem {
@@ -24,10 +25,10 @@ public class SpecialSwordItem extends SwordItem {
 				entity.heal(-1.0F);
 				player.heal(1.0F);
 				return true;
-			//}//else if(stack.getItem() == SCORPION_TAIL) {
-				//int length = 10 + player.world.rand.nextInt(10);
-				//entity.addPotionEffect(new EffectInstance(Effects.POISON, length * 20, 0));
-				//return true;
+			}else if(stack.getItem() == SCORPION_TAIL) {
+				int length = 10 + player.world.rand.nextInt(10);
+				entity.addPotionEffect(new EffectInstance(Effects.POISON, length * 20, 0));
+				return true;
 			}
 		}
 		return true;

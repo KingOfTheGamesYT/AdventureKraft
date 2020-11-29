@@ -18,8 +18,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import java.util.function.Supplier;
 
 import static com.devmaster.dangerzone.DangerZone.TAB;
-import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.AMETHYST_TIER;
-import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.MANTIS_CLAW_TIER;
+import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.*;
 
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -358,7 +357,7 @@ public class Items {
 			//	TRIFFID_GOO = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("triffid_goo"),
 
 				MANTIS_CLAW = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(TAB)).setRegistryName("mantis_claw"),
-			//	SCORPION_TAIL = new SpecialSwordItem(SCORPION_TAIL_TIER, 3, -2.4f, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("scorpion_tail"),
+				SCORPION_TAIL = new SpecialSwordItem(SCORPION_TAIL_TIER, 3, -2.4f, new Item.Properties().group(TAB)).setRegistryName("scorpion_tail"),
 
 				//endregion
 
