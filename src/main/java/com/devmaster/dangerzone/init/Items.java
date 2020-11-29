@@ -377,7 +377,7 @@ public class Items {
 
 			//	RED_SHOE = new ShoeItem().setRegistryName("red_shoe"),
 
-				ENDER_DRAGON_SPAWN_EGG = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
+				ENDER_DRAGON_SPAWN_EGG = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 333333, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
 				WITHER_SPAWN_EGG = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg"),
 				IRON_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.IRON_GOLEM, 13545366, 14144467, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("iron_golem_spawn_egg"),
 				SNOW_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.SNOW_GOLEM, 15921906, 15690005, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("snow_golem_spawn_egg"),
@@ -467,8 +467,8 @@ public class Items {
 
 				//endregion
 
-				EYE_OF_ENDER_BLOCK = registerItemBlock(Blocks.EYE_OF_ENDER_BLOCK)
-			//	ENDER_PEARL_BLOCK = registerItemBlock(Blocks.ENDER_PEARL_BLOCK)
+				EYE_OF_ENDER_BLOCK = registerItemBlock(Blocks.EYE_OF_ENDER_BLOCK),
+				ENDER_PEARL_BLOCK = registerItemBlock(Blocks.ENDER_PEARL_BLOCK)
 
 				//endregion
 
