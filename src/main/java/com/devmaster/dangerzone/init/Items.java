@@ -349,9 +349,9 @@ public class Items {
 				MOLE_NOSE = new Item(new Item.Properties().group(TAB)).setRegistryName("giant_mole_nose"),
 				SERPENT_TONGUE = new Item(new Item.Properties().group(TAB)).setRegistryName("sea_viper_tongue"),
 				KATTERKILLER_JAW = new Item(new Item.Properties().group(TAB)).setRegistryName("katterkiller_jaw"),
-			//	BASILISC_SCALE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("basilisc_scale"),
+			//	BASILISC_SCALE = new Item(new Item.Properties().group(TAB)).setRegistryName("basilisc_scale"),
 			//	NYTEMAIR_SCALE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("nytemair_scale"),
-			//	TREX_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("trex_tooth"),
+				TREX_TOOTH = new Item(new Item.Properties().group(TAB)).setRegistryName("trex_tooth"),
 			//	KRAKEN_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("kraken_tooth"),
 			//	TRIFFID_GOO = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("triffid_goo"),
 
