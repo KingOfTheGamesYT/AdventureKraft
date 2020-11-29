@@ -345,10 +345,10 @@ public class Items {
 
 				//region Boss Drops
 
-			//	ENDER_DRAGON_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ender_dragon_tooth"),
-			//	MOLE_NOSE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("giant_mole_nose"),
-			//	SERPENT_TONGUE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("sea_serpent_tongue"),
-			//	KATTERKILLER_JAW = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("katterkiller_jaw"),
+				ENDER_DRAGON_TOOTH = new Item(new Item.Properties().group(TAB)).setRegistryName("ender_dragon_tooth"),
+				MOLE_NOSE = new Item(new Item.Properties().group(TAB)).setRegistryName("giant_mole_nose"),
+				SERPENT_TONGUE = new Item(new Item.Properties().group(TAB)).setRegistryName("sea_viper_tongue"),
+				KATTERKILLER_JAW = new Item(new Item.Properties().group(TAB)).setRegistryName("katterkiller_jaw"),
 			//	BASILISC_SCALE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("basilisc_scale"),
 			//	NYTEMAIR_SCALE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("nytemair_scale"),
 			//	TREX_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("trex_tooth"),
