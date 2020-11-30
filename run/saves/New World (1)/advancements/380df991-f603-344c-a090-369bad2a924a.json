@@ -83,6 +83,12 @@
     },
     "done": true
   },
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2020-11-29 21:47:12 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/yellow_concrete_powder": {
     "criteria": {
       "has_gravel": "2020-11-27 14:02:46 -0500"
@@ -294,6 +300,12 @@
   "minecraft:recipes/building_blocks/gray_wool": {
     "criteria": {
       "has_white_wool": "2020-11-25 23:15:37 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2020-11-29 21:47:12 -0500"
     },
     "done": true
   },
