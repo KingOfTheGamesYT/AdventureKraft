@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:ender_pearl_block"
+      "item": "dangerzone:ender_pearl_block"
     }
   ],
   "result": {

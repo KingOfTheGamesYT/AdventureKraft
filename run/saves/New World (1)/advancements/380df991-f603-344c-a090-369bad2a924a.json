@@ -17,9 +17,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_pickaxe": "2020-11-30 12:28:25 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/purple_wool": {
     "criteria": {
       "has_white_wool": "2020-11-25 23:15:37 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_porkchop_from_campfire_cooking": {
+    "criteria": {
+      "has_porkchop": "2020-11-30 12:28:24 -0500"
     },
     "done": true
   },
@@ -122,6 +134,7 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:mountains": "2020-11-25 23:11:56 -0500",
+      "minecraft:taiga": "2020-11-30 12:30:10 -0500",
       "minecraft:birch_forest": "2020-11-25 23:17:03 -0500",
       "minecraft:river": "2020-11-25 23:17:02 -0500",
       "minecraft:swamp": "2020-11-25 23:17:27 -0500",
@@ -156,6 +169,12 @@
   "minecraft:recipes/decorations/ladder": {
     "criteria": {
       "has_stick": "2020-11-25 23:13:27 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/map": {
+    "criteria": {
+      "has_compass": "2020-11-30 12:28:25 -0500"
     },
     "done": true
   },
@@ -228,6 +247,12 @@
   "minecraft:adventure/root": {
     "criteria": {
       "killed_something": "2020-11-25 23:15:37 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/coal_block": {
+    "criteria": {
+      "has_coal": "2020-11-30 12:28:26 -0500"
     },
     "done": true
   },
@@ -333,6 +358,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_pickaxe": "2020-11-30 12:28:25 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/cooked_mutton_from_smoking": {
     "criteria": {
       "has_mutton": "2020-11-25 23:15:37 -0500"
@@ -342,6 +373,12 @@
   "minecraft:recipes/building_blocks/black_concrete_powder": {
     "criteria": {
       "has_gravel": "2020-11-27 14:02:46 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/iron_tools": {
+    "criteria": {
+      "iron_pickaxe": "2020-11-30 12:28:25 -0500"
     },
     "done": true
   },
@@ -423,9 +460,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/cooked_porkchop_from_smoking": {
+    "criteria": {
+      "has_porkchop": "2020-11-30 12:28:24 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/orange_concrete_powder": {
     "criteria": {
       "has_gravel": "2020-11-27 14:02:46 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_porkchop": {
+    "criteria": {
+      "has_porkchop": "2020-11-30 12:28:24 -0500"
     },
     "done": true
   },
