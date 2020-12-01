@@ -3,7 +3,7 @@ Implementation-Title: DangerZone
 Implementation-Version: 1.0
 Specification-Vendor: examplemodsareus
 Specification-Title: dangerzone
-Implementation-Timestamp: 2020-11-30T14:23:27-0500
+Implementation-Timestamp: 2020-11-30T22:43:17-0500
 Specification-Version: 1
 Implementation-Vendor: examplemodsareus
 
