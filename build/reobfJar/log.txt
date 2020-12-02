@@ -23,7 +23,7 @@ Classpath: C:\Users\minec\.gradle\caches\modules-2\files-2.1\com.electronwill.ni
 Classpath: C:\Users\minec\.gradle\caches\modules-2\files-2.1\com.electronwill.night-config\core\3.6.2\56f6500038861d4a8832072676da7bf7916217d0\core-3.6.2.jar
 Classpath: C:\Users\minec\.gradle\caches\modules-2\files-2.1\org.jline\jline\3.12.1\de2bd909cb9f8eaa741bd03df4a1bd3f6eb593c7\jline-3.12.1.jar
 Classpath: C:\Users\minec\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.6.0\d4c0da647de59c9ccc304a112fe1f1474d49e8eb\maven-artifact-3.6.0.jar
-Classpath: C:\Users\minec\.gradle\caches\modules-2\files-2.1\net.jodah\typetools\0.8.1\d12de898d333cb7eb0e39a35db03c1e09d92d595\typetools-0.8.1.jar
+Classpath: C:\Users\minec\.gradle\caches\modules-2\files-2.1\net.jodah\typetools\0.8.3\98f84f353457629e81cc6827224871b1a8faa7af\typetools-0.8.3.jar
 Classpath: C:\Users\minec\.gradle\caches\modules-2\files-2.1\net.minecrell\terminalconsoleappender\1.2.0\96d02cd3b384ff015a8fef4223bcb4ccf1717c95\terminalconsoleappender-1.2.0.jar
 Classpath: C:\Users\minec\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.11.2\6c2fb3f5b7cd27504726aef1b674b542a0c9cf53\log4j-core-2.11.2.jar
 Classpath: C:\Users\minec\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.11.2\f5e9a2ffca496057d6891a3de65128efc636e26e\log4j-api-2.11.2.jar

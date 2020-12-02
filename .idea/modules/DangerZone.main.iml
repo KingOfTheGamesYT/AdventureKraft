@@ -5,16 +5,13 @@
       <configuration>
         <autoDetectTypes>
           <platformType>FORGE</platformType>
-          <platformType>MIXIN</platformType>
           <platformType>MCP</platformType>
+          <platformType>MIXIN</platformType>
         </autoDetectTypes>
       </configuration>
     </facet>
   </component>
   <component name="McpModuleSettings">
-    <option name="mappingFile" value="C:\Users\minec\Documents\GitHub\DangerZone\build\createMcpToSrg\output.tsrg" />
-    <option name="mcpVersion" value="snapshot_20201116-1.15.1" />
-    <option name="minecraftVersion" value="1.15.2" />
-    <option name="srgType" value="TSRG" />
+    <option name="srgType" value="SRG" />
   </component>
 </module>
