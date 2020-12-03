@@ -2,10 +2,7 @@ package com.devmaster.dangerzone.init;
 
 import com.devmaster.dangerzone.DangerZone;
 import com.devmaster.dangerzone.blocks.BlockItemMobOre;
-import com.devmaster.dangerzone.items.Amethyst;
-import com.devmaster.dangerzone.items.HammerItem;
-import com.devmaster.dangerzone.items.SpecialSwordItem;
-import com.devmaster.dangerzone.items.ToolItemProperties;
+import com.devmaster.dangerzone.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -148,7 +145,7 @@ public class Items {
 	public static Item MANTIS_CLAW;
 	public static Item SCORPION_TAIL;
 	public static Item BASILISC_SCALE;
-	public static Item NYTEMAIR_SCALE;
+	public static Item BIORAPTOR_SCALE;
 	public static Item KATTERKILLER_JAW;
 
 	//endregion
@@ -161,7 +158,7 @@ public class Items {
 	public static Item KATTERKILLER_SPAWN_EGG;
 	public static Item TREX_SPAWN_EGG;
 	public static Item KRAKEN_SPAWN_EGG;
-	public static Item NYTEMAIR_SPAWN_EGG;
+	public static Item BIORAPTOR_SPAWN_EGG;
 	public static Item WATER_DRAGON_SPAWN_EGG;
 
 	public static Item APPLE_COW_SPAWN_EGG;
@@ -350,8 +347,8 @@ public class Items {
 				MOLE_NOSE = new Item(new Item.Properties().group(TAB)).setRegistryName("giant_mole_nose"),
 				SERPENT_TONGUE = new Item(new Item.Properties().group(TAB)).setRegistryName("sea_viper_tongue"),
 				KATTERKILLER_JAW = new Item(new Item.Properties().group(TAB)).setRegistryName("katterkiller_jaw"),
-			//	BASILISC_SCALE = new Item(new Item.Properties().group(TAB)).setRegistryName("basilisc_scale"),
-			//	NYTEMAIR_SCALE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("nytemair_scale"),
+				BASILISC_SCALE = new Item(new Item.Properties().group(TAB)).setRegistryName("basilisc_scale"),
+				BIORAPTOR_SCALE = new Item(new Item.Properties().group(TAB)).setRegistryName("bioraptor_scale"),
 				TREX_TOOTH = new Item(new Item.Properties().group(TAB)).setRegistryName("trex_tooth"),
 			//	KRAKEN_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("kraken_tooth"),
 			//	TRIFFID_GOO = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("triffid_goo"),
@@ -365,10 +362,10 @@ public class Items {
 
 				//region misc
 
-			//	INSTANT_NETHER_PORTAL = new InstaNetherPortalItem().setRegistryName("insta_nether_portal"),
-			//	INSTANT_SHELTER = new InstaShelterItem().setRegistryName("insta_shelter"),
-			//	INSTANT_GARDEN = new InstaGardenItem().setRegistryName("insta_garden"),
-			//	MINERS_DREAM = new MinersDreamItem().setRegistryName("miners_dream"),
+				INSTANT_NETHER_PORTAL = new InstaNetherPortalItem().setRegistryName("insta_nether_portal"),
+				INSTANT_SHELTER = new InstaShelterItem().setRegistryName("insta_shelter"),
+				INSTANT_GARDEN = new InstaGardenItem().setRegistryName("insta_garden"),
+				MINERS_DREAM = new MinersDreamItem().setRegistryName("miners_dream"),
 
 			//	BRIDGE = new StairItem().setRegistryName("bridge"),
 			//	STAIRS_UP = new StairItem().setRegistryName("stairs_up"),
