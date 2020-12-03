@@ -7,13 +7,13 @@
   ],
   "key": {
     "P": {
-      "item": "minecraft:oak_planks"
-    },
-    "L": {
       "item": "minecraft:oak_log"
     },
+    "L": {
+      "item": "minecraft:cobblestone"
+    },
     "D": {
-      "item": "minecraft:oak_door"
+      "item": "minecraft:iron_block"
     }
   },
   "result": {
