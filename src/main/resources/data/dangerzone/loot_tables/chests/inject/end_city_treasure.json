@@ -1,0 +1,447 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 5,
+          "name": "insanityoverworld:titanium_ingot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 5,
+          "name": "insanityoverworld:uranium_ingot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "insanityoverworld:titanium_nugget",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 9
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "insanityoverworld:uranium_nugget",
+          "quality": 5,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 2,
+        "max": 5
+      },
+      "entries": [
+        {
+          "type": "item",
+          "weight": 5,
+          "name": "insanityoverworld:amethyst",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "insanityoverworld:amethyst_boots"
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "insanityoverworld:amethyst_leggings"
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "insanityoverworld:amethyst_chestplate"
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "insanityoverworld:amethyst_helmet"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "insanityoverworld:amethyst_sword"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "insanityoverworld:amethyst_shovel"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "insanityoverworld:amethyst_axe"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "insanityoverworld:amethyst_pickaxe"
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "name": "insanityoverworld:ruby",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "insanityoverworld:ruby_boots"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "insanityoverworld:ruby_leggings"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "insanityoverworld:ruby_chestplate"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "insanityoverworld:ruby_helmet"
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "insanityoverworld:ruby_sword"
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "insanityoverworld:ruby_shovel"
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "insanityoverworld:ruby_axe"
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "insanityoverworld:ruby_pickaxe"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:bat_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:blaze_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:cat_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:cave_spider_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:chicken_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:cow_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:creeper_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:dolphin_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:donkey_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:drowned_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:elder_guardian_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:enderman_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:endermite_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:evoker_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:fox_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:ghast_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:guardian_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:horse_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:husk_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:llama_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:magma_cube_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:mooshroom_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:ocelot_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:panda_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:parrot_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:phantom_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:pig_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:pillager_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:polar_bear_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:rabbit_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:ravager_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:sheep_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:shulker_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:skeleton_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:slime_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:spider_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:squid_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:stray_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:turtle_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:villager_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:vindicator_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:witch_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:wither_skeleton_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:wolf_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:zombie_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:zombie_pigman_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "insanityoverworld:iron_golem_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "insanityoverworld:snow_golem_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "insanityoverworld:apple_cow_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "insanityoverworld:golden_apple_cow_spawn_egg"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "insanityoverworld:giant_mole_spawn_egg"
+        }
+      ]
+    }
+  ]
+}
