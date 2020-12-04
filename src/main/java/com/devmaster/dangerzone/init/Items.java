@@ -351,7 +351,7 @@ public class Items {
 				BIORAPTOR_SCALE = new Item(new Item.Properties().group(TAB)).setRegistryName("bioraptor_scale"),
 				TREX_TOOTH = new Item(new Item.Properties().group(TAB)).setRegistryName("trex_tooth"),
 			//	KRAKEN_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("kraken_tooth"),
-			//	TRIFFID_GOO = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("triffid_goo"),
+				TRIFFID_GOO = new Item(new Item.Properties().group(TAB)).setRegistryName("triffid_goo"),
 
 				MANTIS_CLAW = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(TAB)).setRegistryName("mantis_claw"),
 				SCORPION_TAIL = new SpecialSwordItem(SCORPION_TAIL_TIER, 3, -2.4f, new Item.Properties().group(TAB)).setRegistryName("scorpion_tail"),
