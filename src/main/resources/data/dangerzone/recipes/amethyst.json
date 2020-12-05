@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dangerzone:amethyst_block"
+    }
+
+  ],
+  "result":
+  {
+    "item": "dangerzone:amethyst",
+    "count": 9
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "item.dangerzone.amethyst": "Amethyst",
+  "item.dangerzone.salt": "Salt",
+  "item.dangerzone.fire_fish": "Fire Fish",
+  "item.dangerzone.raw_bacon": "Raw Bacon",
+
+  "block.dangerzone.amethyst_ore_block": "Amethyst Ore",
+  "block.dangerzone.amethyst_block": "Amethyst Block",
+  "block.dangerzone.salt_ore_block": "Salt Ore",
+
+  "itemGroup.dangerzonetab": "DangerZone Items",
+  "itemGroup.dangerzoneblocks": "DangerZone Blocks",
+  "itemGroup.dangerzonetools": "DangerZone Tools",
+  "itemGroup.dangerzoneweapons": "DangerZone Weaponry",
+  "itemGroup.dangerzonefood": "DangerZone Food",
+  "itemGroup.dangerzonearmory": "DangerZone Armory",
+
+  "item.dangerzone.emerald_axe": "Emerald Axe",
+  "item.dangerzone.amethyst_axe": "Amethyst Axe",
+  "item.dangerzone.amethyst_shovel": "Amethyst Shovel",
+  "item.dangerzone.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.dangerzone.amethyst_hoe": "Amethyst Hoe",
+  "item.dangerzone.emerald_pickaxe": "Emerald Pickaxe",
+
+  "item.dangerzone.amethyst_helmet": "Amethyst Helmet",
+  "item.dangerzone.amethyst_chestplate": "Amethyst Chestplate",
+  "item.dangerzone.amethyst_leggings": "Amethyst Leggings",
+  "item.dangerzone.amethyst_boots": "Amethyst Boots",
+
+  "item.dangerzone.amethyst_sword": "Amethyst Sword"
+}

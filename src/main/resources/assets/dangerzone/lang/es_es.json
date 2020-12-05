@@ -1,0 +1,26 @@
+{
+  "item.dangerzone.amethyst": "Amatista",
+  "item.dangerzone.salt": "Sal",
+  "item.dangerzone.fire_fish": "Pez de fuego",
+  "item.dangerzone.raw_bacon": "Tocino crudo",
+
+  "block.dangerzone.amethyst_ore_block": "Mineral de amatista",
+  "block.dangerzone.amethyst_block": "Bloque de amatista",
+  "block.dangerzone.salt_ore_block": "Mineral de sal",
+
+  "itemGroup.dangerzonetab": "Zona de peligro",
+
+  "item.dangerzone.emerald_axe": "Hacha de esmeralda",
+  "item.dangerzone.amethyst_axe": "Hacha de amatista",
+  "item.dangerzone.amethyst_shovel": "Pala de amatista",
+  "item.dangerzone.amethyst_pickaxe": "Pico de amatista",
+  "item.dangerzone.amethyst_hoe": "Azada de amatista",
+  "item.dangerzone.emerald_pickaxe": "Pico de esmeralda",
+
+  "item.dangerzone.amethyst_helmet": "Casco de amatista",
+  "item.dangerzone.amethyst_chestplate": "Peto de amatista",
+  "item.dangerzone.amethyst_leggings": "Polaina de amatista",
+  "item.dangerzone.amethyst_boots": "Botas de amatista",
+
+  "item.dangerzone.amethyst_sword": "Espada de amatista"
+}

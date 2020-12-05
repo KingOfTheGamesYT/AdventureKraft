@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x x",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "forge:gems/amethyst"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:amethyst_chestplate",
+    "count": 1
+  }
+}
