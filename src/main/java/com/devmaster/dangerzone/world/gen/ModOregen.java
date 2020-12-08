@@ -1,34 +1,53 @@
 package com.devmaster.dangerzone.world.gen;
-import com.devmaster.dangerzone.DangerZone;
+
+
 import com.devmaster.dangerzone.util.RegistryHandler;
-import net.minecraft.block.BlockState;
+import net.minecraft.util.RegistryKey;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.placement.ConfiguredPlacement;
-import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraft.world.gen.placement.TopSolidRangeConfig;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 
-@Mod.EventBusSubscriber(modid = DangerZone.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+
 public class ModOregen {
 
-    @SubscribeEvent
-    public static void generateOres(FMLLoadCompleteEvent event) {
-        for (Biome biome : ForgeRegistries.BIOMES) {
-genOre(biome,2,0,0,25,OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.AMETHYST_ORE_BLOCK.get().getDefaultState(),6);
-            genOre(biome,5,50,0,128,OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.SALT_ORE_BLOCK.get().getDefaultState(),12);
+    public static ConfiguredFeature<?, ?> AMETHYST_ORE;
+    public static ConfiguredFeature<?, ?> SALT_ORE;
 
-        }
+    public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
+        Registry<ConfiguredFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_FEATURE;
+        AMETHYST_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.AMETHYST_ORE_BLOCK.get().getDefaultState(),6))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 25))
+                        .square()
+                        .func_242731_b/* repeat */(2));
+
+        SALT_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.SALT_ORE_BLOCK.get().getDefaultState(),12))
+        .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(50, 0, 128))
+                .square()
+                .func_242731_b/* repeat */(5));
+
+        Registry.register(registry, new ResourceLocation("amethyst_ore_block"), AMETHYST_ORE);
+        Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
     }
-    private static void genOre(Biome biome, int count, int topOffset, int bottomOffset, int max, OreFeatureConfig.FillerBlockType filler, BlockState defaultBlockstate, int size) {
-        CountRangeConfig range = new CountRangeConfig(count, topOffset, bottomOffset, max);
-        OreFeatureConfig feature = new OreFeatureConfig(filler, defaultBlockstate, size);
-        ConfiguredPlacement config = Placement.COUNT_RANGE.configure(range);
-        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(feature).withPlacement(config));
+
+    public static void handleWorldGen(BiomeLoadingEvent event){
+        RegistryKey<Biome> biome = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, event.getName());
+        if (event.getCategory() == Biome.Category.NETHER
+                || event.getCategory() == Biome.Category.THEEND
+                || BiomeDictionary.hasType(biome, BiomeDictionary.Type.VOID)) return;
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, AMETHYST_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SALT_ORE);
     }
+
 }

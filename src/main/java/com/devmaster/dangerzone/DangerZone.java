@@ -1,9 +1,13 @@
 package com.devmaster.dangerzone;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
+import com.devmaster.dangerzone.world.gen.ModOregen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -21,11 +25,19 @@ public class DangerZone {
     public DangerZone() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::setup);
 
         RegistryHandler.init();
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Feature.class, EventPriority.LOW, ModOregen::addConfigFeatures);
+
+        MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
