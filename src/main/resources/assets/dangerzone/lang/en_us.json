@@ -23,11 +23,21 @@
   "item.dangerzone.amethyst_pickaxe": "Amethyst Pickaxe",
   "item.dangerzone.amethyst_hoe": "Amethyst Hoe",
   "item.dangerzone.emerald_pickaxe": "Emerald Pickaxe",
+  "item.dangerzone.sapphire_axe": "Sapphire Axe",
+  "item.dangerzone.sapphire_shovel": "Sapphire Shovel",
+  "item.dangerzone.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.dangerzone.sapphire_hoe": "Sapphire Hoe",
 
   "item.dangerzone.amethyst_helmet": "Amethyst Helmet",
   "item.dangerzone.amethyst_chestplate": "Amethyst Chestplate",
   "item.dangerzone.amethyst_leggings": "Amethyst Leggings",
   "item.dangerzone.amethyst_boots": "Amethyst Boots",
+  "item.dangerzone.sapphire_helmet": "Sapphire Helmet",
+  "item.dangerzone.sapphire_chestplate": "Sapphire Chestplate",
+  "item.dangerzone.sapphire_leggings": "Sapphire Leggings",
+  "item.dangerzone.sapphire_boots": "Sapphire Boots",
 
-  "item.dangerzone.amethyst_sword": "Amethyst Sword"
+  "item.dangerzone.amethyst_sword": "Amethyst Sword",
+  "item.dangerzone.sapphire_sword": "Sapphire Sword"
+
 }
