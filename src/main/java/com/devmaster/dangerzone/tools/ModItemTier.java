@@ -2,17 +2,22 @@ package com.devmaster.dangerzone.tools;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
     AMETHYST(4, 2000, 11.0F, 0.0F, 70, () -> {
-        return Ingredient.fromItems(RegistryHandler.AMETHYST_SWORD.get());
+        return Ingredient.fromItems(RegistryHandler.AMETHYST.get());
     }),
 
     EMERALD(3, 1300, 10.0F, 0.0F, 70, () -> {
-        return Ingredient.fromItems(RegistryHandler.EMERALD_AXE.get());
+        return Ingredient.fromItems(Items.EMERALD.getItem());
+    }),
+
+    SAPPHIRE(4, 1400, 10.0F, 0.0F, 83, () -> {
+        return Ingredient.fromItems(RegistryHandler.SAPPHIRE.get());
     });
 
     private final int harvestLevel;
