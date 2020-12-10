@@ -2,10 +2,7 @@ package com.devmaster.dangerzone.util;
 
 import com.devmaster.dangerzone.DangerZone;
 import com.devmaster.dangerzone.armor.ModArmorMaterial;
-import com.devmaster.dangerzone.blocks.AmethystBlock;
-import com.devmaster.dangerzone.blocks.AmethystOreBlock;
-import com.devmaster.dangerzone.blocks.BlockItemBase;
-import com.devmaster.dangerzone.blocks.SaltOreBlock;
+import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.tools.EmeraldPickaxe;
 import com.devmaster.dangerzone.tools.ModItemTier;
@@ -70,10 +67,12 @@ public class RegistryHandler {
     public static final RegistryObject<Block> AMETHYST_ORE_BLOCK = BLOCKS.register("amethyst_ore_block", AmethystOreBlock::new);
     public static final RegistryObject<Block> AMETHYST_BLOCK = BLOCKS.register("amethyst_block", AmethystBlock::new);
     public static final RegistryObject<Block> SALT_ORE_BLOCK = BLOCKS.register("salt_ore_block", SaltOreBlock::new);
+    public static final RegistryObject<Block> SAPPHIRE_ORE_BLOCK = BLOCKS.register("sapphire_ore_block", SapphireOreBlock::new);
 
     //Block Items
 public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("amethyst_ore_block", () -> new BlockItemBase(AMETHYST_ORE_BLOCK.get()));
     public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItemBase(AMETHYST_BLOCK.get()));
     public static final RegistryObject<Item> SALT_ORE_BLOCK_ITEM = ITEMS.register("salt_ore_block", () -> new BlockItemBase(SALT_ORE_BLOCK.get()));
+    public static final RegistryObject<Item> SAPPHIRE_ORE_BLOCK_ITEM = ITEMS.register("sapphire_ore_block", () -> new BlockItemBase(SAPPHIRE_ORE_BLOCK.get()));
 
 }

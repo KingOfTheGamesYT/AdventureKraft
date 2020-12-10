@@ -22,6 +22,7 @@ public class ModOregen {
 
     public static ConfiguredFeature<?, ?> AMETHYST_ORE;
     public static ConfiguredFeature<?, ?> SALT_ORE;
+    public static ConfiguredFeature<?, ?> SAPPHIRE_ORE;
 
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
         Registry<ConfiguredFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_FEATURE;
@@ -37,8 +38,16 @@ public class ModOregen {
                 .square()
                 .func_242731_b/* repeat */(5));
 
+       SAPPHIRE_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.SAPPHIRE_ORE_BLOCK.get().getDefaultState(),6))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 25))
+                        .square()
+                        .func_242731_b/* repeat */(2));
+
         Registry.register(registry, new ResourceLocation("amethyst_ore_block"), AMETHYST_ORE);
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
+        Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
+
     }
 
     public static void handleWorldGen(BiomeLoadingEvent event){
@@ -48,6 +57,8 @@ public class ModOregen {
                 || BiomeDictionary.hasType(biome, BiomeDictionary.Type.VOID)) return;
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, AMETHYST_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SALT_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE);
+
     }
 
 }
