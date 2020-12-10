@@ -37,18 +37,39 @@ public class RegistryHandler {
     //Tools
     public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () ->
             new PickaxeItem(ModItemTier.AMETHYST, 12, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
     public static final RegistryObject<SwordItem> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () ->
             new SwordItem(ModItemTier.AMETHYST, 14, -2.4F,new Item.Properties().group(DangerZone.WEAPONS)));
+
     public static final RegistryObject<AxeItem> AMETHYST_AXE = ITEMS.register("amethyst_axe", () ->
             new AxeItem(ModItemTier.AMETHYST, 13, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
     public static final RegistryObject<ShovelItem> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () ->
             new ShovelItem(ModItemTier.AMETHYST, 11, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
     public static final RegistryObject<HoeItem> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () ->
-            new HoeItem(ModItemTier.AMETHYST, 1, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+            new HoeItem(ModItemTier.AMETHYST, 0, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
     public static final RegistryObject<AxeItem> EMERALD_AXE = ITEMS.register("emerald_axe", () ->
             new AxeItem(ModItemTier.EMERALD, 8, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
     public static final RegistryObject<EmeraldPickaxe> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () ->
             new EmeraldPickaxe(ModItemTier.EMERALD, 7, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
+    public static final RegistryObject<PickaxeItem> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () ->
+            new PickaxeItem(ModItemTier.SAPPHIRE, 16, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
+    public static final RegistryObject<SwordItem> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () ->
+            new SwordItem(ModItemTier.SAPPHIRE, 18, -2.4F,new Item.Properties().group(DangerZone.WEAPONS)));
+
+    public static final RegistryObject<AxeItem> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", () ->
+            new AxeItem(ModItemTier.SAPPHIRE, 17, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
+    public static final RegistryObject<ShovelItem> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", () ->
+            new ShovelItem(ModItemTier.SAPPHIRE, 15, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
+    public static final RegistryObject<HoeItem> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () ->
+            new HoeItem(ModItemTier.SAPPHIRE, -1, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
 
     //Armor
     public static final RegistryObject<ArmorItem>  AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () ->
