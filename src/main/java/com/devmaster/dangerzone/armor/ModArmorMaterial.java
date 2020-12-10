@@ -16,7 +16,10 @@ import java.util.function.Supplier;
 public enum ModArmorMaterial implements IArmorMaterial {
 
     AMETHYST(DangerZone.MOD_ID + ":amethyst", 100, new int[] { 4, 7, 8, 3 }, 40,
-             SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.AMETHYST.get());});
+             SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.AMETHYST.get());}),
+
+    SAPPHIRE(DangerZone.MOD_ID + ":sapphire", 90, new int[] { 3, 7, 8, 3 }, 40,
+    SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.SAPPHIRE.get());});
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] {11, 16, 15, 13};
     private final String name;

@@ -63,6 +63,18 @@ public class RegistryHandler {
     public static final RegistryObject<ArmorItem>  AMETHYST_BOOTS = ITEMS.register("amethyst_boots", () ->
             new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
 
+    public static final RegistryObject<ArmorItem>  SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () ->
+            new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem>  SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem>  SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () ->
+            new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem>  SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () ->
+            new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+
     //Blocks
     public static final RegistryObject<Block> AMETHYST_ORE_BLOCK = BLOCKS.register("amethyst_ore_block", AmethystOreBlock::new);
     public static final RegistryObject<Block> AMETHYST_BLOCK = BLOCKS.register("amethyst_block", AmethystBlock::new);
