@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "#/ ",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:gems/sapphire"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "dangerzone:sapphire_axe",
+    "count": 1
+  }
+
+}
