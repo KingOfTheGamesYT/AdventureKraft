@@ -19,7 +19,9 @@ public class AmethystBlock extends Block {
                 .hardnessAndResistance(4.0F, 12.0F)
                 .sound(SoundType.METAL)
                 .harvestLevel(0)
-                .harvestTool(ToolType.PICKAXE));
+                .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool());
+
     }
 
     @Override
