@@ -24,8 +24,8 @@ public class AmethystOreBlock extends OreBlock {
                 .hardnessAndResistance(10.0F, 12.0F)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)
-                .harvestTool(ToolType.PICKAXE));
-
+                .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool());
     }
         @Override
         public int getExpDrop(BlockState state, IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
