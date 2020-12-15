@@ -23,8 +23,8 @@ public class SapphireOreBlock extends OreBlock {
                 .hardnessAndResistance(9.0F, 3.0F)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)
-                .harvestTool(ToolType.PICKAXE));
-
+                .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool());
     }
 
     @Override
