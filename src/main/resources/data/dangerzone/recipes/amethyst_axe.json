@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:gems/amethyst"
+      "tag": "forge:storage_blocks/amethyst"
     },
     "/": {
       "item": "minecraft:stick"
