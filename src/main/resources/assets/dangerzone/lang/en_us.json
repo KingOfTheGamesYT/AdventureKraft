@@ -11,6 +11,8 @@
   "block.dangerzone.salt_ore_block": "Salt Ore",
   "block.dangerzone.sapphire_ore_block": "Sapphire Ore",
   "block.dangerzone.sapphire_block": "Sapphire Block",
+  "block.dangerzone.eye_of_ender_block": "Eye of Ender Block",
+  "block.dangerzone.ender_pearl_block": "Ender Pearl Block",
 
   "itemGroup.dangerzonetab": "DangerZone Items",
   "itemGroup.dangerzoneblocks": "DangerZone Blocks",
