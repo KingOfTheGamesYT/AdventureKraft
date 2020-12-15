@@ -21,8 +21,8 @@ public class SaltOreBlock extends OreBlock {
                 .hardnessAndResistance(5.0F, 6.0F)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)
-                .harvestTool(ToolType.PICKAXE));
-
+                .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool());
     }
     @Override
     public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
