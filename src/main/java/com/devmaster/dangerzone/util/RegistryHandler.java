@@ -1,7 +1,7 @@
 package com.devmaster.dangerzone.util;
 
 import com.devmaster.dangerzone.DangerZone;
-import com.devmaster.dangerzone.armor.ModArmorMaterial;
+import com.devmaster.dangerzone.armor.*;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.tools.EmeraldPickaxe;
@@ -96,6 +96,18 @@ public class RegistryHandler {
 
     public static final RegistryObject<ArmorItem>  SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () ->
             new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<LapisHelmet>  LAPIS_HELMET = ITEMS.register("lapis_helmet", () ->
+            new LapisHelmet(ModArmorMaterial.LAPIS, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<LapisChestplate>  LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate", () ->
+            new LapisChestplate(ModArmorMaterial.LAPIS, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<LapisLeggings>  LAPIS_LEGGINGS = ITEMS.register("lapis_leggings", () ->
+            new LapisLeggings(ModArmorMaterial.LAPIS, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<LapisBoots>  LAPIS_BOOTS = ITEMS.register("lapis_boots", () ->
+            new LapisBoots(ModArmorMaterial.LAPIS, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
 
     //Blocks
     public static final RegistryObject<Block> AMETHYST_ORE_BLOCK = BLOCKS.register("amethyst_ore_block", AmethystOreBlock::new);

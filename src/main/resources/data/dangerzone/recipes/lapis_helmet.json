@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "x x",
+    "   "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "forge:storage_blocks/lapis"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:lapis_helmet",
+    "count": 1
+  }
+}
