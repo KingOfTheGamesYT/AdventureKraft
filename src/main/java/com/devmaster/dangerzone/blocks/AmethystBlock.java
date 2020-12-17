@@ -20,8 +20,8 @@ public class AmethystBlock extends Block {
                 .sound(SoundType.METAL)
                 .harvestLevel(0)
                 .harvestTool(ToolType.PICKAXE)
-                .setRequiresTool());
-
+                .setRequiresTool()
+                .setLightLevel(state -> 4));
     }
 
     @Override
