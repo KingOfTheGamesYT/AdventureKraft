@@ -23,7 +23,10 @@ public enum ModArmorMaterial implements IArmorMaterial {
     SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.SAPPHIRE.get());}),
 
     LAPIS(DangerZone.MOD_ID + ":lapis", 90, new int[] { 2, 5, 7, 2 }, 60,
-    SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(Items.LAPIS_LAZULI.getItem());});
+    SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(Items.LAPIS_LAZULI.getItem());}),
+
+    EMERALD(DangerZone.MOD_ID + ":emerald", 90, new int[] { 3, 6, 8, 3 }, 60,
+    SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(Items.EMERALD.getItem());});
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] {11, 16, 15, 13};
     private final String name;
