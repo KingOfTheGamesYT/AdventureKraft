@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:stone",
+    "#forge:dirt",
+    "minecraft:grass_block",
+    "#minecraft:sand",
+    "minecraft:gravel",
+    "minecraft:snow",
+    "#forge:cobblestone",
+    "quark:basalt",
+    "minecraft:sandstone",
+    "minecraft:water",
+    "#forge:sand",
+    "#forge:sandstone",
+    "minecraft:gravel",
+    "minecraft:netherrack",
+    "minecraft:end_stone",
+    "minecraft:water",
+    "minecraft:lava"
+
+  ]
+}
