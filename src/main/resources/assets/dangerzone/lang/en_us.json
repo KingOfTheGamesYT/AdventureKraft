@@ -28,6 +28,8 @@
   "item.dangerzone.amethyst_hoe": "Amethyst Hoe",
   "item.dangerzone.emerald_pickaxe": "Emerald Pickaxe",
   "item.dangerzone.sapphire_axe": "Sapphire Axe",
+  "item.dangerzone.emerald_hoe": "Emerald Hoe",
+  "item.dangerzone.emerald_shovel": "Emerald Shovel",
   "item.dangerzone.sapphire_shovel": "Sapphire Shovel",
   "item.dangerzone.sapphire_pickaxe": "Sapphire Pickaxe",
   "item.dangerzone.sapphire_hoe": "Sapphire Hoe",
@@ -50,6 +52,6 @@
   "item.dangerzone.emerald_boots": "Emerald Boots",
 
   "item.dangerzone.amethyst_sword": "Amethyst Sword",
-  "item.dangerzone.sapphire_sword": "Sapphire Sword"
-
+  "item.dangerzone.sapphire_sword": "Sapphire Sword",
+  "item.dangerzone.emerald_sword": "Emerald Sword"
 }
