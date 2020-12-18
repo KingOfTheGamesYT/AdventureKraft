@@ -57,6 +57,15 @@ public class RegistryHandler {
     public static final RegistryObject<EmeraldPickaxe> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () ->
             new EmeraldPickaxe(ModItemTier.EMERALD, 7, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
 
+    public static final RegistryObject<HoeItem> EMERALD_HOE = ITEMS.register("emerald_hoe", () ->
+            new HoeItem(ModItemTier.EMERALD, 0, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
+    public static final RegistryObject<ShovelItem> Emerald_SHOVEL = ITEMS.register("emerald_shovel", () ->
+            new ShovelItem(ModItemTier.EMERALD, 6, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
+    public static final RegistryObject<SwordItem> EMERALD_SWORD = ITEMS.register("emerald_sword", () ->
+            new SwordItem(ModItemTier.EMERALD, 9, -2.4F,new Item.Properties().group(DangerZone.WEAPONS)));
+
     public static final RegistryObject<PickaxeItem> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () ->
             new PickaxeItem(ModItemTier.SAPPHIRE, 16, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
 
@@ -108,6 +117,18 @@ public class RegistryHandler {
 
     public static final RegistryObject<LapisBoots>  LAPIS_BOOTS = ITEMS.register("lapis_boots", () ->
             new LapisBoots(ModArmorMaterial.LAPIS, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem>  EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem>  EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem>  EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () ->
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem>  EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
 
     //Blocks
     public static final RegistryObject<Block> AMETHYST_ORE_BLOCK = BLOCKS.register("amethyst_ore_block", AmethystOreBlock::new);
