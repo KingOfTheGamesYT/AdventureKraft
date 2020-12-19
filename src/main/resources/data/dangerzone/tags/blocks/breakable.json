@@ -8,7 +8,6 @@
     "minecraft:gravel",
     "minecraft:snow",
     "#forge:cobblestone",
-    "quark:basalt",
     "minecraft:sandstone",
     "minecraft:water",
     "#forge:sand",
@@ -18,6 +17,8 @@
     "minecraft:end_stone",
     "minecraft:water",
     "minecraft:lava"
-
-  ]
+  ],
+  "optional": [
+    "quark:basalt"
+    ]
 }

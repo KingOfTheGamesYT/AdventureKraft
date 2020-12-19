@@ -2,14 +2,10 @@ package com.devmaster.dangerzone.items;
 
 
 import com.devmaster.dangerzone.DangerZone;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ITag;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
@@ -26,13 +22,9 @@ public class MinersDreamItem extends Item {
 	public MinersDreamItem() {
 		super(new Item.Properties().group(DangerZone.TAB));
 	}
-	ResourceLocation Breakable = new ResourceLocation(DangerZone.MOD_ID, "breakable");
 
-	ITag<Block> breakable = BlockTags.getCollection().get(Breakable);
-
-
-	//*@Override
-	public ActionResult<ItemStack> OnItemUse (World world, PlayerEntity playerEntity, Hand hand) {
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity playerEntity, Hand hand) {
 		ItemStack stack = playerEntity.getHeldItem(hand);
 		playerEntity.setActiveHand(hand);
 		BlockPos pos = playerEntity.getPosition();
@@ -56,15 +48,30 @@ public class MinersDreamItem extends Item {
 						}
 
 						BlockPos topPos = new BlockPos(newPos.getX(), newPos.getY() + 1, newPos.getZ());
-						if(topPos.getY() <= 0 &&world.getBlockState(topPos) == AIR.getDefaultState() || world.getBlockState(topPos) == WATER.getDefaultState() || world.getBlockState(topPos) == LAVA.getDefaultState()) {
+						if(topPos.getY() <= 50 &&world.getBlockState(topPos) == AIR.getDefaultState() || world.getBlockState(topPos) == WATER.getDefaultState() || world.getBlockState(topPos) == LAVA.getDefaultState()) {
 							world.setBlockState(topPos, COBBLESTONE.getDefaultState());
 						}
 
-						BlockState blockstate = world.getBlockState(newPos);
 
-						if(blockstate.isIn(breakable)) {
+						if(		world.getBlockState(newPos) == STONE.getDefaultState() || world.getBlockState(newPos) == GRANITE.getDefaultState() ||
+								world.getBlockState(newPos) == DIORITE.getDefaultState() || world.getBlockState(newPos) == ANDESITE.getDefaultState() ||
+								world.getBlockState(newPos) == GRAVEL.getDefaultState() || world.getBlockState(newPos) == DIRT.getDefaultState() ||
+								world.getBlockState(newPos) == COBBLESTONE.getDefaultState() || world.getBlockState(newPos) == LAVA.getDefaultState() ||
+								world.getBlockState(newPos) == SAND.getDefaultState() || world.getBlockState(newPos) == SANDSTONE.getDefaultState() ||
+								world.getBlockState(newPos) == TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == END_STONE.getDefaultState() ||
+								world.getBlockState(newPos) == RED_SAND.getDefaultState() || world.getBlockState(newPos) == RED_TERRACOTTA.getDefaultState() ||
+								world.getBlockState(newPos) == ORANGE_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == GRAY_TERRACOTTA.getDefaultState() ||
+								world.getBlockState(newPos) == WHITE_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == RED_SANDSTONE.getDefaultState() ||
+								world.getBlockState(newPos) == MAGENTA_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == LIGHT_BLUE_TERRACOTTA.getDefaultState() ||
+								world.getBlockState(newPos) == YELLOW_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == LIME_TERRACOTTA.getDefaultState() ||
+								world.getBlockState(newPos) == PINK_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == LIGHT_GRAY_TERRACOTTA.getDefaultState() ||
+								world.getBlockState(newPos) == CYAN_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == PURPLE_TERRACOTTA.getDefaultState() ||
+								world.getBlockState(newPos) == BLUE_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == BROWN_TERRACOTTA.getDefaultState() ||
+								world.getBlockState(newPos) == GREEN_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == RED_TERRACOTTA.getDefaultState() ||
+								world.getBlockState(newPos) == GRASS_BLOCK.getDefaultState()) {
 
-						world.setBlockState(newPos, AIR.getDefaultState());
+
+							world.setBlockState(newPos, AIR.getDefaultState());
 							if(x == 0 && y == 0 && z % 5 == 0) {
 								world.setBlockState(newPos, TORCH.getDefaultState());
 							}
