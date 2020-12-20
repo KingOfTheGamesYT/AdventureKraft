@@ -18,6 +18,10 @@ public enum ModItemTier implements IItemTier {
 
     SAPPHIRE(4, 1400, 10.0F, 0.0F, 83, () -> {
         return Ingredient.fromItems(RegistryHandler.SAPPHIRE.get());
+    }),
+
+    POPPY(3, 1300, 10.0F, 0.0F, 70, () -> {
+        return Ingredient.fromItems(Items.POPPY.getItem());
     });
 
     private final int harvestLevel;
