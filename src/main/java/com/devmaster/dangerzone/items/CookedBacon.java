@@ -24,6 +24,7 @@ public class CookedBacon extends Item {
                         .saturation(1.5F)
                         .effect(new EffectInstance(Effects.STRENGTH, 2000, 0), 1)
                         .effect(new EffectInstance(Effects.REGENERATION, 2000, 0), 1)
+                        .setAlwaysEdible()
 
                         .build()
                 ));
