@@ -8,6 +8,10 @@
   "item.dangerzone.miners_dream": "Miners Dream",
   "item.dangerzone.critter_cage": "Empty Critter Cage",
   "item.dangerzone.wrench": "Wrench",
+  "item.dangerzone.butter": "Butter",
+  "item.dangerzone.cheese": "Cheese",
+  "item.dangerzone.butter_candy": "Butter Candy",
+
 
   "block.dangerzone.amethyst_ore_block": "Amethyst Ore",
   "block.dangerzone.amethyst_block": "Amethyst Block",
@@ -16,6 +20,8 @@
   "block.dangerzone.sapphire_block": "Sapphire Block",
   "block.dangerzone.eye_of_ender_block": "Eye of Ender Block",
   "block.dangerzone.ender_pearl_block": "Ender Pearl Block",
+  "block.dangerzone.uranium_block": "Uranium Block",
+  "block.dangerzone.titanium_block": "Titanium Block",
 
   "itemGroup.dangerzonetab": "DangerZone Items",
   "itemGroup.dangerzoneblocks": "DangerZone Blocks",
@@ -56,5 +62,7 @@
 
   "item.dangerzone.amethyst_sword": "Amethyst Sword",
   "item.dangerzone.sapphire_sword": "Sapphire Sword",
-  "item.dangerzone.emerald_sword": "Emerald Sword"
+  "item.dangerzone.emerald_sword": "Emerald Sword",
+  "item.dangerzone.poppy_sword": "Poppy Sword"
+
 }
