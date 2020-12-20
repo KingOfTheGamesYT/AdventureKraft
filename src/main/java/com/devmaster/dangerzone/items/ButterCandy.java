@@ -14,16 +14,16 @@ import net.minecraft.world.World;
 import java.util.List;
 
 
-public class CookedBacon extends Item {
-    public CookedBacon() {
+public class ButterCandy extends Item {
+    public ButterCandy() {
         super(new Properties()
 
                 .group(DangerZone.FOOD)
                 .food(new Food.Builder()
-                        .hunger(28)
-                        .saturation(1.5F)
-                        .effect(new EffectInstance(Effects.STRENGTH, 2000, 0), 1)
-                        .effect(new EffectInstance(Effects.REGENERATION, 2000, 0), 1)
+                        .hunger(4)
+                        .saturation(0.5F)
+                        .effect(new EffectInstance(Effects.JUMP_BOOST, 2000, 0), 1)
+                        .effect(new EffectInstance(Effects.SPEED, 2000, 0), 1)
                         .setAlwaysEdible()
 
                         .build()
@@ -31,6 +31,6 @@ public class CookedBacon extends Item {
     }
 
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new StringTextComponent("\u00A78" + "BACON!!! Yes!!! The most gloriously wonderful food in the world is here! You've got to try it!" + "\u00A78"));
+        tooltip.add(new StringTextComponent("\u00A7e" + " Butter Candy! Try some! Catch a sugar buzz! :)\n" + "\u00A78"));
     }
 }

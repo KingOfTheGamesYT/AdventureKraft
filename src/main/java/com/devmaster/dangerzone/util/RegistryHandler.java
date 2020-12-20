@@ -39,6 +39,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", Wrench::new);
     public static final RegistryObject<Butter> BUTTER = ITEMS.register("butter", Butter::new);
     public static final RegistryObject<Cheese> CHEESE = ITEMS.register("cheese", Cheese::new);
+    public static final RegistryObject<ButterCandy> BUTTER_CANDY = ITEMS.register("butter_candy", ButterCandy::new);
 
 
     //Tools
