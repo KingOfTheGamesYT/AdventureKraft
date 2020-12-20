@@ -38,6 +38,8 @@ public class RegistryHandler {
     public static final RegistryObject<CritterCage> CRITTER_CAGE = ITEMS.register("critter_cage", CritterCage::new);
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", Wrench::new);
     public static final RegistryObject<Butter> BUTTER = ITEMS.register("butter", Butter::new);
+    public static final RegistryObject<Cheese> CHEESE = ITEMS.register("cheese", Cheese::new);
+
 
     //Tools
     public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () ->
