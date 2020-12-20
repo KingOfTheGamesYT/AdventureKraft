@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x x",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "forge:storage_blocks/emerald"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:emerald_chestplate",
+    "count": 1
+  }
+}

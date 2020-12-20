@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    "x x",
+    "x x"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "forge:storage_blocks/emerald"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:emerald_boots",
+    "count": 1
+  }
+}
