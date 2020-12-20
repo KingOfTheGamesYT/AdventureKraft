@@ -37,6 +37,7 @@ public class RegistryHandler {
     public static final RegistryObject<MinersDreamItem> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
     public static final RegistryObject<CritterCage> CRITTER_CAGE = ITEMS.register("critter_cage", CritterCage::new);
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", Wrench::new);
+    public static final RegistryObject<Butter> BUTTER = ITEMS.register("butter", Butter::new);
 
     //Tools
     public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () ->
@@ -83,6 +84,9 @@ public class RegistryHandler {
 
     public static final RegistryObject<HoeItem> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () ->
             new HoeItem(ModItemTier.SAPPHIRE, -1, -2.4F,new Item.Properties().group(DangerZone.TOOLS)));
+
+    public static final RegistryObject<SwordItem> POPPY_SWORD = ITEMS.register("poppy_sword", () ->
+            new SwordItem(ModItemTier.EMERALD, 4, -2.4F,new Item.Properties().group(DangerZone.WEAPONS)));
 
     //Armor
     public static final RegistryObject<ArmorItem>  AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () ->
