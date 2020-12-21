@@ -26,6 +26,6 @@ public class TitaniumBlock extends Block {
 
     @Override
     public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-       tooltip.add(new StringTextComponent(   "\u00A75" + "Amethyst blocks are seriously purple!" + "\u00A75"));
+       tooltip.add(new StringTextComponent(   "\u00A7b" +  "For the person who just has too much Titanium" + "\u00A7b"));
     }
 }
