@@ -25,6 +25,6 @@ public class Cheese extends Item {
     }
 
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new StringTextComponent("\u00A7e" + "CHEESE!" + "\u00A7e"));
+        tooltip.add(new StringTextComponent("\u00A78" + "Don't let the rats see you with it!" + "\u00A78"));
     }
 }
