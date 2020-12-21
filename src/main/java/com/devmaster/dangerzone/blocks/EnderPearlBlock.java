@@ -24,6 +24,6 @@ public class EnderPearlBlock extends Block {
 
     @Override
     public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-       tooltip.add(new StringTextComponent(   "\u00A79" + "Doesn't do much, just looks kind of interesting." + "\u00A79"));
+       tooltip.add(new StringTextComponent(   "\u00A79" + "Finally a way to store a bunch of ender pearls." + "\u00A79"));
     }
 }
