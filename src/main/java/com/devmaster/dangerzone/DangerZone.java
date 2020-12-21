@@ -2,6 +2,8 @@ package com.devmaster.dangerzone;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.gen.feature.Feature;
@@ -45,6 +47,7 @@ public class DangerZone {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+        RenderTypeLookup.setRenderLayer(RegistryHandler.STICKY_BLOCK.get(), RenderType.getCutout());
     }
 
     public static final ItemGroup TAB = new ItemGroup("dangerzonetab") {
