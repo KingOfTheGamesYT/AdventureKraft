@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:gems/emerald"
+      "tag": "forge:storage_blocks/emerald"
 
     },
     "/": {
-      "tag": "forge:storage_blocks/emerald"
+      "item": "minecraft:stick"
     }
   },
   "result": {

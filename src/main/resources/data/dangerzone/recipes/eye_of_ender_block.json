@@ -11,14 +11,14 @@
     "x":
     {
 
-      "item": "minecraft:poppy"
+      "item": "minecraft:ender_eye"
     }
 
 
   },
   "result":
   {
-    "item": "dangerzone:compressed_poppy_block",
+    "item": "dangerzone:eye_of_ender_block",
     "count": 1
   }
 }
