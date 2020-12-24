@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+    "item": "minecraft:milk_bucket"
+    },
+    {
+    "item": "minecraft:milk_bucket"
+    }
+  ],
+  "result":
+  {
+    "item": "dangerzone:cheese",
+    "count":2
+  }
+}

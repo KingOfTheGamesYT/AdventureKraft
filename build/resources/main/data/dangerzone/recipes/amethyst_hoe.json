@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    " / ",
+    " / "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "forge:storage_blocks/amethyst"
+    },
+
+    "/":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "dangerzone:amethyst_hoe",
+    "count": 1
+  }
+}

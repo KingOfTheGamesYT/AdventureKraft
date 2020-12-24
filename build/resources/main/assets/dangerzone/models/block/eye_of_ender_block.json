@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+      "all": "dangerzone:blocks/eye_of_ender_block"
+   }
+}

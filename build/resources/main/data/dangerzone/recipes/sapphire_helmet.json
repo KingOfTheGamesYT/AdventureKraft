@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "x x",
+    "   "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "forge:gems/sapphire"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:sapphire_helmet",
+    "count": 1
+  }
+}

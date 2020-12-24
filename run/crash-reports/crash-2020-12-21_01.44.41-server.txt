@@ -1,0 +1,61 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 12/21/20 1:44 AM
+Description: Exception in server tick loop
+
+java.lang.NoSuchFieldError: field_210820_a
+	at com.sk89q.worldedit.forge.ForgeDataFixer.<clinit>(ForgeDataFixer.java:181) ~[worldedit:?] {re:classloading}
+	at com.sk89q.worldedit.forge.ForgePlatform.<init>(ForgePlatform.java:72) ~[worldedit:?] {re:classloading}
+	at com.sk89q.worldedit.forge.ForgeWorldEdit.setupPlatform(ForgeWorldEdit.java:140) ~[worldedit:?] {re:classloading}
+	at com.sk89q.worldedit.forge.ForgeWorldEdit.serverStarted(ForgeWorldEdit.java:207) ~[worldedit:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_6_ForgeWorldEdit_serverStarted_FMLServerStartedEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-3.0.5-service.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:297) ~[eventbus-3.0.5-service.jar:?] {}
+	at net.minecraftforge.fml.server.ServerLifecycleHooks.handleServerStarted(ServerLifecycleHooks.java:107) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:643) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_251, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1152541256 bytes (1099 MB) / 1714421760 bytes (1635 MB) up to 3799515136 bytes (3623 MB)
+	CPUs: 6
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.4
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.4              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |Danger Zone                   |dangerzone                    |NONE                |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.|Forge                         |forge                         |35.1.4              |DONE      |NOSIGNATURE
+		worldedit-forge-mc1.16.3-7.2.1-dist.jar           |WorldEdit                     |worldedit                     |7.2.1+299386a       |DONE      |NOSIGNATURE
+	Crash Report UUID: 17b5e5a0-ca4f-4acc-9ce0-1916cf742687
+	Player Count: 0 / 8; []
+	Data Packs: vanilla, mod:dangerzone, mod:forge, mod:worldedit (incompatible)
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'
