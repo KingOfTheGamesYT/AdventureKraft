@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "dangerzone:salt_ore_block"
-  },
-  "result": "dangerzone:salt",
-  "experience": 0.7,
-  "cookingtime": 100
-}

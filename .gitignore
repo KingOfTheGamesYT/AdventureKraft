@@ -1,12 +1,34 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
 
-.gradle/6.7/fileHashes/fileHashes.lock
-.idea/modules/DangerZone.test.iml
-.idea/modules/DangerZone.main.iml
-.idea/misc.xml
-.idea/workspace.xml
-.gradle/vcs-1/gc.properties
-.gradle/configuration-cache/gc.properties
-.gradle/buildOutputCleanup/cache.properties
-.gradle/buildOutputCleanup/buildOutputCleanup.lock
-.gradle/6.7/gc.properties
-.gradle/6.7/fileChanges/last-build.bin
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+
+# Files from Forge MDK
+forge*changelog.txt
+build/_compileJava_7/net/minecraft/client/gui/social/FilterList.class
+.gradle/4.10.3/fileChanges/last-build.bin
+.gradle/4.10.3/fileContent/annotation-processors.bin
+.gradle/4.10.3/fileContent/fileContent.lock
+.gradle/4.10.3/fileHashes/fileHashes.bin
+.gradle/4.10.3/fileHashes/fileHashes.lock
+.gradle/4.10.3/fileHashes/resourceHashesCache.bin
+.gradle/4.10.3/gc.properties
+.gradle/4.10.3/javaCompile/classAnalysis.bin
