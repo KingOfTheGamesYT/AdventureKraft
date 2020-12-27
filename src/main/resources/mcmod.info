@@ -1,7 +1,7 @@
 [
   {
     "modid": "dangerzone",
-    "name": "Tutorial Mod",
+    "name": "DangerZone",
     "description": "Adds DangerZone the game to minecraft",
     "version": "1.0.0",
     "mcversion": "1.12.2",
