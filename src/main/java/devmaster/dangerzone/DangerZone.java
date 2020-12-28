@@ -1,6 +1,5 @@
 package devmaster.dangerzone;
 
-import java.util.Random;
 import devmaster.dangerzone.proxy.CommonProxy;
 import devmaster.dangerzone.tabs.blocks;
 import devmaster.dangerzone.tabs.items;
