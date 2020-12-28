@@ -1,2 +1,6 @@
 item.amethyst.name=Amethyst
+
 itemGroup.tab=DangerZone Items
+itemGroup.blocks=DangerZone Blocks
+
+tile.amethyst_ore_block.name=Amethyst Ore

@@ -2,6 +2,7 @@ package devmaster.dangerzone;
 
 import java.util.Random;
 import devmaster.dangerzone.proxy.CommonProxy;
+import devmaster.dangerzone.tabs.blocks;
 import devmaster.dangerzone.tabs.items;
 import devmaster.dangerzone.util.Reference;
 import devmaster.dangerzone.util.handlers.RegistryHandler;
@@ -26,7 +27,8 @@ public class DangerZone {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
 
-	public static final CreativeTabs TAB = new items("ab");
+	public static final CreativeTabs TAB = new items("dangerzoneitems");
+	public static final CreativeTabs BLOCKS = new blocks("dangerzoneblocks");
 
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event)

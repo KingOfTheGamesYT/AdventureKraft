@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe53bb81-b9f3-4f97-ac45-e4d2280e88ef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/DangerZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/DangerZone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/util/handlers/RegistryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/util/handlers/RegistryHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/dangerzone/lang/en_us.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/dangerzone/lang/en_us.lang" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +76,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="devmaster.dangerzone.tabs" />
+      <recent name="devmaster.dangerzone.init" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.DangerZone [build]">
     <configuration name="DangerZone [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -141,11 +147,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.runClient" />
-      <item itemvalue="Application.runServer" />
       <item itemvalue="Gradle.DangerZone [genIntellijRuns]" />
       <item itemvalue="Gradle.lDangerZone [runClient]" />
       <item itemvalue="Gradle.DangerZone [build]" />
+      <item itemvalue="Application.runClient" />
+      <item itemvalue="Application.runServer" />
     </list>
     <recent_temporary>
       <list>
