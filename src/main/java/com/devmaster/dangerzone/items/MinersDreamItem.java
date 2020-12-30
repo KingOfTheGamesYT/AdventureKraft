@@ -68,7 +68,7 @@ public class MinersDreamItem extends Item {
 								world.getBlockState(newPos) == CYAN_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == PURPLE_TERRACOTTA.getDefaultState() ||
 								world.getBlockState(newPos) == BLUE_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == BROWN_TERRACOTTA.getDefaultState() ||
 								world.getBlockState(newPos) == GREEN_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == RED_TERRACOTTA.getDefaultState() ||
-								world.getBlockState(newPos) == GRASS_BLOCK.getDefaultState()) {
+								world.getBlockState(newPos) == GRASS_BLOCK.getDefaultState() || world.getBlockState(newPos) == NETHERRACK.getDefaultState()) {
 
 
 							world.setBlockState(newPos, AIR.getDefaultState());
