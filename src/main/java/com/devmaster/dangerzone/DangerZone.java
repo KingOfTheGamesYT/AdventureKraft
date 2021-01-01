@@ -25,6 +25,7 @@ public class DangerZone {
     public static final String MOD_ID = "dangerzone";
 
     public DangerZone() {
+
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
