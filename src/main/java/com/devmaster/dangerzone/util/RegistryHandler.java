@@ -3,6 +3,7 @@ package com.devmaster.dangerzone.util;
 import com.devmaster.dangerzone.DangerZone;
 import com.devmaster.dangerzone.armor.*;
 import com.devmaster.dangerzone.blocks.*;
+import com.devmaster.dangerzone.entity.StampyLongNose;
 import com.devmaster.dangerzone.entity.Tewtiy;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.tools.EmeraldPickaxe;
@@ -31,24 +32,41 @@ public class RegistryHandler {
         ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
     }
-
+//Entities
     public static final RegistryObject<EntityType<Tewtiy>> TEWTIY = ENTITIES
             .register("tewity",
                     () -> EntityType.Builder.<Tewtiy>create(Tewtiy::new, EntityClassification.CREATURE)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "tewtiy").toString()));
+
+    public static final RegistryObject<EntityType<StampyLongNose>> STAMPYLONGNOSE = ENTITIES
+            .register("stampylongnose",
+                    () -> EntityType.Builder.<StampyLongNose>create(StampyLongNose::new, EntityClassification.CREATURE)
+                            .size(0.9f, 1.3f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "stampylongnose").toString()));
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
+
     public static final RegistryObject<Item> SALT = ITEMS.register("salt", Salt::new);
+
     public static final RegistryObject<FireFish> FIRE_FISH = ITEMS.register("fire_fish", FireFish::new);
+
     public static final RegistryObject<RawBacon> RAW_BACON = ITEMS.register("raw_bacon", RawBacon::new);
+
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", Sapphire::new);
+
     public static final RegistryObject<CookedBacon> COOKED_BACON = ITEMS.register("cooked_bacon", CookedBacon::new);
+
     public static final RegistryObject<MinersDreamItem> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
+
     public static final RegistryObject<CritterCage> CRITTER_CAGE = ITEMS.register("critter_cage", CritterCage::new);
+
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", Wrench::new);
+
     public static final RegistryObject<Butter> BUTTER = ITEMS.register("butter", Butter::new);
+
     public static final RegistryObject<Cheese> CHEESE = ITEMS.register("cheese", Cheese::new);
+
     public static final RegistryObject<ButterCandy> BUTTER_CANDY = ITEMS.register("butter_candy", ButterCandy::new);
 
 
@@ -152,30 +170,56 @@ public class RegistryHandler {
 
     //Blocks
     public static final RegistryObject<Block> AMETHYST_ORE_BLOCK = BLOCKS.register("amethyst_ore_block", AmethystOreBlock::new);
+
     public static final RegistryObject<Block> AMETHYST_BLOCK = BLOCKS.register("amethyst_block", AmethystBlock::new);
+
     public static final RegistryObject<Block> SALT_ORE_BLOCK = BLOCKS.register("salt_ore_block", SaltOreBlock::new);
+
     public static final RegistryObject<Block> SAPPHIRE_ORE_BLOCK = BLOCKS.register("sapphire_ore_block", SapphireOreBlock::new);
+
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = BLOCKS.register("sapphire_block", SapphireBlock::new);
+
     public static final RegistryObject<Block> EYE_OF_ENDER_BLOCK = BLOCKS.register("eye_of_ender_block", EyeOfEnderBlock::new);
+
     public static final RegistryObject<Block> ENDER_PEARL_BLOCK = BLOCKS.register("ender_pearl_block", EnderPearlBlock::new);
+
     public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", UraniumBlock::new);
+
     public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", TitaniumBlock::new);
+
     public static final RegistryObject<Block> COMPRESSED_POPPY_BLOCK = BLOCKS.register("compressed_poppy_block", CompressedPoppyBlock::new);
+
     public static final RegistryObject<Block> STICKY_BLOCK = BLOCKS.register("sticky_block", StickyBlock::new);
+
     public static final RegistryObject<Block> DARK_BROWN_BLOCK = BLOCKS.register("dark_brown_block", DarkBrownBlock::new);
+
+    public static final RegistryObject<Block> DARK_ORANGE_BLOCK = BLOCKS.register("dark_orange_block", DarkOrangeBlock::new);
 
     //Block Items
     public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("amethyst_ore_block", () -> new BlockItemBase(AMETHYST_ORE_BLOCK.get()));
+
     public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItemBase(AMETHYST_BLOCK.get()));
+
     public static final RegistryObject<Item> SALT_ORE_BLOCK_ITEM = ITEMS.register("salt_ore_block", () -> new BlockItemBase(SALT_ORE_BLOCK.get()));
+
     public static final RegistryObject<Item> SAPPHIRE_ORE_BLOCK_ITEM = ITEMS.register("sapphire_ore_block", () -> new BlockItemBase(SAPPHIRE_ORE_BLOCK.get()));
+
     public static final RegistryObject<Item> SAPPHIRE_BLOCK_ITEM = ITEMS.register("sapphire_block", () -> new BlockItemBase(SAPPHIRE_BLOCK.get()));
+
     public static final RegistryObject<Item> EYE_OF_ENDER_BLOCK_ITEM = ITEMS.register("eye_of_ender_block", () -> new BlockItemBase(EYE_OF_ENDER_BLOCK.get()));
+
     public static final RegistryObject<Item> ENDER_PEARL_BLOCK_ITEM = ITEMS.register("ender_pearl_block", () -> new BlockItemBase(ENDER_PEARL_BLOCK.get()));
+
     public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = ITEMS.register("uranium_block", () -> new BlockItemBase(URANIUM_BLOCK.get()));
+
     public static final RegistryObject<Item> TITANIUM_BLOCK_ITEM = ITEMS.register("titanium_block", () -> new BlockItemBase(TITANIUM_BLOCK.get()));
+
     public static final RegistryObject<Item> COMPRESSED_POPPY_BLOCK_ITEM = ITEMS.register("compressed_poppy_block", () -> new BlockItemBase(COMPRESSED_POPPY_BLOCK.get()));
+
     public static final RegistryObject<Item> STICKY_BLOCK_ITEM = ITEMS.register("sticky_block", () -> new BlockItemBase(STICKY_BLOCK.get()));
+
     public static final RegistryObject<Item> DARK_BROWN_BLOCK_ITEM = ITEMS.register("dark_brown_block", () -> new BlockItemBase(DARK_BROWN_BLOCK.get()));
 
-        }
+    public static final RegistryObject<Item> DARK_ORANGE_BLOCK_ITEM = ITEMS.register("dark_orange_block", () -> new BlockItemBase(DARK_ORANGE_BLOCK.get()));
+
+}
