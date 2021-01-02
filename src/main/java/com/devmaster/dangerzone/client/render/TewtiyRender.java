@@ -13,7 +13,7 @@ public class TewtiyRender<T extends Tewtiy> extends BipedRenderer<T, TewtiyModel
                 "textures/entity/tewtiy.png");
 
         public TewtiyRender(EntityRendererManager renderManagerIn) {
-                super(renderManagerIn, new TewtiyModel<>(1), 0.5f);
+                super(renderManagerIn, new TewtiyModel<>(3), 0.5f);
         }
 
         @Override

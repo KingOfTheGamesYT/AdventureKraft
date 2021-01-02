@@ -11,16 +11,12 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
-import net.minecraft.tags.ITag;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.Random;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
 
 public class RegistryHandler {
 
@@ -180,25 +176,11 @@ public class RegistryHandler {
     public static final RegistryObject<Item> COMPRESSED_POPPY_BLOCK_ITEM = ITEMS.register("compressed_poppy_block", () -> new BlockItemBase(COMPRESSED_POPPY_BLOCK.get()));
     public static final RegistryObject<Item> STICKY_BLOCK_ITEM = ITEMS.register("sticky_block", () -> new BlockItemBase(STICKY_BLOCK.get()));
 
-    private static <T extends Entity> EntityType<T> buildEntityType(final EntityType.IFactory<T> factoryIn, final String name, final float width, final float height,
-                                                                    final EntityClassification classification, final Consumer<EntityType.Builder<T>> builderSpecs) {
-        EntityType.Builder<T> entityTypeBuilder = EntityType.Builder.create(factoryIn, classification).size(width, height).trackingRange(8);
-        builderSpecs.accept(entityTypeBuilder);
-        EntityType<T> entityType = entityTypeBuilder.build(name);
-        entityType.setRegistryName(DangerZone.MOD_ID, name);
-        return entityType;
-    }
 
 
-    public static Predicate<LivingEntity> buildPredicateFromTag(ITag entityTag) {
-        return (com.google.common.base.Predicate<LivingEntity>) e -> e.isAlive() && e.getType().isContained(entityTag);
-    }
 
-    public static boolean rollSpawn(int rolls, Random random, SpawnReason reason) {
-        if (reason == SpawnReason.SPAWNER) {
-            return true;
-        } else {
-            return rolls <= 0 || random.nextInt(rolls) == 0;
+
+
+
         }
-    }
-}
+

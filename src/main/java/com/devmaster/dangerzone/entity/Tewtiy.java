@@ -27,7 +27,6 @@ public class Tewtiy extends MonsterEntity {
 
     public Tewtiy(final EntityType<? extends Tewtiy> type, final World worldIn) {
         super(type, worldIn);
-        this.experienceValue = 25000;
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -54,13 +53,6 @@ public class Tewtiy extends MonsterEntity {
 
     }
 
-
-
-    public static boolean canTewtiySpawnOn(final EntityType<? extends MobEntity> entity, final IServerWorld world, final SpawnReason reason,
-                                        final BlockPos pos, final Random rand) {
-        return reason == SpawnReason.SPAWNER || (world.getDifficulty() != Difficulty.NORMAL &&
-                MonsterEntity.isValidLightLevel(world, pos, rand) && canSpawnOn(entity, world, reason, pos, rand));
-    }
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn) { this.playSound(SoundEvents.ENTITY_WOLF_STEP, 0.15F, 1.0F); }
 
@@ -101,6 +93,10 @@ public class Tewtiy extends MonsterEntity {
         return true;
     }
 
+    @Override
+    protected int getExperiencePoints(PlayerEntity player) {
+        return 2500;
+    }
 }
 
 
