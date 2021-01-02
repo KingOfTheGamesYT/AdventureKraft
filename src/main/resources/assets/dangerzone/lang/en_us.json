@@ -24,6 +24,7 @@
   "block.dangerzone.titanium_block": "Titanium Block",
   "block.dangerzone.compressed_poppy_block": "Compressed Poppy Block",
   "block.dangerzone.sticky_block": "Sticky Block",
+  "block.dangerzone.dark_brown_block": "Dark Brown Block",
 
   "itemGroup.dangerzonetab": "DangerZone Items",
   "itemGroup.dangerzoneblocks": "DangerZone Blocks",
@@ -65,6 +66,8 @@
   "item.dangerzone.amethyst_sword": "Amethyst Sword",
   "item.dangerzone.sapphire_sword": "Sapphire Sword",
   "item.dangerzone.emerald_sword": "Emerald Sword",
-  "item.dangerzone.poppy_sword": "Poppy Sword"
+  "item.dangerzone.poppy_sword": "Poppy Sword",
+
+  "entity.dangerzone.tewtiy": "Tewtiy"
 
 }
