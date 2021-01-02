@@ -25,6 +25,6 @@ public class DarkBrownBlock extends Block {
 
     @Override
     public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-       tooltip.add(new StringTextComponent(   "\u00A75" + "Amethyst blocks are seriously purple!" + "\u00A75"));
+       tooltip.add(new StringTextComponent(   "\u00A76" + "Look like poop, doesn't smell like it or taste like it though" + "\u00A76"));
     }
 }
