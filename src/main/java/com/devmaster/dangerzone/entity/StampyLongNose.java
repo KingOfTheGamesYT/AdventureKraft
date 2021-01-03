@@ -14,22 +14,13 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
 
+public class StampyLongNose extends MonsterEntity {
 
-public class Tewtiy extends MonsterEntity {
-
-    public Tewtiy(final EntityType<? extends Tewtiy> type, final World worldIn) {
+    public StampyLongNose(final EntityType<? extends StampyLongNose> type, final World worldIn) {
         super(type, worldIn);
-    }
-
-
-    @Override
-    public void setCustomName(@Nullable ITextComponent name) {
-        super.setCustomName(name);
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -38,6 +29,7 @@ public class Tewtiy extends MonsterEntity {
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.22D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 5.0D)
                 .createMutableAttribute(Attributes.ARMOR, 3.5F);
+
     }
 
 
@@ -96,7 +88,7 @@ public class Tewtiy extends MonsterEntity {
 
     @Override
     protected int getExperiencePoints(PlayerEntity player) {
-        return 250;
+        return 2500;
     }
 }
 

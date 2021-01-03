@@ -1,5 +1,7 @@
 package com.devmaster.dangerzone;
 
+import com.devmaster.dangerzone.client.render.StampyLongNoseRender;
+import com.devmaster.dangerzone.client.render.TewtiyRender;
 import com.devmaster.dangerzone.entity.Tewtiy;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
@@ -13,10 +15,14 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,6 +34,7 @@ public class DangerZone {
     public static final String MOD_ID = "dangerzone";
 
     public DangerZone() {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DZConfig.spec);
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -49,11 +56,15 @@ public class DangerZone {
     private void setup(final FMLCommonSetupEvent event) {
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), Tewtiy.getAttributes().create());
 
         });
     }
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(RegistryHandler.STICKY_BLOCK.get(), RenderType.getCutout());
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TEWTIY.get(), TewtiyRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNoseRender::new);
+
     }
 
     public static final ItemGroup TAB = new ItemGroup("dangerzonetab") {

@@ -34,7 +34,7 @@ public class RegistryHandler {
     }
 //Entities
     public static final RegistryObject<EntityType<Tewtiy>> TEWTIY = ENTITIES
-            .register("tewity",
+            .register("tewtiy",
                     () -> EntityType.Builder.<Tewtiy>create(Tewtiy::new, EntityClassification.CREATURE)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "tewtiy").toString()));

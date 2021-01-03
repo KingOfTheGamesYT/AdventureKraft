@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.util;
 
 import com.devmaster.dangerzone.DangerZone;
+import com.devmaster.dangerzone.client.render.StampyLongNoseRender;
 import com.devmaster.dangerzone.client.render.TewtiyRender;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,5 +15,7 @@ public class ClientEventBusSubscriber {
     public void onClientSetup(FMLClientSetupEvent event) {
 
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TEWTIY.get(), TewtiyRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNoseRender::new);
+
     }
 }
