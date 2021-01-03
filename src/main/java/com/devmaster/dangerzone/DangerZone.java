@@ -7,13 +7,18 @@ import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -25,6 +30,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("dangerzone")
@@ -67,6 +74,18 @@ public class DangerZone {
 
     }
 
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public void onBiomeLoadingEvent(BiomeLoadingEvent event) {
+        List<MobSpawnInfo.Spawners> spawns =
+                event.getSpawns().getSpawner(EntityClassification.MONSTER);
+
+        spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.TEWTIY.get(), 1, 1, 4));
+        spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), 1, 1, 4));
+    }
+
+    private void entitySpawn() {
+
+    }
     public static final ItemGroup TAB = new ItemGroup("dangerzonetab") {
 
         @Override
@@ -110,13 +129,6 @@ public class DangerZone {
         }
     };
 
-    public static final ItemGroup WIP = new ItemGroup("workinprogress") {
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.DARK_BROWN_BLOCK.get());
-        }
-    };
 }
 
 

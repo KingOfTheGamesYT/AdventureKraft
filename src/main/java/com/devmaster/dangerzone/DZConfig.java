@@ -16,8 +16,8 @@ public class DZConfig {
 
             builder.push("Misc");
 
-            tewtiySpawnWeight = builder.comment("Tewtiy Spawn Weight", "The higher the value is, the more frequent it spawns.").defineInRange("tewtiySpawnWeight", 105, 1, 256);
-            stampylongnoseSpawnWeight = builder.comment("StampyLongNose Spawn Weight", "The higher the value is, the more frequent it spawns.").defineInRange("stampylongnoseSpawnWeight", 100, 1, 256);
+            tewtiySpawnWeight = builder.comment("Tewtiy Spawn Weight", "The higher the value is, the more frequent it spawns.").defineInRange("tewtiySpawnWeight", 130, 1, 256);
+            stampylongnoseSpawnWeight = builder.comment("StampyLongNose Spawn Weight", "The higher the value is, the more frequent it spawns.").defineInRange("stampylongnoseSpawnWeight", 130, 1, 256);
 
             builder.pop();
         }

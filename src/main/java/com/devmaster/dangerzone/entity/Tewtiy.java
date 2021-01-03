@@ -1,14 +1,14 @@
 package com.devmaster.dangerzone.entity;
 
+import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.monster.AbstractSkeletonEntity;
 import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
@@ -16,6 +16,8 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
+import net.minecraft.world.gen.Heightmap;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import javax.annotation.Nullable;
 
@@ -30,6 +32,12 @@ public class Tewtiy extends MonsterEntity {
     @Override
     public void setCustomName(@Nullable ITextComponent name) {
         super.setCustomName(name);
+    }
+
+    public void init(FMLCommonSetupEvent event) {
+
+        EntitySpawnPlacementRegistry.register(RegistryHandler.TEWTIY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+                MonsterEntity::canMonsterSpawn);
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
