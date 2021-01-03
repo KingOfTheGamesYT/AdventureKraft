@@ -109,6 +109,14 @@ public class DangerZone {
             return new ItemStack(RegistryHandler.AMETHYST_CHESTPLATE.get());
         }
     };
+
+    public static final ItemGroup WIP = new ItemGroup("workinprogress") {
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.DARK_BROWN_BLOCK.get());
+        }
+    };
 }
 
 
