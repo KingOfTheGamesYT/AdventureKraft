@@ -42,7 +42,7 @@ public class Tewtiy extends MonsterEntity {
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 50.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 100.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.22D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 5.0D)
                 .createMutableAttribute(Attributes.ARMOR, 3.5F);
