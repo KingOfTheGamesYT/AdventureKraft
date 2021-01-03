@@ -27,6 +27,7 @@
   "block.dangerzone.dark_brown_block": "Dark Brown Block",
   "block.dangerzone.dark_orange_block": "Dark Orange Block",
   "block.dangerzone.orange_block": "Orange Block",
+  "block.dangerzone.brown_block": "Brown Block",
 
   "itemGroup.dangerzonetab": "DangerZone Items",
   "itemGroup.dangerzoneblocks": "DangerZone Blocks",
@@ -34,6 +35,7 @@
   "itemGroup.dangerzoneweapons": "DangerZone Weaponry",
   "itemGroup.dangerzonefood": "DangerZone Food",
   "itemGroup.dangerzonearmory": "DangerZone Armory",
+  "itemGroup.workinprogress": "Work In Progress",
 
   "item.dangerzone.emerald_axe": "Emerald Axe",
   "item.dangerzone.amethyst_axe": "Amethyst Axe",
