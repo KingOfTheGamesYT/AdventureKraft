@@ -1,8 +1,10 @@
 package com.devmaster.dangerzone.entity;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
@@ -15,9 +17,16 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.world.IServerWorld;
 import net.minecraft.world.World;
+import net.minecraft.world.gen.Heightmap;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+
+import java.util.Random;
 
 import javax.annotation.Nullable;
+
+import com.devmaster.dangerzone.util.RegistryHandler;
 
 
 public class Tewtiy extends MonsterEntity {
@@ -26,7 +35,12 @@ public class Tewtiy extends MonsterEntity {
         super(type, worldIn);
     }
 
+    public void init(FMLCommonSetupEvent event) {
 
+        EntitySpawnPlacementRegistry.register(RegistryHandler.TEWTIY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+        		MonsterEntity::canMonsterSpawn);
+    }
+    
     @Override
     public void setCustomName(@Nullable ITextComponent name) {
         super.setCustomName(name);
@@ -54,6 +68,10 @@ public class Tewtiy extends MonsterEntity {
 
     }
 
+    public static <T extends MobEntity> boolean canTewtiySpawn(EntityType<Tewtiy> entityType, IServerWorld iServerWorld, SpawnReason reason, BlockPos pos, Random random) {
+        return reason == SpawnReason.SPAWNER || !iServerWorld.canSeeSky(pos) && pos.getY() <= 64 && canMonsterSpawnInLight(entityType, iServerWorld, reason, pos, random);
+    }
+    
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn) { this.playSound(SoundEvents.ENTITY_WOLF_STEP, 0.15F, 1.0F); }
 

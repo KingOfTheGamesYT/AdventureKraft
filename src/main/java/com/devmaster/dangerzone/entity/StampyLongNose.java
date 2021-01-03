@@ -1,28 +1,55 @@
 package com.devmaster.dangerzone.entity;
 
+import java.util.Random;
+
+import com.devmaster.dangerzone.util.RegistryHandler;
+
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.entity.EntitySpawnPlacementRegistry.IPlacementPredicate;
+import net.minecraft.entity.EntitySpawnPlacementRegistry.PlacementType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.AbstractSkeletonEntity;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IServerWorld;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.Heightmap;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 
 
 public class StampyLongNose extends MonsterEntity {
 
-    public StampyLongNose(final EntityType<? extends StampyLongNose> type, final World worldIn) {
-        super(type, worldIn);
-    }
+    private Object SPAWN_ON_THE_GROUND;
+	private SpawnReason reason;
+	private BlockPos pos;
+	private IPlacementPredicate x;
 
+	public StampyLongNose(final EntityType<? extends StampyLongNose> type, final World worldIn) {
+        super(type, worldIn);
+        //EntitySpawnPlacementRegistry.register(StampyLongNose.class, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, x);
+       
+    }
+	
+    public void init(FMLCommonSetupEvent event) {
+
+        EntitySpawnPlacementRegistry.register(RegistryHandler.STAMPYLONGNOSE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+        		MonsterEntity::canMonsterSpawn);
+    }
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 50.0D)
@@ -46,6 +73,10 @@ public class StampyLongNose extends MonsterEntity {
 
     }
 
+    public static <T extends MobEntity> boolean canStampyLongNoseSpawn(EntityType<StampyLongNose> entityType, IServerWorld iServerWorld, SpawnReason reason, BlockPos pos, Random random) {
+        return reason == SpawnReason.SPAWNER || !iServerWorld.canSeeSky(pos) && pos.getY() <= 64 && canMonsterSpawnInLight(entityType, iServerWorld, reason, pos, random);
+    }
+    
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn) { this.playSound(SoundEvents.ENTITY_WOLF_STEP, 0.15F, 1.0F); }
 

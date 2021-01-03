@@ -1,5 +1,14 @@
 package com.devmaster.dangerzone.util;
 
+import net.minecraft.entity.*;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
+import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.tags.ITag;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.gen.Heightmap;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import com.devmaster.dangerzone.DangerZone;
 import com.devmaster.dangerzone.armor.*;
 import com.devmaster.dangerzone.blocks.*;
@@ -9,16 +18,14 @@ import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.tools.EmeraldPickaxe;
 import com.devmaster.dangerzone.tools.ModItemTier;
 import net.minecraft.block.Block;
-import net.minecraft.entity.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-
+@Mod.EventBusSubscriber(modid = DangerZone.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RegistryHandler {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DangerZone.MOD_ID);
@@ -44,6 +51,12 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<StampyLongNose>create(StampyLongNose::new, EntityClassification.CREATURE)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "stampylongnose").toString()));
+							
+	
+    //EntitySpawnPlacementRegistry.register(TEWTIY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, Tewtiy::canTewtiySpawn);
+    //EntitySpawnPlacementRegistry.register(STAMPYLONGNOSE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, StampyLongNose::canStampyLongNoseSpawn);
+
+    
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
 
@@ -197,8 +210,6 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> ORANGE_BLOCK = BLOCKS.register("orange_block", OrangeBlock::new);
 
-    public static final RegistryObject<Block> BROWN_BLOCK = BLOCKS.register("brown_block", BrownBlock::new);
-
     //Block Items
     public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("amethyst_ore_block", () -> new BlockItemBase(AMETHYST_ORE_BLOCK.get()));
 
@@ -227,7 +238,5 @@ public class RegistryHandler {
     public static final RegistryObject<Item> DARK_ORANGE_BLOCK_ITEM = ITEMS.register("dark_orange_block", () -> new BlockItemBase(DARK_ORANGE_BLOCK.get()));
 
     public static final RegistryObject<Item> ORANGE_BLOCK_ITEM = ITEMS.register("orange_block", () -> new BlockItemBase(ORANGE_BLOCK.get()));
-
-    public static final RegistryObject<Item> BROWN_BLOCK_ITEM = ITEMS.register("brown_block", () -> new BlockItemBase(BROWN_BLOCK.get()));
 
 }
