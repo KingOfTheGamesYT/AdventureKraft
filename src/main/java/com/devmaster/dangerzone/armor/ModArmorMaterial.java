@@ -1,6 +1,6 @@
 package com.devmaster.dangerzone.armor;
 
-import com.devmaster.dangerzone.DangerZone;
+import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
 
 import net.minecraft.inventory.EquipmentSlotType;

@@ -1,6 +1,6 @@
 package com.devmaster.dangerzone.tools;
 
-import com.devmaster.dangerzone.DangerZone;
+import com.devmaster.dangerzone.misc.DangerZone;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;

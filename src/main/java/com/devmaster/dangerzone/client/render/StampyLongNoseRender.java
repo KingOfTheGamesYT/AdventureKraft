@@ -1,10 +1,8 @@
 package com.devmaster.dangerzone.client.render;
 
-import com.devmaster.dangerzone.DangerZone;
+import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.client.render.model.StampyLongNoseModel;
-import com.devmaster.dangerzone.client.render.model.TewtiyModel;
 import com.devmaster.dangerzone.entity.StampyLongNose;
-import com.devmaster.dangerzone.entity.Tewtiy;
 import net.minecraft.client.renderer.entity.BipedRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;

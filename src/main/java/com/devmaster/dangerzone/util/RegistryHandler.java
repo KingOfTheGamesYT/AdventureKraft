@@ -1,6 +1,6 @@
 package com.devmaster.dangerzone.util;
 
-import com.devmaster.dangerzone.DangerZone;
+import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.armor.*;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.entity.StampyLongNose;
@@ -35,13 +35,13 @@ public class RegistryHandler {
 //Entities
     public static final RegistryObject<EntityType<Tewtiy>> TEWTIY = ENTITIES
             .register("tewtiy",
-                    () -> EntityType.Builder.<Tewtiy>create(Tewtiy::new, EntityClassification.CREATURE)
+                    () -> EntityType.Builder.<Tewtiy>create(Tewtiy::new, EntityClassification.AMBIENT)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "tewtiy").toString()));
 
     public static final RegistryObject<EntityType<StampyLongNose>> STAMPYLONGNOSE = ENTITIES
             .register("stampylongnose",
-                    () -> EntityType.Builder.<StampyLongNose>create(StampyLongNose::new, EntityClassification.CREATURE)
+                    () -> EntityType.Builder.<StampyLongNose>create(StampyLongNose::new, EntityClassification.AMBIENT)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "stampylongnose").toString()));
     //Items

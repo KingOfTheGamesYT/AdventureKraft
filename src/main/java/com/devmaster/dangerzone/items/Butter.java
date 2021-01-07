@@ -1,6 +1,6 @@
 package com.devmaster.dangerzone.items;
 
-import com.devmaster.dangerzone.DangerZone;
+import com.devmaster.dangerzone.misc.DangerZone;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;

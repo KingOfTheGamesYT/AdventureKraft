@@ -2,27 +2,29 @@ package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.EntitySpawnPlacementRegistry;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.monster.SlimeEntity;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.world.IServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import javax.annotation.Nullable;
+import java.util.Random;
 
 
-public class Tewtiy extends MonsterEntity {
+public class Tewtiy extends CreatureEntity {
 
     public Tewtiy(final EntityType<? extends Tewtiy> type, final World worldIn) {
         super(type, worldIn);
@@ -37,7 +39,7 @@ public class Tewtiy extends MonsterEntity {
     public void init(FMLCommonSetupEvent event) {
 
         EntitySpawnPlacementRegistry.register(RegistryHandler.TEWTIY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-                MonsterEntity::canMonsterSpawn);
+                CreatureEntity::canSpawnOn);
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -57,28 +59,25 @@ public class Tewtiy extends MonsterEntity {
         this.goalSelector.addGoal(5, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, MobEntity.class, true));
-
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, MonsterEntity.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
 
     }
 
-    @Override
-    protected void playStepSound(BlockPos pos, BlockState blockIn) { this.playSound(SoundEvents.ENTITY_WOLF_STEP, 0.15F, 1.0F); }
-
-
-    @Override
-    protected SoundEvent getAmbientSound() {
-        return rand.nextFloat() < 0.18F ? SoundEvents.ENTITY_WITCH_HURT : SoundEvents.ENTITY_PARROT_AMBIENT;
+    public static <T extends MobEntity> boolean canTewtiySpawn(EntityType<Tewtiy> entityType, IServerWorld iServerWorld, SpawnReason reason, BlockPos pos, Random random) {
+        return reason == SpawnReason.SPAWNER;
     }
+
+
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return rand.nextFloat() < 0.09F ? SoundEvents.ENTITY_WITCH_HURT : SoundEvents.ENTITY_PARROT_HURT;
+        return SoundEvents.ENTITY_PLAYER_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_GHAST_DEATH;
+        return SoundEvents.ENTITY_PLAYER_DEATH;
     }
 
     @Override
@@ -94,7 +93,7 @@ public class Tewtiy extends MonsterEntity {
 
     @Override
     public boolean onLivingFall(float distance, float damageMultiplier) {
-        return false;
+        return true;
     }
 
     @Override
@@ -106,6 +105,8 @@ public class Tewtiy extends MonsterEntity {
     protected int getExperiencePoints(PlayerEntity player) {
         return 250;
     }
+
+
 }
 
 

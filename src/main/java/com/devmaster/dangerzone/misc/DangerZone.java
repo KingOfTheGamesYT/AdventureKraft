@@ -1,4 +1,4 @@
-package com.devmaster.dangerzone;
+package com.devmaster.dangerzone.misc;
 
 import com.devmaster.dangerzone.client.render.StampyLongNoseRender;
 import com.devmaster.dangerzone.client.render.TewtiyRender;
@@ -8,7 +8,6 @@ import com.devmaster.dangerzone.world.gen.ModOregen;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -27,7 +26,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -77,10 +75,10 @@ public class DangerZone {
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onBiomeLoadingEvent(BiomeLoadingEvent event) {
         List<MobSpawnInfo.Spawners> spawns =
-                event.getSpawns().getSpawner(EntityClassification.MONSTER);
+               event.getSpawns().getSpawner(EntityClassification.CREATURE);
 
-        spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.TEWTIY.get(), 1, 1, 4));
-        spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), 1, 1, 4));
+        spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.TEWTIY.get(), 1, 1, 1));
+        spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), 1, 1, 1));
     }
 
     private void entitySpawn() {
