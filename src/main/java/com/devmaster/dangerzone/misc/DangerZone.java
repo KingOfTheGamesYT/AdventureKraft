@@ -75,7 +75,7 @@ public class DangerZone {
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onBiomeLoadingEvent(BiomeLoadingEvent event) {
         List<MobSpawnInfo.Spawners> spawns =
-               event.getSpawns().getSpawner(EntityClassification.CREATURE);
+                event.getSpawns().getSpawner(EntityClassification.MONSTER);
 
         spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.TEWTIY.get(), 1, 1, 1));
         spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), 1, 1, 1));
