@@ -59,7 +59,6 @@ public class StampyLongNose extends CreatureEntity {
         this.goalSelector.addGoal(5, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, MonsterEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, true));
