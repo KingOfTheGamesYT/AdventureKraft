@@ -22,7 +22,7 @@ public class SapphireOreBlock extends OreBlock {
         super(Properties.create(Material.ROCK)
                 .hardnessAndResistance(9.0F, 3.0F)
                 .sound(SoundType.STONE)
-                .harvestLevel(0)
+                .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
                 .setRequiresTool());
     }
