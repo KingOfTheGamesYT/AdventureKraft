@@ -18,7 +18,7 @@ public class AmethystBlock extends Block {
         super(Block.Properties.create(Material.ROCK)
                 .hardnessAndResistance(4.0F, 12.0F)
                 .sound(SoundType.METAL)
-                .harvestLevel(0)
+                .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
                 .setRequiresTool()
                 .setLightLevel(state -> 4));
