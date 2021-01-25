@@ -18,7 +18,7 @@ public class TitaniumBlock extends Block {
         super(Properties.create(Material.ROCK)
                 .hardnessAndResistance(5.0F, 5.0F)
                 .sound(SoundType.METAL)
-                .harvestLevel(0)
+                .harvestLevel(3)
                 .harvestTool(ToolType.PICKAXE)
                 .setRequiresTool()
                 .setLightLevel(state -> 5));
