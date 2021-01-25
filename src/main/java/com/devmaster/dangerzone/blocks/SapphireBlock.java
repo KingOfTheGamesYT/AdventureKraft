@@ -18,7 +18,7 @@ public class SapphireBlock extends Block {
         super(Properties.create(Material.ROCK)
                 .hardnessAndResistance(3.0F, 3.0F)
                 .sound(SoundType.METAL)
-                .harvestLevel(0)
+                .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE));
     }
 
