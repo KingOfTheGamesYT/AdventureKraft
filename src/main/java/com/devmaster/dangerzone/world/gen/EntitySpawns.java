@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 public class EntitySpawns {
     private static int tewitySpawnWeight = 1;
     private static int stampylongnoseSpawnWeight = 1;
+    private static int notbreebreeSpawnWeight = 1;
 
     @SubscribeEvent
     public static void onBiomeLoaded(BiomeLoadingEvent event) {
@@ -22,9 +23,13 @@ public class EntitySpawns {
 
         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), stampylongnoseSpawnWeight , 1, 1));
 
+        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.NOTBREEBREE.get(), notbreebreeSpawnWeight, 1, 1));
+
 
         System.out.println("tewtiySpawnWeight:" + DZConfig.misc.tewtiySpawnWeight.get());
         System.out.println("stampylongnoseSpawnWeight:" + DZConfig.misc.stampylongnoseSpawnWeight.get());
+        System.out.println("notbreebreeSpawnWeight:" + DZConfig.misc.notbreebreeSpawnWeight.get());
+
     }
 
 

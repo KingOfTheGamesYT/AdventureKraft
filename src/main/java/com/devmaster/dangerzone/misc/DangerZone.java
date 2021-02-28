@@ -1,7 +1,10 @@
 package com.devmaster.dangerzone.misc;
 
+import com.devmaster.dangerzone.client.render.NotBreeBreeRender;
 import com.devmaster.dangerzone.client.render.StampyLongNoseRender;
 import com.devmaster.dangerzone.client.render.TewtiyRender;
+import com.devmaster.dangerzone.entity.NotBreeBree;
+import com.devmaster.dangerzone.entity.StampyLongNose;
 import com.devmaster.dangerzone.entity.Tewtiy;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
@@ -31,17 +34,14 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod("dangerzone")
 public class DangerZone {
-    // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "dangerzone";
 
     public DangerZone() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DZConfig.spec);
 
-        // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
@@ -61,7 +61,8 @@ public class DangerZone {
     private void setup(final FMLCommonSetupEvent event) {
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), Tewtiy.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.NOTBREEBREE.get(), NotBreeBree.getAttributes().create());
 
         });
     }
@@ -69,6 +70,7 @@ public class DangerZone {
         RenderTypeLookup.setRenderLayer(RegistryHandler.STICKY_BLOCK.get(), RenderType.getCutout());
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TEWTIY.get(), TewtiyRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNoseRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.NOTBREEBREE.get(), NotBreeBreeRender::new);
 
     }
 
@@ -79,6 +81,8 @@ public class DangerZone {
 
         spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.TEWTIY.get(), 1, 1, 1));
         spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), 1, 1, 1));
+        spawns.add(new MobSpawnInfo.Spawners(RegistryHandler.NOTBREEBREE.get(), 1, 1, 1));
+
     }
 
     private void entitySpawn() {

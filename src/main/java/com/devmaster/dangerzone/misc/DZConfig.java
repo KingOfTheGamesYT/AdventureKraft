@@ -11,6 +11,7 @@ public class DZConfig {
 
         public final ForgeConfigSpec.ConfigValue<Integer> tewtiySpawnWeight;
         public final ForgeConfigSpec.ConfigValue<Integer> stampylongnoseSpawnWeight;
+        public final ForgeConfigSpec.ConfigValue<Integer> notbreebreeSpawnWeight;
 
         public CategoryMisc(ForgeConfigSpec.Builder builder) {
 
@@ -18,6 +19,7 @@ public class DZConfig {
 
             tewtiySpawnWeight = builder.comment("Tewtiy Spawn Weight", "The higher the value is, the more frequent it spawns.").defineInRange("tewtiySpawnWeight", 1, 1, 256);
             stampylongnoseSpawnWeight = builder.comment("StampyLongNose Spawn Weight", "The higher the value is, the more frequent it spawns.").defineInRange("stampylongnoseSpawnWeight", 1, 1, 256);
+            notbreebreeSpawnWeight = builder.comment("StampyLongNose Spawn Weight", "The higher the value is, the more frequent it spawns.").defineInRange("stampylongnoseSpawnWeight", 1, 1, 256);
 
             builder.pop();
         }

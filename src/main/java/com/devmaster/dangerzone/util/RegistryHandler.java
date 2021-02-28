@@ -1,5 +1,6 @@
 package com.devmaster.dangerzone.util;
 
+import com.devmaster.dangerzone.entity.NotBreeBree;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.armor.*;
 import com.devmaster.dangerzone.blocks.*;
@@ -39,6 +40,12 @@ public class RegistryHandler {
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "tewtiy").toString()));
 
+    public static final RegistryObject<EntityType<NotBreeBree>> NOTBREEBREE = ENTITIES
+            .register("notbreebree",
+                    () -> EntityType.Builder.<NotBreeBree>create(NotBreeBree::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.3f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "notbreebree").toString()));
+
     public static final RegistryObject<EntityType<StampyLongNose>> STAMPYLONGNOSE = ENTITIES
             .register("stampylongnose",
                     () -> EntityType.Builder.<StampyLongNose>create(StampyLongNose::new, EntityClassification.AMBIENT)
@@ -70,6 +77,8 @@ public class RegistryHandler {
     public static final RegistryObject<ButterCandy> BUTTER_CANDY = ITEMS.register("butter_candy", ButterCandy::new);
 
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
+
+    public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
 
 
     //Tools

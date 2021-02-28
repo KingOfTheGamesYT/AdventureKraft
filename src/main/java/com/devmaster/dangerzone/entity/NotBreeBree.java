@@ -1,7 +1,6 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
-import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -27,9 +26,9 @@ import javax.annotation.Nullable;
 import java.util.Random;
 
 
-public class Tewtiy extends CreatureEntity {
+public class NotBreeBree extends CreatureEntity {
 
-    public Tewtiy(final EntityType<? extends Tewtiy> type, final World worldIn) {
+    public NotBreeBree(final EntityType<? extends NotBreeBree> type, final World worldIn) {
         super(type, worldIn);
     }
 
@@ -41,7 +40,7 @@ public class Tewtiy extends CreatureEntity {
 
     public void init(FMLCommonSetupEvent event) {
 
-        EntitySpawnPlacementRegistry.register(RegistryHandler.TEWTIY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+        EntitySpawnPlacementRegistry.register(RegistryHandler.NOTBREEBREE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
                 CreatureEntity::canSpawnOn);
     }
 
@@ -74,7 +73,7 @@ public class Tewtiy extends CreatureEntity {
 
     }
 
-    public static <T extends MobEntity> boolean canTewtiySpawn(EntityType<Tewtiy> entityType, IServerWorld iServerWorld, SpawnReason reason, BlockPos pos, Random random) {
+    public static <T extends MobEntity> boolean canNotBreeBreeSpawn(EntityType<NotBreeBree> entityType, IServerWorld iServerWorld, SpawnReason reason, BlockPos pos, Random random) {
         return reason == SpawnReason.SPAWNER;
     }
 
