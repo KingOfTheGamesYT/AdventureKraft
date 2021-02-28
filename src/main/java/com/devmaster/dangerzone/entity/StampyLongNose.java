@@ -67,6 +67,7 @@ public class StampyLongNose extends CreatureEntity {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
+        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, Tewtiy.class, true));
 
     }
 
