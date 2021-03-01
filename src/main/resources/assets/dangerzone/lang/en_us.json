@@ -12,6 +12,7 @@
   "item.dangerzone.cheese": "Cheese",
   "item.dangerzone.butter_candy": "Butter Candy",
   "item.dangerzone.mermaid_spawn_egg": "Spawn Mermaid",
+  "item.dangerzone.fire_fish_spawn_egg": "Spawn Fire Fish",
 
 
   "block.dangerzone.amethyst_ore_block": "Amethyst Ore",
@@ -73,7 +74,8 @@
   "item.dangerzone.poppy_sword": "Poppy Sword",
 
   "entity.dangerzone.tewtiy": "Tewtiy",
-  "entity.dangerzone.stampylongnose": "StampyLongNose"
+  "entity.dangerzone.stampylongnose": "StampyLongNose",
+  "entity.dangerzone.notbreebree": "NotBreeBree"
 
 
 }
