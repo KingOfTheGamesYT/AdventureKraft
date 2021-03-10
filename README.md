@@ -2,7 +2,7 @@
 
  Adds Danger Zone to minecraft
 
-Dangerzone was previously known as Orespawn. 
+Dangerzone is a game made by Richard Clark
 
 ## Download
 ___
