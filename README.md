@@ -1,4 +1,4 @@
-# DangerZone
+# CraftZone
 
  Adds Danger Zone to minecraft
 
