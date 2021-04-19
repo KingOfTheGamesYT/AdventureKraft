@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -17,10 +18,8 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.world.IServerWorld;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.Heightmap;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import javax.annotation.Nullable;
 import java.util.Random;
@@ -38,15 +37,13 @@ public class Tewtiy extends CreatureEntity {
         super.setCustomName(name);
     }
 
-    public void init(FMLCommonSetupEvent event) {
-
-        EntitySpawnPlacementRegistry.register(RegistryHandler.TEWTIY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-                CreatureEntity::canSpawnOn);
+    public static boolean canTewtiySpawn(EntityType<? extends Tewtiy> animal, IWorld world, SpawnReason reason, BlockPos pos, Random random) {
+        return world.getBlockState(pos.south()).equals(Blocks.GRASS_BLOCK) && world.canSeeSky(pos);
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 100.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 50D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.22D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 8.0D)
                 .createMutableAttribute(Attributes.ARMOR, 3.5F);
@@ -69,13 +66,12 @@ public class Tewtiy extends CreatureEntity {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
-        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
+        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, Tewtiy.class, true));
 
     }
 
-    public static <T extends MobEntity> boolean canTewtiySpawn(EntityType<Tewtiy> entityType, IServerWorld iServerWorld, SpawnReason reason, BlockPos pos, Random random) {
-        return reason == SpawnReason.SPAWNER;
-    }
+
 
 
 

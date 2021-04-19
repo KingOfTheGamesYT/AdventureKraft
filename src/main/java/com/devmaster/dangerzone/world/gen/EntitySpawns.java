@@ -4,33 +4,49 @@ import com.devmaster.dangerzone.misc.DZConfig;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.entity.EntityClassification;
+import net.minecraft.util.RegistryKey;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 
 @Mod.EventBusSubscriber(modid = DangerZone.MOD_ID)
 public class EntitySpawns {
-    private static int tewitySpawnWeight = 1;
-    private static int stampylongnoseSpawnWeight = 1;
-    private static int notbreebreeSpawnWeight = 1;
-
-    @SubscribeEvent
-    public static void onBiomeLoaded(BiomeLoadingEvent event) {
-
-
-        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.TEWTIY.get(), tewitySpawnWeight, 1, 1));
-
-        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), stampylongnoseSpawnWeight , 1, 1));
-
-        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.NOTBREEBREE.get(), notbreebreeSpawnWeight, 1, 1));
-
-
-        System.out.println("tewtiySpawnWeight:" + DZConfig.misc.tewtiySpawnWeight.get());
-        System.out.println("stampylongnoseSpawnWeight:" + DZConfig.misc.stampylongnoseSpawnWeight.get());
-        System.out.println("notbreebreeSpawnWeight:" + DZConfig.misc.notbreebreeSpawnWeight.get());
-
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public static void addSpawn(BiomeLoadingEvent event) {
+        if (event.getName() != null) {
+            Biome biome = ForgeRegistries.BIOMES.getValue(event.getName());
+            if (biome != null) {
+                RegistryKey<Biome> biomeKey = RegistryKey.getOrCreateKey(ForgeRegistries.Keys.BIOMES, event.getName());
+                List<BiomeDictionary.Type> includeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.SPAWN.NotBreeBreeinclude.get()));
+                List<BiomeDictionary.Type> excludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.SPAWN.NotBreeBreeexclude.get()));
+                List<BiomeDictionary.Type> StampyLongNoseincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.SPAWN.NotBreeBreeinclude.get()));
+                List<BiomeDictionary.Type> StampyLongNoseexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.SPAWN.NotBreeBreeexclude.get()));
+                List<BiomeDictionary.Type> TewityincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.SPAWN.NotBreeBreeinclude.get()));
+                List<BiomeDictionary.Type> TewityexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.SPAWN.NotBreeBreeexclude.get()));
+                if (!includeList.isEmpty()) {
+                    Set<BiomeDictionary.Type> biomeTypes = BiomeDictionary.getTypes(biomeKey);
+                    if (biomeTypes.stream().noneMatch(excludeList::contains) && biomeTypes.stream().anyMatch(includeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.NOTBREEBREE.get(), DZConfig.SPAWN.NotBreeBreeweight.get(), DZConfig.SPAWN.NotBreeBreemin.get(), DZConfig.SPAWN.NotBreeBreemax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(StampyLongNoseexcludeList::contains) && biomeTypes.stream().anyMatch(StampyLongNoseincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), DZConfig.SPAWN.StampyLongNoseweight.get(), DZConfig.SPAWN.StampyLongNosemin.get(), DZConfig.SPAWN.StampyLongNosemax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(TewityexcludeList::contains) && biomeTypes.stream().anyMatch(TewityincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.TEWTIY.get(), DZConfig.SPAWN.Tewityweight.get(), DZConfig.SPAWN.Tewitymin.get(), DZConfig.SPAWN.Tewitymax.get()));
+                    }
+                } else {
+                    throw new IllegalArgumentException("Do not leave the BiomeDictionary type inclusion list empty. If you wish to disable spawning of an entity, set the weight to 0 instead.");
+                }
+            }
+        }
     }
-
-
 }
