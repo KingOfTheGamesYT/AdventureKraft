@@ -13,6 +13,7 @@
   "item.dangerzone.butter_candy": "Butter Candy",
   "item.dangerzone.mermaid_spawn_egg": "Spawn Mermaid",
   "item.dangerzone.fire_fish_spawn_egg": "Spawn Fire Fish",
+  "item.dangerzone.titanium_ingot": "Titanium Ingot",
 
 
   "block.dangerzone.amethyst_ore_block": "Amethyst Ore",
@@ -30,6 +31,7 @@
   "block.dangerzone.dark_orange_block": "Dark Orange Block",
   "block.dangerzone.orange_block": "Orange Block",
   "block.dangerzone.brown_block": "Brown Block",
+  "block.dangerzone.titanium_ore_block": "Titanium Ore",
 
   "itemGroup.dangerzonetab": "DangerZone Items",
   "itemGroup.dangerzoneblocks": "DangerZone Blocks",

@@ -23,6 +23,7 @@ public class ModOregen {
     public static ConfiguredFeature<?, ?> AMETHYST_ORE;
     public static ConfiguredFeature<?, ?> SALT_ORE;
     public static ConfiguredFeature<?, ?> SAPPHIRE_ORE;
+    public static ConfiguredFeature<?, ?> TITANIUM_ORE;
 
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
         Registry<ConfiguredFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_FEATURE;
@@ -44,9 +45,16 @@ public class ModOregen {
                         .square()
                         .func_242731_b/* repeat */(2));
 
+        TITANIUM_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.TITANIUM_ORE_BLOCK.get().getDefaultState(),4))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 20))
+                        .square()
+                        .func_242731_b/* repeat */(3));
+
         Registry.register(registry, new ResourceLocation("amethyst_ore_block"), AMETHYST_ORE);
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
         Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
+        Registry.register(registry, new ResourceLocation("titanium_ore_block"), TITANIUM_ORE);
 
     }
 
@@ -58,6 +66,7 @@ public class ModOregen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, AMETHYST_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SALT_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TITANIUM_ORE);
 
     }
 
