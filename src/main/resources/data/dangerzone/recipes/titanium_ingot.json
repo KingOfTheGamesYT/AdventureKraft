@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+
+      "tag": "forge:nuggets/titanium"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:titanium_ingot",
+    "count": 1
+  }
+}
