@@ -54,6 +54,8 @@ public class RegistryHandler {
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
 
+    public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget", TitaniumNugget::new);
+
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", TitaniumIngot::new);
 
     public static final RegistryObject<Item> SALT = ITEMS.register("salt", Salt::new);
@@ -81,6 +83,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
 
     public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
+
 
 
     //Tools
@@ -131,6 +134,9 @@ public class RegistryHandler {
 
     public static final RegistryObject<SwordItem> POPPY_SWORD = ITEMS.register("poppy_sword", () ->
             new SwordItem(ModItemTier.EMERALD, 4, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+
+    public static final RegistryObject<SwordItem> CAKE_SWORD = ITEMS.register("cake_sword", () ->
+            new SwordItem(ModItemTier.CAKE, 0, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
 
     //Armor
     public static final RegistryObject<ArmorItem> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () ->

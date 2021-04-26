@@ -12,6 +12,10 @@ public enum ModItemTier implements IItemTier {
         return Ingredient.fromItems(RegistryHandler.AMETHYST.get());
     }),
 
+    CAKE(1, 1, 1.0F, 0.0F, 1, () -> {
+        return Ingredient.fromItems(Items.CAKE);
+    }),
+
     EMERALD(3, 1300, 10.0F, 0.0F, 70, () -> {
         return Ingredient.fromItems(Items.EMERALD.getItem());
     }),
