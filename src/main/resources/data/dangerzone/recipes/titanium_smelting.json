@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "dangerzone:titanium_ore_block"
+  },
+  "result": "dangerzone:titanium_nugget",
+  "experience": 0.7,
+  "cookingtime": 200
+}
