@@ -15,6 +15,7 @@
   "item.dangerzone.fire_fish_spawn_egg": "Spawn Fire Fish",
   "item.dangerzone.titanium_ingot": "Titanium Ingot",
   "item.dangerzone.titanium_nugget": "Titanium Nugget",
+  "item.dangerzone.candy_cane": "Candy Cane",
 
 
   "block.dangerzone.amethyst_ore_block": "Amethyst Ore",
@@ -75,10 +76,12 @@
   "item.dangerzone.sapphire_sword": "Sapphire Sword",
   "item.dangerzone.emerald_sword": "Emerald Sword",
   "item.dangerzone.poppy_sword": "Poppy Sword",
+  "item.dangerzone.cake_sword": "Cake Sword",
 
   "entity.dangerzone.tewtiy": "Tewtiy",
   "entity.dangerzone.stampylongnose": "StampyLongNose",
-  "entity.dangerzone.notbreebree": "NotBreeBree"
+  "entity.dangerzone.notbreebree": "NotBreeBree",
+  "entity.dangerzone.redrosewarrior": "RedRoseWarrior"
 
 
 }
