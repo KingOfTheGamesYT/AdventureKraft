@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " # ",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cake"
+
+    },
+    "/": {
+      "item": "dangerzone:candy_cane"
+    }
+  },
+  "result": {
+    "item": "dangerzone:cake_sword",
+    "count": 1
+  }
+}
