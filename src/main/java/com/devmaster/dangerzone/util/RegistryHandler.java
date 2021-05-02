@@ -64,6 +64,8 @@ public class RegistryHandler {
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
 
+    public static final RegistryObject<Item> TITANIUM_Hardened_CAKE = ITEMS.register("titanium_hardened_cake", TitaniumHardenedCake::new);
+
     public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget", TitaniumNugget::new);
 
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", TitaniumIngot::new);
