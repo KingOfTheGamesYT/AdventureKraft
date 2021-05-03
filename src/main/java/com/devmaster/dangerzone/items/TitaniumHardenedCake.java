@@ -21,6 +21,6 @@ public class TitaniumHardenedCake extends Item {
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A75" + "Don't eat it!" + "\u00A75"));
+        tooltip.add(new StringTextComponent("\u00A7b" + "Don't eat it!" + "\u00A7b"));
     }
 }
