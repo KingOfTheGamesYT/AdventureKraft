@@ -28,6 +28,6 @@ public class CandyCane extends Item {
     }
 
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new StringTextComponent("\u00A7e" + "Thank you for 1k downloads" + "\u00A7e"));
+        tooltip.add(new StringTextComponent("\u00A7c" + "Thank you for 1k downloads" + "\u00A7c"));
     }
 }
