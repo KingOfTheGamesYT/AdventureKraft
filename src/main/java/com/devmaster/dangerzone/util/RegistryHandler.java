@@ -2,6 +2,7 @@ package com.devmaster.dangerzone.util;
 
 import com.devmaster.dangerzone.entity.NotBreeBree;
 import com.devmaster.dangerzone.entity.RedRoseWarrior;
+import com.devmaster.dangerzone.items.SpawnEggItem;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.armor.*;
 import com.devmaster.dangerzone.blocks.*;
@@ -97,6 +98,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
 
     public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
+
+    public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
 
 //Dimensions
 
