@@ -1,26 +1,24 @@
 package com.devmaster.dangerzone.misc;
 
 import com.devmaster.dangerzone.client.render.NotBreeBreeRender;
+import com.devmaster.dangerzone.client.render.RedRoseWarriorRender;
 import com.devmaster.dangerzone.client.render.StampyLongNoseRender;
 import com.devmaster.dangerzone.client.render.TewtiyRender;
 import com.devmaster.dangerzone.entity.NotBreeBree;
+import com.devmaster.dangerzone.entity.RedRoseWarrior;
 import com.devmaster.dangerzone.entity.StampyLongNose;
 import com.devmaster.dangerzone.entity.Tewtiy;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -32,15 +30,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.List;
-
 @Mod("dangerzone")
 public class DangerZone {
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger("DangerZone");
     public static final String MOD_ID = "dangerzone";
 
+
     public DangerZone() {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DZConfig.spec);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DZConfig.BUILDER.build());
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
@@ -63,6 +60,7 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.NOTBREEBREE.get(), NotBreeBree.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarrior.getAttributes().create());
 
         });
     }
@@ -71,6 +69,7 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TEWTIY.get(), TewtiyRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNoseRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.NOTBREEBREE.get(), NotBreeBreeRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarriorRender::new);
 
     }
 
@@ -117,6 +116,14 @@ public class DangerZone {
         }
     };
 
+    public static final ItemGroup PETRIFIED_ORES = new ItemGroup("dangerzonepetrifiedores") {
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.REDROSEWARRIOR_EGG_ORE.get());
+        }
+    };
 }
+
 
 
