@@ -3,15 +3,16 @@ package com.devmaster.dangerzone.misc;
 import com.devmaster.dangerzone.world.gen.BiomeDictionaryHelper;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.ForgeConfigSpec;
+import static net.minecraftforge.common.BiomeDictionary.Type.*;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static net.minecraftforge.common.BiomeDictionary.Type.*;
 
-public class DZConfig  {
+public class DZConfig {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static final Spawn SPAWN = new Spawn(BUILDER);
+
 
     public static class Spawn {
         public final ForgeConfigSpec.IntValue NotBreeBreemin;
@@ -43,6 +44,7 @@ public class DZConfig  {
             Tewitymax = builder.defineInRange("Tewity Max", 4, 0, 64);
             Tewityweight = builder.defineInRange("Tewity Weight", 7, 0, 100);
             builder.pop();
+
             builder.push("spawnable biomes");
             StampyLongNoseinclude = builder.defineList("include Stampy", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             StampyLongNoseexclude = builder.defineList("exclude Stampy", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
@@ -51,8 +53,12 @@ public class DZConfig  {
             NotBreeBreeinclude = builder.defineList("include NotBreeBree", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             NotBreeBreeexclude = builder.defineList("exclude NotBreeBree", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             builder.pop();
-        }
-    }
-    public static final ForgeConfigSpec spec = BUILDER.build();
 
+
+        }
+
+        public static final ForgeConfigSpec spec = BUILDER.build();
+
+    }
 }
+
