@@ -7,16 +7,19 @@ license="All rights reserved"
 issueTrackerURL="https://github.com/KingOfTheGamesYT/DangerZone/issues" #optional
 
 [[mods]] #mandatory
+itemIcon="dangerzone:cake_sword"
+
+configBackground="dangerzone:textures/blocks/kyuubi_egg_ore.png"
 
 modId="dangerzone" #mandatory
 
-version="${file.jarVersion}" #mandatory
+version="${3.1.3" #mandatory
 
-displayName="Danger Zone" #mandatory
+displayName="DangerZone" #mandatory
 
 updateJSONURL="http://myurl.me/" #optional
 
-displayURL="https://team-olympus.fandom.com/wiki/DangerZone" #optional
+displayURL="https://officialteamolympus.weebly.com/craftzone.html" #optional
 
 logoFile="dangerzone.png" #optional
 
@@ -29,7 +32,7 @@ Brings DangerZone to Minecraft
 '''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.examplemod]] #optional
+[[dependencies.dangerzone]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -41,7 +44,7 @@ Brings DangerZone to Minecraft
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.examplemod]]
+[[dependencies.dangerzone]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.4]"
