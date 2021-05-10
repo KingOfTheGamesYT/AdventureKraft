@@ -37,31 +37,31 @@ public class ModOregen {
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.AMETHYST_ORE_BLOCK.get().getDefaultState(),6))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 25))
                         .square()
-                        .func_242731_b/* repeat */(2));
+                        .chance/* repeat */(2));
 
         REDROSEWARRIOR_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.REDROSEWARRIOR_EGG_ORE.get().getDefaultState(),3))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
                         .square()
-                        .func_242731_b/* repeat */(3));
+                        .chance/* repeat */(3));
 
         SALT_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.SALT_ORE_BLOCK.get().getDefaultState(),12))
         .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(50, 0, 128))
                 .square()
-                .func_242731_b/* repeat */(5));
+                .chance/* repeat */(5));
 
        SAPPHIRE_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.SAPPHIRE_ORE_BLOCK.get().getDefaultState(),6))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 25))
                         .square()
-                        .func_242731_b/* repeat */(2));
+                        .chance/* repeat */(2));
 
         TITANIUM_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.TITANIUM_ORE_BLOCK.get().getDefaultState(),4))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 20))
                         .square()
-                        .func_242731_b/* repeat */(3));
+                        .chance/* repeat */(3));
 
         Registry.register(registry, new ResourceLocation("amethyst_ore_block"), AMETHYST_ORE);
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
