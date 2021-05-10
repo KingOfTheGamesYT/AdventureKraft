@@ -31,6 +31,8 @@ public class StampyLongNose extends CreatureEntity {
 
     public StampyLongNose(final EntityType<? extends StampyLongNose> type, final World worldIn) {
         super(type, worldIn);
+        this.experienceValue = 250;
+
     }
 
     public static boolean canStampyLongNoseSpawn(EntityType<? extends StampyLongNose> animal, IWorld world, SpawnReason reason, BlockPos pos, Random random) {
@@ -100,11 +102,6 @@ public class StampyLongNose extends CreatureEntity {
     @Override
     protected boolean isDespawnPeaceful() {
         return true;
-    }
-
-    @Override
-    protected int getExperiencePoints(PlayerEntity player) {
-        return 250;
     }
 
 

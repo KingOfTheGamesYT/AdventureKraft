@@ -28,6 +28,8 @@ public class NotBreeBree extends CreatureEntity {
 
     public NotBreeBree(final EntityType<? extends NotBreeBree> type, final World worldIn) {
         super(type, worldIn);
+        this.experienceValue = 250;
+
     }
 
 
@@ -105,10 +107,6 @@ public class NotBreeBree extends CreatureEntity {
         return true;
     }
 
-    @Override
-    protected int getExperiencePoints(PlayerEntity player) {
-        return 250;
-    }
 
 
 }

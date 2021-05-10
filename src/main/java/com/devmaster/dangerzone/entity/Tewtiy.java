@@ -29,6 +29,8 @@ public class Tewtiy extends CreatureEntity {
 
     public Tewtiy(final EntityType<? extends Tewtiy> type, final World worldIn) {
         super(type, worldIn);
+        this.experienceValue = 250;
+
     }
 
 
@@ -107,10 +109,6 @@ public class Tewtiy extends CreatureEntity {
         return true;
     }
 
-    @Override
-    protected int getExperiencePoints(PlayerEntity player) {
-        return 250;
-    }
 
 
 }
