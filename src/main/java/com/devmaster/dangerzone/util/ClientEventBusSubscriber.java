@@ -1,9 +1,7 @@
 package com.devmaster.dangerzone.util;
 
-import com.devmaster.dangerzone.client.render.NotBreeBreeRender;
+import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.misc.DangerZone;
-import com.devmaster.dangerzone.client.render.StampyLongNoseRender;
-import com.devmaster.dangerzone.client.render.TewtiyRender;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -18,6 +16,9 @@ public class ClientEventBusSubscriber {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TEWTIY.get(), TewtiyRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNoseRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.NOTBREEBREE.get(), NotBreeBreeRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarriorRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RAINBOWANT.get(), RainbowAntRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BUTTERFLY.get(), ButterflyRender::new);
 
     }
 }

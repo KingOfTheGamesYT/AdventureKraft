@@ -1,13 +1,10 @@
 package com.devmaster.dangerzone.util;
 
-import com.devmaster.dangerzone.entity.NotBreeBree;
-import com.devmaster.dangerzone.entity.RedRoseWarrior;
+import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.items.SpawnEggItem;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.armor.*;
 import com.devmaster.dangerzone.blocks.*;
-import com.devmaster.dangerzone.entity.StampyLongNose;
-import com.devmaster.dangerzone.entity.Tewtiy;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.tools.EmeraldPickaxe;
 import com.devmaster.dangerzone.tools.ModItemTier;
@@ -62,6 +59,18 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<RedRoseWarrior>create(RedRoseWarrior::new, EntityClassification.MONSTER)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "redrosewarrior").toString()));
+
+    public static final RegistryObject<EntityType<RainbowAnt>> RAINBOWANT = ENTITIES
+            .register("rainbow_ant",
+                    () -> EntityType.Builder.<RainbowAnt>create(RainbowAnt::new, EntityClassification.CREATURE)
+                            .size(0.9f, 1.3f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "rainbow_ant").toString()));
+
+    public static final RegistryObject<EntityType<Butterfly>> BUTTERFLY = ENTITIES
+            .register("butterfly",
+                    () -> EntityType.Builder.<Butterfly>create(Butterfly::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.3f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "butterfly").toString()));
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
 
@@ -101,8 +110,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
 
-//Dimensions
-
+    public static final RegistryObject<SpawnEggItem> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg", () -> new SpawnEggItem(RegistryHandler.BUTTERFLY, new Item.Properties().group(DangerZone.TAB)));
 
     //Tools
     public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () ->

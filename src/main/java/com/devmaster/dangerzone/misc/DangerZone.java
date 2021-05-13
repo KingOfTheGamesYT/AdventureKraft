@@ -1,13 +1,7 @@
 package com.devmaster.dangerzone.misc;
 
-import com.devmaster.dangerzone.client.render.NotBreeBreeRender;
-import com.devmaster.dangerzone.client.render.RedRoseWarriorRender;
-import com.devmaster.dangerzone.client.render.StampyLongNoseRender;
-import com.devmaster.dangerzone.client.render.TewtiyRender;
-import com.devmaster.dangerzone.entity.NotBreeBree;
-import com.devmaster.dangerzone.entity.RedRoseWarrior;
-import com.devmaster.dangerzone.entity.StampyLongNose;
-import com.devmaster.dangerzone.entity.Tewtiy;
+import com.devmaster.dangerzone.client.render.*;
+import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
 import net.minecraft.client.renderer.RenderType;
@@ -61,6 +55,8 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.NOTBREEBREE.get(), NotBreeBree.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarrior.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BUTTERFLY.get(), Butterfly.getAttributes().create());
 
         });
     }
@@ -70,6 +66,8 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNoseRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.NOTBREEBREE.get(), NotBreeBreeRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarriorRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RAINBOWANT.get(), RainbowAntRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BUTTERFLY.get(), ButterflyRender::new);
 
     }
 
