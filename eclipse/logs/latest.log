@@ -1,27 +1,11 @@
-[23:25:06] [main/INFO]: Setting user: Player363
-[23:25:07] [Client thread/INFO]: LWJGL Version: 2.9.1
-[23:25:13] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:DangerZone
-[23:25:14] [Sound Library Loader/INFO]: Sound engine started
-[23:25:14] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[23:25:14] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[23:25:14] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:DangerZone
-[23:25:14] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[23:25:14] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[23:25:15] [Sound Library Loader/INFO]: Sound engine started
-[23:25:59] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[23:25:59] [Server thread/INFO]: Generating keypair
-[23:25:59] [Server thread/INFO]: Preparing start region for level 0
-[23:26:00] [Server thread/INFO]: Changing view distance to 12, from 10
-[23:26:00] [Server thread/INFO]: Player363[local:E:1cca42fe] logged in with entity id 225 at (225.31898150118798, 64.0, -86.380616885691)
-[23:26:00] [Server thread/INFO]: Player363 joined the game
-[23:26:03] [Server thread/INFO]: Saving and pausing game...
-[23:26:03] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[23:26:03] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[23:26:03] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[23:27:22] [Server thread/INFO]: Stopping server
-[23:27:22] [Server thread/INFO]: Saving players
-[23:27:22] [Server thread/INFO]: Saving worlds
-[23:27:22] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[23:27:22] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[23:27:22] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[23:27:23] [Client thread/INFO]: Stopping!
+[23:46:35] [main/INFO]: Setting user: Player282
+[23:46:36] [Client thread/INFO]: LWJGL Version: 2.9.1
+[23:46:42] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:DangerZone
+[23:46:42] [Sound Library Loader/INFO]: Sound engine started
+[23:46:43] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[23:46:43] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[23:46:43] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:DangerZone
+[23:46:43] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[23:46:43] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[23:46:44] [Sound Library Loader/INFO]: Sound engine started
+[23:46:49] [Client thread/INFO]: Stopping!
