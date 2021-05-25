@@ -50,7 +50,7 @@ public class CraftZone {
     public static final Item.ToolMaterial EmeraldPickaxe = EnumHelper.addToolMaterial("EmeraldPickaxe", 3, 1300, 10F, 6F, 75);
     public static final Item.ToolMaterial RubyMaterials = EnumHelper.addToolMaterial("RubyMaterials", 2, 192, 5.0F, 1.5F, 12);
     public static final Item.ToolMaterial RubyAxe = EnumHelper.addToolMaterial("RubyAxe", 5, 1500, 11F, 16F, 70);
-    public static final Item.ToolMaterial AmethystAxe = EnumHelper.addToolMaterial("AmethystAxe", 5, 1500, 11F, 16F, 70);
+    public static final Item.ToolMaterial AmethystAxe = EnumHelper.addToolMaterial("AmethystAxe", 5, 1500, 11F, 10F, 70);
     public static final Item.ToolMaterial UltimatePick = EnumHelper.addToolMaterial("UltimatePick", 5, 1500, 11F, 16F, 70);
     public static final Item.ToolMaterial RubyPick = EnumHelper.addToolMaterial("RubyPick`", 5, 1500, 11F, 16F, 70);
     
@@ -108,8 +108,8 @@ public class CraftZone {
     	emerald_hoe = new Emerald_Hoe(EmeraldMaterials).setUnlocalizedName("Emerald_Hoe").setTextureName("dangerzone:emerald_hoe");
     	GameRegistry.registerItem(emerald_hoe, emerald_hoe.getUnlocalizedName().substring(5));
 
-    	amethyst_pickaxe = new Amethyst_Pickaxe(AmethystMaterials).setUnlocalizedName("Amethyst_Pickaxe").setTextureName("dangerzone:amethyst_pickaxe");
-    	GameRegistry.registerItem(amethyst_pickaxe, amethyst_pickaxe.getUnlocalizedName().substring(5)); 
+    	//amethyst_pickaxe = new Amethyst_Pickaxe(AmethystMaterials).setUnlocalizedName("Amethyst_Pickaxe").setTextureName("dangerzone:amethyst_pickaxe");
+    //	GameRegistry.registerItem(amethyst_pickaxe, amethyst_pickaxe.getUnlocalizedName().substring(5));
 
     	amethyst_axe = new Amethyst_Axe(AmethystAxe).setUnlocalizedName("Amethyst_Axe").setTextureName("dangerzone:amethyst_axe");
     	GameRegistry.registerItem(amethyst_axe, amethyst_axe.getUnlocalizedName().substring(5));

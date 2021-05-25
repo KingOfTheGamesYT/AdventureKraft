@@ -6,9 +6,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.Item.ToolMaterial;
 
 public class Amethyst_Pickaxe 
-	extends ItemPickaxe{ 
+	extends ItemPickaxe{
+	protected Amethyst_Pickaxe(ToolMaterial p_i45347_1_) {
+		super(p_i45347_1_);
+	}
 	     
-	     public float weaponDamage = 12F;
+	    /* public float weaponDamage = 12F;
 	     
 	       
 	       public Amethyst_Pickaxe(ToolMaterial material) {
@@ -34,6 +37,6 @@ public class Amethyst_Pickaxe
 	       
 	       public String getMaterialName() {
 	       return "Amethyst";
-	       }
+	       }*/
 
 }
