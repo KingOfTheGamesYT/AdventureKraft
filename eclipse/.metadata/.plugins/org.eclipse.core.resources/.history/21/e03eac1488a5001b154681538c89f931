@@ -1,7 +1,0 @@
-package net.Akio.CraftZone.Main.Items;
-
-import net.minecraft.item.Item;
-
-public class Citter_Cage extends Item{
-
-}
