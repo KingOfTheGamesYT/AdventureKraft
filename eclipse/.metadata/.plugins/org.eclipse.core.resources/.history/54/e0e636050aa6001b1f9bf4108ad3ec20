@@ -1,0 +1,11 @@
+package net.Akio.CraftZone.Main.Blocks;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class Ruby_Block extends Block{
+
+	protected Ruby_Block(Material material) {
+		super(material);
+	}
+}

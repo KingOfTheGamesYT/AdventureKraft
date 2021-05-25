@@ -1,0 +1,11 @@
+package net.Akio.CraftZone.Main.Tools;
+
+import net.minecraft.item.ItemPickaxe;
+
+public class Emerald_Pickaxe extends ItemPickaxe {
+
+	public Emerald_Pickaxe(ToolMaterial material){
+		super(material);
+
+	}
+}

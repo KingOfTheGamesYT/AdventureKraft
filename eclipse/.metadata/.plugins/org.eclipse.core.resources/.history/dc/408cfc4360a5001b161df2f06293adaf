@@ -1,0 +1,39 @@
+package net.Akio.CraftZone.Main.Tools;
+
+import net.minecraft.item.ItemPickaxe;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.item.Item.ToolMaterial;
+
+public class Amethyst_Pickaxe 
+	extends ItemPickaxe{ 
+	     
+	     private int weaponDamage = 12;
+	     
+	       
+	       public Amethyst_Pickaxe(ToolMaterial material) {
+	       super(material);
+	       this.maxStackSize = 1;
+	       setMaxDamage(2000);
+	       setCreativeTab(CreativeTabs.tabTools);
+	       }
+	     
+	     
+	     
+	     
+	       
+	       public int getDamageVsEntity(Entity par1Entity) {
+	       return this.weaponDamage;
+	       }
+	     
+	       
+	       public int getDamageVsEntity() {
+	       return this.weaponDamage;
+	       }
+	     
+	       
+	       public String getMaterialName() {
+	       return "Amethyst";
+	       }
+
+}

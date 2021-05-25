@@ -1,0 +1,11 @@
+package net.Akio.CraftZone.Main.Foods;
+
+import net.minecraft.item.ItemFood;
+
+public class Butter extends ItemFood{
+
+	public Butter(int p_i45340_1_, boolean p_i45340_2_) {
+		super(p_i45340_1_, p_i45340_2_);
+	}
+
+}

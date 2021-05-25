@@ -1,0 +1,34 @@
+package net.Akio.CraftZone.Main.Tools;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.item.ItemAxe;
+import net.minecraft.item.Item.ToolMaterial;
+
+public class Ruby_Axe extends ItemAxe {	     
+
+
+		public Ruby_Axe(ToolMaterial material) {
+	      super(material);
+	       this.maxStackSize = 1;
+	      setMaxDamage(6000);
+	      setCreativeTab(CreativeTabs.tabTools);
+		  float weaponDamage = 50f;
+
+	       }
+	     
+	     
+	     
+	     
+	       
+	       public float getDamageVsEntity(Entity par1Entity) {
+	       return this.getDamage(null);
+	       }
+	     
+	     
+	       
+	       public String getMaterialName() {
+	       return "Ruby";
+	       }
+
+}

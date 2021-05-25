@@ -1,0 +1,22 @@
+package net.Akio.CraftZone.Main.Tools;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.world.World;
+
+public class Emerald_Pickaxe extends ItemPickaxe {
+
+	public Emerald_Pickaxe(ToolMaterial material){
+		super(material);
+
+	}
+}
