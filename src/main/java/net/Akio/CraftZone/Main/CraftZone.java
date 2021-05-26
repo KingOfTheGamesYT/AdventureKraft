@@ -51,7 +51,7 @@ public class CraftZone {
     public static final Item.ToolMaterial RubyMaterials = EnumHelper.addToolMaterial("RubyMaterials", 2, 192, 5.0F, 1.5F, 12);
     public static final Item.ToolMaterial RubyAxe = EnumHelper.addToolMaterial("RubyAxe", 5, 1500, 11F, 16F, 70);
     public static final Item.ToolMaterial AmethystAxe = EnumHelper.addToolMaterial("AmethystAxe", 5, 1500, 11F, 10F, 70);
-    public static final Item.ToolMaterial UltimatePick = EnumHelper.addToolMaterial("UltimatePick", 5, 1500, 11F, 16F, 70);
+    public static final Item.ToolMaterial UltimatePick = EnumHelper.addToolMaterial("UltimatePick", 5, 1500, 11F, 36F, 70);
     public static final Item.ToolMaterial RubyPick = EnumHelper.addToolMaterial("RubyPick`", 5, 1500, 11F, 16F, 70);
     
     public static Item ruby_pickaxe;
@@ -133,21 +133,21 @@ public class CraftZone {
     @EventHandler
     public void init(FMLInitializationEvent event){
     	
-    	GameRegistry.addRecipe(new ItemStack(ruby_axe), new Object[]{"RR ", "RS ", " S ", 'R', CraftZone.uby, 'S', Items.stick});
+    	GameRegistry.addRecipe(new ItemStack(ruby_axe), "RR ", "RS ", " S ", 'R', CraftZone.uby, 'S', Items.stick);
     	
-    	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', Items.emerald, 'S', Items.stick});
+    	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), "DDD", " S ", " S ", 'D', Items.emerald, 'S', Items.stick);
     	
-    	GameRegistry.addRecipe(new ItemStack(ruby_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', CraftZone.uby, 'S', Items.stick});
+    	GameRegistry.addRecipe(new ItemStack(ruby_pickaxe), "DDD", " S ", " S ", 'D', CraftZone.uby, 'S', Items.stick);
 
-    	GameRegistry.addRecipe(new ItemStack(emerald_hoe), new Object[]{"DD ", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
+    	GameRegistry.addRecipe(new ItemStack(emerald_hoe), "DD ", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick);
 
-    	GameRegistry.addRecipe(new ItemStack(uby, 9), new Object[]{"U", 'U', ruby_block});
+    	GameRegistry.addRecipe(new ItemStack(uby, 9), "U", 'U', ruby_block);
     	
-    	GameRegistry.addRecipe(new ItemStack(ruby_block), new Object[] {"DDD", "DDD", "DDD", 'D', CraftZone.uby});
+    	GameRegistry.addRecipe(new ItemStack(ruby_block), "DDD", "DDD", "DDD", 'D', CraftZone.uby);
     	
-    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 92), new Object[] {"D", "W", 'D', CraftZone.Dried_cow, 'W', Items.water_bucket});
+    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 92), "D", "W", 'D', CraftZone.Dried_cow, 'W', Items.water_bucket);
     	
-    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 120), new Object[] {"D", "W", 'D', CraftZone.Dried_Villager, 'W', Items.water_bucket});
+    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 120), "D", "W", 'D', CraftZone.Dried_Villager, 'W', Items.water_bucket);
 
     	
     }
