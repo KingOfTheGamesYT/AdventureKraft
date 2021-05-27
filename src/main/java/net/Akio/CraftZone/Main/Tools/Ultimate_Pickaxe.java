@@ -60,16 +60,21 @@ public class Ultimate_Pickaxe extends ItemPickaxe {
 		if (!par2World.isRemote) {
 			if (par3 == Blocks.iron_ore && par2World.rand.nextInt(2) != 0) {
 				this.dropItemAnItem(par2World, par4, par5, par6, Items.iron_ingot, 1 + par2World.rand.nextInt(2));
+				par2World.setBlockToAir(par4, par5, par6);
 			}
 
 			if (par3 == Blocks.gold_ore && par2World.rand.nextInt(2) != 0) {
 				this.dropItemAnItem(par2World, par4, par5, par6, Items.gold_ingot, 1 + par2World.rand.nextInt(2));
+				System.out.println(par1ItemStack);
+				par2World.setBlockToAir(par4, par5, par6);
+
 			}
 
 			if (par3 == Blocks.stone && par2World.rand.nextInt(100) == 2) {
 				int i = par2World.rand.nextInt(10);
 				if (i == 0) {
 					this.dropItemAnItem(par2World, par4, par5, par6, Items.diamond, 1);
+
 				}
 
 				if (i == 1) {
@@ -101,7 +106,7 @@ public class Ultimate_Pickaxe extends ItemPickaxe {
 	private ItemStack dropItemAnItem(World world, int x, int y, int z, Item index, int par1) {
 		EntityItem var3 = null;
 		ItemStack is = new ItemStack(index, par1, 0);
-		var3 = new EntityItem(world, (double)x, (double)y, (double)z, is);
+		var3 = new EntityItem(world, (double) x, (double) y, (double) z, is);
 		if (var3 != null) {
 			world.spawnEntityInWorld(var3);
 		}
