@@ -8,6 +8,7 @@ import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.tools.EmeraldPickaxe;
 import com.devmaster.dangerzone.tools.ModItemTier;
+import com.google.common.collect.Lists;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -16,10 +17,13 @@ import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.List;
 
 
 public class RegistryHandler {
@@ -27,7 +31,8 @@ public class RegistryHandler {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DangerZone.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DangerZone.MOD_ID);
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, DangerZone.MOD_ID);
-
+    public static final List<Biome> BIOMES = Lists.newArrayList();
+    public static final List<RegistryKey<Biome>> BIOME_KEYS = Lists.newArrayList();
 
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -299,5 +304,14 @@ public class RegistryHandler {
     //Dimensions
     public static final RegistryKey<World> VILLAGES = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,  new ResourceLocation(DangerZone.MOD_ID, "dimension/villages"));
 
-
+    public static Biome registerBiome(Biome biome, String name) {
+        biome.setRegistryName(new ResourceLocation(DangerZone.MOD_ID, name));
+        BIOMES.add(biome);
+        return biome;
+    }
+    public static RegistryKey<Biome> registerBiomeKey(String biomeName) {
+        RegistryKey<Biome> biomeKey = RegistryKey.getOrCreateKey(ForgeRegistries.Keys.BIOMES, new ResourceLocation(DangerZone.MOD_ID, biomeName));
+        BIOME_KEYS.add(biomeKey);
+        return biomeKey;
+    }
 }
