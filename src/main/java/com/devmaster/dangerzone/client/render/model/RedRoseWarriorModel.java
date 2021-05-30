@@ -4,7 +4,6 @@ package com.devmaster.dangerzone.client.render.model;
 // Paste this class into your mod and generate all required imports
 
 
-import com.devmaster.dangerzone.entity.NotBreeBree;
 import com.devmaster.dangerzone.entity.RedRoseWarrior;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
