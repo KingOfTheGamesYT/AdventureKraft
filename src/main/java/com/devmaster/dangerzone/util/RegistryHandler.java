@@ -40,7 +40,8 @@ public class RegistryHandler {
         ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
     }
-//Entities
+
+    //Entities
     public static final RegistryObject<EntityType<Tewtiy>> TEWTIY = ENTITIES
             .register("tewtiy",
                     () -> EntityType.Builder.<Tewtiy>create(Tewtiy::new, EntityClassification.AMBIENT)
@@ -302,16 +303,6 @@ public class RegistryHandler {
 
 
     //Dimensions
-    public static final RegistryKey<World> VILLAGES = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,  new ResourceLocation(DangerZone.MOD_ID, "dimension/villages"));
+    public static final RegistryKey<World> VILLAGES = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "dimension/villages"));
 
-    public static Biome registerBiome(Biome biome, String name) {
-        biome.setRegistryName(new ResourceLocation(DangerZone.MOD_ID, name));
-        BIOMES.add(biome);
-        return biome;
-    }
-    public static RegistryKey<Biome> registerBiomeKey(String biomeName) {
-        RegistryKey<Biome> biomeKey = RegistryKey.getOrCreateKey(ForgeRegistries.Keys.BIOMES, new ResourceLocation(DangerZone.MOD_ID, biomeName));
-        BIOME_KEYS.add(biomeKey);
-        return biomeKey;
-    }
 }
