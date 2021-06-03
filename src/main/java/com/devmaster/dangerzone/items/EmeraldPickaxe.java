@@ -1,4 +1,4 @@
-package com.devmaster.dangerzone.tools;
+package com.devmaster.dangerzone.items;
 
 import com.devmaster.dangerzone.misc.DangerZone;
 import net.minecraft.client.util.ITooltipFlag;

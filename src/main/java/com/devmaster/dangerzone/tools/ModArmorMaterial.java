@@ -1,4 +1,4 @@
-package com.devmaster.dangerzone.armor;
+package com.devmaster.dangerzone.tools;
 
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
