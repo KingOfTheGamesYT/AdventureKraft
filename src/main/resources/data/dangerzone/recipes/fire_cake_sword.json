@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "dangerzone:cake_sword"
+  },
+  "addition": {
+    "item": "minecraft:flint_and_steel"
+  },
+  "result": {
+    "item": "dangerzone:fire_cake_sword",
+    "count": 1
+  }
+}

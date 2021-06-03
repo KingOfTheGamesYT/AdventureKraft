@@ -6,7 +6,8 @@ import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.armor.*;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
-import com.devmaster.dangerzone.tools.EmeraldPickaxe;
+import com.devmaster.dangerzone.items.EmeraldPickaxe;
+import com.devmaster.dangerzone.tools.ModArmorMaterial;
 import com.devmaster.dangerzone.tools.ModItemTier;
 import com.google.common.collect.Lists;
 import net.minecraft.block.Block;
@@ -178,6 +179,8 @@ public class RegistryHandler {
     public static final RegistryObject<SwordItem> CAKE_SWORD = ITEMS.register("cake_sword", () ->
             new SwordItem(ModItemTier.CAKE, 0, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
 
+    public static final RegistryObject<SwordItem> FIRE_CAKE_SWORD = ITEMS.register("fire_cake_sword", () ->
+            new FireCakeSword(ModItemTier.Fire_CAKE, 4, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
     //Armor
     public static final RegistryObject<ArmorItem> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () ->
             new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
