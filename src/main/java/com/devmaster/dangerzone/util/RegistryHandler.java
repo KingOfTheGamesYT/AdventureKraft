@@ -113,7 +113,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
 
-    public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
+//    public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
 
     public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
 
@@ -125,7 +125,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<DeadRainbowAnt> DEAD_RAINBOW_ANT = ITEMS.register("dead_rainbow_ant", DeadRainbowAnt::new);
 
-    public static final RegistryObject<DeadTermite> DEAD_TERMITE = ITEMS.register("dead_termite", DeadTermite::new);
+//    public static final RegistryObject<DeadTermite> DEAD_TERMITE = ITEMS.register("dead_termite", DeadTermite::new);
 
     //Tools
     public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () ->
@@ -180,7 +180,11 @@ public class RegistryHandler {
             new SwordItem(ModItemTier.CAKE, 0, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
 
     public static final RegistryObject<SwordItem> FIRE_CAKE_SWORD = ITEMS.register("fire_cake_sword", () ->
-            new FireCakeSword(ModItemTier.Fire_CAKE, 4, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+            new FireCakeSword(ModItemTier.FIRE_CAKE, 4, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+
+    public static final RegistryObject<SwordItem> TITANIUM_CAKE_SWORD = ITEMS.register("titanium_cake_sword", () ->
+            new TitaniumCakeSword(ModItemTier.TITANIUM_CAKE, 6, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+
     //Armor
     public static final RegistryObject<ArmorItem> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () ->
             new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
