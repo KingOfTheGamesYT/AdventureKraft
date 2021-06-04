@@ -113,7 +113,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
 
-//    public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
+    public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
 
     public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
 
@@ -125,7 +125,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<DeadRainbowAnt> DEAD_RAINBOW_ANT = ITEMS.register("dead_rainbow_ant", DeadRainbowAnt::new);
 
-//    public static final RegistryObject<DeadTermite> DEAD_TERMITE = ITEMS.register("dead_termite", DeadTermite::new);
+    public static final RegistryObject<DeadTermite> DEAD_TERMITE = ITEMS.register("dead_termite", DeadTermite::new);
 
     //Tools
     public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () ->
