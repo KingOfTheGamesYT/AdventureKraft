@@ -249,8 +249,6 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> EYE_OF_ENDER_BLOCK = BLOCKS.register("eye_of_ender_block", EyeOfEnderBlock::new);
 
-    public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> ENDER_PEARL_BLOCK = BLOCKS.register("ender_pearl_block", EnderPearlBlock::new);
 
     public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", UraniumBlock::new);
@@ -269,7 +267,12 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> BROWN_BLOCK = BLOCKS.register("brown_block", BrownBlock::new);
 
+    //Petrified animals blocks
     public static final RegistryObject<Block> RAINBOW_ANT_EGG_ORE = BLOCKS.register("rainbow_ant_egg_ore", BlockMobOre::new);
+
+    public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
+
+    public static final RegistryObject<Block> BUTTERFLY_EGG_ORE = BLOCKS.register("BUTTERFLY_egg_ore", BlockMobOre::new);
 
     //Block Items
     public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("amethyst_ore_block", () -> new BlockItemBase(AMETHYST_ORE_BLOCK.get()));
@@ -304,9 +307,12 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> BROWN_BLOCK_ITEM = ITEMS.register("brown_block", () -> new BlockItemBase(BROWN_BLOCK.get()));
 
+    //Petrified animals items
     public static final RegistryObject<Item> REDROSEWARRIOR_EGG_ORE_ITEM = ITEMS.register("redrosewarrior_egg_ore", () -> new BlockItemMobOre(REDROSEWARRIOR_EGG_ORE.get()));
 
     public static final RegistryObject<Item> RAINBOW_ANT_EGG_ORE_ITEM = ITEMS.register("rainbow_ant_egg_ore", () -> new BlockItemMobOre(RAINBOW_ANT_EGG_ORE.get()));
+
+    public static final RegistryObject<Item> BUTTERFLY_EGG_ORE_ITEM = ITEMS.register("BUTTERFLY_egg_ore", () -> new BlockItemMobOre(BUTTERFLY_EGG_ORE.get()));
 
 
     //Dimensions
