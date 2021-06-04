@@ -16,8 +16,12 @@ public enum ModItemTier implements IItemTier {
         return Ingredient.fromItems(Items.CAKE);
     }),
 
-    Fire_CAKE(0, 59, 2.0F, 0.0F, 15, () -> {
+    FIRE_CAKE(0, 59, 2.0F, 0.0F, 15, () -> {
         return Ingredient.fromItems(Items.CAKE);
+    }),
+
+    TITANIUM_CAKE(0, 120, 2.0F, 0.0F, 45, () -> {
+        return Ingredient.fromItems(RegistryHandler.TITANIUM_Hardened_CAKE.get());
     }),
 
     EMERALD(3, 1300, 10.0F, 0.0F, 70, () -> {
