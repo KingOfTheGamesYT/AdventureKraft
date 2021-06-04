@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#N#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_block"
+    },
+    "N": {
+      "item": "dangerzone:dead_rainbow_ant"
+    }
+  },
+  "result": {
+    "item": "dangerzone:rainbow_ant_token",
+    "count": 1
+  }
+}
