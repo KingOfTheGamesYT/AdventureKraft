@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-      "all": "dangerzone:blocks/ender_pearl_block"
+      "all": "dangerzone:blocks/block/ender_pearl_block"
    }
 }

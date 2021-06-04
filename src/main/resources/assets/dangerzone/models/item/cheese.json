@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dangerzone:items/cheese"
+    "layer0": "dangerzone:items/food/cheese"
   }
 }

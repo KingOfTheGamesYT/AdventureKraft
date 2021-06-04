@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "dangerzone:items/emerald_sword"
+    "layer0": "dangerzone:items/weapon/emerald_sword"
   }
 }

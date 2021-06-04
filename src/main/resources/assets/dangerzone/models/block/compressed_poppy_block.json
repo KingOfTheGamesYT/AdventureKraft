@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "dangerzone:blocks/compressed_poppy_block",
-		"particle": "dangerzone:blocks/compressed_poppy_block"
+		"0": "dangerzone:blocks/block/compressed_poppy_block",
+		"particle": "dangerzone:blocks/block/compressed_poppy_block"
 	},
 	"elements": [
 		{

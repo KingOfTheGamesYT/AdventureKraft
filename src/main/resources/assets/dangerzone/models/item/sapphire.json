@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dangerzone:items/sapphire"
+    "layer0": "dangerzone:items/mineral/sapphire"
   }
 }

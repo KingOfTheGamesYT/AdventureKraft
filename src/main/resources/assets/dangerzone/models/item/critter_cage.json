@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dangerzone:items/critter_cage"
+    "layer0": "dangerzone:items/cage/critter_cage"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dangerzone:items/termite_token"
+    "layer0": "dangerzone:items/token/termite_token"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "dangerzone:blocks/rainbow_ant_egg_ore"
+    "all": "dangerzone:blocks/egg/rainbow_ant_egg_ore"
   }
 }

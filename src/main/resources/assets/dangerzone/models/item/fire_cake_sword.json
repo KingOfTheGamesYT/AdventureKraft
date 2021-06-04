@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "dangerzone:items/fire_cake_sword"
+    "layer0": "dangerzone:items/weapon/fire_cake_sword"
   }
 }

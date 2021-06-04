@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "dangerzone:blocks/redrosewarrior_egg_ore"
+    "all": "dangerzone:blocks/egg/redrosewarrior_egg_ore"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "dangerzone:blocks/dark_brown_block"
+    "all": "dangerzone:blocks/cblock/dark_brown_block"
   }
 }

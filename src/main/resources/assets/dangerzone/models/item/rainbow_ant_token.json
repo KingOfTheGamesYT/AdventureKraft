@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dangerzone:items/rainbow_ant_token"
+    "layer0": "dangerzone:items/token/rainbow_ant_token"
   }
 }

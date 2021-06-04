@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "dangerzone:blocks/sapphire_block"
+    "all": "dangerzone:blocks/mineral/block/sapphire_block"
   }
 }

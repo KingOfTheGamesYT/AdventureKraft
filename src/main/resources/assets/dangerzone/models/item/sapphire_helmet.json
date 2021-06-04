@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dangerzone:items/sapphire_helmet"
+    "layer0": "dangerzone:items/armor/sapphire_helmet"
   }
 }

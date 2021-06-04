@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "dangerzone:items/sapphire_pickaxe"
+    "layer0": "dangerzone:items/tool/sapphire_pickaxe"
   }
 }

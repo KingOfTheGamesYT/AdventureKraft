@@ -1,6 +1,6 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "dangerzone:blocks/sticky_block"
+    "cross": "dangerzone:blocks/block/sticky_block"
   }
 }

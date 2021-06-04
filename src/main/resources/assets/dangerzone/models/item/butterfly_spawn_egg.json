@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dangerzone:items/butterfly_spawn_egg"
+    "layer0": "dangerzone:items/egg/butterfly_spawn_egg"
   }
 }

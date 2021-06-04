@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "dangerzone:items/amethyst_axe"
+    "layer0": "dangerzone:items/tool/amethyst_axe"
   }
 }
