@@ -272,7 +272,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
 
-    public static final RegistryObject<Block> BUTTERFLY_EGG_ORE = BLOCKS.register("BUTTERFLY_egg_ore", BlockMobOre::new);
+    public static final RegistryObject<Block> BUTTERFLY_EGG_ORE = BLOCKS.register("butterfly_egg_ore", BlockMobOre::new);
 
     //Block Items
     public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("amethyst_ore_block", () -> new BlockItemBase(AMETHYST_ORE_BLOCK.get()));
@@ -312,7 +312,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> RAINBOW_ANT_EGG_ORE_ITEM = ITEMS.register("rainbow_ant_egg_ore", () -> new BlockItemMobOre(RAINBOW_ANT_EGG_ORE.get()));
 
-    public static final RegistryObject<Item> BUTTERFLY_EGG_ORE_ITEM = ITEMS.register("BUTTERFLY_egg_ore", () -> new BlockItemMobOre(BUTTERFLY_EGG_ORE.get()));
+    public static final RegistryObject<Item> BUTTERFLY_EGG_ORE_ITEM = ITEMS.register("butterfly_egg_ore", () -> new BlockItemMobOre(BUTTERFLY_EGG_ORE.get()));
 
 
     //Dimensions
