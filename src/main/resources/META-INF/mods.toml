@@ -25,7 +25,7 @@ logoFile="dangerzone.png" #optional
 
 credits="Thanks for this mod goes to TheyCallMeDanger for making DangerZone the game" #optional
 
-authors="RedRoseWarrior1 aka DevMaster1015" #optional
+authors=["RedRoseWarrior1 aka DevMaster1015","coolGi007"] #optional
 
 description='''
 Brings DangerZone to Minecraft
