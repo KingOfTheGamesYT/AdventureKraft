@@ -29,7 +29,6 @@ public class DangerZone {
     public static final Logger LOGGER = LogManager.getLogger("DangerZone");
     public static final String MOD_ID = "dangerzone";
 
-
     public DangerZone() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DZConfig.BUILDER.build());
 
