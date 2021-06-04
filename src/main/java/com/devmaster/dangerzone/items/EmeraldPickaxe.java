@@ -31,7 +31,7 @@ public class EmeraldPickaxe extends PickaxeItem {
         if (lvl <= 0) {
             stack.addEnchantment(Enchantments.SILK_TOUCH,1);
             //change the Enchantments.SILK_TOUCH to whatever you desire for both of statements
-// Enchantments moduler by Alchemy
+            // Enchantments moduler by Alchemy
         }
     }
 
