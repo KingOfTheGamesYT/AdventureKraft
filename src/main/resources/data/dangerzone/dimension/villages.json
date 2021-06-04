@@ -60,7 +60,6 @@
             "separation": 5,
             "salt": 0
           }
-          }
         }
       }
     },
@@ -72,8 +71,7 @@
         "dangerzone:villagesss",
         "dangerzone:villageesss",
         "dangerzone:villaggesss"
-
-
       ]
     }
   }
+}
