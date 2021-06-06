@@ -67,6 +67,8 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarriorRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RAINBOWANT.get(), RainbowAntRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BUTTERFLY.get(), ButterflyRender::new);
+        RenderTypeLookup.setRenderLayer(RegistryHandler.KYANITE.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.KYANITE.get(), RenderType.getTranslucent());
 
     }
 

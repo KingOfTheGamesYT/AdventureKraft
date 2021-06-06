@@ -28,6 +28,7 @@
 
   "block.dangerzone.butterfly_egg_ore": "Petrified Butterfly Ore",
   "block.dangerzone.rainbow_ant_egg_ore": "Petrified Rainbow Ant Ore",
+  "block.dangerzone.redrosewarrior_egg_ore": "Petrified RedRoseWarrior Ore",
 
   "block.dangerzone.amethyst_ore_block": "Amethyst Ore",
   "block.dangerzone.amethyst_block": "Amethyst Block",
@@ -45,6 +46,8 @@
   "block.dangerzone.orange_block": "Orange Block",
   "block.dangerzone.brown_block": "Brown Block",
   "block.dangerzone.titanium_ore_block": "Titanium Ore",
+  "block.dangerzone.kyanite": "Kyanite",
+  "block.dangerzone.crystal_grass": "Crystal Grass",
 
   "itemGroup.dangerzonetab": "DangerZone Items",
   "itemGroup.dangerzoneblocks": "DangerZone Blocks",
