@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "dangerzone:blocks/block/crystal_grass_bottom",
+    "top": "dangerzone:blocks/block/crystal_grass_top",
+    "side": "dangerzone:blocks/block/crystal_grass_side"
+  }
+}
