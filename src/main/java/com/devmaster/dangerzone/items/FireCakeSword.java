@@ -17,7 +17,7 @@ public class FireCakeSword extends SwordItem {
     }
 
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A72" + "I think you kept your cake sword cooking for too long" + "ITS NOW ON FIRE" + "\u00A72"));
+        tooltip.add(new StringTextComponent("\u00A72" + "Thank you for 2k downloads" + "\u00A72"));
         int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantments.FIRE_ASPECT, stack);
         if (lvl <= 0) {
             stack.addEnchantment(Enchantments.FIRE_ASPECT,1);
