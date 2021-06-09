@@ -271,6 +271,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> CRYSTAL_GRASS = BLOCKS.register("crystal_grass", CrystalGrass::new);
 
+    public static final RegistryObject<Block> CRYSTAL_GRASSs = BLOCKS.register("rainbow_ant_net_filled", CrystalGrass::new);
+
     //Petrified animals blocks
     public static final RegistryObject<Block> RAINBOW_ANT_EGG_ORE = BLOCKS.register("rainbow_ant_egg_ore", BlockMobOre::new);
 
@@ -280,6 +282,8 @@ public class RegistryHandler {
 
     //Block Items
     public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("amethyst_ore_block", () -> new BlockItemBase(AMETHYST_ORE_BLOCK.get()));
+
+    public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEMm = ITEMS.register("rainbow_ant_nest_filled", () -> new BlockItemBase(CRYSTAL_GRASSs.get()));
 
     public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItemBase(AMETHYST_BLOCK.get()));
 
@@ -325,5 +329,5 @@ public class RegistryHandler {
 
     //Dimensions
     public static final RegistryKey<World> VILLAGES = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "dimension/villages"));
-
+    public static final RegistryKey<World> CRYSTAL = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "dimension/crystal"));
 }

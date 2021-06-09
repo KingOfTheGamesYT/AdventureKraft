@@ -1,0 +1,43 @@
+{
+  "surface_builder": "dangerzone:crystal",
+  "depth": -0.5,
+  "scale": 0.05,
+  "temperature": 0.8,
+  "downfall": 0.5,
+  "precipitation": "rain",
+  "category": "plains",
+  "player_spawn_friendly": true,
+  "effects": {
+    "sky_color": 7907327,
+    "fog_color": 12638463,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "grass_color": 6200628,
+    "foliage_color": 6200628,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
+  },
+  "starts": [],
+  "spawners": {
+    "ambient": [
+      {
+        "type": "dangerzone:butterfly",
+        "weight": 10,
+        "minCount": 8,
+        "maxCount": 8
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:canyon"
+    ]
+  },
+  "features": []
+}
