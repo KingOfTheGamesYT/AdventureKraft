@@ -6,8 +6,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.Akio.CraftZone.Main.Blocks.Dried_Cow;
-import net.Akio.CraftZone.Main.Blocks.Dried_Villager;
+import net.Akio.CraftZone.Main.Blocks.EggOre;
 import net.Akio.CraftZone.Main.Blocks.Ruby_Block;
 import net.Akio.CraftZone.Main.Foods.Butter;
 import net.Akio.CraftZone.Main.Foods.Butter_Candy;
@@ -18,7 +17,6 @@ import net.Akio.CraftZone.Main.Materials.Amethyst;
 import net.Akio.CraftZone.Main.Materials.Ruby;
 import net.Akio.CraftZone.Main.Materials.Salt;
 import net.Akio.CraftZone.Main.Tools.Amethyst_Axe;
-import net.Akio.CraftZone.Main.Tools.Amethyst_Pickaxe;
 import net.Akio.CraftZone.Main.Tools.Emerald_Hoe;
 import net.Akio.CraftZone.Main.Tools.Emerald_Pickaxe;
 
@@ -26,14 +24,14 @@ import net.Akio.CraftZone.Main.Tools.Ruby_Axe;
 import net.Akio.CraftZone.Main.Tools.Ruby_Pickaxe;
 import net.Akio.CraftZone.Main.Tools.Ultimate_Pickaxe;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
+
+import java.io.File;
 
 @Mod(modid = CraftZone.MOD_ID, version = CraftZone.MC_VERSION)
 
@@ -53,15 +51,27 @@ public class CraftZone {
     public static final Item.ToolMaterial AmethystAxe = EnumHelper.addToolMaterial("AmethystAxe", 5, 1500, 11F, 10F, 70);
     public static final Item.ToolMaterial UltimatePick = EnumHelper.addToolMaterial("UltimatePick", 5, 1500, 11F, 36F, 70);
     public static final Item.ToolMaterial RubyPick = EnumHelper.addToolMaterial("RubyPick`", 5, 1500, 11F, 16F, 70);
-    
+	//Ores
+    public static boolean oreGenCow;
+	public static int oreSizeCow;
+	public static int oreRarityCow;
+	public static int oreMaxHeightCow;
+	public static boolean oreGenVillager;
+	public static int oreSizeVillager;
+	public static int oreRarityVillager;
+	public static int oreMaxHeightVillager;
+
     public static Item ruby_pickaxe;
     public static Item ultimate_pickaxe;
     public static Item critter_cage;
     public static Item salt;
+
     public static Block ruby_block;
     public static Block Dried_cow;
     public static Block Dried_Villager;
-    public static Item cheese;
+	//public static Block blockOre;
+
+	public static Item cheese;
     public static Item butter;
     public static Item butter_candy;
 	public static Item ruby_axe;
@@ -75,16 +85,28 @@ public class CraftZone {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+		Configuration config = new Configuration(new File("config/DangerZone/DZConfig.cfg"));
+
+		oreGenCow = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		oreSizeCow = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 8, 1, 100, "");
+		oreRarityCow = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 12, 1, 100, "");
+		oreMaxHeightCow = config.getInt("Max Height", "0.0: Petrified Cow Ore", 60, 1, 255, "");
+
+		oreGenVillager = config.getBoolean("Generation", "0.0: Petrified Villager Ore", true, "");
+		oreSizeVillager = config.getInt("Chunk Size", "0.0: Petrified Villager Ore", 8, 1, 100, "");
+		oreRarityVillager = config.getInt("Gen Rate", "0.0: Petrified Villager Ore", 12, 1, 100, "");
+		oreMaxHeightVillager = config.getInt("Max Height", "0.0: Petrified Villager Ore", 60, 1, 255, "");
+
     	uby = new Ruby().setUnlocalizedName("Ruby").setTextureName("dangerzone:ruby");
     	GameRegistry.registerItem(uby, uby.getUnlocalizedName().substring(5)); 
     	
     	ruby_block = new Ruby_Block(0).setBlockName("Ruby_Block").setBlockTextureName("dangerzone:blockruby");
     	GameRegistry.registerBlock(ruby_block, ruby_block.getUnlocalizedName().substring(5));
     	
-    	Dried_cow = new Dried_Cow(1).setBlockName("Dried_Cow").setBlockTextureName("dangerzone:orecow");
+    	Dried_cow = new EggOre(1).setBlockName("Petrified_Cow_ore").setBlockTextureName("dangerzone:Ore_Cow");
     	GameRegistry.registerBlock(Dried_cow, Dried_cow.getUnlocalizedName().substring(5));
     	
-    	Dried_Villager = new Dried_Villager(1).setBlockName("Dried_Villager").setBlockTextureName("dangerzone:orevillager");
+    	Dried_Villager = new EggOre(1).setBlockName("Petrified_Villager_Ore").setBlockTextureName("dangerzone:Ore_Villager");
     	GameRegistry.registerBlock(Dried_Villager, Dried_Villager.getUnlocalizedName().substring(5));
     	
     	amethyst = new Amethyst().setUnlocalizedName("Amethyst").setTextureName("dangerzone:amethyst");
@@ -133,21 +155,21 @@ public class CraftZone {
     @EventHandler
     public void init(FMLInitializationEvent event){
     	
-    	GameRegistry.addRecipe(new ItemStack(ruby_axe), "RR ", "RS ", " S ", 'R', CraftZone.uby, 'S', Items.stick);
+    	GameRegistry.addRecipe(new ItemStack(ruby_axe), new Object[]{"RR ", "RS ", " S ", 'R', CraftZone.uby, 'S', Items.stick});
     	
-    	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), "DDD", " S ", " S ", 'D', Items.emerald, 'S', Items.stick);
+    	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', Items.emerald, 'S', Items.stick});
     	
-    	GameRegistry.addRecipe(new ItemStack(ruby_pickaxe), "DDD", " S ", " S ", 'D', CraftZone.uby, 'S', Items.stick);
+    	GameRegistry.addRecipe(new ItemStack(ruby_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', CraftZone.uby, 'S', Items.stick});
 
-    	GameRegistry.addRecipe(new ItemStack(emerald_hoe), "DD ", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick);
+    	GameRegistry.addRecipe(new ItemStack(emerald_hoe), new Object[]{"DD ", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
 
-    	GameRegistry.addRecipe(new ItemStack(uby, 9), "U", 'U', ruby_block);
+    	GameRegistry.addRecipe(new ItemStack(uby, 9), new Object[]{"U", 'U', ruby_block});
     	
-    	GameRegistry.addRecipe(new ItemStack(ruby_block), "DDD", "DDD", "DDD", 'D', CraftZone.uby);
+    	GameRegistry.addRecipe(new ItemStack(ruby_block), new Object[] {"DDD", "DDD", "DDD", 'D', CraftZone.uby});
     	
-    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 92), "D", "W", 'D', CraftZone.Dried_cow, 'W', Items.water_bucket);
+    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 92), new Object[] {"D", "W", 'D', CraftZone.Dried_cow, 'W', Items.water_bucket});
     	
-    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 120), "D", "W", 'D', CraftZone.Dried_Villager, 'W', Items.water_bucket);
+    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 120), new Object[] {"D", "W", 'D', CraftZone.Dried_Villager, 'W', Items.water_bucket});
 
     	
     }
