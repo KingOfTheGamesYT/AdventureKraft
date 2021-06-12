@@ -16,7 +16,7 @@ public class Amethyst_Axe extends ItemAxe{
        this.maxStackSize = 1;
       setMaxDamage(6000);
       setCreativeTab(CreativeTabs.tabTools);
-	  float weaponDamage = 50;
+	  float weaponDamage = 51;
 
        }
      
