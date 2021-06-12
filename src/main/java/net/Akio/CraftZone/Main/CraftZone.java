@@ -137,9 +137,9 @@ public class CraftZone {
 
     	ruby_axe = new Ruby_Axe(RubyAxe).setUnlocalizedName("Ruby_Axe").setTextureName("dangerzone:ruby_axe");
     	GameRegistry.registerItem(ruby_axe, ruby_axe.getUnlocalizedName().substring(5));
-    	
-    	salt = new Salt().setUnlocalizedName("Salt").setTextureName("dangerzone:salt");
-    	GameRegistry.registerItem(salt, salt.getUnlocalizedName().substring(5));
+
+		salt = new Salt().setUnlocalizedName("Salt").setTextureName("dangerzone:salt");
+		GameRegistry.registerItem(salt, salt.getUnlocalizedName().substring(5));
     	
     	critter_cage = new Critter_Cage().setUnlocalizedName("Critter_Cage").setTextureName("dangerzone:critter_cage");
     	GameRegistry.registerItem(critter_cage, critter_cage.getUnlocalizedName().substring(5)); 
