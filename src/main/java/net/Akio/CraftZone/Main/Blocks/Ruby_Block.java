@@ -8,9 +8,9 @@ public class Ruby_Block extends Block{
 
 	public Ruby_Block(int par1) {
 		super(Material.iron);
-		setHardness(4.0F);
+		/*setHardness(4.0F);
 	    setResistance(4.0F);
 	    setCreativeTab(CreativeTabs.tabBlock);
 		setLightLevel(0.4F);
-	}
+	*/}
 }

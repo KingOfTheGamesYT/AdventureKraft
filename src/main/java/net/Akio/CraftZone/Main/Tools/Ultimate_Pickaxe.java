@@ -81,9 +81,9 @@ public class Ultimate_Pickaxe extends ItemPickaxe {
 					this.dropItemAnItem(par2World, par4, par5, par6, Items.emerald, 1);
 				}
 
-				if (i == 2) {
-					this.dropItemAnItem(par2World, par4, par5, par6, CraftZone.amethyst, 1);
-				}
+			//	if (i == 2) {
+				//	this.dropItemAnItem(par2World, par4, par5, par6, CraftZone.amethyst, 1);
+				//}
 
 				//if (i == 3) {
 				//	this.dropItemAnItem(par2World, par4, par5, par6, CraftZone.Ruby, 1);

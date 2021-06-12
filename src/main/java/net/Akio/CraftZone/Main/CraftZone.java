@@ -6,7 +6,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.Akio.CraftZone.Main.Blocks.EggOre;
+import net.Akio.CraftZone.Main.Blocks.BlockMobOre;
 import net.Akio.CraftZone.Main.Blocks.Ruby_Block;
 import net.Akio.CraftZone.Main.Foods.Butter;
 import net.Akio.CraftZone.Main.Foods.Butter_Candy;
@@ -21,7 +21,6 @@ import net.Akio.CraftZone.Main.Tools.Emerald_Hoe;
 import net.Akio.CraftZone.Main.Tools.Emerald_Pickaxe;
 
 import net.Akio.CraftZone.Main.Tools.Ruby_Axe;
-import net.Akio.CraftZone.Main.Tools.Ruby_Pickaxe;
 import net.Akio.CraftZone.Main.Tools.Ultimate_Pickaxe;
 import net.Akio.CraftZone.Main.world.gen.Oregen;
 import net.minecraft.block.Block;
@@ -100,13 +99,13 @@ public class CraftZone {
     	uby = new Ruby().setUnlocalizedName("Ruby").setTextureName("dangerzone:ruby");
     	GameRegistry.registerItem(uby, uby.getUnlocalizedName().substring(5)); 
     	
-    	ruby_block = new Ruby_Block(0).setBlockName("Ruby_Block").setBlockTextureName("dangerzone:blockruby");
-    	GameRegistry.registerBlock(ruby_block, ruby_block.getUnlocalizedName().substring(5));
+    //	ruby_block = new Ruby_Block(0).setBlockName("Ruby_Block").setBlockTextureName("dangerzone:blockruby");
+    	//GameRegistry.registerBlock(ruby_block, ruby_block.getUnlocalizedName().substring(5));
     	
-    	Dried_cow = new EggOre(1).setBlockName("Petrified_Cow_ore").setBlockTextureName("dangerzone:Ore_Cow");
+    	Dried_cow = new BlockMobOre(1).setBlockName("Petrified_Cow_ore").setBlockTextureName("dangerzone:Ore_Cow");
     	GameRegistry.registerBlock(Dried_cow, Dried_cow.getUnlocalizedName().substring(5));
     	
-    	Dried_Villager = new EggOre(1).setBlockName("Petrified_Villager_Ore").setBlockTextureName("dangerzone:Ore_Villager");
+    	Dried_Villager = new BlockMobOre(1).setBlockName("Petrified_Villager_Ore").setBlockTextureName("dangerzone:Ore_Villager");
     	GameRegistry.registerBlock(Dried_Villager, Dried_Villager.getUnlocalizedName().substring(5));
     	
     	amethyst = new Amethyst().setUnlocalizedName("Amethyst").setTextureName("dangerzone:amethyst");
@@ -124,8 +123,8 @@ public class CraftZone {
     	cheese = new Cheese(10, 4, 0.5F, true).setUnlocalizedName("Cheese").setTextureName("dangerzone:cheese");
     	GameRegistry.registerItem(cheese, cheese.getUnlocalizedName().substring(5));
     	
-    	emerald_pickaxe = new Emerald_Pickaxe(EmeraldPickaxe).setUnlocalizedName("Emerald_Pickaxe").setTextureName("dangerzone:emerald_pickaxe");
-    	GameRegistry.registerItem(emerald_pickaxe, emerald_pickaxe.getUnlocalizedName().substring(5)); 
+    	//emerald_pickaxe = new Emerald_Pickaxe(EmeraldPickaxe).setUnlocalizedName("Emerald_Pickaxe").setTextureName("dangerzone:emerald_pickaxe");
+    	//GameRegistry.registerItem(emerald_pickaxe, emerald_pickaxe.getUnlocalizedName().substring(5));
     	
     	emerald_hoe = new Emerald_Hoe(EmeraldMaterials).setUnlocalizedName("Emerald_Hoe").setTextureName("dangerzone:emerald_hoe");
     	GameRegistry.registerItem(emerald_hoe, emerald_hoe.getUnlocalizedName().substring(5));
@@ -159,15 +158,15 @@ public class CraftZone {
     	
     	GameRegistry.addRecipe(new ItemStack(ruby_axe), new Object[]{"RR ", "RS ", " S ", 'R', CraftZone.uby, 'S', Items.stick});
     	
-    	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
+ //   	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
     	
    // 	GameRegistry.addRecipe(new ItemStack(ruby_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', CraftZone.uby, 'S', Items.stick});
 
     	GameRegistry.addRecipe(new ItemStack(emerald_hoe), new Object[]{"DD ", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
 
-    	GameRegistry.addRecipe(new ItemStack(uby, 9), new Object[]{"U", 'U', ruby_block});
+    	//GameRegistry.addRecipe(new ItemStack(uby, 9), new Object[]{"U", 'U', ruby_block});
     	
-    	GameRegistry.addRecipe(new ItemStack(ruby_block), new Object[] {"DDD", "DDD", "DDD", 'D', CraftZone.uby});
+    //	GameRegistry.addRecipe(new ItemStack(ruby_block), new Object[] {"DDD", "DDD", "DDD", 'D', CraftZone.uby});
     	
     	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 92), new Object[] {"D", "W", 'D', CraftZone.Dried_cow, 'W', Items.water_bucket});
     	
