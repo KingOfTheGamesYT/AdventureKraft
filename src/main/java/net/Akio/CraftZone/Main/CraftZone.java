@@ -112,16 +112,16 @@ public class CraftZone {
     	amethyst = new Amethyst().setUnlocalizedName("Amethyst").setTextureName("dangerzone:amethyst");
     	GameRegistry.registerItem(amethyst, amethyst.getUnlocalizedName().substring(5));
     	
-    	fire_fish = new Fire_Fish(10, 8, 8, true).setUnlocalizedName("Fire_Fish").setTextureName("dangerzone:fire_fish");
+    	fire_fish = new Fire_Fish(10, 8, 0.60F, true).setUnlocalizedName("Fire_Fish").setTextureName("dangerzone:fire_fish");
     	GameRegistry.registerItem(fire_fish, fire_fish.getUnlocalizedName().substring(5));
     	
-    	butter_candy = new Butter_Candy(10, 4, 4, true).setUnlocalizedName("Butter_Candy").setTextureName("dangerzone:butter_candy");
+    	butter_candy = new Butter_Candy(10, 4, 0.5f, true).setUnlocalizedName("Butter_Candy").setTextureName("dangerzone:butter_candy");
     	GameRegistry.registerItem(butter_candy, butter_candy.getUnlocalizedName().substring(5));
     	
-    	butter = new Butter(10, 1, 1, true).setUnlocalizedName("Butter").setTextureName("dangerzone:butter");
+    	butter = new Butter(10, 1, 0.5f, true).setUnlocalizedName("Butter").setTextureName("dangerzone:butter");
     	GameRegistry.registerItem(butter, butter.getUnlocalizedName().substring(5));
     	
-    	cheese = new Cheese(10, 4, 1, true).setUnlocalizedName("Cheese").setTextureName("dangerzone:cheese");
+    	cheese = new Cheese(10, 4, 0.5F, true).setUnlocalizedName("Cheese").setTextureName("dangerzone:cheese");
     	GameRegistry.registerItem(cheese, cheese.getUnlocalizedName().substring(5));
     	
     	emerald_pickaxe = new Emerald_Pickaxe(EmeraldPickaxe).setUnlocalizedName("Emerald_Pickaxe").setTextureName("dangerzone:emerald_pickaxe");
