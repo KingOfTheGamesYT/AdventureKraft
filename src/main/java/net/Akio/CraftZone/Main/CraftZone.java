@@ -23,6 +23,7 @@ import net.Akio.CraftZone.Main.Tools.Emerald_Pickaxe;
 import net.Akio.CraftZone.Main.Tools.Ruby_Axe;
 import net.Akio.CraftZone.Main.Tools.Ruby_Pickaxe;
 import net.Akio.CraftZone.Main.Tools.Ultimate_Pickaxe;
+import net.Akio.CraftZone.Main.world.gen.Oregen;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -69,7 +70,6 @@ public class CraftZone {
     public static Block ruby_block;
     public static Block Dried_cow;
     public static Block Dried_Villager;
-	//public static Block blockOre;
 
 	public static Item cheese;
     public static Item butter;
@@ -88,14 +88,14 @@ public class CraftZone {
 		Configuration config = new Configuration(new File("config/DangerZone/DZConfig.cfg"));
 
 		oreGenCow = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
-		oreSizeCow = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 8, 1, 100, "");
-		oreRarityCow = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 12, 1, 100, "");
-		oreMaxHeightCow = config.getInt("Max Height", "0.0: Petrified Cow Ore", 60, 1, 255, "");
+		oreSizeCow = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreRarityCow = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreMaxHeightCow = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
 
 		oreGenVillager = config.getBoolean("Generation", "0.0: Petrified Villager Ore", true, "");
 		oreSizeVillager = config.getInt("Chunk Size", "0.0: Petrified Villager Ore", 8, 1, 100, "");
-		oreRarityVillager = config.getInt("Gen Rate", "0.0: Petrified Villager Ore", 12, 1, 100, "");
-		oreMaxHeightVillager = config.getInt("Max Height", "0.0: Petrified Villager Ore", 60, 1, 255, "");
+		oreRarityVillager = config.getInt("Gen Rate", "0.0: Petrified Villager Ore", 3, 1, 100, "");
+		oreMaxHeightVillager = config.getInt("Max Height", "0.0: Petrified Villager Ore", 125, 1, 255, "");
 
     	uby = new Ruby().setUnlocalizedName("Ruby").setTextureName("dangerzone:ruby");
     	GameRegistry.registerItem(uby, uby.getUnlocalizedName().substring(5)); 
@@ -148,8 +148,10 @@ public class CraftZone {
     	ultimate_pickaxe = new Ultimate_Pickaxe(UltimatePick).setUnlocalizedName("Ultimate_Pickaxe").setTextureName("dangerzone:ultimate_pickaxe");
     	GameRegistry.registerItem(ultimate_pickaxe, ultimate_pickaxe.getUnlocalizedName().substring(5));
     	
-    	ruby_pickaxe = new Ruby_Pickaxe(RubyPick).setUnlocalizedName("Ruby_Pickaxe").setTextureName("dangerzone:rubypickaxe");
-    	GameRegistry.registerItem(ruby_pickaxe, ruby_pickaxe.getUnlocalizedName().substring(5));
+    	//ruby_pickaxe = new Ruby_Pickaxe(RubyPick).setUnlocalizedName("Ruby_Pickaxe").setTextureName("dangerzone:rubypickaxe");
+    	//GameRegistry.registerItem(ruby_pickaxe, ruby_pickaxe.getUnlocalizedName().substring(5));
+
+		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 
     }
     @EventHandler
@@ -157,9 +159,9 @@ public class CraftZone {
     	
     	GameRegistry.addRecipe(new ItemStack(ruby_axe), new Object[]{"RR ", "RS ", " S ", 'R', CraftZone.uby, 'S', Items.stick});
     	
-    	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', Items.emerald, 'S', Items.stick});
+    	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
     	
-    	GameRegistry.addRecipe(new ItemStack(ruby_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', CraftZone.uby, 'S', Items.stick});
+   // 	GameRegistry.addRecipe(new ItemStack(ruby_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', CraftZone.uby, 'S', Items.stick});
 
     	GameRegistry.addRecipe(new ItemStack(emerald_hoe), new Object[]{"DD ", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
 
