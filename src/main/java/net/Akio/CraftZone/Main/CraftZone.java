@@ -8,10 +8,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.Akio.CraftZone.Main.Blocks.BlockMobOre;
 import net.Akio.CraftZone.Main.Blocks.Ruby_Block;
-import net.Akio.CraftZone.Main.Foods.Butter;
-import net.Akio.CraftZone.Main.Foods.Butter_Candy;
-import net.Akio.CraftZone.Main.Foods.Cheese;
-import net.Akio.CraftZone.Main.Foods.Fire_Fish;
+import net.Akio.CraftZone.Main.Foods.*;
 import net.Akio.CraftZone.Main.Items.Critter_Cage;
 import net.Akio.CraftZone.Main.Materials.Amethyst;
 import net.Akio.CraftZone.Main.Materials.Ruby;
@@ -83,6 +80,9 @@ public class CraftZone {
     public static Item amethyst;
 	public static Item raw_crab;
 	public static Item crabby_patty;
+	public static Item salad;
+	public static Item spark_fish;
+
 
 
 	@EventHandler
@@ -116,6 +116,9 @@ public class CraftZone {
     	
     	fire_fish = new Fire_Fish(10, 8, 0.60F, true).setUnlocalizedName("Fire_Fish").setTextureName("dangerzone:fire_fish");
     	GameRegistry.registerItem(fire_fish, fire_fish.getUnlocalizedName().substring(5));
+
+		spark_fish = new SparkFish(10, 1, 0.2F, true).setUnlocalizedName("Spark_Fish").setTextureName("dangerzone:raw_spark_fish");
+		GameRegistry.registerItem(spark_fish, spark_fish.getUnlocalizedName().substring(5));
     	
     	butter_candy = new Butter_Candy(10, 4, 0.5f, true).setUnlocalizedName("Butter_Candy").setTextureName("dangerzone:butter_candy");
     	GameRegistry.registerItem(butter_candy, butter_candy.getUnlocalizedName().substring(5));
@@ -159,6 +162,9 @@ public class CraftZone {
 
 		crabby_patty = new Cheese(10, 16, 2.35F, true).setUnlocalizedName("Crabby_Patty").setTextureName("dangerzone:crabby_patty");
 		GameRegistry.registerItem(crabby_patty, crabby_patty.getUnlocalizedName().substring(5));
+
+		salad = new Cheese(10, 10, 0.955F, true).setUnlocalizedName("Salad").setTextureName("dangerzone:salad");
+		GameRegistry.registerItem(salad, salad.getUnlocalizedName().substring(5));
 
 		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 
