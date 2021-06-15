@@ -14,12 +14,8 @@ import net.Akio.CraftZone.Main.Items.Critter_Cage;
 import net.Akio.CraftZone.Main.Materials.Amethyst;
 import net.Akio.CraftZone.Main.Materials.Ruby;
 import net.Akio.CraftZone.Main.Materials.Salt;
-import net.Akio.CraftZone.Main.Tools.Amethyst_Axe;
-import net.Akio.CraftZone.Main.Tools.Emerald_Hoe;
-import net.Akio.CraftZone.Main.Tools.Emerald_Pickaxe;
+import net.Akio.CraftZone.Main.Tools.*;
 
-import net.Akio.CraftZone.Main.Tools.Ruby_Axe;
-import net.Akio.CraftZone.Main.Tools.Ultimate_Pickaxe;
 import net.Akio.CraftZone.Main.world.gen.Oregen;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -49,6 +45,8 @@ public class CraftZone {
     public static final Item.ToolMaterial AmethystAxe = EnumHelper.addToolMaterial("AmethystAxe", 5, 1500, 11F, 10F, 70);
     public static final Item.ToolMaterial UltimatePick = EnumHelper.addToolMaterial("UltimatePick", 5, 1500, 11F, 36F, 70);
     public static final Item.ToolMaterial RubyPick = EnumHelper.addToolMaterial("RubyPick`", 5, 1500, 11F, 16F, 70);
+	public static final Item.ToolMaterial CrystalWood = EnumHelper.addToolMaterial("CrystalWood", 2, 300, 3, 2, 15);
+
 	//Ores
     public static boolean oreGenCow;
 	public static int oreSizeCow;
@@ -63,6 +61,7 @@ public class CraftZone {
     public static Item ultimate_pickaxe;
     public static Item critter_cage;
     public static Item salt;
+	public static Item crystal_wood_axe;
 
     public static Block ruby_block;
     public static Block Dried_cow;
@@ -157,6 +156,9 @@ public class CraftZone {
 
     	ruby_axe = new Ruby_Axe(RubyAxe).setUnlocalizedName("Ruby_Axe").setTextureName("dangerzone:ruby_axe");
     	GameRegistry.registerItem(ruby_axe, ruby_axe.getUnlocalizedName().substring(5));
+
+		crystal_wood_axe = new Crystal_Wood_Axe(CrystalWood).setUnlocalizedName("Crystal_Wood_Axe").setTextureName("dangerzone:crystal_wood_axe");
+		GameRegistry.registerItem(crystal_wood_axe, crystal_wood_axe.getUnlocalizedName().substring(5));
 
 		salt = new Salt().setUnlocalizedName("Salt").setTextureName("dangerzone:salt");
 		GameRegistry.registerItem(salt, salt.getUnlocalizedName().substring(5));
