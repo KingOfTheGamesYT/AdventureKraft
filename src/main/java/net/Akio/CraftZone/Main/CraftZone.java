@@ -84,6 +84,8 @@ public class CraftZone {
 	public static Item salad;
 	public static Item spark_fish;
 	public static Item pizza;
+	public static Item raw_corn_dog;
+
 
 
 
@@ -131,6 +133,9 @@ public class CraftZone {
     	cheese = new Cheese(10, 4, 0.5F, true).setUnlocalizedName("Cheese").setTextureName("dangerzone:cheese");
     	GameRegistry.registerItem(cheese, cheese.getUnlocalizedName().substring(5));
 
+		raw_corn_dog = new Cheese(10, 4, 0.6F, true).setUnlocalizedName("Raw_Corn_Dog").setTextureName("dangerzone:raw_corn_dog");
+		GameRegistry.registerItem(raw_corn_dog, raw_corn_dog.getUnlocalizedName().substring(5));
+
 		raw_crab = new Cheese(10, 4, 0.25F, true).setUnlocalizedName("Raw_Crab").setTextureName("dangerzone:raw_crab");
 		GameRegistry.registerItem(raw_crab, raw_crab.getUnlocalizedName().substring(5));
 
@@ -156,8 +161,8 @@ public class CraftZone {
 		salt = new Salt().setUnlocalizedName("Salt").setTextureName("dangerzone:salt");
 		GameRegistry.registerItem(salt, salt.getUnlocalizedName().substring(5));
     	
-    	critter_cage = new Critter_Cage().setUnlocalizedName("Critter_Cage").setTextureName("dangerzone:critter_cage");
-    	GameRegistry.registerItem(critter_cage, critter_cage.getUnlocalizedName().substring(5)); 
+    //	critter_cage = new Critter_Cage().setUnlocalizedName("Critter_Cage").setTextureName("dangerzone:critter_cage");
+    //	GameRegistry.registerItem(critter_cage, critter_cage.getUnlocalizedName().substring(5));
     	
     	ultimate_pickaxe = new Ultimate_Pickaxe(UltimatePick).setUnlocalizedName("Ultimate_Pickaxe").setTextureName("dangerzone:ultimate_pickaxe");
     	GameRegistry.registerItem(ultimate_pickaxe, ultimate_pickaxe.getUnlocalizedName().substring(5));
