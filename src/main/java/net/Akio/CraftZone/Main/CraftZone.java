@@ -81,8 +81,11 @@ public class CraftZone {
     public static Item fire_fish;
     public static Item uby;
     public static Item amethyst;
+	public static Item raw_crab;
+	public static Item crabby_patty;
 
-    @EventHandler
+
+	@EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 		Configuration config = new Configuration(new File("config/DangerZone/DZConfig.cfg"));
 
@@ -96,8 +99,8 @@ public class CraftZone {
 		oreRarityVillager = config.getInt("Gen Rate", "0.0: Petrified Villager Ore", 3, 1, 100, "");
 		oreMaxHeightVillager = config.getInt("Max Height", "0.0: Petrified Villager Ore", 125, 1, 255, "");
 
-    	uby = new Ruby().setUnlocalizedName("Ruby").setTextureName("dangerzone:ruby");
-    	GameRegistry.registerItem(uby, uby.getUnlocalizedName().substring(5)); 
+    //	uby = new Ruby().setUnlocalizedName("Ruby").setTextureName("dangerzone:ruby");
+    //	GameRegistry.registerItem(uby, uby.getUnlocalizedName().substring(5));
     	
     //	ruby_block = new Ruby_Block(0).setBlockName("Ruby_Block").setBlockTextureName("dangerzone:blockruby");
     	//GameRegistry.registerBlock(ruby_block, ruby_block.getUnlocalizedName().substring(5));
@@ -108,8 +111,8 @@ public class CraftZone {
     	Dried_Villager = new BlockMobOre(1).setBlockName("Petrified_Villager_Ore").setBlockTextureName("dangerzone:Ore_Villager");
     	GameRegistry.registerBlock(Dried_Villager, Dried_Villager.getUnlocalizedName().substring(5));
     	
-    	amethyst = new Amethyst().setUnlocalizedName("Amethyst").setTextureName("dangerzone:amethyst");
-    	GameRegistry.registerItem(amethyst, amethyst.getUnlocalizedName().substring(5));
+    //	amethyst = new Amethyst().setUnlocalizedName("Amethyst").setTextureName("dangerzone:amethyst");
+    //	GameRegistry.registerItem(amethyst, amethyst.getUnlocalizedName().substring(5));
     	
     	fire_fish = new Fire_Fish(10, 8, 0.60F, true).setUnlocalizedName("Fire_Fish").setTextureName("dangerzone:fire_fish");
     	GameRegistry.registerItem(fire_fish, fire_fish.getUnlocalizedName().substring(5));
@@ -122,7 +125,11 @@ public class CraftZone {
     	
     	cheese = new Cheese(10, 4, 0.5F, true).setUnlocalizedName("Cheese").setTextureName("dangerzone:cheese");
     	GameRegistry.registerItem(cheese, cheese.getUnlocalizedName().substring(5));
-    	
+
+		raw_crab = new Cheese(10, 4, 0.25F, true).setUnlocalizedName("Raw_Crab").setTextureName("dangerzone:raw_crab");
+		GameRegistry.registerItem(raw_crab, raw_crab.getUnlocalizedName().substring(5));
+
+
     	//emerald_pickaxe = new Emerald_Pickaxe(EmeraldPickaxe).setUnlocalizedName("Emerald_Pickaxe").setTextureName("dangerzone:emerald_pickaxe");
     	//GameRegistry.registerItem(emerald_pickaxe, emerald_pickaxe.getUnlocalizedName().substring(5));
     	
@@ -150,13 +157,16 @@ public class CraftZone {
     	//ruby_pickaxe = new Ruby_Pickaxe(RubyPick).setUnlocalizedName("Ruby_Pickaxe").setTextureName("dangerzone:rubypickaxe");
     	//GameRegistry.registerItem(ruby_pickaxe, ruby_pickaxe.getUnlocalizedName().substring(5));
 
+		crabby_patty = new Cheese(10, 16, 2.35F, true).setUnlocalizedName("Crabby_Patty").setTextureName("dangerzone:crabby_patty");
+		GameRegistry.registerItem(crabby_patty, crabby_patty.getUnlocalizedName().substring(5));
+
 		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 
     }
     @EventHandler
     public void init(FMLInitializationEvent event){
     	
-    	GameRegistry.addRecipe(new ItemStack(ruby_axe), new Object[]{"RR ", "RS ", " S ", 'R', CraftZone.uby, 'S', Items.stick});
+    //	GameRegistry.addRecipe(new ItemStack(ruby_axe), new Object[]{"RR ", "RS ", " S ", 'R', CraftZone.uby, 'S', Items.stick});
     	
  //   	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
     	
