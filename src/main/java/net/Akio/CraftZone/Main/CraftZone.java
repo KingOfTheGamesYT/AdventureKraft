@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.Akio.CraftZone.Main.Blocks.BlockMobOre;
+import net.Akio.CraftZone.Main.Blocks.Pizza;
 import net.Akio.CraftZone.Main.Blocks.Ruby_Block;
 import net.Akio.CraftZone.Main.Foods.*;
 import net.Akio.CraftZone.Main.Items.Critter_Cage;
@@ -82,6 +83,7 @@ public class CraftZone {
 	public static Item crabby_patty;
 	public static Item salad;
 	public static Item spark_fish;
+	public static Item pizza;
 
 
 
@@ -144,6 +146,9 @@ public class CraftZone {
 
     	amethyst_axe = new Amethyst_Axe(AmethystAxe).setUnlocalizedName("Amethyst_Axe").setTextureName("dangerzone:amethyst_axe");
     	GameRegistry.registerItem(amethyst_axe, amethyst_axe.getUnlocalizedName().substring(5));
+
+		pizza = new Critter_Cage().setUnlocalizedName("Pizza").setTextureName("dangerzone:pizza");
+		GameRegistry.registerItem(pizza, pizza.getUnlocalizedName().substring(5));
 
     	ruby_axe = new Ruby_Axe(RubyAxe).setUnlocalizedName("Ruby_Axe").setTextureName("dangerzone:ruby_axe");
     	GameRegistry.registerItem(ruby_axe, ruby_axe.getUnlocalizedName().substring(5));
