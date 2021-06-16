@@ -46,6 +46,7 @@ public class CraftZone {
     public static final Item.ToolMaterial UltimatePick = EnumHelper.addToolMaterial("UltimatePick", 5, 1500, 11F, 36F, 70);
     public static final Item.ToolMaterial RubyPick = EnumHelper.addToolMaterial("RubyPick`", 5, 1500, 11F, 16F, 70);
 	public static final Item.ToolMaterial CrystalWood = EnumHelper.addToolMaterial("CrystalWood", 2, 300, 3, 2, 15);
+	public static final Item.ToolMaterial Crystal = EnumHelper.addToolMaterial("Crystal", 3, 800, 6, 5, 45);
 
 	//Ores
     public static boolean oreGenCow;
@@ -62,6 +63,7 @@ public class CraftZone {
     public static Item critter_cage;
     public static Item salt;
 	public static Item crystal_wood_axe;
+	public static Item crystal_pickaxe;
 
     public static Block ruby_block;
     public static Block Dried_cow;
@@ -163,6 +165,9 @@ public class CraftZone {
 
 		crystal_wood_axe = new Crystal_Wood_Axe(CrystalWood).setUnlocalizedName("Crystal_Wood_Axe").setTextureName("dangerzone:crystal_wood_axe");
 		GameRegistry.registerItem(crystal_wood_axe, crystal_wood_axe.getUnlocalizedName().substring(5));
+
+		crystal_pickaxe = new Crystal_Pickaxe(Crystal).setUnlocalizedName("Crystal_Pickaxe").setTextureName("dangerzone:crystal_pickaxe");
+		GameRegistry.registerItem(crystal_pickaxe, crystal_pickaxe.getUnlocalizedName().substring(5));
 
 		salt = new Salt().setUnlocalizedName("Salt").setTextureName("dangerzone:salt");
 		GameRegistry.registerItem(salt, salt.getUnlocalizedName().substring(5));
