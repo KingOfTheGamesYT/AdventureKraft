@@ -84,6 +84,7 @@ public class CraftZone {
 	public static Item spark_fish;
 	public static Item pizza;
 	public static Item raw_corn_dog;
+	public static Item red_ant_robot_kit;
 
 
 
@@ -153,6 +154,9 @@ public class CraftZone {
 
 		pizza = new Critter_Cage().setUnlocalizedName("Pizza").setTextureName("dangerzone:pizza");
 		GameRegistry.registerItem(pizza, pizza.getUnlocalizedName().substring(5));
+
+		red_ant_robot_kit = new Critter_Cage().setUnlocalizedName("Ant_Robot_Kit").setTextureName("dangerzone:red_ant_robot_kit");
+		GameRegistry.registerItem(red_ant_robot_kit, red_ant_robot_kit.getUnlocalizedName().substring(5));
 
     	ruby_axe = new Ruby_Axe(RubyAxe).setUnlocalizedName("Ruby_Axe").setTextureName("dangerzone:ruby_axe");
     	GameRegistry.registerItem(ruby_axe, ruby_axe.getUnlocalizedName().substring(5));
