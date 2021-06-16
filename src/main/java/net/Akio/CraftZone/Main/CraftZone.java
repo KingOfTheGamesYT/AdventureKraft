@@ -87,6 +87,9 @@ public class CraftZone {
 	public static Item pizza;
 	public static Item raw_corn_dog;
 	public static Item red_ant_robot_kit;
+	public static Item wrench;
+	public static Item crystal_axe;
+
 
 
 
@@ -160,8 +163,14 @@ public class CraftZone {
 		red_ant_robot_kit = new Critter_Cage().setUnlocalizedName("Ant_Robot_Kit").setTextureName("dangerzone:red_ant_robot_kit");
 		GameRegistry.registerItem(red_ant_robot_kit, red_ant_robot_kit.getUnlocalizedName().substring(5));
 
-    	ruby_axe = new Ruby_Axe(RubyAxe).setUnlocalizedName("Ruby_Axe").setTextureName("dangerzone:ruby_axe");
+		wrench = new Critter_Cage().setUnlocalizedName("Wrench").setTextureName("dangerzone:wrench");
+		GameRegistry.registerItem(wrench, wrench.getUnlocalizedName().substring(5));
+
+		ruby_axe = new Ruby_Axe(RubyAxe).setUnlocalizedName("Ruby_Axe").setTextureName("dangerzone:ruby_axe");
     	GameRegistry.registerItem(ruby_axe, ruby_axe.getUnlocalizedName().substring(5));
+
+		crystal_axe = new Ruby_Axe(Crystal).setUnlocalizedName("Crystal_Axe").setTextureName("dangerzone:crystal_axe");
+		GameRegistry.registerItem(crystal_axe, crystal_axe.getUnlocalizedName().substring(5));
 
 		crystal_wood_axe = new Crystal_Wood_Axe(CrystalWood).setUnlocalizedName("Crystal_Wood_Axe").setTextureName("dangerzone:crystal_wood_axe");
 		GameRegistry.registerItem(crystal_wood_axe, crystal_wood_axe.getUnlocalizedName().substring(5));
@@ -200,6 +209,8 @@ public class CraftZone {
    // 	GameRegistry.addRecipe(new ItemStack(ruby_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', CraftZone.uby, 'S', Items.stick});
 
     	GameRegistry.addRecipe(new ItemStack(emerald_hoe), new Object[]{"DD ", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
+
+    	GameRegistry.addRecipe(new ItemStack(wrench), new Object[]{"D D", " D ", " D ", 'D', Items.iron_ingot});
 
     	//GameRegistry.addRecipe(new ItemStack(uby, 9), new Object[]{"U", 'U', ruby_block});
     	
