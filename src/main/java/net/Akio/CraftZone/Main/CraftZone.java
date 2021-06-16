@@ -31,8 +31,8 @@ import java.io.File;
 
 public class CraftZone {
 
-	public static final String MOD_AUTHOR = "Katara";
-	public static final String MOD_CODER = "Akio";
+	public static final String MOD_AUTHOR = "RedRoseWarrior1";
+	public static final String MOD_CODER = "Akio, RedRoseWarrior1";
     public static final String MOD_ID = "DangerZone";
     public static final String MC_VERSION = "1.7.10";
     public static final double MOD_VERSION = 1.0;
@@ -47,6 +47,7 @@ public class CraftZone {
     public static final Item.ToolMaterial RubyPick = EnumHelper.addToolMaterial("RubyPick`", 5, 1500, 11F, 16F, 70);
 	public static final Item.ToolMaterial CrystalWood = EnumHelper.addToolMaterial("CrystalWood", 2, 300, 3, 2, 15);
 	public static final Item.ToolMaterial Crystal = EnumHelper.addToolMaterial("Crystal", 3, 800, 6, 5, 45);
+	public static final Item.ToolMaterial MantisClaw = EnumHelper.addToolMaterial("MantisClaw", 2, 192, 5.0F, 11F, 12);
 
 	//Ores
     public static boolean oreGenCow;
@@ -89,6 +90,7 @@ public class CraftZone {
 	public static Item red_ant_robot_kit;
 	public static Item wrench;
 	public static Item crystal_axe;
+	public static Item mantis_claw;
 
 
 
@@ -151,7 +153,10 @@ public class CraftZone {
     	emerald_hoe = new Emerald_Hoe(EmeraldMaterials).setUnlocalizedName("Emerald_Hoe").setTextureName("dangerzone:emerald_hoe");
     	GameRegistry.registerItem(emerald_hoe, emerald_hoe.getUnlocalizedName().substring(5));
 
-    	//amethyst_pickaxe = new Amethyst_Pickaxe(AmethystMaterials).setUnlocalizedName("Amethyst_Pickaxe").setTextureName("dangerzone:amethyst_pickaxe");
+		mantis_claw = new MantisClaw(MantisClaw).setUnlocalizedName("Mantis_Claw").setTextureName("dangerzone:mantis_claw");
+		GameRegistry.registerItem(mantis_claw, mantis_claw.getUnlocalizedName().substring(5));
+
+		//amethyst_pickaxe = new Amethyst_Pickaxe(AmethystMaterials).setUnlocalizedName("Amethyst_Pickaxe").setTextureName("dangerzone:amethyst_pickaxe");
     //	GameRegistry.registerItem(amethyst_pickaxe, amethyst_pickaxe.getUnlocalizedName().substring(5));
 
     	amethyst_axe = new Amethyst_Axe(AmethystAxe).setUnlocalizedName("Amethyst_Axe").setTextureName("dangerzone:amethyst_axe");
