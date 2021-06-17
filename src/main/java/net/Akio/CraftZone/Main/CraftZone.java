@@ -225,22 +225,6 @@ public class CraftZone {
 
 		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 
-		RockBaseID = EntityRegistry.findGlobalUniqueEntityId();
-		EntityRegistry.registerGlobalEntityID(RockMob.class, "Rock", RockBaseID, 1118481, 16777215);
-		EntityRegistry.registerGlobalEntityID(RockMob.class, "Rock", RockBaseID, 1118481, 16777215);
-		EntityRegistry.registerGlobalEntityID(RockMob.class, "Rock", RockBaseID, 1118481, 16777215);
-
-		EntityRegistry.registerModEntity(RockMob.class, "Rock", RockBaseID, this, 32, 1, false);
-		EntityRegistry.registerModEntity(RockMob.class, "Rock", RockBaseID, this, 32, 1, false);
-		EntityRegistry.registerModEntity(RockMob.class, "Rock", RockBaseID, this, 32, 1, false);
-
-		int rockid = EntityRegistry.findGlobalUniqueEntityId();
-		EntityRegistry.registerGlobalEntityID(EntityRock.class, "EntityRock", rockid);
-		EntityRegistry.registerGlobalEntityID(EntityRock.class, "EntityRock", rockid);
-		EntityRegistry.registerGlobalEntityID(EntityRock.class, "EntityRock", rockid);
-		EntityRegistry.registerModEntity(EntityRock.class, "EntityRock", rockid, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityRock.class, "EntityRock", rockid, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityRock.class, "EntityRock", rockid, this, 64, 1, true);
     }
     @EventHandler
     public void init(FMLInitializationEvent event){

@@ -56,7 +56,7 @@ public class Rock extends Item {
                 ++z;
             }
 
-            Entity e = this.spawnCreature(world, "Rock", (double) x, (double) y + 1.01D, (double) z);
+            Entity e = this.spawnCreature(world, "RockModel", (double) x, (double) y + 1.01D, (double) z);
             if (e != null) {
                 RockMob r = (RockMob) e;
                 if (this == CraftZone.small_rock) {
