@@ -5,6 +5,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.Akio.CraftZone.Main.Blocks.BlockMobOre;
 import net.Akio.CraftZone.Main.Blocks.Pizza;
@@ -15,6 +16,8 @@ import net.Akio.CraftZone.Main.Items.Rock;
 import net.Akio.CraftZone.Main.Materials.Amethyst;
 import net.Akio.CraftZone.Main.Materials.Ruby;
 import net.Akio.CraftZone.Main.Materials.Salt;
+import net.Akio.CraftZone.Main.Mob.EntityRock;
+import net.Akio.CraftZone.Main.Mob.RockMob;
 import net.Akio.CraftZone.Main.Tools.*;
 
 import net.Akio.CraftZone.Main.world.gen.Oregen;
@@ -61,7 +64,7 @@ public class CraftZone {
 	public static int oreRarityVillager;
 	public static int oreMaxHeightVillager;
 	public static Random Rand = new Random(151L);
-
+	public static int RockBaseID = 0;
     public static Item ruby_pickaxe;
     public static Item ultimate_pickaxe;
     public static Item critter_cage;
@@ -95,6 +98,9 @@ public class CraftZone {
 	public static Item crystal_axe;
 	public static Item mantis_claw;
 	public static Item flame_rock;
+	public static Item explosive_rock;
+	public static Item poison_rock;
+	public static Item small_rock;
 
 
 
@@ -172,6 +178,15 @@ public class CraftZone {
 		flame_rock = new Rock(3).setUnlocalizedName("Flame_Rock").setTextureName("dangerzone:flame_rock");
 		GameRegistry.registerItem(flame_rock, flame_rock.getUnlocalizedName().substring(5));
 
+		explosive_rock = new Rock(3).setUnlocalizedName("Explosive_Rock").setTextureName("dangerzone:explosive_rock");
+		GameRegistry.registerItem(explosive_rock, explosive_rock.getUnlocalizedName().substring(5));
+
+		poison_rock = new Rock(3).setUnlocalizedName("Poison_Rock").setTextureName("dangerzone:poison_rock");
+		GameRegistry.registerItem(poison_rock, poison_rock.getUnlocalizedName().substring(5));
+
+		small_rock = new Rock(3).setUnlocalizedName("Small_Rock").setTextureName("dangerzone:small_rock");
+		GameRegistry.registerItem(small_rock, small_rock.getUnlocalizedName().substring(5));
+
 		red_ant_robot_kit = new Critter_Cage().setUnlocalizedName("Ant_Robot_Kit").setTextureName("dangerzone:red_ant_robot_kit");
 		GameRegistry.registerItem(red_ant_robot_kit, red_ant_robot_kit.getUnlocalizedName().substring(5));
 
@@ -210,6 +225,22 @@ public class CraftZone {
 
 		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 
+		RockBaseID = EntityRegistry.findGlobalUniqueEntityId();
+		EntityRegistry.registerGlobalEntityID(RockMob.class, "Rock", RockBaseID, 1118481, 16777215);
+		EntityRegistry.registerGlobalEntityID(RockMob.class, "Rock", RockBaseID, 1118481, 16777215);
+		EntityRegistry.registerGlobalEntityID(RockMob.class, "Rock", RockBaseID, 1118481, 16777215);
+
+		EntityRegistry.registerModEntity(RockMob.class, "Rock", RockBaseID, this, 32, 1, false);
+		EntityRegistry.registerModEntity(RockMob.class, "Rock", RockBaseID, this, 32, 1, false);
+		EntityRegistry.registerModEntity(RockMob.class, "Rock", RockBaseID, this, 32, 1, false);
+
+		int rockid = EntityRegistry.findGlobalUniqueEntityId();
+		EntityRegistry.registerGlobalEntityID(EntityRock.class, "EntityRock", rockid);
+		EntityRegistry.registerGlobalEntityID(EntityRock.class, "EntityRock", rockid);
+		EntityRegistry.registerGlobalEntityID(EntityRock.class, "EntityRock", rockid);
+		EntityRegistry.registerModEntity(EntityRock.class, "EntityRock", rockid, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityRock.class, "EntityRock", rockid, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityRock.class, "EntityRock", rockid, this, 64, 1, true);
     }
     @EventHandler
     public void init(FMLInitializationEvent event){
@@ -235,7 +266,7 @@ public class CraftZone {
 		//GameRegistry.addShapelessRecipe(new ItemStack(butter_candy, 4), new Object[]{"B", "U", 'B', CraftZone.butter, 'U', Items.sugar});
 		GameRegistry.addShapelessRecipe(new ItemStack(butter_candy,4), new Object[] {new ItemStack(CraftZone.butter,1), new ItemStack(Items.sugar )});
 	}
-    
+
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
     	

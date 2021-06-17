@@ -14,6 +14,7 @@ import net.minecraft.world.World;
 
 public class Rock extends Item {
     public Rock(int i) {
+        this.maxStackSize = 64;
         this.setCreativeTab(CreativeTabs.tabCombat);
     }
 
@@ -24,11 +25,21 @@ public class Rock extends Item {
 
         par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
         if (!par2World.isRemote) {
+            if (this == CraftZone.small_rock) {
+                par2World.spawnEntityInWorld(new EntityRock(par2World, par3EntityPlayer, 1));
+            }
 
             if (this == CraftZone.flame_rock) {
                 par2World.spawnEntityInWorld(new EntityRock(par2World, par3EntityPlayer, 3));
             }
 
+            if (this == CraftZone.poison_rock) {
+                par2World.spawnEntityInWorld(new EntityRock(par2World, par3EntityPlayer, 4));
+            }
+
+            if (this == CraftZone.explosive_rock) {
+                par2World.spawnEntityInWorld(new EntityRock(par2World, par3EntityPlayer, 8));
+            }
 
         }
 
@@ -45,18 +56,27 @@ public class Rock extends Item {
                 ++z;
             }
 
-            Entity e = this.spawnCreature(world, "EntityRock", (double) x, (double) y + 1.01D, (double) z);
+            Entity e = this.spawnCreature(world, "Rock", (double) x, (double) y + 1.01D, (double) z);
             if (e != null) {
                 RockMob r = (RockMob) e;
+                if (this == CraftZone.small_rock) {
+                    r.placeRock(1);
+                }
 
                 if (this == CraftZone.flame_rock) {
                     r.placeRock(3);
                 }
 
+                if (this == CraftZone.poison_rock) {
+                    r.placeRock(4);
+                }
+
+                if (this == CraftZone.explosive_rock) {
+                    r.placeRock(8);
+                }
 
             }
         }
-
 
         if (!par2EntityPlayer.capabilities.isCreativeMode) {
             --par1ItemStack.stackSize;
