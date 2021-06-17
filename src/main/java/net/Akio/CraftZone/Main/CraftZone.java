@@ -11,6 +11,7 @@ import net.Akio.CraftZone.Main.Blocks.Pizza;
 import net.Akio.CraftZone.Main.Blocks.Ruby_Block;
 import net.Akio.CraftZone.Main.Foods.*;
 import net.Akio.CraftZone.Main.Items.Critter_Cage;
+import net.Akio.CraftZone.Main.Items.Rock;
 import net.Akio.CraftZone.Main.Materials.Amethyst;
 import net.Akio.CraftZone.Main.Materials.Ruby;
 import net.Akio.CraftZone.Main.Materials.Salt;
@@ -26,6 +27,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
 
 import java.io.File;
+import java.util.Random;
 
 @Mod(modid = CraftZone.MOD_ID, version = CraftZone.MC_VERSION)
 
@@ -58,6 +60,7 @@ public class CraftZone {
 	public static int oreSizeVillager;
 	public static int oreRarityVillager;
 	public static int oreMaxHeightVillager;
+	public static Random Rand = new Random(151L);
 
     public static Item ruby_pickaxe;
     public static Item ultimate_pickaxe;
@@ -91,6 +94,7 @@ public class CraftZone {
 	public static Item wrench;
 	public static Item crystal_axe;
 	public static Item mantis_claw;
+	public static Item flame_rock;
 
 
 
@@ -164,6 +168,9 @@ public class CraftZone {
 
 		pizza = new Critter_Cage().setUnlocalizedName("Pizza").setTextureName("dangerzone:pizza");
 		GameRegistry.registerItem(pizza, pizza.getUnlocalizedName().substring(5));
+
+		flame_rock = new Rock(3).setUnlocalizedName("Flame_Rock").setTextureName("dangerzone:flame_rock");
+		GameRegistry.registerItem(flame_rock, flame_rock.getUnlocalizedName().substring(5));
 
 		red_ant_robot_kit = new Critter_Cage().setUnlocalizedName("Ant_Robot_Kit").setTextureName("dangerzone:red_ant_robot_kit");
 		GameRegistry.registerItem(red_ant_robot_kit, red_ant_robot_kit.getUnlocalizedName().substring(5));
