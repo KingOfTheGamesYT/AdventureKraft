@@ -64,7 +64,6 @@ public class CraftZone {
 	public static int oreRarityVillager;
 	public static int oreMaxHeightVillager;
 	public static Random Rand = new Random(151L);
-	public static int RockBaseID = 0;
     public static Item ruby_pickaxe;
     public static Item ultimate_pickaxe;
     public static Item critter_cage;
