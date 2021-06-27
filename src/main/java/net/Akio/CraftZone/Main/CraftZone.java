@@ -25,6 +25,7 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBucketMilk;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
@@ -233,6 +234,8 @@ public class CraftZone {
  //   	GameRegistry.addRecipe(new ItemStack(emerald_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
     	
    // 	GameRegistry.addRecipe(new ItemStack(ruby_pickaxe), new Object[]{"DDD", " S ", " S ", 'D', CraftZone.uby, 'S', Items.stick});
+
+	  GameRegistry.addShapelessRecipe(new ItemStack(cheese, 2), new Object[] {new ItemStack(Items.milk_bucket,4), new ItemStack(Items.milk_bucket, 4), new ItemStack(Items.milk_bucket,4), new ItemStack(Items.milk_bucket,4) });
 
     	GameRegistry.addRecipe(new ItemStack(emerald_hoe), new Object[]{"DD ", " S ", " S ", 'D', Blocks.emerald_block, 'S', Items.stick});
 
