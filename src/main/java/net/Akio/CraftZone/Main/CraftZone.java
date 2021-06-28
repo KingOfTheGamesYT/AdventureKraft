@@ -79,7 +79,7 @@ public class CraftZone {
     public static Block ruby_block;
     public static Block Dried_cow;
     public static Block Dried_Villager;
-
+	public static Item crystal_shards;
 	public static Item cheese;
     public static Item butter;
     public static Item butter_candy;
@@ -193,6 +193,9 @@ public class CraftZone {
 
 		vortex_eye = new Critter_Cage().setUnlocalizedName("Vortex_Eye").setTextureName("dangerzone:vortex_eye");
 		GameRegistry.registerItem(vortex_eye, vortex_eye.getUnlocalizedName().substring(5));
+
+		crystal_shards = new Critter_Cage().setUnlocalizedName("Crystal_Shards").setTextureName("dangerzone:crystal_shards");
+		GameRegistry.registerItem(crystal_shards, crystal_shards.getUnlocalizedName().substring(5));
 
 		flame_rock = new Rock(3).setUnlocalizedName("Flame_Rock").setTextureName("dangerzone:flame_rock");
 		GameRegistry.registerItem(flame_rock, flame_rock.getUnlocalizedName().substring(5));
