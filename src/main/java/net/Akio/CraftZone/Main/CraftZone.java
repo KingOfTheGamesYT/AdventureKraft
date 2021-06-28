@@ -48,7 +48,7 @@ public class CraftZone {
     public static final Item.ToolMaterial EmeraldPickaxe = EnumHelper.addToolMaterial("EmeraldPickaxe", 3, 1300, 10F, 6F, 75);
     public static final Item.ToolMaterial RubyMaterials = EnumHelper.addToolMaterial("RubyMaterials", 2, 192, 5.0F, 1.5F, 12);
     public static final Item.ToolMaterial RubyAxe = EnumHelper.addToolMaterial("RubyAxe", 5, 1500, 11F, 16F, 70);
-    public static final Item.ToolMaterial AmethystAxe = EnumHelper.addToolMaterial("AmethystAxe", 5, 1500, 11F, 10F, 70);
+    public static final Item.ToolMaterial AmethystAxe = EnumHelper.addToolMaterial("AmethystAxe", 5, 1500, 11F, 11F, 70);
     public static final Item.ToolMaterial UltimatePick = EnumHelper.addToolMaterial("UltimatePick", 5, 1500, 11F, 36F, 70);
     public static final Item.ToolMaterial RubyPick = EnumHelper.addToolMaterial("RubyPick`", 5, 1500, 11F, 16F, 70);
 	public static final Item.ToolMaterial CrystalWood = EnumHelper.addToolMaterial("CrystalWood", 2, 300, 3, 2, 15);
@@ -71,6 +71,7 @@ public class CraftZone {
     public static Item salt;
 	public static Item crystal_wood_axe;
 	public static Item crystal_pickaxe;
+	public static Item big_hammer;
 
     public static Block ruby_block;
     public static Block Dried_cow;
@@ -162,6 +163,9 @@ public class CraftZone {
     	
     	emerald_hoe = new Emerald_Hoe(EmeraldMaterials).setUnlocalizedName("Emerald_Hoe").setTextureName("dangerzone:emerald_hoe");
     	GameRegistry.registerItem(emerald_hoe, emerald_hoe.getUnlocalizedName().substring(5));
+
+		big_hammer = new Big_Hammer(AmethystAxe).setUnlocalizedName("Big_Hammer").setTextureName("dangerzone:big_hammer");
+		GameRegistry.registerItem(big_hammer, big_hammer.getUnlocalizedName().substring(5));
 
 		mantis_claw = new MantisClaw(MantisClaw).setUnlocalizedName("Mantis_Claw").setTextureName("dangerzone:mantis_claw");
 		GameRegistry.registerItem(mantis_claw, mantis_claw.getUnlocalizedName().substring(5));
