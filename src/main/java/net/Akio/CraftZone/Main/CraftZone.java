@@ -105,6 +105,7 @@ public class CraftZone {
 	public static Item explosive_rock;
 	public static Item poison_rock;
 	public static Item small_rock;
+	public static Item godzilla_scale;
 
 
 
@@ -181,6 +182,9 @@ public class CraftZone {
 
 		pizza = new Critter_Cage().setUnlocalizedName("Pizza").setTextureName("dangerzone:pizza");
 		GameRegistry.registerItem(pizza, pizza.getUnlocalizedName().substring(5));
+
+		godzilla_scale = new Critter_Cage().setUnlocalizedName("Godzilla_Scale").setTextureName("dangerzone:godzilla_scale");
+		GameRegistry.registerItem(godzilla_scale, godzilla_scale.getUnlocalizedName().substring(5));
 
 		peacock_feather = new Critter_Cage().setUnlocalizedName("Peacock_Feather").setTextureName("dangerzone:peacock_feather");
 		GameRegistry.registerItem(peacock_feather, peacock_feather.getUnlocalizedName().substring(5));
