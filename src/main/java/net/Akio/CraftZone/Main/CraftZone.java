@@ -72,6 +72,8 @@ public class CraftZone {
 	public static Item crystal_wood_axe;
 	public static Item crystal_pickaxe;
 	public static Item big_hammer;
+	public static Item peacock_feather;
+	public static Item vortex_eye;
 
     public static Block ruby_block;
     public static Block Dried_cow;
@@ -178,6 +180,12 @@ public class CraftZone {
 
 		pizza = new Critter_Cage().setUnlocalizedName("Pizza").setTextureName("dangerzone:pizza");
 		GameRegistry.registerItem(pizza, pizza.getUnlocalizedName().substring(5));
+
+		peacock_feather = new Critter_Cage().setUnlocalizedName("Peacock_Feather").setTextureName("dangerzone:peacock_feather");
+		GameRegistry.registerItem(peacock_feather, peacock_feather.getUnlocalizedName().substring(5));
+
+		vortex_eye = new Critter_Cage().setUnlocalizedName("Vortex_Eye").setTextureName("dangerzone:vortex_eye");
+		GameRegistry.registerItem(vortex_eye, vortex_eye.getUnlocalizedName().substring(5));
 
 		flame_rock = new Rock(3).setUnlocalizedName("Flame_Rock").setTextureName("dangerzone:flame_rock");
 		GameRegistry.registerItem(flame_rock, flame_rock.getUnlocalizedName().substring(5));
