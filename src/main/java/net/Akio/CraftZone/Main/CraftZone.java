@@ -74,7 +74,8 @@ public class CraftZone {
 	public static Item big_hammer;
 	public static Item peacock_feather;
 	public static Item vortex_eye;
-
+	public static Item kraken_tooth;
+	public static Item pink_tourmaline_ingot;
     public static Block ruby_block;
     public static Block Dried_cow;
     public static Block Dried_Villager;
@@ -183,6 +184,12 @@ public class CraftZone {
 
 		peacock_feather = new Critter_Cage().setUnlocalizedName("Peacock_Feather").setTextureName("dangerzone:peacock_feather");
 		GameRegistry.registerItem(peacock_feather, peacock_feather.getUnlocalizedName().substring(5));
+
+		kraken_tooth = new Critter_Cage().setUnlocalizedName("Kraken_Tooth").setTextureName("dangerzone:kraken_tooth");
+		GameRegistry.registerItem(kraken_tooth, kraken_tooth.getUnlocalizedName().substring(5));
+
+		pink_tourmaline_ingot = new Critter_Cage().setUnlocalizedName("Pink_Tourmaline_Ingot").setTextureName("dangerzone:pink_tourmaline_ingot");
+		GameRegistry.registerItem(pink_tourmaline_ingot, pink_tourmaline_ingot.getUnlocalizedName().substring(5));
 
 		vortex_eye = new Critter_Cage().setUnlocalizedName("Vortex_Eye").setTextureName("dangerzone:vortex_eye");
 		GameRegistry.registerItem(vortex_eye, vortex_eye.getUnlocalizedName().substring(5));
