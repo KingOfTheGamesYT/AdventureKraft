@@ -38,10 +38,18 @@ item.Peacock_Feather.name=Peacock Feather
 item.Kraken_Tooth.name=Kraken Tooth
 item.Pink_Tourmaline_Ingot.name=Pink Tourmaline ingot
 item.Godzilla_Scale.name=Godzilla Scale
-
+item.Zangesu_Guard.name=Zangesu Guard
 item.Crystal_Shards.name=Crystal Shards
-
-
+item.Miners_Dream.name=Miners Dream
+tile.Petrified_Wolf_ore.name=Petrified Wolf Ore
+tile.Petrified_Squid_ore.name=Petrified Squid Ore
+tile.Petrified_Slime_ore.name=Petrified Slime Ore
+tile.Petrified_Pig_ore.name=Petrified Pig Ore
+tile.Petrified_Creeper_ore.name=Petrified Creeper Ore
+tile.Petrified_Chicken_ore.name=Petrified Chicken Ore
+tile.Petrified_Cave_Spider_ore.name=Petrified Cave Spider Ore
+tile.Petrified_Zombie_Pigman_ore.name=Petrified Zombie Pigman Ore
+item.Katter_Killer_Jaw.name=Katter Killer Jaw
 
 
 

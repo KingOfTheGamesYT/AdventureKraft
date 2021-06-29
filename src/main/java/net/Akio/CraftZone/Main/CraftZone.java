@@ -381,9 +381,23 @@ public class CraftZone {
     	
     //	GameRegistry.addRecipe(new ItemStack(ruby_block), new Object[] {"DDD", "DDD", "DDD", 'D', CraftZone.uby});
     	
-    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 92), new Object[] {"D", "W", 'D', CraftZone.Dried_cow, 'W', Items.water_bucket});
+    	GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 92), new Object[] {new ItemStack(CraftZone.Dried_cow), new ItemStack( Items.water_bucket)});
     	
-    	GameRegistry.addRecipe(new ItemStack(Items.spawn_egg, 1, 120), new Object[] {"D", "W", 'D', CraftZone.Dried_Villager, 'W', Items.water_bucket});
+    	GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 120), new Object[] {new ItemStack(CraftZone.Dried_Villager), new ItemStack( Items.water_bucket)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 93), new Object[] {new ItemStack(CraftZone.Dried_chicken), new ItemStack( Items.water_bucket)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 50), new Object[] {new ItemStack(CraftZone.Dried_Creeper), new ItemStack( Items.water_bucket)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 59), new Object[] {new ItemStack(CraftZone.Dried_cave_spider), new ItemStack( Items.water_bucket)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 55), new Object[] {new ItemStack(CraftZone.Dried_Slime), new ItemStack( Items.water_bucket)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 94), new Object[] {new ItemStack(CraftZone.Dried_Squid), new ItemStack( Items.water_bucket)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 90), new Object[] {new ItemStack(CraftZone.Dried_pig), new ItemStack( Items.water_bucket)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 95), new Object[] {new ItemStack(CraftZone.Dried_Wolf), new ItemStack( Items.water_bucket)});
 
 		//GameRegistry.addShapelessRecipe(new ItemStack(butter_candy, 4), new Object[]{"B", "U", 'B', CraftZone.butter, 'U', Items.sugar});
 		GameRegistry.addShapelessRecipe(new ItemStack(butter_candy,4), new Object[] {new ItemStack(CraftZone.butter,1), new ItemStack(Items.sugar )});
