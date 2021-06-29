@@ -13,30 +13,30 @@ import java.util.Random;
 
 public class Oregen implements IWorldGenerator {
 
-    WorldGenMinable dried_cow;
-    WorldGenMinable dried_villager;
-   /* WorldGenMinable lead;
-    WorldGenMinable silver;
-    WorldGenMinable uranium;
-    WorldGenMinable thorium;
-    WorldGenMinable lithium;
-    WorldGenMinable boron;
-    WorldGenMinable magnesium;
-    WorldGenMinable plutonium;
+    WorldGenMinable petrified_cow;
+    WorldGenMinable petrified_villager;
+    WorldGenMinable petrified_chicken;
+    WorldGenMinable petrified_cave_spider;
+    WorldGenMinable petrified_creeper;
+    WorldGenMinable petrified_squid;
+    WorldGenMinable petrified_wolf;
+    WorldGenMinable petrified_slime;
+    WorldGenMinable petrified_pig;
+  /*  WorldGenMinable plutonium;
     WorldGenMinable liquidHelium;
 */
     public Oregen() {
-        dried_villager = new WorldGenMinable(CraftZone.Dried_Villager, 0, CraftZone.oreSizeVillager, Blocks.stone);
-        dried_cow = new WorldGenMinable(CraftZone.Dried_cow, 1, CraftZone.oreSizeCow, Blocks.stone);
-       /* lead = new WorldGenMinable(NCBlocks.blockOre, 2, NuclearCraft.oreSizeLead, Blocks.stone);
-        silver = new WorldGenMinable(NCBlocks.blockOre, 3, NuclearCraft.oreSizeSilver, Blocks.stone);
-        uranium = new WorldGenMinable(NCBlocks.blockOre, 4, NuclearCraft.oreSizeUranium, Blocks.stone);
-        thorium = new WorldGenMinable(NCBlocks.blockOre, 5, NuclearCraft.oreSizeThorium, Blocks.stone);
-        lithium = new WorldGenMinable(NCBlocks.blockOre, 7, NuclearCraft.oreSizeLithium, Blocks.stone);
-        boron = new WorldGenMinable(NCBlocks.blockOre, 8, NuclearCraft.oreSizeBoron, Blocks.stone);
-        magnesium = new WorldGenMinable(NCBlocks.blockOre, 9, NuclearCraft.oreSizeMagnesium, Blocks.stone);
-        plutonium = new WorldGenMinable(NCBlocks.blockOre, 6, NuclearCraft.oreSizePlutonium, Blocks.netherrack);
-        liquidHelium = new WorldGenMinable(NCBlocks.blockHelium, 0, 8, Blocks.end_stone); */
+        petrified_villager = new WorldGenMinable(CraftZone.Dried_Villager, 0, CraftZone.oreSizeVillager, Blocks.stone);
+        petrified_cow = new WorldGenMinable(CraftZone.Dried_cow, 1, CraftZone.oreSizeCow, Blocks.stone);
+        petrified_cave_spider = new WorldGenMinable(CraftZone.Dried_cave_spider, 2, CraftZone.oreSizeCaveSpider, Blocks.stone);
+        petrified_chicken = new WorldGenMinable(CraftZone.Dried_chicken, 3, CraftZone.oreSizeChicken, Blocks.stone);
+        petrified_creeper = new WorldGenMinable(CraftZone.Dried_Creeper, 4, CraftZone.oreSizeCreeper, Blocks.stone);
+        petrified_slime = new WorldGenMinable(CraftZone.Dried_Slime, 5, CraftZone.oreSizeSlime, Blocks.stone);
+        petrified_squid = new WorldGenMinable(CraftZone.Dried_Squid, 7, CraftZone.oreSizeSquid, Blocks.stone);
+        petrified_wolf = new WorldGenMinable(CraftZone.Dried_Wolf, 8, CraftZone.oreSizeWolf, Blocks.stone);
+        petrified_pig = new WorldGenMinable(CraftZone.Dried_pig, 9, CraftZone.oreSizePig, Blocks.stone);
+      //  plutonium = new WorldGenMinable(NCBlocks.blockOre, 6, NuclearCraft.oreSizePlutonium, Blocks.netherrack);
+      //  liquidHelium = new WorldGenMinable(NCBlocks.blockHelium, 0, 8, Blocks.end_stone); */
     }
 
     @Override
@@ -48,11 +48,40 @@ public class Oregen implements IWorldGenerator {
         int xPos, yPos, zPos;
         if (CraftZone.oreGenCow)
         { for (int i = 0; i < CraftZone.oreRarityCow; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightCow); zPos = zChunk + random.nextInt(16);
-            dried_cow.generate(world, random, xPos, yPos, zPos); } }
+            petrified_cow.generate(world, random, xPos, yPos, zPos); } }
 
         if (CraftZone.oreGenVillager)
         { for (int i = 0; i < CraftZone.oreRarityVillager; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightVillager); zPos = zChunk + random.nextInt(16);
-            dried_villager.generate(world, random, xPos, yPos, zPos); } }
+            petrified_villager.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.oreGenCaveSpider)
+        { for (int i = 0; i < CraftZone.oreRarityCaveSpider; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightCaveSpider); zPos = zChunk + random.nextInt(16);
+            petrified_cave_spider.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.oreGenChicken)
+        { for (int i = 0; i < CraftZone.oreRarityChicken; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightChicken); zPos = zChunk + random.nextInt(16);
+            petrified_chicken.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.oreGenPig)
+        { for (int i = 0; i < CraftZone.oreRarityPig; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightPig); zPos = zChunk + random.nextInt(16);
+            petrified_pig.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.oreGenCreeper)
+        { for (int i = 0; i < CraftZone.oreRarityCreeper; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightCreeper); zPos = zChunk + random.nextInt(16);
+            petrified_creeper.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.oreGenSlime)
+        { for (int i = 0; i < CraftZone.oreRaritySlime; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightSlime); zPos = zChunk + random.nextInt(16);
+            petrified_slime.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.oreGenSquid)
+        { for (int i = 0; i < CraftZone.oreRaritySquid; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightSquid); zPos = zChunk + random.nextInt(16);
+            petrified_squid.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.oreGenWolf)
+        { for (int i = 0; i < CraftZone.oreRarityWolf; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightWolf); zPos = zChunk + random.nextInt(16);
+            petrified_wolf.generate(world, random, xPos, yPos, zPos); } }
+
 
     }
 

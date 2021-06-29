@@ -65,6 +65,34 @@ public class CraftZone {
 	public static int oreSizeVillager;
 	public static int oreRarityVillager;
 	public static int oreMaxHeightVillager;
+	public static boolean oreGenChicken;
+	public static int oreSizeChicken;
+	public static int oreRarityChicken;
+	public static int oreMaxHeightChicken;
+	public static boolean oreGenCreeper;
+	public static int oreSizeCreeper;
+	public static int oreRarityCreeper;
+	public static int oreMaxHeightCreeper;
+	public static boolean oreGenCaveSpider;
+	public static int oreSizeCaveSpider;
+	public static int oreRarityCaveSpider;
+	public static int oreMaxHeightCaveSpider;
+	public static boolean oreGenSlime;
+	public static int oreSizeSlime;
+	public static int oreRaritySlime;
+	public static int oreMaxHeightSlime;
+	public static boolean oreGenSquid;
+	public static int oreSizeSquid;
+	public static int oreRaritySquid;
+	public static int oreMaxHeightSquid;
+	public static boolean oreGenPig;
+	public static int oreSizePig;
+	public static int oreRarityPig;
+	public static int oreMaxHeightPig;
+	public static boolean oreGenWolf;
+	public static int oreSizeWolf;
+	public static int oreRarityWolf;
+	public static int oreMaxHeightWolf;
 	public static Random Rand = new Random(151L);
     public static Item ruby_pickaxe;
     public static Item ultimate_pickaxe;
@@ -80,6 +108,14 @@ public class CraftZone {
     public static Block ruby_block;
     public static Block Dried_cow;
     public static Block Dried_Villager;
+	public static Block Dried_Creeper;
+	public static Block Dried_pig;
+	public static Block Dried_cave_spider;
+	public static Block Dried_chicken;
+	public static Block Dried_Squid;
+	public static Block Dried_Slime;
+	public static Block Dried_Wolf;
+
 	public static Item crystal_shards;
 	public static Item cheese;
     public static Item butter;
@@ -124,6 +160,46 @@ public class CraftZone {
 		oreRarityCow = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
 		oreMaxHeightCow = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
 
+		oreGenPig = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		oreSizePig = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreRarityPig = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreMaxHeightPig = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+
+		oreGenChicken = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		oreSizeChicken = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreRarityChicken = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreMaxHeightChicken = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+
+		oreGenCreeper = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		oreSizeCreeper = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreRarityCreeper = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreMaxHeightCreeper = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+
+		oreGenSlime = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		oreSizeSlime = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreRaritySlime = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreMaxHeightSlime = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+
+		oreGenSquid = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		oreSizeSquid = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreRaritySquid = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreMaxHeightSquid = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+
+		oreGenWolf = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		oreSizeWolf = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreRarityWolf = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreMaxHeightWolf = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+
+		oreGenCaveSpider = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		oreSizeCaveSpider = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreRarityCaveSpider = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreMaxHeightCaveSpider = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+
+		/*oreGenGirl = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		oreSizeGirl = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreRarityGirl = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
+		oreMaxHeightGirl = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+*/
 		oreGenVillager = config.getBoolean("Generation", "0.0: Petrified Villager Ore", true, "");
 		oreSizeVillager = config.getInt("Chunk Size", "0.0: Petrified Villager Ore", 8, 1, 100, "");
 		oreRarityVillager = config.getInt("Gen Rate", "0.0: Petrified Villager Ore", 3, 1, 100, "");
@@ -140,7 +216,28 @@ public class CraftZone {
     	
     	Dried_Villager = new BlockMobOre(1).setBlockName("Petrified_Villager_Ore").setBlockTextureName("dangerzone:Ore_Villager");
     	GameRegistry.registerBlock(Dried_Villager, Dried_Villager.getUnlocalizedName().substring(5));
-    	
+
+		Dried_chicken = new BlockMobOre(1).setBlockName("Petrified_Chicken_ore").setBlockTextureName("dangerzone:Ore_Chicken");
+		GameRegistry.registerBlock(Dried_chicken, Dried_chicken.getUnlocalizedName().substring(5));
+
+		Dried_cave_spider = new BlockMobOre(1).setBlockName("Petrified_Cave_Spider_ore").setBlockTextureName("dangerzone:Ore_Cave_Spider");
+		GameRegistry.registerBlock(Dried_cave_spider, Dried_cave_spider.getUnlocalizedName().substring(5));
+
+		Dried_Creeper = new BlockMobOre(1).setBlockName("Petrified_Creeper_ore").setBlockTextureName("dangerzone:Ore_Creeper");
+		GameRegistry.registerBlock(Dried_Creeper, Dried_Creeper.getUnlocalizedName().substring(5));
+
+		Dried_Slime = new BlockMobOre(1).setBlockName("Petrified_Slime_ore").setBlockTextureName("dangerzone:Ore_Slime");
+		GameRegistry.registerBlock(Dried_Slime, Dried_Slime.getUnlocalizedName().substring(5));
+
+		Dried_Squid = new BlockMobOre(1).setBlockName("Petrified_Squid_ore").setBlockTextureName("dangerzone:Ore_Squid");
+		GameRegistry.registerBlock(Dried_Squid, Dried_Squid.getUnlocalizedName().substring(5));
+
+		Dried_pig = new BlockMobOre(1).setBlockName("Petrified_Pig_ore").setBlockTextureName("dangerzone:Ore_Pig");
+		GameRegistry.registerBlock(Dried_pig, Dried_pig.getUnlocalizedName().substring(5));
+
+		Dried_Wolf = new BlockMobOre(1).setBlockName("Petrified_Wolf_ore").setBlockTextureName("dangerzone:Ore_Wolf");
+		GameRegistry.registerBlock(Dried_Wolf, Dried_Wolf.getUnlocalizedName().substring(5));
+
     //	amethyst = new Amethyst().setUnlocalizedName("Amethyst").setTextureName("dangerzone:amethyst");
     //	GameRegistry.registerItem(amethyst, amethyst.getUnlocalizedName().substring(5));
     	
