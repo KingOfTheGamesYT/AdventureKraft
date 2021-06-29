@@ -12,6 +12,7 @@ import net.Akio.CraftZone.Main.Blocks.Pizza;
 import net.Akio.CraftZone.Main.Blocks.Ruby_Block;
 import net.Akio.CraftZone.Main.Foods.*;
 import net.Akio.CraftZone.Main.Items.Critter_Cage;
+import net.Akio.CraftZone.Main.Items.MinersDream;
 import net.Akio.CraftZone.Main.Items.Rock;
 import net.Akio.CraftZone.Main.Materials.Amethyst;
 import net.Akio.CraftZone.Main.Materials.Ruby;
@@ -106,6 +107,9 @@ public class CraftZone {
 	public static Item poison_rock;
 	public static Item small_rock;
 	public static Item godzilla_scale;
+	public static Item zangesu;
+	public static Item katter_killer_jaw;
+	public static Item miners_dream;
 
 
 
@@ -186,6 +190,9 @@ public class CraftZone {
 		godzilla_scale = new Critter_Cage().setUnlocalizedName("Godzilla_Scale").setTextureName("dangerzone:godzilla_scale");
 		GameRegistry.registerItem(godzilla_scale, godzilla_scale.getUnlocalizedName().substring(5));
 
+		zangesu = new Critter_Cage().setUnlocalizedName("Zangesu_Guard").setTextureName("dangerzone:zangesu_guard");
+		GameRegistry.registerItem(zangesu, zangesu.getUnlocalizedName().substring(5));
+
 		peacock_feather = new Critter_Cage().setUnlocalizedName("Peacock_Feather").setTextureName("dangerzone:peacock_feather");
 		GameRegistry.registerItem(peacock_feather, peacock_feather.getUnlocalizedName().substring(5));
 
@@ -197,6 +204,12 @@ public class CraftZone {
 
 		vortex_eye = new Critter_Cage().setUnlocalizedName("Vortex_Eye").setTextureName("dangerzone:vortex_eye");
 		GameRegistry.registerItem(vortex_eye, vortex_eye.getUnlocalizedName().substring(5));
+
+		katter_killer_jaw = new Critter_Cage().setUnlocalizedName("Katter_Killer_Jaw").setTextureName("dangerzone:katter_killer_jaw");
+		GameRegistry.registerItem(katter_killer_jaw, katter_killer_jaw.getUnlocalizedName().substring(5));
+
+		miners_dream = new MinersDream(3).setUnlocalizedName("Miners_Dream").setTextureName("dangerzone:miners_dream");
+		GameRegistry.registerItem(miners_dream, miners_dream.getUnlocalizedName().substring(5));
 
 		crystal_shards = new Critter_Cage().setUnlocalizedName("Crystal_Shards").setTextureName("dangerzone:crystal_shards");
 		GameRegistry.registerItem(crystal_shards, crystal_shards.getUnlocalizedName().substring(5));
