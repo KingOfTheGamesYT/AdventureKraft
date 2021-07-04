@@ -18,16 +18,10 @@
   "item.dangerzone.candy_cane": "Candy Cane",
   "item.dangerzone.titanium_hardened_cake": "Titanium Hardened Cake",
   "item.dangerzone.redrosewarrior_spawn_egg": "Spawn RedRoseWarrior",
-  "item.dangerzone.dead_termite": "Dead Termite",
-  "item.dangerzone.termite_token": "Termite Token",
-  "item.dangerzone.dead_rainbow_ant": "Dead Rainbow Ant",
-  "item.dangerzone.rainbow_ant_token": "Rainbow Ant Token",
-  "item.dangerzone.butterfly_spawn_egg": "Spawn Butterfly",
 
 
 
-  "block.dangerzone.butterfly_egg_ore": "Petrified Butterfly Ore",
-  "block.dangerzone.rainbow_ant_egg_ore": "Petrified Rainbow Ant Ore",
+
   "block.dangerzone.redrosewarrior_egg_ore": "Petrified RedRoseWarrior Ore",
 
   "block.dangerzone.amethyst_ore_block": "Amethyst Ore",
@@ -93,7 +87,6 @@
   "item.dangerzone.poppy_sword": "Poppy Sword",
   "item.dangerzone.cake_sword": "Cake Sword",
   "item.dangerzone.fire_cake_sword": "Fire Cake Sword",
-  "item.dangerzone.titanium_cake_sword": "Titanium Cake Sword",
 
 
   "entity.dangerzone.tewtiy": "Tewtiy",

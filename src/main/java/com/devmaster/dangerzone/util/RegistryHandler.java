@@ -32,8 +32,6 @@ public class RegistryHandler {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DangerZone.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DangerZone.MOD_ID);
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, DangerZone.MOD_ID);
-    public static final List<Biome> BIOMES = Lists.newArrayList();
-    public static final List<RegistryKey<Biome>> BIOME_KEYS = Lists.newArrayList();
 
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -78,6 +76,7 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<Butterfly>create(Butterfly::new, EntityClassification.AMBIENT)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "butterfly").toString()));
+
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
 
@@ -117,15 +116,6 @@ public class RegistryHandler {
 
     public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
 
-    public static final RegistryObject<Item> TERMITE_TOKEN = ITEMS.register("termite_token", TermiteToken::new);
-
-    public static final RegistryObject<Item> RAINBOW_ANT_TOKEN = ITEMS.register("rainbow_ant_token", RainbowAntToken::new);
-
-    public static final RegistryObject<SpawnEggItem> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg", () -> new SpawnEggItem(RegistryHandler.BUTTERFLY, new Item.Properties().group(DangerZone.TAB)));
-
-    public static final RegistryObject<DeadRainbowAnt> DEAD_RAINBOW_ANT = ITEMS.register("dead_rainbow_ant", DeadRainbowAnt::new);
-
-    public static final RegistryObject<DeadTermite> DEAD_TERMITE = ITEMS.register("dead_termite", DeadTermite::new);
 
     //Tools
     public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () ->
@@ -181,9 +171,6 @@ public class RegistryHandler {
 
     public static final RegistryObject<SwordItem> FIRE_CAKE_SWORD = ITEMS.register("fire_cake_sword", () ->
             new FireCakeSword(ModItemTier.FIRE_CAKE, 4, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
-
-    public static final RegistryObject<SwordItem> TITANIUM_CAKE_SWORD = ITEMS.register("titanium_cake_sword", () ->
-            new TitaniumCakeSword(ModItemTier.TITANIUM_CAKE, 6, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
 
     //Armor
     public static final RegistryObject<ArmorItem> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () ->
@@ -271,19 +258,12 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> CRYSTAL_GRASS = BLOCKS.register("crystal_grass", CrystalGrass::new);
 
-    public static final RegistryObject<Block> CRYSTAL_GRASSs = BLOCKS.register("rainbow_ant_net_filled", CrystalGrass::new);
-
     //Petrified animals blocks
-    public static final RegistryObject<Block> RAINBOW_ANT_EGG_ORE = BLOCKS.register("rainbow_ant_egg_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
 
-    public static final RegistryObject<Block> BUTTERFLY_EGG_ORE = BLOCKS.register("butterfly_egg_ore", BlockMobOre::new);
 
     //Block Items
     public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("amethyst_ore_block", () -> new BlockItemBase(AMETHYST_ORE_BLOCK.get()));
-
-    public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEMm = ITEMS.register("rainbow_ant_nest_filled", () -> new BlockItemBase(CRYSTAL_GRASSs.get()));
 
     public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItemBase(AMETHYST_BLOCK.get()));
 
@@ -322,12 +302,8 @@ public class RegistryHandler {
     //Petrified animals items
     public static final RegistryObject<Item> REDROSEWARRIOR_EGG_ORE_ITEM = ITEMS.register("redrosewarrior_egg_ore", () -> new BlockItemMobOre(REDROSEWARRIOR_EGG_ORE.get()));
 
-    public static final RegistryObject<Item> RAINBOW_ANT_EGG_ORE_ITEM = ITEMS.register("rainbow_ant_egg_ore", () -> new BlockItemMobOre(RAINBOW_ANT_EGG_ORE.get()));
-
-    public static final RegistryObject<Item> BUTTERFLY_EGG_ORE_ITEM = ITEMS.register("butterfly_egg_ore", () -> new BlockItemMobOre(BUTTERFLY_EGG_ORE.get()));
 
 
     //Dimensions
     public static final RegistryKey<World> VILLAGES = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "dimension/villages"));
-    public static final RegistryKey<World> CRYSTAL = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "dimension/crystal"));
 }
