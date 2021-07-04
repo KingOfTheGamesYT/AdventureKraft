@@ -9,7 +9,6 @@ import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.items.EmeraldPickaxe;
 import com.devmaster.dangerzone.tools.ModArmorMaterial;
 import com.devmaster.dangerzone.tools.ModItemTier;
-import com.google.common.collect.Lists;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -18,14 +17,10 @@ import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.List;
-
 
 public class RegistryHandler {
 
@@ -168,9 +163,6 @@ public class RegistryHandler {
 
     public static final RegistryObject<SwordItem> CAKE_SWORD = ITEMS.register("cake_sword", () ->
             new SwordItem(ModItemTier.CAKE, 0, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
-
-    public static final RegistryObject<SwordItem> FIRE_CAKE_SWORD = ITEMS.register("fire_cake_sword", () ->
-            new FireCakeSword(ModItemTier.FIRE_CAKE, 4, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
 
     //Armor
     public static final RegistryObject<ArmorItem> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () ->
