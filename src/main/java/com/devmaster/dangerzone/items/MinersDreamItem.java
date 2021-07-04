@@ -53,24 +53,7 @@ public class MinersDreamItem extends Item {
 						}
 
 
-						if(		world.getBlockState(newPos) == STONE.getDefaultState() || world.getBlockState(newPos) == GRANITE.getDefaultState() ||
-								world.getBlockState(newPos) == DIORITE.getDefaultState() || world.getBlockState(newPos) == ANDESITE.getDefaultState() ||
-								world.getBlockState(newPos) == GRAVEL.getDefaultState() || world.getBlockState(newPos) == DIRT.getDefaultState() ||
-								world.getBlockState(newPos) == COBBLESTONE.getDefaultState() || world.getBlockState(newPos) == LAVA.getDefaultState() ||
-								world.getBlockState(newPos) == SAND.getDefaultState() || world.getBlockState(newPos) == SANDSTONE.getDefaultState() ||
-								world.getBlockState(newPos) == TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == END_STONE.getDefaultState() ||
-								world.getBlockState(newPos) == RED_SAND.getDefaultState() || world.getBlockState(newPos) == RED_TERRACOTTA.getDefaultState() ||
-								world.getBlockState(newPos) == ORANGE_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == GRAY_TERRACOTTA.getDefaultState() ||
-								world.getBlockState(newPos) == WHITE_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == RED_SANDSTONE.getDefaultState() ||
-								world.getBlockState(newPos) == MAGENTA_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == LIGHT_BLUE_TERRACOTTA.getDefaultState() ||
-								world.getBlockState(newPos) == YELLOW_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == LIME_TERRACOTTA.getDefaultState() ||
-								world.getBlockState(newPos) == PINK_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == LIGHT_GRAY_TERRACOTTA.getDefaultState() ||
-								world.getBlockState(newPos) == CYAN_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == PURPLE_TERRACOTTA.getDefaultState() ||
-								world.getBlockState(newPos) == BLUE_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == BROWN_TERRACOTTA.getDefaultState() ||
-								world.getBlockState(newPos) == GREEN_TERRACOTTA.getDefaultState() || world.getBlockState(newPos) == RED_TERRACOTTA.getDefaultState() ||
-								world.getBlockState(newPos) == GRASS_BLOCK.getDefaultState() || world.getBlockState(newPos) == NETHERRACK.getDefaultState() ||
-								world.getBlockState(newPos) == SNOW.getDefaultState() || world.getBlockState(newPos) == SOUL_SAND.getDefaultState() ||
-								world.getBlockState(newPos) == BLACKSTONE.getDefaultState()) {
+						if (world.getBlockState(newPos).isIn(DangerZone.MINERS_DREAM_MINEABLE)) {
 
 
 							world.setBlockState(newPos, AIR.getDefaultState());

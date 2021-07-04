@@ -4,11 +4,14 @@ import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ITag;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -28,6 +31,7 @@ import org.apache.logging.log4j.Logger;
 public class DangerZone {
     public static final Logger LOGGER = LogManager.getLogger("DangerZone");
     public static final String MOD_ID = "dangerzone";
+    public static final ITag.INamedTag<Block> MINERS_DREAM_MINEABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":breakable");
 
     public DangerZone() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DZConfig.BUILDER.build());
@@ -67,9 +71,6 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarriorRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RAINBOWANT.get(), RainbowAntRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BUTTERFLY.get(), ButterflyRender::new);
-        RenderTypeLookup.setRenderLayer(RegistryHandler.KYANITE.get(), RenderType.getTranslucent());
-        RenderTypeLookup.setRenderLayer(RegistryHandler.CRYSTAL_GRASS.get(), RenderType.getTranslucent());
-
     }
 
     public static final ItemGroup TAB = new ItemGroup("dangerzonetab") {

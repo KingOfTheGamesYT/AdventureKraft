@@ -2,14 +2,10 @@ package com.devmaster.dangerzone.client.render;
 
 import com.devmaster.dangerzone.client.render.model.ButterflyModel;
 import com.devmaster.dangerzone.entity.Butterfly;
-import com.devmaster.dangerzone.misc.DangerZone;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.model.CatModel;
-import net.minecraft.entity.passive.AmbientEntity;
-import net.minecraft.entity.passive.CatEntity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.TextFormatting;
+
 
 
 public class ButterflyRender extends MobRenderer<Butterfly, ButterflyModel<Butterfly>> {

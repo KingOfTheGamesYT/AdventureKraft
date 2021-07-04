@@ -50,3 +50,11 @@ Brings DangerZone to Minecraft
 versionRange="[1.16.5,1.17]"
     ordering="NONE"
     side="BOTH"
+
+# Rises the limit for health, without it the mobs with above 512 health will have 512 health
+[[dependencies.dangerzone]]
+modId="attributefix"
+mandatory=false
+versionRange="[10.1.2,)"
+ordering="NONE"
+side="BOTH"

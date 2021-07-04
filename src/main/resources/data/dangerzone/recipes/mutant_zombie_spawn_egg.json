@@ -1,0 +1,47 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": {
+            "values": [
+              {
+                "value": {
+                  "modid": "mutantbeasts",
+                  "type": "forge:mod_loaded"
+                },
+                "type": "forge:not"
+              },
+              {
+                "item": "mutantbeasts:mutant_zombie_spawn_egg",
+                "type": "forge:item_exists"
+              },
+              {
+                "type": "forge:false"
+              }
+            ],
+            "type": "forge:and"
+          },
+          "type": "forge:not"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "dangerzone:redrosewarrior_egg_ore"
+          },
+          {
+            "item": "minecraft:water_bucket"
+          }
+        ],
+        "result":
+        {
+          "item": "mutantbeasts:mutant_zombie_spawn_egg",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

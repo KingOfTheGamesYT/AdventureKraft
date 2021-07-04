@@ -15,9 +15,9 @@ import net.minecraft.world.World;
 import java.util.List;
 
 
-public class DeadRainbowAnt extends Item {
+public class DeadTermite extends Item {
 
-    public DeadRainbowAnt() {
+    public DeadTermite() {
         super(new Properties().group(DangerZone.FOOD) .food(new Food.Builder()
                 .hunger(1)
                 .saturation(0.5F)
@@ -26,6 +26,6 @@ public class DeadRainbowAnt extends Item {
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A76" + "Is it really dead?" + "\u00A76"));
+        tooltip.add(new StringTextComponent("\u00A78" + "Yes! It's dead finally" + "\u00A78"));
     }
 }

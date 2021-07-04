@@ -32,10 +32,10 @@ public class Butterfly extends CreatureEntity {
     private BlockPos spawnPosition;
     private static final DataParameter<Integer> BUTTERFLY_TYPE = EntityDataManager.createKey(CatEntity.class, DataSerializers.VARINT);
     public static final Map<Integer, ResourceLocation> TEXTURE = Util.make(Maps.newHashMap(), (p_213410_0_) -> {
-        p_213410_0_.put(0, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly.png"));
-        p_213410_0_.put(1, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly2.png"));
-        p_213410_0_.put(2, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly3.png"));
-        p_213410_0_.put(4, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly4.png"));
+        p_213410_0_.put(0, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly_1.png"));
+        p_213410_0_.put(1, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly_2.png"));
+        p_213410_0_.put(2, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly_3.png"));
+        p_213410_0_.put(4, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly_4.png"));
     });
 
     public Butterfly(final EntityType<? extends Butterfly> type, final World worldIn) {
