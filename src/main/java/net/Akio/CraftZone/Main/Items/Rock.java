@@ -1,8 +1,8 @@
 package net.Akio.CraftZone.Main.Items;
 
 import net.Akio.CraftZone.Main.CraftZone;
-import net.Akio.CraftZone.Main.Mob.EntityRock;
-import net.Akio.CraftZone.Main.Mob.RockMob;
+import net.Akio.CraftZone.Main.Entities.EntityRock;
+import net.Akio.CraftZone.Main.Entities.RockMob;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;

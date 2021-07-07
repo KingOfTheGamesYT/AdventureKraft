@@ -5,20 +5,13 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.Akio.CraftZone.Main.Blocks.BlockMobOre;
-import net.Akio.CraftZone.Main.Blocks.Pizza;
-import net.Akio.CraftZone.Main.Blocks.Ruby_Block;
 import net.Akio.CraftZone.Main.Foods.*;
 import net.Akio.CraftZone.Main.Items.Critter_Cage;
 import net.Akio.CraftZone.Main.Items.MinersDream;
 import net.Akio.CraftZone.Main.Items.Rock;
-import net.Akio.CraftZone.Main.Materials.Amethyst;
-import net.Akio.CraftZone.Main.Materials.Ruby;
 import net.Akio.CraftZone.Main.Materials.Salt;
-import net.Akio.CraftZone.Main.Mob.EntityRock;
-import net.Akio.CraftZone.Main.Mob.RockMob;
 import net.Akio.CraftZone.Main.Tools.*;
 
 import net.Akio.CraftZone.Main.world.gen.Oregen;
@@ -26,7 +19,6 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBucketMilk;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
@@ -115,6 +107,7 @@ public class CraftZone {
 	public static Block Dried_Squid;
 	public static Block Dried_Slime;
 	public static Block Dried_Wolf;
+	public static Block apple_tree_leaves;
 
 	public static Item crystal_shards;
 	public static Item cheese;

@@ -1,4 +1,4 @@
-package net.Akio.CraftZone.Main.Mob.Stats;
+package net.Akio.CraftZone.Main.Entities.Stats;
 
 public class MobStats {
   public int health;

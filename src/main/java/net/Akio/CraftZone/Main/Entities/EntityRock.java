@@ -1,4 +1,4 @@
-package net.Akio.CraftZone.Main.Mob;
+package net.Akio.CraftZone.Main.Entities;
 
 import net.Akio.CraftZone.Main.CraftZone;
 import net.minecraft.block.Block;
