@@ -139,6 +139,7 @@ public class CraftZone {
 	public static Item zangesu;
 	public static Item katter_killer_jaw;
 	public static Item miners_dream;
+	public static Item blue_fish;
 
 
 
@@ -354,6 +355,8 @@ public class CraftZone {
 
 		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 
+		blue_fish = new Cheese(10, 4, 0.4F, true).setUnlocalizedName("Blue_Fish").setTextureName("dangerzone:blue_fish");
+		GameRegistry.registerItem(blue_fish, blue_fish.getUnlocalizedName().substring(5));
     }
     @EventHandler
     public void init(FMLInitializationEvent event){
