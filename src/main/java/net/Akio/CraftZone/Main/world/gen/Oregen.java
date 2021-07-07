@@ -22,9 +22,9 @@ public class Oregen implements IWorldGenerator {
     WorldGenMinable petrified_wolf;
     WorldGenMinable petrified_slime;
     WorldGenMinable petrified_pig;
-  /*  WorldGenMinable plutonium;
-    WorldGenMinable liquidHelium;
-*/
+   WorldGenMinable petrified_Iron_golem;
+  //  WorldGenMinable liquidHelium;
+
     public Oregen() {
         petrified_villager = new WorldGenMinable(CraftZone.Dried_Villager, 0, CraftZone.oreSizeVillager, Blocks.stone);
         petrified_cow = new WorldGenMinable(CraftZone.Dried_cow, 1, CraftZone.oreSizeCow, Blocks.stone);
@@ -35,7 +35,7 @@ public class Oregen implements IWorldGenerator {
         petrified_squid = new WorldGenMinable(CraftZone.Dried_Squid, 7, CraftZone.oreSizeSquid, Blocks.stone);
         petrified_wolf = new WorldGenMinable(CraftZone.Dried_Wolf, 8, CraftZone.oreSizeWolf, Blocks.stone);
         petrified_pig = new WorldGenMinable(CraftZone.Dried_pig, 9, CraftZone.oreSizePig, Blocks.stone);
-      //  plutonium = new WorldGenMinable(NCBlocks.blockOre, 6, NuclearCraft.oreSizePlutonium, Blocks.netherrack);
+        petrified_Iron_golem = new WorldGenMinable(CraftZone.Dried_Iron_Golem, 6, CraftZone.oreSizeIronGolem, Blocks.stone);
       //  liquidHelium = new WorldGenMinable(NCBlocks.blockHelium, 0, 8, Blocks.end_stone); */
     }
 
@@ -69,6 +69,10 @@ public class Oregen implements IWorldGenerator {
         if (CraftZone.oreGenCreeper)
         { for (int i = 0; i < CraftZone.oreRarityCreeper; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightCreeper); zPos = zChunk + random.nextInt(16);
             petrified_creeper.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.oreGenIronGolem)
+        { for (int i = 0; i < CraftZone.oreRarityIronGolem; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightIronGolem); zPos = zChunk + random.nextInt(16);
+            petrified_Iron_golem.generate(world, random, xPos, yPos, zPos); } }
 
         if (CraftZone.oreGenSlime)
         { for (int i = 0; i < CraftZone.oreRaritySlime; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightSlime); zPos = zChunk + random.nextInt(16);

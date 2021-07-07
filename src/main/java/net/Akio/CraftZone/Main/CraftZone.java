@@ -85,6 +85,10 @@ public class CraftZone {
 	public static int oreSizeWolf;
 	public static int oreRarityWolf;
 	public static int oreMaxHeightWolf;
+	public static boolean oreGenIronGolem;
+	public static int oreSizeIronGolem;
+	public static int oreRarityIronGolem;
+	public static int oreMaxHeightIronGolem;
 	public static Random Rand = new Random(151L);
     public static Item ruby_pickaxe;
     public static Item ultimate_pickaxe;
@@ -108,7 +112,7 @@ public class CraftZone {
 	public static Block Dried_Slime;
 	public static Block Dried_Wolf;
 	public static Block apple_tree_leaves;
-
+	public static Block Dried_Iron_Golem;
 	public static Item crystal_shards;
 	public static Item cheese;
     public static Item butter;
@@ -153,6 +157,11 @@ public class CraftZone {
 		oreSizeCow = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
 		oreRarityCow = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
 		oreMaxHeightCow = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+
+		oreGenIronGolem= config.getBoolean("Generation", "0.0: Petrified Iron Golem Ore", true, "");
+		oreSizeIronGolem = config.getInt("Chunk Size", "0.0: Petrified Iron Golem Ore", 3, 1, 100, "");
+		oreRarityIronGolem = config.getInt("Gen Rate", "0.0: Petrified Iron Golem Ore", 3, 1, 100, "");
+		oreMaxHeightIronGolem = config.getInt("Max Height", "0.0: Petrified Iron Golem Ore", 125, 1, 255, "");
 
 		oreGenPig = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
 		oreSizePig = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
@@ -207,8 +216,11 @@ public class CraftZone {
     	
     	Dried_cow = new BlockMobOre(1).setBlockName("Petrified_Cow_ore").setBlockTextureName("dangerzone:Ore_Cow");
     	GameRegistry.registerBlock(Dried_cow, Dried_cow.getUnlocalizedName().substring(5));
-    	
-    	Dried_Villager = new BlockMobOre(1).setBlockName("Petrified_Villager_Ore").setBlockTextureName("dangerzone:Ore_Villager");
+
+		Dried_Iron_Golem = new BlockMobOre(1).setBlockName("Petrified_Iron_Golem_ore").setBlockTextureName("dangerzone:Ore_Iron_Golem");
+		GameRegistry.registerBlock(Dried_Iron_Golem, Dried_Iron_Golem.getUnlocalizedName().substring(5));
+
+		Dried_Villager = new BlockMobOre(1).setBlockName("Petrified_Villager_Ore").setBlockTextureName("dangerzone:Ore_Villager");
     	GameRegistry.registerBlock(Dried_Villager, Dried_Villager.getUnlocalizedName().substring(5));
 
 		Dried_chicken = new BlockMobOre(1).setBlockName("Petrified_Chicken_ore").setBlockTextureName("dangerzone:Ore_Chicken");
