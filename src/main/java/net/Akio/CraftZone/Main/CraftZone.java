@@ -144,8 +144,12 @@ public class CraftZone {
 	public static Item katter_killer_jaw;
 	public static Item miners_dream;
 	public static Item blue_fish;
+	public static Block Dried_Snow_Golem;
 
-
+	public static boolean oreGenSnowGolem;
+	public static int oreSizeSnowGolem;
+	public static int oreRaritySnowGolem;
+	public static int oreMaxHeightSnowGolem;
 
 
 
@@ -208,7 +212,12 @@ public class CraftZone {
 		oreRarityVillager = config.getInt("Gen Rate", "0.0: Petrified Villager Ore", 3, 1, 100, "");
 		oreMaxHeightVillager = config.getInt("Max Height", "0.0: Petrified Villager Ore", 125, 1, 255, "");
 
-    //	uby = new Ruby().setUnlocalizedName("Ruby").setTextureName("dangerzone:ruby");
+		oreGenSnowGolem = config.getBoolean("Generation", "0.0: Petrified Snow Golem Ore", true, "");
+		oreSizeSnowGolem = config.getInt("Chunk Size", "0.0: Petrified Snow Golem Ore", 8, 1, 100, "");
+		oreRaritySnowGolem = config.getInt("Gen Rate", "0.0: Petrified Snow Golem Ore", 3, 1, 100, "");
+		oreMaxHeightSnowGolem = config.getInt("Max Height", "0.0: Petrified Snow Golem Ore", 125, 1, 255, "");
+
+		//	uby = new Ruby().setUnlocalizedName("Ruby").setTextureName("dangerzone:ruby");
     //	GameRegistry.registerItem(uby, uby.getUnlocalizedName().substring(5));
     	
     //	ruby_block = new Ruby_Block(0).setBlockName("Ruby_Block").setBlockTextureName("dangerzone:blockruby");
@@ -216,6 +225,9 @@ public class CraftZone {
     	
     	Dried_cow = new BlockMobOre(1).setBlockName("Petrified_Cow_ore").setBlockTextureName("dangerzone:Ore_Cow");
     	GameRegistry.registerBlock(Dried_cow, Dried_cow.getUnlocalizedName().substring(5));
+
+		Dried_Snow_Golem = new BlockMobOre(1).setBlockName("Petrified_Snow_Golem_ore").setBlockTextureName("dangerzone:Ore_Snow_Golem");
+		GameRegistry.registerBlock(Dried_Snow_Golem, Dried_Snow_Golem.getUnlocalizedName().substring(5));
 
 		Dried_Iron_Golem = new BlockMobOre(1).setBlockName("Petrified_Iron_Golem_ore").setBlockTextureName("dangerzone:Ore_Iron_Golem");
 		GameRegistry.registerBlock(Dried_Iron_Golem, Dried_Iron_Golem.getUnlocalizedName().substring(5));

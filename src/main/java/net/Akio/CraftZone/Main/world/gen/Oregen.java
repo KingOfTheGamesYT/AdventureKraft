@@ -23,7 +23,7 @@ public class Oregen implements IWorldGenerator {
     WorldGenMinable petrified_slime;
     WorldGenMinable petrified_pig;
    WorldGenMinable petrified_Iron_golem;
-  //  WorldGenMinable liquidHelium;
+    WorldGenMinable petrified_snow_golem;
 
     public Oregen() {
         petrified_villager = new WorldGenMinable(CraftZone.Dried_Villager, 0, CraftZone.oreSizeVillager, Blocks.stone);
@@ -36,7 +36,7 @@ public class Oregen implements IWorldGenerator {
         petrified_wolf = new WorldGenMinable(CraftZone.Dried_Wolf, 8, CraftZone.oreSizeWolf, Blocks.stone);
         petrified_pig = new WorldGenMinable(CraftZone.Dried_pig, 9, CraftZone.oreSizePig, Blocks.stone);
         petrified_Iron_golem = new WorldGenMinable(CraftZone.Dried_Iron_Golem, 6, CraftZone.oreSizeIronGolem, Blocks.stone);
-      //  liquidHelium = new WorldGenMinable(NCBlocks.blockHelium, 0, 8, Blocks.end_stone); */
+        petrified_snow_golem = new WorldGenMinable(CraftZone.Dried_Snow_Golem, 0, 8, Blocks.stone);
     }
 
     @Override
@@ -85,6 +85,10 @@ public class Oregen implements IWorldGenerator {
         if (CraftZone.oreGenWolf)
         { for (int i = 0; i < CraftZone.oreRarityWolf; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightWolf); zPos = zChunk + random.nextInt(16);
             petrified_wolf.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.oreGenSnowGolem)
+        { for (int i = 0; i < CraftZone.oreRaritySnowGolem; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightSnowGolem); zPos = zChunk + random.nextInt(16);
+            petrified_snow_golem.generate(world, random, xPos, yPos, zPos); } }
 
 
     }
