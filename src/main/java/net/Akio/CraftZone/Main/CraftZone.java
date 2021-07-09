@@ -147,7 +147,7 @@ public class CraftZone {
 	public static Item blue_fish;
 	public static Block Dried_Snow_Golem;
 	public static Item Snow_Golem_Spawn_Egg;
-
+	public static Item Iron_Golem_Spawn_Egg;
 	public static boolean oreGenSnowGolem;
 	public static int oreSizeSnowGolem;
 	public static int oreRaritySnowGolem;
@@ -285,6 +285,8 @@ public class CraftZone {
 		Snow_Golem_Spawn_Egg = (new CZSpawnEgg(10, 194)).setUnlocalizedName("Snow_Golem_Spawn_Egg").setTextureName("dangerzone:snow_golem_spawn_egg");
 		GameRegistry.registerItem(Snow_Golem_Spawn_Egg, Snow_Golem_Spawn_Egg.getUnlocalizedName().substring(5));
 
+		Iron_Golem_Spawn_Egg = (new CZSpawnEgg(10, 195)).setUnlocalizedName("Iron_Golem_Spawn_Egg").setTextureName("dangerzone:iron_golem_spawn_egg");
+		GameRegistry.registerItem(Iron_Golem_Spawn_Egg, Iron_Golem_Spawn_Egg.getUnlocalizedName().substring(5));
 
 		//emerald_pickaxe = new Emerald_Pickaxe(EmeraldPickaxe).setUnlocalizedName("Emerald_Pickaxe").setTextureName("dangerzone:emerald_pickaxe");
     	//GameRegistry.registerItem(emerald_pickaxe, emerald_pickaxe.getUnlocalizedName().substring(5));
@@ -407,8 +409,12 @@ public class CraftZone {
     //	GameRegistry.addRecipe(new ItemStack(ruby_block), new Object[] {"DDD", "DDD", "DDD", 'D', CraftZone.uby});
     	
     	GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 92), new Object[] {new ItemStack(CraftZone.Dried_cow), new ItemStack( Items.water_bucket)});
-    	
-    	GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 120), new Object[] {new ItemStack(CraftZone.Dried_Villager), new ItemStack( Items.water_bucket)});
+
+    	GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 194), new Object[] {new ItemStack(CraftZone.Dried_Snow_Golem), new ItemStack( Items.water_bucket)});
+
+    	GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 195), new Object[] {new ItemStack(CraftZone.Dried_Iron_Golem), new ItemStack( Items.water_bucket)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 120), new Object[] {new ItemStack(CraftZone.Dried_Villager), new ItemStack( Items.water_bucket)});
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 93), new Object[] {new ItemStack(CraftZone.Dried_chicken), new ItemStack( Items.water_bucket)});
 
