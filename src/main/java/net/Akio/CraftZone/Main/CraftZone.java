@@ -8,6 +8,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.Akio.CraftZone.Main.Blocks.BlockMobOre;
 import net.Akio.CraftZone.Main.Foods.*;
+import net.Akio.CraftZone.Main.Items.CZSpawnEgg;
 import net.Akio.CraftZone.Main.Items.Critter_Cage;
 import net.Akio.CraftZone.Main.Items.MinersDream;
 import net.Akio.CraftZone.Main.Items.Rock;
@@ -145,6 +146,7 @@ public class CraftZone {
 	public static Item miners_dream;
 	public static Item blue_fish;
 	public static Block Dried_Snow_Golem;
+	public static Item Snow_Golem_Spawn_Egg;
 
 	public static boolean oreGenSnowGolem;
 	public static int oreSizeSnowGolem;
@@ -280,8 +282,11 @@ public class CraftZone {
 		raw_crab = new Cheese(10, 4, 0.25F, true).setUnlocalizedName("Raw_Crab").setTextureName("dangerzone:raw_crab");
 		GameRegistry.registerItem(raw_crab, raw_crab.getUnlocalizedName().substring(5));
 
+		Snow_Golem_Spawn_Egg = (new CZSpawnEgg(10, 194)).setUnlocalizedName("Snow_Golem_Spawn_Egg").setTextureName("dangerzone:snow_golem_spawn_egg");
+		GameRegistry.registerItem(Snow_Golem_Spawn_Egg, Snow_Golem_Spawn_Egg.getUnlocalizedName().substring(5));
 
-    	//emerald_pickaxe = new Emerald_Pickaxe(EmeraldPickaxe).setUnlocalizedName("Emerald_Pickaxe").setTextureName("dangerzone:emerald_pickaxe");
+
+		//emerald_pickaxe = new Emerald_Pickaxe(EmeraldPickaxe).setUnlocalizedName("Emerald_Pickaxe").setTextureName("dangerzone:emerald_pickaxe");
     	//GameRegistry.registerItem(emerald_pickaxe, emerald_pickaxe.getUnlocalizedName().substring(5));
     	
     	emerald_hoe = new Emerald_Hoe(EmeraldMaterials).setUnlocalizedName("Emerald_Hoe").setTextureName("dangerzone:emerald_hoe");
