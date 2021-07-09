@@ -24,6 +24,7 @@ public class Oregen implements IWorldGenerator {
     WorldGenMinable petrified_pig;
    WorldGenMinable petrified_Iron_golem;
     WorldGenMinable petrified_snow_golem;
+    WorldGenMinable petrified_girl;
 
     public Oregen() {
         petrified_villager = new WorldGenMinable(CraftZone.Dried_Villager, 0, CraftZone.oreSizeVillager, Blocks.stone);
@@ -37,6 +38,8 @@ public class Oregen implements IWorldGenerator {
         petrified_pig = new WorldGenMinable(CraftZone.Dried_pig, 9, CraftZone.oreSizePig, Blocks.stone);
         petrified_Iron_golem = new WorldGenMinable(CraftZone.Dried_Iron_Golem, 6, CraftZone.oreSizeIronGolem, Blocks.stone);
         petrified_snow_golem = new WorldGenMinable(CraftZone.Dried_Snow_Golem, 0, 8, Blocks.stone);
+        petrified_girl = new WorldGenMinable(CraftZone.Dried_Girl, 0, CraftZone.oreSizeGirl, Blocks.stone);
+
     }
 
     @Override
@@ -49,6 +52,10 @@ public class Oregen implements IWorldGenerator {
         if (CraftZone.oreGenCow)
         { for (int i = 0; i < CraftZone.oreRarityCow; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightCow); zPos = zChunk + random.nextInt(16);
             petrified_cow.generate(world, random, xPos, yPos, zPos); } }
+
+        if (CraftZone.OreGenGirl)
+        { for (int i = 0; i < CraftZone.oreRarityGirl; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightGirl); zPos = zChunk + random.nextInt(16);
+            petrified_girl.generate(world, random, xPos, yPos, zPos); } }
 
         if (CraftZone.oreGenVillager)
         { for (int i = 0; i < CraftZone.oreRarityVillager; i++) { xPos = xChunk + random.nextInt(16); yPos = random.nextInt(CraftZone.oreMaxHeightVillager); zPos = zChunk + random.nextInt(16);

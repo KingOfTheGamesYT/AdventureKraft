@@ -152,7 +152,11 @@ public class CraftZone {
 	public static int oreSizeSnowGolem;
 	public static int oreRaritySnowGolem;
 	public static int oreMaxHeightSnowGolem;
-
+	public static Block Dried_Girl;
+	public static int oreSizeGirl;
+	public static int oreRarityGirl;
+	public static int oreMaxHeightGirl;
+	public static boolean OreGenGirl;
 
 
 	@EventHandler
@@ -163,6 +167,7 @@ public class CraftZone {
 		oreSizeCow = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
 		oreRarityCow = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
 		oreMaxHeightCow = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+
 
 		oreGenIronGolem= config.getBoolean("Generation", "0.0: Petrified Iron Golem Ore", true, "");
 		oreSizeIronGolem = config.getInt("Chunk Size", "0.0: Petrified Iron Golem Ore", 3, 1, 100, "");
@@ -204,11 +209,11 @@ public class CraftZone {
 		oreRarityCaveSpider = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
 		oreMaxHeightCaveSpider = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
 
-		/*oreGenGirl = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
+		OreGenGirl = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
 		oreSizeGirl = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
 		oreRarityGirl = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
 		oreMaxHeightGirl = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
-*/
+
 		oreGenVillager = config.getBoolean("Generation", "0.0: Petrified Villager Ore", true, "");
 		oreSizeVillager = config.getInt("Chunk Size", "0.0: Petrified Villager Ore", 8, 1, 100, "");
 		oreRarityVillager = config.getInt("Gen Rate", "0.0: Petrified Villager Ore", 3, 1, 100, "");
@@ -258,7 +263,10 @@ public class CraftZone {
 		Dried_Wolf = new BlockMobOre(1).setBlockName("Petrified_Wolf_ore").setBlockTextureName("dangerzone:Ore_Wolf");
 		GameRegistry.registerBlock(Dried_Wolf, Dried_Wolf.getUnlocalizedName().substring(5));
 
-    //	amethyst = new Amethyst().setUnlocalizedName("Amethyst").setTextureName("dangerzone:amethyst");
+		Dried_Girl = new BlockMobOre(1).setBlockName("Petrified_Girl_ore").setBlockTextureName("dangerzone:Ore_Girl");
+		GameRegistry.registerBlock(Dried_Girl, Dried_Girl.getUnlocalizedName().substring(5));
+
+		//	amethyst = new Amethyst().setUnlocalizedName("Amethyst").setTextureName("dangerzone:amethyst");
     //	GameRegistry.registerItem(amethyst, amethyst.getUnlocalizedName().substring(5));
     	
     	fire_fish = new Fire_Fish(10, 8, 0.60F, true).setUnlocalizedName("Fire_Fish").setTextureName("dangerzone:fire_fish");
