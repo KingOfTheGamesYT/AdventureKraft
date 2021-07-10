@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.Akio.CraftZone.Main.Blocks.BlockMobOre;
+import net.Akio.CraftZone.Main.Blocks.ExtremeTorch;
 import net.Akio.CraftZone.Main.Foods.*;
 import net.Akio.CraftZone.Main.Items.CZSpawnEgg;
 import net.Akio.CraftZone.Main.Items.Critter_Cage;
@@ -157,6 +158,7 @@ public class CraftZone {
 	public static int oreRarityGirl;
 	public static int oreMaxHeightGirl;
 	public static boolean OreGenGirl;
+	public static Block Extreme_Torch;
 
 
 	@EventHandler
@@ -232,6 +234,9 @@ public class CraftZone {
     	
     	Dried_cow = new BlockMobOre(1).setBlockName("Petrified_Cow_ore").setBlockTextureName("dangerzone:Ore_Cow");
     	GameRegistry.registerBlock(Dried_cow, Dried_cow.getUnlocalizedName().substring(5));
+
+		Extreme_Torch = new ExtremeTorch(1).setBlockName("Extreme_Torch").setBlockTextureName("dangerzone:Extreme_Torch");
+		GameRegistry.registerBlock(Extreme_Torch, Extreme_Torch.getUnlocalizedName().substring(5));
 
 		Dried_Snow_Golem = new BlockMobOre(1).setBlockName("Petrified_Snow_Golem_ore").setBlockTextureName("dangerzone:Ore_Snow_Golem");
 		GameRegistry.registerBlock(Dried_Snow_Golem, Dried_Snow_Golem.getUnlocalizedName().substring(5));
