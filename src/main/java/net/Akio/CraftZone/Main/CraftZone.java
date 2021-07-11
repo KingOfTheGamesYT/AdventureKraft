@@ -11,10 +11,7 @@ import net.Akio.CraftZone.Main.Blocks.CreeperRepellent;
 import net.Akio.CraftZone.Main.Blocks.ExtremeTorch;
 import net.Akio.CraftZone.Main.Blocks.KrakenRepellent;
 import net.Akio.CraftZone.Main.Foods.*;
-import net.Akio.CraftZone.Main.Items.CZSpawnEgg;
-import net.Akio.CraftZone.Main.Items.Critter_Cage;
-import net.Akio.CraftZone.Main.Items.MinersDream;
-import net.Akio.CraftZone.Main.Items.Rock;
+import net.Akio.CraftZone.Main.Items.*;
 import net.Akio.CraftZone.Main.Materials.Salt;
 import net.Akio.CraftZone.Main.Tools.*;
 
@@ -164,6 +161,7 @@ public class CraftZone {
 	public static Block Kraken_Repellent;
 	public static Block Creeper_Repellent;
 	public static Item Girl_Spawn_Egg;
+	public static Item Creeper_Launcher;
 
 
 	@EventHandler
@@ -415,6 +413,9 @@ public class CraftZone {
 
 		blue_fish = new Cheese(10, 4, 0.4F, true).setUnlocalizedName("Blue_Fish").setTextureName("dangerzone:blue_fish");
 		GameRegistry.registerItem(blue_fish, blue_fish.getUnlocalizedName().substring(5));
+
+		Creeper_Launcher = new CreeperLauncher(10).setUnlocalizedName("Creeper_Launcher").setTextureName("dangerzone:creeper_launcher");
+		GameRegistry.registerItem(Creeper_Launcher, Creeper_Launcher.getUnlocalizedName().substring(5));
     }
     @EventHandler
     public void init(FMLInitializationEvent event){
