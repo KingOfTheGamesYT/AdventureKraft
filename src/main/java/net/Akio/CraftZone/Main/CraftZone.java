@@ -163,6 +163,7 @@ public class CraftZone {
 	public static Block Extreme_Torch;
 	public static Block Kraken_Repellent;
 	public static Block Creeper_Repellent;
+	public static Item Girl_Spawn_Egg;
 
 
 	@EventHandler
@@ -308,6 +309,9 @@ public class CraftZone {
 		Snow_Golem_Spawn_Egg = (new CZSpawnEgg(10, 194)).setUnlocalizedName("Snow_Golem_Spawn_Egg").setTextureName("dangerzone:snow_golem_spawn_egg");
 		GameRegistry.registerItem(Snow_Golem_Spawn_Egg, Snow_Golem_Spawn_Egg.getUnlocalizedName().substring(5));
 
+		Girl_Spawn_Egg = (new CZSpawnEgg(10, 194)).setUnlocalizedName("Girl_Spawn_Egg").setTextureName("dangerzone:girl_spawn_egg");
+		GameRegistry.registerItem(Girl_Spawn_Egg, Girl_Spawn_Egg.getUnlocalizedName().substring(5));
+
 		Iron_Golem_Spawn_Egg = (new CZSpawnEgg(10, 195)).setUnlocalizedName("Iron_Golem_Spawn_Egg").setTextureName("dangerzone:iron_golem_spawn_egg");
 		GameRegistry.registerItem(Iron_Golem_Spawn_Egg, Iron_Golem_Spawn_Egg.getUnlocalizedName().substring(5));
 
@@ -452,6 +456,8 @@ public class CraftZone {
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 90), new Object[] {new ItemStack(CraftZone.Dried_pig), new ItemStack( Items.water_bucket)});
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 95), new Object[] {new ItemStack(CraftZone.Dried_Wolf), new ItemStack( Items.water_bucket)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(CraftZone.Girl_Spawn_Egg), new Object[] {new ItemStack(CraftZone.Dried_Girl), new ItemStack( Items.water_bucket)});
 
 		//GameRegistry.addShapelessRecipe(new ItemStack(butter_candy, 4), new Object[]{"B", "U", 'B', CraftZone.butter, 'U', Items.sugar});
 		GameRegistry.addShapelessRecipe(new ItemStack(butter_candy,4), new Object[] {new ItemStack(CraftZone.butter,1), new ItemStack(Items.sugar )});
