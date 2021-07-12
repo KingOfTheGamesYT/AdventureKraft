@@ -461,7 +461,10 @@ public class CraftZone {
 
 		GameRegistry.addShapelessRecipe(new ItemStack(CraftZone.Girl_Spawn_Egg), new Object[] {new ItemStack(CraftZone.Dried_Girl), new ItemStack( Items.water_bucket)});
 
-		//GameRegistry.addShapelessRecipe(new ItemStack(butter_candy, 4), new Object[]{"B", "U", 'B', CraftZone.butter, 'U', Items.sugar});
+		GameRegistry.addRecipe(new ItemStack(Mob_Launcher, 4), new Object[]{ "RGB", 'R', Items.redstone, 'G', Items.paper, 'B', Items.stick});
+
+		GameRegistry.addRecipe(new ItemStack(Mob_Launcher, 4), new Object[]{ "R", "G", "B", 'R', Items.redstone, 'G', Items.paper, 'B', Items.stick});
+
 		GameRegistry.addShapelessRecipe(new ItemStack(butter_candy,4), new Object[] {new ItemStack(CraftZone.butter,1), new ItemStack(Items.sugar )});
 	}
 
