@@ -161,7 +161,8 @@ public class CraftZone {
 	public static Block Kraken_Repellent;
 	public static Block Creeper_Repellent;
 	public static Item Girl_Spawn_Egg;
-	public static Item Creeper_Launcher;
+	public static Item Mob_Launcher;
+
 
 
 	@EventHandler
@@ -414,8 +415,8 @@ public class CraftZone {
 		blue_fish = new Cheese(10, 4, 0.4F, true).setUnlocalizedName("Blue_Fish").setTextureName("dangerzone:blue_fish");
 		GameRegistry.registerItem(blue_fish, blue_fish.getUnlocalizedName().substring(5));
 
-		Creeper_Launcher = new CreeperLauncher(10).setUnlocalizedName("Creeper_Launcher").setTextureName("dangerzone:creeper_launcher");
-		GameRegistry.registerItem(Creeper_Launcher, Creeper_Launcher.getUnlocalizedName().substring(5));
+		Mob_Launcher = new MobLauncher(10).setUnlocalizedName("Mob_Launcher").setTextureName("dangerzone:mob_launcher");
+		GameRegistry.registerItem(Mob_Launcher, Mob_Launcher.getUnlocalizedName().substring(5));
     }
     @EventHandler
     public void init(FMLInitializationEvent event){

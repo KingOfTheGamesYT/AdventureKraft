@@ -3,20 +3,19 @@ package net.Akio.CraftZone.Main.Items;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class CreeperLauncher extends Item {
-    public CreeperLauncher(int i) {
+public class MobLauncher extends Item {
+    public MobLauncher(int i) {
         setCreativeTab(CreativeTabs.tabRedstone);
         setMaxDamage(1);
 
     }
 
     public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
-        if (entity instanceof EntityCreeper) {
+        if (entity instanceof Entity) {
             for(int var3 = 0; var3 < 6; ++var3) {
                 float f1 = player.worldObj.rand.nextFloat() - player.worldObj.rand.nextFloat();
                 float f2 = 0.25F + player.worldObj.rand.nextFloat() * 6.0F;
