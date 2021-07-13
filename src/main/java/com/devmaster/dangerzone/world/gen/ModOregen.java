@@ -26,6 +26,7 @@ public class ModOregen {
     public static ConfiguredFeature<?, ?> SAPPHIRE_ORE;
     public static ConfiguredFeature<?, ?> TITANIUM_ORE;
     public static ConfiguredFeature<?, ?> REDROSEWARRIOR_ORE;
+    public static ConfiguredFeature<?, ?> MUTANT_ZOMBIE_ORE;
 
 
 
@@ -41,6 +42,12 @@ public class ModOregen {
 
         REDROSEWARRIOR_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.REDROSEWARRIOR_EGG_ORE.get().getDefaultState(),3))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(3));
+
+        MUTANT_ZOMBIE_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.MUTANT_ZOMBIE_EGG_ORE.get().getDefaultState(),3))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
                         .square()
                         .chance/* repeat */(3));
@@ -68,6 +75,7 @@ public class ModOregen {
         Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
         Registry.register(registry, new ResourceLocation("titanium_ore_block"), TITANIUM_ORE);
         Registry.register(registry, new ResourceLocation("redrosewarrior_egg_ore"), REDROSEWARRIOR_ORE);
+        Registry.register(registry, new ResourceLocation("mutant_zombie_egg_ore"), MUTANT_ZOMBIE_ORE);
 
     }
 
@@ -82,6 +90,7 @@ public class ModOregen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TITANIUM_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, REDROSEWARRIOR_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, MUTANT_ZOMBIE_ORE);
 
     }
 

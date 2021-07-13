@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dangerzone:blocks/egg/mutant_zombie_egg_ore"
+  }
+}
