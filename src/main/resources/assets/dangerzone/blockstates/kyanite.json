@@ -1,8 +1,5 @@
-
 {
   "variants": {
-    "": {
-      "model": "dangerzone:block/kyanite"
-    }
+    "": {"model": "dangerzone:block/kyanite"}
   }
 }

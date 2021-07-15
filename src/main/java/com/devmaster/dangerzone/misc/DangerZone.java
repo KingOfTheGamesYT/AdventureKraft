@@ -60,6 +60,8 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarrior.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.BUTTERFLY.get(), Butterfly.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BRUTALFLY.get(), Tewtiy.getAttributes().create());
 
         });
     }
@@ -71,6 +73,11 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarriorRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RAINBOWANT.get(), RainbowAntRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BUTTERFLY.get(), ButterflyRender::new);
+        RenderTypeLookup.setRenderLayer(RegistryHandler.KYANITE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.CRYSTAL_GRASS .get(), RenderType.getCutout());
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BRUTALFLY.get(), BrutalflyRender::new);
+
+
     }
 
     public static final ItemGroup TAB = new ItemGroup("dangerzonetab") {
