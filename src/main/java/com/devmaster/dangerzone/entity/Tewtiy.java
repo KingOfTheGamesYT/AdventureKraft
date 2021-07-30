@@ -32,11 +32,11 @@ public class Tewtiy extends CreatureEntity {
 
     }
 
-
     @Override
-    public void setCustomName(@Nullable ITextComponent name) {
-        super.setCustomName(name);
+    public boolean getAlwaysRenderNameTagForRender() {
+        return true;
     }
+
 
     public static boolean canTewtiySpawn(EntityType<? extends Tewtiy> animal, IWorld world, SpawnReason reason, BlockPos pos, Random random) {
         return world.getBlockState(pos.south()).equals(Blocks.GRASS_BLOCK) && world.canSeeSky(pos);
@@ -68,7 +68,6 @@ public class Tewtiy extends CreatureEntity {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
-        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, Tewtiy.class, true));
         this.goalSelector.addGoal(5,new RandomWalkingGoal(this, 1.0));
 
     }

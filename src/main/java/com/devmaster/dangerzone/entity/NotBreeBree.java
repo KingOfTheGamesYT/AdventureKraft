@@ -49,7 +49,10 @@ public class NotBreeBree extends CreatureEntity {
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 8.0D)
                 .createMutableAttribute(Attributes.ARMOR, 3.5F);
     }
-
+    @Override
+    public boolean getAlwaysRenderNameTagForRender() {
+        return true;
+    }
 
     @Override
     protected void registerGoals() {
@@ -67,7 +70,6 @@ public class NotBreeBree extends CreatureEntity {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
-        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Tewtiy.class, true));
         this.goalSelector.addGoal(5,new RandomWalkingGoal(this, 1.0));
 

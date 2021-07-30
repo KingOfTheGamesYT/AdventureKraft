@@ -11,6 +11,7 @@ import com.devmaster.dangerzone.tools.ModArmorMaterial;
 import com.devmaster.dangerzone.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
+import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.RegistryKey;
@@ -39,19 +40,19 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<Tewtiy>> TEWTIY = ENTITIES
             .register("tewtiy",
                     () -> EntityType.Builder.<Tewtiy>create(Tewtiy::new, EntityClassification.AMBIENT)
-                            .size(0.9f, 1.3f)
+                            .size(0.9f, 1.9f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "tewtiy").toString()));
 
     public static final RegistryObject<EntityType<NotBreeBree>> NOTBREEBREE = ENTITIES
             .register("notbreebree",
                     () -> EntityType.Builder.<NotBreeBree>create(NotBreeBree::new, EntityClassification.AMBIENT)
-                            .size(0.9f, 1.3f)
+                            .size(0.9f, 1.9f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "notbreebree").toString()));
 
     public static final RegistryObject<EntityType<StampyLongNose>> STAMPYLONGNOSE = ENTITIES
             .register("stampylongnose",
                     () -> EntityType.Builder.<StampyLongNose>create(StampyLongNose::new, EntityClassification.AMBIENT)
-                            .size(0.9f, 1.3f)
+                            .size(0.9f, 1.9f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "stampylongnose").toString()));
 
     public static final RegistryObject<EntityType<RedRoseWarrior>> REDROSEWARRIOR = ENTITIES
@@ -71,6 +72,14 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<Butterfly>create(Butterfly::new, EntityClassification.AMBIENT)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "butterfly").toString()));
+
+    public static final RegistryObject<EntityType<Brutalfly>> BRUTALFLY = ENTITIES
+            .register("brutalfly",
+                    () -> EntityType.Builder.<Brutalfly>create(Brutalfly::new, EntityClassification.CREATURE)
+                            .immuneToFire()
+                            .size(1.0F, 0.5F)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "brutalfly").toString()));
+
 
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
