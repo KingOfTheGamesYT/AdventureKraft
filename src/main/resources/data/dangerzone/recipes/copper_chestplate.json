@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x x",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "dangerzone:copper_lump"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:copper_chestplate",
+    "count": 1
+  }
+}

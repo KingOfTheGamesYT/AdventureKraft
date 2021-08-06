@@ -84,6 +84,8 @@ public class RegistryHandler {
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
 
+    public static final RegistryObject<Item> COPPER_LUMP = ITEMS.register("copper_lump", CopperLump::new);
+
     public static final RegistryObject<Item> TITANIUM_Hardened_CAKE = ITEMS.register("titanium_hardened_cake", TitaniumHardenedCake::new);
 
     public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget", TitaniumNugget::new);
@@ -221,6 +223,18 @@ public class RegistryHandler {
 
     public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
             new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () ->
+            new ArmorItem(ModArmorMaterial.COPPPER, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.COPPPER, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () ->
+            new ArmorItem(ModArmorMaterial.COPPPER, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () ->
+            new ArmorItem(ModArmorMaterial.COPPPER, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
 
     //Blocks
     public static final RegistryObject<Block> AMETHYST_ORE_BLOCK = BLOCKS.register("amethyst_ore_block", AmethystOreBlock::new);

@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-    AMETHYST(DangerZone.MOD_ID + ":amethyst", 100, new int[] { 4, 7, 8, 3 }, 40,
+    AMETHYST(DangerZone.MOD_ID + ":amethyst", 100, new int[] { 4, 7, 8, 3 }, 40, //boots, pants, chestplate, helmet
              SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.AMETHYST.get());}),
 
     SAPPHIRE(DangerZone.MOD_ID + ":sapphire", 90, new int[] { 3, 7, 8, 3 }, 40,
@@ -26,7 +26,11 @@ public enum ModArmorMaterial implements IArmorMaterial {
     SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(Items.LAPIS_LAZULI.getItem());}),
 
     EMERALD(DangerZone.MOD_ID + ":emerald", 90, new int[] { 3, 6, 8, 3 }, 60,
-    SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(Items.EMERALD.getItem());});
+    SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(Items.EMERALD.getItem());}),
+
+    COPPPER(DangerZone.MOD_ID + ":copper", 46, new int[] { 33, 25, 35, 25 }, 6,
+    SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.COPPER_LUMP.get());});
+
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] {11, 16, 15, 13};
     private final String name;
