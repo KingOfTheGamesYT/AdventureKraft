@@ -84,6 +84,8 @@ public class RegistryHandler {
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
 
+    public static final RegistryObject<Item> CATS_EYE = ITEMS.register("cats_eye", CatsEye::new);
+
     public static final RegistryObject<Item> COPPER_LUMP = ITEMS.register("copper_lump", CopperLump::new);
 
     public static final RegistryObject<Item> TITANIUM_Hardened_CAKE = ITEMS.register("titanium_hardened_cake", TitaniumHardenedCake::new);
@@ -235,6 +237,18 @@ public class RegistryHandler {
 
     public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () ->
             new ArmorItem(ModArmorMaterial.COPPPER, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem> CATS_EYE_HELMET = ITEMS.register("cats_eye_helmet", () ->
+            new ArmorItem(ModArmorMaterial.CATS_EYE, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem> CATS_EYE_CHESTPLATE = ITEMS.register("cats_eye_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.CATS_EYE, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem> CATS_EYE_LEGGINGS = ITEMS.register("cats_eye_leggings", () ->
+            new ArmorItem(ModArmorMaterial.CATS_EYE, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+
+    public static final RegistryObject<ArmorItem> CATS_EYE_BOOTS = ITEMS.register("cats_eye_boots", () ->
+            new ArmorItem(ModArmorMaterial.CATS_EYE, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
 
     //Blocks
     public static final RegistryObject<Block> AMETHYST_ORE_BLOCK = BLOCKS.register("amethyst_ore_block", AmethystOreBlock::new);
