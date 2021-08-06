@@ -21,6 +21,6 @@ public class CopperLump extends Item {
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A76" + "A lump of copper, can also be used as a copper ingot" + "\u00A76"));
+        tooltip.add(new StringTextComponent("\u00A76" + "Makes some of the best armor in the game" + "\u00A76"));
     }
 }
