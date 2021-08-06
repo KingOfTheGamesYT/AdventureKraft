@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    "x x",
+    "x x"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "dangerzone:cats_eye"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:cats_eye_boots",
+    "count": 1
+  }
+}
