@@ -46,7 +46,7 @@ public class RedRoseWarrior extends CreatureEntity {
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 40000)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 600)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.22D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 18);
     }
