@@ -30,7 +30,7 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "dangerzone:redrosewarrior_egg_ore"
+            "item": "dangerzone:mutant_zombie_egg_ore"
           },
           {
             "item": "minecraft:water_bucket"
