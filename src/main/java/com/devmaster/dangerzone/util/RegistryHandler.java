@@ -80,6 +80,12 @@ public class RegistryHandler {
                             .size(1.0F, 0.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "brutalfly").toString()));
 
+    public static final RegistryObject<EntityType<Ent>> ENT = ENTITIES
+            .register("ent",
+                    () -> EntityType.Builder.<Ent>create(Ent::new, EntityClassification.CREATURE)
+                            .size(1.0F, 3.5F)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "ent").toString()));
+
 
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
@@ -96,7 +102,6 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> SALT = ITEMS.register("salt", Salt::new);
 
-    public static final RegistryObject<FireFish> FIRE_FISH = ITEMS.register("fire_fish", FireFish::new);
 
     public static final RegistryObject<CandyCane> CANDY_CANE = ITEMS.register("candy_cane", CandyCane::new);
 
@@ -120,7 +125,6 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
 
-    public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
 
     public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
 

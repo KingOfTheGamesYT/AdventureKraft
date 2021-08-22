@@ -30,6 +30,11 @@ public class DZConfig {
         public final ForgeConfigSpec.IntValue Tewityweight;
         public final ForgeConfigSpec.ConfigValue<List<? extends String>> Tewityinclude;
         public final ForgeConfigSpec.ConfigValue<List<? extends String>> Tewityexclude;
+        public final ForgeConfigSpec.IntValue Entmin;
+        public final ForgeConfigSpec.IntValue Entmax;
+        public final ForgeConfigSpec.IntValue Entweight;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> Entinclude;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> Entexclude;
 
         Spawn(ForgeConfigSpec.Builder builder) {
             builder.push("spawn chances");
@@ -43,6 +48,9 @@ public class DZConfig {
             Tewitymin = builder.defineInRange("Tewity Min", 1, 0, 64);
             Tewitymax = builder.defineInRange("Tewity Max", 4, 0, 64);
             Tewityweight = builder.defineInRange("Tewity Weight", 7, 0, 100);
+            Entmin = builder.defineInRange("Ent Min", 1, 0, 64);
+            Entmax = builder.defineInRange("Ent Max", 4, 0, 64);
+            Entweight = builder.defineInRange("Ent Weight", 7, 0, 100);
             builder.pop();
 
             builder.push("spawnable biomes");
@@ -52,6 +60,8 @@ public class DZConfig {
             Tewityinclude = builder.defineList("exclude Tewity", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             NotBreeBreeinclude = builder.defineList("include NotBreeBree", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             NotBreeBreeexclude = builder.defineList("exclude NotBreeBree", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            Entinclude = builder.defineList("include Ent", Arrays.asList( MOUNTAIN.toString(), FOREST.toString(), SAVANNA.toString(), SWAMP.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            Entexclude = builder.defineList("exclude Ent", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             builder.pop();
 
 

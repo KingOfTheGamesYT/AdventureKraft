@@ -60,8 +60,8 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarrior.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.BUTTERFLY.get(), Butterfly.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.BRUTALFLY.get(), Tewtiy.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BRUTALFLY.get(), Brutalfly.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ENT.get(), Ent.getAttributes().create());
 
         });
     }
@@ -76,6 +76,7 @@ public class DangerZone {
         RenderTypeLookup.setRenderLayer(RegistryHandler.KYANITE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.CRYSTAL_GRASS .get(), RenderType.getCutout());
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BRUTALFLY.get(), BrutalflyRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ENT.get(), EntRender::new);
 
 
     }
@@ -112,7 +113,7 @@ public class DangerZone {
 
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.FIRE_FISH.get());
+            return new ItemStack(RegistryHandler.BUTTER.get());
         }
     };
     public static final ItemGroup ARMOR = new ItemGroup("dangerzonearmory") {

@@ -19,6 +19,7 @@ public class ClientEventBusSubscriber {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarriorRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RAINBOWANT.get(), RainbowAntRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BUTTERFLY.get(), ButterflyRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ENT.get(), EntRender::new);
 
     }
 }
