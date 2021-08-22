@@ -39,17 +39,17 @@ public class DZConfig {
         Spawn(ForgeConfigSpec.Builder builder) {
             builder.push("spawn chances");
             builder.comment("Configure youtubers spawn weight & min/max group size. Set weight to 0 to disable.");
-            NotBreeBreemin = builder.defineInRange("NotBreeBree Min", 1, 0, 64);
-            NotBreeBreemax = builder.defineInRange("NotBreeBree Max", 4, 0, 64);
+            NotBreeBreemin = builder.defineInRange("NotBreeBree Min", 1, 0, 640);
+            NotBreeBreemax = builder.defineInRange("NotBreeBree Max", 2, 0, 640);
             NotBreeBreeweight = builder.defineInRange("NotBreeBree Weight", 7, 0, 100);
             StampyLongNosemin = builder.defineInRange("StampyLongNose Min", 1, 0, 64);
-            StampyLongNosemax = builder.defineInRange("StampyLongNose Max", 4, 0, 64);
+            StampyLongNosemax = builder.defineInRange("StampyLongNose Max", 2, 0, 64);
             StampyLongNoseweight = builder.defineInRange("StampyLongNose Weight", 7, 0, 100);
-            Tewitymin = builder.defineInRange("Tewity Min", 1, 0, 64);
-            Tewitymax = builder.defineInRange("Tewity Max", 4, 0, 64);
+            Tewitymin = builder.defineInRange("Tewity Min", 1, 0, 640);
+            Tewitymax = builder.defineInRange("Tewity Max", 2, 0, 640);
             Tewityweight = builder.defineInRange("Tewity Weight", 7, 0, 100);
             Entmin = builder.defineInRange("Ent Min", 1, 0, 64);
-            Entmax = builder.defineInRange("Ent Max", 4, 0, 64);
+            Entmax = builder.defineInRange("Ent Max", 1, 0, 64);
             Entweight = builder.defineInRange("Ent Weight", 7, 0, 100);
             builder.pop();
 

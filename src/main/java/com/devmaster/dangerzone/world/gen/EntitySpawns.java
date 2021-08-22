@@ -43,10 +43,10 @@ public class EntitySpawns {
                     if (biomeTypes.stream().noneMatch(StampyLongNoseexcludeList::contains) && biomeTypes.stream().anyMatch(StampyLongNoseincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), DZConfig.SPAWN.StampyLongNoseweight.get(), DZConfig.SPAWN.StampyLongNosemin.get(), DZConfig.SPAWN.StampyLongNosemax.get()));
                     }
-                    if (biomeTypes.stream().noneMatch(TewityexcludeList::contains) && biomeTypes.stream().anyMatch(TewityincludeList::contains)) {
+                    if (biomeTypes.stream().noneMatch(excludeList::contains) && biomeTypes.stream().anyMatch(includeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.TEWTIY.get(), DZConfig.SPAWN.Tewityweight.get(), DZConfig.SPAWN.Tewitymin.get(), DZConfig.SPAWN.Tewitymax.get()));
                     }
-                    if (biomeTypes.stream().noneMatch(excludeList::contains) && biomeTypes.stream().anyMatch(includeList::contains)) {
+                    if (biomeTypes.stream().noneMatch(excludeList::contains) && biomeTypes.stream().anyMatch(EntincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.ENT.get(), DZConfig.SPAWN.Entweight.get(), DZConfig.SPAWN.Entmin.get(), DZConfig.SPAWN.Entmax.get()));
                     }
                 } else {
