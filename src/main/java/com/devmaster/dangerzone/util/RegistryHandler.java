@@ -164,7 +164,7 @@ public class RegistryHandler {
             new PickaxeItem(ModItemTier.SAPPHIRE, 16, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
 
     public static final RegistryObject<SwordItem> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () ->
-            new SwordItem(ModItemTier.SAPPHIRE, 18, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+            new SwordItem(ModItemTier.SAPPHIRE, 17, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
 
     public static final RegistryObject<AxeItem> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", () ->
             new AxeItem(ModItemTier.SAPPHIRE, 17, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
