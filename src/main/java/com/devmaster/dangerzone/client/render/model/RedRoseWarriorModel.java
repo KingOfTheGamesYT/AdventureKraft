@@ -10,6 +10,8 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.CreatureEntity;
+import net.minecraft.util.HandSide;
+import net.minecraft.util.math.MathHelper;
 
 public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<RedRoseWarrior> {
     private final ModelRenderer head;
@@ -112,6 +114,35 @@ public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<R
 
     @Override
     public void setRotationAngles(RedRoseWarrior entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            boolean flag = entityIn.getTicksElytraFlying() > 4;
+            boolean flag1 = entityIn.isActualySwimming();
+            this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
+            if (flag) {
+                this.head.rotateAngleX = (-(float)Math.PI / 4F);
+                if (flag1) {
+                }
+            } else {
+                this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
+            }
+
+            this.head.rotateAngleY = 0.0F;
+
+
+        this.tail.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
+        if (flag) {
+            this.tail.rotateAngleX = (-(float)Math.PI / 4F);
+            if (flag1) {
+            }
+        } else {
+            this.tail.rotateAngleX = headPitch * ((float)Math.PI / 180F);
+        }
+
+        this.tail.rotateAngleY = 0.0F;
+
+        this.leg1.rotateAngleX = MathHelper.cos(limbSwing * 2.7F) * 3.1415927F * 0.45F * limbSwingAmount;
+        this.leg2.rotateAngleX = this.leg3.rotateAngleX;
+        this.leg3.rotateAngleX = this.leg4.rotateAngleX;
+        this.leg4.rotateAngleX = this.leg1.rotateAngleX;
 
     }
 
