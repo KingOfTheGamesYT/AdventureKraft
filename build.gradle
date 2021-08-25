@@ -96,6 +96,7 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.1.13'
 
 
+//project name, project id, file id
 
     implementation fg.deobf("curse.maven:baubles-366844:3339230")
     implementation fg.deobf("curse.maven:mutant_beasts-336272:3131604")
