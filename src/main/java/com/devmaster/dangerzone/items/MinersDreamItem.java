@@ -48,7 +48,7 @@ public class MinersDreamItem extends Item {
 						}
 
 						BlockPos topPos = new BlockPos(newPos.getX(), newPos.getY() + 1, newPos.getZ());
-						if(topPos.getY() <= 50 &&world.getBlockState(topPos) == AIR.getDefaultState() || world.getBlockState(topPos) == WATER.getDefaultState() || world.getBlockState(topPos) == LAVA.getDefaultState()) {
+						if(topPos.getY() <= 14 &&world.getBlockState(topPos) == AIR.getDefaultState() || world.getBlockState(topPos) == WATER.getDefaultState() || world.getBlockState(topPos) == LAVA.getDefaultState()) {
 							world.setBlockState(topPos, COBBLESTONE.getDefaultState());
 						}
 
