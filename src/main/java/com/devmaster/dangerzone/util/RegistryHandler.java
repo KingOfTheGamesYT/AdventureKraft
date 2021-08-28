@@ -131,34 +131,34 @@ public class RegistryHandler {
 
     //Tools
     public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () ->
-            new PickaxeItem(ModItemTier.AMETHYST, 12, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+            new PickaxeItem(ModItemTier.AMETHYST, 19, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
 
     public static final RegistryObject<SwordItem> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () ->
-            new SwordItem(ModItemTier.AMETHYST, 14, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+            new SwordItem(ModItemTier.AMETHYST, 29, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
 
     public static final RegistryObject<AxeItem> AMETHYST_AXE = ITEMS.register("amethyst_axe", () ->
-            new AxeItem(ModItemTier.AMETHYST, 13, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+            new AxeItem(ModItemTier.AMETHYST, 19, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
 
     public static final RegistryObject<ShovelItem> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () ->
-            new ShovelItem(ModItemTier.AMETHYST, 11, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+            new ShovelItem(ModItemTier.AMETHYST, 14, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
 
     public static final RegistryObject<HoeItem> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () ->
-            new HoeItem(ModItemTier.AMETHYST, 0, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+            new HoeItem(ModItemTier.AMETHYST, 9, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
 
     public static final RegistryObject<AxeItem> EMERALD_AXE = ITEMS.register("emerald_axe", () ->
-            new AxeItem(ModItemTier.EMERALD, 8, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+            new AxeItem(ModItemTier.EMERALD, 15, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
 
     public static final RegistryObject<EmeraldPickaxe> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () ->
-            new EmeraldPickaxe(ModItemTier.EMERALD, 7, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+            new EmeraldPickaxe(ModItemTier.EMERALD, 15, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
 
     public static final RegistryObject<HoeItem> EMERALD_HOE = ITEMS.register("emerald_hoe", () ->
-            new HoeItem(ModItemTier.EMERALD, 0, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+            new HoeItem(ModItemTier.EMERALD, 4, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
 
     public static final RegistryObject<ShovelItem> Emerald_SHOVEL = ITEMS.register("emerald_shovel", () ->
-            new ShovelItem(ModItemTier.EMERALD, 6, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+            new ShovelItem(ModItemTier.EMERALD, 9, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
 
     public static final RegistryObject<SwordItem> EMERALD_SWORD = ITEMS.register("emerald_sword", () ->
-            new SwordItem(ModItemTier.EMERALD, 9, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+            new SwordItem(ModItemTier.EMERALD, 23, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
 
     public static final RegistryObject<PickaxeItem> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () ->
             new PickaxeItem(ModItemTier.SAPPHIRE, 16, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
@@ -174,9 +174,6 @@ public class RegistryHandler {
 
     public static final RegistryObject<HoeItem> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () ->
             new HoeItem(ModItemTier.SAPPHIRE, -1, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
-
-    public static final RegistryObject<SwordItem> POPPY_SWORD = ITEMS.register("poppy_sword", () ->
-            new SwordItem(ModItemTier.EMERALD, 4, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
 
     public static final RegistryObject<SwordItem> CAKE_SWORD = ITEMS.register("cake_sword", () ->
             new SwordItem(ModItemTier.CAKE, 0, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
@@ -267,10 +264,6 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = BLOCKS.register("sapphire_block", SapphireBlock::new);
 
-    public static final RegistryObject<Block> EYE_OF_ENDER_BLOCK = BLOCKS.register("eye_of_ender_block", EyeOfEnderBlock::new);
-
-    public static final RegistryObject<Block> ENDER_PEARL_BLOCK = BLOCKS.register("ender_pearl_block", EnderPearlBlock::new);
-
     public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", UraniumBlock::new);
 
     public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", TitaniumBlock::new);
@@ -306,10 +299,6 @@ public class RegistryHandler {
     public static final RegistryObject<Item> SAPPHIRE_ORE_BLOCK_ITEM = ITEMS.register("sapphire_ore_block", () -> new BlockItemBase(SAPPHIRE_ORE_BLOCK.get()));
 
     public static final RegistryObject<Item> SAPPHIRE_BLOCK_ITEM = ITEMS.register("sapphire_block", () -> new BlockItemBase(SAPPHIRE_BLOCK.get()));
-
-    public static final RegistryObject<Item> EYE_OF_ENDER_BLOCK_ITEM = ITEMS.register("eye_of_ender_block", () -> new BlockItemBase(EYE_OF_ENDER_BLOCK.get()));
-
-    public static final RegistryObject<Item> ENDER_PEARL_BLOCK_ITEM = ITEMS.register("ender_pearl_block", () -> new BlockItemBase(ENDER_PEARL_BLOCK.get()));
 
     public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = ITEMS.register("uranium_block", () -> new BlockItemBase(URANIUM_BLOCK.get()));
 

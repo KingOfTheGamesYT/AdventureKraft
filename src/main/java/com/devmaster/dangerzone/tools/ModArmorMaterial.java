@@ -16,19 +16,19 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-    AMETHYST(DangerZone.MOD_ID + ":amethyst", 100, new int[] { 4, 7, 8, 3 }, 40, //boots, pants, chestplate, helmet
+    AMETHYST(DangerZone.MOD_ID + ":amethyst", 100, new int[] { 23, 23, 23, 23 }, 40, //boots, pants, chestplate, helmet
              SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.AMETHYST.get());}),
 
     SAPPHIRE(DangerZone.MOD_ID + ":sapphire", 90, new int[] { 3, 7, 8, 3 }, 40,
     SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.SAPPHIRE.get());}),
 
-    LAPIS(DangerZone.MOD_ID + ":lapis", 90, new int[] { 2, 5, 7, 2 }, 60,
+    LAPIS(DangerZone.MOD_ID + ":lapis", 90, new int[] { 3, 3, 3, 3 }, 60,
     SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(Items.LAPIS_LAZULI.getItem());}),
 
-    EMERALD(DangerZone.MOD_ID + ":emerald", 90, new int[] { 3, 6, 8, 3 }, 60,
+    EMERALD(DangerZone.MOD_ID + ":emerald", 90, new int[] { 5, 6, 9, 6 }, 60,
     SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(Items.EMERALD.getItem());}),
 
-    COPPPER(DangerZone.MOD_ID + ":copper", 46, new int[] { 33, 25, 35, 25 }, 6,
+    COPPPER(DangerZone.MOD_ID + ":copper", 46, new int[] { 3, 3, 3, 3 }, 6,
     SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.COPPER_LUMP.get());}),
 
     CATS_EYE(DangerZone.MOD_ID + ":cats_eye",36, new int[] {4, 7, 8, 4}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.5f, () -> {

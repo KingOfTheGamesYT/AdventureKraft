@@ -1,7 +1,6 @@
 {
   "item.dangerzone.amethyst": "Amethyst",
   "item.dangerzone.salt": "Salt",
-  "item.dangerzone.fire_fish": "Fire Fish",
   "item.dangerzone.raw_bacon": "Raw Bacon",
   "item.dangerzone.cooked_bacon": "Cooked Bacon",
   "item.dangerzone.sapphire": "Sapphire",
@@ -12,7 +11,6 @@
   "item.dangerzone.cheese": "Cheese",
   "item.dangerzone.butter_candy": "Butter Candy",
   "item.dangerzone.mermaid_spawn_egg": "Spawn Mermaid",
-  "item.dangerzone.fire_fish_spawn_egg": "Spawn Fire Fish",
   "item.dangerzone.titanium_ingot": "Titanium Ingot",
   "item.dangerzone.titanium_nugget": "Titanium Nugget",
   "item.dangerzone.candy_cane": "Candy Cane",
@@ -32,8 +30,6 @@
   "block.dangerzone.salt_ore_block": "Salt Ore",
   "block.dangerzone.sapphire_ore_block": "Sapphire Ore",
   "block.dangerzone.sapphire_block": "Sapphire Block",
-  "block.dangerzone.eye_of_ender_block": "Eye of Ender Block",
-  "block.dangerzone.ender_pearl_block": "Ender Pearl Block",
   "block.dangerzone.uranium_block": "Uranium Block",
   "block.dangerzone.titanium_block": "Titanium Block",
   "block.dangerzone.compressed_poppy_block": "Compressed Poppy Block",
@@ -95,7 +91,6 @@
   "item.dangerzone.amethyst_sword": "Amethyst Sword",
   "item.dangerzone.sapphire_sword": "Sapphire Sword",
   "item.dangerzone.emerald_sword": "Emerald Sword",
-  "item.dangerzone.poppy_sword": "Poppy Sword",
   "item.dangerzone.cake_sword": "Cake Sword",
 
 

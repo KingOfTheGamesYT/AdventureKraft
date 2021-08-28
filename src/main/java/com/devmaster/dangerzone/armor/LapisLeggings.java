@@ -22,19 +22,7 @@ public class LapisLeggings extends ArmorItem {
     }
 
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new StringTextComponent("\u00A79" + "Comes with Protection and Projectile Protection. This is for those that want to look seriously spiffy. Built for general awesomeness, it's right at home on the battlefield, the rugby field, the boardroom, or the dance floor.\n" + "\u00A79"));
-        int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantments.PROTECTION, stack);
-        if (lvl <= 0) {
-            stack.addEnchantment(Enchantments.PROTECTION, 1);
+        tooltip.add(new StringTextComponent("\u00A79" + "These leggings are for those that want to look seriously spiffy.\n" + "\u00A79"));
 
-            lvl = EnchantmentHelper.getEnchantmentLevel(Enchantments.PROJECTILE_PROTECTION, stack);
-            if (lvl <= 0) {
-                stack.addEnchantment(Enchantments.PROJECTILE_PROTECTION, 1);
-            }
         }
     }
-
-
-
-
-}
