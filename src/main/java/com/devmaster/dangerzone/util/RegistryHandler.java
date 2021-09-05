@@ -43,6 +43,13 @@ public class RegistryHandler {
                             .size(0.9f, 1.9f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "tewtiy").toString()));
 
+
+    public static final RegistryObject<EntityType<CaveFisher>> CAVE_FISHER = ENTITIES
+            .register("cave_fisher",
+                    () -> EntityType.Builder.<CaveFisher>create(CaveFisher::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "cave_fisher").toString()));
+
     public static final RegistryObject<EntityType<NotBreeBree>> NOTBREEBREE = ENTITIES
             .register("notbreebree",
                     () -> EntityType.Builder.<NotBreeBree>create(NotBreeBree::new, EntityClassification.AMBIENT)
@@ -73,12 +80,6 @@ public class RegistryHandler {
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "butterfly").toString()));
 
-    public static final RegistryObject<EntityType<Brutalfly>> BRUTALFLY = ENTITIES
-            .register("brutalfly",
-                    () -> EntityType.Builder.<Brutalfly>create(Brutalfly::new, EntityClassification.CREATURE)
-                            .immuneToFire()
-                            .size(1.0F, 0.5F)
-                            .build(new ResourceLocation(DangerZone.MOD_ID, "brutalfly").toString()));
 
     public static final RegistryObject<EntityType<Ent>> ENT = ENTITIES
             .register("ent",
@@ -86,6 +87,11 @@ public class RegistryHandler {
                             .size(1.0F, 3.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "ent").toString()));
 
+    public static final RegistryObject<EntityType<WaterProjectile>> WATER_PROJECTILE = ENTITIES
+            .register("water_projectile",
+                    () -> EntityType.Builder.<WaterProjectile>create(WaterProjectile::new, EntityClassification.MISC)
+                            .size(1.0F, 3.5F)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
 
     //Items
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
@@ -124,9 +130,8 @@ public class RegistryHandler {
     public static final RegistryObject<ButterCandy> BUTTER_CANDY = ITEMS.register("butter_candy", ButterCandy::new);
 
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
-
-
     public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<Item> MOLDY_SPAWN_EGG = ITEMS.register("moldy_spawn_egg", MoldySpawnEgg::new);
 
 
     //Tools

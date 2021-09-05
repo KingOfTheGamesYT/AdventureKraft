@@ -1,5 +1,6 @@
 package com.devmaster.dangerzone.entity;
 
+import com.devmaster.dangerzone.entity.goals.IntervalRangedAttackGoal;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -12,18 +13,27 @@ import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.passive.fish.AbstractGroupFishEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
+import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
-import javax.annotation.Nullable;
 
-
-public class RedRoseWarrior extends CreatureEntity {
+public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
+    private static final int MAX_BEND_TIME = 66;
+    private static final DataParameter<Byte> STATE = EntityDataManager.createKey(RedRoseWarrior.class, DataSerializers.BYTE);
+    private static final String KEY_STATE = "RRWState";
+    private static final byte STILL = (byte)0;
+    private static final byte BENDING = (byte)2;
+    private static final byte BENDING_CLIENT = 9;
 
     public RedRoseWarrior(final EntityType<? extends RedRoseWarrior> type, final World worldIn) {
         super(type, worldIn);
@@ -36,7 +46,7 @@ public class RedRoseWarrior extends CreatureEntity {
     public void livingTick() {
         super.livingTick();
 
-        // boss info
+
         this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
         this.bossInfo.setVisible(true);
 
@@ -46,20 +56,26 @@ public class RedRoseWarrior extends CreatureEntity {
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 600)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 700)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.22D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 18);
     }
 
+    @Override
+    public void registerData() {
+        super.registerData();
+        this.getDataManager().register(STATE, Byte.valueOf(STILL));
+    }
 
     @Override
     protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(1, new SwimGoal(this));
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.0D, true));
+        this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0D, true));
         this.goalSelector.addGoal(5, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
+        this.goalSelector.addGoal(2, new RedRoseWarrior.WaterBending(this, MAX_BEND_TIME, 3, 6));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, MonsterEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, true));
@@ -71,9 +87,35 @@ public class RedRoseWarrior extends CreatureEntity {
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
 
     }
+    @Override
+    public void writeAdditional(CompoundNBT compound) {
+        super.writeAdditional(compound);
+        compound.putByte(KEY_STATE, this.getrrwstate());
+    }
 
+    @Override
+    public void readAdditional(CompoundNBT compound) {
+        super.readAdditional(compound);
+        this.setRRWState(compound.getByte(KEY_STATE));
+    }
 
+    public void setRRWState(final byte state) { this.getDataManager().set(STATE, Byte.valueOf(state)); }
+    public byte getrrwstate() { return this.getDataManager().get(STATE).byteValue(); }
+    public boolean isNoneState() { return getrrwstate() == STILL; }
+    public boolean isBendingAttack() { return getrrwstate() == BENDING; }
+    public void setBendingAttack(final boolean smash) { setRRWState(smash ? BENDING : STILL); }
 
+    @OnlyIn(Dist.CLIENT)
+    public void handleStatusUpdate(byte id) {
+        switch(id) {
+            case BENDING_CLIENT:
+
+                break;
+            default:
+                super.handleStatusUpdate(id);
+                break;
+        }
+    }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
@@ -106,9 +148,43 @@ public class RedRoseWarrior extends CreatureEntity {
         return true;
     }
 
+    @Override
+    public void attackEntityWithRangedAttack(LivingEntity target, float distanceFactor) {
+        if(!world.isRemote()) {
+            WaterProjectile healingSpell = WaterProjectile.create(world, this);
+            world.addEntity(healingSpell);
+        }
+        this.playSound(SoundEvents.ENTITY_BOAT_PADDLE_WATER, 1.2F, 1.0F);
+    }
+
+    class WaterBending extends IntervalRangedAttackGoal {
+
+        protected WaterBending(final IRangedAttackMob entityIn, final int duration, final int count, final int maxCooldownIn) {
+            super(entityIn, duration, count, maxCooldownIn);
+        }
+
+        @Override
+        public boolean shouldExecute() {
+            return super.shouldExecute() && RedRoseWarrior.this.isNoneState();
+        }
+
+        @Override
+        public void startExecuting() {
+            super.startExecuting();
+            RedRoseWarrior.this.setBendingAttack(true);
+            RedRoseWarrior.this.getEntityWorld().setEntityState(RedRoseWarrior.this, BENDING_CLIENT);
+            RedRoseWarrior.this.playSound(SoundEvents.BLOCK_WATER_AMBIENT, 1.0F, 1.2F);
+        }
+
+        @Override
+        public void resetTask() {
+            super.resetTask();
+            RedRoseWarrior.this.setBendingAttack(false);
+        }
+    }
 
 
-    // Boss //
+
 
     @Override
     public void addTrackingPlayer(ServerPlayerEntity player) {

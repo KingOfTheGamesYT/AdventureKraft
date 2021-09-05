@@ -1,0 +1,132 @@
+package com.devmaster.dangerzone.entity;
+
+import java.util.List;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.entity.projectile.ProjectileHelper;
+import net.minecraft.network.IPacket;
+import net.minecraft.particles.IParticleData;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.math.EntityRayTraceResult;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.common.util.ITeleporter;
+import net.minecraftforge.fml.network.NetworkHooks;
+
+public abstract class BaseProjectile extends ProjectileEntity {
+
+    protected int lifespan = 300;
+
+
+    public BaseProjectile(EntityType<? extends ProjectileEntity> entityType, World world) {
+        super(entityType, world);
+    }
+
+    @Override
+    protected void onEntityHit(EntityRayTraceResult raytrace) {
+        super.onEntityHit(raytrace);
+        Entity thrower = getShooter();
+        if (raytrace.getEntity() != thrower && raytrace.getEntity() instanceof LivingEntity) {
+            final LivingEntity entity = (LivingEntity)raytrace.getEntity();
+            for(final EffectInstance effect : getPotionEffects(entity)) {
+                entity.addPotionEffect(effect);
+            }
+            float damage = getImpactDamage(entity);
+            if(damage > 0 && thrower instanceof LivingEntity) {
+                entity.attackEntityFrom(DamageSource.causeIndirectDamage(this, (LivingEntity)thrower), damage);
+            }
+            addParticles(getImpactParticle(entity), 6 + rand.nextInt(6));
+        }
+    }
+
+    @Override
+    protected void onImpact(RayTraceResult raytrace) {
+        super.onImpact(raytrace);
+        if (this.isAlive()) {
+            remove();
+        }
+    }
+
+    @Override
+    public void tick() {
+        Entity thrower = getShooter();
+        if (thrower instanceof net.minecraft.entity.player.PlayerEntity && !thrower.isAlive()) {
+            remove();
+            return;
+        }
+        if(this.ticksExisted > lifespan) {
+            remove();
+            return;
+        }
+        if(!this.getEntityWorld().isRemote()) {
+            RayTraceResult raytraceresult = ProjectileHelper.func_234618_a_(this, this::func_230298_a_);
+            if (raytraceresult != null && raytraceresult.getType() != RayTraceResult.Type.MISS
+                    && !net.minecraftforge.event.ForgeEventFactory.onProjectileImpact(this, raytraceresult)) {
+                this.onImpact(raytraceresult);
+            }
+        }
+        if(this.ticksExisted > 2) {
+            addParticles(getTrailParticle(), 2);
+        }
+        Vector3d motion = this.getMotion();
+        double d0 = this.getPosX() + motion.x;
+        double d1 = this.getPosY() + motion.y;
+        double d2 = this.getPosZ() + motion.z;
+        this.updatePitchAndYaw();
+        this.setPosition(d0, d1, d2);
+        super.tick();
+    }
+
+    @Override
+    public Entity changeDimension(ServerWorld serverWorld, ITeleporter iTeleporter) {
+        Entity entity = getShooter();
+        if (entity != null && entity.world.getDimensionKey() != serverWorld.getDimensionKey()) {
+            setShooter((Entity) null);
+        }
+        return super.changeDimension(serverWorld, iTeleporter);
+    }
+
+    @Override
+    public IPacket<?> createSpawnPacket() {
+        return NetworkHooks.getEntitySpawningPacket(this);
+    }
+
+    @Override
+    protected void registerData() {
+    }
+
+    abstract List<EffectInstance> getPotionEffects(final LivingEntity entity);
+
+    abstract IParticleData getImpactParticle(final LivingEntity entity);
+
+    abstract IParticleData getTrailParticle();
+
+    abstract float getImpactDamage(final LivingEntity entity);
+
+    protected void addParticles(final IParticleData type, final int count) {
+        if(this.getEntityWorld().isRemote()) {
+            final double x = getPosX();
+            final double y = getPosY() + 0.1D;
+            final double z = getPosZ();
+            final double motion = 0.08D;
+            final double width = getWidth() / 2;
+            final double height = getHeight() / 2;
+            for (int i = 0; i < count; i++) {
+                world.addParticle(type,
+                        x + (world.rand.nextDouble() - 0.5D) * width,
+                        y + height,
+                        z + (world.rand.nextDouble() - 0.5D) * width,
+                        (world.rand.nextDouble() - 0.5D) * motion,
+                        (world.rand.nextDouble() - 0.5D) * motion,
+                        (world.rand.nextDouble() - 0.5D) * motion);
+            }
+        }
+    }
+
+}
