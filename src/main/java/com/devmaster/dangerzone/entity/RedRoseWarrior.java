@@ -56,7 +56,7 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 700)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 800)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.22D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 18);
     }
