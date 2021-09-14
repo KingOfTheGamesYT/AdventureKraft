@@ -1,4 +1,5 @@
 {
+  "_comment": "Items",
   "item.dangerzone.amethyst": "Amethyst",
   "item.dangerzone.salt": "Salt",
   "item.dangerzone.raw_bacon": "Raw Bacon",
@@ -18,13 +19,14 @@
   "item.dangerzone.redrosewarrior_spawn_egg": "Spawn RedRoseWarrior",
   "item.dangerzone.copper_lump": "Copper Lump",
   "item.dangerzone.cats_eye": "Cats Eye",
+  "item.dangerzone.moldy_spawn_egg": "Spawn Moldy",
 
 
-
-
+  "_comment": "Petrified Ores",
   "block.dangerzone.redrosewarrior_egg_ore": "Petrified RedRoseWarrior Ore",
   "block.dangerzone.mutant_zombie_egg_ore": "Petrified Mutant Zombie Ore",
 
+  "_comment": "Blocks",
   "block.dangerzone.amethyst_ore_block": "Amethyst Ore",
   "block.dangerzone.amethyst_block": "Amethyst Block",
   "block.dangerzone.salt_ore_block": "Salt Ore",
@@ -42,6 +44,7 @@
   "block.dangerzone.kyanite": "Kyanite",
   "block.dangerzone.crystal_grass": "Crystal Grass",
 
+  "_comment": "Creative Tabs",
   "itemGroup.dangerzonetab": "DangerZone Items",
   "itemGroup.dangerzoneblocks": "DangerZone Blocks",
   "itemGroup.dangerzonetools": "DangerZone Tools",
@@ -50,6 +53,7 @@
   "itemGroup.dangerzonearmory": "DangerZone Armory",
   "itemGroup.dangerzonepetrifiedores": "DangerZone Petrified Ores",
 
+  "_comment": "Tools",
   "item.dangerzone.emerald_axe": "Emerald Axe",
   "item.dangerzone.amethyst_axe": "Amethyst Axe",
   "item.dangerzone.amethyst_shovel": "Amethyst Shovel",
@@ -63,6 +67,7 @@
   "item.dangerzone.sapphire_pickaxe": "Sapphire Pickaxe",
   "item.dangerzone.sapphire_hoe": "Sapphire Hoe",
 
+  "_comment": "Armor",
   "item.dangerzone.amethyst_helmet": "Amethyst Helmet",
   "item.dangerzone.amethyst_chestplate": "Amethyst Chestplate",
   "item.dangerzone.amethyst_leggings": "Amethyst Leggings",
@@ -88,21 +93,23 @@
   "item.dangerzone.cats_eye_leggings": "Copper Leggings",
   "item.dangerzone.cats_eye_boots": "Cats Eye Boots",
 
+  "_comment": "Swords",
   "item.dangerzone.amethyst_sword": "Amethyst Sword",
   "item.dangerzone.sapphire_sword": "Sapphire Sword",
   "item.dangerzone.emerald_sword": "Emerald Sword",
   "item.dangerzone.cake_sword": "Cake Sword",
 
-
+  "_comment": "Entities",
   "entity.dangerzone.tewtiy": "Tewtiy",
   "entity.dangerzone.stampylongnose": "StampyLongNose",
   "entity.dangerzone.notbreebree": "NotBreeBree",
   "entity.dangerzone.redrosewarrior": "RedRoseWarrior",
   "entity.dangerzone.rainbow_ant": "Rainbow Ant",
   "entity.dangerzone.butterfly": "Butterfly",
-  "entity.dangerzone.brutalfly": "Brutalfly",
-  "entity.dangerzone.ent": "Ent"
+  "entity.dangerzone.ent": "Ent",
+  "entity.dangerzone.cave_fisher": "Cave Fisher",
 
-
-
+  "_comment": "Tips Integration",
+  "dangerzone.tip.title": "DangerZone Tip",
+  "dangerzone.tip.spawn_eggs": "If you can find the petrified version of the mob you can bring it to life"
 }

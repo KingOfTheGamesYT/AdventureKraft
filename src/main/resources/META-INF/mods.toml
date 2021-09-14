@@ -9,7 +9,7 @@ issueTrackerURL="https://github.com/KingOfTheGamesYT/DangerZone/issues"
 [[mods]]
 itemIcon="dangerzone:cake_sword"
 
-configBackground="dangerzone:textures/blocks/kyuubi_egg_ore.png"
+configBackground="dangerzone:textures/blocks/egg/kyuubi_egg_ore.png"
 
 modId="dangerzone"
 
@@ -50,13 +50,5 @@ versionRange="[1.16.5,1.17]"
 modId="attributefix"
 mandatory=false
 versionRange="[10.1.2,)"
-ordering="NONE"
-side="BOTH"
-
-# Tips for the game
-[[dependencies.dangerzone]]
-modId="tips"
-mandatory=false
-versionRange="[4.0.7,)"
 ordering="NONE"
 side="BOTH"
