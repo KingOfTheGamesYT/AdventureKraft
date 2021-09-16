@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.misc;
 
 import com.devmaster.dangerzone.client.render.*;
+import com.devmaster.dangerzone.creative_tabs.*;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
@@ -31,6 +32,17 @@ import org.apache.logging.log4j.Logger;
 public class DangerZone {
     public static final Logger LOGGER = LogManager.getLogger("DangerZone");
     public static final String MOD_ID = "dangerzone";
+    public static final ItemGroup TAB = new DangerZoneItems();
+    public static final ItemGroup  ARMOR = new DangerZoneArmory();
+    public static final ItemGroup  WEAPONS = new DangerZoneWeapons();
+    public static final ItemGroup  TOOLS = new DangerZoneTools();
+    public static final ItemGroup  BLOCKS = new DangerZoneBlocks();
+    public static final ItemGroup  PETRIFIED_ORES = new DangerZonePetrifiedOres();
+    public static final ItemGroup  FOOD = new DangerZoneFood();
+
+
+
+
     public static final ITag.INamedTag<Block> MINERS_DREAM_MINEABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":breakable");
 
     public DangerZone() {
@@ -82,56 +94,6 @@ public class DangerZone {
 
     }
 
-    public static final ItemGroup TAB = new ItemGroup("dangerzonetab") {
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.AMETHYST.get());
-        }
-    };
-    public static final ItemGroup BLOCKS = new ItemGroup("dangerzoneblocks") {
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.AMETHYST_BLOCK.get());
-        }
-    };
-    public static final ItemGroup TOOLS = new ItemGroup("dangerzonetools") {
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.AMETHYST_AXE.get());
-        }
-    };
-    public static final ItemGroup WEAPONS = new ItemGroup("dangerzoneweapons") {
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.AMETHYST_SWORD.get());
-        }
-    };
-    public static final ItemGroup FOOD = new ItemGroup("dangerzonefood") {
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.BUTTER.get());
-        }
-    };
-    public static final ItemGroup ARMOR = new ItemGroup("dangerzonearmory") {
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.AMETHYST_CHESTPLATE.get());
-        }
-    };
-
-    public static final ItemGroup PETRIFIED_ORES = new ItemGroup("dangerzonepetrifiedores") {
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.REDROSEWARRIOR_EGG_ORE.get());
-        }
-    };
 }
 
 
