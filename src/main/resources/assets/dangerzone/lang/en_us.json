@@ -90,7 +90,7 @@
   "item.dangerzone.copper_boots": "Copper Boots",
   "item.dangerzone.cats_eye_helmet": "Cats Eye Helmet",
   "item.dangerzone.cats_eye_chestplate": "Cats Eye Chestplate",
-  "item.dangerzone.cats_eye_leggings": "Copper Leggings",
+  "item.dangerzone.cats_eye_leggings": "Cats Eye Leggings",
   "item.dangerzone.cats_eye_boots": "Cats Eye Boots",
 
   "_comment": "Swords",
@@ -108,6 +108,13 @@
   "entity.dangerzone.butterfly": "Butterfly",
   "entity.dangerzone.ent": "Ent",
   "entity.dangerzone.cave_fisher": "Cave Fisher",
+
+  "_comment": "Biomes",
+  "biome.dangerzone.villages": "Villages",
+  "biome.dangerzone.villagess": "Villages",
+  "biome.dangerzone.villagesss": "Villages",
+  "biome.dangerzone.villageesss": "Villages",
+  "biome.dangerzone.villaggesss": "Villages",
 
   "_comment": "Tips Integration",
   "dangerzone.tip.title": "DangerZone Tip",
