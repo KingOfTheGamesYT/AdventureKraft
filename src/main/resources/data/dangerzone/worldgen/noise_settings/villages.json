@@ -7,9 +7,10 @@
     "Name": "minecraft:stone"
   },
   "default_fluid": {
-    "Name": "minecraft:water"},
+    "Name": "minecraft:water",
     "Properties": {
       "level": "0"
+    }
   },
   "noise": {
     "height": 256,
@@ -34,7 +35,9 @@
       "target": -10,
       "size": 3,
       "offset": 0
-    },
+    }
+  },
+  "structures": {
     "structures": {
       "minecraft:pillager_outpost": {
         "spacing": 10,

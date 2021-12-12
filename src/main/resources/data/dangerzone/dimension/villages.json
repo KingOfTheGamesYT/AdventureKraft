@@ -2,28 +2,7 @@
   "type": "dangerzone:villages",
   "generator": {
     "type": "minecraft:noise",
-    "seed": 0,
-    "settings": "dangerzone:villages"
-  },
-      "structures": {
-        "structures": {
-          "minecraft:pillager_outpost": {
-            "spacing": 10,
-            "separation": 5,
-            "salt": 0
-          },
-          "minecraft:village": {
-            "spacing": 15,
-            "separation": 5,
-            "salt": 0
-          },
-          "minecraft:mansion": {
-            "spacing": 25,
-            "separation": 5,
-            "salt": 0
-          }
-        }
-      },
+    "seed": -1471531077,
     "biome_source": {
       "type": "minecraft:checkerboard",
       "biomes": [
@@ -33,5 +12,7 @@
         "dangerzone:villageesss",
         "dangerzone:villaggesss"
       ]
-    }
+    },
+    "settings": "dangerzone:villages"
   }
+}

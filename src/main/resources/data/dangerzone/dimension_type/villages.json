@@ -8,7 +8,7 @@
   "ambient_light": 0.5,
   "piglin_safe": true,
   "bed_works": true,
-  "respawn_anchor_works": false,
+  "respawn_anchor_works": true,
   "has_raids": true,
   "logical_height": 256,
   "infiniburn": "minecraft:infiniburn_overworld",
