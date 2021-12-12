@@ -91,13 +91,15 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.16.5-36.1.13'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.20'
 
 
 //project name, project id, file id
 
-    implementation fg.deobf("curse.maven:baubles-366844:3339230")
     implementation fg.deobf("curse.maven:mutant_beasts-336272:3131604")
+    implementation fg.deobf("curse.maven:ffxvi-460328:3516812")
+
+
 
     implementation fg.deobf("curse.maven:jei-238222:3189632")
  //   compileOnly fg.deobf("com.teammetallurgy.aquaculture:aquaculture2_1.16.4:1.16.4-2.1.10")
