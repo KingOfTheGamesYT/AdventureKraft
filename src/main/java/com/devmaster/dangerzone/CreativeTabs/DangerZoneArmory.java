@@ -1,4 +1,4 @@
-package com.devmaster.dangerzone.creative_tabs;
+package com.devmaster.dangerzone.CreativeTabs;
 
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
@@ -8,14 +8,14 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class DangerZonePetrifiedOres extends ItemGroup {
-    public DangerZonePetrifiedOres() {
-        super("dangerzonepetrifiedores");
+public class DangerZoneArmory extends ItemGroup {
+    public DangerZoneArmory() {
+        super("dangerzonearmory");
     }
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(RegistryHandler.REDROSEWARRIOR_EGG_ORE.get());
+        return new ItemStack(RegistryHandler.AMETHYST_CHESTPLATE.get());
     }
 
     @Override

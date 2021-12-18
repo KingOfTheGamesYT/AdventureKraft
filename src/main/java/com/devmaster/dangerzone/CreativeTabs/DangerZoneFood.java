@@ -1,4 +1,4 @@
-package com.devmaster.dangerzone.creative_tabs;
+package com.devmaster.dangerzone.CreativeTabs;
 
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;

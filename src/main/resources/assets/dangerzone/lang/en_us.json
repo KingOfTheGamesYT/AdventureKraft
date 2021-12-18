@@ -20,6 +20,8 @@
   "item.dangerzone.copper_lump": "Copper Lump",
   "item.dangerzone.cats_eye": "Cats Eye",
   "item.dangerzone.moldy_spawn_egg": "Spawn Moldy",
+  "item.dangerzone.dead_rainbow_ant": "Dead Rainbow Ant",
+  "item.dangerzone.rainbow_ant_token": "Rainbow Ant Token",
 
 
   "_comment": "Petrified Ores",
@@ -98,6 +100,7 @@
   "item.dangerzone.sapphire_sword": "Sapphire Sword",
   "item.dangerzone.emerald_sword": "Emerald Sword",
   "item.dangerzone.cake_sword": "Cake Sword",
+  "item.dangerzone.poppy_sword": "Poppy Sword",
 
   "_comment": "Entities",
   "entity.dangerzone.tewtiy": "Tewtiy",

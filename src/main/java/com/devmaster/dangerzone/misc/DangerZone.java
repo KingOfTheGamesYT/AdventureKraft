@@ -1,7 +1,7 @@
 package com.devmaster.dangerzone.misc;
 
 import com.devmaster.dangerzone.client.render.*;
-import com.devmaster.dangerzone.creative_tabs.*;
+import com.devmaster.dangerzone.CreativeTabs.*;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
@@ -10,7 +10,6 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
 import net.minecraft.world.gen.feature.Feature;
