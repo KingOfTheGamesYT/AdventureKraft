@@ -1,13 +1,10 @@
 package com.devmaster.dangerzone.entity;
 
-import com.devmaster.dangerzone.misc.DangerZone;
-import com.google.common.collect.Maps;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.controller.FlyingMovementController;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.datasync.DataParameter;
@@ -22,21 +19,13 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.IServerWorld;
 import net.minecraft.world.World;
 
-
 import javax.annotation.Nullable;
-import java.util.Map;
 
 public class Butterfly extends CreatureEntity {
     private static final DataParameter<Byte> FLYING = EntityDataManager.createKey(Butterfly.class, DataSerializers.BYTE);
     private static final EntityPredicate field_213813_c = (new EntityPredicate()).setDistance(4.0D).allowFriendlyFire();
     private BlockPos spawnPosition;
-    private static final DataParameter<Integer> BUTTERFLY_TYPE = EntityDataManager.createKey(CatEntity.class, DataSerializers.VARINT);
-    public static final Map<Integer, ResourceLocation> TEXTURE = Util.make(Maps.newHashMap(), (p_213410_0_) -> {
-        p_213410_0_.put(0, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly_1.png"));
-        p_213410_0_.put(1, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly_2.png"));
-        p_213410_0_.put(2, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly_3.png"));
-        p_213410_0_.put(4, new ResourceLocation(DangerZone.MOD_ID, "textures/entity/butterfly/butterfly_4.png"));
-    });
+    private static final DataParameter<Integer> BUTTERFLY_VARIANT;
 
     public Butterfly(final EntityType<? extends Butterfly> type, final World worldIn) {
         super(type, worldIn);
@@ -46,31 +35,36 @@ public class Butterfly extends CreatureEntity {
 
     }
 
-    public ResourceLocation getButterflyTypeName() {
-        return TEXTURE.getOrDefault(this.getButterflyType(), TEXTURE.get(0));
+    static {
+        BUTTERFLY_VARIANT = EntityDataManager.createKey(Butterfly.class, DataSerializers.VARINT);
     }
 
-    public int getButterflyType() {
-        return this.dataManager.get(BUTTERFLY_TYPE);
-    }
+    static class ButterflyData extends AgeableEntity.AgeableData {
+        public final int variant;
 
-    public void setButterflyType(int type) {
-        if (type < 0 || type >= 11) {
-            type = this.rand.nextInt(10);
+        private ButterflyData(int x) {
+            super(false);
+            this.variant = x;
         }
+    }
 
-        this.dataManager.set(BUTTERFLY_TYPE, type);
+    public int getButterflyVariant() {
+        return MathHelper.clamp((Integer)this.dataManager.get(BUTTERFLY_VARIANT), 0, 4);
+    }
+
+    public void setButterflyVariant(int variant) {
+        this.dataManager.set(BUTTERFLY_VARIANT, variant);
     }
 
     protected void registerData() {
         super.registerData();
-        this.dataManager.register(BUTTERFLY_TYPE, 1);
+        this.dataManager.register(BUTTERFLY_VARIANT, 0);
         this.dataManager.register(FLYING, (byte)0);
     }
 
     public void readAdditional(CompoundNBT compound) {
         super.readAdditional(compound);
-        this.setButterflyType(compound.getInt("Butterfly Type"));
+        this.setButterflyVariant(compound.getInt("Variant"));
         this.dataManager.set(FLYING, compound.getByte("ButterflyFlags"));
 
     }
@@ -93,15 +87,17 @@ public class Butterfly extends CreatureEntity {
     }
 
     @Nullable
-    public ILivingEntityData onInitialSpawn(IServerWorld worldIn, DifficultyInstance difficultyIn, SpawnReason reason, @Nullable ILivingEntityData spawnDataIn, @Nullable CompoundNBT dataTag) {
-        spawnDataIn = super.onInitialSpawn(worldIn, difficultyIn, reason, spawnDataIn, dataTag);
-        if (worldIn.getMoonFactor() > 0.9F) {
-            this.setButterflyType(this.rand.nextInt(11));
+    public ILivingEntityData onInitialSpawn(IServerWorld world, DifficultyInstance diff, SpawnReason spawn, @Nullable ILivingEntityData spawndata, @Nullable CompoundNBT comnbt) {
+        int x;
+        if (spawndata instanceof Butterfly.ButterflyData) {
+            x = ((Butterfly.ButterflyData)spawndata).variant;
         } else {
-            this.setButterflyType(this.rand.nextInt(10));
+            x = this.rand.nextInt(4);
+            spawndata = new Butterfly.ButterflyData(x);
         }
 
-        return spawnDataIn;
+        this.setButterflyVariant(x);
+        return super.onInitialSpawn(world, diff, spawn, (ILivingEntityData)spawndata, comnbt);
     }
 
     @Override
@@ -219,11 +215,11 @@ public class Butterfly extends CreatureEntity {
     }
 
 
-    public void writeAdditional(CompoundNBT compound) {
-        super.writeAdditional(compound);
-        compound.putByte("ButterflyFlags", this.dataManager.get(FLYING));
-    }
+    public void writeAdditional(CompoundNBT comnbt) {
+        super.writeAdditional(comnbt);
+        comnbt.putInt("Variant", this.getButterflyVariant());
 
+        }
 
     }
 

@@ -243,16 +243,16 @@ public class RegistryHandler {
             new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
 
     public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () ->
-            new ArmorItem(ModArmorMaterial.COPPPER, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+            new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
 
     public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.COPPPER, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+            new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
 
     public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () ->
-            new ArmorItem(ModArmorMaterial.COPPPER, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+            new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
 
     public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () ->
-            new ArmorItem(ModArmorMaterial.COPPPER, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+            new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
 
     public static final RegistryObject<ArmorItem> CATS_EYE_HELMET = ITEMS.register("cats_eye_helmet", () ->
             new ArmorItem(ModArmorMaterial.CATS_EYE, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));

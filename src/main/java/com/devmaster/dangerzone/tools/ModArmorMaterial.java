@@ -28,7 +28,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
     EMERALD(DangerZone.MOD_ID + ":emerald", 90, new int[] { 5, 6, 9, 6 }, 60,
     SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(Items.EMERALD.getItem());}),
 
-    COPPPER(DangerZone.MOD_ID + ":copper", 46, new int[] { 3, 3, 3, 3 }, 6,
+    COPPER(DangerZone.MOD_ID + ":copper", 46, new int[] { 3, 3, 3, 3 }, 6,
     SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.COPPER_LUMP.get());}),
 
     CATS_EYE(DangerZone.MOD_ID + ":cats_eye",36, new int[] {4, 7, 8, 4}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.5f, () -> {
