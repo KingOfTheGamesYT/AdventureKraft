@@ -26,7 +26,7 @@ public class CrystalGrass extends GlassBlock implements IGrowable {
 
     @Override
     public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-       tooltip.add(new StringTextComponent(   "\u00A75" + "Similar to stone in the overworld. Use for Kyanite tools and weapons, but not armor. Also makes a nice Crystal Furnace, which is much faster and more fun to watch than a regular stone furnace! Pronounced: ki-an-ite" + "\u00A75"));
+       tooltip.add(new StringTextComponent(   "\u00A7b" + "Similar to grass in the overworld." + "\u00A7b"));
     }
 
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
