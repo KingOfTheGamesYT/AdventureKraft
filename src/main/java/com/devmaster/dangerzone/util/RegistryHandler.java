@@ -3,15 +3,12 @@ package com.devmaster.dangerzone.util;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.items.SpawnEggItem;
 import com.devmaster.dangerzone.misc.DangerZone;
-import com.devmaster.dangerzone.armor.*;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.items.EmeraldPickaxe;
-import com.devmaster.dangerzone.tools.ModArmorMaterial;
 import com.devmaster.dangerzone.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
-import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.RegistryKey;
@@ -142,129 +139,88 @@ public class RegistryHandler {
 
 
     //Tools
-    public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () ->
-            new PickaxeItem(ModItemTier.AMETHYST, 19, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<AmethystPickaxe> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", AmethystPickaxe::new);
 
-    public static final RegistryObject<SwordItem> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () ->
-            new SwordItem(ModItemTier.AMETHYST, 29, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+    public static final RegistryObject<AmethystSword> AMETHYST_SWORD = ITEMS.register("amethyst_sword", AmethystSword::new);
 
-    public static final RegistryObject<AxeItem> AMETHYST_AXE = ITEMS.register("amethyst_axe", () ->
-            new AxeItem(ModItemTier.AMETHYST, 19, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<AmethystAxe> AMETHYST_AXE = ITEMS.register("amethyst_axe", AmethystAxe::new);
 
-    public static final RegistryObject<ShovelItem> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () ->
-            new ShovelItem(ModItemTier.AMETHYST, 14, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<AmethystShovel> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", AmethystShovel::new);
 
-    public static final RegistryObject<HoeItem> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () ->
-            new HoeItem(ModItemTier.AMETHYST, 9, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<AmethystHoe> AMETHYST_HOE = ITEMS.register("amethyst_hoe", AmethystHoe::new);
 
-    public static final RegistryObject<AxeItem> EMERALD_AXE = ITEMS.register("emerald_axe", () ->
-            new AxeItem(ModItemTier.EMERALD, 15, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<EmeraldAxe> EMERALD_AXE = ITEMS.register("emerald_axe", EmeraldAxe::new);
 
-    public static final RegistryObject<EmeraldPickaxe> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () ->
-            new EmeraldPickaxe(ModItemTier.EMERALD, 15, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<EmeraldPickaxe> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", EmeraldPickaxe::new);
 
-    public static final RegistryObject<HoeItem> EMERALD_HOE = ITEMS.register("emerald_hoe", () ->
-            new HoeItem(ModItemTier.EMERALD, 4, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<EmeraldHoe> EMERALD_HOE = ITEMS.register("emerald_hoe", EmeraldHoe::new);
 
-    public static final RegistryObject<ShovelItem> Emerald_SHOVEL = ITEMS.register("emerald_shovel", () ->
-            new ShovelItem(ModItemTier.EMERALD, 9, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<EmeraldShovel> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", EmeraldShovel::new);
 
-    public static final RegistryObject<SwordItem> EMERALD_SWORD = ITEMS.register("emerald_sword", () ->
-            new SwordItem(ModItemTier.EMERALD, 23, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+    public static final RegistryObject<EmeraldSword> EMERALD_SWORD = ITEMS.register("emerald_sword", EmeraldSword::new);
 
-    public static final RegistryObject<PickaxeItem> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () ->
-            new PickaxeItem(ModItemTier.SAPPHIRE, 16, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<SapphirePickaxe> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", SapphirePickaxe::new);
 
-    public static final RegistryObject<SwordItem> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () ->
-            new SwordItem(ModItemTier.SAPPHIRE, 17, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+    public static final RegistryObject<SapphireSword> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", SapphireSword::new);
 
-    public static final RegistryObject<AxeItem> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", () ->
-            new AxeItem(ModItemTier.SAPPHIRE, 17, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<SapphireAxe> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", SapphireAxe::new);
 
-    public static final RegistryObject<ShovelItem> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", () ->
-            new ShovelItem(ModItemTier.SAPPHIRE, 15, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<SapphireShovel> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", SapphireShovel::new);
 
-    public static final RegistryObject<HoeItem> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () ->
-            new HoeItem(ModItemTier.SAPPHIRE, -1, -2.4F, new Item.Properties().group(DangerZone.TOOLS)));
+    public static final RegistryObject<SapphireHoe> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", SapphireHoe::new);
 
-    public static final RegistryObject<SwordItem> CAKE_SWORD = ITEMS.register("cake_sword", () ->
-            new SwordItem(ModItemTier.CAKE, 0, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+    public static final RegistryObject<CakeSword> CAKE_SWORD = ITEMS.register("cake_sword", CakeSword::new);
 
-    public static final RegistryObject<SwordItem> POPPY_SWORD = ITEMS.register("poppy_sword", () ->
-            new SwordItem(ModItemTier.EMERALD, 4, -2.4F, new Item.Properties().group(DangerZone.WEAPONS)));
+    public static final RegistryObject<PoppySword> POPPY_SWORD = ITEMS.register("poppy_sword", PoppySword::new);
 
     //Armor
-    public static final RegistryObject<ArmorItem> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () ->
-            new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<AmethystHelmet> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", AmethystHelmet::new);
 
-    public static final RegistryObject<ArmorItem> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<AmethystChestplate> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", AmethystChestplate::new);
 
-    public static final RegistryObject<ArmorItem> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", () ->
-            new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<AmethystLeggings> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", AmethystLeggings::new);
 
-    public static final RegistryObject<ArmorItem> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", () ->
-            new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<AmethystBoots> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", AmethystBoots::new);
 
-    public static final RegistryObject<ArmorItem> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () ->
-            new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<SapphireHelmet> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", SapphireHelmet::new);
 
-    public static final RegistryObject<ArmorItem> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<SapphireChestplate> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", SapphireChestplate::new);
 
-    public static final RegistryObject<ArmorItem> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () ->
-            new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<SapphireLeggings> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", SapphireLeggings::new);
 
-    public static final RegistryObject<ArmorItem> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () ->
-            new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<SapphireBoots> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", SapphireBoots::new);
 
-    public static final RegistryObject<LapisHelmet> LAPIS_HELMET = ITEMS.register("lapis_helmet", () ->
-            new LapisHelmet(ModArmorMaterial.LAPIS, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<LapisHelmet> LAPIS_HELMET = ITEMS.register("lapis_helmet", LapisHelmet::new);
 
-    public static final RegistryObject<LapisChestplate> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate", () ->
-            new LapisChestplate(ModArmorMaterial.LAPIS, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<LapisChestplate> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate", LapisChestplate::new);
 
-    public static final RegistryObject<LapisLeggings> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings", () ->
-            new LapisLeggings(ModArmorMaterial.LAPIS, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<LapisLeggings> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings",  LapisLeggings::new);
 
-    public static final RegistryObject<LapisBoots> LAPIS_BOOTS = ITEMS.register("lapis_boots", () ->
-            new LapisBoots(ModArmorMaterial.LAPIS, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<LapisBoots> LAPIS_BOOTS = ITEMS.register("lapis_boots", LapisBoots::new);
 
-    public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<EmeraldHelmet> EMERALD_HELMET = ITEMS.register("emerald_helmet", EmeraldHelmet::new);
 
-    public static final RegistryObject<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<EmeraldChestplate> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", EmeraldChestplate::new);
 
-    public static final RegistryObject<ArmorItem> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<EmeraldLeggings> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", EmeraldLeggings::new);
 
-    public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<EmeraldBoots> EMERALD_BOOTS = ITEMS.register("emerald_boots", EmeraldBoots::new);
 
-    public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () ->
-            new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<CopperHelmet> COPPER_HELMET = ITEMS.register("copper_helmet", CopperHelmet::new);
 
-    public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<CopperChestplate> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", CopperChestplate::new);
 
-    public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () ->
-            new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<CopperLeggings> COPPER_LEGGINGS = ITEMS.register("copper_leggings", CopperLeggings::new);
 
-    public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () ->
-            new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<CopperBoots> COPPER_BOOTS = ITEMS.register("copper_boots", CopperBoots::new);
 
-    public static final RegistryObject<ArmorItem> CATS_EYE_HELMET = ITEMS.register("cats_eye_helmet", () ->
-            new ArmorItem(ModArmorMaterial.CATS_EYE, EquipmentSlotType.HEAD, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<CatsEyeHelmet> CATS_EYE_HELMET = ITEMS.register("cats_eye_helmet", CatsEyeHelmet::new);
 
-    public static final RegistryObject<ArmorItem> CATS_EYE_CHESTPLATE = ITEMS.register("cats_eye_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.CATS_EYE, EquipmentSlotType.CHEST, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<CatsEyeChestplate> CATS_EYE_CHESTPLATE = ITEMS.register("cats_eye_chestplate", CatsEyeChestplate::new);
 
-    public static final RegistryObject<ArmorItem> CATS_EYE_LEGGINGS = ITEMS.register("cats_eye_leggings", () ->
-            new ArmorItem(ModArmorMaterial.CATS_EYE, EquipmentSlotType.LEGS, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<CatsEyeLeggings> CATS_EYE_LEGGINGS = ITEMS.register("cats_eye_leggings", CatsEyeLeggings::new);
 
-    public static final RegistryObject<ArmorItem> CATS_EYE_BOOTS = ITEMS.register("cats_eye_boots", () ->
-            new ArmorItem(ModArmorMaterial.CATS_EYE, EquipmentSlotType.FEET, new Item.Properties().group(DangerZone.ARMOR)));
+    public static final RegistryObject<CatsEyeBoots> CATS_EYE_BOOTS = ITEMS.register("cats_eye_boots", CatsEyeBoots::new);
 
     //Blocks
     public static final RegistryObject<Block> AMETHYST_ORE_BLOCK = BLOCKS.register("amethyst_ore_block", AmethystOreBlock::new);
@@ -298,6 +254,8 @@ public class RegistryHandler {
     public static final RegistryObject<Block> KYANITE = BLOCKS.register("kyanite", Kyanite::new);
 
     public static final RegistryObject<Block> CRYSTAL_GRASS = BLOCKS.register("crystal_grass", CrystalGrass::new);
+
+    public static final RegistryObject<Block> CATS_EYE_BLOCK = BLOCKS.register("cats_eye_block", CatsEyeBlock::new);
 
     //Petrified animals blocks
     public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
@@ -336,6 +294,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> KYANITE_BLOCK_ITEM = ITEMS.register("kyanite", () -> new BlockItemBase(KYANITE.get()));
 
     public static final RegistryObject<Item> CRYSTAL_GRASS_ITEM = ITEMS.register("crystal_grass", () -> new BlockItemBase(CRYSTAL_GRASS.get()));
+
+    public static final RegistryObject<Item> CATS_EYE_BLOCK_ITEM = ITEMS.register("cats_eye_block", () -> new BlockItemBase(CATS_EYE_BLOCK.get()));
 
     //Petrified animals items
     public static final RegistryObject<Item> REDROSEWARRIOR_EGG_ORE_ITEM = ITEMS.register("redrosewarrior_egg_ore", () -> new BlockItemMobOre(REDROSEWARRIOR_EGG_ORE.get()));
