@@ -2,10 +2,7 @@ package com.devmaster.dangerzone.items;
 
 import com.devmaster.dangerzone.configs.DZConfig;
 import com.devmaster.dangerzone.misc.DangerZone;
-import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -20,11 +17,11 @@ import net.minecraft.world.server.ServerWorld;
 import java.util.List;
 
 
-public class EmeraldPickaxe extends PickaxeItem {
+public class EmeraldHoe extends HoeItem {
     private static IItemTier iItemTier = new IItemTier() {
 
         public int getMaxUses() {
-            return (Integer) DZConfig.EMERALD_PICKAXE_DURABILITY.get();
+            return (Integer) DZConfig.EMERALD_HOE_DURABILITY.get();
         }
 
         public float getEfficiency() {
@@ -48,8 +45,8 @@ public class EmeraldPickaxe extends PickaxeItem {
         }
     };
 
-    public EmeraldPickaxe() {
-        super(iItemTier, (Integer)DZConfig.EMERALD_PICKAXE_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
+    public EmeraldHoe() {
+        super(iItemTier, (Integer)DZConfig.EMERALD_HOE_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {
@@ -60,7 +57,7 @@ public class EmeraldPickaxe extends PickaxeItem {
 
 
     public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        stack.damageItem((Integer)DZConfig.EMERALD_PICKAXE_HIT_COST.get(), attacker, (playerEntity) -> {
+        stack.damageItem((Integer)DZConfig.EMERALD_HOE_HIT_COST.get(), attacker, (playerEntity) -> {
             if (attacker instanceof PlayerEntity) {
                 this.unlockDestroyACH((PlayerEntity)attacker, attacker.getEntityWorld());
             }
@@ -71,7 +68,7 @@ public class EmeraldPickaxe extends PickaxeItem {
     }
 
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A72" + "Now you know why those greedy villagers love these green gems so much" + "\u00A72"));
+        tooltip.add(new StringTextComponent("\u00A72" + "Show those greedy villagers how to farm" + "\u00A72"));
     }
 
 }

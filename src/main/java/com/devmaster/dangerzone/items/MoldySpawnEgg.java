@@ -14,13 +14,13 @@ import net.minecraft.world.World;
 import java.util.List;
 
 
-public class CopperLump extends Item {
+public class MoldySpawnEgg extends Item {
 
-    public CopperLump() {
+    public MoldySpawnEgg() {
         super(new Properties().group(DangerZone.TAB));
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A76" + "Makes some of the worst armor in the game" + "\u00A76"));
+        tooltip.add(new StringTextComponent("\u00A7b" + "Yuck who knows what this spawns" + "\u00A7b"));
     }
 }

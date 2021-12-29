@@ -4,13 +4,14 @@ import com.devmaster.dangerzone.configs.DZConfig;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.IItemTier;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
@@ -19,12 +20,11 @@ import net.minecraft.world.server.ServerWorld;
 
 import java.util.List;
 
-
-public class EmeraldPickaxe extends PickaxeItem {
+public class SapphireSword extends SwordItem {
     private static IItemTier iItemTier = new IItemTier() {
 
         public int getMaxUses() {
-            return (Integer) DZConfig.EMERALD_PICKAXE_DURABILITY.get();
+            return (Integer) DZConfig.SAPPHIRE_SWORD_DURABILITY.get();
         }
 
         public float getEfficiency() {
@@ -36,20 +36,20 @@ public class EmeraldPickaxe extends PickaxeItem {
         }
 
         public int getHarvestLevel() {
-            return 3;
+            return 4;
         }
 
         public int getEnchantability() {
-            return 70;
+            return 83;
         }
 
         public Ingredient getRepairMaterial() {
-            return Ingredient.fromItems(Items.EMERALD.getItem());
+            return Ingredient.fromItems(RegistryHandler.SAPPHIRE.get());
         }
     };
 
-    public EmeraldPickaxe() {
-        super(iItemTier, (Integer)DZConfig.EMERALD_PICKAXE_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
+    public SapphireSword() {
+        super(iItemTier, (Integer)DZConfig.SAPPHIRE_SWORD_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {
@@ -60,7 +60,7 @@ public class EmeraldPickaxe extends PickaxeItem {
 
 
     public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        stack.damageItem((Integer)DZConfig.EMERALD_PICKAXE_HIT_COST.get(), attacker, (playerEntity) -> {
+        stack.damageItem((Integer)DZConfig.SAPPHIRE_SWORD_HIT_COST.get(), attacker, (playerEntity) -> {
             if (attacker instanceof PlayerEntity) {
                 this.unlockDestroyACH((PlayerEntity)attacker, attacker.getEntityWorld());
             }
@@ -69,10 +69,8 @@ public class EmeraldPickaxe extends PickaxeItem {
         });
         return true;
     }
-
+    @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A72" + "Now you know why those greedy villagers love these green gems so much" + "\u00A72"));
+        tooltip.add(new StringTextComponent("\u00A79" + "Lasts forever it feels like" + "\u00A79"));
     }
-
 }
-

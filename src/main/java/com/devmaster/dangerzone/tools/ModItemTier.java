@@ -8,13 +8,6 @@ import net.minecraft.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
-    AMETHYST(4, 2000, 11.0F, 0.0F, 70, () -> {
-        return Ingredient.fromItems(RegistryHandler.AMETHYST.get());
-    }),
-
-    CAKE(1, 1, 1.0F, 0.0F, 1, () -> {
-        return Ingredient.fromItems(Items.CAKE);
-    }),
 
     FIRE_CAKE(0, 59, 2.0F, 0.0F, 15, () -> {
         return Ingredient.fromItems(Items.CAKE);
@@ -22,18 +15,6 @@ public enum ModItemTier implements IItemTier {
 
     TITANIUM_CAKE(2, 250, 6.0F, 0.0F, 14,() -> {
         return Ingredient.fromItems(RegistryHandler.TITANIUM_Hardened_CAKE.get());
-    }),
-
-    EMERALD(3, 1300, 10.0F, 0.0F, 70, () -> {
-        return Ingredient.fromItems(Items.EMERALD.getItem());
-    }),
-
-    SAPPHIRE(4, 1400, 10.0F, 0.0F, 83, () -> {
-        return Ingredient.fromItems(RegistryHandler.SAPPHIRE.get());
-    }),
-
-    POPPY(3, 1300, 10.0F, 0.0F, 70, () -> {
-        return Ingredient.fromItems(Items.POPPY.getItem());
     });
 
     private final int harvestLevel;

@@ -2,6 +2,7 @@ package com.devmaster.dangerzone.misc;
 
 import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.CreativeTabs.*;
+import com.devmaster.dangerzone.configs.BaseConfig;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
@@ -20,10 +21,11 @@ import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.config.ModConfig.Type;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -45,7 +47,8 @@ public class DangerZone {
     public static final ITag.INamedTag<Block> MINERS_DREAM_MINEABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":breakable");
 
     public DangerZone() {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DZConfig.BUILDER.build());
+        ModLoadingContext.get().registerConfig(Type.COMMON, BaseConfig.COMMON, "dangerzone-common.toml");
+        BaseConfig.loadConfig(BaseConfig.COMMON, FMLPaths.CONFIGDIR.get().resolve("dangerzone-common.toml").toString());
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
