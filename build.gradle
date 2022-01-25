@@ -88,7 +88,6 @@ dependencies {
 
 //project name, project id, file id
     implementation fg.deobf("curse.maven:mutant_beasts-336272:3131604")
-    implementation fg.deobf("curse.maven:ffxvi-460328:3516812")
     implementation fg.deobf("curse.maven:jei-238222:3189632")
 }
 

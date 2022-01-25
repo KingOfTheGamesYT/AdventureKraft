@@ -27,6 +27,7 @@ public class ModOregen {
     public static ConfiguredFeature<?, ?> TITANIUM_ORE;
     public static ConfiguredFeature<?, ?> REDROSEWARRIOR_ORE;
     public static ConfiguredFeature<?, ?> MUTANT_ZOMBIE_ORE;
+    public static ConfiguredFeature<?, ?> ALUMINIUM_ORE;
 
 
 
@@ -70,12 +71,19 @@ public class ModOregen {
                         .square()
                         .chance/* repeat */(3));
 
+        ALUMINIUM_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.ALUMINIUM_ORE_BLOCK.get().getDefaultState(),9))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 59))
+                        .square()
+                        .chance/* repeat */(5));
+
         Registry.register(registry, new ResourceLocation("amethyst_ore_block"), AMETHYST_ORE);
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
         Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
         Registry.register(registry, new ResourceLocation("titanium_ore_block"), TITANIUM_ORE);
         Registry.register(registry, new ResourceLocation("redrosewarrior_egg_ore"), REDROSEWARRIOR_ORE);
         Registry.register(registry, new ResourceLocation("mutant_zombie_egg_ore"), MUTANT_ZOMBIE_ORE);
+        Registry.register(registry, new ResourceLocation("aluminium_ore_block"), ALUMINIUM_ORE);
 
     }
 
@@ -91,6 +99,8 @@ public class ModOregen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TITANIUM_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, REDROSEWARRIOR_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, MUTANT_ZOMBIE_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ALUMINIUM_ORE);
+
 
     }
 
