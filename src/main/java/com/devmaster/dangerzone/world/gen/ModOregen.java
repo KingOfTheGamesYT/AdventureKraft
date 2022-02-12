@@ -21,7 +21,7 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 public class ModOregen {
 
-    public static ConfiguredFeature<?, ?> AMETHYST_ORE;
+    public static ConfiguredFeature<?, ?> COARSE_AMETHYST_ORE;
     public static ConfiguredFeature<?, ?> SALT_ORE;
     public static ConfiguredFeature<?, ?> SAPPHIRE_ORE;
     public static ConfiguredFeature<?, ?> TITANIUM_ORE;
@@ -35,8 +35,8 @@ public class ModOregen {
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
 
         Registry<ConfiguredFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_FEATURE;
-        AMETHYST_ORE = Feature.ORE.withConfiguration(
-                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.AMETHYST_ORE_BLOCK.get().getDefaultState(),6))
+        COARSE_AMETHYST_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.COARSE_AMETHYST_ORE_BLOCK.get().getDefaultState(),6))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 25))
                         .square()
                         .chance/* repeat */(2));
@@ -77,7 +77,7 @@ public class ModOregen {
                         .square()
                         .chance/* repeat */(5));
 
-        Registry.register(registry, new ResourceLocation("amethyst_ore_block"), AMETHYST_ORE);
+        Registry.register(registry, new ResourceLocation("coarse_amethyst_ore_block"), COARSE_AMETHYST_ORE);
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
         Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
         Registry.register(registry, new ResourceLocation("titanium_ore_block"), TITANIUM_ORE);
@@ -93,7 +93,7 @@ public class ModOregen {
         if (event.getCategory() == Biome.Category.NETHER
                 || event.getCategory() == Biome.Category.THEEND
                 || BiomeDictionary.hasType(biome, BiomeDictionary.Type.VOID)) return;
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, AMETHYST_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, COARSE_AMETHYST_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SALT_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TITANIUM_ORE);
