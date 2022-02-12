@@ -34,8 +34,6 @@ public class EntitySpawns {
                 List<BiomeDictionary.Type> TewityexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Tewityexclude.get()));
                 List<BiomeDictionary.Type> EntincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Entinclude.get()));
                 List<BiomeDictionary.Type> EntexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Entexclude.get()));
-                List<BiomeDictionary.Type> CaveFisherincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherinclude.get()));
-                List<BiomeDictionary.Type> CaveFisherexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherexclude.get()));
 
                 if (!includeList.isEmpty()) {
                     Set<BiomeDictionary.Type> biomeTypes = BiomeDictionary.getTypes(biomeKey);
@@ -51,9 +49,7 @@ public class EntitySpawns {
                     if (biomeTypes.stream().noneMatch(EntexcludeList::contains) && biomeTypes.stream().anyMatch(EntincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.ENT.get(), DZConfig.Entweight.get(), DZConfig.Entmin.get(), DZConfig.Entmax.get()));
                     }
-                    if (biomeTypes.stream().noneMatch(CaveFisherexcludeList::contains) && biomeTypes.stream().anyMatch(CaveFisherincludeList::contains)) {
-                        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.CAVE_FISHER.get(), DZConfig.CaveFisherweight.get(), DZConfig.CaveFishermin.get(), DZConfig.CaveFishermax.get()));
-                    }
+
                 } else {
                     throw new IllegalArgumentException("Do not leave the BiomeDictionary type inclusion list empty. If you wish to disable spawning of an entity, set the weight to 0 instead.");
                 }

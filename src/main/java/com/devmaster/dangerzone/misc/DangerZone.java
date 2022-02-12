@@ -4,6 +4,7 @@ import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.CreativeTabs.*;
 import com.devmaster.dangerzone.configs.BaseConfig;
 import com.devmaster.dangerzone.entity.*;
+import com.devmaster.dangerzone.gui.BossBar;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
 import net.minecraft.block.Block;
@@ -58,6 +59,7 @@ public class DangerZone {
         modEventBus.addListener(this::setup);
 
         RegistryHandler.init();
+        BossBar.init();
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -75,7 +77,6 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.BUTTERFLY.get(), Butterfly.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.ENT.get(), Ent.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.CAVE_FISHER.get(), CaveFisher.getAttributes().create());
 
         });
     }
@@ -90,8 +91,8 @@ public class DangerZone {
         RenderTypeLookup.setRenderLayer(RegistryHandler.KYANITE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.CRYSTAL_GRASS .get(), RenderType.getCutout());
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ENT.get(), EntRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.CAVE_FISHER.get(), CaveFisherRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WATER_PROJECTILE.get(), WaterProjectileRender::new);
+
 
 
     }
