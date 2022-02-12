@@ -15,7 +15,7 @@ public class DangerZoneTools extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(RegistryHandler.AMETHYST_AXE.get());
+        return new ItemStack(RegistryHandler.COARSE_AMETHYST_AXE.get());
     }
 
     @Override

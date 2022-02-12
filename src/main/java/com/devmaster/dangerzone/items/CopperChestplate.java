@@ -31,12 +31,12 @@ public class CopperChestplate extends ArmorItem {
 
         @Override
         public int getDamageReductionAmount(EquipmentSlotType slotIn) {
-            return 3;
+            return (Integer) DZConfig.COPPER_CHESTPLATE_ARMOR.get();
         }
 
         @Override
         public int getEnchantability() {
-            return 6;
+            return (Integer) DZConfig.COPPER_CHESTPLATE_ENCHANTABILITY.get();
         }
 
         @Override
@@ -57,12 +57,12 @@ public class CopperChestplate extends ArmorItem {
 
         @Override
         public float getToughness() {
-            return 0.0F;
+            return (Integer) DZConfig.COPPER_CHESTPLATE_TOUGHNESS.get();
         }
 
         @Override
         public float getKnockbackResistance() {
-            return 0;
+            return (Integer) DZConfig.COPPER_CHESTPLATE_KNOCK_BACK_RESISTANCE.get();
         }
 
     };

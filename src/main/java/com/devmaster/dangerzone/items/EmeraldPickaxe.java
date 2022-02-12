@@ -28,7 +28,7 @@ public class EmeraldPickaxe extends PickaxeItem {
         }
 
         public float getEfficiency() {
-            return 10.0F;
+            return (Integer) DZConfig.EMERALD_PICKAXE_EFFICIENCY.get();
         }
 
         public float getAttackDamage() {
@@ -36,11 +36,11 @@ public class EmeraldPickaxe extends PickaxeItem {
         }
 
         public int getHarvestLevel() {
-            return 3;
+            return (Integer) DZConfig.EMERALD_PICKAXE_HARVEST_LEVEL.get();
         }
 
         public int getEnchantability() {
-            return 70;
+            return (Integer) DZConfig.EMERALD_PICKAXE_ENCHANTABILITY.get();
         }
 
         public Ingredient getRepairMaterial() {
@@ -49,7 +49,7 @@ public class EmeraldPickaxe extends PickaxeItem {
     };
 
     public EmeraldPickaxe() {
-        super(iItemTier, (Integer)DZConfig.EMERALD_PICKAXE_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
+        super(iItemTier, (Integer)DZConfig.EMERALD_PICKAXE_DAMAGE.get(), (Integer) DZConfig.EMERALD_PICKAXE_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.TOOLS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {

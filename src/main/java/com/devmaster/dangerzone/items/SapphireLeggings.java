@@ -36,7 +36,7 @@ public class SapphireLeggings extends ArmorItem {
 
         @Override
         public int getEnchantability() {
-            return 40;
+            return (Integer) DZConfig.SAPPHIRE_LEGGINGS_ENCHANTABILITY.get();
         }
 
         @Override
@@ -57,12 +57,12 @@ public class SapphireLeggings extends ArmorItem {
 
         @Override
         public float getToughness() {
-            return 0.0F;
+            return (Integer) DZConfig.SAPPHIRE_LEGGINGS_TOUGHNESS.get();
         }
 
         @Override
         public float getKnockbackResistance() {
-            return 0;
+            return (Integer) DZConfig.SAPPHIRE_LEGGINGS_KNOCK_BACK_RESISTANCE.get();
         }
 
     };

@@ -25,7 +25,7 @@ public class EmeraldSword extends SwordItem {
         }
 
         public float getEfficiency() {
-            return 10.0F;
+            return (Integer) DZConfig.EMERALD_SWORD_EFFICIENCY.get();
         }
 
         public float getAttackDamage() {
@@ -33,11 +33,11 @@ public class EmeraldSword extends SwordItem {
         }
 
         public int getHarvestLevel() {
-            return 3;
+            return (Integer) DZConfig.EMERALD_SWORD_HARVEST_LEVEL.get();
         }
 
         public int getEnchantability() {
-            return 70;
+            return (Integer) DZConfig.EMERALD_SWORD_ENCHANTABILITY.get();
         }
 
         public Ingredient getRepairMaterial() {
@@ -46,7 +46,7 @@ public class EmeraldSword extends SwordItem {
     };
 
     public EmeraldSword() {
-        super(iItemTier, (Integer)DZConfig.EMERALD_SWORD_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.WEAPONS));
+        super(iItemTier, (Integer)DZConfig.EMERALD_SWORD_DAMAGE.get(), -(Integer) DZConfig.EMERALD_SWORD_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.WEAPONS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {

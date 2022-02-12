@@ -31,12 +31,12 @@ public class SapphireChestplate extends ArmorItem {
 
         @Override
         public int getDamageReductionAmount(EquipmentSlotType slotIn) {
-            return 8;
+            return (Integer) DZConfig.SAPPHIRE_CHESTPLATE_ARMOR.get();
         }
 
         @Override
         public int getEnchantability() {
-            return 40;
+            return (Integer) DZConfig.SAPPHIRE_CHESTPLATE_ENCHANTABILITY.get();
         }
 
         @Override
@@ -57,12 +57,12 @@ public class SapphireChestplate extends ArmorItem {
 
         @Override
         public float getToughness() {
-            return 0.0F;
+            return (Integer) DZConfig.SAPPHIRE_CHESTPLATE_TOUGHNESS.get();
         }
 
         @Override
         public float getKnockbackResistance() {
-            return 0;
+            return (Integer) DZConfig.SAPPHIRE_CHESTPLATES_KNOCK_BACK_RESISTANCE.get();
         }
 
     };

@@ -31,12 +31,12 @@ public class CatsEyeChestplate extends ArmorItem {
 
         @Override
         public int getDamageReductionAmount(EquipmentSlotType slotIn) {
-            return 12;
+            return (Integer) DZConfig.CATS_EYE_CHESTPLATE_ARMOR.get();
         }
 
         @Override
         public int getEnchantability() {
-            return 40;
+            return (Integer) DZConfig.CATS_EYE_CHESTPLATE_ENCHANTABILITY.get();
         }
 
         @Override
@@ -57,12 +57,12 @@ public class CatsEyeChestplate extends ArmorItem {
 
         @Override
         public float getToughness() {
-            return 5F;
+            return (Integer) DZConfig.CATS_EYE_CHESTPLATE_TOUGHNESS.get();
         }
 
         @Override
         public float getKnockbackResistance() {
-            return 0.5F;
+            return (Integer) DZConfig.CATS_EYE_CHESTPLATE_KNOCK_BACK_RESISTANCE.get();
         }
 
     };

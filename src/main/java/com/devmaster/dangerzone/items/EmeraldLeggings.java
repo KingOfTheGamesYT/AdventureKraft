@@ -31,12 +31,12 @@ public class EmeraldLeggings extends ArmorItem {
 
         @Override
         public int getDamageReductionAmount(EquipmentSlotType slotIn) {
-            return 6;
+            return (Integer) DZConfig.EMERALD_LEGGINGS_ARMOR.get();
         }
 
         @Override
         public int getEnchantability() {
-            return 60;
+            return (Integer) DZConfig.EMERALD_LEGGINGS_ENCHANTABILITY.get();
         }
 
         @Override
@@ -57,12 +57,12 @@ public class EmeraldLeggings extends ArmorItem {
 
         @Override
         public float getToughness() {
-            return 0.0F;
+            return (Integer) DZConfig.EMERALD_LEGGINGS_TOUGHNESS.get();
         }
 
         @Override
         public float getKnockbackResistance() {
-            return 0;
+            return (Integer) DZConfig.EMERALD_LEGGINGS_KNOCK_BACK_RESISTANCE.get();
         }
 
     };

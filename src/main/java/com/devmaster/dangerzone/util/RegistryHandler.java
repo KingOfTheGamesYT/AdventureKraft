@@ -40,13 +40,6 @@ public class RegistryHandler {
                             .size(0.9f, 1.9f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "tewtiy").toString()));
 
-
-    public static final RegistryObject<EntityType<CaveFisher>> CAVE_FISHER = ENTITIES
-            .register("cave_fisher",
-                    () -> EntityType.Builder.<CaveFisher>create(CaveFisher::new, EntityClassification.AMBIENT)
-                            .size(0.9f, 1.9f)
-                            .build(new ResourceLocation(DangerZone.MOD_ID, "cave_fisher").toString()));
-
     public static final RegistryObject<EntityType<NotBreeBree>> NOTBREEBREE = ENTITIES
             .register("notbreebree",
                     () -> EntityType.Builder.<NotBreeBree>create(NotBreeBree::new, EntityClassification.AMBIENT)
@@ -91,7 +84,7 @@ public class RegistryHandler {
                             .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
 
     //Items
-    public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", Amethyst::new);
+    public static final RegistryObject<Item> COARSE_AMETHYST = ITEMS.register("coarse_amethyst", CoarseAmethyst::new);
 
     public static final RegistryObject<Item> CATS_EYE = ITEMS.register("cats_eye", CatsEye::new);
 
@@ -139,15 +132,15 @@ public class RegistryHandler {
 
 
     //Tools
-    public static final RegistryObject<AmethystPickaxe> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", AmethystPickaxe::new);
+    public static final RegistryObject<CoarseAmethystPickaxe> COARSE_AMETHYST_PICKAXE = ITEMS.register("coarse_amethyst_pickaxe", CoarseAmethystPickaxe::new);
 
-    public static final RegistryObject<AmethystSword> AMETHYST_SWORD = ITEMS.register("amethyst_sword", AmethystSword::new);
+    public static final RegistryObject<CoarseAmethystSword> COARSE_AMETHYST_SWORD = ITEMS.register("coarse_amethyst_sword", CoarseAmethystSword::new);
 
-    public static final RegistryObject<AmethystAxe> AMETHYST_AXE = ITEMS.register("amethyst_axe", AmethystAxe::new);
+    public static final RegistryObject<CoarseAmethystAxe> COARSE_AMETHYST_AXE = ITEMS.register("coarse_amethyst_axe", CoarseAmethystAxe::new);
 
-    public static final RegistryObject<AmethystShovel> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", AmethystShovel::new);
+    public static final RegistryObject<CoarseAmethystShovel> COARSE_AMETHYST_SHOVEL = ITEMS.register("coarse_amethyst_shovel", CoarseAmethystShovel::new);
 
-    public static final RegistryObject<AmethystHoe> AMETHYST_HOE = ITEMS.register("amethyst_hoe", AmethystHoe::new);
+    public static final RegistryObject<CoarseAmethystHoe> COARSE_AMETHYST_HOE = ITEMS.register("coarse_amethyst_hoe", CoarseAmethystHoe::new);
 
     public static final RegistryObject<EmeraldAxe> EMERALD_AXE = ITEMS.register("emerald_axe", EmeraldAxe::new);
 
@@ -174,13 +167,13 @@ public class RegistryHandler {
     public static final RegistryObject<PoppySword> POPPY_SWORD = ITEMS.register("poppy_sword", PoppySword::new);
 
     //Armor
-    public static final RegistryObject<AmethystHelmet> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", AmethystHelmet::new);
+    public static final RegistryObject<CoarseAmethystHelmet> COARSE_AMETHYST_HELMET = ITEMS.register("coarse_amethyst_helmet", CoarseAmethystHelmet::new);
 
-    public static final RegistryObject<AmethystChestplate> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", AmethystChestplate::new);
+    public static final RegistryObject<CoarseAmethystChestplate> COARSE_AMETHYST_CHESTPLATE = ITEMS.register("coarse_amethyst_chestplate", CoarseAmethystChestplate::new);
 
-    public static final RegistryObject<AmethystLeggings> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", AmethystLeggings::new);
+    public static final RegistryObject<CoarseAmethystLeggings> COARSE_AMETHYST_LEGGINGS = ITEMS.register("coarse_amethyst_leggings", CoarseAmethystLeggings::new);
 
-    public static final RegistryObject<AmethystBoots> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", AmethystBoots::new);
+    public static final RegistryObject<CoarseAmethystBoots> COARSE_AMETHYST_BOOTS = ITEMS.register("coarse_amethyst_boots", CoarseAmethystBoots::new);
 
     public static final RegistryObject<SapphireHelmet> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", SapphireHelmet::new);
 
@@ -223,11 +216,11 @@ public class RegistryHandler {
     public static final RegistryObject<CatsEyeBoots> CATS_EYE_BOOTS = ITEMS.register("cats_eye_boots", CatsEyeBoots::new);
 
     //Blocks
-    public static final RegistryObject<Block> AMETHYST_ORE_BLOCK = BLOCKS.register("amethyst_ore_block", AmethystOreBlock::new);
+    public static final RegistryObject<Block> COARSE_AMETHYST_ORE_BLOCK = BLOCKS.register("coarse_amethyst_ore_block", CoarseAmethystOreBlock::new);
 
     public static final RegistryObject<Block> TITANIUM_ORE_BLOCK = BLOCKS.register("titanium_ore_block", TitaniumOreBlock::new);
 
-    public static final RegistryObject<Block> AMETHYST_BLOCK = BLOCKS.register("amethyst_block", AmethystBlock::new);
+    public static final RegistryObject<Block> COARSE_AMETHYST_BLOCK = BLOCKS.register("coarse_amethyst_block", CoarseAmethystBlock::new);
 
     public static final RegistryObject<Block> SALT_ORE_BLOCK = BLOCKS.register("salt_ore_block", SaltOreBlock::new);
 
@@ -265,11 +258,11 @@ public class RegistryHandler {
 
 
     //Block Items
-    public static final RegistryObject<Item> AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("amethyst_ore_block", () -> new BlockItemBase(AMETHYST_ORE_BLOCK.get()));
+    public static final RegistryObject<Item> COARSE_AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("coarse_amethyst_ore_block", () -> new BlockItemBase(COARSE_AMETHYST_ORE_BLOCK.get()));
 
     public static final RegistryObject<Item> ALUMINIUM_ORE_BLOCK_ITEM = ITEMS.register("aluminium_ore_block", () -> new BlockItemBase(ALUMINIUM_ORE_BLOCK.get()));
 
-    public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItemBase(AMETHYST_BLOCK.get()));
+    public static final RegistryObject<Item> COARSE_AMETHYST_BLOCK_ITEM = ITEMS.register("coarse_amethyst_block", () -> new BlockItemBase(COARSE_AMETHYST_BLOCK.get()));
 
     public static final RegistryObject<Item> SALT_ORE_BLOCK_ITEM = ITEMS.register("salt_ore_block", () -> new BlockItemBase(SALT_ORE_BLOCK.get()));
 

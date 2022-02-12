@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dangerzone:blocks/mineral/block/coarse_amethyst_block"
+  }
+}

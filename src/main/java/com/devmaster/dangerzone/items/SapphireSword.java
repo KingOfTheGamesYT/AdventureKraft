@@ -28,7 +28,7 @@ public class SapphireSword extends SwordItem {
         }
 
         public float getEfficiency() {
-            return 10.0F;
+            return (Integer) DZConfig.SAPPHIRE_SWORD_EFFICIENCY.get();
         }
 
         public float getAttackDamage() {
@@ -36,11 +36,11 @@ public class SapphireSword extends SwordItem {
         }
 
         public int getHarvestLevel() {
-            return 4;
+            return (Integer) DZConfig.SAPPHIRE_SWORD_HARVEST_LEVEL.get();
         }
 
         public int getEnchantability() {
-            return 83;
+            return (Integer) DZConfig.SAPPHIRE_SWORD_ENCHANTABILITY.get();
         }
 
         public Ingredient getRepairMaterial() {
@@ -49,7 +49,7 @@ public class SapphireSword extends SwordItem {
     };
 
     public SapphireSword() {
-        super(iItemTier, (Integer)DZConfig.SAPPHIRE_SWORD_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
+        super(iItemTier, (Integer)DZConfig.SAPPHIRE_SWORD_DAMAGE.get(), (Integer) DZConfig.SAPPHIRE_SWORD_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.TOOLS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {

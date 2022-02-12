@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "x x",
+    "x x"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "forge:storage_blocks/amethyst"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:coarse_amethyst_leggings",
+    "count": 1
+  }
+}

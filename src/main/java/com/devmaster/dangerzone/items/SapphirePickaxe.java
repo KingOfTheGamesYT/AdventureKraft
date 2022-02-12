@@ -27,7 +27,7 @@ public class SapphirePickaxe extends AxeItem {
         }
 
         public float getEfficiency() {
-            return (Integer) DZConfig.SAPPHIRE_PICKAXE_ATTACK_SPEED.get();
+            return (Integer) DZConfig.SAPPHIRE_PICKAXE_EFFICIENCY.get();
 
         }
 
@@ -36,11 +36,11 @@ public class SapphirePickaxe extends AxeItem {
         }
 
         public int getHarvestLevel() {
-            return 4;
+            return (Integer) DZConfig.SAPPHIRE_PICKAXE_HARVEST_LEVEL.get();
         }
 
         public int getEnchantability() {
-            return 83;
+            return (Integer) DZConfig.SAPPHIRE_PICKAXE_ENCHANTABILITY.get();
         }
 
         public Ingredient getRepairMaterial() {
@@ -49,7 +49,7 @@ public class SapphirePickaxe extends AxeItem {
     };
 
     public SapphirePickaxe() {
-        super(iItemTier, (Integer)DZConfig.SAPPHIRE_PICKAXE_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
+        super(iItemTier, (Integer)DZConfig.SAPPHIRE_PICKAXE_DAMAGE.get(), (Integer) DZConfig.SAPPHIRE_PICKAXE_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.TOOLS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {

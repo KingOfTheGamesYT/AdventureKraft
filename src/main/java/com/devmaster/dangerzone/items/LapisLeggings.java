@@ -32,12 +32,12 @@ public class LapisLeggings extends ArmorItem {
 
         @Override
         public int getDamageReductionAmount(EquipmentSlotType slotIn) {
-            return 3;
+            return (Integer) DZConfig.LAPIS_LEGGINGS_ARMOR.get();
         }
 
         @Override
         public int getEnchantability() {
-            return 60;
+            return (Integer) DZConfig.LAPIS_LEGGINGS_ENCHANTABILITY.get();
         }
 
         @Override
@@ -58,12 +58,12 @@ public class LapisLeggings extends ArmorItem {
 
         @Override
         public float getToughness() {
-            return 0.0F;
+            return (Integer) DZConfig.LAPIS_LEGGINGS_TOUGHNESS.get();
         }
 
         @Override
         public float getKnockbackResistance() {
-            return 0;
+            return (Integer) DZConfig.LAPIS_LEGGINGS_KNOCK_BACK_RESISTANCE.get();
         }
 
     };

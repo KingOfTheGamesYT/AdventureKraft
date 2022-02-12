@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "dangerzone:coarse_amethyst_ore_block"
+  },
+  "result": "dangerzone:coarse_amethyst",
+  "experience": 0.7,
+  "cookingtime": 100
+}

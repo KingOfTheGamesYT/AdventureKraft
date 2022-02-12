@@ -28,7 +28,7 @@ public class CakeSword extends SwordItem {
         }
 
         public float getEfficiency() {
-            return 1.0F;
+            return (Integer) DZConfig.CAKE_SWORD_EFFICIENCY.get();
         }
 
         public float getAttackDamage() {
@@ -36,11 +36,11 @@ public class CakeSword extends SwordItem {
         }
 
         public int getHarvestLevel() {
-            return 1;
+            return (Integer) DZConfig.CAKE_SWORD_HARVEST_LEVEL.get();
         }
 
         public int getEnchantability() {
-            return 1;
+            return (Integer) DZConfig.CAKE_SWORD_ENCHANTABILITY.get();
         }
 
         public Ingredient getRepairMaterial() {
@@ -49,7 +49,7 @@ public class CakeSword extends SwordItem {
     };
 
     public CakeSword() {
-        super(iItemTier, (Integer)DZConfig.CAKE_SWORD_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.WEAPONS));
+        super(iItemTier, (Integer)DZConfig.CAKE_SWORD_DAMAGE.get(), (Integer) DZConfig.CAKE_SWORD_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.WEAPONS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {

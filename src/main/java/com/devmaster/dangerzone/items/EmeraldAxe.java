@@ -46,7 +46,7 @@ public class EmeraldAxe extends AxeItem {
     };
 
     public EmeraldAxe() {
-        super(iItemTier, (Integer)DZConfig.EMERALD_AXE_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
+        super(iItemTier, (Integer)DZConfig.EMERALD_AXE_DAMAGE.get(), 2F, (new Properties()).group(DangerZone.TOOLS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {

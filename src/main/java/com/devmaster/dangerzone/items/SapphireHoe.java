@@ -27,7 +27,7 @@ public class SapphireHoe extends AxeItem {
         }
 
         public float getEfficiency() {
-            return 10.0F;
+            return (Integer) DZConfig.SAPPHIRE_HOE_EFFICIENCY.get();
         }
 
         public float getAttackDamage() {
@@ -35,11 +35,11 @@ public class SapphireHoe extends AxeItem {
         }
 
         public int getHarvestLevel() {
-            return 4;
+            return (Integer) DZConfig.SAPPHIRE_HOE_HARVEST_LEVEL.get();
         }
 
         public int getEnchantability() {
-            return 83;
+            return (Integer) DZConfig.SAPPHIRE_HOE_ENCHANTABILITY.get();
         }
 
         public Ingredient getRepairMaterial() {
@@ -48,7 +48,7 @@ public class SapphireHoe extends AxeItem {
     };
 
     public SapphireHoe() {
-        super(iItemTier, (Integer)DZConfig.SAPPHIRE_HOE_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
+        super(iItemTier, (Integer)DZConfig.SAPPHIRE_HOE_DAMAGE.get(), (Integer) DZConfig.SAPPHIRE_HOE_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.TOOLS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {

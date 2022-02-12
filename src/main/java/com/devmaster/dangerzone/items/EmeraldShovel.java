@@ -25,7 +25,7 @@ public class EmeraldShovel extends ShovelItem {
         }
 
         public float getEfficiency() {
-            return 10.0F;
+            return (Integer) DZConfig.EMERALD_SHOVEL_EFFICIENCY.get();
         }
 
         public float getAttackDamage() {
@@ -33,11 +33,11 @@ public class EmeraldShovel extends ShovelItem {
         }
 
         public int getHarvestLevel() {
-            return 3;
+            return (Integer) DZConfig.EMERALD_SHOVEL_HARVEST_LEVEL.get();
         }
 
         public int getEnchantability() {
-            return 70;
+            return (Integer) DZConfig.EMERALD_SHOVEL_ENCHANTABILITY.get();
         }
 
         public Ingredient getRepairMaterial() {
@@ -46,7 +46,7 @@ public class EmeraldShovel extends ShovelItem {
     };
 
     public EmeraldShovel() {
-        super(iItemTier, (Integer)DZConfig.EMERALD_SHOVEL_DAMAGE.get(), -2.4F, (new Properties()).group(DangerZone.TOOLS));
+        super(iItemTier, (Integer)DZConfig.EMERALD_SHOVEL_DAMAGE.get(), (Integer) DZConfig.EMERALD_SHOVEL_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.TOOLS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {

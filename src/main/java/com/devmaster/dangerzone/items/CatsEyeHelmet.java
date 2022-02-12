@@ -31,12 +31,12 @@ public class CatsEyeHelmet extends ArmorItem {
 
         @Override
         public int getDamageReductionAmount(EquipmentSlotType slotIn) {
-            return 14;
+            return (Integer) DZConfig.CATS_EYE_HELMET_ARMOR.get();
         }
 
         @Override
         public int getEnchantability() {
-            return 40;
+            return (Integer) DZConfig.CATS_EYE_HELMET_ENCHANTABILITY.get();
         }
 
         @Override
@@ -57,12 +57,12 @@ public class CatsEyeHelmet extends ArmorItem {
 
         @Override
         public float getToughness() {
-            return 3F;
+            return (Integer) DZConfig.CATS_EYE_HELMET_TOUGHNESS.get();
         }
 
         @Override
         public float getKnockbackResistance() {
-            return 0.4F;
+            return (Integer) DZConfig.CATS_EYE_HELMET_KNOCK_BACK_RESISTANCE.get();
         }
 
     };

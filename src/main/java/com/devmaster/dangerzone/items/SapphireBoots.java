@@ -36,7 +36,7 @@ public class SapphireBoots extends ArmorItem {
 
         @Override
         public int getEnchantability() {
-            return 40;
+            return (Integer) DZConfig.SAPPHIRE_BOOTS_ENCHANTABILITY.get();
         }
 
         @Override
@@ -62,7 +62,7 @@ public class SapphireBoots extends ArmorItem {
 
         @Override
         public float getKnockbackResistance() {
-            return 0;
+            return (Integer) DZConfig.SAPPHIRE_BOOTS_KNOCK_BACK_RESISTANCE.get();
         }
 
     };

@@ -31,12 +31,12 @@ public class CatsEyeBoots extends ArmorItem {
 
         @Override
         public int getDamageReductionAmount(EquipmentSlotType slotIn) {
-            return 18;
+            return (Integer) DZConfig.CATS_EYE_BOOTS_ARMOR.get();
         }
 
         @Override
         public int getEnchantability() {
-            return 40;
+            return (Integer) DZConfig.CATS_EYE_BOOTS_ENCHANTABILITY.get();
         }
 
         @Override
@@ -57,12 +57,12 @@ public class CatsEyeBoots extends ArmorItem {
 
         @Override
         public float getToughness() {
-            return 7F;
+            return (Integer) DZConfig.CATS_EYE_BOOTS_TOUGHNESS.get();
         }
 
         @Override
         public float getKnockbackResistance() {
-            return 0.1F;
+            return (Integer) DZConfig.CATS_EYE_BOOTS_KNOCK_BACK_RESISTANCE.get();
         }
 
     };
