@@ -41,6 +41,8 @@ public class DangerZone {
     public static final ItemGroup  BLOCKS = new DangerZoneBlocks();
     public static final ItemGroup  PETRIFIED_ORES = new DangerZonePetrifiedOres();
     public static final ItemGroup  FOOD = new DangerZoneFood();
+    public static final ItemGroup WIP = new DangerZoneWIP();
+
 
 
 

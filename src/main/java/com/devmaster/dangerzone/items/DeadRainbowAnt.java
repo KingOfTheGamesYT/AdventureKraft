@@ -18,7 +18,7 @@ import java.util.List;
 public class DeadRainbowAnt extends Item {
 
     public DeadRainbowAnt() {
-        super(new Properties().group(DangerZone.FOOD) .food(new Food.Builder()
+        super(new Properties().group(DangerZone.WIP) .food(new Food.Builder()
                 .hunger(1)
                 .saturation(0.5F)
                 .build()
