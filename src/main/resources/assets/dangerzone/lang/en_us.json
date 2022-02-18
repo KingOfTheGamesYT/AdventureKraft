@@ -23,6 +23,7 @@
   "item.dangerzone.dead_rainbow_ant": "Dead Rainbow Ant",
   "item.dangerzone.rainbow_ant_token": "Rainbow Ant Token",
   "item.dangerzone.rainbow_ant_eye": "Rainbow Ant Eye",
+  "item.dangerzone.feces": "Feces",
 
   "_comment": "Petrified Ores",
   "block.dangerzone.redrosewarrior_egg_ore": "Petrified RedRoseWarrior Ore",
@@ -56,6 +57,8 @@
   "itemGroup.dangerzonefood": "DangerZone Food",
   "itemGroup.dangerzonearmory": "DangerZone Armory",
   "itemGroup.dangerzonepetrifiedores": "DangerZone Petrified Ores",
+  "itemGroup.dangerzonewip": "DangerZone WIP",
+
 
   "_comment": "Tools",
   "item.dangerzone.emerald_axe": "Emerald Axe",

@@ -17,7 +17,7 @@ import java.util.List;
 public class MermaidSpawnEgg extends Item {
 
     public MermaidSpawnEgg() {
-        super(new Properties().group(DangerZone.TAB));
+        super(new Properties().group(DangerZone.WIP));
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
