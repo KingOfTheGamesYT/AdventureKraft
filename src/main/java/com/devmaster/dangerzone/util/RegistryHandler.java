@@ -217,6 +217,8 @@ public class RegistryHandler {
     public static final RegistryObject<CatsEyeBoots> CATS_EYE_BOOTS = ITEMS.register("cats_eye_boots", CatsEyeBoots::new);
 
     //Blocks
+    public static final RegistryObject<Block> ABYSSAL_ORE_BLOCK = BLOCKS.register("abyssal_ore_block", AbyssalOreBlock::new);
+
     public static final RegistryObject<Block> COARSE_AMETHYST_ORE_BLOCK = BLOCKS.register("coarse_amethyst_ore_block", CoarseAmethystOreBlock::new);
 
     public static final RegistryObject<Block> TITANIUM_ORE_BLOCK = BLOCKS.register("titanium_ore_block", TitaniumOreBlock::new);
@@ -259,6 +261,8 @@ public class RegistryHandler {
 
 
     //Block Items
+    public static final RegistryObject<Item> ABYSSAL_ORE_BLOCK_ITEM = ITEMS.register("abyssal_ore_block", () -> new BlockItemBase(ABYSSAL_ORE_BLOCK.get()));
+
     public static final RegistryObject<Item> COARSE_AMETHYST_ORE_BLOCK_ITEM = ITEMS.register("coarse_amethyst_ore_block", () -> new BlockItemBase(COARSE_AMETHYST_ORE_BLOCK.get()));
 
     public static final RegistryObject<Item> ALUMINIUM_ORE_BLOCK_ITEM = ITEMS.register("aluminium_ore_block", () -> new BlockItemBase(ALUMINIUM_ORE_BLOCK.get()));

@@ -20,7 +20,7 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 
 public class ModOregen {
-
+    public static ConfiguredFeature<?, ?> ABYSSAL_ORE;
     public static ConfiguredFeature<?, ?> COARSE_AMETHYST_ORE;
     public static ConfiguredFeature<?, ?> SALT_ORE;
     public static ConfiguredFeature<?, ?> SAPPHIRE_ORE;
@@ -35,6 +35,12 @@ public class ModOregen {
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
 
         Registry<ConfiguredFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_FEATURE;
+        ABYSSAL_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.ABYSSAL_ORE_BLOCK.get().getDefaultState(),18))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(16, 0, 128))
+                        .square()
+                        .chance/* repeat */(16));
+
         COARSE_AMETHYST_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.COARSE_AMETHYST_ORE_BLOCK.get().getDefaultState(),6))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 25))
@@ -77,6 +83,7 @@ public class ModOregen {
                         .square()
                         .chance/* repeat */(5));
 
+        Registry.register(registry, new ResourceLocation("abyssal_ore_block"), ABYSSAL_ORE);
         Registry.register(registry, new ResourceLocation("coarse_amethyst_ore_block"), COARSE_AMETHYST_ORE);
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
         Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
@@ -93,6 +100,7 @@ public class ModOregen {
         if (event.getCategory() == Biome.Category.NETHER
                 || event.getCategory() == Biome.Category.THEEND
                 || BiomeDictionary.hasType(biome, BiomeDictionary.Type.VOID)) return;
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ABYSSAL_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, COARSE_AMETHYST_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SALT_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE);
