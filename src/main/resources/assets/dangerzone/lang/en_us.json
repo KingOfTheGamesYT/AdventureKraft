@@ -11,6 +11,8 @@
   "item.dangerzone.butter": "Butter",
   "item.dangerzone.cheese": "Cheese",
   "item.dangerzone.butter_candy": "Butter Candy",
+  "item.dangerzone.allosaurus_spawn_egg": "Spawn Allosaurus",
+  "item.dangerzone.apple_cow_spawn_egg": "Spawn Apple Cow",
   "item.dangerzone.mermaid_spawn_egg": "Spawn Mermaid",
   "item.dangerzone.titanium_ingot": "Titanium Ingot",
   "item.dangerzone.titanium_nugget": "Titanium Nugget",
@@ -23,7 +25,7 @@
   "item.dangerzone.dead_rainbow_ant": "Dead Rainbow Ant",
   "item.dangerzone.rainbow_ant_token": "Rainbow Ant Token",
   "item.dangerzone.rainbow_ant_eye": "Rainbow Ant Eye",
-  "item.dangerzone.feces": "Feces",
+  "item.dangerzone.aluminium_ingot": "Aluminium Ingot",
 
   "_comment": "Petrified Ores",
   "block.dangerzone.redrosewarrior_egg_ore": "Petrified RedRoseWarrior Ore",
@@ -49,6 +51,7 @@
   "block.dangerzone.crystal_grass": "Crystal Grass",
   "block.dangerzone.cats_eye_block": "Cat's Eye Block",
   "block.dangerzone.abyssal_ore_block": "Abyssal Ore",
+  "block.dangerzone.aluminium_block": "Aluminium Block",
 
   "_comment": "Creative Tabs",
   "itemGroup.dangerzonetab": "DangerZone Items",
