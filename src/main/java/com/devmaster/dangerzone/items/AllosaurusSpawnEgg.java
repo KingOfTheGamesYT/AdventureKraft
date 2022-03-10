@@ -21,6 +21,6 @@ public class AllosaurusSpawnEgg extends Item {
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7b" + "The dino that rivals the t-rex" + "\u00A7b"));
+        tooltip.add(new StringTextComponent("\u00A76" + "The dino that rivals the t-rex" + "\u00A76"));
     }
 }
