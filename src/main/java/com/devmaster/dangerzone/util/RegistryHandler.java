@@ -9,7 +9,6 @@ import com.devmaster.dangerzone.items.EmeraldPickaxe;
 import com.devmaster.dangerzone.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
@@ -135,7 +134,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", AllosaurusSpawnEgg::new);
 
-    public static final RegistryObject<Item> APPLE_COW_SPAWN_EGG = ITEMS.register("apple_cow_spawn_egg", AlppleCowSpawnEgg::new);
+    public static final RegistryObject<Item> RED_COW_SPAWN_EGG = ITEMS.register("red_cow_spawn_egg", RedCowSpawnEgg::new);
 
 
     //Tools
