@@ -1,12 +1,10 @@
 # CraftZone
 
-Adds DangerZone/Orespawn to minecraft
+Adds DangerZone and it's mods to minecraft
 
 Dangerzone is a game made by Richard Clark witch can be [download here](https://www.orespawn.com/download/)
 
-Orespawn is a minecraft Mod that was made by Richard Clark witch can be [download here](https://web.archive.org/web/20210621170024/https://dangerzone-archive.weebly.com/orespawn.html) 
-
-⚠️This mod is a wip so the mod may be unstable
+⚠️This mod is a wip
 
 ## Download
 ___
@@ -21,6 +19,7 @@ To build the mod, you must `git checkout` the branch of the version you would li
 
 ## License
 our License All Rights Reserved so pls follow the following terms:
+<br>
 -You may use this mod in modpacks that follow Mojang EULA
 <br>
 -You may use this mod in videos as long as it leaves a link back to the download page so that viewers may download the mod if they wish
@@ -31,9 +30,3 @@ our License All Rights Reserved so pls follow the following terms:
 <br>
 -You may not repost this mod on other mod hosting sites. If you wish to have this mod on a mod hosting site let me know
 <br>
-
-## Source code of craftzone 
-to see the Source code of craftzone you must use github brantch selector and select the bratch in whitch version of the source code you want to see
-<br>
-
-[our main bratch](https://github.com/KingOfTheGamesYT/CraftZone/tree/1.16.5)
