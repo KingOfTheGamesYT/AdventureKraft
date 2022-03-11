@@ -4,7 +4,7 @@ Adds DangerZone/Orespawn to minecraft
 
 Dangerzone is a game made by Richard Clark witch can be [download here](https://www.orespawn.com/download/)
 
-Orespawn is a minecraft Mod that was made by Richard Clark witch can be [download here](https://web.archive.org/web/20210621170024/https://dangerzone-archive.weebly.com/orespawn.html)  <! –– using web.archive.org because it saves everthing in it so we dont have to reley on the og website to keep it  ––>
+Orespawn is a minecraft Mod that was made by Richard Clark witch can be [download here](https://web.archive.org/web/20210621170024/https://dangerzone-archive.weebly.com/orespawn.html) 
 
 ⚠️This mod is a wip so the mod may be unstable
 
