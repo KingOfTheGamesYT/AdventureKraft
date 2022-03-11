@@ -22,13 +22,18 @@ To build the mod, you must `git checkout` the branch of the version you would li
 ## License
 our License All Rights Reserved so pls follow the following terms:
 -You may use this mod in modpacks that follow Mojang EULA
+<br>
 -You may use this mod in videos as long as it leaves a link back to the download page so that viewers may download the mod if they wish
+<br>
 -You may not copy/steal/redistribute any assets from my mod to use in another mod/add-on
+<br>
 -Do not claim this mod as your own
+<br>
 -You may not repost this mod on other mod hosting sites. If you wish to have this mod on a mod hosting site let me know
-
-## Source code of craftzone 
-to see the Source code of craftzone you must use github brantch selector
 <br>
 
-[main bratch](https://github.com/KingOfTheGamesYT/CraftZone/tree/1.16.5)
+## Source code of craftzone 
+to see the Source code of craftzone you must use github brantch selector and select the bratch in whitch version of the source code you want to see
+<br>
+
+[our main bratch](https://github.com/KingOfTheGamesYT/CraftZone/tree/1.16.5)
