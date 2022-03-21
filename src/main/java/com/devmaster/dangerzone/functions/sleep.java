@@ -1,5 +1,6 @@
-package com.devmaster.dangerzone.misc;
+package com.devmaster.dangerzone.functions;
 
+import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.server.ServerWorld;

@@ -7,14 +7,20 @@ import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.gui.BossBar;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.tags.ITag;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.feature.Feature;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,6 +33,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -42,11 +49,6 @@ public class DangerZone {
     public static final ItemGroup  PETRIFIED_ORES = new DangerZonePetrifiedOres();
     public static final ItemGroup  FOOD = new DangerZoneFood();
     public static final ItemGroup WIP = new DangerZoneWIP();
-
-
-
-
-
     public static final ITag.INamedTag<Block> MINERS_DREAM_MINEABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":breakable");
 
     public DangerZone() {
@@ -54,9 +56,7 @@ public class DangerZone {
         BaseConfig.loadConfig(BaseConfig.COMMON, FMLPaths.CONFIGDIR.get().resolve("dangerzone-common.toml").toString());
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
 
@@ -64,10 +64,9 @@ public class DangerZone {
         BossBar.init();
 
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
 
         FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Feature.class, EventPriority.LOW, ModOregen::addConfigFeatures);
-
-        MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -79,7 +78,7 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.BUTTERFLY.get(), Butterfly.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.ENT.get(), Ent.getAttributes().create());
-
+            GlobalEntityTypeAttributes.put(RegistryHandler.CAVE_FISHER.get(), CaveFisher.getAttributes().create());
         });
     }
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -94,11 +93,8 @@ public class DangerZone {
         RenderTypeLookup.setRenderLayer(RegistryHandler.CRYSTAL_GRASS .get(), RenderType.getCutout());
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ENT.get(), EntRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WATER_PROJECTILE.get(), WaterProjectileRender::new);
-
-
-
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.CAVE_FISHER.get(), CaveFisherRender::new);
     }
-
 }
 
 
