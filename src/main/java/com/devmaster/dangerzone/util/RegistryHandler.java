@@ -6,7 +6,6 @@ import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.items.EmeraldPickaxe;
-import com.devmaster.dangerzone.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
 import net.minecraft.item.*;
@@ -81,6 +80,12 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<WaterProjectile>create(WaterProjectile::new, EntityClassification.MISC)
                             .size(1.0F, 3.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
+
+    public static final RegistryObject<EntityType<CaveFisher>> CAVE_FISHER = ENTITIES
+            .register("cave_fisher",
+                    () -> EntityType.Builder.<CaveFisher>create(CaveFisher::new, EntityClassification.CREATURE)
+                            .size(1.0F, 3.5F)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "cave_fisher").toString()));
 
     //Items
     public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("aluminium_ingot", AluminiumIngot::new);
@@ -263,6 +268,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> ALUMINIUM_ORE_BLOCK = BLOCKS.register("aluminium_ore_block", AluminiumOreBlock::new);
 
+    public static final RegistryObject<Block> YOUTUBER_ORE_BLOCK = BLOCKS.register("youtuber_ore_block", PlayButtonOreBlock::new);
+
     //Petrified animals blocks
     public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
     public static final RegistryObject<Block> MUTANT_ZOMBIE_EGG_ORE = BLOCKS.register("mutant_zombie_egg_ore", BlockMobOre::new);
@@ -308,6 +315,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> CRYSTAL_GRASS_ITEM = ITEMS.register("crystal_grass", () -> new BlockItemBase(CRYSTAL_GRASS.get()));
 
     public static final RegistryObject<Item> CATS_EYE_BLOCK_ITEM = ITEMS.register("cats_eye_block", () -> new BlockItemBase(CATS_EYE_BLOCK.get()));
+
+    public static final RegistryObject<Item> YOUTUBER_ORE_BLOCK_ITEM = ITEMS.register("youtuber_ore_block", () -> new BlockItemBase(YOUTUBER_ORE_BLOCK.get()));
 
     //Petrified animals items
     public static final RegistryObject<Item> REDROSEWARRIOR_EGG_ORE_ITEM = ITEMS.register("redrosewarrior_egg_ore", () -> new BlockItemMobOre(REDROSEWARRIOR_EGG_ORE.get()));

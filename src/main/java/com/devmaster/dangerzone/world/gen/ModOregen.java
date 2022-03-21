@@ -28,6 +28,7 @@ public class ModOregen {
     public static ConfiguredFeature<?, ?> REDROSEWARRIOR_ORE;
     public static ConfiguredFeature<?, ?> MUTANT_ZOMBIE_ORE;
     public static ConfiguredFeature<?, ?> ALUMINIUM_ORE;
+    public static ConfiguredFeature<?, ?> YOUTUBER_ORE;
 
 
 
@@ -38,6 +39,12 @@ public class ModOregen {
         ABYSSAL_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.ABYSSAL_ORE_BLOCK.get().getDefaultState(),18))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(16, 0, 128))
+                        .square()
+                        .chance/* repeat */(16));
+
+        YOUTUBER_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.YOUTUBER_ORE_BLOCK.get().getDefaultState(),8))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 14))
                         .square()
                         .chance/* repeat */(16));
 
@@ -91,6 +98,7 @@ public class ModOregen {
         Registry.register(registry, new ResourceLocation("redrosewarrior_egg_ore"), REDROSEWARRIOR_ORE);
         Registry.register(registry, new ResourceLocation("mutant_zombie_egg_ore"), MUTANT_ZOMBIE_ORE);
         Registry.register(registry, new ResourceLocation("aluminium_ore_block"), ALUMINIUM_ORE);
+        Registry.register(registry, new ResourceLocation("youtuber_ore_block"), YOUTUBER_ORE);
 
     }
 
@@ -108,6 +116,8 @@ public class ModOregen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, REDROSEWARRIOR_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, MUTANT_ZOMBIE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ALUMINIUM_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, YOUTUBER_ORE);
+
 
 
     }
