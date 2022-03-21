@@ -34,6 +34,8 @@ public class EntitySpawns {
                 List<BiomeDictionary.Type> TewityexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Tewityexclude.get()));
                 List<BiomeDictionary.Type> EntincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Entinclude.get()));
                 List<BiomeDictionary.Type> EntexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Entexclude.get()));
+                List<BiomeDictionary.Type> CaveFisherincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherinclude.get()));
+                List<BiomeDictionary.Type> CaveFisherexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherexclude.get()));
 
                 if (!includeList.isEmpty()) {
                     Set<BiomeDictionary.Type> biomeTypes = BiomeDictionary.getTypes(biomeKey);
