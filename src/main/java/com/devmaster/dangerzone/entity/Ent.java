@@ -31,13 +31,11 @@ public class Ent extends CreatureEntity {
     public Ent(final EntityType<? extends Ent> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 10;
-
     }
 
     @Override
     public void livingTick() {
         super.livingTick();
-
     }
 
 
@@ -74,7 +72,6 @@ public class Ent extends CreatureEntity {
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, RedRoseWarrior.class, true));
-
     }
 
 
@@ -111,18 +108,5 @@ public class Ent extends CreatureEntity {
     @Override
     protected boolean isDespawnPeaceful() {
         return true;
-    }
-
-
-
-
-    @Override
-    public void addTrackingPlayer(ServerPlayerEntity player) {
-        super.addTrackingPlayer(player);
-    }
-
-    @Override
-    public void removeTrackingPlayer(ServerPlayerEntity player) {
-        super.removeTrackingPlayer(player);
     }
     }

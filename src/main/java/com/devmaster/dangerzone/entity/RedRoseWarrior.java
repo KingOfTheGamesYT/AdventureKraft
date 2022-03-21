@@ -40,6 +40,7 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         this.experienceValue = 10;
 
     }
+
     private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
 
     @Override
@@ -182,9 +183,6 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
             RedRoseWarrior.this.setBendingAttack(false);
         }
     }
-
-
-
 
     @Override
     public void addTrackingPlayer(ServerPlayerEntity player) {

@@ -38,9 +38,6 @@ public class NotBreeBree extends CreatureEntity {
         super.setCustomName(name);
     }
 
-    public static boolean canNotBreeSpawn(EntityType<? extends NotBreeBree> animal, IWorld world, SpawnReason reason, BlockPos pos, Random random) {
-          return world.getBlockState(pos.south()).equals(Blocks.GRASS_BLOCK) && world.canSeeSky(pos);
-         }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
