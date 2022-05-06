@@ -6,7 +6,9 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
+import net.minecraft.entity.monster.GhastEntity;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.monster.PhantomEntity;
 import net.minecraft.entity.monster.SlimeEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.GolemEntity;
@@ -38,6 +40,7 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     public RedRoseWarrior(final EntityType<? extends RedRoseWarrior> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 10;
+        this.canSwim();
 
     }
 
@@ -59,6 +62,7 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 800)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.22D)
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 18)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 18);
     }
 
@@ -77,16 +81,14 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
         this.goalSelector.addGoal(2, new RedRoseWarrior.WaterBending(this, MAX_BEND_TIME, 3, 6));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, MonsterEntity.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, true));
-        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, StampyLongNose.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, SlimeEntity.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
-        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
-        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
-
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, MonsterEntity.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, StampyLongNose.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, SlimeEntity.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, PhantomEntity.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, GhastEntity.class, true));
     }
     @Override
     public void writeAdditional(CompoundNBT compound) {
@@ -152,8 +154,8 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     @Override
     public void attackEntityWithRangedAttack(LivingEntity target, float distanceFactor) {
         if(!world.isRemote()) {
-            WaterProjectile healingSpell = WaterProjectile.create(world, this);
-            world.addEntity(healingSpell);
+            WaterProjectile waterbending = WaterProjectile.create(world, this);
+            world.addEntity(waterbending);
         }
         this.playSound(SoundEvents.ENTITY_BOAT_PADDLE_WATER, 1.2F, 1.0F);
     }

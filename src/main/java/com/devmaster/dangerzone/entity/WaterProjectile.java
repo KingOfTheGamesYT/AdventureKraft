@@ -40,12 +40,12 @@ public class WaterProjectile extends BaseProjectile {
     }
 
     protected List<EffectInstance> getPotionEffects(final LivingEntity entity) {
-        return ImmutableList.of(new EffectInstance(Effects.INSTANT_DAMAGE, 10, 1));
+        return ImmutableList.of(new EffectInstance(Effects.INSTANT_DAMAGE, 0, 1));
     }
 
     protected IParticleData getImpactParticle(final LivingEntity entity) { return ParticleTypes.SPLASH; }
 
     protected IParticleData getTrailParticle() { return ParticleTypes.DRIPPING_WATER; }
 
-    protected float getImpactDamage(final LivingEntity entity) { return 0.5F; }
+    protected float getImpactDamage(final LivingEntity entity) { return 2F; }
 }
