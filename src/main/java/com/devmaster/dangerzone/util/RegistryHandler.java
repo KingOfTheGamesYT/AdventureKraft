@@ -128,6 +128,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<RainbowAntToken> RAINBOW_ANT_TOKEN = ITEMS.register("rainbow_ant_token", RainbowAntToken::new);
 
+    public static final RegistryObject<AppleSeed> APPLE_SEED = ITEMS.register("apple_seed", AppleSeed::new);
+
     public static final RegistryObject<RainbowAntEye> RAINBOW_ANT_EYE = ITEMS.register("rainbow_ant_eye", RainbowAntEye::new);
 
     //Spawn Eggs

@@ -25,6 +25,6 @@ public class AppleLeaves extends LeavesBlock {
 
     @Override
     public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new StringTextComponent("\u00A75" + "Apples from the trees" + "\u00A75"));
+        tooltip.add(new StringTextComponent("\u00A7a" + "Apples from the trees" + "\u00A7a"));
     }
 }
