@@ -163,6 +163,12 @@
         "maxCount": 1
       },
       {
+        "type": "dangerzone:attack_squid",
+        "weight": 30,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
         "type": "dangerzone:stampylongnose",
         "weight": 30,
         "minCount": 1,

@@ -16,9 +16,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.tags.ITag;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.feature.Feature;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -79,12 +77,14 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.BUTTERFLY.get(), Butterfly.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.ENT.get(), Ent.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.CAVE_FISHER.get(), CaveFisher.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ATTACK_SQUID.get(), AttackSquid.getAttributes().create());
         });
     }
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(RegistryHandler.STICKY_BLOCK.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.APPLE_LEAVES.get(), RenderType.getCutout());
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TEWTIY.get(), TewtiyRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ATTACK_SQUID.get(), AttackSquidRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNoseRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.NOTBREEBREE.get(), NotBreeBreeRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarriorRender::new);

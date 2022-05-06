@@ -56,6 +56,12 @@ public class RegistryHandler {
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "redrosewarrior").toString()));
 
+    public static final RegistryObject<EntityType<AttackSquid>> ATTACK_SQUID = ENTITIES
+            .register("attack_squid",
+                    () -> EntityType.Builder.<AttackSquid>create(AttackSquid::new, EntityClassification.MONSTER)
+                            .size(0.9f, 1.3f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "attack_squid").toString()));
+
     public static final RegistryObject<EntityType<RainbowAnt>> RAINBOWANT = ENTITIES
             .register("rainbow_ant",
                     () -> EntityType.Builder.<RainbowAnt>create(RainbowAnt::new, EntityClassification.CREATURE)
@@ -136,6 +142,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
 
     public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
+
+    public static final RegistryObject<SpawnEggItem> ATTACK_SQUID_SPAWN_EGG = ITEMS.register("attack_squid_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ATTACK_SQUID, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<Item> MOLDY_SPAWN_EGG = ITEMS.register("moldy_spawn_egg", MoldySpawnEgg::new);
 

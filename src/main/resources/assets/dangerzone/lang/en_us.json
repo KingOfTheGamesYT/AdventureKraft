@@ -21,6 +21,7 @@
   "item.dangerzone.candy_cane": "Candy Cane",
   "item.dangerzone.titanium_hardened_cake": "Titanium Hardened Cake",
   "item.dangerzone.redrosewarrior_spawn_egg": "Spawn RedRoseWarrior",
+  "item.dangerzone.attack_squid_spawn_egg": "Spawn Attack Squid",
   "item.dangerzone.copper_lump": "Copper Lump",
   "item.dangerzone.cats_eye": "Cats Eye",
   "item.dangerzone.moldy_spawn_egg": "Spawn Moldy",
@@ -123,6 +124,8 @@
   "entity.dangerzone.rainbow_ant": "Rainbow Ant",
   "entity.dangerzone.butterfly": "Butterfly",
   "entity.dangerzone.ent": "Ent",
+  "entity.dangerzone.attack_squid": "Attack Squid",
+
 
   "_comment": "Biomes",
   "biome.dangerzone.villages": "Villages",
