@@ -6,8 +6,10 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.util.math.MathHelper;
 
 public class AttackSquidModel<t> extends EntityModel<AttackSquid> {
+	private float wingspeed = 1.0F;
 	private final ModelRenderer HeadBody;
 	private final ModelRenderer Fin1;
 	private final ModelRenderer Fin2;
@@ -96,6 +98,16 @@ public class AttackSquidModel<t> extends EntityModel<AttackSquid> {
 	@Override
 	public void setRotationAngles(AttackSquid entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
+		TentacleFront1.rotateAngleX = MathHelper.cos(limbSwingAmount * 0.25F * this.wingspeed) * 3.1415927F * 0.04F * limbSwing;
+		TentacleFront2.rotateAngleZ = MathHelper.cos(limbSwingAmount * 0.39F * this.wingspeed) * 3.1415927F * 0.04F * limbSwing;
+		TentacleBack1.rotateAngleX = MathHelper.cos(limbSwingAmount * 1.2F * this.wingspeed) * 3.1415927F * 0.4F * limbSwing;
+		TentacleBack2.rotateAngleX = MathHelper.cos(limbSwingAmount * 1.1F * this.wingspeed) * 3.1415927F * 0.4F * limbSwing;
+		TentacleLeft1.rotateAngleZ = MathHelper.cos(limbSwingAmount * 1.0F * this.wingspeed) * 3.1415927F * 0.4F * limbSwing;
+		TentacleLeft2.rotateAngleZ = MathHelper.cos(limbSwingAmount * 1.9F * this.wingspeed) * 3.1415927F * 0.4F * limbSwing;
+		TentacleLeft3.rotateAngleX = MathHelper.cos(limbSwingAmount * 1.8F * this.wingspeed) * 3.1415927F * 0.4F * limbSwing;
+		TentacleRight1.rotateAngleX = MathHelper.cos(limbSwingAmount * 1.7F * this.wingspeed) * 3.1415927F * 0.4F * limbSwing;
+		TentacleRight2.rotateAngleZ = MathHelper.cos(limbSwingAmount * 1.6F * this.wingspeed) * 3.1415927F * 0.4F * limbSwing;
+		TentacleRight3.rotateAngleX = MathHelper.cos(limbSwingAmount * 1.5F * this.wingspeed) * 3.1415927F * 0.4F * limbSwing;
 	}
 
 
