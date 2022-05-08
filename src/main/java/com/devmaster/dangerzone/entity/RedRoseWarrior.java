@@ -40,8 +40,6 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     public RedRoseWarrior(final EntityType<? extends RedRoseWarrior> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 10;
-        this.canSwim();
-
     }
 
     private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
@@ -70,6 +68,10 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     public void registerData() {
         super.registerData();
         this.getDataManager().register(STATE, Byte.valueOf(STILL));
+    }
+
+    public boolean canBreatheUnderwater() {
+        return true;
     }
 
     @Override
