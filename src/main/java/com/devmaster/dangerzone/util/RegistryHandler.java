@@ -87,6 +87,15 @@ public class RegistryHandler {
                             .size(1.0F, 3.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
 
+    public static final RegistryObject<EntityType<BetterFireball>> BETTER_FIRE_BALL = ENTITIES
+            .register("better_fire_ball",
+                    () -> EntityType.Builder.<BetterFireball>create(BetterFireball::new, EntityClassification.MISC)
+                            .setShouldReceiveVelocityUpdates(true)
+                            .setTrackingRange(64)
+                            .setUpdateInterval(1)
+                            .size(0.5f, 0.5f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "better_fire_ball").toString()));
+
     public static final RegistryObject<EntityType<CaveFisher>> CAVE_FISHER = ENTITIES
             .register("cave_fisher",
                     () -> EntityType.Builder.<CaveFisher>create(CaveFisher::new, EntityClassification.CREATURE)
@@ -139,6 +148,8 @@ public class RegistryHandler {
     public static final RegistryObject<RainbowAntEye> RAINBOW_ANT_EYE = ITEMS.register("rainbow_ant_eye", RainbowAntEye::new);
 
     //Spawn Eggs
+    public static final RegistryObject<Item> BEAVER_SPAWN_EGG = ITEMS.register("beaver_spawn_egg", BeaverSpawnEgg::new);
+
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
 
     public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
@@ -238,6 +249,8 @@ public class RegistryHandler {
     public static final RegistryObject<CatsEyeBoots> CATS_EYE_BOOTS = ITEMS.register("cats_eye_boots", CatsEyeBoots::new);
 
     //Blocks
+    public static final RegistryObject<Block> APPLE_LOG = BLOCKS.register("apple_log", AppleLog::new);
+
     public static final RegistryObject<Block> ABYSSAL_ORE_BLOCK = BLOCKS.register("abyssal_ore_block", AbyssalOreBlock::new);
 
     public static final RegistryObject<Block> APPLE_LEAVES = BLOCKS.register("apple_leaves", AppleLeaves::new);
@@ -289,6 +302,8 @@ public class RegistryHandler {
 
     //Block Items
     public static final RegistryObject<Item> ABYSSAL_ORE_BLOCK_ITEM = ITEMS.register("abyssal_ore_block", () -> new BlockItemBase(ABYSSAL_ORE_BLOCK.get()));
+
+    public static final RegistryObject<Item> APPLE_LOG_ITEM = ITEMS.register("apple_log", () -> new BlockItemBase(APPLE_LOG.get()));
 
     public static final RegistryObject<Item> APPLE_LEAVES_ITEM = ITEMS.register("apple_leaves", () -> new BlockItemBase(APPLE_LEAVES.get()));
 
