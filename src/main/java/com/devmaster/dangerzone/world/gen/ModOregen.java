@@ -21,30 +21,28 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 public class ModOregen {
     public static ConfiguredFeature<?, ?> ABYSSAL_ORE;
+    public static ConfiguredFeature<?, ?> ALUMINIUM_ORE;
     public static ConfiguredFeature<?, ?> COARSE_AMETHYST_ORE;
+    public static ConfiguredFeature<?, ?> LEATHER_BLOCK;
+    public static ConfiguredFeature<?, ?> MUTANT_ZOMBIE_ORE;
+    public static ConfiguredFeature<?, ?> REDROSEWARRIOR_ORE;
+    public static ConfiguredFeature<?, ?> PLAY_BUTTON_ORE;
     public static ConfiguredFeature<?, ?> SALT_ORE;
     public static ConfiguredFeature<?, ?> SAPPHIRE_ORE;
     public static ConfiguredFeature<?, ?> TITANIUM_ORE;
-    public static ConfiguredFeature<?, ?> REDROSEWARRIOR_ORE;
-    public static ConfiguredFeature<?, ?> MUTANT_ZOMBIE_ORE;
-    public static ConfiguredFeature<?, ?> ALUMINIUM_ORE;
-    public static ConfiguredFeature<?, ?> YOUTUBER_ORE;
-
-
-
 
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
 
         Registry<ConfiguredFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_FEATURE;
+        ALUMINIUM_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.ALUMINIUM_ORE_BLOCK.get().getDefaultState(),9))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 59))
+                        .square()
+                        .chance/* repeat */(5));
+
         ABYSSAL_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.ABYSSAL_ORE_BLOCK.get().getDefaultState(),18))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(16, 0, 128))
-                        .square()
-                        .chance/* repeat */(16));
-
-        YOUTUBER_ORE = Feature.ORE.withConfiguration(
-                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.YOUTUBER_ORE_BLOCK.get().getDefaultState(),8))
-                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 14))
                         .square()
                         .chance/* repeat */(16));
 
@@ -54,14 +52,27 @@ public class ModOregen {
                         .square()
                         .chance/* repeat */(2));
 
-        REDROSEWARRIOR_ORE = Feature.ORE.withConfiguration(
-                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.REDROSEWARRIOR_EGG_ORE.get().getDefaultState(),3))
+        LEATHER_BLOCK = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.LEATHER_BLOCK.get().getDefaultState(),4))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(4));
+
+
+        MUTANT_ZOMBIE_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.MUTANT_ZOMBIE_EGG_ORE.get().getDefaultState(),3))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
                         .square()
                         .chance/* repeat */(3));
 
-        MUTANT_ZOMBIE_ORE = Feature.ORE.withConfiguration(
-                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.MUTANT_ZOMBIE_EGG_ORE.get().getDefaultState(),3))
+        PLAY_BUTTON_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.PLAY_BUTTON_ORE_BLOCK.get().getDefaultState(),8))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 14))
+                        .square()
+                        .chance/* repeat */(16));
+
+        REDROSEWARRIOR_ORE = Feature.ORE.withConfiguration(
+                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.REDROSEWARRIOR_EGG_ORE.get().getDefaultState(),3))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
                         .square()
                         .chance/* repeat */(3));
@@ -84,42 +95,33 @@ public class ModOregen {
                         .square()
                         .chance/* repeat */(3));
 
-        ALUMINIUM_ORE = Feature.ORE.withConfiguration(
-                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.ALUMINIUM_ORE_BLOCK.get().getDefaultState(),9))
-                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 59))
-                        .square()
-                        .chance/* repeat */(5));
-
+        Registry.register(registry, new ResourceLocation("aluminium_ore_block"), ALUMINIUM_ORE);
         Registry.register(registry, new ResourceLocation("abyssal_ore_block"), ABYSSAL_ORE);
         Registry.register(registry, new ResourceLocation("coarse_amethyst_ore_block"), COARSE_AMETHYST_ORE);
+        Registry.register(registry, new ResourceLocation("leather_block"), LEATHER_BLOCK);
+        Registry.register(registry, new ResourceLocation("mutant_zombie_egg_ore"), MUTANT_ZOMBIE_ORE);
+        Registry.register(registry, new ResourceLocation("play_button_ore_block"), PLAY_BUTTON_ORE);
+        Registry.register(registry, new ResourceLocation("redrosewarrior_egg_ore"), REDROSEWARRIOR_ORE);
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
         Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
         Registry.register(registry, new ResourceLocation("titanium_ore_block"), TITANIUM_ORE);
-        Registry.register(registry, new ResourceLocation("redrosewarrior_egg_ore"), REDROSEWARRIOR_ORE);
-        Registry.register(registry, new ResourceLocation("mutant_zombie_egg_ore"), MUTANT_ZOMBIE_ORE);
-        Registry.register(registry, new ResourceLocation("aluminium_ore_block"), ALUMINIUM_ORE);
-        Registry.register(registry, new ResourceLocation("youtuber_ore_block"), YOUTUBER_ORE);
-
     }
-
 
     public static void handleWorldGen(BiomeLoadingEvent event){
         RegistryKey<Biome> biome = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, event.getName());
         if (event.getCategory() == Biome.Category.NETHER
                 || event.getCategory() == Biome.Category.THEEND
                 || BiomeDictionary.hasType(biome, BiomeDictionary.Type.VOID)) return;
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ALUMINIUM_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ABYSSAL_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, COARSE_AMETHYST_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, LEATHER_BLOCK);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, MUTANT_ZOMBIE_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, PLAY_BUTTON_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, REDROSEWARRIOR_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SALT_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TITANIUM_ORE);
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, REDROSEWARRIOR_ORE);
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, MUTANT_ZOMBIE_ORE);
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ALUMINIUM_ORE);
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, YOUTUBER_ORE);
-
-
-
     }
 
 }

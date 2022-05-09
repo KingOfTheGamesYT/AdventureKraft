@@ -1,0 +1,67 @@
+{
+  "stampylivingsound": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "dangerzone:entity.stampylongnose.stampylivingsound",
+        "stream": false
+      }
+    ]
+  },
+  "leather_block_break": {
+    "category": "block",
+    "subtitle": "subtitles.leather_block_break",
+    "sounds": [
+      {
+        "name": "dangerzone:block/leather_block/leather_block_break",
+        "stream": false
+      }
+    ]
+  },
+  "leather_block_step": {
+    "category": "block",
+    "subtitle": "subtitles.leather_block_step",
+    "sounds": [
+      {
+        "name": "dangerzone:block/leather_block/leather_block_step_1",
+        "stream": false
+      },
+      {
+        "name": "dangerzone:block/leather_block/leather_block_step_2",
+        "stream": false
+      },
+      {
+        "name": "dangerzone:block/leather_block/leather_block_step_3",
+        "stream": false
+      }
+    ]
+  },
+  "leather_block_place": {
+    "category": "block",
+    "subtitle": "subtitles.leather_block_place",
+    "sounds": [
+      {
+        "name": "dangerzone:block/leather_block/leather_block_place",
+        "stream": false
+      }
+    ]
+  },
+  "leather_block_hit": {
+    "category": "block",
+    "subtitle": "subtitles.leather_block_hit",
+    "sounds": [
+      {
+        "name": "dangerzone:block/leather_block/leather_block_hit_1",
+        "stream": false
+      },
+      {
+        "name": "dangerzone:block/leather_block/leather_block_hit_2",
+        "stream": false
+      },
+      {
+        "name": "dangerzone:block/leather_block/leather_block_hit_3",
+        "stream": false
+      }
+    ]
+  }
+}
