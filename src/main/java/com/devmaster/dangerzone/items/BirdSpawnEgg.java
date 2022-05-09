@@ -14,13 +14,13 @@ import net.minecraft.world.World;
 import java.util.List;
 
 
-public class BeaverSpawnEgg extends Item {
+public class BirdSpawnEgg extends Item {
 
-    public BeaverSpawnEgg() {
+    public BirdSpawnEgg() {
         super(new Properties().group(DangerZone.WIP));
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A76" + "How much wood does a beaver chuck?" + "\u00A76"));
+        tooltip.add(new StringTextComponent("\u00A7f" + "tweedle dee tweedle dum" + "\u00A7f"));
     }
 }

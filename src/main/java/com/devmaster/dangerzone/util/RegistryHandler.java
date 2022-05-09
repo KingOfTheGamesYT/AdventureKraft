@@ -87,14 +87,6 @@ public class RegistryHandler {
                             .size(1.0F, 3.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
 
-    public static final RegistryObject<EntityType<BetterFireball>> BETTER_FIRE_BALL = ENTITIES
-            .register("better_fire_ball",
-                    () -> EntityType.Builder.<BetterFireball>create(BetterFireball::new, EntityClassification.MISC)
-                            .setShouldReceiveVelocityUpdates(true)
-                            .setTrackingRange(64)
-                            .setUpdateInterval(1)
-                            .size(0.5f, 0.5f)
-                            .build(new ResourceLocation(DangerZone.MOD_ID, "better_fire_ball").toString()));
 
     public static final RegistryObject<EntityType<CaveFisher>> CAVE_FISHER = ENTITIES
             .register("cave_fisher",
@@ -163,6 +155,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> RED_COW_SPAWN_EGG = ITEMS.register("red_cow_spawn_egg", RedCowSpawnEgg::new);
 
     public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
+
+    public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", BirdSpawnEgg::new);
 
     //Tools
     public static final RegistryObject<CoarseAmethystPickaxe> COARSE_AMETHYST_PICKAXE = ITEMS.register("coarse_amethyst_pickaxe", CoarseAmethystPickaxe::new);
