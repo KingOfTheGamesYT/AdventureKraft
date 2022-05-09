@@ -248,6 +248,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<AppleSeed> APPLE_SEED = ITEMS.register("apple_seed", AppleSeed::new);
 
+    public static final RegistryObject<Item> BLOODSTONE = ITEMS.register("bloodstone", BloodStone::new);
+
     public static final RegistryObject<Butter> BUTTER = ITEMS.register("butter", Butter::new);
 
     public static final RegistryObject<ButterCandy> BUTTER_CANDY = ITEMS.register("butter_candy", ButterCandy::new);
