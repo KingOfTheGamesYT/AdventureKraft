@@ -52,7 +52,7 @@ public class CoarseAmethystLeggings extends ArmorItem {
 
         @Override
         public String getName() {
-            return DangerZone.MOD_ID + ":amethyst";
+            return DangerZone.MOD_ID + ":coarse_amethyst";
         }
 
         @Override
