@@ -138,12 +138,10 @@ public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<R
         }
 
         this.tail.rotateAngleY = 0.0F;
-
-        this.leg1.rotateAngleX = MathHelper.cos(limbSwing * 2.7F) * 3.1415927F * 0.45F * limbSwingAmount;
-        this.leg2.rotateAngleX = this.leg3.rotateAngleX;
-        this.leg3.rotateAngleX = this.leg4.rotateAngleX;
-        this.leg4.rotateAngleX = this.leg1.rotateAngleX;
-
+        this.leg1.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        this.leg2.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        this.leg3.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        this.leg4.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
     }
 
 
