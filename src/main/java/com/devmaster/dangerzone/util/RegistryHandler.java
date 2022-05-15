@@ -250,6 +250,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> BLOODSTONE = ITEMS.register("bloodstone", BloodStone::new);
 
+    public static final RegistryObject<BLT> BLT = ITEMS.register("blt", BLT::new);
+
     public static final RegistryObject<Butter> BUTTER = ITEMS.register("butter", Butter::new);
 
     public static final RegistryObject<ButterCandy> BUTTER_CANDY = ITEMS.register("butter_candy", ButterCandy::new);
@@ -307,15 +309,23 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", BirdSpawnEgg::new);
 
+    public static final RegistryObject<SpawnEggItem> ENT_SPAWN_EGG = ITEMS.register("ent_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ENT, new Item.Properties().group(DangerZone.TAB)));
+
     public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
 
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
 
     public static final RegistryObject<Item> MOLDY_SPAWN_EGG = ITEMS.register("moldy_spawn_egg", MoldySpawnEgg::new);
 
+    public static final RegistryObject<SpawnEggItem> NOTBREEBREE_SPAWN_EGG = ITEMS.register("notbreebree_spawn_egg", () -> new SpawnEggItem(RegistryHandler.NOTBREEBREE, new Item.Properties().group(DangerZone.TAB)));
+
     public static final RegistryObject<Item> RED_COW_SPAWN_EGG = ITEMS.register("red_cow_spawn_egg", RedCowSpawnEgg::new);
 
     public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
+
+    public static final RegistryObject<SpawnEggItem> STAMPYLONGNOSE_SPAWN_EGG = ITEMS.register("stampylongnose_spawn_egg", () -> new SpawnEggItem(RegistryHandler.STAMPYLONGNOSE, new Item.Properties().group(DangerZone.TAB)));
+
+    public static final RegistryObject<SpawnEggItem> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEggItem(RegistryHandler.TEWTIY, new Item.Properties().group(DangerZone.TAB)));
 
     //Tools
     public static final RegistryObject<CoarseAmethystAxe> COARSE_AMETHYST_AXE = ITEMS.register("coarse_amethyst_axe", CoarseAmethystAxe::new);
