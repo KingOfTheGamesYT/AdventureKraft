@@ -47,5 +47,5 @@ public class WaterProjectile extends BaseProjectile {
 
     protected IParticleData getTrailParticle() { return ParticleTypes.DRIPPING_WATER; }
 
-    protected float getImpactDamage(final LivingEntity entity) { return 2F; }
+    protected float getImpactDamage(final LivingEntity entity) { return 5F; }
 }
