@@ -270,11 +270,17 @@ public class RegistryHandler {
 
     public static final RegistryObject<CritterCage> CRITTER_CAGE = ITEMS.register("critter_cage", CritterCage::new);
 
+    public static final RegistryObject<RainbowAntEye> CZ_LOIN_COIN = ITEMS.register("cz_loin_coin", RainbowAntEye::new);
+
     public static final RegistryObject<DeadRainbowAnt> DEAD_RAINBOW_ANT = ITEMS.register("dead_rainbow_ant", DeadRainbowAnt::new);
 
     public static final RegistryObject<MinersDreamItem> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
 
+    public static final RegistryObject<RainbowAntEye> RAINBOW_ANT_ABDOMEN = ITEMS.register("rainbow_ant_abdomen", RainbowAntEye::new);
+
     public static final RegistryObject<RainbowAntEye> RAINBOW_ANT_EYE = ITEMS.register("rainbow_ant_eye", RainbowAntEye::new);
+
+    public static final RegistryObject<RainbowAntEye> RAINBOW_ANT_LEG = ITEMS.register("rainbow_ant_leg", RainbowAntEye::new);
 
     public static final RegistryObject<RainbowAntToken> RAINBOW_ANT_TOKEN = ITEMS.register("rainbow_ant_token", RainbowAntToken::new);
 
