@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "S",
+    "R"
+  ],
+  "key": {
+    "#": {
+      "item": "dangerzone:rainbow_ant_eye"
+    },
+    "S": {
+      "item": "dangerzone:rainbow_ant_abdomen"
+    },
+    "R": {
+      "item": "dangerzone:rainbow_ant_leg"
+    }
+  },
+  "result": {
+    "item": "dangerzone:dead_rainbow_ant",
+    "count": 1
+  }
+}
