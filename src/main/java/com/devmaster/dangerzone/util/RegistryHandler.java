@@ -92,6 +92,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> APPLE_LOG = BLOCKS.register("apple_log", AppleLog::new);
 
+    public static final RegistryObject<Block> BLOODSTONE_BLOCK = BLOCKS.register("bloodstone_block", BloodStoneBlock::new);
+
     public static final RegistryObject<Block> BROWN_BLOCK = BLOCKS.register("brown_block", BrownBlock::new);
 
     public static final RegistryObject<Block> CATS_EYE_BLOCK = BLOCKS.register("cats_eye_block", CatsEyeBlock::new);
@@ -141,6 +143,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> APPLE_LEAVES_ITEM = ITEMS.register("apple_leaves", () -> new WIPBlockItemBase(APPLE_LEAVES.get()));
 
+    public static final RegistryObject<Item> BLOODSTONE_BLOCK_ITEM = ITEMS.register("bloodstone_block", () -> new WIPBlockItemBase(BLOODSTONE_BLOCK.get()));
+    
     public static final RegistryObject<Item> BROWN_BLOCK_ITEM = ITEMS.register("brown_block", () -> new BlockItemBase(BROWN_BLOCK.get()));
 
     public static final RegistryObject<Item> CATS_EYE_BLOCK_ITEM = ITEMS.register("cats_eye_block", () -> new WIPBlockItemBase(CATS_EYE_BLOCK.get()));
