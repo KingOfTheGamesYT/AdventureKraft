@@ -34,9 +34,10 @@ public class EntitySpawns {
                 List<BiomeDictionary.Type> TewityexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Tewityexclude.get()));
                 List<BiomeDictionary.Type> EntincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Entinclude.get()));
                 List<BiomeDictionary.Type> EntexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Entexclude.get()));
-                List<BiomeDictionary.Type> CaveFisherincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherinclude.get()));
-                List<BiomeDictionary.Type> CaveFisherexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherexclude.get()));
-
+                List<BiomeDictionary.Type> RainbowAntincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.RainbowAntinclude.get()));
+                List<BiomeDictionary.Type> RainbowAntexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.RainbowAntexclude.get()));
+                List<BiomeDictionary.Type> ButterflyincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Butterflyinclude.get()));
+                List<BiomeDictionary.Type> BtterflyexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Butterflyexclude.get()));
                 if (!includeList.isEmpty()) {
                     Set<BiomeDictionary.Type> biomeTypes = BiomeDictionary.getTypes(biomeKey);
                     if (biomeTypes.stream().noneMatch(excludeList::contains) && biomeTypes.stream().anyMatch(includeList::contains)) {
@@ -50,6 +51,12 @@ public class EntitySpawns {
                     }
                     if (biomeTypes.stream().noneMatch(EntexcludeList::contains) && biomeTypes.stream().anyMatch(EntincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.ENT.get(), DZConfig.Entweight.get(), DZConfig.Entmin.get(), DZConfig.Entmax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(RainbowAntexcludeList::contains) && biomeTypes.stream().anyMatch(RainbowAntincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(RegistryHandler.RAINBOWANT.get(), DZConfig.RainbowAntweight.get(), DZConfig.RainbowAntmin.get(), DZConfig.RainbowAntmax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(BtterflyexcludeList::contains) && biomeTypes.stream().anyMatch(ButterflyincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(RegistryHandler.BUTTERFLY.get(), DZConfig.Butterflyweight.get(), DZConfig.Butterflymin.get(), DZConfig.Butterflymax.get()));
                     }
 
                 } else {

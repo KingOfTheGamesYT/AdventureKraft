@@ -14,6 +14,11 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue NotBreeBreemin;
     public static ForgeConfigSpec.IntValue NotBreeBreemax;
     public static ForgeConfigSpec.IntValue NotBreeBreeweight;
+    public static ForgeConfigSpec.IntValue RainbowAntmin;
+    public static ForgeConfigSpec.IntValue RainbowAntmax;
+    public static ForgeConfigSpec.IntValue RainbowAntweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RainbowAntinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RainbowAntexclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> NotBreeBreeinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> NotBreeBreeexclude;
     public static ForgeConfigSpec.IntValue StampyLongNosemin;
@@ -317,6 +322,12 @@ public class DZConfig {
             NotBreeBreeweight = builder.defineInRange("NotBreeBree Weight", 7, 0, 100);
             builder.pop();
 
+            builder.push("Rainbow Ant Spawn Chances");
+            RainbowAntmin = builder.defineInRange("Rainbow Ant Min", 4, 0, 640);
+            RainbowAntmax = builder.defineInRange("Rainbow Ant Max", 10, 0, 640);
+            RainbowAntweight = builder.defineInRange("Rainbow Ant Weight", 7, 0, 100);
+            builder.pop();
+
             builder.push("StampyLongNose Spawn Chances");
             StampyLongNosemin = builder.defineInRange("StampyLongNose Min", 1, 0, 64);
             StampyLongNosemax = builder.defineInRange("StampyLongNose Max", 2, 0, 64);
@@ -341,17 +352,6 @@ public class DZConfig {
             StampyLongNoseexclude = builder.defineList("exclude Stampy", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             builder.pop();
 
-            builder.comment("Spawnable Biomes");
-            builder.push("Cave Fisher Biomes Whitelist/Blacklist");
-            CaveFisherinclude = builder.defineList("include CaveFisher", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-            CaveFisherexclude = builder.defineList("exclude CaveFisher", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-            builder.pop();
-
-            builder.push("Cave Fisher Spawn Chances");
-            CaveFishermin = builder.defineInRange("Cave Fisher Min", 1, 0, 64);
-            CaveFishermax = builder.defineInRange("Cave Fisher Max", 2, 0, 64);
-            CaveFisherweight = builder.defineInRange("Cave Fisher Weight", 7, 0, 100);
-            builder.pop();
 
             builder.comment("Spawnable Biomes");
             builder.push("Butterfly Biomes Whitelist/Blacklist");
@@ -373,6 +373,11 @@ public class DZConfig {
             builder.push("NotBreeBree Biomes Whitelist/Blacklist");
             NotBreeBreeinclude = builder.defineList("include NotBreeBree", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             NotBreeBreeexclude = builder.defineList("exclude NotBreeBree", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.push("Rainbow Ant Biomes Whitelist/Blacklist");
+            RainbowAntinclude = builder.defineList("include Rainbow Ant", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            RainbowAntexclude = builder.defineList("exclude Rainbow Ant", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             builder.pop();
 
             builder.push("Ent Biomes Whitelist/Blacklist");
