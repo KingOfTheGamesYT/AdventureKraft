@@ -17,7 +17,7 @@ import java.util.List;
 public class AluminiumIngot extends Item {
 
     public AluminiumIngot() {
-        super(new Properties().group(DangerZone.TAB));
+        super(new Properties().group(DangerZone.WIP));
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){

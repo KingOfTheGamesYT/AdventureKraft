@@ -22,6 +22,7 @@ public class CrystalGrass extends GlassBlock implements IGrowable {
         super(Properties.create(Material.EARTH)
                 .hardnessAndResistance(0.6F, 2.0F)
                 .sound(SoundType.STONE)
+                .notSolid()
                 .harvestLevel(0));
     }
 
