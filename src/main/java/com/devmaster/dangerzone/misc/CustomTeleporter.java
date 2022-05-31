@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.misc;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.PortalInfo;
@@ -41,7 +42,6 @@ public class CustomTeleporter implements ITeleporter {
         boolean isFromVillages = entity.world.getDimensionKey() == RegistryHandler.VILLAGES && isToOverworld;
         BlockPos blockpos = destWorld.getHeight(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, destWorld.getSpawnPoint());
         if (!isFromVillages) {
-          //  blockpos = pos.offset(0, 255, 0);
             BlockPos.Mutable blockpos$mutable = new BlockPos.Mutable();
             for (int y = 255; y >= 1; y--) {
                 blockpos$mutable.add(blockpos.getX(), y, blockpos.getZ());
@@ -102,7 +102,6 @@ public class CustomTeleporter implements ITeleporter {
             throw new IllegalArgumentException("This teleporter can only teleport players");
         }
         entity.fallDistance = 0;
-//            entity.moveToBlockPosAndAngles(findTargetPos((PlayerEntity) entity, world.provider.getDimension()), yaw, entity.rotationPitch);
         return repositionEntity.apply(false); //Must be false or we fall on vanilla
     }
 

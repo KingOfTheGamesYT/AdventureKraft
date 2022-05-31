@@ -26,11 +26,11 @@ import java.util.List;
 
 
 public class RainbowAntToken extends Item {
-
     public RainbowAntToken() {
         super(new Properties().group(DangerZone.WIP)
                 .food(new Food.Builder()
                         .setAlwaysEdible()
+                        .fastToEat()
                         .build()));
     }
 
@@ -39,8 +39,6 @@ public class RainbowAntToken extends Item {
     @ParametersAreNonnullByDefault
     public ItemStack onItemUseFinish (ItemStack stack, World world, LivingEntity entity) {
         if (stack.isFood()) {
-            //   world.playSound(entity, entity.getPosX(), entity.getPosY(), entity.getPosZ(), entity.getEatSound(stack), SoundEvents.ENTITY_PLAYER_BURP, 1.0F, 1.0F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.4F);
-            //  entity.addEatEffect(stack, world, entity);
 
             if (entity instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity) entity;
