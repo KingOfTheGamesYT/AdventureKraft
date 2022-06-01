@@ -153,6 +153,10 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         return true;
     }
 
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
+
     @Override
     public void attackEntityWithRangedAttack(LivingEntity target, float distanceFactor) {
         if(!world.isRemote()) {

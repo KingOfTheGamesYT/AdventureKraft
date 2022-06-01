@@ -15,7 +15,6 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.passive.fish.AbstractGroupFishEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -31,6 +30,7 @@ public class Ent extends CreatureEntity {
     public Ent(final EntityType<? extends Ent> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 10;
+
     }
 
     @Override
@@ -38,21 +38,17 @@ public class Ent extends CreatureEntity {
         super.livingTick();
     }
 
-
-
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 150)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.22D)
                 .createMutableAttribute(Attributes.ARMOR, 3)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.150)
                 .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 0.5D)
                 .createMutableAttribute(Attributes.ATTACK_SPEED, 10)
                 .createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 3.5D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 24)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 25);
     }
-
 
     @Override
     protected void registerGoals() {
@@ -74,11 +70,10 @@ public class Ent extends CreatureEntity {
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, RedRoseWarrior.class, true));
     }
 
-
-
     public static boolean canEntSpawn(EntityType<? extends Ent> animal, IWorld world, SpawnReason reason, BlockPos pos, Random random) {
         return world.getBlockState(pos.south()).equals(Blocks.GRASS_BLOCK) && world.canSeeSky(pos);
     }
+
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
         return SoundEvents.ENTITY_PLAYER_HURT;
@@ -99,12 +94,15 @@ public class Ent extends CreatureEntity {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
 
-
     @Override
     public boolean onLivingFall(float distance, float damageMultiplier) {
         return true;
     }
 
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
+    
     @Override
     protected boolean isDespawnPeaceful() {
         return true;
