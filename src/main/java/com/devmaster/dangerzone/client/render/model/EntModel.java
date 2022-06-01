@@ -116,11 +116,11 @@ public class EntModel<N extends CreatureEntity> extends EntityModel<Ent> {
 	@Override
 	public void setRotationAngles(Ent entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
-			this.Left_Arm.rotateAngleX = MathHelper.cos(limbSwing * -2.0F) * 2.0F *limbSwingAmount;
-		this.Right_Arm.rotateAngleX = MathHelper.cos(limbSwing * -2.0F) * 2.0F *limbSwingAmount;
+			this.Left_Arm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+		this.Right_Arm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
 
-		this.Leg.rotateAngleX = MathHelper.cos(limbSwing * 2.7F) * 3.1415927F * 0.45F * limbSwingAmount;
-		this.Leg2.rotateAngleX = MathHelper.cos(limbSwing * 4.7F) * 3.1415927F * 0.45F * limbSwingAmount;
+		this.Leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+		this.Leg2.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
 		}
 
 
