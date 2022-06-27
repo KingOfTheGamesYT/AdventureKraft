@@ -27,7 +27,7 @@ import java.util.List;
 
 public class RainbowAntToken extends Item {
     public RainbowAntToken() {
-        super(new Properties().group(DangerZone.WIP)
+        super(new Properties().group(DangerZone.TAB)
                 .food(new Food.Builder()
                         .setAlwaysEdible()
                         .fastToEat()
