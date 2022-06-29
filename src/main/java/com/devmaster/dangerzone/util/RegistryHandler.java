@@ -199,6 +199,12 @@ public class RegistryHandler {
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "attack_squid").toString()));
 
+    public static final RegistryObject<EntityType<Bird>> BIRD = ENTITIES
+            .register("bird",
+                    () -> EntityType.Builder.<Bird>create(Bird::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.3f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "bird").toString()));
+
     public static final RegistryObject<EntityType<Butterfly>> BUTTERFLY = ENTITIES
             .register("butterfly",
                     () -> EntityType.Builder.<Butterfly>create(Butterfly::new, EntityClassification.AMBIENT)
@@ -329,7 +335,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> BEAVER_SPAWN_EGG = ITEMS.register("beaver_spawn_egg", BeaverSpawnEgg::new);
 
-    public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", BirdSpawnEgg::new);
+    public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", () -> new SpawnEggItem(RegistryHandler.BIRD, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<SpawnEggItem> ENT_SPAWN_EGG = ITEMS.register("ent_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ENT, new Item.Properties().group(DangerZone.TAB)));
 

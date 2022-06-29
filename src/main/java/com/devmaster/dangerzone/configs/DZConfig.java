@@ -37,12 +37,17 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue Butterflymin;
     public static ForgeConfigSpec.IntValue Butterflymax;
     public static ForgeConfigSpec.IntValue Butterflyweight;
+    public static ForgeConfigSpec.IntValue Birdmin;
+    public static ForgeConfigSpec.IntValue Birdmax;
+    public static ForgeConfigSpec.IntValue Birdweight;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Entinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Entexclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaveFisherexclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaveFisherinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Butterflyexclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Butterflyinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Birdexclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Birdinclude;
     public static ForgeConfigSpec.IntValue CaveFishermin;
     public static ForgeConfigSpec.IntValue CaveFishermax;
     public static ForgeConfigSpec.IntValue CaveFisherweight;
@@ -363,6 +368,18 @@ public class DZConfig {
             Butterflymin = builder.defineInRange("Butterfly Min", 1, 0, 64);
             Butterflymax = builder.defineInRange("Butterfly Max", 5, 0, 64);
             Butterflyweight = builder.defineInRange("Butterfly Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("Bird Biomes Whitelist/Blacklist");
+            Birdinclude = builder.defineList("include Bird", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString(), OCEAN.toString(), MAGICAL.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            Birdexclude = builder.defineList("exclude Bird", Arrays.asList(END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.push("Bird Spawn Chances");
+            Birdmin = builder.defineInRange("Bird Min", 1, 0, 64);
+            Birdmax = builder.defineInRange("Bird Max", 5, 0, 64);
+            Birdweight = builder.defineInRange("Bird Weight", 7, 0, 100);
             builder.pop();
 
             builder.push("Tewity Biomes Whitelist/Blacklist");

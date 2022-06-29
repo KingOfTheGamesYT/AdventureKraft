@@ -80,6 +80,7 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.ATTACK_SQUID.get(), AttackSquid.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.HYDROLISC.get(), Hydrolisc.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.ALLOSAURUS.get(), Allosaurus.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BIRD.get(), Bird.getAttributes().create());
 
         });
     }
@@ -100,6 +101,7 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.CAVE_FISHER.get(), CaveFisherRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.HYDROLISC.get(), HydroliscRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ALLOSAURUS.get(), AllosaurusRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BIRD.get(), BirdRender::new);
 
     }
 }
