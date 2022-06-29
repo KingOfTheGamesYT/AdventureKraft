@@ -187,6 +187,12 @@ public class RegistryHandler {
     public static final RegistryKey<World> VILLAGES = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "villages"));
 
     //Entities
+    public static final RegistryObject<EntityType<Allosaurus>> ALLOSAURUS = ENTITIES
+            .register("allosaurus",
+                    () -> EntityType.Builder.<Allosaurus>create(Allosaurus::new, EntityClassification.MONSTER)
+                            .size(0.9f, 1.3f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "allosaurus").toString()));
+
     public static final RegistryObject<EntityType<AttackSquid>> ATTACK_SQUID = ENTITIES
             .register("attack_squid",
                     () -> EntityType.Builder.<AttackSquid>create(AttackSquid::new, EntityClassification.MONSTER)
@@ -210,6 +216,12 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<Ent>create(Ent::new, EntityClassification.CREATURE)
                             .size(1.0F, 3.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "ent").toString()));
+
+    public static final RegistryObject<EntityType<Hydrolisc>> HYDROLISC = ENTITIES
+            .register("hydrolisc",
+                    () -> EntityType.Builder.<Hydrolisc>create(Hydrolisc::new, EntityClassification.CREATURE)
+                            .size(1.0F, 3.5F)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "hydrolisc").toString()));
 
     public static final RegistryObject<EntityType<NotBreeBree>> NOTBREEBREE = ENTITIES
             .register("notbreebree",
@@ -311,7 +323,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> Mutant_Zombie_EGG_ORE_ITEM = ITEMS.register("mutant_zombie_egg_ore", () -> new BlockItemMobOre(MUTANT_ZOMBIE_EGG_ORE.get()));
 
     //Spawn Eggs
-    public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", AllosaurusSpawnEgg::new);
+    public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ALLOSAURUS, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<SpawnEggItem> ATTACK_SQUID_SPAWN_EGG = ITEMS.register("attack_squid_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ATTACK_SQUID, new Item.Properties().group(DangerZone.TAB)));
 
