@@ -1,0 +1,106 @@
+{
+  "scale": 0.05,
+  "effects": {
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "sky_color": 7907327,
+    "fog_color": 12638463,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "grass_color": 6200628,
+    "foliage_color": 6200628
+  },
+  "surface_builder": "minecraft:grass",
+  "carvers": {
+    "air": [
+    ]
+  },
+  "features": [
+    [
+      "minecraft:ore_dirt"
+    ]
+
+  ],
+  "starts": [
+  ],
+  "spawners": {
+    "monster": [
+
+    ],
+    "creature": [
+      {
+        "type": "dangerzone:allosaurus",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "dangerzone:attack_squid",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "dangerzone:cave_fisher",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "dangerzone:ent",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "dangerzone:redrosewarrior",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "dangerzone:notbreebree",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "dangerzone:stampylongnose",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "dangerzone:tewity",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ],
+    "ambient": [
+      {
+        "type": "dangerzone:rainbow_ant",
+        "weight": 10,
+        "minCount": 8,
+        "maxCount": 8
+      },
+      {
+        "type": "dangerzone:butterfly",
+        "weight": 10,
+        "minCount": 8,
+        "maxCount": 8
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "player_spawn_friendly": true,
+  "precipitation": "rain",
+  "temperature": 0.8,
+  "downfall": 0.5,
+  "category": "plains",
+  "depth": 0.125
+}

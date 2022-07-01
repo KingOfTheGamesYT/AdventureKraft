@@ -184,6 +184,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = ITEMS.register("uranium_block", () -> new WIPBlockItemBase(URANIUM_BLOCK.get()));
 
     //Dimensions
+    public static final RegistryKey<World> DANGER = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "danger"));
+
     public static final RegistryKey<World> VILLAGES = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "villages"));
 
     //Entities

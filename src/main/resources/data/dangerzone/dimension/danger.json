@@ -1,0 +1,28 @@
+{
+  "type": "dangerzone:danger",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "layers": [
+        {
+          "height": 1,
+          "block": "minecraft:bedrock"
+        },
+        {
+          "height": 6,
+          "block": "minecraft:dirt"
+        },
+        {
+          "height": 1,
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "biome": "dangerzone:danger",
+      "lakes": false,
+      "features": false,
+      "structures": {
+        "structures": {}
+      }
+    }
+  }
+}
