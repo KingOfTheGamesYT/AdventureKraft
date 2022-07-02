@@ -32,6 +32,8 @@ public class EntitySpawns {
                 List<BiomeDictionary.Type> StampyLongNoseexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.StampyLongNoseexclude.get()));
                 List<BiomeDictionary.Type> TewityincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Tewityinclude.get()));
                 List<BiomeDictionary.Type> TewityexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Tewityexclude.get()));
+                List<BiomeDictionary.Type> TechnobladeincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Technobladeinclude.get()));
+                List<BiomeDictionary.Type> TechnobladeexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Technobladeexclude.get()));
                 List<BiomeDictionary.Type> EntincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Entinclude.get()));
                 List<BiomeDictionary.Type> EntexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Entexclude.get()));
                 List<BiomeDictionary.Type> RainbowAntincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.RainbowAntinclude.get()));
@@ -47,6 +49,9 @@ public class EntitySpawns {
                     }
                     if (biomeTypes.stream().noneMatch(StampyLongNoseexcludeList::contains) && biomeTypes.stream().anyMatch(StampyLongNoseincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), DZConfig.StampyLongNoseweight.get(), DZConfig.StampyLongNosemin.get(), DZConfig.StampyLongNosemax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(TechnobladeexcludeList::contains) && biomeTypes.stream().anyMatch(TechnobladeincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.TECHNOBLADE.get(), DZConfig.Technobladeweight.get(), DZConfig.Technoblademin.get(), DZConfig.Technoblademax.get()));
                     }
                     if (biomeTypes.stream().noneMatch(TewityexcludeList::contains) && biomeTypes.stream().anyMatch(TewityincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.TEWTIY.get(), DZConfig.Tewityweight.get(), DZConfig.Tewitymin.get(), DZConfig.Tewitymax.get()));

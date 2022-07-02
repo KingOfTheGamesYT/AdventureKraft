@@ -26,6 +26,11 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue StampyLongNoseweight;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> StampyLongNoseinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> StampyLongNoseexclude;
+    public static ForgeConfigSpec.IntValue Technoblademin;
+    public static ForgeConfigSpec.IntValue Technoblademax;
+    public static ForgeConfigSpec.IntValue Technobladeweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Technobladeinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Technobladeexclude;
     public static ForgeConfigSpec.IntValue Tewitymin;
     public static ForgeConfigSpec.IntValue Tewitymax;
     public static ForgeConfigSpec.IntValue Tewityweight;
@@ -339,6 +344,12 @@ public class DZConfig {
             StampyLongNoseweight = builder.defineInRange("StampyLongNose Weight", 7, 0, 100);
             builder.pop();
 
+            builder.push("Technoblade Spawn Chances");
+            Technoblademin = builder.defineInRange("Technoblade Min", 1, 0, 64);
+            Technoblademax = builder.defineInRange("Technoblade Max", 2, 0, 64);
+            Technobladeweight = builder.defineInRange("Technoblade Weight", 7, 0, 100);
+            builder.pop();
+
             builder.push("Tewity Spawn Chances");
             Tewitymin = builder.defineInRange("Tewity Min", 1, 0, 640);
             Tewitymax = builder.defineInRange("Tewity Max", 2, 0, 640);
@@ -357,6 +368,11 @@ public class DZConfig {
             StampyLongNoseexclude = builder.defineList("exclude Stampy", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             builder.pop();
 
+            builder.comment("Spawnable Biomes");
+            builder.push("Technoblade Biomes Whitelist/Blacklist");
+            Technobladeinclude = builder.defineList("include Techno", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            Technobladeexclude = builder.defineList("exclude Techno", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
 
             builder.comment("Spawnable Biomes");
             builder.push("Butterfly Biomes Whitelist/Blacklist");
