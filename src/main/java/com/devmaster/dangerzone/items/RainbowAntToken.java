@@ -70,6 +70,14 @@ public class RainbowAntToken extends Item {
         return stack;
     }
 
+    public int getUseDuration(ItemStack p_77626_1_) {
+        if (p_77626_1_.getItem().isFood()) {
+            return this.getFood().isFastEating() ? 1 : 32;
+        } else {
+            return 0;
+        }
+    }
+
     public void teleportToDimension(World worldIn, PlayerEntity player, RegistryKey<World> dimension) {
         if (player.isAlive() && !worldIn.isRemote()) {
             if (!player.isPassenger() && !player.isPassenger() && player.canChangeDimension()) {
