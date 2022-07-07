@@ -74,14 +74,14 @@
   "block.dangerzone.play_button_ore_block": "Play Button Ore",
 
   "_comment": "Creative Tabs",
-  "itemGroup.dangerzonetab": "DangerZone Items",
-  "itemGroup.dangerzoneblocks": "DangerZone Blocks",
-  "itemGroup.dangerzonetools": "DangerZone Tools",
-  "itemGroup.dangerzoneweapons": "DangerZone Weaponry",
-  "itemGroup.dangerzonefood": "DangerZone Food",
-  "itemGroup.dangerzonearmory": "DangerZone Armory",
-  "itemGroup.dangerzonepetrifiedores": "DangerZone Petrified Ores",
-  "itemGroup.dangerzonewip": "DangerZone WIP",
+  "itemGroup.dangerzonetab": "AdventureKraft Items",
+  "itemGroup.dangerzoneblocks": "AdventureKraft Blocks",
+  "itemGroup.dangerzonetools": "AdventureKraft Tools",
+  "itemGroup.dangerzoneweapons": "AdventureKraft Weaponry",
+  "itemGroup.dangerzonefood": "AdventureKraft Food",
+  "itemGroup.dangerzonearmory": "AdventureKraft Armory",
+  "itemGroup.dangerzonepetrifiedores": "AdventureKraft Petrified Ores",
+  "itemGroup.dangerzonewip": "AdventureKraft WIP",
 
 
   "_comment": "Tools",
@@ -153,7 +153,7 @@
   "biome.dangerzone.villaggesss": "Villages",
 
   "_comment": "Tips Integration",
-  "dangerzone.tip.title": "DangerZone Tip",
+  "dangerzone.tip.title": "AdventureKraft Tip",
   "dangerzone.tip.spawn_eggs": "If you can find the petrified version of the mob you can bring it to life",
 
   "_comment": "Subtitles",
