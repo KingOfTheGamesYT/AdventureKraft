@@ -197,7 +197,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<EntityType<AttackSquid>> ATTACK_SQUID = ENTITIES
             .register("attack_squid",
-                    () -> EntityType.Builder.<AttackSquid>create(AttackSquid::new, EntityClassification.MONSTER)
+                    () -> EntityType.Builder.<AttackSquid>create(AttackSquid::new, EntityClassification.WATER_CREATURE)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "attack_squid").toString()));
 
@@ -230,6 +230,12 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<Hydrolisc>create(Hydrolisc::new, EntityClassification.CREATURE)
                             .size(1.0F, 3.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "hydrolisc").toString()));
+
+    public static final RegistryObject<EntityType<Mermaid>> MERMAID = ENTITIES
+            .register("mermaid",
+                    () -> EntityType.Builder.<Mermaid>create(Mermaid::new, EntityClassification.WATER_CREATURE)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "mermaid").toString()));
 
     public static final RegistryObject<EntityType<NotBreeBree>> NOTBREEBREE = ENTITIES
             .register("notbreebree",
@@ -349,7 +355,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
 
-    public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", MermaidSpawnEgg::new);
+    public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", () -> new SpawnEggItem(RegistryHandler.MERMAID, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<Item> MOLDY_SPAWN_EGG = ITEMS.register("moldy_spawn_egg", MoldySpawnEgg::new);
 
