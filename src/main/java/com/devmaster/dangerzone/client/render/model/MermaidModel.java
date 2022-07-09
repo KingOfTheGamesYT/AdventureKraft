@@ -9,6 +9,7 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.util.math.MathHelper;
 
 public class MermaidModel<t> extends EntityModel<Mermaid> {
 	private final ModelRenderer mermaid;
@@ -96,7 +97,7 @@ public class MermaidModel<t> extends EntityModel<Mermaid> {
 		LeftArm = new ModelRenderer(this);
 		LeftArm.setRotationPoint(5.0F, -22.0F, 0.0F);
 		mermaid.addChild(LeftArm);
-		setRotationAngle(LeftArm, 0.2094F, 0.0F, 0.0F);
+		setRotationAngle(LeftArm, -0.1745F, 0.0F, 0.0F);
 		LeftArm.setTextureOffset(0, 32).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.0F, false);
 
 		RightArm = new ModelRenderer(this);
@@ -119,7 +120,8 @@ public class MermaidModel<t> extends EntityModel<Mermaid> {
 
 	@Override
 	public void setRotationAngles(Mermaid entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
+	//	this.LeftArm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+	//	this.RightArm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
 	}
 
 

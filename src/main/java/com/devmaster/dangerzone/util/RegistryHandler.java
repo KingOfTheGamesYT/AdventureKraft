@@ -234,7 +234,7 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<Mermaid>> MERMAID = ENTITIES
             .register("mermaid",
                     () -> EntityType.Builder.<Mermaid>create(Mermaid::new, EntityClassification.WATER_CREATURE)
-                            .size(0.9f, 1.9f)
+                            .size(0.9f, 1.7f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "mermaid").toString()));
 
     public static final RegistryObject<EntityType<NotBreeBree>> NOTBREEBREE = ENTITIES

@@ -13,7 +13,7 @@ public class MermaidRender extends MobRenderer<Mermaid, MermaidModel<Mermaid>> {
     private static final ResourceLocation TEXTURE = new ResourceLocation(DangerZone.MOD_ID, "textures/entity/mermaid.png");
 
     public MermaidRender(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new MermaidModel(), 0.7F);
+        super(renderManagerIn, new MermaidModel(), 0.4F);
     }
 
     @Override
