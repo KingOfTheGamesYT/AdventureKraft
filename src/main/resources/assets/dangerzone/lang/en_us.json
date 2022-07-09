@@ -36,6 +36,7 @@
   "item.dangerzone.redrosewarrior_spawn_egg": "Spawn RedRoseWarrior",
   "item.dangerzone.robo-bomb_spawn_egg": "Spawn Robo-Bomb",
   "item.dangerzone.stampylongnose_spawn_egg": "Spawn StampyLongnose",
+  "item.dangerzone.technoblade_spawn_egg": "Spawn Technoblade",
   "item.dangerzone.tewtiy_spawn_egg": "Spawn Tewtiy",
   "item.dangerzone.titanium_hardened_cake": "Titanium Hardened Cake",
   "item.dangerzone.titanium_ingot": "Titanium Ingot",
@@ -142,7 +143,7 @@
   "entity.dangerzone.attack_squid": "Attack Squid",
   "entity.dangerzone.allosaurus": "Allosaurus",
   "entity.dangerzone.technoblade": "Technoblade",
-
+  "entity.dangerzone.mermaid": "Mermaid",
 
 
   "_comment": "Biomes",
