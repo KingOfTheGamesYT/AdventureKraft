@@ -369,6 +369,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<SpawnEggItem> STAMPYLONGNOSE_SPAWN_EGG = ITEMS.register("stampylongnose_spawn_egg", () -> new SpawnEggItem(RegistryHandler.STAMPYLONGNOSE, new Item.Properties().group(DangerZone.TAB)));
 
+    public static final RegistryObject<SpawnEggItem> TECHNOBLADE_SPAWN_EGG = ITEMS.register("technoblade_spawn_egg", () -> new SpawnEggItem(RegistryHandler.TECHNOBLADE, new Item.Properties().group(DangerZone.TAB)));
+
     public static final RegistryObject<SpawnEggItem> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEggItem(RegistryHandler.TEWTIY, new Item.Properties().group(DangerZone.TAB)));
 
     //Tools
