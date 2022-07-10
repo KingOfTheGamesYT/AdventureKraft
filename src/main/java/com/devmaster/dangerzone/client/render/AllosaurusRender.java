@@ -11,7 +11,7 @@ public class AllosaurusRender extends MobRenderer<Allosaurus, AllosaurusModel<Al
     protected static final ResourceLocation[] TEXTURE = new ResourceLocation[]{new ResourceLocation("dangerzone", "textures/entity/allosaurus/allosaurus_1.png"), new ResourceLocation("dangerzone", "textures/entity/allosaurus/allosaurus_2.png"), new ResourceLocation("dangerzone", "textures/entity/allosaurus/allosaurus_3.png"), new ResourceLocation("dangerzone", "textures/entity/allosaurus/allosaurus_4.png")};
 
     public AllosaurusRender(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new AllosaurusModel<>(0.0F), 0.4F);
+        super(renderManagerIn, new AllosaurusModel<>(0.0F), 0.7F);
     }
 
     public ResourceLocation getEntityTexture(Allosaurus entity) {

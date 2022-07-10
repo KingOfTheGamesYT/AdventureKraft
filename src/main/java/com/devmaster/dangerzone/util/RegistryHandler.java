@@ -192,7 +192,7 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<Allosaurus>> ALLOSAURUS = ENTITIES
             .register("allosaurus",
                     () -> EntityType.Builder.<Allosaurus>create(Allosaurus::new, EntityClassification.MONSTER)
-                            .size(0.9f, 1.3f)
+                            .size(1.0f, 1.4f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "allosaurus").toString()));
 
     public static final RegistryObject<EntityType<AttackSquid>> ATTACK_SQUID = ENTITIES
