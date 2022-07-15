@@ -15,7 +15,7 @@ public class DangerZoneWIP extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(RegistryHandler.MERMAID_SPAWN_EGG.get());
+        return new ItemStack(RegistryHandler.COPPER_LUMP.get());
     }
 
     @Override
