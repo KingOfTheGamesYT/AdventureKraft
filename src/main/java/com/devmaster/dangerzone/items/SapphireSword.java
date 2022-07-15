@@ -49,7 +49,7 @@ public class SapphireSword extends SwordItem {
     };
 
     public SapphireSword() {
-        super(iItemTier, (Integer)DZConfig.SAPPHIRE_SWORD_DAMAGE.get(), (Integer) DZConfig.SAPPHIRE_SWORD_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.TOOLS));
+        super(iItemTier, (Integer)DZConfig.SAPPHIRE_SWORD_DAMAGE.get(), (Integer) DZConfig.SAPPHIRE_SWORD_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.WEAPONS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {
