@@ -28,7 +28,6 @@ import net.minecraft.world.server.ServerBossInfo;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-
 public class Allosaurus extends CreatureEntity {
     private static final DataParameter<Integer> ALLOSAURUS_VARIANT;
 
@@ -80,7 +79,7 @@ public class Allosaurus extends CreatureEntity {
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 200)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 400)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.31D)
                 .createMutableAttribute(Attributes.ARMOR, 2.5)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 180)
