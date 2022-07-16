@@ -38,7 +38,7 @@ public class Mermaid extends CreatureEntity {
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 70)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 140)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.28D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 10.0D)
                 .createMutableAttribute(Attributes.ARMOR, 1.5F)
