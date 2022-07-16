@@ -55,7 +55,7 @@ public class MermaidTickUpdateFunction {
         if (!(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) == 0)) {
             for (int index0 = 0; index0 < (int) (MathHelper.nextInt(new Random(), 1, 4)); index0++) {
                 if (entity instanceof LivingEntity)
-                    ((LivingEntity) entity).setHealth((float) (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) + 0.08));
+                    ((LivingEntity) entity).setHealth((float) (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) + 0.008));
             }
         }
     }
