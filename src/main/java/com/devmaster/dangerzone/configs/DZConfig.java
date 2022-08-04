@@ -53,8 +53,11 @@ public class DZConfig {
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Butterflyinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Birdexclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Birdinclude;
+
     public static ForgeConfigSpec.IntValue CaveFishermin;
+
     public static ForgeConfigSpec.IntValue CaveFishermax;
+
     public static ForgeConfigSpec.IntValue CaveFisherweight;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_DAMAGE;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_DURABILITY;
@@ -187,6 +190,13 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_HARVEST_LEVEL;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DAMAGE;
+    public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DURABILITY;
+    public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_HIT_COST;
+    public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_HARVEST_LEVEL;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_EFFICIENCY;
@@ -697,6 +707,15 @@ public class DZConfig {
             SAPPHIRE_BOOTS_ENCHANTABILITY = builder.comment("Sapphire Boots Enchantability").defineInRange("SAPPHIRE_BOOTS_ENCHANTABILITY", 40, 0, 1000);
             SAPPHIRE_BOOTS_TOUGHNESS = builder.comment("Sapphire Boots Toughness, must be a whole number").defineInRange("SAPPHIRE_BOOTS_TOUGHNESS", 0, 0, 1000);
             SAPPHIRE_BOOTS_KNOCK_BACK_RESISTANCE = builder.comment("Sapphire Boots Knockback Resistance").defineInRange("SAPPHIRE_BOOTS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
+            builder.comment("Queen Ghidorah Scale Battle Axe Attributes");
+            QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DAMAGE = builder.comment("Queen Ghidorah Scale Battle Axe Damage").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DAMAGE", 667, 0, 1000);
+            QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DURABILITY = builder.comment("Queen Ghidorah Scale Battle Axe Durability").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DURABILITY", 10000, 0, 10000);
+            QUEEN_GHIDORAH_SCALE_BATTLE_AXE_HIT_COST = builder.comment("How much durability a Queen Ghidorah Scale Battle Axe loses when an entity is hit").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_HIT_COST", 1, 0, 10000);
+            QUEEN_GHIDORAH_SCALE_BATTLE_AXE_HARVEST_LEVEL = builder.comment("Queen Ghidorah Scale Battle Axe Harvest Level").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_HARVEST_LEVEL", 3, 0, 1000);
+            QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ENCHANTABILITY = builder.comment("Queen Ghidorah Scale Battle Axe Encahntability").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ENCHANTABILITY", 100, 0, 1000);
+            QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY = builder.comment("Queen Ghidorah Scale Battle Axe Efficiency").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY", 15, 0, 1000);
+            QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED = builder.comment("Queen Ghidorah Scale Battle Axe Attack Speed, must be whole number").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED", 1, 0, 1000);
 
         builder.pop();
         }

@@ -249,6 +249,12 @@ public class RegistryHandler {
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "rainbow_ant").toString()));
 
+    public static final RegistryObject<EntityType<RedCow>> RED_COW = ENTITIES
+            .register("red_cow",
+                    () -> EntityType.Builder.<RedCow>create(RedCow::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "red_cow").toString()));
+
     public static final RegistryObject<EntityType<RedRoseWarrior>> REDROSEWARRIOR = ENTITIES
             .register("redrosewarrior",
                     () -> EntityType.Builder.<RedRoseWarrior>create(RedRoseWarrior::new, EntityClassification.MONSTER)
@@ -373,7 +379,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<SpawnEggItem> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEggItem(RegistryHandler.TEWTIY, new Item.Properties().group(DangerZone.TAB)));
 
-    //Tools
+    //Tools and Weapons
     public static final RegistryObject<CoarseAmethystAxe> COARSE_AMETHYST_AXE = ITEMS.register("coarse_amethyst_axe", CoarseAmethystAxe::new);
 
     public static final RegistryObject<CoarseAmethystHoe> COARSE_AMETHYST_HOE = ITEMS.register("coarse_amethyst_hoe", CoarseAmethystHoe::new);
@@ -397,6 +403,8 @@ public class RegistryHandler {
     public static final RegistryObject<EmeraldSword> EMERALD_SWORD = ITEMS.register("emerald_sword", EmeraldSword::new);
 
     public static final RegistryObject<PoppySword> POPPY_SWORD = ITEMS.register("poppy_sword", PoppySword::new);
+
+    public static final RegistryObject<QueenGhidorahScaleBattleAxe> QUEEN_GHIDORAH_SCALE_BATTLE_AXE = ITEMS.register("queen_ghidorah_scale_battle_axe", QueenGhidorahScaleBattleAxe::new);
 
     public static final RegistryObject<SapphireAxe> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", SapphireAxe::new);
 
