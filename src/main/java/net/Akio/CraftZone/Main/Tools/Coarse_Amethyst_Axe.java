@@ -3,15 +3,14 @@ package net.Akio.CraftZone.Main.Tools;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemAxe;
-import net.minecraft.item.Item.ToolMaterial;
 
-public class Amethyst_Axe extends ItemAxe{
+public class Coarse_Amethyst_Axe extends ItemAxe{
 
 	private float weaponDamage;
 
 
 
-	public Amethyst_Axe(ToolMaterial material) {
+	public Coarse_Amethyst_Axe(ToolMaterial material) {
       super(material);
        this.maxStackSize = 1;
       setMaxDamage(6000);

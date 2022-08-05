@@ -206,11 +206,11 @@ public class RockMob  extends EntityLiving {
         }
 
         if (this.rock_type == 3) {
-            this.dropItemRand(CraftZone.flame_rock, 1);
+            this.dropItemRand(CraftZone.red_rock, 1);
         }
 
         if (this.rock_type == 4) {
-            this.dropItemRand(CraftZone.poison_rock, 1);
+            this.dropItemRand(CraftZone.green_rock, 1);
         }
 
         if (this.rock_type == 8) {

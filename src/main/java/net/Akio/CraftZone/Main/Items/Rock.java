@@ -29,11 +29,11 @@ public class Rock extends Item {
                 par2World.spawnEntityInWorld(new EntityRock(par2World, par3EntityPlayer, 1));
             }
 
-            if (this == CraftZone.flame_rock) {
+            if (this == CraftZone.red_rock) {
                 par2World.spawnEntityInWorld(new EntityRock(par2World, par3EntityPlayer, 3));
             }
 
-            if (this == CraftZone.poison_rock) {
+            if (this == CraftZone.green_rock) {
                 par2World.spawnEntityInWorld(new EntityRock(par2World, par3EntityPlayer, 4));
             }
 
@@ -63,11 +63,11 @@ public class Rock extends Item {
                     r.placeRock(1);
                 }
 
-                if (this == CraftZone.flame_rock) {
+                if (this == CraftZone.red_rock) {
                     r.placeRock(3);
                 }
 
-                if (this == CraftZone.poison_rock) {
+                if (this == CraftZone.green_rock) {
                     r.placeRock(4);
                 }
 

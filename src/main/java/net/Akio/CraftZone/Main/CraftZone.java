@@ -42,7 +42,7 @@ public class CraftZone {
     public static final Item.ToolMaterial EmeraldPickaxe = EnumHelper.addToolMaterial("EmeraldPickaxe", 3, 1300, 10F, 6F, 75);
     public static final Item.ToolMaterial RubyMaterials = EnumHelper.addToolMaterial("RubyMaterials", 2, 192, 5.0F, 1.5F, 12);
     public static final Item.ToolMaterial RubyAxe = EnumHelper.addToolMaterial("RubyAxe", 5, 1500, 11F, 16F, 70);
-    public static final Item.ToolMaterial AmethystAxe = EnumHelper.addToolMaterial("AmethystAxe", 5, 1500, 11F, 11F, 70);
+    public static final Item.ToolMaterial CoarseAmethystAxe = EnumHelper.addToolMaterial("CoarseAmethystAxe", 5, 1500, 11F, 11F, 70);
     public static final Item.ToolMaterial UltimatePick = EnumHelper.addToolMaterial("UltimatePick", 5, 1500, 11F, 36F, 70);
     public static final Item.ToolMaterial RubyPick = EnumHelper.addToolMaterial("RubyPick`", 5, 1500, 11F, 16F, 70);
 	public static final Item.ToolMaterial CrystalWood = EnumHelper.addToolMaterial("CrystalWood", 2, 300, 3, 2, 15);
@@ -120,31 +120,28 @@ public class CraftZone {
     public static Item butter_candy;
 	public static Item ruby_axe;
     public static Item amethyst_pickaxe;
-    public static Item amethyst_axe;
+    public static Item coarse_amethyst_axe;
     public static Item emerald_hoe;
     public static Item emerald_pickaxe;
-    public static Item fire_fish;
     public static Item uby;
     public static Item amethyst;
 	public static Item raw_crab;
 	public static Item crabby_patty;
 	public static Item salad;
-	public static Item spark_fish;
 	public static Item pizza;
 	public static Item raw_corn_dog;
 	public static Item red_ant_robot_kit;
 	public static Item wrench;
 	public static Item crystal_axe;
 	public static Item mantis_claw;
-	public static Item flame_rock;
+	public static Item red_rock;
 	public static Item explosive_rock;
-	public static Item poison_rock;
+	public static Item green_rock;
 	public static Item small_rock;
 	public static Item godzilla_scale;
 	public static Item zangesu;
 	public static Item katter_killer_jaw;
 	public static Item miners_dream;
-	public static Item blue_fish;
 	public static Block Dried_Snow_Golem;
 	public static Item Snow_Golem_Spawn_Egg;
 	public static Item Iron_Golem_Spawn_Egg;
@@ -152,14 +149,13 @@ public class CraftZone {
 	public static int oreSizeSnowGolem;
 	public static int oreRaritySnowGolem;
 	public static int oreMaxHeightSnowGolem;
-	public static Block Dried_Girl;
-	public static int oreSizeGirl;
-	public static int oreRarityGirl;
-	public static int oreMaxHeightGirl;
-	public static boolean OreGenGirl;
+	public static Block Petrified_Female_Bodyguard;
+	public static int oreSizePetrifiedFemaleBodyguard;
+	public static int oreRarityPetrifiedFemaleBodyguard;
+	public static int oreMaxHeightPetrifiedFemaleBodyguard;
+	public static boolean OreGenPetrifiedFemaleBodyguard;
 	public static Block Extreme_Torch;
 	public static Block Kraken_Repellent;
-	public static Block Creeper_Repellent;
 	public static Item Girl_Spawn_Egg;
 	public static Item Mob_Launcher;
 
@@ -215,10 +211,10 @@ public class CraftZone {
 		oreRarityCaveSpider = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
 		oreMaxHeightCaveSpider = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
 
-		OreGenGirl = config.getBoolean("Generation", "0.0: Petrified Cow Ore", true, "");
-		oreSizeGirl = config.getInt("Chunk Size", "0.0: Petrified Cow Ore", 3, 1, 100, "");
-		oreRarityGirl = config.getInt("Gen Rate", "0.0: Petrified Cow Ore", 3, 1, 100, "");
-		oreMaxHeightGirl = config.getInt("Max Height", "0.0: Petrified Cow Ore", 125, 1, 255, "");
+		OreGenPetrifiedFemaleBodyguard = config.getBoolean("Generation", "0.0: Petrified Female Bodyguard Ore", true, "");
+		oreSizePetrifiedFemaleBodyguard = config.getInt("Chunk Size", "0.0: Petrified Female Bodyguard", 3, 1, 100, "");
+		oreRarityPetrifiedFemaleBodyguard = config.getInt("Gen Rate", "0.0: Petrified Female Bodyguard", 3, 1, 100, "");
+		oreMaxHeightPetrifiedFemaleBodyguard = config.getInt("Max Height", "0.0: Petrified Female Bodyguard", 125, 1, 255, "");
 
 		oreGenVillager = config.getBoolean("Generation", "0.0: Petrified Villager Ore", true, "");
 		oreSizeVillager = config.getInt("Chunk Size", "0.0: Petrified Villager Ore", 8, 1, 100, "");
@@ -244,9 +240,6 @@ public class CraftZone {
 
 		Kraken_Repellent = new KrakenRepellent(1).setBlockName("Kraken_Repellent").setBlockTextureName("dangerzone:Kraken_Repellent");
 		GameRegistry.registerBlock(Kraken_Repellent, Kraken_Repellent.getUnlocalizedName().substring(5));
-
-		Creeper_Repellent = new CreeperRepellent(1).setBlockName("Creeper_Repellent").setBlockTextureName("dangerzone:Creeper_Repellent");
-		GameRegistry.registerBlock(Creeper_Repellent, Creeper_Repellent.getUnlocalizedName().substring(5));
 
 		Dried_Snow_Golem = new BlockMobOre(1).setBlockName("Petrified_Snow_Golem_ore").setBlockTextureName("dangerzone:Ore_Snow_Golem");
 		GameRegistry.registerBlock(Dried_Snow_Golem, Dried_Snow_Golem.getUnlocalizedName().substring(5));
@@ -278,18 +271,12 @@ public class CraftZone {
 		Dried_Wolf = new BlockMobOre(1).setBlockName("Petrified_Wolf_ore").setBlockTextureName("dangerzone:Ore_Wolf");
 		GameRegistry.registerBlock(Dried_Wolf, Dried_Wolf.getUnlocalizedName().substring(5));
 
-		Dried_Girl = new BlockMobOre(1).setBlockName("Petrified_Girl_ore").setBlockTextureName("dangerzone:Ore_Girl");
-		GameRegistry.registerBlock(Dried_Girl, Dried_Girl.getUnlocalizedName().substring(5));
+		Petrified_Female_Bodyguard = new BlockMobOre(1).setBlockName("Petrified_Female_Bodyguard_ore").setBlockTextureName("dangerzone:petrified_female_bodyguard_ore");
+		GameRegistry.registerBlock(Petrified_Female_Bodyguard, Petrified_Female_Bodyguard.getUnlocalizedName().substring(5));
 
 		//	amethyst = new Amethyst().setUnlocalizedName("Amethyst").setTextureName("dangerzone:amethyst");
     //	GameRegistry.registerItem(amethyst, amethyst.getUnlocalizedName().substring(5));
-    	
-    	fire_fish = new Fire_Fish(10, 8, 0.60F, true).setUnlocalizedName("Fire_Fish").setTextureName("dangerzone:fire_fish");
-    	GameRegistry.registerItem(fire_fish, fire_fish.getUnlocalizedName().substring(5));
 
-		spark_fish = new SparkFish(10, 1, 0.2F, true).setUnlocalizedName("Spark_Fish").setTextureName("dangerzone:raw_spark_fish");
-		GameRegistry.registerItem(spark_fish, spark_fish.getUnlocalizedName().substring(5));
-    	
     	butter_candy = new Butter_Candy(10, 4, 0.5f, true).setUnlocalizedName("Butter_Candy").setTextureName("dangerzone:butter_candy");
     	GameRegistry.registerItem(butter_candy, butter_candy.getUnlocalizedName().substring(5));
     	
@@ -308,7 +295,7 @@ public class CraftZone {
 		Snow_Golem_Spawn_Egg = (new CZSpawnEgg(10, 194)).setUnlocalizedName("Snow_Golem_Spawn_Egg").setTextureName("dangerzone:snow_golem_spawn_egg");
 		GameRegistry.registerItem(Snow_Golem_Spawn_Egg, Snow_Golem_Spawn_Egg.getUnlocalizedName().substring(5));
 
-		Girl_Spawn_Egg = (new CZSpawnEgg(10, 194)).setUnlocalizedName("Girl_Spawn_Egg").setTextureName("dangerzone:girl_spawn_egg");
+		Girl_Spawn_Egg = (new CZSpawnEgg(10, 198)).setUnlocalizedName("Girl_Spawn_Egg").setTextureName("dangerzone:girl_spawn_egg");
 		GameRegistry.registerItem(Girl_Spawn_Egg, Girl_Spawn_Egg.getUnlocalizedName().substring(5));
 
 		Iron_Golem_Spawn_Egg = (new CZSpawnEgg(10, 195)).setUnlocalizedName("Iron_Golem_Spawn_Egg").setTextureName("dangerzone:iron_golem_spawn_egg");
@@ -320,7 +307,7 @@ public class CraftZone {
     	emerald_hoe = new Emerald_Hoe(EmeraldMaterials).setUnlocalizedName("Emerald_Hoe").setTextureName("dangerzone:emerald_hoe");
     	GameRegistry.registerItem(emerald_hoe, emerald_hoe.getUnlocalizedName().substring(5));
 
-		big_hammer = new Big_Hammer(AmethystAxe).setUnlocalizedName("Big_Hammer").setTextureName("dangerzone:big_hammer");
+		big_hammer = new Big_Hammer(CoarseAmethystAxe).setUnlocalizedName("Big_Hammer").setTextureName("dangerzone:big_hammer");
 		GameRegistry.registerItem(big_hammer, big_hammer.getUnlocalizedName().substring(5));
 
 		mantis_claw = new MantisClaw(MantisClaw).setUnlocalizedName("Mantis_Claw").setTextureName("dangerzone:mantis_claw");
@@ -329,8 +316,8 @@ public class CraftZone {
 		//amethyst_pickaxe = new Amethyst_Pickaxe(AmethystMaterials).setUnlocalizedName("Amethyst_Pickaxe").setTextureName("dangerzone:amethyst_pickaxe");
     //	GameRegistry.registerItem(amethyst_pickaxe, amethyst_pickaxe.getUnlocalizedName().substring(5));
 
-    	amethyst_axe = new Amethyst_Axe(AmethystAxe).setUnlocalizedName("Amethyst_Axe").setTextureName("dangerzone:amethyst_axe");
-    	GameRegistry.registerItem(amethyst_axe, amethyst_axe.getUnlocalizedName().substring(5));
+    	coarse_amethyst_axe = new Coarse_Amethyst_Axe(CoarseAmethystAxe).setUnlocalizedName("Coarse_Amethyst_Axe").setTextureName("dangerzone:coarse_amethyst_axe");
+    	GameRegistry.registerItem(coarse_amethyst_axe, coarse_amethyst_axe.getUnlocalizedName().substring(5));
 
 		pizza = new Critter_Cage().setUnlocalizedName("Pizza").setTextureName("dangerzone:pizza");
 		GameRegistry.registerItem(pizza, pizza.getUnlocalizedName().substring(5));
@@ -362,14 +349,14 @@ public class CraftZone {
 		crystal_shards = new Critter_Cage().setUnlocalizedName("Crystal_Shards").setTextureName("dangerzone:crystal_shards");
 		GameRegistry.registerItem(crystal_shards, crystal_shards.getUnlocalizedName().substring(5));
 
-		flame_rock = new Rock(3).setUnlocalizedName("Flame_Rock").setTextureName("dangerzone:flame_rock");
-		GameRegistry.registerItem(flame_rock, flame_rock.getUnlocalizedName().substring(5));
+		red_rock = new Rock(3).setUnlocalizedName("Red_Rock").setTextureName("dangerzone:red_rock");
+		GameRegistry.registerItem(red_rock, red_rock.getUnlocalizedName().substring(5));
 
 		explosive_rock = new Rock(3).setUnlocalizedName("Explosive_Rock").setTextureName("dangerzone:explosive_rock");
 		GameRegistry.registerItem(explosive_rock, explosive_rock.getUnlocalizedName().substring(5));
 
-		poison_rock = new Rock(3).setUnlocalizedName("Poison_Rock").setTextureName("dangerzone:poison_rock");
-		GameRegistry.registerItem(poison_rock, poison_rock.getUnlocalizedName().substring(5));
+		green_rock = new Rock(3).setUnlocalizedName("Green_Rock").setTextureName("dangerzone:green_rock");
+		GameRegistry.registerItem(green_rock, green_rock.getUnlocalizedName().substring(5));
 
 		small_rock = new Rock(3).setUnlocalizedName("Small_Rock").setTextureName("dangerzone:small_rock");
 		GameRegistry.registerItem(small_rock, small_rock.getUnlocalizedName().substring(5));
@@ -412,9 +399,6 @@ public class CraftZone {
 
 		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 
-		blue_fish = new Cheese(10, 4, 0.4F, true).setUnlocalizedName("Blue_Fish").setTextureName("dangerzone:blue_fish");
-		GameRegistry.registerItem(blue_fish, blue_fish.getUnlocalizedName().substring(5));
-
 		Mob_Launcher = new MobLauncher(10).setUnlocalizedName("Mob_Launcher").setTextureName("dangerzone:mob_launcher");
 		GameRegistry.registerItem(Mob_Launcher, Mob_Launcher.getUnlocalizedName().substring(5));
     }
@@ -439,9 +423,9 @@ public class CraftZone {
     	
     	GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 92), new Object[] {new ItemStack(CraftZone.Dried_cow), new ItemStack( Items.water_bucket)});
 
-    	GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 194), new Object[] {new ItemStack(CraftZone.Dried_Snow_Golem), new ItemStack( Items.water_bucket)});
+    	GameRegistry.addShapelessRecipe(new ItemStack(CraftZone.Snow_Golem_Spawn_Egg), new Object[] {new ItemStack(CraftZone.Dried_Snow_Golem), new ItemStack( Items.water_bucket)});
 
-    	GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 195), new Object[] {new ItemStack(CraftZone.Dried_Iron_Golem), new ItemStack( Items.water_bucket)});
+    	GameRegistry.addShapelessRecipe(new ItemStack(CraftZone.Iron_Golem_Spawn_Egg), new Object[] {new ItemStack(CraftZone.Dried_Iron_Golem), new ItemStack( Items.water_bucket)});
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 120), new Object[] {new ItemStack(CraftZone.Dried_Villager), new ItemStack( Items.water_bucket)});
 
@@ -459,7 +443,7 @@ public class CraftZone {
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, 95), new Object[] {new ItemStack(CraftZone.Dried_Wolf), new ItemStack( Items.water_bucket)});
 
-		GameRegistry.addShapelessRecipe(new ItemStack(CraftZone.Girl_Spawn_Egg), new Object[] {new ItemStack(CraftZone.Dried_Girl), new ItemStack( Items.water_bucket)});
+		GameRegistry.addShapelessRecipe(new ItemStack(CraftZone.Girl_Spawn_Egg), new Object[] {new ItemStack(CraftZone.Petrified_Female_Bodyguard), new ItemStack( Items.water_bucket)});
 
 		GameRegistry.addRecipe(new ItemStack(Mob_Launcher, 4), new Object[]{ "RGB", 'R', Items.redstone, 'G', Items.paper, 'B', Items.stick});
 

@@ -273,11 +273,11 @@ public class EntityRock  extends EntityThrowable {
 
 
                         if (this.rock_type == 3) {
-                            this.dropItem(CraftZone.flame_rock, 1);
+                            this.dropItem(CraftZone.red_rock, 1);
                         }
 
                         if (this.rock_type == 4) {
-                            this.dropItem(CraftZone.poison_rock, 1);
+                            this.dropItem(CraftZone.green_rock, 1);
                         }
 
                         if (this.rock_type == 8) {
