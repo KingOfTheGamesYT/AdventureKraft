@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+  {
+  "item": "minecraft:apple"
+  }
+  ],
+  "result":
+  {
+  "item": "dangerzone:apple_seed",
+  "count": 1
+  }
+  }
