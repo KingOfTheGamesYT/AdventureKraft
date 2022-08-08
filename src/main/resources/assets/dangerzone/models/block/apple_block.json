@@ -1,0 +1,10 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "dangerzone:blocks/block/apple_block_top",
+    "bottom": "dangerzone:blocks/block/apple_block_bottom",
+    "side": "dangerzone:blocks/block/apple_block_side",
+    "front": "dangerzone:blocks/block/apple_block_side"
+
+  }
+}

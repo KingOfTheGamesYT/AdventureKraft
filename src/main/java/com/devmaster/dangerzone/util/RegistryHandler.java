@@ -88,6 +88,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> ALUMINIUM_ORE_BLOCK = BLOCKS.register("aluminium_ore_block", AluminiumOreBlock::new);
 
+    public static final RegistryObject<Block> APPLE_BLOCK = BLOCKS.register("apple_block", AppleBlock::new);
+
     public static final RegistryObject<Block> APPLE_LEAVES = BLOCKS.register("apple_leaves", AppleLeaves::new);
 
     public static final RegistryObject<Block> APPLE_LOG = BLOCKS.register("apple_log", AppleLog::new);
@@ -138,6 +140,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> ALUMINIUM_BLOCK_ITEM = ITEMS.register("aluminium_block", () -> new BlockItemBase(ALUMINIUM_BLOCK.get()));
 
     public static final RegistryObject<Item> ALUMINIUM_ORE_BLOCK_ITEM = ITEMS.register("aluminium_ore_block", () -> new WIPBlockItemBase(ALUMINIUM_ORE_BLOCK.get()));
+
+    public static final RegistryObject<Item> APPLE_BLOCK_ITEM = ITEMS.register("apple_block", () -> new BlockItemBase(APPLE_BLOCK.get()));
 
     public static final RegistryObject<Item> APPLE_LOG_ITEM = ITEMS.register("apple_log", () -> new WIPBlockItemBase(APPLE_LOG.get()));
 
