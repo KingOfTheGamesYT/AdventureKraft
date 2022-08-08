@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dangerzone:aluminium_block"
+    }
+
+  ],
+  "result":
+  {
+    "item": "dangerzone:aluminium_ingot",
+    "count": 9
+  }
+}
