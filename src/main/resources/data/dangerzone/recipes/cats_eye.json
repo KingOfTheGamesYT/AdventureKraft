@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dangerzone:cats_eye_block"
+    }
+
+  ],
+  "result":
+  {
+    "item": "dangerzone:cats_eye",
+    "count": 9
+  }
+}
