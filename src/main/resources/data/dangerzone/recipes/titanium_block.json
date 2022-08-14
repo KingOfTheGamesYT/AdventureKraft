@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+
+      "item": "dangerzone:titanium_ingot"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:titanium_block",
+    "count": 1
+  }
+}
