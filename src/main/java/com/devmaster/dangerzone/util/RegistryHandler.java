@@ -114,6 +114,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> DARK_ORANGE_BLOCK = BLOCKS.register("dark_orange_block", DarkOrangeBlock::new);
 
+    public static final RegistryObject<Block> HEART_BLOCK = BLOCKS.register("heart_block", HeartBlock::new);
+
     public static final RegistryObject<Block> KYANITE = BLOCKS.register("kyanite", Kyanite::new);
 
     public static final RegistryObject<Block> LEATHER_BLOCK = BLOCKS.register("leather_block", LeatherBlock::new);
@@ -168,6 +170,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> DARK_BROWN_BLOCK_ITEM = ITEMS.register("dark_brown_block", () -> new BlockItemBase(DARK_BROWN_BLOCK.get()));
 
     public static final RegistryObject<Item> DARK_ORANGE_BLOCK_ITEM = ITEMS.register("dark_orange_block", () -> new BlockItemBase(DARK_ORANGE_BLOCK.get()));
+
+    public static final RegistryObject<Item> HEART_BLOCK_ITEM = ITEMS.register("heart_block", () -> new WIPBlockItemBase(HEART_BLOCK.get()));
 
     public static final RegistryObject<Item> KYANITE_BLOCK_ITEM = ITEMS.register("kyanite", () -> new WIPBlockItemBase(KYANITE.get()));
 
