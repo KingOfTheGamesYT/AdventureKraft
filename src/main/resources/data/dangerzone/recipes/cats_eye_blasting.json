@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "dangerzone:cats_eye_ore"
+  },
+  "result": "dangerzone:cats_eye",
+  "experience": 0.7,
+  "cookingtime": 100
+}
