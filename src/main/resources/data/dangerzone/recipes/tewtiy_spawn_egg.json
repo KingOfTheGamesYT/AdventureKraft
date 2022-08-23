@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dangerzone:petrified_tewtiy_ore"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result":
+  {
+    "item": "dangerzone:tewtiy_spawn_egg",
+    "count": 1
+  }
+}

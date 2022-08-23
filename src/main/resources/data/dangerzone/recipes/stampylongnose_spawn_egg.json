@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dangerzone:petrified_stampylongnose_ore"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result":
+  {
+    "item": "dangerzone:stampylongnose_spawn_egg",
+    "count": 1
+  }
+}

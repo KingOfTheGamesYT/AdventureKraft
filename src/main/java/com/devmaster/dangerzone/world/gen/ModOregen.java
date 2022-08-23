@@ -1,7 +1,5 @@
 package com.devmaster.dangerzone.world.gen;
 
-
-
 import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
@@ -18,15 +16,17 @@ import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
-
 public class ModOregen {
     public static ConfiguredFeature<?, ?> ABYSSAL_ORE;
     public static ConfiguredFeature<?, ?> ALUMINIUM_ORE;
+    public static ConfiguredFeature<?, ?> BUTTERFLY_ORE;
     public static ConfiguredFeature<?, ?> COARSE_AMETHYST_ORE;
     public static ConfiguredFeature<?, ?> CATS_EYE_ORE;
     public static ConfiguredFeature<?, ?> LEATHER_BLOCK;
     public static ConfiguredFeature<?, ?> MUTANT_ZOMBIE_ORE;
     public static ConfiguredFeature<?, ?> REDROSEWARRIOR_ORE;
+    public static ConfiguredFeature<?, ?> STAMPYLONGNOSE_ORE;
+    public static ConfiguredFeature<?, ?> TEWTIY_ORE;
     public static ConfiguredFeature<?, ?> PLAY_BUTTON_ORE;
     public static ConfiguredFeature<?, ?> SALT_ORE;
     public static ConfiguredFeature<?, ?> SAPPHIRE_ORE;
@@ -59,6 +59,11 @@ public class ModOregen {
                         .square()
                         .chance/* repeat */(4));
 
+        BUTTERFLY_ORE = Feature.ORE.withConfiguration(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.BUTTERFLY_EGG_ORE.get().getDefaultState(),3))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(3));
 
         MUTANT_ZOMBIE_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.MUTANT_ZOMBIE_EGG_ORE.get().getDefaultState(),3))
@@ -74,6 +79,18 @@ public class ModOregen {
 
         REDROSEWARRIOR_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.REDROSEWARRIOR_EGG_ORE.get().getDefaultState(),3))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(3));
+
+        STAMPYLONGNOSE_ORE = Feature.ORE.withConfiguration(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.STAMPYLONGNOSE_EGG_ORE.get().getDefaultState(),3))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(3));
+
+        TEWTIY_ORE = Feature.ORE.withConfiguration(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.TEWTIY_EGG_ORE.get().getDefaultState(),3))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
                         .square()
                         .chance/* repeat */(3));
@@ -104,12 +121,15 @@ public class ModOregen {
 
         Registry.register(registry, new ResourceLocation("aluminium_ore_block"), ALUMINIUM_ORE);
         Registry.register(registry, new ResourceLocation("abyssal_ore_block"), ABYSSAL_ORE);
+        Registry.register(registry, new ResourceLocation("butterfly_egg_ore"), BUTTERFLY_ORE);
         Registry.register(registry, new ResourceLocation("coarse_amethyst_ore_block"), COARSE_AMETHYST_ORE);
         Registry.register(registry, new ResourceLocation("cats_eye_ore"), CATS_EYE_ORE);
         Registry.register(registry, new ResourceLocation("leather_block"), LEATHER_BLOCK);
         Registry.register(registry, new ResourceLocation("mutant_zombie_egg_ore"), MUTANT_ZOMBIE_ORE);
         Registry.register(registry, new ResourceLocation("play_button_ore_block"), PLAY_BUTTON_ORE);
         Registry.register(registry, new ResourceLocation("redrosewarrior_egg_ore"), REDROSEWARRIOR_ORE);
+        Registry.register(registry, new ResourceLocation("petrified_stampylongnose_ore"), STAMPYLONGNOSE_ORE);
+        Registry.register(registry, new ResourceLocation("petrified_tewtiy_ore"), TEWTIY_ORE);
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
         Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
         Registry.register(registry, new ResourceLocation("titanium_ore_block"), TITANIUM_ORE);
@@ -122,12 +142,15 @@ public class ModOregen {
                 || BiomeDictionary.hasType(biome, BiomeDictionary.Type.VOID)) return;
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ALUMINIUM_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ABYSSAL_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, BUTTERFLY_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, COARSE_AMETHYST_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, CATS_EYE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, LEATHER_BLOCK);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, MUTANT_ZOMBIE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, PLAY_BUTTON_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, REDROSEWARRIOR_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, STAMPYLONGNOSE_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TEWTIY_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SALT_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TITANIUM_ORE);
