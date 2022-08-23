@@ -17,7 +17,7 @@ import java.util.List;
 public class CatsEye extends Item {
 
     public CatsEye() {
-        super(new Properties().group(DangerZone.WIP));
+        super(new Properties().group(DangerZone.TAB));
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
