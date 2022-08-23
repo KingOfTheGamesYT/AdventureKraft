@@ -28,6 +28,7 @@
   "item.dangerzone.attack_squid_spawn_egg": "Spawn Attack Squid",
   "item.dangerzone.beaver_spawn_egg": "Spawn Beaver",
   "item.dangerzone.bird_spawn_egg": "Spawn Bird",
+  "item.dangerzone.butterfly_spawn_egg": "Spawn Butterfly",
   "item.dangerzone.ent_spawn_egg": "Spawn Ent",
   "item.dangerzone.fire_fish_spawn_egg": "Spawn Fire Fish",
   "item.dangerzone.mermaid_spawn_egg": "Spawn Mermaid",
@@ -45,8 +46,11 @@
   "item.dangerzone.wrench": "Wrench",
 
   "_comment": "Petrified Ores",
+  "block.dangerzone.butterfly_egg_ore": "Petrified Butterfly Ore",
   "block.dangerzone.mutant_zombie_egg_ore": "Petrified Mutant Zombie Ore",
   "block.dangerzone.redrosewarrior_egg_ore": "Petrified RedRoseWarrior Ore",
+  "block.dangerzone.petrified_stampylongnose_ore": "Petrified Stampylongnose Ore",
+  "block.dangerzone.petrified_tewtiy_ore": "Petrified Tewtiy Ore",
 
   "_comment": "Blocks",
   "block.dangerzone.abyssal_ore_block": "Abyssal Ore",

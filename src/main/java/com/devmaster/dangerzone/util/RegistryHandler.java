@@ -353,12 +353,25 @@ public class RegistryHandler {
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", Wrench::new);
 
     //Petrified Mob blocks
+    public static final RegistryObject<Block> BUTTERFLY_EGG_ORE = BLOCKS.register("butterfly_egg_ore", BlockMobOre::new);
+
     public static final RegistryObject<Block> MUTANT_ZOMBIE_EGG_ORE = BLOCKS.register("mutant_zombie_egg_ore", BlockMobOre::new);
     public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
 
+    public static final RegistryObject<Block> STAMPYLONGNOSE_EGG_ORE = BLOCKS.register("petrified_stampylongnose_ore", BlockMobOre::new);
+
+    public static final RegistryObject<Block> TEWTIY_EGG_ORE = BLOCKS.register("petrified_tewtiy_ore", BlockMobOre::new);
+
     //Petrified Mob items
+    public static final RegistryObject<Item> BUTTERFLY_EGG_ORE_ITEM = ITEMS.register("butterfly_egg_ore", () -> new BlockItemMobOre(BUTTERFLY_EGG_ORE.get()));
+
     public static final RegistryObject<Item> REDROSEWARRIOR_EGG_ORE_ITEM = ITEMS.register("redrosewarrior_egg_ore", () -> new BlockItemMobOre(REDROSEWARRIOR_EGG_ORE.get()));
+
     public static final RegistryObject<Item> Mutant_Zombie_EGG_ORE_ITEM = ITEMS.register("mutant_zombie_egg_ore", () -> new BlockItemMobOre(MUTANT_ZOMBIE_EGG_ORE.get()));
+
+    public static final RegistryObject<Item> STAMPYLONGNOSE_EGG_ORE_ITEM = ITEMS.register("petrified_stampylongnose_ore", () -> new BlockItemMobOre(STAMPYLONGNOSE_EGG_ORE.get()));
+
+    public static final RegistryObject<Item> TEWTIY_EGG_ORE_ITEM = ITEMS.register("petrified_tewtiy_ore", () -> new BlockItemMobOre(TEWTIY_EGG_ORE.get()));
 
     //Spawn Eggs
     public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ALLOSAURUS, new Item.Properties().group(DangerZone.TAB)));
@@ -368,6 +381,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> BEAVER_SPAWN_EGG = ITEMS.register("beaver_spawn_egg", BeaverSpawnEgg::new);
 
     public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", () -> new SpawnEggItem(RegistryHandler.BIRD, new Item.Properties().group(DangerZone.TAB)));
+
+    public static final RegistryObject<SpawnEggItem> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg", () -> new SpawnEggItem(RegistryHandler.BUTTERFLY, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<SpawnEggItem> ENT_SPAWN_EGG = ITEMS.register("ent_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ENT, new Item.Properties().group(DangerZone.TAB)));
 
