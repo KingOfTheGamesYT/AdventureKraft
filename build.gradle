@@ -14,7 +14,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '2.2.5'
-group = 'com.dev.dangerzone' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'com.devmaster.dangerzone' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'DangerZone'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -39,7 +39,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                dangerzone {
                     source sourceSets.main
                 }
             }
@@ -55,7 +55,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                dangerzone {
                     source sourceSets.main
                 }
             }
