@@ -1,5 +1,6 @@
 package com.devmaster.dangerzone.misc;
 
+import net.minecraftforge.fml.DeferredWorkQueue;
 import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.CreativeTabs.*;
 import com.devmaster.dangerzone.configs.BaseConfig;
@@ -7,22 +8,18 @@ import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.gui.BossBar;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ModOregen;
-
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
 import net.minecraft.world.gen.feature.Feature;
-
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -69,21 +66,6 @@ public class DangerZone {
 
     private void setup(final FMLCommonSetupEvent event) {
         DeferredWorkQueue.runLater(() -> {
-            GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.NOTBREEBREE.get(), NotBreeBree.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarrior.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.BUTTERFLY.get(), Butterfly.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.ENT.get(), Ent.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.CAVE_FISHER.get(), CaveFisher.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.ATTACK_SQUID.get(), AttackSquid.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.HYDROLISC.get(), Hydrolisc.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.ALLOSAURUS.get(), Allosaurus.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.BIRD.get(), Bird.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.TECHNOBLADE.get(), Technoblade.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.MERMAID.get(), Mermaid.getAttributes().create());
-
         });
     }
     private void doClientStuff(final FMLClientSetupEvent event) {

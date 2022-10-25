@@ -46,6 +46,8 @@ public class Mermaid extends CreatureEntity {
 
     }
 
+    
+
     @Override
     protected void registerGoals() {
         super.registerGoals();
