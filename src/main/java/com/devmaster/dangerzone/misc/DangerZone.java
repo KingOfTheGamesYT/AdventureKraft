@@ -1,6 +1,4 @@
 package com.devmaster.dangerzone.misc;
-
-import net.minecraftforge.fml.DeferredWorkQueue;
 import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.CreativeTabs.*;
 import com.devmaster.dangerzone.configs.BaseConfig;
@@ -65,7 +63,7 @@ public class DangerZone {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        DeferredWorkQueue.runLater(() -> {
+           event.enqueueWork(() -> {
         });
     }
     private void doClientStuff(final FMLClientSetupEvent event) {
