@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.Entity;
+import com.devmaster.dangerzone.util.MobAttributesRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
