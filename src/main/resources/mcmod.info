@@ -1,0 +1,12 @@
+[
+{
+        "modid": "dangerzone",
+        "name": "AdventureKraft",
+        "description": "Brings the game DangerZone and it's mods to Minecraft",
+        "url": "https://www.curseforge.com/minecraft/mc-mods/adventurekraft",
+        "version": "${version}",
+        "mcversion": "1.6.4",
+        "authorList": ["DevMaster105 aka RedRoseWarrior"]
+        "logoFile": "logoAK.png"
+    }
+    ]
