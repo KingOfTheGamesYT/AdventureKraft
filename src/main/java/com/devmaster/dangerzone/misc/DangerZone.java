@@ -5,14 +5,14 @@ import com.devmaster.dangerzone.CreativeTabs.*;
 import com.devmaster.dangerzone.configs.BaseConfig;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.gui.BossBar;
+import com.devmaster.dangerzone.items.SpawnEgg;
 import com.devmaster.dangerzone.util.RegistryHandler;
+import com.devmaster.dangerzone.world.gen.ArmoredMobSpawnEvents;
 import com.devmaster.dangerzone.world.gen.ModOregen;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
@@ -63,11 +63,14 @@ public class DangerZone {
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
+        MinecraftForge.EVENT_BUS.addListener(ArmoredMobSpawnEvents::spawnMonster);
+
 
         FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Feature.class, EventPriority.LOW, ModOregen::addConfigFeatures);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.getAttributes().create());
@@ -83,7 +86,7 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.BIRD.get(), Bird.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.TECHNOBLADE.get(), Technoblade.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.MERMAID.get(), Mermaid.getAttributes().create());
-
+            GlobalEntityTypeAttributes.put(RegistryHandler.RED_COW.get(), RedCow.getAttributes().create());
         });
     }
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -106,8 +109,8 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BIRD.get(), BirdRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TECHNOBLADE.get(), TechnobladeRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.MERMAID.get(), MermaidRender::new);
-
-
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RED_COW.get(), RedCowRender::new);
+        SpawnEgg.initSpawnEggs();
     }
 }
 

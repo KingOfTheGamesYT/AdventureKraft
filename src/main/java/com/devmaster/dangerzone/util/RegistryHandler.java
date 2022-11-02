@@ -1,23 +1,27 @@
 package com.devmaster.dangerzone.util;
 
 import com.devmaster.dangerzone.entity.*;
-import com.devmaster.dangerzone.items.SpawnEggItem;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.items.EmeraldPickaxe;
+import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
+import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.item.*;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.Map;
 
 public class RegistryHandler {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DangerZone.MOD_ID);
@@ -204,7 +208,7 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<Allosaurus>> ALLOSAURUS = ENTITIES
             .register("allosaurus",
                     () -> EntityType.Builder.<Allosaurus>create(Allosaurus::new, EntityClassification.MONSTER)
-                            .size(1.0f, 1.4f)
+                            .size(1.0f, 0.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "allosaurus").toString()));
 
     public static final RegistryObject<EntityType<AttackSquid>> ATTACK_SQUID = ENTITIES
@@ -374,37 +378,37 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TEWTIY_EGG_ORE_ITEM = ITEMS.register("petrified_tewtiy_ore", () -> new BlockItemMobOre(TEWTIY_EGG_ORE.get()));
 
     //Spawn Eggs
-    public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ALLOSAURUS, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", () -> new SpawnEgg(RegistryHandler.ALLOSAURUS, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
-    public static final RegistryObject<SpawnEggItem> ATTACK_SQUID_SPAWN_EGG = ITEMS.register("attack_squid_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ATTACK_SQUID, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> ATTACK_SQUID_SPAWN_EGG = ITEMS.register("attack_squid_spawn_egg", () -> new SpawnEgg(RegistryHandler.ATTACK_SQUID, 0, 0,new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<Item> BEAVER_SPAWN_EGG = ITEMS.register("beaver_spawn_egg", BeaverSpawnEgg::new);
 
-    public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", () -> new SpawnEggItem(RegistryHandler.BIRD, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", () -> new SpawnEgg(RegistryHandler.BIRD, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
-    public static final RegistryObject<SpawnEggItem> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg", () -> new SpawnEggItem(RegistryHandler.BUTTERFLY, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg", () -> new SpawnEgg(RegistryHandler.BUTTERFLY, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
-    public static final RegistryObject<SpawnEggItem> ENT_SPAWN_EGG = ITEMS.register("ent_spawn_egg", () -> new SpawnEggItem(RegistryHandler.ENT, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> ENT_SPAWN_EGG = ITEMS.register("ent_spawn_egg", () -> new SpawnEgg(RegistryHandler.ENT, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
 
-    public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", () -> new SpawnEggItem(RegistryHandler.MERMAID, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", () -> new SpawnEgg(RegistryHandler.MERMAID, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<Item> MOLDY_SPAWN_EGG = ITEMS.register("moldy_spawn_egg", MoldySpawnEgg::new);
 
-    public static final RegistryObject<SpawnEggItem> NOTBREEBREE_SPAWN_EGG = ITEMS.register("notbreebree_spawn_egg", () -> new SpawnEggItem(RegistryHandler.NOTBREEBREE, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> NOTBREEBREE_SPAWN_EGG = ITEMS.register("notbreebree_spawn_egg", () -> new SpawnEgg(RegistryHandler.NOTBREEBREE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<Item> RED_COW_SPAWN_EGG = ITEMS.register("red_cow_spawn_egg", RedCowSpawnEgg::new);
 
-    public static final RegistryObject<SpawnEggItem> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEggItem(RegistryHandler.REDROSEWARRIOR, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEgg(RegistryHandler.REDROSEWARRIOR, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<Item> ROBO_BOMB_SPAWN_EGG = ITEMS.register("robo-bomb_spawn_egg", RoboBombSpawnEgg::new);
 
-    public static final RegistryObject<SpawnEggItem> STAMPYLONGNOSE_SPAWN_EGG = ITEMS.register("stampylongnose_spawn_egg", () -> new SpawnEggItem(RegistryHandler.STAMPYLONGNOSE, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> STAMPYLONGNOSE_SPAWN_EGG = ITEMS.register("stampylongnose_spawn_egg", () -> new SpawnEgg(RegistryHandler.STAMPYLONGNOSE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
-    public static final RegistryObject<SpawnEggItem> TECHNOBLADE_SPAWN_EGG = ITEMS.register("technoblade_spawn_egg", () -> new SpawnEggItem(RegistryHandler.TECHNOBLADE, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> TECHNOBLADE_SPAWN_EGG = ITEMS.register("technoblade_spawn_egg", () -> new SpawnEgg(RegistryHandler.TECHNOBLADE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
-    public static final RegistryObject<SpawnEggItem> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEggItem(RegistryHandler.TEWTIY, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEgg(RegistryHandler.TEWTIY, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     //Tools and Weapons
     public static final RegistryObject<CoarseAmethystAxe> COARSE_AMETHYST_AXE = ITEMS.register("coarse_amethyst_axe", CoarseAmethystAxe::new);
@@ -449,4 +453,6 @@ public class RegistryHandler {
     public static final RegistryObject<SoundEvent> LEATHER_BLOCK_STEP = SOUNDS.register("leather_block_step", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "leather_block_step")));
     public static final RegistryObject<SoundEvent> LEATHER_BLOCK_PLACE = SOUNDS.register("leather_block_place", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "leather_block_place")));
     public static final RegistryObject<SoundEvent> LEATHER_BLOCK_HIT = SOUNDS.register("leather_block_hit", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID, "leather_block_hit")));
-    public static final RegistryObject<SoundEvent> STAMPYLONGNOSE_AMBIENT = SOUNDS.register("stampylivingsound", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "stampylivingsound")));}
+    public static final RegistryObject<SoundEvent> STAMPYLONGNOSE_AMBIENT = SOUNDS.register("stampylivingsound", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "stampylivingsound")));
+
+}
