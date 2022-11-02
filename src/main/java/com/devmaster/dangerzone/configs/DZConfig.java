@@ -329,6 +329,13 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_TOUGHNESS;
     public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATES_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue MANTIS_CLAW_DAMAGE;
+    public static ForgeConfigSpec.IntValue MANTIS_CLAW_DURABILITY;
+    public static ForgeConfigSpec.IntValue MANTIS_CLAW_HIT_COST;
+    public static ForgeConfigSpec.IntValue MANTIS_CLAW_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue MANTIS_CLAW_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue MANTIS_CLAW_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue MANTIS_CLAW_ATTACK_SPEED;
 
     public DZConfig() {
     }
@@ -716,6 +723,15 @@ public class DZConfig {
             QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ENCHANTABILITY = builder.comment("Queen Ghidorah Scale Battle Axe Encahntability").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ENCHANTABILITY", 100, 0, 1000);
             QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY = builder.comment("Queen Ghidorah Scale Battle Axe Efficiency").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY", 15, 0, 1000);
             QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED = builder.comment("Queen Ghidorah Scale Battle Axe Attack Speed, must be whole number").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED", 1, 0, 1000);
+
+            builder.comment("Queen Ghidorah Scale Battle Axe Attributes");
+            MANTIS_CLAW_DAMAGE = builder.comment("Mantis Claw Damage").defineInRange("MANTIS_CLAW_DAMAGE", 14, 0, 1000);
+            MANTIS_CLAW_DURABILITY = builder.comment("Mantis Claw Durability").defineInRange("MANTIS_CLAW_DURABILITY", 800, 0, 10000);
+            MANTIS_CLAW_HIT_COST = builder.comment("How much durability a Mantis Claw loses when an entity is hit").defineInRange("MANTIS_CLAW_HIT_COST", 1, 0, 10000);
+            MANTIS_CLAW_HARVEST_LEVEL = builder.comment("Mantis Claw Harvest Level").defineInRange("MANTIS_CLAW_HARVEST_LEVEL", 4, 0, 1000);
+            MANTIS_CLAW_ENCHANTABILITY = builder.comment("Mantis Claw Encahntability").defineInRange("MANTIS_CLAW_ENCHANTABILITY", 70, 0, 1000);
+            MANTIS_CLAW_ENCHANTABILITY = builder.comment("Mantis Claw Efficiency").defineInRange("MANTIS_CLAW_EFFICIENCY", 11, 0, 1000);
+            MANTIS_CLAW_ATTACK_SPEED = builder.comment("Mantis Claw Attack Speed, must be whole number").defineInRange("MANTIS_CLAW_ATTACK_SPEED", 1, 0, 1000);
 
         builder.pop();
         }

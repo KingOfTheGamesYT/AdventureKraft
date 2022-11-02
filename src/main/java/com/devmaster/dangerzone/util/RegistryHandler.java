@@ -433,6 +433,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<EmeraldSword> EMERALD_SWORD = ITEMS.register("emerald_sword", EmeraldSword::new);
 
+    public static final RegistryObject<MantisClaw> MANTIS_CLAW = ITEMS.register("mantis_claw", MantisClaw::new);
+
     public static final RegistryObject<PoppySword> POPPY_SWORD = ITEMS.register("poppy_sword", PoppySword::new);
 
     public static final RegistryObject<QueenGhidorahScaleBattleAxe> QUEEN_GHIDORAH_SCALE_BATTLE_AXE = ITEMS.register("queen_ghidorah_scale_battle_axe", QueenGhidorahScaleBattleAxe::new);
