@@ -44,7 +44,7 @@ public class CoarseAmethystAxe extends AxeItem {
         }
 
         public Ingredient getRepairMaterial() {
-            return Ingredient.fromItems(RegistryHandler.COARSE_AMETHYST_AXE.get());
+            return Ingredient.fromItems(RegistryHandler.COARSE_AMETHYST.get());
         }
     };
 

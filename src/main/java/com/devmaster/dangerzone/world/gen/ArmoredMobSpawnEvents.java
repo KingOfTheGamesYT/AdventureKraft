@@ -34,29 +34,17 @@ public class ArmoredMobSpawnEvents {
         if (event.getWorld().getDifficulty() == Difficulty.HARD) {
             if (chance < 0.05F) {
                 zombie(event);
-            } else if (chance < 0.15F) {
-                zombie(event);
-            } else if (chance < 0.25F) {
-                zombie(event);
-            }
+            } 
         }
 
         if (event.getWorld().getDifficulty() == Difficulty.NORMAL) {
             if (chance < 0.05F) {
-                zombie(event);
-            } else if (chance < 0.15F) {
-                zombie(event);
-            } else if (chance < 0.25F) {
                 zombie(event);
             }
         }
 
         if (event.getWorld().getDifficulty() == Difficulty.EASY) {
             if (chance < 0.05F) {
-                zombie(event);
-            } else if (chance < 0.15F) {
-                zombie(event);
-            } else if (chance < 0.25F) {
                 zombie(event);
             }
         }
