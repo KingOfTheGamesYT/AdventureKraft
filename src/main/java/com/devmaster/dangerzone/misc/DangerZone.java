@@ -1,24 +1,29 @@
 package com.devmaster.dangerzone.misc;
+
 import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.CreativeTabs.*;
 import com.devmaster.dangerzone.configs.BaseConfig;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.gui.BossBar;
+import com.devmaster.dangerzone.items.SpawnEgg;
 import com.devmaster.dangerzone.util.RegistryHandler;
+import com.devmaster.dangerzone.world.gen.ArmoredMobSpawnEvents;
 import com.devmaster.dangerzone.world.gen.ModOregen;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.entity.Entity;
-import com.devmaster.dangerzone.util.MobAttributesRegistry;
-import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
 import net.minecraft.world.gen.feature.Feature;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -59,14 +64,38 @@ public class DangerZone {
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
+        MinecraftForge.EVENT_BUS.addListener(ArmoredMobSpawnEvents::spawnMonster);
+
 
         FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Feature.class, EventPriority.LOW, ModOregen::addConfigFeatures);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-           event.enqueueWork(() -> {
+                   event.enqueueWork(() -> {
         });
     }
+
+
+	@SubscribeEvent
+	public static void addEntityAttributes(EntityAttributeCreationEvent event) {
+		event.put(RegistryHandler.TEWTIY.get(), Tewtiy.setCustomAttributes().create());
+		event.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.setCustomAttributes().create());
+		event.put(RegistryHandler.NOTBREEBREE.get(), NotBreeBree.setCustomAttributes().create());
+		event.put(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarrior.setCustomAttributes().create());
+		event.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.setCustomAttributes().create());
+		event.put(RegistryHandler.BUTTERFLY.get(), Butterfly.setCustomAttributes().create());
+		event.put(RegistryHandler.ENT.get(), Ent.setCustomAttributes().create());
+		event.put(RegistryHandler.CAVE_FISHER.get(), CaveFisher.setCustomAttributes().create());
+		event.put(RegistryHandler.ATTACK_SQUID.get(), AttackSquid.setCustomAttributes().create());
+		event.put(RegistryHandler.HYDROLISC.get(), Hydrolisc.setCustomAttributes().create());
+		event.put(RegistryHandler.ALLOSAURUS.get(), Allosaurus.setCustomAttributes().create());
+        event.put(RegistryHandler.BIRD.get(), Bird.setCustomAttributes().create());
+		event.put(RegistryHandler.TECHNOBLADE.get(), Technoblade.setCustomAttributes().create());
+		event.put(RegistryHandler.MERMAID.get(), Mermaid.setCustomAttributes().create());
+        
+	}
+
+
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(RegistryHandler.STICKY_BLOCK.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.APPLE_LEAVES.get(), RenderType.getCutout());
@@ -87,10 +116,9 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BIRD.get(), BirdRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TECHNOBLADE.get(), TechnobladeRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.MERMAID.get(), MermaidRender::new);
-
-
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RED_COW.get(), RedCowRender::new);
+        SpawnEgg.initSpawnEggs();
     }
 }
-
 
 
