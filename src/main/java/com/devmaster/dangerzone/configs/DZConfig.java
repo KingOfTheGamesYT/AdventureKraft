@@ -336,6 +336,45 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue MANTIS_CLAW_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue MANTIS_CLAW_EFFICIENCY;
     public static ForgeConfigSpec.IntValue MANTIS_CLAW_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_DAMAGE;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_DURABILITY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_HIT_COST;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_DAMAGE;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_DURABILITY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_HIT_COST;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_DAMAGE;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_DURABILITY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_HIT_COST;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_DAMAGE;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_DURABILITY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_HIT_COST;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue GODZILLA_AXE_DAMAGE;
+    public static ForgeConfigSpec.IntValue GODZILLA_AXE_DURABILITY;
+    public static ForgeConfigSpec.IntValue GODZILLA_AXE_HIT_COST;
+    public static ForgeConfigSpec.IntValue GODZILLA_AXE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue GODZILLA_AXE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue GODZILLA_AXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue GODZILLA_AXE_ATTACK_SPEED;
+
+
+
+
 
     public DZConfig() {
     }
@@ -724,15 +763,44 @@ public class DZConfig {
             QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY = builder.comment("Queen Ghidorah Scale Battle Axe Efficiency").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY", 15, 0, 1000);
             QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED = builder.comment("Queen Ghidorah Scale Battle Axe Attack Speed, must be whole number").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED", 1, 0, 1000);
 
-            builder.comment("Queen Ghidorah Scale Battle Axe Attributes");
+            builder.comment("Mantis Claw Attributes");
             MANTIS_CLAW_DAMAGE = builder.comment("Mantis Claw Damage").defineInRange("MANTIS_CLAW_DAMAGE", 14, 0, 1000);
             MANTIS_CLAW_DURABILITY = builder.comment("Mantis Claw Durability").defineInRange("MANTIS_CLAW_DURABILITY", 800, 0, 10000);
             MANTIS_CLAW_HIT_COST = builder.comment("How much durability a Mantis Claw loses when an entity is hit").defineInRange("MANTIS_CLAW_HIT_COST", 1, 0, 10000);
             MANTIS_CLAW_HARVEST_LEVEL = builder.comment("Mantis Claw Harvest Level").defineInRange("MANTIS_CLAW_HARVEST_LEVEL", 4, 0, 1000);
             MANTIS_CLAW_ENCHANTABILITY = builder.comment("Mantis Claw Encahntability").defineInRange("MANTIS_CLAW_ENCHANTABILITY", 70, 0, 1000);
-            MANTIS_CLAW_ENCHANTABILITY = builder.comment("Mantis Claw Efficiency").defineInRange("MANTIS_CLAW_EFFICIENCY", 11, 0, 1000);
+            MANTIS_CLAW_EFFICIENCY = builder.comment("Mantis Claw Efficiency").defineInRange("MANTIS_CLAW_EFFICIENCY", 11, 0, 1000);
             MANTIS_CLAW_ATTACK_SPEED = builder.comment("Mantis Claw Attack Speed, must be whole number").defineInRange("MANTIS_CLAW_ATTACK_SPEED", 1, 0, 1000);
 
+        builder.comment("Aluminium Set Attributes");
+        ALUMINIUM_AXE_DAMAGE = builder.comment("Aluminium Axe Damage").defineInRange("ALUMINIUM_AXE_DAMAGE", 9, 0, 1000);
+        ALUMINIUM_AXE_DURABILITY = builder.comment("Aluminium Axe Durability").defineInRange("ALUMINIUM_AXE_DURABILITY", 250, 0, 10000);
+        ALUMINIUM_AXE_HIT_COST = builder.comment("How much durability a Aluminium axe loses when an entity is hit").defineInRange("ALUMINIUM_AXE_HIT_COST", 1, 0, 10000);
+        ALUMINIUM_AXE_HARVEST_LEVEL = builder.comment("Aluminium Axe Harvest Level").defineInRange("ALUMINIUM_AXE_HARVEST_LEVEL", 2, 0, 1000);
+        ALUMINIUM_AXE_ENCHANTABILITY = builder.comment("Aluminium Axe Encahntability").defineInRange("ALUMINIUM_AXE_ENCHANTABILITY", 14, 0, 1000);
+        ALUMINIUM_AXE_EFFICIENCY = builder.comment("Aluminium Axe Efficiency").defineInRange("ALUMINIUM_AXE_EFFICIENCY", 6, 0, 1000);
+        ALUMINIUM_AXE_ATTACK_SPEED = builder.comment("Aluminium Axe Attack Speed, must be whole number").defineInRange("ALUMINIUM_AXE_ATTACK_SPEED", 1, 0, 1000);
+        ALUMINIUM_HOE_DAMAGE = builder.comment("Aluminium Hoe Damage").defineInRange("ALUMINIUM_HOE_DAMAGE", 1, 0, 1000);
+        ALUMINIUM_HOE_DURABILITY = builder.comment("Aluminium Hoe Durability").defineInRange("ALUMINIUM_HOE_DURABILITY", 250, 0, 10000);
+        ALUMINIUM_HOE_HIT_COST = builder.comment("How much durability a Aluminium hoe loses when an entity is hit").defineInRange("ALUMINIUM_HOE_HIT_COST", 1, 0, 10000);
+        ALUMINIUM_HOE_HARVEST_LEVEL = builder.comment("Aluminium Hoe Harvest Level").defineInRange("ALUMINIUM_HOE_HARVEST_LEVEL", 2, 0, 1000);
+        ALUMINIUM_HOE_ENCHANTABILITY = builder.comment("Aluminium Hoe Encahntability").defineInRange("ALUMINIUM_HOE_ENCHANTABILITY", 14, 0, 1000);
+        ALUMINIUM_HOE_EFFICIENCY = builder.comment("Aluminium Hoe Efficiency").defineInRange("ALUMINIUM_HOE_EFFICIENCY", 6, 0, 1000);
+        ALUMINIUM_HOE_ATTACK_SPEED = builder.comment("Aluminium Hoe Attack Speed, must be whole number").defineInRange("ALUMINIUM_HOE_ATTACK_SPEED", 1, 0, 1000);
+        ALUMINIUM_PICKAXE_DAMAGE = builder.comment("Aluminium pickaxe Damage").defineInRange("ALUMINIUM_PICKAXE_DAMAGE", 4, 0, 1000);
+        ALUMINIUM_PICKAXE_DURABILITY = builder.comment("Aluminium Pickaxe Durability").defineInRange("ALUMINIUM_PICKAXE_DURABILITY", 250, 0, 10000);
+        ALUMINIUM_PICKAXE_HIT_COST = builder.comment("How much durability a Aluminium pickaxe loses when an entity is hit").defineInRange("ALUMINIUM_PICKAXE_HIT_COST", 1, 0, 10000);
+        ALUMINIUM_PICKAXE_HARVEST_LEVEL = builder.comment("Aluminium Pickaxe Harvest Level").defineInRange("ALUMINIUM_PICKAXE_HARVEST_LEVEL", 2, 0, 1000);
+        ALUMINIUM_PICKAXE_ENCHANTABILITY = builder.comment("Aluminium Pickaxe Encahntability").defineInRange("ALUMINIUM_PICKAXE_ENCHANTABILITY", 14, 0, 1000);
+        ALUMINIUM_PICKAXE_EFFICIENCY = builder.comment("Aluminium Pickaxe Efficiency").defineInRange("ALUMINIUM_PICKAXE_EFFICIENCY", 6, 0, 1000);
+        ALUMINIUM_PICKAXE_ATTACK_SPEED = builder.comment("Aluminium Pickaxe Attack Speed, must be whole number").defineInRange("ALUMINIUM_PICKAXE_ATTACK_SPEED", 1, 0, 1000);
+        ALUMINIUM_SHOVEL_DAMAGE = builder.comment("Aluminium Shovel Damage").defineInRange("ALUMINIUM_SHOVEL_DAMAGE", 5, 0, 1000);
+        ALUMINIUM_SHOVEL_DURABILITY = builder.comment("Aluminium Shovel Durability").defineInRange("ALUMINIUM_SHOVEL_DURABILITY", 250, 0, 10000);
+        ALUMINIUM_SHOVEL_HIT_COST = builder.comment("How much durability a Aluminium shovel loses when an entity is hit").defineInRange("ALUMINIUM_SHOVEL_HIT_COST", 1, 0, 10000);
+        ALUMINIUM_SHOVEL_HARVEST_LEVEL = builder.comment("Aluminium Shovel Harvest Level").defineInRange("ALUMINIUM_SHOVEL_HARVEST_LEVEL", 2, 0, 1000);
+        ALUMINIUM_SHOVEL_ENCHANTABILITY = builder.comment("Aluminium Shovel Encahntability").defineInRange("ALUMINIUM_SHOVEL_ENCHANTABILITY", 14, 0, 1000);
+        ALUMINIUM_SHOVEL_EFFICIENCY = builder.comment("Aluminium Shovel Efficiency").defineInRange("ALUMINIUM_SHOVEL_EFFICIENCY", 6, 0, 1000);
+        ALUMINIUM_SHOVEL_ATTACK_SPEED = builder.comment("Aluminium Shovel Attack Speed, must be whole number").defineInRange("ALUMINIUM_SHOVEL_ATTACK_SPEED", 1, 0, 1000);
         builder.pop();
         }
 

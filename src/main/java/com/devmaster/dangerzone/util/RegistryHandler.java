@@ -449,6 +449,14 @@ public class RegistryHandler {
 
     public static final RegistryObject<SapphireSword> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", SapphireSword::new);
 
+    public static final RegistryObject<AluminiumAxe> ALUMINIUM_AXE = ITEMS.register("aluminium_axe", AluminiumAxe::new);
+
+    public static final RegistryObject<AluminiumHoe> ALUMINIUM_HOE = ITEMS.register("aluminium_hoe", AluminiumHoe::new);
+
+    public static final RegistryObject<AluminiumPickaxe> ALUMINIUM_PICKAXE = ITEMS.register("aluminium_pickaxe", AluminiumPickaxe::new);
+
+    public static final RegistryObject<AluminiumShovel> ALUMINIUM_SHOVEL = ITEMS.register("aluminium_shovel", AluminiumShovel::new);
+
     //SOUNDS
     public static final RegistryObject<SoundEvent> AMOXICILLIN_AMBIENT = SOUNDS.register("amoxcillin_ambient", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "amoxcillin_ambient")));
     public static final RegistryObject<SoundEvent> LEATHER_BLOCK_BREAK = SOUNDS.register("leather_block_break", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "leather_block_break")));
