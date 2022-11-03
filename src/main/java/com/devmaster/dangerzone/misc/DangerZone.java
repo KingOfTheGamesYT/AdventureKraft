@@ -9,12 +9,11 @@ import com.devmaster.dangerzone.items.SpawnEgg;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ArmoredMobSpawnEvents;
 import com.devmaster.dangerzone.world.gen.ModOregen;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
@@ -71,31 +70,25 @@ public class DangerZone {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-                   event.enqueueWork(() -> {
+
+        DeferredWorkQueue.runLater(() -> {
+            GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.NOTBREEBREE.get(), NotBreeBree.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarrior.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BUTTERFLY.get(), Butterfly.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ENT.get(), Ent.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.CAVE_FISHER.get(), CaveFisher.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ATTACK_SQUID.get(), AttackSquid.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.HYDROLISC.get(), Hydrolisc.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ALLOSAURUS.get(), Allosaurus.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BIRD.get(), Bird.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.TECHNOBLADE.get(), Technoblade.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.MERMAID.get(), Mermaid.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.RED_COW.get(), RedCow.getAttributes().create());
         });
     }
-
-
-	@SubscribeEvent
-	public static void addEntityAttributes(EntityAttributeCreationEvent event) {
-		event.put(RegistryHandler.TEWTIY.get(), Tewtiy.setCustomAttributes().create());
-		event.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.setCustomAttributes().create());
-		event.put(RegistryHandler.NOTBREEBREE.get(), NotBreeBree.setCustomAttributes().create());
-		event.put(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarrior.setCustomAttributes().create());
-		event.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.setCustomAttributes().create());
-		event.put(RegistryHandler.BUTTERFLY.get(), Butterfly.setCustomAttributes().create());
-		event.put(RegistryHandler.ENT.get(), Ent.setCustomAttributes().create());
-		event.put(RegistryHandler.CAVE_FISHER.get(), CaveFisher.setCustomAttributes().create());
-		event.put(RegistryHandler.ATTACK_SQUID.get(), AttackSquid.setCustomAttributes().create());
-		event.put(RegistryHandler.HYDROLISC.get(), Hydrolisc.setCustomAttributes().create());
-		event.put(RegistryHandler.ALLOSAURUS.get(), Allosaurus.setCustomAttributes().create());
-        event.put(RegistryHandler.BIRD.get(), Bird.setCustomAttributes().create());
-		event.put(RegistryHandler.TECHNOBLADE.get(), Technoblade.setCustomAttributes().create());
-		event.put(RegistryHandler.MERMAID.get(), Mermaid.setCustomAttributes().create());
-        
-	}
-
-
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(RegistryHandler.STICKY_BLOCK.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.APPLE_LEAVES.get(), RenderType.getCutout());
