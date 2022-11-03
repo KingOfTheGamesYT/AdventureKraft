@@ -21,6 +21,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 import java.util.List;
+import java.util.Random;
 
 import static net.minecraft.util.Direction.*;
 
@@ -36,18 +37,29 @@ public class PlayButtonOreBlock extends OreBlock {
     }
 
     private void spawnYoutuber(ServerWorld world, BlockPos pos) {
-        Tewtiy tewtiy = RegistryHandler.TEWTIY.get().create(world);
-        tewtiy.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
-        StampyLongNose stampyLongNose = RegistryHandler.STAMPYLONGNOSE.get().create(world);
-        stampyLongNose.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
-        NotBreeBree notBreeBree = RegistryHandler.NOTBREEBREE.get().create(world);
-        notBreeBree.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+        Random random = new Random();
+        float i = random.nextInt(3);
+        if (i == 0) {
+            Tewtiy tewtiy = RegistryHandler.TEWTIY.get().create(world);
+            tewtiy.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
             world.addEntity(tewtiy);
             tewtiy.spawnExplosionParticle();
+        }
+
+        if (i == 1) {
+            NotBreeBree notBreeBree = RegistryHandler.NOTBREEBREE.get().create(world);
+            notBreeBree.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
             world.addEntity(notBreeBree);
             notBreeBree.spawnExplosionParticle();
+
+        }
+
+        if (i == 2) {
+            StampyLongNose stampyLongNose = RegistryHandler.STAMPYLONGNOSE.get().create(world);
+            stampyLongNose.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
             world.addEntity(stampyLongNose);
             stampyLongNose.spawnExplosionParticle();
+        }
         }
 
 
