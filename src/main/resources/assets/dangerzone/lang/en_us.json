@@ -14,6 +14,7 @@
   "item.dangerzone.copper_lump": "Copper Lump",
   "item.dangerzone.cz_loin_coin": "CZ Loin Coin",
   "item.dangerzone.dead_rainbow_ant": "Dead Rainbow Ant",
+  "item.dangerzone.dead_termite": "Dead Termite",
   "item.dangerzone.critter_cage": "Empty Critter Cage",
   "item.dangerzone.rainbow_ant_abdomen": "Rainbow Ant Abdomen",
   "item.dangerzone.rainbow_ant_eye": "Rainbow Ant Eye",
@@ -111,6 +112,7 @@
   "item.dangerzone.aluminium_pickaxe": "Aluminium Pickaxe",
   "item.dangerzone.aluminium_hoe": "Aluminium Hoe",
   "item.dangerzone.aluminium_axe": "Aluminium Axe",
+  "item.dangerzone.godzilla_axe": "Godzilla Axe",
 
   "_comment": "Armor",
   "item.dangerzone.coarse_amethyst_helmet": "Coarse Amethyst Helmet",

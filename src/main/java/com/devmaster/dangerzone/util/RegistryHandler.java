@@ -332,6 +332,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<DeadRainbowAnt> DEAD_RAINBOW_ANT = ITEMS.register("dead_rainbow_ant", DeadRainbowAnt::new);
 
+    public static final RegistryObject<DeadTermite> DEAD_TERMITE = ITEMS.register("dead_termite", DeadTermite::new);
+
     public static final RegistryObject<MinersDreamItem> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
 
     public static final RegistryObject<RainbowAntAbdomen> RAINBOW_ANT_ABDOMEN = ITEMS.register("rainbow_ant_abdomen", RainbowAntAbdomen::new);
@@ -456,6 +458,8 @@ public class RegistryHandler {
     public static final RegistryObject<AluminiumPickaxe> ALUMINIUM_PICKAXE = ITEMS.register("aluminium_pickaxe", AluminiumPickaxe::new);
 
     public static final RegistryObject<AluminiumShovel> ALUMINIUM_SHOVEL = ITEMS.register("aluminium_shovel", AluminiumShovel::new);
+
+    public static final RegistryObject<GodzillaAxe> GODZILLA_AXE = ITEMS.register("godzilla_axe", GodzillaAxe::new);
 
     //SOUNDS
     public static final RegistryObject<SoundEvent> AMOXICILLIN_AMBIENT = SOUNDS.register("amoxcillin_ambient", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "amoxcillin_ambient")));
