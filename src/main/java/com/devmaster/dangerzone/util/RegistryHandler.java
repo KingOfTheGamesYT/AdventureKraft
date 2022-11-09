@@ -350,7 +350,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", Sapphire::new);
 
-    public static final RegistryObject<Item> TITANIUM_HARDENED_CAKE = ITEMS.register("titanium_hardened_cake", TitaniumHardenedCake::new);
+    public static final RegistryObject<Item> TITANIUM_CAKE = ITEMS.register("titanium_cake", TitaniumCake::new);
 
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", TitaniumIngot::new);
 
@@ -460,6 +460,8 @@ public class RegistryHandler {
     public static final RegistryObject<AluminiumShovel> ALUMINIUM_SHOVEL = ITEMS.register("aluminium_shovel", AluminiumShovel::new);
 
     public static final RegistryObject<GodzillaAxe> GODZILLA_AXE = ITEMS.register("godzilla_axe", GodzillaAxe::new);
+
+    public static final RegistryObject<FireCakeSword> FIRE_CAKE_SWORD = ITEMS.register("fire_cake_sword", FireCakeSword::new);
 
     //SOUNDS
     public static final RegistryObject<SoundEvent> AMOXICILLIN_AMBIENT = SOUNDS.register("amoxcillin_ambient", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "amoxcillin_ambient")));

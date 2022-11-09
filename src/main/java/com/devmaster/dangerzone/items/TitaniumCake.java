@@ -14,9 +14,9 @@ import net.minecraft.world.World;
 import java.util.List;
 
 
-public class TitaniumHardenedCake extends Item {
+public class TitaniumCake extends Item {
 
-    public TitaniumHardenedCake() {
+    public TitaniumCake() {
         super(new Properties().group(DangerZone.WIP));
     }
     @Override

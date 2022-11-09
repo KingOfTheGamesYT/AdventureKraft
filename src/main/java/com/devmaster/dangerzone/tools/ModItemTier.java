@@ -9,12 +9,8 @@ import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
 
-    FIRE_CAKE(0, 59, 2.0F, 0.0F, 15, () -> {
-        return Ingredient.fromItems(Items.CAKE);
-    }),
-
     TITANIUM_CAKE(2, 250, 6.0F, 0.0F, 14,() -> {
-        return Ingredient.fromItems(RegistryHandler.TITANIUM_HARDENED_CAKE.get());
+        return Ingredient.fromItems(RegistryHandler.TITANIUM_CAKE.get());
     });
 
     private final int harvestLevel;
