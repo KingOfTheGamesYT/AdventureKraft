@@ -204,6 +204,8 @@ public class RegistryHandler {
 
     public static final RegistryKey<World> VILLAGES = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "villages"));
 
+    public static final RegistryKey<World> CRYSTAL = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "crystal"));
+
     //Entities
     public static final RegistryObject<EntityType<Allosaurus>> ALLOSAURUS = ENTITIES
             .register("allosaurus",
@@ -240,6 +242,12 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<Ent>create(Ent::new, EntityClassification.CREATURE)
                             .size(1.0F, 3.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "ent").toString()));
+
+    public static final RegistryObject<EntityType<Godzilla>> GODZILLA = ENTITIES
+            .register("godzilla",
+                    () -> EntityType.Builder.<Godzilla>create(Godzilla::new, EntityClassification.CREATURE)
+                            .size(9.9F, 25.05F)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "godzilla").toString()));
 
     public static final RegistryObject<EntityType<Hydrolisc>> HYDROLISC = ENTITIES
             .register("hydrolisc",

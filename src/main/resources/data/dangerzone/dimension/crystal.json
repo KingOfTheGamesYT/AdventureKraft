@@ -1,0 +1,129 @@
+{
+  "type": {
+    "name": "dangerzone:crystal",
+    "ultrawarm": false,
+    "natural": true,
+    "piglin_safe": false,
+    "respawn_anchor_works": false,
+    "bed_works": true,
+    "has_raids": false,
+    "has_skylight": true,
+    "has_ceiling": false,
+    "coordinate_scale": 1,
+    "ambient_light": 1,
+    "logical_height": 256,
+    "infiniburn": "minecraft:infiniburn_overworld"
+  },
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": -1019851194,
+    "settings": {
+      "name": "minecraft:overworld",
+      "bedrock_roof_position": -10,
+      "bedrock_floor_position": 0,
+      "sea_level": 63,
+      "disable_mob_generation": false,
+      "default_block": {
+        "Name": "dangerzone:kyanite"
+      },
+      "default_fluid": {
+        "Name": "minecraft:water",
+        "Properties": {
+          "level": "15"
+        }
+      },
+      "noise": {
+        "height": 256,
+        "density_factor": 1,
+        "density_offset": -0.46875,
+        "size_horizontal": 1,
+        "size_vertical": 2,
+        "simplex_surface_noise": true,
+        "random_density_offset": true,
+        "sampling": {
+          "xz_scale": 4,
+          "y_scale": 2,
+          "xz_factor": 40,
+          "y_factor": 160
+        },
+        "bottom_slide": {
+          "target": -30,
+          "size": 0,
+          "offset": 0
+        },
+        "top_slide": {
+          "target": -10,
+          "size": 3,
+          "offset": 0
+        }
+      },
+      "structures": {
+        "structures": {}
+      }
+    },
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "seed": 895015680,
+      "altitude_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "temperature_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "humidity_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "weirdness_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "biomes": [
+        {
+          "biome": "dangerzone:crystal_ocean",
+          "parameters": {
+            "altitude": -0.5,
+            "temperature": 0,
+            "humidity": 0.4,
+            "weirdness": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "dangerzone:crystall",
+          "parameters": {
+            "altitude": 0.5,
+            "temperature": 0.5,
+            "humidity": 0,
+            "weirdness": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "dangerzone:crystal",
+          "parameters": {
+            "altitude": 0,
+            "temperature": 0,
+            "humidity": 0.01,
+            "weirdness": 0,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

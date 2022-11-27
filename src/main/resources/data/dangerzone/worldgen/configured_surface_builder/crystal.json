@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:default",
+  "config": {
+    "top_material": {
+      "Name": "dangerzone:crystal_grass"
+    },
+    "under_material": {
+      "Name": "dangerzone:kyanite"
+    },
+    "underwater_material": {
+      "Name": "dangerzone:kyanite"
+    }
+  }
+}

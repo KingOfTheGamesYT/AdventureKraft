@@ -160,7 +160,7 @@
   "entity.dangerzone.allosaurus": "Allosaurus",
   "entity.dangerzone.technoblade": "Technoblade",
   "entity.dangerzone.mermaid": "Mermaid",
-
+  "entity.dangerzone.godzilla": "Godzilla",
 
   "_comment": "Biomes",
   "biome.dangerzone.villages": "Villages",
@@ -168,6 +168,10 @@
   "biome.dangerzone.villagesss": "Villages",
   "biome.dangerzone.villageesss": "Villages",
   "biome.dangerzone.villaggesss": "Villages",
+  "biome.dangerzone.crystal": "Crystal",
+  "biome.dangerzone.crystall": "Crystal",
+  "biome.dangerzone.crystal_ocean": "Crystal Ocean",
+
 
   "_comment": "Tips Integration",
   "dangerzone.tip.title": "AdventureKraft Tip",
