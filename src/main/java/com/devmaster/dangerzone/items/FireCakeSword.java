@@ -50,7 +50,7 @@ public class FireCakeSword extends SwordItem {
     };
 
     public FireCakeSword() {
-        super(iItemTier, (Integer) DZConfig.FIRE_CAKE_SWORD_DAMAGE.get(), (Integer) DZConfig.FIRE_CAKE_SWORD_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.TOOLS));
+        super(iItemTier, (Integer) DZConfig.FIRE_CAKE_SWORD_DAMAGE.get(), (Integer) DZConfig.FIRE_CAKE_SWORD_ATTACK_SPEED.get(), (new Properties()).group(DangerZone.WEAPONS));
     }
 
     public void unlockDestroyACH(PlayerEntity entity, World world) {
