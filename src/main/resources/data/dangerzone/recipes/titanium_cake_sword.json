@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "dangerzone:fire_cake_sword"
+  },
+  "addition": {
+    "item": "dangerzone:titanium_cake"
+  },
+  "result": {
+    "item": "dangerzone:titanium_cake_sword",
+    "count": 1
+  }
+}
