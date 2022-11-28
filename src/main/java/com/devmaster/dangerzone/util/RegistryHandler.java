@@ -370,6 +370,9 @@ public class RegistryHandler {
     public static final RegistryObject<Block> BUTTERFLY_EGG_ORE = BLOCKS.register("butterfly_egg_ore", BlockMobOre::new);
 
     public static final RegistryObject<Block> MUTANT_ZOMBIE_EGG_ORE = BLOCKS.register("mutant_zombie_egg_ore", BlockMobOre::new);
+
+    public static final RegistryObject<Block> RAINBOW_ANT_EGG_ORE = BLOCKS.register("rainbow_ant_egg_ore", BlockMobOre::new);
+
     public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
 
     public static final RegistryObject<Block> STAMPYLONGNOSE_EGG_ORE = BLOCKS.register("petrified_stampylongnose_ore", BlockMobOre::new);
@@ -382,6 +385,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> REDROSEWARRIOR_EGG_ORE_ITEM = ITEMS.register("redrosewarrior_egg_ore", () -> new BlockItemMobOre(REDROSEWARRIOR_EGG_ORE.get()));
 
     public static final RegistryObject<Item> Mutant_Zombie_EGG_ORE_ITEM = ITEMS.register("mutant_zombie_egg_ore", () -> new BlockItemMobOre(MUTANT_ZOMBIE_EGG_ORE.get()));
+
+    public static final RegistryObject<Item> RAINBOW_ANT_EGG_ORE_ITEM = ITEMS.register("rainbow_ant_egg_ore", () -> new BlockItemMobOre(RAINBOW_ANT_EGG_ORE.get()));
 
     public static final RegistryObject<Item> STAMPYLONGNOSE_EGG_ORE_ITEM = ITEMS.register("petrified_stampylongnose_ore", () -> new BlockItemMobOre(STAMPYLONGNOSE_EGG_ORE.get()));
 

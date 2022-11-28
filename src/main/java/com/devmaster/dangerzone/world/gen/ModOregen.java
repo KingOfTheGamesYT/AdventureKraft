@@ -24,6 +24,7 @@ public class ModOregen {
     public static ConfiguredFeature<?, ?> CATS_EYE_ORE;
     public static ConfiguredFeature<?, ?> LEATHER_BLOCK;
     public static ConfiguredFeature<?, ?> MUTANT_ZOMBIE_ORE;
+    public static ConfiguredFeature<?, ?> RAINBOW_ANT_ORE;
     public static ConfiguredFeature<?, ?> REDROSEWARRIOR_ORE;
     public static ConfiguredFeature<?, ?> STAMPYLONGNOSE_ORE;
     public static ConfiguredFeature<?, ?> TEWTIY_ORE;
@@ -77,6 +78,12 @@ public class ModOregen {
                         .square()
                         .chance/* repeat */(16));
 
+        RAINBOW_ANT_ORE = Feature.ORE.withConfiguration(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.RAINBOW_ANT_EGG_ORE.get().getDefaultState(),3))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(3));
+
         REDROSEWARRIOR_ORE = Feature.ORE.withConfiguration(
                 new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.REDROSEWARRIOR_EGG_ORE.get().getDefaultState(),3))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
@@ -127,6 +134,7 @@ public class ModOregen {
         Registry.register(registry, new ResourceLocation("leather_block"), LEATHER_BLOCK);
         Registry.register(registry, new ResourceLocation("mutant_zombie_egg_ore"), MUTANT_ZOMBIE_ORE);
         Registry.register(registry, new ResourceLocation("play_button_ore_block"), PLAY_BUTTON_ORE);
+        Registry.register(registry, new ResourceLocation("rainbow_ant_egg_ore"), RAINBOW_ANT_ORE);
         Registry.register(registry, new ResourceLocation("redrosewarrior_egg_ore"), REDROSEWARRIOR_ORE);
         Registry.register(registry, new ResourceLocation("petrified_stampylongnose_ore"), STAMPYLONGNOSE_ORE);
         Registry.register(registry, new ResourceLocation("petrified_tewtiy_ore"), TEWTIY_ORE);
@@ -148,6 +156,7 @@ public class ModOregen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, LEATHER_BLOCK);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, MUTANT_ZOMBIE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, PLAY_BUTTON_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, RAINBOW_ANT_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, REDROSEWARRIOR_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, STAMPYLONGNOSE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TEWTIY_ORE);
