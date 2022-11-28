@@ -478,6 +478,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<FireCakeSword> FIRE_CAKE_SWORD = ITEMS.register("fire_cake_sword", FireCakeSword::new);
 
+    public static final RegistryObject<TitaniumCakeSword> TITANIUM_CAKE_SWORD = ITEMS.register("titanium_cake_sword", TitaniumCakeSword::new);
+
     //SOUNDS
     public static final RegistryObject<SoundEvent> AMOXICILLIN_AMBIENT = SOUNDS.register("amoxcillin_ambient", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "amoxcillin_ambient")));
     public static final RegistryObject<SoundEvent> LEATHER_BLOCK_BREAK = SOUNDS.register("leather_block_break", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "leather_block_break")));

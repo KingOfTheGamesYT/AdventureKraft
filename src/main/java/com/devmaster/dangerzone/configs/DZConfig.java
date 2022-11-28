@@ -370,11 +370,21 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_HARVEST_LEVEL;
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_DAMAGE;
+    public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_DURABILITY;
+    public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_HIT_COST;
+    public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_EFFICIENCY;
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_ATTACK_SPEED;
-
-
-
-
+    public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_DAMAGE;
+    public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_DURABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_HIT_COST;
+    public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_EFFICIENCY;
 
     public DZConfig() {
     }
@@ -801,6 +811,34 @@ public class DZConfig {
         ALUMINIUM_SHOVEL_ENCHANTABILITY = builder.comment("Aluminium Shovel Encahntability").defineInRange("ALUMINIUM_SHOVEL_ENCHANTABILITY", 14, 0, 1000);
         ALUMINIUM_SHOVEL_EFFICIENCY = builder.comment("Aluminium Shovel Efficiency").defineInRange("ALUMINIUM_SHOVEL_EFFICIENCY", 6, 0, 1000);
         ALUMINIUM_SHOVEL_ATTACK_SPEED = builder.comment("Aluminium Shovel Attack Speed, must be whole number").defineInRange("ALUMINIUM_SHOVEL_ATTACK_SPEED", 1, 0, 1000);
+
+        builder.comment("Godzilla Set Attributes");
+        GODZILLA_AXE_DAMAGE = builder.comment("Godzilla Axe Damage").defineInRange("GODZILLA_AXE_DAMAGE", 45, 0, 1000);
+        GODZILLA_AXE_DURABILITY = builder.comment("Godzilla Axe Durability").defineInRange("GODZILLA_AXE_DURABILITY", 4000, 0, 10000);
+        GODZILLA_AXE_HIT_COST = builder.comment("How much durability a Godzilla axe loses when an entity is hit").defineInRange("GODZILLA_AXE_HIT_COST", 1, 0, 10000);
+        GODZILLA_AXE_HARVEST_LEVEL = builder.comment("Godzilla Axe Harvest Level").defineInRange("GODZILLA_AXE_HARVEST_LEVEL", 6, 0, 1000);
+        GODZILLA_AXE_ENCHANTABILITY = builder.comment("Godzilla Axe Encahntability").defineInRange("GODZILLA_AXE_ENCHANTABILITY", 2, 0, 1000);
+        GODZILLA_AXE_EFFICIENCY = builder.comment("Godzilla Axe Efficiency").defineInRange("GODZILLA_AXE_EFFICIENCY", 7, 0, 1000);
+        GODZILLA_AXE_ATTACK_SPEED = builder.comment("Godzilla Axe Attack Speed, must be whole number").defineInRange("GODZILLA_AXE_ATTACK_SPEED", 1, 0, 1000);
+
+        builder.comment("Fire Cake Set Attributes");
+        FIRE_CAKE_SWORD_DAMAGE = builder.comment("Fire Cake Sword Damage").defineInRange("FIRE_CAKE_SWORD_DAMAGE", 5, 0, 1000);
+        FIRE_CAKE_SWORD_DURABILITY = builder.comment("Fire Cake Sword Durability").defineInRange("FIRE_CAKE_SWORD_DURABILITY", 59, 0, 10000);
+        FIRE_CAKE_SWORD_HIT_COST = builder.comment("How much durability a Fire Cake Sword loses when an entity is hit").defineInRange("FIRE_CAKE_SWORD_HIT_COST", 1, 0, 10000);
+        FIRE_CAKE_SWORD_HARVEST_LEVEL = builder.comment("Fire Cake Sword Harvest Level").defineInRange("FIRE_CAKE_SWORD_HARVEST_LEVEL", 0, 0, 1000);
+        FIRE_CAKE_SWORD_ENCHANTABILITY = builder.comment("Fire Cake Sword Encahntability").defineInRange("FIRE_CAKE_SWORD_ENCHANTABILITY", 15, 0, 1000);
+        FIRE_CAKE_SWORD_EFFICIENCY = builder.comment("Fire Cake Sword Efficiency").defineInRange("FIRE_CAKE_SWORD_EFFICIENCY", 2, 0, 1000);
+        FIRE_CAKE_SWORD_ATTACK_SPEED = builder.comment("Fire Cake Sword Attack Speed, must be whole number").defineInRange("FIRE_CAKE_SWORD_ATTACK_SPEED", 1, 0, 1000);
+
+        builder.comment("Titanium Cake Set Attributes");
+        TITANIUM_CAKE_SWORD_DAMAGE = builder.comment("Titanium Cake Sword Damage").defineInRange("TITANIUM_CAKE_SWORD_DAMAGE", 7, 0, 1000);
+        TITANIUM_CAKE_SWORD_DURABILITY = builder.comment("Titanium Cake Sword Durability").defineInRange("TITANIUM_CAKE_SWORD_DURABILITY", 250, 0, 10000);
+        TITANIUM_CAKE_SWORD_HIT_COST = builder.comment("How much durability a Titanium Cake Sword loses when an entity is hit").defineInRange("TITANIUM_CAKE_SWORD_HIT_COST", 1, 0, 10000);
+        TITANIUM_CAKE_SWORD_HARVEST_LEVEL = builder.comment("Titanium Cake Sword Harvest Level").defineInRange("TITANIUM_CAKE_SWORD_HARVEST_LEVEL", 2, 0, 1000);
+        TITANIUM_CAKE_SWORD_ENCHANTABILITY = builder.comment("Titanium Cake Sword Encahntability").defineInRange("TITANIUM_CAKE_SWORD_ENCHANTABILITY", 14, 0, 1000);
+        TITANIUM_CAKE_SWORD_EFFICIENCY = builder.comment("Titanium Cake Sword Efficiency").defineInRange("TITANIUM_CAKE_SWORD_EFFICIENCY", 6, 0, 1000);
+        TITANIUM_CAKE_SWORD_ATTACK_SPEED = builder.comment("Titanium Cake Sword Attack Speed, must be whole number").defineInRange("TITANIUM_CAKE_SWORD_ATTACK_SPEED", 1, 0, 1000);
+
         builder.pop();
         }
 
