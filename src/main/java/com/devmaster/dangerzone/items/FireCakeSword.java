@@ -45,7 +45,7 @@ public class FireCakeSword extends SwordItem {
         }
 
         public Ingredient getRepairMaterial() {
-            return null;
+            return Ingredient.fromItems(Items.CAKE);
         }
     };
 
