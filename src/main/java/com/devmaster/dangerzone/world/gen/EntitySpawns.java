@@ -42,6 +42,9 @@ public class EntitySpawns {
                 List<BiomeDictionary.Type> ButterflyexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Butterflyexclude.get()));
                 List<BiomeDictionary.Type> BirdincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Birdinclude.get()));
                 List<BiomeDictionary.Type> BirdexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Birdexclude.get()));
+                List<BiomeDictionary.Type> RedCowincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.RedCowinclude.get()));
+                List<BiomeDictionary.Type> RedCowexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.RedCowexclude.get()));
+
                 if (!includeList.isEmpty()) {
                     Set<BiomeDictionary.Type> biomeTypes = BiomeDictionary.getTypes(biomeKey);
                     if (biomeTypes.stream().noneMatch(excludeList::contains) && biomeTypes.stream().anyMatch(includeList::contains)) {
@@ -67,6 +70,9 @@ public class EntitySpawns {
                     }
                     if (biomeTypes.stream().noneMatch(BirdexcludeList::contains) && biomeTypes.stream().anyMatch(BirdincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(RegistryHandler.BIRD.get(), DZConfig.Birdweight.get(), DZConfig.Birdmin.get(), DZConfig.Birdmax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(RedCowexcludeList::contains) && biomeTypes.stream().anyMatch(RedCowincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.RED_COW.get(), DZConfig.RedCowweight.get(), DZConfig.RedCowmin.get(), DZConfig.RedCowmax.get()));
                     }
 
                 } else {

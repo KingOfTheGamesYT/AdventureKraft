@@ -59,6 +59,14 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue CaveFishermax;
 
     public static ForgeConfigSpec.IntValue CaveFisherweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedCowexclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedCowinclude;
+
+    public static ForgeConfigSpec.IntValue RedCowmin;
+
+    public static ForgeConfigSpec.IntValue RedCowmax;
+
+    public static ForgeConfigSpec.IntValue RedCowweight;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_DAMAGE;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_DURABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_HIT_COST;
@@ -391,7 +399,7 @@ public class DZConfig {
 
     public static void COMMON(ForgeConfigSpec.Builder builder) {
             builder.comment("Spawn Chances");
-            builder.comment("Configure mob spawn weight (How frequently they spawn & min/max group size. Set weight to 0 to disable.");
+            builder.comment("Configure mob spawn weight (How frequently they spawn & min/max group size. Set weight to 0 to disable.) (Make sure the max is not lower than your min or the game will crash)");
             builder.push("NotBreeBree Spawn Chances");
             NotBreeBreemin = builder.defineInRange("NotBreeBree Min", 1, 0, 640);
             NotBreeBreemax = builder.defineInRange("NotBreeBree Max", 2, 0, 640);
@@ -426,6 +434,18 @@ public class DZConfig {
             Entmin = builder.defineInRange("Ent Min", 1, 0, 640);
             Entmax = builder.defineInRange("Ent Max", 1, 0, 640);
             Entweight = builder.defineInRange("Ent Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("Red Cow Spawn Chances");
+            RedCowmin = builder.defineInRange("Red Cow Min", 1, 0, 640);
+            RedCowmax = builder.defineInRange("Red Cow Max", 8, 0, 640);
+            RedCowweight = builder.defineInRange("Red cow Weight", 3, 0, 100);
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("Red Cow Biomes Whitelist/Blacklist");
+            RedCowinclude = builder.defineList("include Red Cow", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            RedCowexclude = builder.defineList("exclude Red Cow", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             builder.pop();
 
             builder.comment("Spawnable Biomes");

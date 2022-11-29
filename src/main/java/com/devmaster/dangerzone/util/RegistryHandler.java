@@ -276,7 +276,7 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<RedCow>> RED_COW = ENTITIES
             .register("red_cow",
                     () -> EntityType.Builder.<RedCow>create(RedCow::new, EntityClassification.AMBIENT)
-                            .size(0.9f, 1.9f)
+                            .size(0.9f, 1.45f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "red_cow").toString()));
 
     public static final RegistryObject<EntityType<RedRoseWarrior>> REDROSEWARRIOR = ENTITIES
@@ -415,7 +415,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<SpawnEgg> RAINBOW_ANT_SPAWN_EGG = ITEMS.register("rainbow_ant_spawn_egg", () -> new SpawnEgg(RegistryHandler.RAINBOWANT, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
-    public static final RegistryObject<Item> RED_COW_SPAWN_EGG = ITEMS.register("red_cow_spawn_egg", RedCowSpawnEgg::new);
+    public static final RegistryObject<SpawnEgg> RED_COW_SPAWN_EGG = ITEMS.register("red_cow_spawn_egg", () -> new SpawnEgg(RegistryHandler.RED_COW, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<SpawnEgg> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEgg(RegistryHandler.REDROSEWARRIOR, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
