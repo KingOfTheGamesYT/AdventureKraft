@@ -1,0 +1,39 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "dangerzone:items/tool/godzilla_axe",
+		"1": "dangerzone:items/tool/godzilla_axe_side",
+		"particle": "dangerzone:items/tool/godzilla_axe"
+	},
+	"elements": [
+		{
+			"from": [8, -6, -11],
+			"to": [8, 26, 32],
+			"faces": {
+				"north": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 16], "texture": "#missing"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-30, 0, 0]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-27, 0, 0]
+		},
+		"gui": {
+			"rotation": [0, 39, 0],
+			"translation": [-0.75, 0, 0],
+			"scale": [1, 0.48, 0.6]
+		},
+		"fixed": {
+			"rotation": [0, -88, 0],
+			"scale": [1, 0.54, 0.51]
+		}
+	}
+}

@@ -839,7 +839,7 @@ public class DZConfig {
         GODZILLA_AXE_HARVEST_LEVEL = builder.comment("Godzilla Axe Harvest Level").defineInRange("GODZILLA_AXE_HARVEST_LEVEL", 6, 0, 1000);
         GODZILLA_AXE_ENCHANTABILITY = builder.comment("Godzilla Axe Encahntability").defineInRange("GODZILLA_AXE_ENCHANTABILITY", 2, 0, 1000);
         GODZILLA_AXE_EFFICIENCY = builder.comment("Godzilla Axe Efficiency").defineInRange("GODZILLA_AXE_EFFICIENCY", 7, 0, 1000);
-        GODZILLA_AXE_ATTACK_SPEED = builder.comment("Godzilla Axe Attack Speed, must be whole number").defineInRange("GODZILLA_AXE_ATTACK_SPEED", 1, 0, 1000);
+        GODZILLA_AXE_ATTACK_SPEED = builder.comment("Godzilla Axe Attack Speed, must be whole number").defineInRange("GODZILLA_AXE_ATTACK_SPEED", 2, 0, 1000);
 
         builder.comment("Fire Cake Set Attributes");
         FIRE_CAKE_SWORD_DAMAGE = builder.comment("Fire Cake Sword Damage").defineInRange("FIRE_CAKE_SWORD_DAMAGE", 5, 0, 1000);
