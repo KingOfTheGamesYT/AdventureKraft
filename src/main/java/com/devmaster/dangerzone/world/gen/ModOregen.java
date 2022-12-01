@@ -149,6 +149,8 @@ public class ModOregen {
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
         Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
         Registry.register(registry, new ResourceLocation("titanium_ore_block"), TITANIUM_ORE);
+        Registry.register(registry, new ResourceLocation("petrified_zombie_ore"), ZOMBIE_ORE);
+
     }
 
     public static void handleWorldGen(BiomeLoadingEvent event){
@@ -171,6 +173,8 @@ public class ModOregen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SALT_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TITANIUM_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ZOMBIE_ORE);
+
     }
 
 }
