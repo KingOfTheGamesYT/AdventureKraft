@@ -1,32 +1,25 @@
 package com.devmaster.dangerzone.gui;
 
-import com.devmaster.dangerzone.client.render.BossBarRender;
-import com.devmaster.dangerzone.entity.RedRoseWarrior;
 import com.devmaster.dangerzone.misc.DangerZone;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
-import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.minecraft.client.MainWindow;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.Rectangle2d;
-import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
+
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.client.event.RenderGameOverlayEvent.BossInfo;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.lwjgl.opengl.GL11;
 
 import java.util.*;
 
 import static com.devmaster.dangerzone.client.render.BossBarRender.renderScaledCustomSizedTexture;
-import static net.minecraft.client.gui.AbstractGui.blit;
 
 
 @OnlyIn(Dist.CLIENT)

@@ -379,6 +379,9 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> TEWTIY_EGG_ORE = BLOCKS.register("petrified_tewtiy_ore", BlockMobOre::new);
 
+    public static final RegistryObject<Block> ZOMBIE_EGG_ORE = BLOCKS.register("petrified_zombie_ore", BlockMobOre::new);
+
+
     //Petrified Mob items
     public static final RegistryObject<Item> BUTTERFLY_EGG_ORE_ITEM = ITEMS.register("butterfly_egg_ore", () -> new BlockItemMobOre(BUTTERFLY_EGG_ORE.get()));
 
@@ -391,6 +394,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> STAMPYLONGNOSE_EGG_ORE_ITEM = ITEMS.register("petrified_stampylongnose_ore", () -> new BlockItemMobOre(STAMPYLONGNOSE_EGG_ORE.get()));
 
     public static final RegistryObject<Item> TEWTIY_EGG_ORE_ITEM = ITEMS.register("petrified_tewtiy_ore", () -> new BlockItemMobOre(TEWTIY_EGG_ORE.get()));
+
+    public static final RegistryObject<Item> ZOMBIE_EGG_ORE_ITEM = ITEMS.register("petrified_zombie_ore", () -> new BlockItemMobOre(ZOMBIE_EGG_ORE.get()));
 
     //Spawn Eggs
     public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", () -> new SpawnEgg(RegistryHandler.ALLOSAURUS, 0, 0, new Item.Properties().group(DangerZone.TAB)));

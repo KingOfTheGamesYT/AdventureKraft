@@ -50,11 +50,8 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     @Override
     public void livingTick() {
         super.livingTick();
-
-
         this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
         this.bossInfo.setVisible(true);
-
     }
 
     @Override

@@ -32,6 +32,8 @@ public class ModOregen {
     public static ConfiguredFeature<?, ?> SALT_ORE;
     public static ConfiguredFeature<?, ?> SAPPHIRE_ORE;
     public static ConfiguredFeature<?, ?> TITANIUM_ORE;
+    public static ConfiguredFeature<?, ?> ZOMBIE_ORE;
+
 
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
 
@@ -98,6 +100,12 @@ public class ModOregen {
 
         TEWTIY_ORE = Feature.ORE.withConfiguration(
                         new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.TEWTIY_EGG_ORE.get().getDefaultState(),3))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(3));
+
+        ZOMBIE_ORE = Feature.ORE.withConfiguration(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.ZOMBIE_EGG_ORE.get().getDefaultState(),3))
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
                         .square()
                         .chance/* repeat */(3));
