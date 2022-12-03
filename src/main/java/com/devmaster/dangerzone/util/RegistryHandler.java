@@ -336,6 +336,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<CritterCage> CRITTER_CAGE = ITEMS.register("critter_cage", CritterCage::new);
 
+    public static final RegistryObject<CrystalApple> CRYSTAL_APPLE = ITEMS.register("crystal_apple", CrystalApple::new);
+
     public static final RegistryObject<CZLoinCoin> CZ_LOIN_COIN = ITEMS.register("cz_loin_coin", CZLoinCoin::new);
 
     public static final RegistryObject<DeadRainbowAnt> DEAD_RAINBOW_ANT = ITEMS.register("dead_rainbow_ant", DeadRainbowAnt::new);

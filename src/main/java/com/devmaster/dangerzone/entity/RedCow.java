@@ -49,7 +49,7 @@ public class RedCow extends CowEntity {
     }
 
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.getItem() == RegistryHandler.COPPER_BOOTS.get();
+        return stack.getItem() == RegistryHandler.CRYSTAL_APPLE.get();
     }
 
     @Override
