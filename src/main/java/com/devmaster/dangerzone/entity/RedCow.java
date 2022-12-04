@@ -14,9 +14,15 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 
 public class RedCow extends CowEntity {
+
+    private EatGrassGoal eatGrassGoal;
+    private int eatTimer;
+
     public RedCow(final EntityType<? extends RedCow> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 45;
@@ -35,6 +41,8 @@ public class RedCow extends CowEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
+        this.eatGrassGoal = new EatGrassGoal(this);
+        this.goalSelector.addGoal(5, this.eatGrassGoal);
         this.goalSelector.addGoal(1, new SwimGoal(this));
         this.goalSelector.addGoal(5, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
@@ -44,6 +52,20 @@ public class RedCow extends CowEntity {
 
     }
 
+    @Override
+    protected void updateAITasks() {
+        this.eatTimer = this.eatGrassGoal.getEatingGrassTimer();
+        super.updateAITasks();
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public void handleStatusUpdate(byte id) {
+        if (id == 4) {
+            this.eatTimer = 10;
+        } else {
+            super.handleStatusUpdate(id);
+        }
+    }
     public RedCow createChild(ServerWorld world, AgeableEntity mate) {
         return RegistryHandler.RED_COW.get().create(world);
     }
