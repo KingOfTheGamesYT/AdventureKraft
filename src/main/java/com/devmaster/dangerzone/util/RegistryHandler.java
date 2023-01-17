@@ -9,6 +9,8 @@ import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.projectile.FireballEntity;
+import net.minecraft.entity.projectile.SmallFireballEntity;
 import net.minecraft.item.*;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
@@ -22,6 +24,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Map;
+
+import static net.minecraftforge.registries.ForgeRegistries.Keys.ENTITY_TYPES;
 
 public class RegistryHandler {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DangerZone.MOD_ID);
@@ -219,6 +223,11 @@ public class RegistryHandler {
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "attack_squid").toString()));
 
+    public static final RegistryObject<EntityType<BetterFireball>> BETTER_FIREBALL = ENTITIES
+            .register("better_fireball",
+                    () ->  EntityType.Builder.<BetterFireball>create(BetterFireball::new, EntityClassification.MISC)
+                            .size(1.0F, 1.0F)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "better_fireball").toString()));
     public static final RegistryObject<EntityType<Bird>> BIRD = ENTITIES
             .register("bird",
                     () -> EntityType.Builder.<Bird>create(Bird::new, EntityClassification.AMBIENT)
