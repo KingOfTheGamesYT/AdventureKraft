@@ -167,6 +167,8 @@
   "entity.dangerzone.technoblade": "Technoblade",
   "entity.dangerzone.mermaid": "Mermaid",
   "entity.dangerzone.godzilla": "Godzilla",
+  "entity.dangerzone.bird": "Bird",
+
 
   "_comment": "Biomes",
   "biome.dangerzone.villages": "Villages",
