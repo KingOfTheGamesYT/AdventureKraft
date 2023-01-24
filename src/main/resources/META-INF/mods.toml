@@ -13,6 +13,8 @@ configBackground="dangerzone:textures/blocks/egg/kyuubi_egg_ore.png"
 
 modId="dangerzone"
 
+updateJsonUrl="https://forge.curseupdate.com/406601/dangerzone"
+
 version="4.1.3"
 
 displayName="AdventureKraft"
