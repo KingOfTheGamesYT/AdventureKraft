@@ -73,8 +73,8 @@ public class Butterfly extends CreatureEntity {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 2)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.10000000149011612D)
+                .createMutableAttribute(Attributes.FLYING_SPEED, 0.10000000149011612D)
                 .createMutableAttribute(Attributes.ARMOR, 0.5);
-
     }
 
 
