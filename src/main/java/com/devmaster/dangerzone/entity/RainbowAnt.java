@@ -45,6 +45,20 @@ public class RainbowAnt extends AnimalEntity {
     }
 
 
+    public void livingTick() {
+        super.livingTick();
+        this.dieInWater();
+    }
+
+    protected void dieInWater() {
+        if (this.isAlive()) {
+            if (this.isInWaterRainOrBubbleColumn()) {
+                this.setAir(0);
+                this.damageEntity(DamageSource.DROWN, Integer.MAX_VALUE);
+            }
+        }
+    }
+
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
         return null;
