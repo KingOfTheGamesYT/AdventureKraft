@@ -1,0 +1,10 @@
+{
+  "title": {
+    "translate": "dangerzone.tip.title",
+    "bold": true,
+    "color": "red"
+  },
+  "tip": {
+    "translate": "dangerzone.tip.villages"
+  }
+}

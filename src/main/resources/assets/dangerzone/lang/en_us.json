@@ -183,7 +183,8 @@
 
   "_comment": "Tips Integration",
   "dangerzone.tip.title": "AdventureKraft Tip",
-  "dangerzone.tip.spawn_eggs": "If you can find the petrified version of the mob you can bring it to life",
+  "dangerzone.tip.spawn_eggs": "If you can find the petrified version of the mob you can bring it to life.",
+  "dangerzone.tip.villages": "Don't stay too long in the village dimension.",
 
   "_comment": "Subtitles",
   "subtitles.leather_block_hit": "leather block hit sound",
