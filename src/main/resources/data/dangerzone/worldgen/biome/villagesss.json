@@ -95,12 +95,6 @@
         "maxCount": 3
       },
       {
-        "type": "dangerzone:godzilla",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
         "type": "minecraft:husk",
         "weight": 5,
         "minCount": 1,
@@ -129,6 +123,12 @@
         "weight": 5,
         "minCount": 1,
         "maxCount": 2
+      },
+      {
+        "type": "mutantbeasts:mutant_zombie",
+        "weight": 30,
+        "minCount": 1,
+        "maxCount": 1
       }
     ],
     "creature": [
@@ -157,19 +157,31 @@
         "maxCount": 1
       },
       {
-        "type": "dangerzone:villager",
+        "type": "minecraft:villager",
         "weight": 30,
         "minCount": 1,
         "maxCount": 1
       },
       {
-        "type": "dangerzone:iron_golem",
+        "type": "minecraft:iron_golem",
         "weight": 30,
         "minCount": 1,
         "maxCount": 1
       },
       {
-        "type": "dangerzone:snow_golem",
+        "type": "minecraft:snow_golem",
+        "weight": 30,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "minecraft:wandering_trader",
+        "weight": 30,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "mutantbeasts:mutant_snow_golem",
         "weight": 30,
         "minCount": 1,
         "maxCount": 1

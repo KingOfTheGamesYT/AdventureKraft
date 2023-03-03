@@ -20,6 +20,9 @@ public class sleep {
             if (serverWorld.getDimensionKey() == RegistryHandler.VILLAGES && world.getWorldInfo() instanceof DerivedWorldInfo) {
                 ((DerivedWorldInfo)world.getWorldInfo()).delegate.setDayTime(event.getNewTime());
             }
+            if (serverWorld.getDimensionKey() == RegistryHandler.VILLAGES && world.getWorldInfo() instanceof DerivedWorldInfo) {
+                ((DerivedWorldInfo)world.getWorldInfo()).delegate.setRaining(false);
+            }
         }
 
     }
