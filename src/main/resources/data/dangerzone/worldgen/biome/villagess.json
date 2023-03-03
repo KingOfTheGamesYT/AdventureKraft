@@ -179,6 +179,42 @@
         "weight": 30,
         "minCount": 1,
         "maxCount": 1
+      },
+      {
+        "type": "alexsmobs:crocodile",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "alexsmobs:komodo_dragon",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "alexsmobs:mimicube",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "alexsmobs:tiger",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "alexsmobs:warped_mosco",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "alexsmobs:dropbear",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
       }
     ],
     "water_creature": [

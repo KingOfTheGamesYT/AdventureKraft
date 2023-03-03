@@ -20,8 +20,8 @@ public class CookedBacon extends Item {
 
                 .group(DangerZone.FOOD)
                 .food(new Food.Builder()
-                        .hunger(28)
-                        .saturation(1.5F)
+                        .hunger(20)
+                        .saturation(0F)
                         .effect(new EffectInstance(Effects.STRENGTH, 2000, 0), 1)
                         .effect(new EffectInstance(Effects.REGENERATION, 2000, 0), 1)
                         .setAlwaysEdible()
