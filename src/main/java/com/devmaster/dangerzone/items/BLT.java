@@ -26,7 +26,7 @@ public class BLT extends Item {
                 .group(DangerZone.WIP)
                 .food(new Food.Builder()
                         .hunger(20)
-                        .saturation(2)
+                        .saturation(8)
                         .build()
                 ));
     }
