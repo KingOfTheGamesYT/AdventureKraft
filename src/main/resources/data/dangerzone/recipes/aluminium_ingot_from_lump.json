@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    "xxx",
+    "   "
+  ],
+  "key":
+  {
+    "x":
+    {
+
+      "item": "dangerzone:aluminium_lump"
+    }
+
+
+  },
+  "result":
+  {
+    "item": "dangerzone:aluminium_ingot",
+    "count": 1
+  }
+}

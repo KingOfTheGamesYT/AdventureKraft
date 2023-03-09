@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "dangerzone:aluminium_ore_block"
+  },
+  "result": "dangerzone:aluminium_lump",
+  "experience": 0.7,
+  "cookingtime": 100
+}

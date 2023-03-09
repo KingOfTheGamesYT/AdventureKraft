@@ -5,27 +5,19 @@ import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.items.EmeraldPickaxe;
-import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
-import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.projectile.FireballEntity;
-import net.minecraft.entity.projectile.SmallFireballEntity;
 import net.minecraft.item.*;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.Map;
-
-import static net.minecraftforge.registries.ForgeRegistries.Keys.ENTITY_TYPES;
 
 public class RegistryHandler {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DangerZone.MOD_ID);
@@ -149,7 +141,7 @@ public class RegistryHandler {
     //Block Items
     public static final RegistryObject<Item> ABYSSAL_ORE_BLOCK_ITEM = ITEMS.register("abyssal_ore_block", () -> new BlockItemBase(ABYSSAL_ORE_BLOCK.get()));
 
-    public static final RegistryObject<Item> ALUMINIUM_BLOCK_ITEM = ITEMS.register("aluminium_block", () -> new WIPBlockItemBase(ALUMINIUM_BLOCK.get()));
+    public static final RegistryObject<Item> ALUMINIUM_BLOCK_ITEM = ITEMS.register("aluminium_block", () -> new BlockItemBase(ALUMINIUM_BLOCK.get()));
 
     public static final RegistryObject<Item> ALUMINIUM_ORE_BLOCK_ITEM = ITEMS.register("aluminium_ore_block", () -> new WIPBlockItemBase(ALUMINIUM_ORE_BLOCK.get()));
 
@@ -160,7 +152,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> APPLE_LEAVES_ITEM = ITEMS.register("apple_leaves", () -> new WIPBlockItemBase(APPLE_LEAVES.get()));
 
     public static final RegistryObject<Item> BLOODSTONE_BLOCK_ITEM = ITEMS.register("bloodstone_block", () -> new WIPBlockItemBase(BLOODSTONE_BLOCK.get()));
-    
+
     public static final RegistryObject<Item> BROWN_BLOCK_ITEM = ITEMS.register("brown_block", () -> new BlockItemBase(BROWN_BLOCK.get()));
 
     public static final RegistryObject<Item> CATS_EYE_BLOCK_ITEM = ITEMS.register("cats_eye_block", () -> new BlockItemBase(CATS_EYE_BLOCK.get()));
@@ -255,7 +247,7 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<Godzilla>> GODZILLA = ENTITIES
             .register("godzilla",
                     () -> EntityType.Builder.<Godzilla>create(Godzilla::new, EntityClassification.CREATURE)
-                            .size(9.9F, 25.05F)
+                            .size(9.9F, 5.05F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "godzilla").toString()));
 
     public static final RegistryObject<EntityType<Hydrolisc>> HYDROLISC = ENTITIES
@@ -320,6 +312,8 @@ public class RegistryHandler {
 
     //Items
     public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("aluminium_ingot", AluminiumIngot::new);
+
+    public static final RegistryObject<Item> ALUMINIUM_LUMP = ITEMS.register("aluminium_lump", AluminiumLump::new);
 
     public static final RegistryObject<AppleSeed> APPLE_SEED = ITEMS.register("apple_seed", AppleSeed::new);
 

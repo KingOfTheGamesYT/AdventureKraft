@@ -14,13 +14,13 @@ import net.minecraft.world.World;
 import java.util.List;
 
 
-public class AluminiumIngot extends Item {
+public class AluminiumLump extends Item {
 
-    public AluminiumIngot() {
+    public AluminiumLump() {
         super(new Properties().group(DangerZone.TAB));
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7f" + "A lightweight ingot" + "\u00A7f"));
+        tooltip.add(new StringTextComponent("\u00A7f" + "A lightweight lump" + "\u00A7f"));
     }
 }

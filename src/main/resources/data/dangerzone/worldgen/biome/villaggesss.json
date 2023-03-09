@@ -131,25 +131,7 @@
         "maxCount": 1
       },
       {
-        "type": "alexsmobs:crocodile",
-        "weight": 5,
-        "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "alexsmobs:komodo_dragon",
-        "weight": 5,
-        "minCount": 1,
-        "maxCount": 2
-      },
-      {
         "type": "alexsmobs:mimicube",
-        "weight": 5,
-        "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "alexsmobs:tiger",
         "weight": 5,
         "minCount": 1,
         "maxCount": 2
@@ -165,6 +147,102 @@
         "weight": 5,
         "minCount": 1,
         "maxCount": 2
+      },
+      {
+        "type": "iceandfire:cockatrice",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:deathworm",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:hippogryph",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:tymphalian_bird",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "iceandfire:gorgon",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:troll",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:myrmex_queen",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:myrmex_soldier",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:myrmex_sentinal",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:myrmex_royal",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:dread_beast",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:dread_thrall",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:dread_knight",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:dread_lich",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:dread_scuttler",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:dread_ghoul",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
       }
     ],
     "creature": [
@@ -176,12 +254,6 @@
       },
       {
         "type": "dangerzone:notbreebree",
-        "weight": 30,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "dangerzone:attack_squid",
         "weight": 30,
         "minCount": 1,
         "maxCount": 1
@@ -217,8 +289,70 @@
         "maxCount": 1
       },
       {
-        "type": "dangerzone:mutant_snow_golem",
+        "type": "mutantbeasts:mutant_snow_golem",
         "weight": 30,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "dangerzone:godzilla",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "alexsmobs:crocodile",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "alexsmobs:komodo_dragon",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "alexsmobs:tiger",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "iceandfire:fire_dragon",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:ice_dragon",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:cyclops",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "dangerzone:attack_squid",
+        "weight": 30,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "iceandfire:siren",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "iceandfire:sea_serpent",
+        "weight": 5,
         "minCount": 1,
         "maxCount": 1
       }
