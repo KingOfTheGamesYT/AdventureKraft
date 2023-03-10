@@ -1,0 +1,8 @@
+{
+  "parent": "dangerzone:block/vertical_slab",
+  "textures": {
+    "bottom": "dangerzone:blocks/mineral/ore/abyssal_ore_block",
+    "top": "dangerzone:blocks/mineral/ore/abyssal_ore_block",
+    "side": "dangerzone:blocks/mineral/ore/abyssal_ore_block"
+  }
+}

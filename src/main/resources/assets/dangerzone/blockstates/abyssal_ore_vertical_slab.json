@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "type=north": { "model": "dangerzone:block/abyssal_ore_vertical_slab", "y": 0, "uvlock": true },
+    "type=south": { "model": "dangerzone:block/abyssal_ore_vertical_slab", "y": 180, "uvlock": true },
+    "type=east": { "model": "dangerzone:block/abyssal_ore_vertical_slab", "y": 90, "uvlock": true },
+    "type=west": { "model": "dangerzone:block/abyssal_ore_vertical_slab", "y": 270, "uvlock": true },
+    "type=double": { "model": "dangerzone:block/abyssal_ore_block" }
+  }
+}

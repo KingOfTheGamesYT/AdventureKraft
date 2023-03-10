@@ -173,19 +173,7 @@
         "maxCount": 3
       },
       {
-        "type": "iceandfire:gorgon",
-        "weight": 5,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
         "type": "iceandfire:troll",
-        "weight": 5,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "iceandfire:myrmex_queen",
         "weight": 5,
         "minCount": 1,
         "maxCount": 1
@@ -260,6 +248,12 @@
       },
       {
         "type": "dangerzone:stampylongnose",
+        "weight": 30,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "dangerzone:technoblade",
         "weight": 30,
         "minCount": 1,
         "maxCount": 1
@@ -347,18 +341,6 @@
       {
         "type": "dangerzone:attack_squid",
         "weight": 30,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "iceandfire:siren",
-        "weight": 5,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "iceandfire:sea_serpent",
-        "weight": 5,
         "minCount": 1,
         "maxCount": 1
       }
