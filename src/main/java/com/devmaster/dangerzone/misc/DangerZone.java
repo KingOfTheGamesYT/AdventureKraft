@@ -8,6 +8,7 @@ import com.devmaster.dangerzone.gui.BossBar;
 import com.devmaster.dangerzone.items.SpawnEgg;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ArmoredMobSpawnEvents;
+import com.devmaster.dangerzone.world.gen.EntitySpawns;
 import com.devmaster.dangerzone.world.gen.ModOregen;
 
 import net.minecraft.block.Block;
@@ -47,30 +48,26 @@ public class DangerZone {
     public static final ItemGroup  PETRIFIED_ORES = new DangerZonePetrifiedOres();
     public static final ItemGroup  FOOD = new DangerZoneFood();
     public static final ItemGroup WIP = new DangerZoneWIP();
-    public static final ITag.INamedTag<Block> MINERS_DREAM_MINEABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":breakable");
+    public static final ITag.INamedTag<Block> MINERS_DREAM_MINEABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":miners_dream_breakable");
+    public static final ITag.INamedTag<Block> GODZILLA_DESTROYABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":godzilla_breakable");
+
 
     public DangerZone() {
         ModLoadingContext.get().registerConfig(Type.COMMON, BaseConfig.COMMON, "dangerzone-common.toml");
         BaseConfig.loadConfig(BaseConfig.COMMON, FMLPaths.CONFIGDIR.get().resolve("dangerzone-common.toml").toString());
-
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
-
         RegistryHandler.init();
         BossBar.init();
-
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
         MinecraftForge.EVENT_BUS.addListener(ArmoredMobSpawnEvents::spawnMonster);
-
-
         FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Feature.class, EventPriority.LOW, ModOregen::addConfigFeatures);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.getAttributes().create());
@@ -87,6 +84,18 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.TECHNOBLADE.get(), Technoblade.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.MERMAID.get(), Mermaid.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.RED_COW.get(), RedCow.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.GODZILLA.get(), Godzilla.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ALEXICRAFT.get(), AlexiCraft.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ANTVENOM.get(), AntVenom.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.APHMAU.get(), Aphmau.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BABYANGEL.get(), BabyAngel.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BABYDUCK.get(), BabyDuck.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BABYLEAH.get(), BabyLeah.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BABYMAX.get(), BabyMax.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BAJANCANADIAN.get(), BajanCanadian.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelz.getAttributes().create());
+            EntitySpawns.registerSpawnPlacements();
+
         });
     }
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -110,6 +119,16 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TECHNOBLADE.get(), TechnobladeRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.MERMAID.get(), MermaidRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RED_COW.get(), RedCowRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.GODZILLA.get(), GodzillaRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ALEXICRAFT.get(), AlexiCraftRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ANTVENOM.get(), AntVenomRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.APHMAU.get(), AphmauRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYANGEL.get(), BabyAngelRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYDUCK.get(), BabyDuckRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYLEAH.get(), BabyLeahRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYMAX.get(), BabyMaxRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BAJANCANADIAN.get(), BajanCanadianRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelzRender::new);
         SpawnEgg.initSpawnEggs();
     }
 }

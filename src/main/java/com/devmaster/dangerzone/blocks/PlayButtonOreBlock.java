@@ -1,8 +1,6 @@
 package com.devmaster.dangerzone.blocks;
 
-import com.devmaster.dangerzone.entity.NotBreeBree;
-import com.devmaster.dangerzone.entity.StampyLongNose;
-import com.devmaster.dangerzone.entity.Tewtiy;
+import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
@@ -38,7 +36,7 @@ public class PlayButtonOreBlock extends OreBlock {
 
     private void spawnYoutuber(ServerWorld world, BlockPos pos) {
         Random random = new Random();
-        float i = random.nextInt(3);
+        float i = random.nextInt(13);
         if (i == 0) {
             Tewtiy tewtiy = RegistryHandler.TEWTIY.get().create(world);
             tewtiy.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
@@ -59,6 +57,66 @@ public class PlayButtonOreBlock extends OreBlock {
             stampyLongNose.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
             world.addEntity(stampyLongNose);
             stampyLongNose.spawnExplosionParticle();
+        }
+        if (i == 3) {
+            Technoblade technoblade = RegistryHandler.TECHNOBLADE.get().create(world);
+            technoblade.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(technoblade);
+            technoblade.spawnExplosionParticle();
+        }
+        if (i == 4) {
+            AlexiCraft alexicraft = RegistryHandler.ALEXICRAFT.get().create(world);
+            alexicraft.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(alexicraft);
+            alexicraft.spawnExplosionParticle();
+        }
+        if (i == 5) {
+            AntVenom antvenom = RegistryHandler.ANTVENOM.get().create(world);
+            antvenom.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(antvenom);
+            antvenom.spawnExplosionParticle();
+        }
+        if (i == 6) {
+            BabyAngel babyangel = RegistryHandler.BABYANGEL.get().create(world);
+            babyangel.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(babyangel);
+            babyangel.spawnExplosionParticle();
+        }
+        if (i == 7) {
+            BabyDuck babyduck = RegistryHandler.BABYDUCK.get().create(world);
+            babyduck.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(babyduck);
+            babyduck.spawnExplosionParticle();
+        }
+        if (i == 8) {
+            BabyLeah babyleah = RegistryHandler.BABYLEAH.get().create(world);
+            babyleah.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(babyleah);
+            babyleah.spawnExplosionParticle();
+        }
+        if (i == 9) {
+            BabyMax babyangel = RegistryHandler.BABYMAX.get().create(world);
+            babyangel.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(babyangel);
+            babyangel.spawnExplosionParticle();
+        }
+        if (i == 10) {
+            BajanCanadian bajancanadian = RegistryHandler.BAJANCANADIAN.get().create(world);
+            bajancanadian.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(bajancanadian);
+            bajancanadian.spawnExplosionParticle();
+        }
+        if (i == 11) {
+            CaptainSparkelz captainsparkelz = RegistryHandler.CAPTAINSPARKELZ.get().create(world);
+            captainsparkelz.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(captainsparkelz);
+            captainsparkelz.spawnExplosionParticle();
+        }
+        if (i == 12) {
+            Aphmau aphmau = RegistryHandler.APHMAU.get().create(world);
+            aphmau.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+            world.addEntity(aphmau);
+            aphmau.spawnExplosionParticle();
         }
         }
 

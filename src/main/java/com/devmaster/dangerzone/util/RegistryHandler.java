@@ -5,7 +5,9 @@ import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.items.EmeraldPickaxe;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.item.*;
 import net.minecraft.util.RegistryKey;
@@ -13,10 +15,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Supplier;
 
 
 public class RegistryHandler {
@@ -83,6 +88,7 @@ public class RegistryHandler {
 
     //Blocks
     public static final RegistryObject<Block> ABYSSAL_ORE_BLOCK = BLOCKS.register("abyssal_ore_block", AbyssalOreBlock::new);
+    public static final RegistryObject<Block> ABYSSAL_ORE_VERTICAL_SLAB = conditionallyRegisterBlock("abyssal_ore_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.from(Blocks.STONE_SLAB)), () -> isLoaded("quark"));
 
     public static final RegistryObject<Block> ALUMINIUM_BLOCK = BLOCKS.register("aluminium_block", AluminiumBlock::new);
 
@@ -140,6 +146,8 @@ public class RegistryHandler {
 
     //Block Items
     public static final RegistryObject<Item> ABYSSAL_ORE_BLOCK_ITEM = ITEMS.register("abyssal_ore_block", () -> new BlockItemBase(ABYSSAL_ORE_BLOCK.get()));
+
+    public static final RegistryObject<Item> ABYSSAL_ORE_VERTICAL_SLAB_ITEM = conditionallyRegisterItem("abyssal_ore_vertical_slab", () -> new BlockItemBase(ABYSSAL_ORE_VERTICAL_SLAB.get()), () -> isLoaded("quark"));
 
     public static final RegistryObject<Item> ALUMINIUM_BLOCK_ITEM = ITEMS.register("aluminium_block", () -> new BlockItemBase(ALUMINIUM_BLOCK.get()));
 
@@ -203,17 +211,65 @@ public class RegistryHandler {
     public static final RegistryKey<World> CRYSTAL = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "crystal"));
 
     //Entities
+    public static final RegistryObject<EntityType<AlexiCraft>> ALEXICRAFT = ENTITIES
+            .register("alexicraft",
+                    () -> EntityType.Builder.<AlexiCraft>create(AlexiCraft::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "alexicraft").toString()));
+
     public static final RegistryObject<EntityType<Allosaurus>> ALLOSAURUS = ENTITIES
             .register("allosaurus",
                     () -> EntityType.Builder.<Allosaurus>create(Allosaurus::new, EntityClassification.MONSTER)
                             .size(1.0f, 0.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "allosaurus").toString()));
 
+    public static final RegistryObject<EntityType<AntVenom>> ANTVENOM = ENTITIES
+            .register("antvenom",
+                    () -> EntityType.Builder.<AntVenom>create(AntVenom::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "antvenom").toString()));
+
+    public static final RegistryObject<EntityType<Aphmau>> APHMAU = ENTITIES
+            .register("aphmau",
+                    () -> EntityType.Builder.<Aphmau>create(Aphmau::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "aphmau").toString()));
+
     public static final RegistryObject<EntityType<AttackSquid>> ATTACK_SQUID = ENTITIES
             .register("attack_squid",
                     () -> EntityType.Builder.<AttackSquid>create(AttackSquid::new, EntityClassification.WATER_CREATURE)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "attack_squid").toString()));
+
+    public static final RegistryObject<EntityType<BabyAngel>> BABYANGEL = ENTITIES
+            .register("babyangel",
+                    () -> EntityType.Builder.<BabyAngel>create(BabyAngel::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "babyangel").toString()));
+
+    public static final RegistryObject<EntityType<BabyDuck>> BABYDUCK = ENTITIES
+            .register("babyduck",
+                    () -> EntityType.Builder.<BabyDuck>create(BabyDuck::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "babyduckl").toString()));
+
+    public static final RegistryObject<EntityType<BabyLeah>> BABYLEAH = ENTITIES
+            .register("babyleah",
+                    () -> EntityType.Builder.<BabyLeah>create(BabyLeah::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "babyleah").toString()));
+
+    public static final RegistryObject<EntityType<BabyMax>> BABYMAX = ENTITIES
+            .register("babymax",
+                    () -> EntityType.Builder.<BabyMax>create(BabyMax::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "babymax").toString()));
+
+    public static final RegistryObject<EntityType<BajanCanadian>> BAJANCANADIAN = ENTITIES
+            .register("bajancanadian",
+                    () -> EntityType.Builder.<BajanCanadian>create(BajanCanadian::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "bajancanadian").toString()));
 
     public static final RegistryObject<EntityType<BetterFireball>> BETTER_FIREBALL = ENTITIES
             .register("better_fireball",
@@ -231,6 +287,12 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<Butterfly>create(Butterfly::new, EntityClassification.AMBIENT)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "butterfly").toString()));
+
+    public static final RegistryObject<EntityType<CaptainSparkelz>> CAPTAINSPARKELZ = ENTITIES
+            .register("captainsparkelz",
+                    () -> EntityType.Builder.<CaptainSparkelz>create(CaptainSparkelz::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "captainsparkelz").toString()));
 
     public static final RegistryObject<EntityType<CaveFisher>> CAVE_FISHER = ENTITIES
             .register("cave_fisher",
@@ -498,4 +560,18 @@ public class RegistryHandler {
     public static final RegistryObject<SoundEvent> LEATHER_BLOCK_HIT = SOUNDS.register("leather_block_hit", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID, "leather_block_hit")));
     public static final RegistryObject<SoundEvent> STAMPYLONGNOSE_AMBIENT = SOUNDS.register("stampylivingsound", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "stampylivingsound")));
 
+    public static RegistryObject<Item> conditionallyRegisterItem(String registryName, Supplier<Item> item, Supplier<Boolean> condition) {
+        if (condition.get())
+            return ITEMS.register(registryName, item);
+        return null;
+    }
+    public static RegistryObject<Block> conditionallyRegisterBlock(String registryName, Supplier<Block> block, Supplier<Boolean> condition) {
+        if (condition.get())
+            return BLOCKS.register(registryName, block);
+        return null;
+    }
+
+    public static boolean isLoaded(String modid) {
+        return ModList.get().isLoaded(modid);
+    }
 }

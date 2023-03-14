@@ -393,6 +393,51 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_HARVEST_LEVEL;
     public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue AlexiCraftmin;
+    public static ForgeConfigSpec.IntValue AlexiCraftmax;
+    public static ForgeConfigSpec.IntValue AlexiCraftweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AlexiCraftinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AlexiCraftexclude;
+    public static ForgeConfigSpec.IntValue AntVenommin;
+    public static ForgeConfigSpec.IntValue AntVenommax;
+    public static ForgeConfigSpec.IntValue AntVenomweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AntVenominclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AntVenomexclude;
+    public static ForgeConfigSpec.IntValue Aphmaumin;
+    public static ForgeConfigSpec.IntValue Aphmaumax;
+    public static ForgeConfigSpec.IntValue Aphmauweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Aphmauinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Aphmauexclude;
+    public static ForgeConfigSpec.IntValue BabyAngelmin;
+    public static ForgeConfigSpec.IntValue BabyAngelmax;
+    public static ForgeConfigSpec.IntValue BabyAngelweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyAngelinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyAngelexclude;
+    public static ForgeConfigSpec.IntValue BabyDuckymin;
+    public static ForgeConfigSpec.IntValue BabyDuckmax;
+    public static ForgeConfigSpec.IntValue BabyDuckweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyDuckinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyDuckexclude;
+    public static ForgeConfigSpec.IntValue BabyLeahymin;
+    public static ForgeConfigSpec.IntValue BabyLeahmax;
+    public static ForgeConfigSpec.IntValue BabyLeahweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyLeahinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyLeahexclude;
+    public static ForgeConfigSpec.IntValue BabyMaxmin;
+    public static ForgeConfigSpec.IntValue BabyMaxmax;
+    public static ForgeConfigSpec.IntValue BabyMaxweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyMaxinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyMaxexclude;
+    public static ForgeConfigSpec.IntValue BajanCanadianymin;
+    public static ForgeConfigSpec.IntValue BajanCanadianmax;
+    public static ForgeConfigSpec.IntValue BajanCanadianweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BajanCanadianinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BajanCanadianexclude;
+    public static ForgeConfigSpec.IntValue CaptainSparkelzymin;
+    public static ForgeConfigSpec.IntValue CaptainSparkelzmax;
+    public static ForgeConfigSpec.IntValue CaptainSparkelzweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzexclude;
 
     public DZConfig() {
     }
@@ -404,6 +449,60 @@ public class DZConfig {
             NotBreeBreemin = builder.defineInRange("NotBreeBree Min", 1, 0, 640);
             NotBreeBreemax = builder.defineInRange("NotBreeBree Max", 2, 0, 640);
             NotBreeBreeweight = builder.defineInRange("NotBreeBree Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("AlexiCraft Spawn Chances");
+            AlexiCraftmin = builder.defineInRange("AlexiCraft Min", 1, 0, 640);
+            AlexiCraftmax = builder.defineInRange("AlexiCraft Max", 2, 0, 640);
+            AlexiCraftweight = builder.defineInRange("AlexiCraft Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("AntVenom Spawn Chances");
+            AntVenommin = builder.defineInRange("AntVenom Min", 1, 0, 640);
+            AntVenommax = builder.defineInRange("AntVenom Max", 2, 0, 640);
+            AntVenomweight = builder.defineInRange("AntVenom Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("Aphmau Spawn Chances");
+            Aphmaumin = builder.defineInRange("Aphmau Min", 1, 0, 640);
+            Aphmaumax = builder.defineInRange("Aphmau Max", 2, 0, 640);
+            Aphmauweight = builder.defineInRange("Aphmau Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("BabyAngel Spawn Chances");
+            BabyAngelmin = builder.defineInRange("BabyAngel Min", 1, 0, 640);
+            BabyAngelmax = builder.defineInRange("BabyAngel Max", 2, 0, 640);
+            BabyAngelweight = builder.defineInRange("BabyAngel Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("BabyDuck Spawn Chances");
+            BabyDuckymin = builder.defineInRange("BabyDuck Min", 1, 0, 640);
+            BabyDuckmax = builder.defineInRange("BabyDuck Max", 2, 0, 640);
+            BabyDuckweight = builder.defineInRange("BabyDuck Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("BabyLeah Spawn Chances");
+            BabyLeahymin = builder.defineInRange("BabyLeah Min", 1, 0, 640);
+            BabyLeahmax = builder.defineInRange("BabyLeah Max", 2, 0, 640);
+            BabyLeahweight = builder.defineInRange("BabyLeah Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("BajanCanadian Spawn Chances");
+            BajanCanadianymin = builder.defineInRange("BajanCanadian Min", 1, 0, 640);
+            BajanCanadianmax = builder.defineInRange("BajanCanadian Max", 2, 0, 640);
+            BajanCanadianweight = builder.defineInRange("BajanCanadian Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("BabyMax Spawn Chances");
+            BabyMaxmin = builder.defineInRange("BabyMax Min", 1, 0, 640);
+            BabyMaxmax = builder.defineInRange("BabyMax Max", 2, 0, 640);
+            BabyMaxweight = builder.defineInRange("BabyMax Weight", 7, 0, 100);
+            builder.pop();
+
+            builder.push("CaptainSparkelz Spawn Chances");
+            CaptainSparkelzymin = builder.defineInRange("CaptainSparkelz Min", 1, 0, 640);
+            CaptainSparkelzmax = builder.defineInRange("CaptainSparkelz Max", 2, 0, 640);
+            CaptainSparkelzweight = builder.defineInRange("CaptainSparkelz Weight", 7, 0, 100);
             builder.pop();
 
             builder.push("Rainbow Ant Spawn Chances");
@@ -452,6 +551,60 @@ public class DZConfig {
             builder.push("StampyLongNose Biomes Whitelist/Blacklist");
             StampyLongNoseinclude = builder.defineList("include Stampy", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             StampyLongNoseexclude = builder.defineList("exclude Stampy", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("AlexiCraft Biomes Whitelist/Blacklist");
+            AlexiCraftinclude = builder.defineList("include AlexiCraft", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            AlexiCraftexclude = builder.defineList("exclude AlexiCraft", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("AntVenom Biomes Whitelist/Blacklist");
+            AntVenominclude = builder.defineList("include AntVenom", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            AntVenomexclude = builder.defineList("exclude AntVenom", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("Aphmau Biomes Whitelist/Blacklist");
+            Aphmauinclude = builder.defineList("include Aphmau", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            Aphmauexclude = builder.defineList("exclude Aphmau", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("BabyAngel Biomes Whitelist/Blacklist");
+            BabyAngelinclude = builder.defineList("include BabyAngel", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            BabyAngelexclude = builder.defineList("exclude BabyAngel", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("BabyDuck Biomes Whitelist/Blacklist");
+            BabyDuckinclude = builder.defineList("include BabyDuck", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            BabyDuckexclude = builder.defineList("exclude BabyDuck", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("BabyLeah Biomes Whitelist/Blacklist");
+            BabyLeahinclude = builder.defineList("include BabyLeah", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            BabyLeahexclude = builder.defineList("exclude BabyLeah", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("BabyMax Biomes Whitelist/Blacklist");
+            BabyMaxinclude = builder.defineList("include BabyMax", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            BabyMaxexclude = builder.defineList("exclude BabyMax", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("BajanCanadian Biomes Whitelist/Blacklist");
+            BajanCanadianinclude = builder.defineList("include BajanCanadian", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            BajanCanadianexclude = builder.defineList("exclude BajanCanadian", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            builder.pop();
+
+            builder.comment("Spawnable Biomes");
+            builder.push("CaptainSparkelz Biomes Whitelist/Blacklist");
+            CaptainSparkelzinclude = builder.defineList("include CaptainSparkelz", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+            CaptainSparkelzexclude = builder.defineList("exclude CaptainSparkelz", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
             builder.pop();
 
             builder.comment("Spawnable Biomes");
