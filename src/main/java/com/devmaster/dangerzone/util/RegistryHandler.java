@@ -421,6 +421,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<RawBacon> RAW_BACON = ITEMS.register("raw_bacon", RawBacon::new);
 
+    public static final RegistryObject<Item> ROBOT_HAND = ITEMS.register("robot_hand", RobotHand::new);
+
     public static final RegistryObject<Item> SALT = ITEMS.register("salt", Salt::new);
 
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", Sapphire::new);

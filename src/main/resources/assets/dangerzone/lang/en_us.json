@@ -49,6 +49,8 @@
   "item.dangerzone.titanium_ingot": "Titanium Ingot",
   "item.dangerzone.titanium_nugget": "Titanium Nugget",
   "item.dangerzone.wrench": "Wrench",
+  "item.dangerzone.robot_hand": "Robot Hand",
+
 
   "_comment": "Petrified Ores",
   "block.dangerzone.butterfly_egg_ore": "Petrified Butterfly Ore",
