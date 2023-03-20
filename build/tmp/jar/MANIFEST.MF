@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: DangerZone
-Implementation-Version: 1.0
-Specification-Vendor: examplemodsareus
-Specification-Title: dangerzone
-Implementation-Timestamp: 2020-12-02T17:35:35-0500
-Specification-Version: 1
-Implementation-Vendor: examplemodsareus
-
