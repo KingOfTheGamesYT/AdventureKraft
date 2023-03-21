@@ -3464,3 +3464,30 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 [20Mar2023 18:34:01.429] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 0 advancements
 [20Mar2023 18:34:22.433] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
 [20Mar2023 18:34:22.435] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 18:43:19.633] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 18:43:19.640] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 18:43:30.259] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Tally]
+[20Mar2023 18:43:30.260] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Resurrections]
+[20Mar2023 18:43:30.268] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev has made the advancement [Tally]
+[20Mar2023 18:43:30.268] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev has made the advancement [Resurrections]
+[20Mar2023 18:43:30.285] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 62 advancements
+[20Mar2023 18:43:35.882] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 18:43:35.884] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 18:44:17.914] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Doctor Doctor!]
+[20Mar2023 18:44:17.918] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev has made the advancement [Doctor Doctor!]
+[20Mar2023 18:44:17.938] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 62 advancements
+[20Mar2023 19:12:20.582] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 19:12:20.589] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 19:41:57.932] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 19:41:57.939] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 19:42:33.683] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 19:42:33.690] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 19:54:26.084] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[20Mar2023 19:54:26.085] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[20Mar2023 19:54:26.089] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
+[20Mar2023 19:54:26.089] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[20Mar2023 19:54:26.094] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[20Mar2023 19:54:26.094] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[20Mar2023 19:54:26.094] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 19:54:26.110] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[20Mar2023 19:54:26.124] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved

@@ -20731,3 +20731,94 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 [20Mar2023 18:34:01.294] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
 [20Mar2023 18:34:01.429] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 0 advancements
 [20Mar2023 18:34:02.117] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 18:34:22.433] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 18:34:22.435] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 18:34:23.168] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 18:39:46.969] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 18:43:19.633] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 18:43:19.640] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 18:43:19.792] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 18:43:30.259] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Tally]
+[20Mar2023 18:43:30.260] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Resurrections]
+[20Mar2023 18:43:30.268] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev has made the advancement [Tally]
+[20Mar2023 18:43:30.268] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev has made the advancement [Resurrections]
+[20Mar2023 18:43:30.285] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 62 advancements
+[20Mar2023 18:43:35.882] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 18:43:35.884] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 18:43:35.965] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 18:44:17.914] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Doctor Doctor!]
+[20Mar2023 18:44:17.918] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev has made the advancement [Doctor Doctor!]
+[20Mar2023 18:44:17.938] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 62 advancements
+[20Mar2023 18:45:21.712] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 18:50:21.752] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 18:55:21.765] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:00:21.740] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:05:21.746] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:10:21.763] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:12:20.582] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 19:12:20.589] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 19:12:20.729] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:15:34.342] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:20:34.342] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:25:34.335] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:30:34.354] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:35:34.369] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:40:34.333] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:41:57.932] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 19:41:57.939] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 19:41:58.044] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:42:33.683] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[20Mar2023 19:42:33.690] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 19:42:33.779] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:54:26.084] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[20Mar2023 19:54:26.085] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[20Mar2023 19:54:26.089] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
+[20Mar2023 19:54:26.089] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[20Mar2023 19:54:26.094] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[20Mar2023 19:54:26.094] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[20Mar2023 19:54:26.094] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[20Mar2023 19:54:26.110] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[20Mar2023 19:54:26.110] [Server thread/DEBUG] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: Gathering id map for writing to world save New World
+[20Mar2023 19:54:26.124] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[20Mar2023 19:54:26.131] [Server thread/DEBUG] [net.minecraftforge.registries.GameData/REGISTRIES]: Reverting to frozen data state.
+[20Mar2023 19:54:26.131] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Block Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.134] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Fluid Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.134] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Item Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.136] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Effect Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.137] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Biome Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.137] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry SoundEvent Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.139] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Potion Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.139] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Enchantment Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.139] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry EntityType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.139] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry TileEntityType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry ParticleType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry ContainerType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry PaintingType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry IRecipeSerializer Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry StatType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry VillagerProfession Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry PointOfInterestType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry MemoryModuleType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry SensorType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.140] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Schedule Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Activity Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry WorldCarver Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry SurfaceBuilder Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Feature Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ClearableRegistry/REGISTRY]: minecraft:feature: Clearing registry
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Placement Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry BiomeProviderType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry ChunkGeneratorType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry ChunkStatus Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.141] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry BlockStateProviderType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.142] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry BlockPlacerType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.142] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry FoliagePlacerType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.142] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry TreeDecoratorType Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.142] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry ModDimension Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.142] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry DataSerializerEntry Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.142] [Server thread/DEBUG] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry GlobalLootModifierSerializer Sync: ACTIVE -> FROZEN
+[20Mar2023 19:54:26.194] [Server thread/DEBUG] [net.minecraftforge.registries.ObjectHolderRegistry/REGISTRIES]: Applying holder lookups
+[20Mar2023 19:54:26.195] [Server thread/DEBUG] [net.minecraftforge.registries.ObjectHolderRegistry/REGISTRIES]: Holder lookups applied
+[20Mar2023 19:54:26.195] [Server thread/DEBUG] [net.minecraftforge.registries.GameData/REGISTRIES]: Frozen state restored.
+[20Mar2023 19:54:26.196] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing serverconfig directory : .\saves\New World\serverconfig
+[20Mar2023 19:54:26.196] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Unloading configs type SERVER
