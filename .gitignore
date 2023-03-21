@@ -11,15 +11,22 @@ out
 *.ipr
 *.iws
 *.iml
-.idea
+*.idea
 
 # gradle
 build
 *.gradle
+.gradle/5.3/executionHistory/executionHistory.bin
+.gradle/5.3/executionHistory/executionHistory.lock
+.gradle/5.3/fileHashes/fileHashes.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
 
 # other
 eclipse
 run
+run/logs/debug.log
+run/.mixin.out/audit/mixin_implementation_report.txt
+run/logs/latest.log
 
 # Files from Forge MDK
 forge*changelog.txt
