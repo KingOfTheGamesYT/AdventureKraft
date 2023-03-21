@@ -460,13 +460,10 @@ public class Items {
 				ZOMBIE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_EGG_ORE),
 				ZOMBIE_HORSE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_HORSE_EGG_ORE),
 				ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_PIGMAN_EGG_ORE),
-				ZOMBIE_VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_VILLAGER_EGG_ORE),
+				ZOMBIE_VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_VILLAGER_EGG_ORE)
 
 
 				//endregion
-
-				EYE_OF_ENDER_BLOCK = registerItemBlock(Blocks.EYE_OF_ENDER_BLOCK),
-				ENDER_PEARL_BLOCK = registerItemBlock(Blocks.ENDER_PEARL_BLOCK)
 
 				//endregion
 
