@@ -4,15 +4,15 @@
 
 
 	"comment_": "items",
-	"item.dangerzone.amethyst": "Amethyst",
-	"item.dangerzone.amethyst_pickaxe": "Amethyst Pickaxe",
-	"item.dangerzone.amethyst_axe": "Amethyst Axe",
-	"item.dangerzone.amethyst_shovel": "Amethyst Shovel",
-	"item.dangerzone.amethyst_sword": "Amethyst Sword",
-	"item.dangerzone.amethyst_helmet": "Amethyst Helmet",
-	"item.dangerzone.amethyst_chestplate": "Amethyst Chestplate",
-	"item.dangerzone.amethyst_leggings": "Amethyst Leggings",
-	"item.dangerzone.amethyst_boots": "Amethyst Boots",
+	"item.dangerzone.coarse_amethyst": "Coarse Amethyst",
+	"item.dangerzone.coarse_amethyst_pickaxe": "Coarse Amethyst Pickaxe",
+	"item.dangerzone.coarse_amethyst_axe": "Coarse Amethyst Axe",
+	"item.dangerzone.coarse_amethyst_shovel": "Coarse Amethyst Shovel",
+	"item.dangerzone.coarse_amethyst_sword": "Coarse Amethyst Sword",
+	"item.dangerzone.coarse_amethyst_helmet": "Coarse Amethyst Helmet",
+	"item.dangerzone.coarse_amethyst_chestplate": "Coarse Amethyst Chestplate",
+	"item.dangerzone.coarse_amethyst_leggings": "Coarse Amethyst Leggings",
+	"item.dangerzone.coarse_amethyst_boots": "Coarse Amethyst Boots",
 
 	"item.dangerzone.ruby": "Ruby",
 	"item.dangerzone.ruby_pickaxe": "Ruby Pickaxe",
@@ -132,8 +132,8 @@
 
 
 	"comment_": "blocks",
-	"block.dangerzone.amethyst_block": "Amethyst Block",
-	"block.dangerzone.amethyst_ore_block": "Amethyst Ore",
+	"block.dangerzone.coarse_amethyst_block": "Coarse Amethyst Block",
+	"block.dangerzone.coarse_amethyst_ore_block": "Coarse Amethyst Ore",
 	"block.dangerzone.ruby_block": "Ruby Block",
 	"block.dangerzone.ruby_ore": "Ruby Ore",
 	"block.dangerzone.titanium_ore": "Titanium Ore",
@@ -147,8 +147,7 @@
 
 	"block.dangerzone.godzilla_scale_block": "Godzilla Scale Block",
 
-	"block.dangerzone.ender_pearl_block": "Ender Pearl Block",
-	"block.dangerzone.eye_of_ender_block": "Eye of Ender Block",
+
 	"block.dangerzone.lava_foam": "Lava Foam",
 
 	"comment_": "Petrified Spawn Eggs",

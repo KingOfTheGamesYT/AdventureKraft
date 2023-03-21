@@ -66,7 +66,7 @@ public class DangerZone {
 
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(Items.AMETHYST.getItem());
+            return new ItemStack(Items.COARSE_AMETHYST.getItem());
         }
     };
 

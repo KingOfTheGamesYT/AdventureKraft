@@ -5,14 +5,11 @@ import com.devmaster.dangerzone.blocks.BlockItemMobOre;
 import com.devmaster.dangerzone.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
-
-import java.util.function.Supplier;
 
 import static com.devmaster.dangerzone.DangerZone.TAB;
 import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.*;
@@ -25,11 +22,11 @@ public class Items {
 	static Item DEV_STICK;
 
 	//region materials //TODO rewrite registry
-	public static Item AMETHYST;
-	public static Item AMETHYST_PICKAXE;
-	public static Item AMETHYST_AXE;
-	public static Item AMETHYST_SHOVEL;
-	public static Item AMETHYST_SWORD;
+	public static Item COARSE_AMETHYST;
+	public static Item COARSE_AMETHYST_PICKAXE;
+	public static Item COARSE_AMETHYST_AXE;
+	public static Item COARSE_AMETHYST_SHOVEL;
+	public static Item COARSE_AMETHYST_SWORD;
 	public static Item AMETHYST_HELMET;
 	public static Item AMETHYST_CHESTPLATE;
 	public static Item AMETHYST_LEGGINGS;
@@ -171,8 +168,8 @@ public class Items {
 
 
 	//region Blocks
-	public static Item AMETHYST_BLOCK;
-	public static Item AMETHYST_ORE;
+	public static Item COARSE_AMETHYST_BLOCK;
+	public static Item COARSE_AMETHYST_ORE;
 	public static Item RUBY_BLOCK;
 	public static Item RUBY_ORE;
 	public static Item TITANIUM_BLOCK;
@@ -247,9 +244,6 @@ public class Items {
 	public static Item ZOMBIE_PIGMAN_EGG_ORE;
 	public static Item ZOMBIE_VILLAGER_EGG_ORE;
 
-	public static Item EYE_OF_ENDER_BLOCK;
-	public static Item ENDER_PEARL_BLOCK;
-
 
 	//endregion
 
@@ -264,16 +258,16 @@ public class Items {
 		event.getRegistry().registerAll(
 
 				//region materials
-				AMETHYST = new Amethyst().setRegistryName("amethyst"),
-				AMETHYST_PICKAXE = new PickaxeItem(AMETHYST_TIER, 1, -2.8F, new Item.Properties().group(TAB)).setRegistryName("amethyst_pickaxe"),
-				AMETHYST_AXE = new AxeItem(AMETHYST_TIER, 2, -3F, new Item.Properties().group(TAB)).setRegistryName("amethyst_axe"),
-			//	AMETHYST_HAMMER = new HammerItem().setReistryName("amethyst_hammer"),
-				//AMETHYST_SHOVEL = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_shovel"),
-				AMETHYST_SWORD = new SwordItem(AMETHYST_TIER, 3, -2F, new Item.Properties().group(TAB)).setRegistryName("amethyst_sword"),
-			//	AMETHYST_HELMET = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_helmet"),
-			//	AMETHYST_CHESTPLATE = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_chestplate"),
-			//	AMETHYST_LEGGINGS = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_leggings"),
-			//	AMETHYST_BOOTS = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_boots"),
+				COARSE_AMETHYST = new CoarseAmethyst().setRegistryName("coarse_amethyst"),
+				COARSE_AMETHYST_PICKAXE = new PickaxeItem(COARSE_AMETHYST_TIER, 1, -2.8F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_pickaxe"),
+				COARSE_AMETHYST_AXE = new AxeItem(COARSE_AMETHYST_TIER, 2, -3F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_axe"),
+			//	COARSE_AMETHYST_HAMMER = new HammerItem().setReistryName("coarse_amethyst_hammer"),
+				//COARSE_AMETHYST_SHOVEL = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("coarse_amethyst_shovel"),
+				COARSE_AMETHYST_SWORD = new SwordItem(COARSE_AMETHYST_TIER, 3, -2F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_sword"),
+			//	AMETHYST_HELMET = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("coarse_amethyst_helmet"),
+			//	AMETHYST_CHESTPLATE = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("coarse_amethyst_chestplate"),
+			//	AMETHYST_LEGGINGS = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("coarse_amethyst_leggings"),
+			//	AMETHYST_BOOTS = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("coarse_amethyst_boots"),
 
 			//	RUBY = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby"),
 			//	RUBY_PICKAXE = new PickaxeItem(RUBY_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_pickaxe"),
@@ -385,8 +379,8 @@ public class Items {
 				//endregion
 
 				//region Blocks
-				AMETHYST_BLOCK = registerItemBlock(Blocks.AMETHYST_BLOCK),
-				AMETHYST_ORE = registerItemBlock(Blocks.AMETHYST_ORE_BLOCK),
+				COARSE_AMETHYST_BLOCK = registerItemBlock(Blocks.COARSE_AMETHYST_BLOCK),
+				COARSE_AMETHYST_ORE = registerItemBlock(Blocks.COARSE_AMETHYST_ORE_BLOCK),
 			//	RUBY_BLOCK = registerItemBlock(Blocks.RUBY_BLOCK),
 				//RUBY_ORE = registerItemBlock(Blocks.RUBY_ORE),
 			//	TITANIUM_BLOCK = registerItemBlock(Blocks.TITANIUM_BLOCK),

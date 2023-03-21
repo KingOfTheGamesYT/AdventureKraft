@@ -1,31 +1,23 @@
 package com.devmaster.dangerzone.init;
 
 import com.devmaster.dangerzone.DangerZone;
-import com.devmaster.dangerzone.blocks.AmethystBlock;
-import com.devmaster.dangerzone.blocks.AmethystOreBlock;
+import com.devmaster.dangerzone.blocks.CoarseAmethystBlock;
 import com.devmaster.dangerzone.blocks.BlockMobOre;
+import com.devmaster.dangerzone.blocks.CoarseAmethystOreBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.GlassBlock;
-import net.minecraft.block.MushroomBlock;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
-import static net.minecraftforge.common.ToolType.*;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(DangerZone.MODID)
 public class Blocks {
 
 	//region Materials
-	public static Block AMETHYST_BLOCK;
-	public static Block AMETHYST_ORE_BLOCK;
+	public static Block COARSE_AMETHYST_BLOCK;
+	public static Block COARSE_AMETHYST_ORE_BLOCK;
 	public static Block RUBY_BLOCK;
 	public static Block RUBY_ORE;
 	public static Block TITANIUM_BLOCK;
@@ -121,8 +113,8 @@ public class Blocks {
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
 				//region Materials
-				AMETHYST_BLOCK = new AmethystBlock().setRegistryName("amethyst_block"),
-				AMETHYST_ORE_BLOCK = new AmethystOreBlock().setRegistryName("amethyst_ore_block"),
+				COARSE_AMETHYST_BLOCK = new CoarseAmethystBlock().setRegistryName("coarse_amethyst_block"),
+				COARSE_AMETHYST_ORE_BLOCK = new CoarseAmethystOreBlock().setRegistryName("coarse_amethyst_ore_block"),
 			//	RUBY_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_block"),
 				//RUBY_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_ore"),
 

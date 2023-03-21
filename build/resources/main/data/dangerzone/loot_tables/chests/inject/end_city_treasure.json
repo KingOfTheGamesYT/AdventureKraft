@@ -6,7 +6,7 @@
         {
           "type": "item",
           "weight": 5,
-          "name": "insanityoverworld:titanium_ingot",
+          "name": "dangerzone:titanium_ingot",
           "functions": [
             {
               "function": "set_count",
@@ -20,7 +20,7 @@
         {
           "type": "item",
           "weight": 5,
-          "name": "insanityoverworld:uranium_ingot",
+          "name": "dangerzone:uranium_ingot",
           "functions": [
             {
               "function": "set_count",
@@ -39,7 +39,7 @@
         {
           "type": "item",
           "weight": 10,
-          "name": "insanityoverworld:titanium_nugget",
+          "name": "dangerzone:titanium_nugget",
           "functions": [
             {
               "function": "set_count",
@@ -53,7 +53,7 @@
         {
           "type": "item",
           "weight": 10,
-          "name": "insanityoverworld:uranium_nugget",
+          "name": "dangerzone:uranium_nugget",
           "quality": 5,
           "functions": [
             {
@@ -76,7 +76,7 @@
         {
           "type": "item",
           "weight": 5,
-          "name": "insanityoverworld:amethyst",
+          "name": "dangerzone:coarse_amethyst",
           "functions": [
             {
               "function": "set_count",
@@ -90,47 +90,47 @@
         {
           "type": "item",
           "weight": 2,
-          "name": "insanityoverworld:amethyst_boots"
+          "name": "dangerzone:coarse_amethyst_boots"
         },
         {
           "type": "item",
           "weight": 2,
-          "name": "insanityoverworld:amethyst_leggings"
+          "name": "dangerzone:coarse_amethyst_leggings"
         },
         {
           "type": "item",
           "weight": 2,
-          "name": "insanityoverworld:amethyst_chestplate"
+          "name": "dangerzone:coarse_amethyst_chestplate"
         },
         {
           "type": "item",
           "weight": 2,
-          "name": "insanityoverworld:amethyst_helmet"
+          "name": "dangerzone:coarse_amethyst_helmet"
         },
         {
           "type": "item",
           "weight": 3,
-          "name": "insanityoverworld:amethyst_sword"
+          "name": "dangerzone:coarse_amethyst_sword"
         },
         {
           "type": "item",
           "weight": 3,
-          "name": "insanityoverworld:amethyst_shovel"
+          "name": "dangerzone:coarse_amethyst_shovel"
         },
         {
           "type": "item",
           "weight": 3,
-          "name": "insanityoverworld:amethyst_axe"
+          "name": "dangerzone:coarse_amethyst_axe"
         },
         {
           "type": "item",
           "weight": 3,
-          "name": "insanityoverworld:amethyst_pickaxe"
+          "name": "dangerzone:coarse_amethyst_pickaxe"
         },
         {
           "type": "item",
           "weight": 4,
-          "name": "insanityoverworld:ruby",
+          "name": "dangerzone:ruby",
           "functions": [
             {
               "function": "set_count",
@@ -144,42 +144,42 @@
         {
           "type": "item",
           "weight": 1,
-          "name": "insanityoverworld:ruby_boots"
+          "name": "dangerzone:ruby_boots"
         },
         {
           "type": "item",
           "weight": 1,
-          "name": "insanityoverworld:ruby_leggings"
+          "name": "dangerzone:ruby_leggings"
         },
         {
           "type": "item",
           "weight": 1,
-          "name": "insanityoverworld:ruby_chestplate"
+          "name": "dangerzone:ruby_chestplate"
         },
         {
           "type": "item",
           "weight": 1,
-          "name": "insanityoverworld:ruby_helmet"
+          "name": "dangerzone:ruby_helmet"
         },
         {
           "type": "item",
           "weight": 2,
-          "name": "insanityoverworld:ruby_sword"
+          "name": "dangerzone:ruby_sword"
         },
         {
           "type": "item",
           "weight": 2,
-          "name": "insanityoverworld:ruby_shovel"
+          "name": "dangerzone:ruby_shovel"
         },
         {
           "type": "item",
           "weight": 2,
-          "name": "insanityoverworld:ruby_axe"
+          "name": "dangerzone:ruby_axe"
         },
         {
           "type": "item",
           "weight": 2,
-          "name": "insanityoverworld:ruby_pickaxe"
+          "name": "dangerzone:ruby_pickaxe"
         }
       ]
     },
@@ -419,27 +419,27 @@
         {
           "type": "item",
           "weight": 1,
-          "name": "insanityoverworld:iron_golem_spawn_egg"
+          "name": "dangerzone:iron_golem_spawn_egg"
         },
         {
           "type": "item",
           "weight": 1,
-          "name": "insanityoverworld:snow_golem_spawn_egg"
+          "name": "dangerzone:snow_golem_spawn_egg"
         },
         {
           "type": "item",
           "weight": 1,
-          "name": "insanityoverworld:apple_cow_spawn_egg"
+          "name": "dangerzone:apple_cow_spawn_egg"
         },
         {
           "type": "item",
           "weight": 1,
-          "name": "insanityoverworld:golden_apple_cow_spawn_egg"
+          "name": "dangerzone:golden_apple_cow_spawn_egg"
         },
         {
           "type": "item",
           "weight": 1,
-          "name": "insanityoverworld:giant_mole_spawn_egg"
+          "name": "dangerzone:giant_mole_spawn_egg"
         }
       ]
     }

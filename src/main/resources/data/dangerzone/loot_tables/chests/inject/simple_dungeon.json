@@ -6,7 +6,7 @@
         {
           "type": "item",
           "weight": 5,
-          "name": "insanityoverworld:blank_disc"
+          "name": "dangerzone:blank_disc"
         }
       ]
     },
@@ -29,7 +29,7 @@
               }
             }
           ],
-          "name": "insanityoverworld:titanium_nugget"
+          "name": "dangerzone:titanium_nugget"
         },
         {
           "type": "item",
@@ -44,7 +44,7 @@
               }
             }
           ],
-          "name": "insanityoverworld:uranium_nugget"
+          "name": "dangerzone:uranium_nugget"
         }
       ]
     }

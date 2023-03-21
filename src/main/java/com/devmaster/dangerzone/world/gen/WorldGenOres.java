@@ -24,8 +24,8 @@ public class WorldGenOres {
 	private static final int maxEggVeins = 3;
 	private static final int maxEggHeight = 128;
 
-	private static final CountRangeConfig amethystConfig = new CountRangeConfig(2, 0, 0, 25);
-	private static final int amethystVeinSize = 6;
+	private static final CountRangeConfig coarseamethystConfig = new CountRangeConfig(2, 0, 0, 25);
+	private static final int coarseamethystVeinSize = 6;
 	private static final CountRangeConfig rubyConfig = new CountRangeConfig(3, 5, 5, 20);
 	private static final int rubyVeinSize = 4;
 	private static final CountRangeConfig titaniumConfig = new CountRangeConfig(1, 5, 5, 15);
@@ -55,7 +55,7 @@ public class WorldGenOres {
 				continue;
 			}
 
-			addOre(biome, NATURAL_STONE, AMETHYST_ORE_BLOCK, amethystVeinSize, amethystConfig);
+			addOre(biome, NATURAL_STONE, COARSE_AMETHYST_ORE_BLOCK, coarseamethystVeinSize, coarseamethystConfig);
 			//addOre(biome, NATURAL_STONE, RUBY_ORE, rubyVeinSize, rubyConfig);
 			//addOre(biome, NATURAL_STONE, TITANIUM_ORE, titaniumVeinSize, titaniumConfig);
 		//	addOre(biome, NATURAL_STONE, URANIUM_ORE, uraniumVeinSize, uraniumConfig);
