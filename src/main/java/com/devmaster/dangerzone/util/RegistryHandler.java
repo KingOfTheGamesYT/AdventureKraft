@@ -483,6 +483,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
 
+    public static final RegistryObject<Item> GODZILLA_SPAWN_EGG = ITEMS.register("godzilla_spawn_egg", () -> new SpawnEgg(RegistryHandler.GODZILLA, 0, 0, new Item.Properties().group(DangerZone.TAB)));
+
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", () -> new SpawnEgg(RegistryHandler.MERMAID, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<Item> MOLDY_SPAWN_EGG = ITEMS.register("moldy_spawn_egg", MoldySpawnEgg::new);

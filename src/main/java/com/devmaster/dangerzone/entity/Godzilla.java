@@ -1,7 +1,6 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.misc.DangerZone;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -13,7 +12,7 @@ import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.monster.SlimeEntity;
 import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.player.PlayerEntity;;
-import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -22,15 +21,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 
 import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
-import net.minecraftforge.event.ForgeEventFactory;
+import net.minecraft.world.server.ServerBossInfo;
 
 
 public class Godzilla extends MonsterEntity implements IRangedAttackMob{
-    public boolean collided = false;
-    public boolean crush = false;
+
     private int jumped = 0;
-    private int attackTimer = 0;
 
 
     public Godzilla(final EntityType<? extends Godzilla> type, final World worldIn) {
@@ -39,6 +37,8 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
         this.isImmuneToFire();
 
     }
+
+    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
 
     @Override
     public void livingTick() {
@@ -75,6 +75,8 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
                 this.jumped--;
             }
         }
+        this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
+        this.bossInfo.setVisible(true);
 }
 
 
@@ -169,5 +171,17 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
                 world.addEntity(betterFireball);
             }
         }
+    }
+
+    @Override
+    public void addTrackingPlayer(ServerPlayerEntity player) {
+        super.addTrackingPlayer(player);
+        this.bossInfo.addPlayer(player);
+    }
+
+    @Override
+    public void removeTrackingPlayer(ServerPlayerEntity player) {
+        super.removeTrackingPlayer(player);
+        this.bossInfo.removePlayer(player);
     }
 }
