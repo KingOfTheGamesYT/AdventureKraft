@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.misc.DangerZone;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -13,6 +14,7 @@ import net.minecraft.entity.monster.SlimeEntity;
 import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.player.PlayerEntity;;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -24,11 +26,14 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
+import net.minecraftforge.event.ForgeEventFactory;
 
 
 public class Godzilla extends MonsterEntity implements IRangedAttackMob{
-
+    public boolean collided = false;
+    public boolean crush = false;
     private int jumped = 0;
+    private int attackTimer = 0;
 
 
     public Godzilla(final EntityType<? extends Godzilla> type, final World worldIn) {
