@@ -1,0 +1,15 @@
+{
+  "type": "dangerzone:past",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": -1471531077,
+    "biome_source": {
+      "type": "minecraft:checkerboard",
+      "biomes": [
+        "minecraft:jungle",
+        "minecraft:ocean"
+      ]
+    },
+    "settings": "dangerzone:past"
+  }
+}

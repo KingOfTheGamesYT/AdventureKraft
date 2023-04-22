@@ -210,6 +210,8 @@ public class RegistryHandler {
 
     public static final RegistryKey<World> CRYSTAL = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "crystal"));
 
+    public static final RegistryKey<World> PAST = RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation(DangerZone.MOD_ID, "past"));
+
     //Entities
     public static final RegistryObject<EntityType<AlexiCraft>> ALEXICRAFT = ENTITIES
             .register("alexicraft",
@@ -440,6 +442,8 @@ public class RegistryHandler {
     //Petrified Mob blocks
     public static final RegistryObject<Block> BUTTERFLY_EGG_ORE = BLOCKS.register("butterfly_egg_ore", BlockMobOre::new);
 
+    public static final RegistryObject<Block> GODZILLA_EGG_ORE = BLOCKS.register("godzilla_egg_ore", BlockMobOre::new);
+
     public static final RegistryObject<Block> MUTANT_ZOMBIE_EGG_ORE = BLOCKS.register("mutant_zombie_egg_ore", BlockMobOre::new);
 
     public static final RegistryObject<Block> RAINBOW_ANT_EGG_ORE = BLOCKS.register("rainbow_ant_egg_ore", BlockMobOre::new);
@@ -455,6 +459,8 @@ public class RegistryHandler {
 
     //Petrified Mob items
     public static final RegistryObject<Item> BUTTERFLY_EGG_ORE_ITEM = ITEMS.register("butterfly_egg_ore", () -> new BlockItemMobOre(BUTTERFLY_EGG_ORE.get()));
+
+    public static final RegistryObject<Item> GODZILLA_EGG_ORE_ITEM = ITEMS.register("godzilla_egg_ore", () -> new BlockItemMobOre(GODZILLA_EGG_ORE.get()));
 
     public static final RegistryObject<Item> REDROSEWARRIOR_EGG_ORE_ITEM = ITEMS.register("redrosewarrior_egg_ore", () -> new BlockItemMobOre(REDROSEWARRIOR_EGG_ORE.get()));
 
