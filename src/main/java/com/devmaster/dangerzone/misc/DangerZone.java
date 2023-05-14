@@ -4,7 +4,6 @@ import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.CreativeTabs.*;
 import com.devmaster.dangerzone.configs.BaseConfig;
 import com.devmaster.dangerzone.entity.*;
-import com.devmaster.dangerzone.gui.BossBar;
 import com.devmaster.dangerzone.items.SpawnEgg;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ArmoredMobSpawnEvents;
@@ -60,7 +59,6 @@ public class DangerZone {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         RegistryHandler.init();
-        BossBar.init();
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
         MinecraftForge.EVENT_BUS.addListener(ArmoredMobSpawnEvents::spawnMonster);

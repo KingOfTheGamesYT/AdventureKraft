@@ -47,7 +47,7 @@
   ],
   "starts": [
     "minecraft:pillager_outpost",
-    "minecraft:village_snowy",
+    "minecraft:village_savanna",
     "minecraft:mansion"
   ],
   "spawners": {
