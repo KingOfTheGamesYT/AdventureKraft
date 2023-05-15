@@ -173,7 +173,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> COMPRESSED_POPPY_BLOCK_ITEM = ITEMS.register("compressed_poppy_block", () -> new BlockItemBase(COMPRESSED_POPPY_BLOCK.get()));
 
-    public static final RegistryObject<Item> CRYSTAL_GRASS_ITEM = ITEMS.register("crystal_grass", () -> new WIPBlockItemBase(CRYSTAL_GRASS.get()));
+    public static final RegistryObject<Item> CRYSTAL_GRASS_ITEM = ITEMS.register("crystal_grass", () -> new BlockItemBase(CRYSTAL_GRASS.get()));
 
     public static final RegistryObject<Item> DARK_BROWN_BLOCK_ITEM = ITEMS.register("dark_brown_block", () -> new BlockItemBase(DARK_BROWN_BLOCK.get()));
 
@@ -181,7 +181,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> HEART_BLOCK_ITEM = ITEMS.register("heart_block", () -> new WIPBlockItemBase(HEART_BLOCK.get()));
 
-    public static final RegistryObject<Item> KYANITE_BLOCK_ITEM = ITEMS.register("kyanite", () -> new WIPBlockItemBase(KYANITE.get()));
+    public static final RegistryObject<Item> KYANITE_BLOCK_ITEM = ITEMS.register("kyanite", () -> new BlockItemBase(KYANITE.get()));
 
     public static final RegistryObject<Item> LEATHER_BLOCK_ITEM = ITEMS.register("leather_block", () -> new BlockItemBase(LEATHER_BLOCK.get()));
 

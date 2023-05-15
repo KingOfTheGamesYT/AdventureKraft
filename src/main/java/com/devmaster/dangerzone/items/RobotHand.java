@@ -17,7 +17,7 @@ import java.util.List;
 public class RobotHand extends Item {
 
     public RobotHand() {
-        super(new Properties().group(DangerZone.WIP));
+        super(new Properties().group(DangerZone.TAB));
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
