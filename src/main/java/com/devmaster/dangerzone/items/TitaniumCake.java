@@ -17,10 +17,10 @@ import java.util.List;
 public class TitaniumCake extends Item {
 
     public TitaniumCake() {
-        super(new Properties().group(DangerZone.WIP));
+        super(new Properties().group(DangerZone.FOOD));
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7b" + "Don't eat it!" + "\u00A7b"));
+        tooltip.add(new StringTextComponent("\u00A7b" + "Thank you for 6k downloads!" + "\u00A7b"));
     }
 }

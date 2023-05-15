@@ -73,7 +73,7 @@ public class TitaniumCakeSword extends SwordItem {
     }
 
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7b" + "Thank you for 3k downloads" + "\u00A7b"));
+        tooltip.add(new StringTextComponent("\u00A7b" + "Thank you for 5k downloads" + "\u00A7b"));
         int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantments.FIRE_ASPECT, stack);
         if (lvl <= 0) {
             stack.addEnchantment(Enchantments.FIRE_ASPECT,1);

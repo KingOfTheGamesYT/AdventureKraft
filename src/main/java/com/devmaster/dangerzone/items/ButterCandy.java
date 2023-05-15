@@ -31,6 +31,6 @@ public class ButterCandy extends Item {
     }
 
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new StringTextComponent("\u00A7e" + "Try some! Catch a sugar buzz! :)" + "\u00A78"));
+        tooltip.add(new StringTextComponent("\u00A7e" + "Thank you! For 3k downloads! :)" + "\u00A78"));
     }
 }

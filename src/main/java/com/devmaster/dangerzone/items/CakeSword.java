@@ -71,6 +71,6 @@ public class CakeSword extends SwordItem {
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7f" + "Thank you for 1k downloads" + "\u00A7f"));
+        tooltip.add(new StringTextComponent("\u00A7f" + "Thank you for 2k downloads" + "\u00A7f"));
     }
 }
