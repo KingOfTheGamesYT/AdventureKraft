@@ -350,6 +350,12 @@ public class RegistryHandler {
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "redrosewarrior").toString()));
 
+    public static final RegistryObject<EntityType<RoboTechnoblade>> ROBO_TECHNOBLADE = ENTITIES
+            .register("robo_technoblade",
+                    () -> EntityType.Builder.<RoboTechnoblade>create(RoboTechnoblade::new, EntityClassification.AMBIENT)
+                            .size(0.9f, 1.9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "robo_technoblade").toString()));
+
     public static final RegistryObject<EntityType<StampyLongNose>> STAMPYLONGNOSE = ENTITIES
             .register("stampylongnose",
                     () -> EntityType.Builder.<StampyLongNose>create(StampyLongNose::new, EntityClassification.AMBIENT)

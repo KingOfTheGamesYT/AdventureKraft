@@ -223,6 +223,12 @@
         "maxCount": 1
       },
       {
+        "type": "dangerzone:robo_technoblade",
+        "weight": 30,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
         "type": "dangerzone:alexicraft",
         "weight": 30,
         "minCount": 1,

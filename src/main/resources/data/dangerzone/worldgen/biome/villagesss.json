@@ -217,6 +217,12 @@
         "maxCount": 1
       },
       {
+        "type": "dangerzone:robo_technoblade",
+        "weight": 30,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
         "type": "dangerzone:technoblade",
         "weight": 30,
         "minCount": 1,

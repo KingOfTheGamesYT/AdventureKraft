@@ -2,6 +2,7 @@ package com.devmaster.dangerzone.misc;
 
 import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.CreativeTabs.*;
+import com.devmaster.dangerzone.client.render.RoboTechnobladeRender;
 import com.devmaster.dangerzone.configs.BaseConfig;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.items.SpawnEgg;
@@ -92,6 +93,7 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.BABYMAX.get(), BabyMax.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.BAJANCANADIAN.get(), BajanCanadian.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelz.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ROBO_TECHNOBLADE.get(), RoboTechnoblade.getAttributes().create());
             EntitySpawns.registerSpawnPlacements();
 
         });
@@ -127,6 +129,7 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYMAX.get(), BabyMaxRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BAJANCANADIAN.get(), BajanCanadianRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelzRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ROBO_TECHNOBLADE.get(), RoboTechnobladeRender::new);
         SpawnEgg.initSpawnEggs();
     }
 }
