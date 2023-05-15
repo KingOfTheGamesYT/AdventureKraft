@@ -217,6 +217,9 @@ public class Bird extends CreatureEntity {
 
     }
 
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return true;
+    }
 
     public void writeAdditional(CompoundNBT comnbt) {
         super.writeAdditional(comnbt);

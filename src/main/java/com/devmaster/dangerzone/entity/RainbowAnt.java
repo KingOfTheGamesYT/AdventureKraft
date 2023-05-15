@@ -90,7 +90,9 @@ public class RainbowAnt extends AnimalEntity {
         return true;
     }
 
-
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return true;
+    }
 
     @Nullable
     @Override

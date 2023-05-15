@@ -135,7 +135,9 @@ public class Butterfly extends CreatureEntity {
         return false;
     }
 
-
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return true;
+    }
 
     public boolean getIsButterflyHanging() {
         return (this.dataManager.get(FLYING) & 1) != 0;
