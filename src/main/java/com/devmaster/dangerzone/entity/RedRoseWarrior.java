@@ -5,14 +5,11 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
 import net.minecraft.entity.monster.GhastEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.monster.PhantomEntity;
 import net.minecraft.entity.monster.SlimeEntity;
-import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.GolemEntity;
-import net.minecraft.entity.passive.fish.AbstractGroupFishEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
@@ -22,15 +19,11 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import javax.annotation.Nullable;
-
 
 public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     private static final int MAX_BEND_TIME = 66;
@@ -45,7 +38,7 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         this.experienceValue = 10;
     }
 
-    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(getType().getName().copyRaw().appendSibling(getDisplayName()), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
+    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
 
     @Override
     public void livingTick() {
@@ -58,15 +51,7 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     public void readAdditional(CompoundNBT compound) {
         super.readAdditional(compound);
         this.setRRWState(compound.getByte(KEY_STATE));
-        if (hasCustomName())
-            bossInfo.setName(getType().getName().copyRaw().appendSibling(getDisplayName()));
-    }
 
-    @Override
-    public void setCustomName(@Nullable ITextComponent name) {
-        super.setCustomName(name);
-
-        bossInfo.setName(getType().getName().copyRaw().appendSibling(getDisplayName()));
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -210,4 +195,4 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         super.removeTrackingPlayer(player);
         this.bossInfo.removePlayer(player);
     }
-    }
+}
