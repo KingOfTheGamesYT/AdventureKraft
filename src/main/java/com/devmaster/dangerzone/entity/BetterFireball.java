@@ -6,6 +6,7 @@ import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.entity.*;
 import net.minecraft.entity.projectile.ProjectileItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.*;
 import net.minecraft.util.math.*;
@@ -30,7 +31,7 @@ public class BetterFireball extends ProjectileItemEntity {
 
 	@Override
 	protected Item getDefaultItem() {
-		return RegistryHandler.EMERALD_PICKAXE.get();
+		return Items.FIRE_CHARGE.getItem();
 	}
 
 	protected BetterFireball(World worldIn, LivingEntity thrower) {
@@ -53,9 +54,19 @@ public class BetterFireball extends ProjectileItemEntity {
 		}
 
 	}
+	@Override
+	public void setVelocity(double xMotion, double yMotion, double zMotion) {
+		// Update the entity's position based on its motion
+		this.prevPosX += xMotion;
+		this.prevPosY += yMotion;
+		this.prevPosZ += zMotion;
 
+		// Update the entity's bounding box
+		this.setPosition(this.prevPosX, this.prevPosY, this.prevPosZ);
 
-
+		// Update the entity's velocity
+		this.setMotion(xMotion, yMotion, zMotion);
+	}
 
 	/**
 	 * Called when the Better Fireball hits an entity

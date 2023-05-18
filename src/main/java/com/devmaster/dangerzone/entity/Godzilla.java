@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.misc.DangerZone;
+import com.sun.javafx.geom.Vec3d;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
@@ -33,7 +34,7 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
     public boolean collided = false;
     public boolean crush = false;
     private int jumped = 0;
-    private int attackTimer = 0;
+    private static final int LIGHTNING_CHANCE = 50; // Chance of summoning lightning in percent
 
 
     public Godzilla(final EntityType<? extends Godzilla> type, final World worldIn) {
@@ -43,7 +44,7 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
 
     }
 
-    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
+    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.PURPLE, BossInfo.Overlay.PROGRESS));
 
     @Override
     public void livingTick() {
@@ -105,7 +106,7 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(5,new RandomWalkingGoal(this, 1.0));
+        this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1.0));
         this.goalSelector.addGoal(1, new SwimGoal(this));
         this.goalSelector.addGoal(7, new MeleeAttackGoal(this, 1.0D, true));
         this.goalSelector.addGoal(5, new LookAtGoal(this, PlayerEntity.class, 50F));
@@ -119,8 +120,7 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, RedRoseWarrior.class, true));
-        this.goalSelector.addGoal(2, new RangedAttackGoal(this, 1.0D, 20, 3.0F));
-
+        this.goalSelector.addGoal(2, new RangedAttackGoal(this, 1.0D, 20, 10.0F));
     }
 
     @Override
@@ -159,24 +159,22 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
 
     @Override
     public void attackEntityWithRangedAttack(LivingEntity target, float distance) {
-        World world = this.getEntityWorld();
-        Vector3d targetPosition = this.getAttackTarget().getEyePosition(1.0f);
-        Vector3d shootingPosition = this.getEyePosition(1.0f);
-        Vector3d shootingDirection = targetPosition.subtract(shootingPosition).normalize().mul(1.5, 1.5, 1.5);
-        BetterFireball betterFireball = new BetterFireball(world, this);
-        EntityType<LightningBoltEntity> lightningBolt = (EntityType.LIGHTNING_BOLT);
         if (!this.world.isRemote) {
-            if (world.getRandom().nextFloat() < 0.5f) { // 50% chance to summon lightning
-                lightningBolt.getBoundingBoxWithSizeApplied(targetPosition.x, targetPosition.y, targetPosition.z);
+            if (rand.nextInt(100) < LIGHTNING_CHANCE) {
+                // Summon lightning at the mob's current position
                 world.addEntity(new LightningBoltEntity(EntityType.LIGHTNING_BOLT, world));
             }
             if (world.getRandom().nextFloat() < 0.5f) { // 50% chance to do fireball attack
-                betterFireball.setPosition(shootingPosition.x, shootingPosition.y, shootingPosition.z);
-                betterFireball.setVelocity(shootingDirection.x, shootingDirection.y, shootingDirection.z);
-                world.addEntity(betterFireball);
+                    // Create a new instance of your custom fireball entity
+                    BetterFireball fireball = new BetterFireball(world, this);
+                    fireball.setPosition(this.getPosX() + this.getLookVec().x * 1.5D, this.getPosYHeight(0.5D) + 0.5D, this.getPosZ() + this.getLookVec().z * 1.5D);
+                    // Set the fireball's motion and spawn it in the world
+                    fireball.setMotion(this.getLookVec());
+                    world.addEntity(fireball);
             }
         }
     }
+
 
     @Override
     public void addTrackingPlayer(ServerPlayerEntity player) {
