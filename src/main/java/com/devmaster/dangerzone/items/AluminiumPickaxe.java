@@ -11,6 +11,7 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
@@ -19,7 +20,7 @@ import net.minecraft.world.server.ServerWorld;
 
 import java.util.List;
 
-public class AluminiumPickaxe extends AxeItem {
+public class AluminiumPickaxe extends PickaxeItem {
     private static IItemTier iItemTier = new IItemTier() {
 
         public int getMaxUses() {

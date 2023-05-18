@@ -9,6 +9,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.AxeItem;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
@@ -19,7 +20,7 @@ import net.minecraft.world.server.ServerWorld;
 
 import java.util.List;
 
-public class AluminiumHoe extends AxeItem {
+public class AluminiumHoe extends HoeItem {
     private static IItemTier iItemTier = new IItemTier() {
 
         public int getMaxUses() {
