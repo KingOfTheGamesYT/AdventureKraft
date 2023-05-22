@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "#/ ",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "dangerzone:aluminium_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "dangerzone:aluminium_axe",
+    "count": 1
+  }
+
+}
