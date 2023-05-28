@@ -65,6 +65,8 @@ public class EntitySpawns {
                 List<BiomeDictionary.Type> BajanCanadianexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.BajanCanadianexclude.get()));
                 List<BiomeDictionary.Type> CaptainSparkelzincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaptainSparkelzinclude.get()));
                 List<BiomeDictionary.Type> CaptainSparkelzexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaptainSparkelzexclude.get()));
+                List<BiomeDictionary.Type> RedAntincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.RedAntinclude.get()));
+                List<BiomeDictionary.Type> RedAntexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.RedAntexclude.get()));
 
                 if (!includeList.isEmpty()) {
                     Set<BiomeDictionary.Type> biomeTypes = BiomeDictionary.getTypes(biomeKey);
@@ -121,6 +123,9 @@ public class EntitySpawns {
                     }
                     if (biomeTypes.stream().noneMatch(CaptainSparkelzexcludeList::contains) && biomeTypes.stream().anyMatch(CaptainSparkelzincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.CAPTAINSPARKELZ.get(), DZConfig.CaptainSparkelzweight.get(), DZConfig.CaptainSparkelzymin.get(), DZConfig.CaptainSparkelzmax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(RedAntexcludeList::contains) && biomeTypes.stream().anyMatch(RedAntincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(RegistryHandler.RED_ANT.get(), DZConfig.RedAntweight.get(), DZConfig.RedAntmin.get(), DZConfig.RedAntmax.get()));
                     }
 
                 } else {

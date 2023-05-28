@@ -338,6 +338,13 @@ public class RegistryHandler {
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "rainbow_ant").toString()));
 
+    public static final RegistryObject<EntityType<RedAnt>> RED_ANT = ENTITIES
+            .register("red_ant",
+                    () -> EntityType.Builder.<RedAnt>create(RedAnt::new, EntityClassification.CREATURE)
+                            .size(0.9f, 1.3f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "red_ant").toString()));
+
+
     public static final RegistryObject<EntityType<RedCow>> RED_COW = ENTITIES
             .register("red_cow",
                     () -> EntityType.Builder.<RedCow>create(RedCow::new, EntityClassification.AMBIENT)
@@ -457,6 +464,8 @@ public class RegistryHandler {
     public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
 
     public static final RegistryObject<Block> STAMPYLONGNOSE_EGG_ORE = BLOCKS.register("petrified_stampylongnose_ore", BlockMobOre::new);
+
+    public static final RegistryObject<Block> TERMITE_EGG_ORE = BLOCKS.register("termite_egg_ore", BlockMobOre::new);
 
     public static final RegistryObject<Block> TEWTIY_EGG_ORE = BLOCKS.register("petrified_tewtiy_ore", BlockMobOre::new);
 

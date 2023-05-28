@@ -438,6 +438,11 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue CaptainSparkelzweight;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzexclude;
+    public static ForgeConfigSpec.IntValue RedAntmin;
+    public static ForgeConfigSpec.IntValue RedAntmax;
+    public static ForgeConfigSpec.IntValue RedAntweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedAntinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedAntexclude;
 
     public DZConfig() {
     }
@@ -973,7 +978,7 @@ public class DZConfig {
         ALUMINIUM_PICKAXE_DAMAGE = builder.comment("Aluminium pickaxe Damage").defineInRange("ALUMINIUM_PICKAXE_DAMAGE", 4, 0, 1000);
         ALUMINIUM_PICKAXE_DURABILITY = builder.comment("Aluminium Pickaxe Durability").defineInRange("ALUMINIUM_PICKAXE_DURABILITY", 250, 0, 10000);
         ALUMINIUM_PICKAXE_HIT_COST = builder.comment("How much durability a Aluminium pickaxe loses when an entity is hit").defineInRange("ALUMINIUM_PICKAXE_HIT_COST", 1, 0, 10000);
-        ALUMINIUM_PICKAXE_HARVEST_LEVEL = builder.comment("Aluminium Pickaxe Harvest Level").defineInRange("ALUMINIUM_PICKAXE_HARVEST_LEVEL", 2, 0, 1000);
+        ALUMINIUM_PICKAXE_HARVEST_LEVEL = builder.comment("Aluminium Pickaxe Harvest Level").defineInRange("ALUMINIUM_PICKAXE_HARVEST_LEVEL", 12, 0, 1000);
         ALUMINIUM_PICKAXE_ENCHANTABILITY = builder.comment("Aluminium Pickaxe Encahntability").defineInRange("ALUMINIUM_PICKAXE_ENCHANTABILITY", 14, 0, 1000);
         ALUMINIUM_PICKAXE_EFFICIENCY = builder.comment("Aluminium Pickaxe Efficiency").defineInRange("ALUMINIUM_PICKAXE_EFFICIENCY", 6, 0, 1000);
         ALUMINIUM_PICKAXE_ATTACK_SPEED = builder.comment("Aluminium Pickaxe Attack Speed, must be whole number").defineInRange("ALUMINIUM_PICKAXE_ATTACK_SPEED", 1, 0, 1000);
@@ -1011,6 +1016,17 @@ public class DZConfig {
         TITANIUM_CAKE_SWORD_ENCHANTABILITY = builder.comment("Titanium Cake Sword Encahntability").defineInRange("TITANIUM_CAKE_SWORD_ENCHANTABILITY", 14, 0, 1000);
         TITANIUM_CAKE_SWORD_EFFICIENCY = builder.comment("Titanium Cake Sword Efficiency").defineInRange("TITANIUM_CAKE_SWORD_EFFICIENCY", 6, 0, 1000);
         TITANIUM_CAKE_SWORD_ATTACK_SPEED = builder.comment("Titanium Cake Sword Attack Speed, must be whole number").defineInRange("TITANIUM_CAKE_SWORD_ATTACK_SPEED", 1, 0, 1000);
+
+        builder.push("Red Ant Spawn Chances");
+        RedAntmin = builder.defineInRange("Red Ant Min", 4, 0, 640);
+        RedAntmax = builder.defineInRange("Red Ant Max", 10, 0, 640);
+        RedAntweight = builder.defineInRange("Red Ant Weight", 7, 0, 100);
+        builder.pop();
+
+        builder.push("Red Ant Biomes Whitelist/Blacklist");
+        RedAntinclude = builder.defineList("include Red Ant", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        RedAntexclude = builder.defineList("exclude Red Ant", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
 
         builder.pop();
         }

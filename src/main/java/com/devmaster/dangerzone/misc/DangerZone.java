@@ -94,6 +94,8 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.BAJANCANADIAN.get(), BajanCanadian.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelz.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.ROBO_TECHNOBLADE.get(), RoboTechnoblade.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.RED_ANT.get(), RedAnt.getAttributes().create());
+
             EntitySpawns.registerSpawnPlacements();
 
         });
@@ -130,6 +132,7 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BAJANCANADIAN.get(), BajanCanadianRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelzRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ROBO_TECHNOBLADE.get(), RoboTechnobladeRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RED_ANT.get(), RedAntRender::new);
         SpawnEgg.initSpawnEggs();
     }
 }

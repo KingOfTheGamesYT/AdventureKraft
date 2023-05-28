@@ -55,9 +55,11 @@
 
   "_comment": "Petrified Ores",
   "block.dangerzone.butterfly_egg_ore": "Petrified Butterfly Ore",
+  "block.dangerzone.godzilla_egg_ore": "Petrified Godzilla Ore",
   "block.dangerzone.mutant_zombie_egg_ore": "Petrified Mutant Zombie Ore",
   "block.dangerzone.redrosewarrior_egg_ore": "Petrified RedRoseWarrior Ore",
   "block.dangerzone.petrified_stampylongnose_ore": "Petrified Stampylongnose Ore",
+  "block.dangerzone.termite_egg_ore": "Petrified Termite Ore",
   "block.dangerzone.petrified_tewtiy_ore": "Petrified Tewtiy Ore",
   "block.dangerzone.rainbow_ant_egg_ore": "Petrified Rainbow Ant Ore",
   "block.dangerzone.petrified_zombie_ore": "Petrified Zombie Ore",
@@ -182,7 +184,8 @@
   "entity.dangerzone.babymax": "BabyMax",
   "entity.dangerzone.bajancanadian": "BajanCanadian",
   "entity.dangerzone.captainsparkelz": "CaptainSparkelz",
-
+  "entity.dangerzone.robo_technoblade": "Robo Technoblade",
+  "entity.dangerzone.red_ant": "Red Ant",
 
 
   "_comment": "Biomes",

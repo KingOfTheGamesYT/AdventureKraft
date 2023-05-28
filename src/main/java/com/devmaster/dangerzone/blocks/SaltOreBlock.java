@@ -2,6 +2,7 @@ package com.devmaster.dangerzone.blocks;
 
 
 import com.devmaster.dangerzone.entity.RainbowAnt;
+import com.devmaster.dangerzone.entity.RedAnt;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
@@ -34,14 +35,14 @@ public class SaltOreBlock extends OreBlock {
     }
 
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
-        if (entityIn instanceof RainbowAnt) {
-            entityIn.attackEntityFrom(DamageSource.CACTUS, 5.0F);
+        if (entityIn instanceof RainbowAnt || entityIn instanceof RedAnt) {
+            entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
         }
     }
 
     public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
-        if (entityIn instanceof RainbowAnt) {
-            entityIn.attackEntityFrom(DamageSource.CACTUS, 5.0F);
+        if (entityIn instanceof RainbowAnt || entityIn instanceof RedAnt) {
+            entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
         }
 
     }
