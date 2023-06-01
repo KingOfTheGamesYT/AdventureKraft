@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "S",
+    "R"
+  ],
+  "key": {
+    "#": {
+      "item": "dangerzone:termite_eye"
+    },
+    "S": {
+      "item": "dangerzone:termite_abdomen"
+    },
+    "R": {
+      "item": "dangerzone:termite_leg"
+    }
+  },
+  "result": {
+    "item": "dangerzone:dead_termite",
+    "count": 1
+  }
+}
