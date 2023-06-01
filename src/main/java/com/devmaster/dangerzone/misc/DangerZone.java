@@ -50,7 +50,7 @@ public class DangerZone {
     public static final ItemGroup WIP = new DangerZoneWIP();
     public static final ITag.INamedTag<Block> MINERS_DREAM_MINEABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":miners_dream_breakable");
     public static final ITag.INamedTag<Block> GODZILLA_DESTROYABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":godzilla_breakable");
-
+    public static final ITag.INamedTag<Block> TERMITE_FOOD = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":termite_food");
 
     public DangerZone() {
         ModLoadingContext.get().registerConfig(Type.COMMON, BaseConfig.COMMON, "dangerzone-common.toml");
@@ -95,7 +95,7 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelz.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.ROBO_TECHNOBLADE.get(), RoboTechnoblade.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.RED_ANT.get(), RedAnt.getAttributes().create());
-
+            GlobalEntityTypeAttributes.put(RegistryHandler.TERMITE.get(), RedAnt.getAttributes().create());
             EntitySpawns.registerSpawnPlacements();
 
         });
@@ -133,6 +133,7 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelzRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ROBO_TECHNOBLADE.get(), RoboTechnobladeRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RED_ANT.get(), RedAntRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TERMITE.get(), TermiteRender::new);
         SpawnEgg.initSpawnEggs();
     }
 }
