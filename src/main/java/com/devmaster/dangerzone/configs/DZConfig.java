@@ -443,6 +443,11 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue RedAntweight;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedAntinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedAntexclude;
+    public static ForgeConfigSpec.IntValue Termitemin;
+    public static ForgeConfigSpec.IntValue Termitemax;
+    public static ForgeConfigSpec.IntValue Termiteweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Termiteinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Termiteexclude;
 
     public DZConfig() {
     }
@@ -1026,6 +1031,17 @@ public class DZConfig {
         builder.push("Red Ant Biomes Whitelist/Blacklist");
         RedAntinclude = builder.defineList("include Red Ant", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         RedAntexclude = builder.defineList("exclude Red Ant", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
+
+        builder.push("Termite Spawn Chances");
+        Termitemin = builder.defineInRange("Termite Min", 4, 0, 640);
+        Termitemax = builder.defineInRange("Termite Max", 10, 0, 640);
+        Termiteweight = builder.defineInRange("Termite Weight", 7, 0, 100);
+        builder.pop();
+
+        builder.push("Termite Biomes Whitelist/Blacklist");
+        Termiteinclude = builder.defineList("include Termite", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        Termiteexclude = builder.defineList("exclude Termite", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
         builder.pop();

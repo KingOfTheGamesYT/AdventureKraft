@@ -3,6 +3,7 @@ package com.devmaster.dangerzone.blocks;
 
 import com.devmaster.dangerzone.entity.RainbowAnt;
 import com.devmaster.dangerzone.entity.RedAnt;
+import com.devmaster.dangerzone.entity.Termite;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
@@ -35,13 +36,13 @@ public class SaltOreBlock extends OreBlock {
     }
 
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
-        if (entityIn instanceof RainbowAnt || entityIn instanceof RedAnt) {
+        if (entityIn instanceof RainbowAnt || entityIn instanceof Termite || entityIn instanceof RedAnt) {
             entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
         }
     }
 
     public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
-        if (entityIn instanceof RainbowAnt || entityIn instanceof RedAnt) {
+        if (entityIn instanceof RainbowAnt || entityIn instanceof Termite || entityIn instanceof RedAnt) {
             entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
         }
 
@@ -57,8 +58,6 @@ public class SaltOreBlock extends OreBlock {
 
     @Override
     public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new StringTextComponent(   "\u00A7f" + "Salt ore kill ants. Great for keeping ants out of places you don't want them! Place a few Salt ore in front of your door. Double wide does the trick. Sometimes ants will cross just one block." + "\u00A7f"));
+        tooltip.add(new StringTextComponent(   "\u00A7f" + "Salt ore kill ants and termites. Great for keeping ants/termites out of places you don't want them! Place a few Salt ore in front of your door. Double wide does the trick. Sometimes ants will cross just one block." + "\u00A7f"));
     }
-
         }
-

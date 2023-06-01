@@ -67,6 +67,8 @@ public class EntitySpawns {
                 List<BiomeDictionary.Type> CaptainSparkelzexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaptainSparkelzexclude.get()));
                 List<BiomeDictionary.Type> RedAntincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.RedAntinclude.get()));
                 List<BiomeDictionary.Type> RedAntexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.RedAntexclude.get()));
+                List<BiomeDictionary.Type> TermiteincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Termiteinclude.get()));
+                List<BiomeDictionary.Type> TermiteexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Termiteexclude.get()));
 
                 if (!includeList.isEmpty()) {
                     Set<BiomeDictionary.Type> biomeTypes = BiomeDictionary.getTypes(biomeKey);
@@ -126,6 +128,9 @@ public class EntitySpawns {
                     }
                     if (biomeTypes.stream().noneMatch(RedAntexcludeList::contains) && biomeTypes.stream().anyMatch(RedAntincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(RegistryHandler.RED_ANT.get(), DZConfig.RedAntweight.get(), DZConfig.RedAntmin.get(), DZConfig.RedAntmax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(TermiteexcludeList::contains) && biomeTypes.stream().anyMatch(TermiteincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(RegistryHandler.TERMITE.get(), DZConfig.Termiteweight.get(), DZConfig.Technoblademin.get(), DZConfig.Termitemax.get()));
                     }
 
                 } else {

@@ -52,6 +52,10 @@
   "item.dangerzone.wrench": "Wrench",
   "item.dangerzone.robot_hand": "Robot Hand",
   "item.dangerzone.robot_finger": "Robot Finger",
+  "item.dangerzone.termite_leg": "Termite Leg",
+  "item.dangerzone.termite_abdomen": "Termite Abdomen",
+  "item.dangerzone.termite_eye": "Termite Eye",
+
 
   "_comment": "Petrified Ores",
   "block.dangerzone.butterfly_egg_ore": "Petrified Butterfly Ore",
@@ -186,6 +190,8 @@
   "entity.dangerzone.captainsparkelz": "CaptainSparkelz",
   "entity.dangerzone.robo_technoblade": "Robo Technoblade",
   "entity.dangerzone.red_ant": "Red Ant",
+  "entity.dangerzone.termite": "Termite",
+
 
 
   "_comment": "Biomes",

@@ -375,6 +375,13 @@ public class RegistryHandler {
                             .size(0.9f, 1.9f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "technoblade").toString()));
 
+   public static final RegistryObject<EntityType<Termite>> TERMITE = ENTITIES
+            .register("termite",
+                    () -> EntityType.Builder.<Termite>create(Termite::new, EntityClassification.CREATURE)
+                            .size(0.9f, .9f)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "termite").toString()));
+
+
     public static final RegistryObject<EntityType<Tewtiy>> TEWTIY = ENTITIES
             .register("tewtiy",
                     () -> EntityType.Builder.<Tewtiy>create(Tewtiy::new, EntityClassification.AMBIENT)
@@ -443,6 +450,12 @@ public class RegistryHandler {
     public static final RegistryObject<Item> SALT = ITEMS.register("salt", Salt::new);
 
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", Sapphire::new);
+
+    public static final RegistryObject<TermiteAbdomen> TERMITE_ABDOMEN = ITEMS.register("termite_abdomen", TermiteAbdomen::new);
+
+    public static final RegistryObject<TermiteEye> TERMITE_EYE = ITEMS.register("termite_eye", TermiteEye::new);
+
+    public static final RegistryObject<TermiteLeg> TERMITE_LEG = ITEMS.register("termite_leg", TermiteLeg::new);
 
     public static final RegistryObject<Item> TITANIUM_CAKE = ITEMS.register("titanium_cake", TitaniumCake::new);
 
