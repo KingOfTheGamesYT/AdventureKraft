@@ -1,8 +1,6 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.misc.DangerZone;
-import com.sun.javafx.geom.Vec3d;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -15,19 +13,16 @@ import net.minecraft.entity.monster.SlimeEntity;
 import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.player.PlayerEntity;;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
-import net.minecraftforge.event.ForgeEventFactory;
 
 
 public class Godzilla extends MonsterEntity implements IRangedAttackMob{
@@ -96,7 +91,7 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 5000)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 10000)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.31D)
                 .createMutableAttribute(Attributes.ARMOR, 7.5)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 100)
@@ -157,6 +152,7 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
         return true;
     }
 
+
     @Override
     public void attackEntityWithRangedAttack(LivingEntity target, float distance) {
         if (!this.world.isRemote) {
@@ -164,17 +160,30 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
                 // Summon lightning at the mob's current position
                 world.addEntity(new LightningBoltEntity(EntityType.LIGHTNING_BOLT, world));
             }
-            if (world.getRandom().nextFloat() < 0.5f) { // 50% chance to do fireball attack
-                    // Create a new instance of your custom fireball entity
-                    BetterFireball fireball = new BetterFireball(world, this);
-                    fireball.setPosition(this.getPosX() + this.getLookVec().x * 1.5D, this.getPosYHeight(0.5D) + 0.5D, this.getPosZ() + this.getLookVec().z * 1.5D);
-                    // Set the fireball's motion and spawn it in the world
-                    fireball.setMotion(this.getLookVec());
-                    world.addEntity(fireball);
+            if (world.getRandom().nextFloat() < 0.5f ) { // 50% chance to do fireball attack
+            this.shoot(target);
             }
+
         }
     }
 
+    protected void shoot(LivingEntity target) {
+        for (int i = 0; i < 4; i++) {
+            // Create a new instance of your custom fireball entity
+            BetterFireball fireball = new BetterFireball(world, this);
+            fireball.setPosition(this.getPosX() + this.getLookVec().x * 2.0D, this.getPosYHeight(0.5D) + 0.5D, this.getPosZ() + this.getLookVec().z * 2.0D);
+
+            // Calculate the fireball's motion vector
+            double distance = target.getDistance(this);
+            double motionX = (target.getPosX() - fireball.getPosX()) / distance;
+            double motionY = (target.getPosYHeight(0.5D) - fireball.getPosYHeight(0.5D)) / distance;
+            double motionZ = (target.getPosZ() - fireball.getPosZ()) / distance;
+
+            // Set the fireball's motion and spawn it in the world
+            fireball.setMotion(motionX, motionY, motionZ);
+            world.addEntity(fireball);
+        }
+    }
 
     @Override
     public void addTrackingPlayer(ServerPlayerEntity player) {
@@ -186,5 +195,18 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
     public void removeTrackingPlayer(ServerPlayerEntity player) {
         super.removeTrackingPlayer(player);
         this.bossInfo.removePlayer(player);
+    }
+
+    @Override
+    public void setFire(int seconds) {
+        int i = 0;
+    }
+
+    @Override
+    public boolean attackEntityFrom(DamageSource source, float amount) {
+        if (source.isFireDamage() || source.isFireDamage()) {
+            return false; // Make the mob immune to fire and lava damage
+        }
+        return super.attackEntityFrom(source, amount);
     }
 }
