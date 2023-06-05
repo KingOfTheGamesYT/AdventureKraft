@@ -33,6 +33,10 @@ public class ModOregen {
     public static ConfiguredFeature<?, ?> SAPPHIRE_ORE;
     public static ConfiguredFeature<?, ?> TITANIUM_ORE;
     public static ConfiguredFeature<?, ?> ZOMBIE_ORE;
+    public static ConfiguredFeature<?, ?> GODZILLA_ORE;
+    public static ConfiguredFeature<?, ?> TERMITE_ORE;
+
+
 
 
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
@@ -134,17 +138,30 @@ public class ModOregen {
                         .square()
                         .chance/* repeat */(5));
 
+        GODZILLA_ORE = Feature.ORE.withConfiguration(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.GODZILLA_EGG_ORE.get().getDefaultState(),3))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(3));
+        TERMITE_ORE = Feature.ORE.withConfiguration(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.TERMITE_EGG_ORE.get().getDefaultState(),3))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(3));
+
         Registry.register(registry, new ResourceLocation("aluminium_ore_block"), ALUMINIUM_ORE);
         Registry.register(registry, new ResourceLocation("abyssal_ore_block"), ABYSSAL_ORE);
         Registry.register(registry, new ResourceLocation("butterfly_egg_ore"), BUTTERFLY_ORE);
         Registry.register(registry, new ResourceLocation("coarse_amethyst_ore_block"), COARSE_AMETHYST_ORE);
         Registry.register(registry, new ResourceLocation("cats_eye_ore"), CATS_EYE_ORE);
+        Registry.register(registry, new ResourceLocation("godzilla_egg_ore"), GODZILLA_ORE);
         Registry.register(registry, new ResourceLocation("leather_block"), LEATHER_BLOCK);
         Registry.register(registry, new ResourceLocation("mutant_zombie_egg_ore"), MUTANT_ZOMBIE_ORE);
         Registry.register(registry, new ResourceLocation("play_button_ore_block"), PLAY_BUTTON_ORE);
         Registry.register(registry, new ResourceLocation("rainbow_ant_egg_ore"), RAINBOW_ANT_ORE);
         Registry.register(registry, new ResourceLocation("redrosewarrior_egg_ore"), REDROSEWARRIOR_ORE);
         Registry.register(registry, new ResourceLocation("petrified_stampylongnose_ore"), STAMPYLONGNOSE_ORE);
+        Registry.register(registry, new ResourceLocation("termite_egg_ore"), TERMITE_ORE);
         Registry.register(registry, new ResourceLocation("petrified_tewtiy_ore"), TEWTIY_ORE);
         Registry.register(registry, new ResourceLocation("salt_ore_block"), SALT_ORE);
         Registry.register(registry, new ResourceLocation("sapphire_ore_block"), SAPPHIRE_ORE);
@@ -163,6 +180,7 @@ public class ModOregen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, BUTTERFLY_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, COARSE_AMETHYST_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, CATS_EYE_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, GODZILLA_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, LEATHER_BLOCK);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, MUTANT_ZOMBIE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, PLAY_BUTTON_ORE);
@@ -174,6 +192,8 @@ public class ModOregen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TITANIUM_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ZOMBIE_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TERMITE_ORE);
+
 
     }
 

@@ -204,9 +204,11 @@ public class Godzilla extends MonsterEntity implements IRangedAttackMob{
 
     @Override
     public boolean attackEntityFrom(DamageSource source, float amount) {
+        float cappedDamage = Math.min(amount, 100.0f);
+
         if (source.isFireDamage() || source.isFireDamage()) {
             return false; // Make the mob immune to fire and lava damage
         }
-        return super.attackEntityFrom(source, amount);
+        return super.attackEntityFrom(source, cappedDamage);
     }
 }
