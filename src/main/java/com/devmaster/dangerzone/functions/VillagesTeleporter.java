@@ -1,4 +1,4 @@
-package com.devmaster.dangerzone.misc;
+package com.devmaster.dangerzone.functions;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
 
@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.function.Function;
 
-public class CustomTeleporter implements ITeleporter {
+public class VillagesTeleporter implements ITeleporter {
     @Nullable
     @Override
     public PortalInfo getPortalInfo(Entity entity, ServerWorld destWorld, Function<ServerWorld, PortalInfo> defaultPortalInfo) {
@@ -33,7 +33,7 @@ public class CustomTeleporter implements ITeleporter {
         return pos;
     }
 
-    public CustomTeleporter() {
+    public VillagesTeleporter() {
     }
 
     @Nullable
@@ -51,6 +51,7 @@ public class CustomTeleporter implements ITeleporter {
                 }
             }
         }
+
         float angle = entity.chunkCoordX;
 
         if (isPlayer && entity instanceof ServerPlayerEntity) {
