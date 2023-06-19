@@ -457,6 +457,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<TermiteLeg> TERMITE_LEG = ITEMS.register("termite_leg", TermiteLeg::new);
 
+    public static final RegistryObject<TermiteToken> TERMITE_TOKEN = ITEMS.register("termite_token", TermiteToken::new);
+
     public static final RegistryObject<Item> TITANIUM_CAKE = ITEMS.register("titanium_cake", TitaniumCake::new);
 
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", TitaniumIngot::new);
@@ -498,6 +500,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> STAMPYLONGNOSE_EGG_ORE_ITEM = ITEMS.register("petrified_stampylongnose_ore", () -> new BlockItemMobOre(STAMPYLONGNOSE_EGG_ORE.get()));
 
+    public static final RegistryObject<Item> TERMITE_EGG_ORE_ITEM = ITEMS.register("termite_egg_ore", () -> new BlockItemMobOre(TERMITE_EGG_ORE.get()));
+
     public static final RegistryObject<Item> TEWTIY_EGG_ORE_ITEM = ITEMS.register("petrified_tewtiy_ore", () -> new BlockItemMobOre(TEWTIY_EGG_ORE.get()));
 
     public static final RegistryObject<Item> ZOMBIE_EGG_ORE_ITEM = ITEMS.register("petrified_zombie_ore", () -> new BlockItemMobOre(ZOMBIE_EGG_ORE.get()));
@@ -536,6 +540,8 @@ public class RegistryHandler {
     public static final RegistryObject<SpawnEgg> STAMPYLONGNOSE_SPAWN_EGG = ITEMS.register("stampylongnose_spawn_egg", () -> new SpawnEgg(RegistryHandler.STAMPYLONGNOSE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<SpawnEgg> TECHNOBLADE_SPAWN_EGG = ITEMS.register("technoblade_spawn_egg", () -> new SpawnEgg(RegistryHandler.TECHNOBLADE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
+
+    public static final RegistryObject<SpawnEgg> TERMITE_SPAWN_EGG = ITEMS.register("termite_spawn_egg", () -> new SpawnEgg(RegistryHandler.TERMITE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<SpawnEgg> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEgg(RegistryHandler.TEWTIY, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 

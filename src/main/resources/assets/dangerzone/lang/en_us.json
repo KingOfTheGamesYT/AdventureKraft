@@ -40,6 +40,7 @@
   "item.dangerzone.notbreebree_spawn_egg": "Spawn NotBreeBree",
   "item.dangerzone.rainbow_ant_spawn_egg": "Spawn Rainbow Ant",
   "item.dangerzone.red_cow_spawn_egg": "Spawn Red Cow",
+  "item.dangerzone.termite_spawn_egg": "Spawn Red Termite",
   "item.dangerzone.redrosewarrior_spawn_egg": "Spawn RedRoseWarrior",
   "item.dangerzone.robo-bomb_spawn_egg": "Spawn Robo-Bomb",
   "item.dangerzone.stampylongnose_spawn_egg": "Spawn StampyLongnose",
@@ -55,6 +56,8 @@
   "item.dangerzone.termite_leg": "Termite Leg",
   "item.dangerzone.termite_abdomen": "Termite Abdomen",
   "item.dangerzone.termite_eye": "Termite Eye",
+  "item.dangerzone.termite_token": "Termite Token",
+
 
 
   "_comment": "Petrified Ores",

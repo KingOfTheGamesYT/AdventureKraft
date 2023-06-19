@@ -108,6 +108,6 @@ public class TermiteToken extends Item {
 
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7c" + "This is needed to get to the Crystal Dimension" + "\u00A7c"));
+        tooltip.add(new StringTextComponent("\u00A77" + "This is needed to get to the Crystal Dimension" + "\u00A77"));
     }
 }
