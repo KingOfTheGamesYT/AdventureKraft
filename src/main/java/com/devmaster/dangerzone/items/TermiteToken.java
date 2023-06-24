@@ -1,6 +1,6 @@
 package com.devmaster.dangerzone.items;
 
-import com.devmaster.dangerzone.functions.CrystalTeleporter;
+import com.devmaster.dangerzone.world.teleportors.CrystalTeleporter;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.advancements.CriteriaTriggers;

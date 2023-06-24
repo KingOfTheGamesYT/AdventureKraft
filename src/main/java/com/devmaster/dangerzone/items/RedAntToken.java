@@ -1,19 +1,23 @@
 package com.devmaster.dangerzone.items;
 
-import com.devmaster.dangerzone.world.teleportors.VillagesTeleporter;
+import com.devmaster.dangerzone.world.teleportors.CrystalTeleporter;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
+import com.devmaster.dangerzone.world.teleportors.DangerTeleporter;
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.item.Food;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.stats.Stats;
-import net.minecraft.util.*;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Hand;
+import net.minecraft.util.RegistryKey;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
@@ -25,8 +29,8 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
 
-public class RainbowAntToken extends Item {
-    public RainbowAntToken() {
+public class RedAntToken extends Item {
+    public RedAntToken() {
         super(new Properties().group(DangerZone.TAB)
                 .food(new Food.Builder()
                         .setAlwaysEdible()
@@ -43,28 +47,28 @@ public class RainbowAntToken extends Item {
             if (entity instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity) entity;
                 player.addStat(Stats.ITEM_USED.get(stack.getItem()));
-                if (player instanceof ServerPlayerEntity && world.getDimensionKey() == RegistryHandler.VILLAGES) {
+                if (player instanceof ServerPlayerEntity && world.getDimensionKey() == RegistryHandler.DANGER) {
                     CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayerEntity)player, stack);
                 }
             }
 
-            if (!(entity instanceof PlayerEntity) || (world.getDimensionKey() == RegistryHandler.VILLAGES || (!((PlayerEntity) entity).abilities.isCreativeMode))) {
+            if (!(entity instanceof PlayerEntity) || (world.getDimensionKey() == RegistryHandler.DANGER || (!((PlayerEntity) entity).abilities.isCreativeMode))) {
                 stack.shrink(1);
             }
         }
         if (!world.isRemote && entity instanceof PlayerEntity)  {
             ServerPlayerEntity player = (ServerPlayerEntity) entity;
 
-            if (world.getDimensionKey() == RegistryHandler.VILLAGES) {
+            if (world.getDimensionKey() == RegistryHandler.DANGER) {
                 if (!ForgeHooks.onTravelToDimension(player, World.OVERWORLD))
                     return stack;
 
                 teleportToDimension(world, player, World.OVERWORLD);
             } else {
-                if (!ForgeHooks.onTravelToDimension(player, RegistryHandler.VILLAGES))
+                if (!ForgeHooks.onTravelToDimension(player, RegistryHandler.DANGER))
                     return stack;
 
-                teleportToDimension(world, player, RegistryHandler.VILLAGES);
+                teleportToDimension(world, player, RegistryHandler.DANGER);
             }
         }
         return stack;
@@ -88,7 +92,7 @@ public class RainbowAntToken extends Item {
                     return;
                 }
 
-                  VillagesTeleporter teleporter = new VillagesTeleporter();
+                  DangerTeleporter teleporter = new DangerTeleporter();
                  playerMP.changeDimension(destinationWorld, teleporter);
             }
         }
@@ -105,6 +109,6 @@ public class RainbowAntToken extends Item {
 
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7c" + "This is needed to get to the Villages Dimension" + "\u00A7c"));
+        tooltip.add(new StringTextComponent("\u00A7c" + "This is needed to get to the Danger Dimension" + "\u00A7c"));
     }
 }

@@ -1,7 +1,6 @@
-package com.devmaster.dangerzone.functions;
+package com.devmaster.dangerzone.world.teleportors;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
-
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.PortalInfo;
@@ -21,7 +20,7 @@ import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.function.Function;
 
-public class VillagesTeleporter implements ITeleporter {
+public class DangerTeleporter implements ITeleporter {
     @Nullable
     @Override
     public PortalInfo getPortalInfo(Entity entity, ServerWorld destWorld, Function<ServerWorld, PortalInfo> defaultPortalInfo) {
@@ -33,15 +32,15 @@ public class VillagesTeleporter implements ITeleporter {
         return pos;
     }
 
-    public VillagesTeleporter() {
+    public DangerTeleporter() {
     }
 
     @Nullable
     private PortalInfo placeInWorld(ServerWorld destWorld, Entity entity, BlockPos pos, boolean isPlayer) {
         boolean isToOverworld = destWorld.getDimensionKey() == World.OVERWORLD;
-        boolean isFromVillages = entity.world.getDimensionKey() == RegistryHandler.VILLAGES && isToOverworld;
+        boolean isFromDanger = entity.world.getDimensionKey() == RegistryHandler.DANGER && isToOverworld;
         BlockPos blockpos = destWorld.getHeight(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, destWorld.getSpawnPoint());
-        if (!isFromVillages) {
+        if (!isFromDanger) {
             BlockPos.Mutable blockpos$mutable = new BlockPos.Mutable();
             for (int y = 255; y >= 1; y--) {
                 blockpos$mutable.add(blockpos.getX(), y, blockpos.getZ());
@@ -84,9 +83,9 @@ public class VillagesTeleporter implements ITeleporter {
     }
 
     private PortalInfo moveToSafeCoords(ServerWorld world, Entity entity, BlockPos pos) {
-        boolean toVillages = world.getDimensionKey() == RegistryHandler.VILLAGES;
+        boolean toDanger = world.getDimensionKey() == RegistryHandler.DANGER;
 
-        if (toVillages) {
+        if (toDanger) {
             if (!world.getFluidState(pos).isEmpty()) {
                 int x = pos.getX();
                 int y = pos.getY();

@@ -443,6 +443,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<RawBacon> RAW_BACON = ITEMS.register("raw_bacon", RawBacon::new);
 
+    public static final RegistryObject<RedAntToken> RED_ANT_TOKEN = ITEMS.register("red_ant_token", RedAntToken::new);
+
     public static final RegistryObject<Item> ROBOT_FINGER = ITEMS.register("robot_finger", RobotFinger::new);
 
     public static final RegistryObject<Item> ROBOT_HAND = ITEMS.register("robot_hand", RobotHand::new);

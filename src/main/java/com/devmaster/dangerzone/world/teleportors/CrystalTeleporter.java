@@ -1,4 +1,4 @@
-package com.devmaster.dangerzone.functions;
+package com.devmaster.dangerzone.world.teleportors;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.block.BlockState;
