@@ -19,6 +19,7 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
@@ -38,7 +39,7 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         this.experienceValue = 10;
     }
 
-    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
+    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName().copyRaw().mergeStyle(TextFormatting.RED).mergeStyle(TextFormatting.BOLD), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
 
     @Override
     public void livingTick() {
@@ -195,4 +196,5 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         super.removeTrackingPlayer(player);
         this.bossInfo.removePlayer(player);
     }
+
 }
