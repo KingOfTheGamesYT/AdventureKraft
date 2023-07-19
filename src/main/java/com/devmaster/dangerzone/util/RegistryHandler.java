@@ -5,7 +5,6 @@ import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.items.EmeraldPickaxe;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
@@ -548,6 +547,7 @@ public class RegistryHandler {
     public static final RegistryObject<SpawnEgg> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEgg(RegistryHandler.TEWTIY, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     //Tools and Weapons
+
     public static final RegistryObject<CoarseAmethystAxe> COARSE_AMETHYST_AXE = ITEMS.register("coarse_amethyst_axe", CoarseAmethystAxe::new);
 
     public static final RegistryObject<CoarseAmethystHoe> COARSE_AMETHYST_HOE = ITEMS.register("coarse_amethyst_hoe", CoarseAmethystHoe::new);
@@ -569,6 +569,7 @@ public class RegistryHandler {
     public static final RegistryObject<EmeraldShovel> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", EmeraldShovel::new);
 
     public static final RegistryObject<EmeraldSword> EMERALD_SWORD = ITEMS.register("emerald_sword", EmeraldSword::new);
+    public static final RegistryObject<Hammy> HAMMY = ITEMS.register("hammy", Hammy::new);
 
     public static final RegistryObject<MantisClaw> MANTIS_CLAW = ITEMS.register("mantis_claw", MantisClaw::new);
 

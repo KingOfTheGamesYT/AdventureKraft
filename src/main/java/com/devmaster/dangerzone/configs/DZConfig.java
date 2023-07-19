@@ -448,6 +448,13 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue Termiteweight;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Termiteinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Termiteexclude;
+    public static ForgeConfigSpec.IntValue HAMMY_DAMAGE;
+    public static ForgeConfigSpec.IntValue HAMMY_DURABILITY;
+    public static ForgeConfigSpec.IntValue HAMMY_HIT_COST;
+    public static ForgeConfigSpec.IntValue HAMMY_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue HAMMY_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue HAMMY_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue HAMMY_ATTACK_SPEED;
 
     public DZConfig() {
     }
@@ -1043,6 +1050,15 @@ public class DZConfig {
         Termiteinclude = builder.defineList("include Termite", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         Termiteexclude = builder.defineList("exclude Termite", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
+
+        builder.comment("Hammy Attributes");
+        HAMMY_DAMAGE = builder.comment("Hammy Damage").defineInRange("HAMMY_DAMAGE", 65, 0, 1000);
+        HAMMY_DURABILITY = builder.comment("Hammy Durability").defineInRange("HAMMY_DURABILITY", 10000, 0, 10000);
+        HAMMY_HIT_COST = builder.comment("How much durability a Hammy loses when an entity is hit").defineInRange("HAMMY_HIT_COST", 1, 0, 10000);
+        HAMMY_HARVEST_LEVEL = builder.comment("Hammy Harvest Level").defineInRange("HAMMY_HARVEST_LEVEL", 5, 0, 1000);
+        HAMMY_ENCHANTABILITY = builder.comment("Hammy Encahntability").defineInRange("HAMMY_ENCHANTABILITY", 100, 0, 1000);
+        HAMMY_EFFICIENCY = builder.comment("Hammy Efficiency").defineInRange("HAMMY_EFFICIENCY", 15, 0, 1000);
+        HAMMY_ATTACK_SPEED = builder.comment("Hammy Attack Speed, must be whole number").defineInRange("HAMMY_ATTACK_SPEED", 1, 0, 1000);
 
         builder.pop();
         }
