@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dangerzone:blocks/egg/magma_cube_egg_ore"
+  }
+}
