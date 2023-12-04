@@ -25,7 +25,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
 
 
-public class Godzilla extends MonsterEntity implements IRangedAttackMob{
+public class Godzilla extends CreatureEntity implements IRangedAttackMob{
     public boolean collided = false;
     public boolean crush = false;
     private int jumped = 0;

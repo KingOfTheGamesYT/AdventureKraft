@@ -63,6 +63,12 @@
         "maxCount": 4
       },
       {
+        "type": "dangerzone:godzilla",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
         "type": "dangerzone:notbreebree",
         "weight": 100,
         "minCount": 4,
