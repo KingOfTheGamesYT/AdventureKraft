@@ -60,9 +60,6 @@
   "item.dangerzone.termite_token": "Termite Token",
   "item.dangerzone.red_ant_token": "Red Ant Token",
 
-
-
-
   "_comment": "Petrified Ores",
   "block.dangerzone.butterfly_egg_ore": "Petrified Butterfly Ore",
   "block.dangerzone.godzilla_egg_ore": "Petrified Godzilla Ore",
@@ -115,7 +112,6 @@
   "itemGroup.dangerzonearmory": "AdventureKraft Armory",
   "itemGroup.dangerzonepetrifiedores": "AdventureKraft Petrified Ores",
   "itemGroup.dangerzonewip": "AdventureKraft WIP",
-
 
   "_comment": "Tools",
   "item.dangerzone.emerald_axe": "Emerald Axe",
@@ -171,7 +167,6 @@
   "item.dangerzone.fire_cake_sword": "Fire Cake Sword",
   "item.dangerzone.titanium_cake_sword": "Titanium Cake Sword",
 
-
   "_comment": "Entities",
   "entity.dangerzone.tewtiy": "Tewtiy",
   "entity.dangerzone.stampylongnose": "StampyLongNose",
@@ -199,8 +194,6 @@
   "entity.dangerzone.red_cow": "Red Cow",
   "entity.dangerzone.red_ant": "Red Ant",
   "entity.dangerzone.termite": "Termite",
-
-
 
   "_comment": "Biomes",
   "biome.dangerzone.villages": "Villages",
