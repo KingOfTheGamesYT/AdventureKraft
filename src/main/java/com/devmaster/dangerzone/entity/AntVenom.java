@@ -96,7 +96,7 @@ public class AntVenom extends CreatureEntity {
         return true;
     }
     public boolean canDespawn(double distanceToClosestPlayer) {
-        return false;
+        return true;
     }
 
 }

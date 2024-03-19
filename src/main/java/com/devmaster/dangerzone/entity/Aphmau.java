@@ -96,7 +96,7 @@ public class Aphmau extends CreatureEntity {
         return true;
     }
     public boolean canDespawn(double distanceToClosestPlayer) {
-        return false;
+        return true;
     }
 
 }

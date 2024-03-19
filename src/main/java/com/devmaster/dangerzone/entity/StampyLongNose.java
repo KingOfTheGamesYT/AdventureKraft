@@ -109,7 +109,7 @@ public class StampyLongNose extends CreatureEntity {
     }
 
     public boolean canDespawn(double distanceToClosestPlayer) {
-        return false;
+        return true;
     }
 
 }

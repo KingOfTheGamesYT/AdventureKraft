@@ -107,7 +107,7 @@ public class NotBreeBree extends CreatureEntity {
     }
 
     public boolean canDespawn(double distanceToClosestPlayer) {
-        return false;
+        return true;
     }
 
 }

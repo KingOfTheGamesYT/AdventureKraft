@@ -108,7 +108,7 @@ public class Tewtiy extends CreatureEntity {
     }
 
     public boolean canDespawn(double distanceToClosestPlayer) {
-        return false;
+        return true;
     }
 }
 

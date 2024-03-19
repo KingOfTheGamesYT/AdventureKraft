@@ -153,7 +153,7 @@ public class Technoblade extends CreatureEntity {
     }
 
     public boolean canDespawn(double distanceToClosestPlayer) {
-        return false;
+        return true;
     }
 
     public void writeAdditional(CompoundNBT comnbt) {
