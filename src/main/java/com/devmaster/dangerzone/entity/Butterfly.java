@@ -128,7 +128,7 @@ public class Butterfly extends CreatureEntity {
 
     @Override
     protected boolean isDespawnPeaceful() {
-        return true;
+        return false;
     }
 
     protected boolean canTriggerWalking() {

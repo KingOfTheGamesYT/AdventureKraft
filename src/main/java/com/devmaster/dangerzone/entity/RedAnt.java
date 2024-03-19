@@ -92,7 +92,7 @@ public class RedAnt extends CreatureEntity {
 
     @Override
     protected boolean isDespawnPeaceful() {
-        return true;
+        return false;
     }
 
     public boolean canDespawn(double distanceToClosestPlayer) {

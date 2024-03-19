@@ -141,7 +141,7 @@ public class Termite extends AnimalEntity {
 
     @Override
     protected boolean isDespawnPeaceful() {
-        return true;
+        return false;
     }
 
     public boolean canDespawn(double distanceToClosestPlayer) {

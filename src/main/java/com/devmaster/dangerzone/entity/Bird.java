@@ -131,7 +131,7 @@ public class Bird extends CreatureEntity {
 
     @Override
     protected boolean isDespawnPeaceful() {
-        return true;
+        return false;
     }
 
     protected boolean canTriggerWalking() {
