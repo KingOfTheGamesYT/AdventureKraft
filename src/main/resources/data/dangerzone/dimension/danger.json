@@ -18,8 +18,8 @@
         }
       ],
       "biome": "dangerzone:danger",
-      "lakes": false,
-      "features": false,
+      "lakes": true,
+      "features": true,
       "structures": {
         "structures": {}
       }

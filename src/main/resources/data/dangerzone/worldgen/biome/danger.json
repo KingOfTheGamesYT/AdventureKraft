@@ -7,12 +7,12 @@
       "block_search_extent": 8,
       "offset": 2
     },
-    "sky_color": 7907327,
-    "fog_color": 12638463,
-    "water_color": 4159204,
-    "water_fog_color": 329011,
-    "grass_color": 6200628,
-    "foliage_color": 6200628
+    "sky_color": 855309,
+    "fog_color": 2995296,
+    "water_color": 10354735,
+    "water_fog_color": 340759,
+    "grass_color": 855309,
+    "foliage_color": 855309
   },
   "surface_builder": "minecraft:grass",
   "carvers": {
@@ -21,8 +21,12 @@
   },
   "features": [
     [
-      "minecraft:ore_dirt"
-    ]
+      "minecraft:lake_water",
+      "minecraft:lake_lava"
+  ],
+[
+  "minecraft:ore_dirt"
+]
 
   ],
   "starts": [
@@ -91,22 +95,92 @@
         "weight": 100,
         "minCount": 4,
         "maxCount": 4
-      }
-    ],
-    "ambient": [
-      {
-        "type": "dangerzone:rainbow_ant",
-        "weight": 10,
-        "minCount": 8,
-        "maxCount": 8
       },
       {
-        "type": "dangerzone:butterfly",
-        "weight": 10,
-        "minCount": 8,
-        "maxCount": 8
-      }
-    ]
+        "type": "minecraft:ender_dragon",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:zoglin",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:wither",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+          "type": "minecraft:zombie",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+        },
+        {
+          "type": "minecraft:zombie_villager",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        },
+        {
+          "type": "minecraft:witch",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        },
+        {
+          "type": "minecraft:vindicator",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        },
+        {
+          "type": "minecraft:evoker",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        },
+        {
+          "type": "minecraft:illusioner",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        },
+        {
+          "type": "minecraft:pillager",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        },
+        {
+          "type": "minecraft:husk",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        },
+        {
+          "type": "minecraft:drowned",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        },
+        {
+          "type": "minecraft:ravager",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        },
+        {
+          "type": "minecraft:vex",
+          "weight": 100,
+          "minCount": 4,
+          "maxCount": 4
+        }
+      ]
   },
   "spawn_costs": {},
   "player_spawn_friendly": true,
