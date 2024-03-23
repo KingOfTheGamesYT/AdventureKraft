@@ -5,10 +5,6 @@
     "settings": {
       "layers": [
         {
-          "height": 1,
-          "block": "minecraft:bedrock"
-        },
-        {
           "height": 6,
           "block": "minecraft:dirt"
         },
