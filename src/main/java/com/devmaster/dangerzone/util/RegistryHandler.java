@@ -88,6 +88,7 @@ public class RegistryHandler {
     //Blocks
     public static final RegistryObject<Block> ABYSSAL_ORE_BLOCK = BLOCKS.register("abyssal_ore_block", AbyssalOreBlock::new);
     public static final RegistryObject<Block> ABYSSAL_ORE_VERTICAL_SLAB = conditionallyRegisterBlock("abyssal_ore_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.from(Blocks.STONE_SLAB)), () -> isLoaded("quark"));
+    public static final RegistryObject<Block> ADAMANTINE_BLOCK = BLOCKS.register("adamantine_block", AdamantineBlock::new);
 
     public static final RegistryObject<Block> ALUMINIUM_BLOCK = BLOCKS.register("aluminium_block", AluminiumBlock::new);
 
@@ -129,6 +130,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> PLAY_BUTTON_ORE_BLOCK = BLOCKS.register("play_button_ore_block", PlayButtonOreBlock::new);
 
+    public static final RegistryObject<Block> RED_BLOCK = BLOCKS.register("red_block", RedBlock::new);
+
     public static final RegistryObject<Block> SALT_ORE_BLOCK = BLOCKS.register("salt_ore_block", SaltOreBlock::new);
 
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = BLOCKS.register("sapphire_block", SapphireBlock::new);
@@ -147,6 +150,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> ABYSSAL_ORE_BLOCK_ITEM = ITEMS.register("abyssal_ore_block", () -> new BlockItemBase(ABYSSAL_ORE_BLOCK.get()));
 
     public static final RegistryObject<Item> ABYSSAL_ORE_VERTICAL_SLAB_ITEM = conditionallyRegisterItem("abyssal_ore_vertical_slab", () -> new BlockItemBase(ABYSSAL_ORE_VERTICAL_SLAB.get()), () -> isLoaded("quark"));
+    public static final RegistryObject<Item> ADAMANTINE_BLOCK_ITEM = ITEMS.register("adamantine_block", () -> new BlockItemBase(ADAMANTINE_BLOCK.get()));
 
     public static final RegistryObject<Item> ALUMINIUM_BLOCK_ITEM = ITEMS.register("aluminium_block", () -> new BlockItemBase(ALUMINIUM_BLOCK.get()));
 
