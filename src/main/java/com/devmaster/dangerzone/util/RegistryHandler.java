@@ -398,6 +398,7 @@ public class RegistryHandler {
                             .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
 
     //Items
+    public static final RegistryObject<Item> ALLOSAURUS_TOOTH = ITEMS.register("alosaurus_tooth", AllosaurusTooth::new);
     public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("aluminium_ingot", AluminiumIngot::new);
 
     public static final RegistryObject<Item> ALUMINIUM_LUMP = ITEMS.register("aluminium_lump", AluminiumLump::new);
