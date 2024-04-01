@@ -59,6 +59,8 @@
   "item.dangerzone.termite_eye": "Termite Eye",
   "item.dangerzone.termite_token": "Termite Token",
   "item.dangerzone.red_ant_token": "Red Ant Token",
+  "item.dangerzone.allosaurus_tooth": "Allosaurus Tooth",
+
 
   "_comment": "Petrified Ores",
   "block.dangerzone.butterfly_egg_ore": "Petrified Butterfly Ore",
@@ -96,6 +98,7 @@
   "block.dangerzone.leather_block": "Leather Block",
   "block.dangerzone.orange_block": "Orange Block",
   "block.dangerzone.play_button_ore_block": "Play Button Ore",
+  "block.dangerzone.red_block": "Red Block",
   "block.dangerzone.salt_ore_block": "Salt Ore",
   "block.dangerzone.sapphire_block": "Sapphire Block",
   "block.dangerzone.sapphire_ore_block": "Sapphire Ore",

@@ -191,6 +191,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> ORANGE_BLOCK_ITEM = ITEMS.register("orange_block", () -> new BlockItemBase(ORANGE_BLOCK.get()));
 
     public static final RegistryObject<Item> PLAY_BUTTON_ORE_BLOCK_ITEM = ITEMS.register("play_button_ore_block", () -> new BlockItemBase(PLAY_BUTTON_ORE_BLOCK.get()));
+    public static final RegistryObject<Item> RED_BLOCK_ITEM = ITEMS.register("red_block", () -> new BlockItemBase(RED_BLOCK.get()));
 
     public static final RegistryObject<Item> SALT_ORE_BLOCK_ITEM = ITEMS.register("salt_ore_block", () -> new BlockItemBase(SALT_ORE_BLOCK.get()));
 
@@ -398,7 +399,7 @@ public class RegistryHandler {
                             .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
 
     //Items
-    public static final RegistryObject<Item> ALLOSAURUS_TOOTH = ITEMS.register("alosaurus_tooth", AllosaurusTooth::new);
+    public static final RegistryObject<Item> ALLOSAURUS_TOOTH = ITEMS.register("allosaurus_tooth", AllosaurusTooth::new);
     public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("aluminium_ingot", AluminiumIngot::new);
 
     public static final RegistryObject<Item> ALUMINIUM_LUMP = ITEMS.register("aluminium_lump", AluminiumLump::new);
