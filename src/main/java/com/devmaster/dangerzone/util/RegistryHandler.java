@@ -610,6 +610,10 @@ public class RegistryHandler {
     public static final RegistryObject<FireCakeSword> FIRE_CAKE_SWORD = ITEMS.register("fire_cake_sword", FireCakeSword::new);
 
     public static final RegistryObject<TitaniumCakeSword> TITANIUM_CAKE_SWORD = ITEMS.register("titanium_cake_sword", TitaniumCakeSword::new);
+    public static final RegistryObject<TitaniumHoe> TITANIUM_HOE = ITEMS.register("titanium_hoe", TitaniumHoe::new);
+    public static final RegistryObject<TitaniumShovel> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", TitaniumShovel::new);
+    public static final RegistryObject<TitaniumPickaxe> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe", TitaniumPickaxe::new);
+    public static final RegistryObject<TitaniumAxe> TITANIUM_AXE = ITEMS.register("titanium_axe", TitaniumAxe::new);
 
     //SOUNDS
     public static final RegistryObject<SoundEvent> AMOXICILLIN_AMBIENT = SOUNDS.register("amoxcillin_ambient", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "amoxcillin_ambient")));
