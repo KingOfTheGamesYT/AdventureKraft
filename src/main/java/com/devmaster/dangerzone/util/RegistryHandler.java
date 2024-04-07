@@ -306,6 +306,12 @@ public class RegistryHandler {
                             .size(1.0F, 3.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "cave_fisher").toString()));
 
+    public static final RegistryObject<EntityType<EasterBunny>> EASTER_BUNNY = ENTITIES
+            .register("easter_bunny",
+                    () -> EntityType.Builder.<EasterBunny>create(EasterBunny::new, EntityClassification.CREATURE)
+                            .size(2.0F, 1.5F)
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "easter_bunny").toString()));
+
     public static final RegistryObject<EntityType<Ent>> ENT = ENTITIES
             .register("ent",
                     () -> EntityType.Builder.<Ent>create(Ent::new, EntityClassification.CREATURE)
@@ -384,7 +390,6 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<Termite>create(Termite::new, EntityClassification.CREATURE)
                             .size(0.9f, .9f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "termite").toString()));
-
 
     public static final RegistryObject<EntityType<Tewtiy>> TEWTIY = ENTITIES
             .register("tewtiy",

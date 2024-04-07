@@ -202,6 +202,8 @@
   "entity.dangerzone.red_cow": "Red Cow",
   "entity.dangerzone.red_ant": "Red Ant",
   "entity.dangerzone.termite": "Termite",
+  "entity.dangerzone.easter_bunny": "Easter Bunny",
+
 
   "_comment": "Biomes",
   "biome.dangerzone.villages": "Villages",

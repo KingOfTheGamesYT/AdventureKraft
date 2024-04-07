@@ -33,7 +33,6 @@
   ],
   "spawners": {
     "monster": [
-
     ],
     "creature": [
       {
@@ -179,8 +178,20 @@
           "weight": 100,
           "minCount": 4,
           "maxCount": 4
-        }
-      ]
+        },
+      {
+        "type": "dangerzone:red_ant",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "dangerzone:easter_bunny",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ]
   },
   "spawn_costs": {},
   "player_spawn_friendly": true,
