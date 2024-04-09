@@ -453,6 +453,7 @@ public class RegistryHandler {
     public static final RegistryObject<RainbowAntToken> RAINBOW_ANT_TOKEN = ITEMS.register("rainbow_ant_token", RainbowAntToken::new);
 
     public static final RegistryObject<RawBacon> RAW_BACON = ITEMS.register("raw_bacon", RawBacon::new);
+    public static final RegistryObject<RedAntEye> RED_ANT_EYE = ITEMS.register("red_ant_eye", RedAntEye::new);
 
     public static final RegistryObject<RedAntToken> RED_ANT_TOKEN = ITEMS.register("red_ant_token", RedAntToken::new);
 
