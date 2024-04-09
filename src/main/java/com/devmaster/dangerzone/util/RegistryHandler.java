@@ -463,6 +463,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", Sapphire::new);
 
+    public static final RegistryObject<Item> STONE_RUNE = ITEMS.register("stone_rune", StoneRune::new);
+
     public static final RegistryObject<TermiteAbdomen> TERMITE_ABDOMEN = ITEMS.register("termite_abdomen", TermiteAbdomen::new);
 
     public static final RegistryObject<TermiteEye> TERMITE_EYE = ITEMS.register("termite_eye", TermiteEye::new);
