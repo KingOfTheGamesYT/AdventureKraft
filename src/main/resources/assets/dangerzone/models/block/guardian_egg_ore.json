@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dangerzone:blocks/egg/guardian_egg_ore"
+  }
+}

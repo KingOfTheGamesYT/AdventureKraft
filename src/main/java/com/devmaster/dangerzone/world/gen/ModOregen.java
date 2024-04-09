@@ -36,10 +36,7 @@ public class ModOregen {
     public static ConfiguredFeature<?, ?> GODZILLA_ORE;
     public static ConfiguredFeature<?, ?> TERMITE_ORE;
     public static ConfiguredFeature<?, ?> MAGMA_CUBE_ORE;
-
-
-
-
+    public static ConfiguredFeature<?, ?> GUARDIAN_ORE;
 
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
 
@@ -156,6 +153,11 @@ public class ModOregen {
                 .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
                         .square()
                         .chance/* repeat */(3));
+        GUARDIAN_ORE = Feature.ORE.withConfiguration(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.GUARDIAN_EGG_ORE.get().getDefaultState(),3))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(3));
 
         Registry.register(registry, new ResourceLocation("aluminium_ore_block"), ALUMINIUM_ORE);
         Registry.register(registry, new ResourceLocation("abyssal_ore_block"), ABYSSAL_ORE);
@@ -176,8 +178,7 @@ public class ModOregen {
         Registry.register(registry, new ResourceLocation("titanium_ore_block"), TITANIUM_ORE);
         Registry.register(registry, new ResourceLocation("petrified_zombie_ore"), ZOMBIE_ORE);
         Registry.register(registry, new ResourceLocation("magma_cube_egg_ore"), MAGMA_CUBE_ORE);
-
-
+        Registry.register(registry, new ResourceLocation("guardian_egg_ore"), GUARDIAN_ORE);
     }
 
     public static void handleWorldGen(BiomeLoadingEvent event){
@@ -204,7 +205,7 @@ public class ModOregen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ZOMBIE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, TERMITE_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, MAGMA_CUBE_ORE);
-
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, GUARDIAN_ORE);
     }
 
 }

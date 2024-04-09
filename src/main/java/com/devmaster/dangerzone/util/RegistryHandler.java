@@ -487,6 +487,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> BUTTERFLY_EGG_ORE = BLOCKS.register("butterfly_egg_ore", BlockMobOre::new);
 
     public static final RegistryObject<Block> GODZILLA_EGG_ORE = BLOCKS.register("godzilla_egg_ore", BlockMobOre::new);
+    public static final RegistryObject<Block> GUARDIAN_EGG_ORE = BLOCKS.register("guardian_egg_ore", BlockMobOre::new);
 
     public static final RegistryObject<Block> MAGMA_CUBE_EGG_ORE = BLOCKS.register("magma_cube_egg_ore", BlockMobOre::new);
 
@@ -509,6 +510,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> BUTTERFLY_EGG_ORE_ITEM = ITEMS.register("butterfly_egg_ore", () -> new BlockItemMobOre(BUTTERFLY_EGG_ORE.get()));
 
     public static final RegistryObject<Item> GODZILLA_EGG_ORE_ITEM = ITEMS.register("godzilla_egg_ore", () -> new BlockItemMobOre(GODZILLA_EGG_ORE.get()));
+    public static final RegistryObject<Item> GUARDIAN_EGG_ORE_ITEM = ITEMS.register("guardian_egg_ore", () -> new BlockItemMobOre(GUARDIAN_EGG_ORE.get()));
 
     public static final RegistryObject<Item> REDROSEWARRIOR_EGG_ORE_ITEM = ITEMS.register("redrosewarrior_egg_ore", () -> new BlockItemMobOre(REDROSEWARRIOR_EGG_ORE.get()));
 
