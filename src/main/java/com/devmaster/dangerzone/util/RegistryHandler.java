@@ -443,6 +443,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<MinersDreamItem> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
     public static final RegistryObject<Item> MITHRIL_LUMP = ITEMS.register("mithril_lump", MithrilLump::new);
+    public static final RegistryObject<Popcorn> POPCORN = ITEMS.register("popcorn", Popcorn::new);
 
     public static final RegistryObject<RainbowAntAbdomen> RAINBOW_ANT_ABDOMEN = ITEMS.register("rainbow_ant_abdomen", RainbowAntAbdomen::new);
 
