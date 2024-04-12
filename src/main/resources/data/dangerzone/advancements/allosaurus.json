@@ -1,0 +1,28 @@
+{
+  "display": {
+    "background": "dangerzone:textures/items/mineral/copper_lump.png",
+    "icon": {
+      "item": "dangerzone:allosaurus_spawn_egg"
+    },
+    "title": {
+      "translate": "dangerzone.allosaurus.title"
+    },
+    "description": {
+      "translate": "advancements.allosaurus.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "dangerzone:allosaurus"
+        }
+      }
+    }
+  }
+}

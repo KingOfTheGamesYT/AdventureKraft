@@ -80,6 +80,10 @@
   "block.dangerzone.petrified_zombie_ore": "Petrified Zombie Ore",
   "block.dangerzone.guardian_egg_ore": "Petrified Guardian Ore",
 
+  "_comment": "Advancements",
+  "dangerzone.allosaurus.title": "Wait didn't they go extinct?",
+  "advancements.allosaurus.descr": "Kill an Allosaurus",
+
 
   "_comment": "Blocks",
   "block.dangerzone.abyssal_ore_block": "Abyssal Ore",
