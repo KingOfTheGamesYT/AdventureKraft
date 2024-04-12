@@ -18,6 +18,6 @@ public class AllosaurusTooth extends Item {
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7f" + "A ancient tooth" + "\u00A7f"));
+        tooltip.add(new StringTextComponent("\u00A7f" + "They don't wash their teeth" + "\u00A7f"));
     }
 }

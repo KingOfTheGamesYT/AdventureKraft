@@ -133,6 +133,25 @@
             }
           ],
           "name": "dangerzone:copper_lump"
+        },
+        {
+          "type": "minecraft:item",
+
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            },
+            {
+              "function": "minecraft:looting_enchant",
+              "count": 1.0
+            }
+          ],
+          "name": "dangerzone:allosaurus_tooth"
         }
       ]
     }
