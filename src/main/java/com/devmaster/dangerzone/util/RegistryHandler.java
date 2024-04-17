@@ -553,6 +553,7 @@ public class RegistryHandler {
     public static final RegistryObject<SpawnEgg> NOTBREEBREE_SPAWN_EGG = ITEMS.register("notbreebree_spawn_egg", () -> new SpawnEgg(RegistryHandler.NOTBREEBREE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<SpawnEgg> RAINBOW_ANT_SPAWN_EGG = ITEMS.register("rainbow_ant_spawn_egg", () -> new SpawnEgg(RegistryHandler.RAINBOWANT, 0, 0, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> RED_ANT_SPAWN_EGG = ITEMS.register("red_ant_spawn_egg", () -> new SpawnEgg(RegistryHandler.RED_ANT, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<SpawnEgg> RED_COW_SPAWN_EGG = ITEMS.register("red_cow_spawn_egg", () -> new SpawnEgg(RegistryHandler.RED_COW, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 

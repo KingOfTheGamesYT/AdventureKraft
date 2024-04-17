@@ -1,0 +1,66 @@
+{
+  "parent": "dangerzone:allosaurus",
+  "display": {
+    "icon": {
+      "item": "dangerzone:red_ant_spawn_egg"
+    },
+    "title": {
+      "translate": "dangerzone.kill_all_insects.title"
+    },
+    "description": {
+      "translate": "advancements.kill_all_insects.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "rainbow_ant": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "dangerzone:rainbow_ant"
+        }
+      }
+    },
+    "red_ant": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "dangerzone:red_ant"
+        }
+      }
+    },
+    "butterfly": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "dangerzone:butterfly"
+        }
+      }
+    },
+    "termite": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "dangerzone:termite"
+        }
+      }
+    }
+  },
+    "requirements": [
+      [
+        "rainbow_ant"
+      ],
+      [
+        "red_ant"
+      ],
+      [
+        "butterfly"
+      ],
+      [
+        "termite"
+      ]
+    ]
+  }

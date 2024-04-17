@@ -40,8 +40,9 @@
   "item.dangerzone.moldy_spawn_egg": "Spawn Moldy",
   "item.dangerzone.notbreebree_spawn_egg": "Spawn NotBreeBree",
   "item.dangerzone.rainbow_ant_spawn_egg": "Spawn Rainbow Ant",
+  "item.dangerzone.red_ant_spawn_egg": "Spawn Red Ant",
   "item.dangerzone.red_cow_spawn_egg": "Spawn Red Cow",
-  "item.dangerzone.termite_spawn_egg": "Spawn Red Termite",
+  "item.dangerzone.termite_spawn_egg": "Spawn Termite",
   "item.dangerzone.redrosewarrior_spawn_egg": "Spawn RedRoseWarrior",
   "item.dangerzone.robo-bomb_spawn_egg": "Spawn Robo-Bomb",
   "item.dangerzone.stampylongnose_spawn_egg": "Spawn StampyLongnose",
@@ -83,7 +84,8 @@
   "_comment": "Advancements",
   "dangerzone.allosaurus.title": "Wait didn't they go extinct?",
   "advancements.allosaurus.descr": "Kill an Allosaurus",
-
+  "dangerzone.kill_all_insects.title": "Insect squasher",
+  "advancements.kill_all_insects.descr": "Kill all insects",
 
   "_comment": "Blocks",
   "block.dangerzone.abyssal_ore_block": "Abyssal Ore",
