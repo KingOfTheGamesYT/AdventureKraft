@@ -483,6 +483,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", TitaniumIngot::new);
 
     public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget", TitaniumNugget::new);
+    public static final RegistryObject<Item> WATER_DRAGON_SCALE = ITEMS.register("water_dragon_scale", WaterDragonScale::new);
 
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", Wrench::new);
 
