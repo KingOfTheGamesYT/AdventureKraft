@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dangerzone:godzilla_egg_ore"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result":
+  {
+    "item": "dangerzone:godzilla_spawn_egg",
+    "count": 1
+  }
+}
