@@ -11,6 +11,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.math.BlockPos;
@@ -45,7 +46,7 @@ public class Hammy extends SwordItem {
         }
 
         public Ingredient getRepairMaterial() {
-            return null;
+            return Ingredient.fromItems(Items.AIR);
         }
     };
 
