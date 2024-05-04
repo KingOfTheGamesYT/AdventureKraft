@@ -442,7 +442,9 @@ public class RegistryHandler {
     public static final RegistryObject<DeadRainbowAnt> DEAD_RAINBOW_ANT = ITEMS.register("dead_rainbow_ant", DeadRainbowAnt::new);
 
     public static final RegistryObject<DeadTermite> DEAD_TERMITE = ITEMS.register("dead_termite", DeadTermite::new);
-
+    public static final RegistryObject<StairItem> INSTANT_BRIDGE = ITEMS.register("instant_bridge", StairItem::new);
+    public static final RegistryObject<StairItem> INSTANT_STAIRS_UP = ITEMS.register("instant_stairs_up", StairItem::new);
+    public static final RegistryObject<StairItem> INSTANT_STAIRS_DOWN = ITEMS.register("instant_stairs_down", StairItem::new);
     public static final RegistryObject<MinersDreamItem> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
     public static final RegistryObject<Item> MITHRIL_LUMP = ITEMS.register("mithril_lump", MithrilLump::new);
     public static final RegistryObject<Popcorn> POPCORN = ITEMS.register("popcorn", Popcorn::new);
