@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "dangerzone:textures/items/mineral/copper_lump.png",
+    "background": "dangerzone:textures/gui/advancement.png",
     "icon": {
       "item": "dangerzone:allosaurus_spawn_egg"
     },
