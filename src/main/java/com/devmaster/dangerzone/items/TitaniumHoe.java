@@ -72,6 +72,6 @@ public class TitaniumHoe extends HoeItem {
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7b" + "Canadian" + "\u00A7b"));
+        tooltip.add(new StringTextComponent("\u00A7b" + "was used to make several Canadian farm lands, by canadians" + "\u00A7b"));
     }
 }
