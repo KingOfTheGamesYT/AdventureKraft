@@ -39,7 +39,7 @@ public class AppleBlock extends Block {
 
     @Override
     public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new StringTextComponent("\u00A7c" + "so red so wonderful" + "\u00A7c"));
+        tooltip.add(new StringTextComponent("\u00A7c" + "so red, so wonderful" + "\u00A7c"));
     }
 
 }

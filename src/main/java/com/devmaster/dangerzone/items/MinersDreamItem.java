@@ -69,6 +69,6 @@ public class MinersDreamItem extends Item {
 		return new ActionResult<>(ActionResultType.FAIL, stack);
 	}
 	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-		tooltip.add(new StringTextComponent("\u00A72" + "You've gotta try it! Make one. Now. Take it underground, tap it on a block in front of you at your feet, and be amazed! Indeed. It removes blocks from a large area leaving only the ores behind, instantly. It even lights the place up with torches. All you need to do is run amok with your pickaxe and reap the rewards!" + "\u00A72"));
+		tooltip.add(new StringTextComponent("\u00A72" + "You've gotta try it! Make one. Now. Take it underground, tap it on a block in front of you at your feet, and be amazed! Indeed. It removes blocks from a large area, leaving only the ores behind, instantly. It even lights the place up with torches. All you need to do is run amok with your pickaxe and reap the rewards!" + "\u00A72"));
 	}
 }
