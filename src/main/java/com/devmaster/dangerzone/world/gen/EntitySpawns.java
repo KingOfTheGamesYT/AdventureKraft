@@ -130,7 +130,7 @@ public class EntitySpawns {
                         event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(RegistryHandler.RED_ANT.get(), DZConfig.RedAntweight.get(), DZConfig.RedAntmin.get(), DZConfig.RedAntmax.get()));
                     }
                     if (biomeTypes.stream().noneMatch(TermiteexcludeList::contains) && biomeTypes.stream().anyMatch(TermiteincludeList::contains)) {
-                        event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(RegistryHandler.TERMITE.get(), DZConfig.Termiteweight.get(), DZConfig.Technoblademin.get(), DZConfig.Termitemax.get()));
+                        event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(RegistryHandler.TERMITE.get(), DZConfig.Termiteweight.get(), DZConfig.Termitemin.get(), DZConfig.Termitemax.get()));
                     }
 
                 } else {
@@ -140,8 +140,6 @@ public class EntitySpawns {
         }
     }
     public static void registerSpawnPlacements() {
-        EntitySpawnPlacementRegistry.register(RegistryHandler.BUTTERFLY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
-        EntitySpawnPlacementRegistry.register(RegistryHandler.RAINBOWANT.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
         EntitySpawnPlacementRegistry.register(RegistryHandler.ATTACK_SQUID.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
         EntitySpawnPlacementRegistry.register(RegistryHandler.BIRD.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
     }
