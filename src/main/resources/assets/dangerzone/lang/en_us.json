@@ -69,7 +69,10 @@
   "item.dangerzone.mithril_lump": "Mithril Lump",
   "item.dangerzone.red_ant_eye": "Red Ant Eye",
   "item.dangerzone.popcorn": "Popcorn",
-
+  "item.dangerzone.instant_bridge": "Instant Bridge",
+  "item.dangerzone.instant_stairs_up": "Instant Stairs up",
+  "item.dangerzone.instant_stairs_down": "Instant Stairs down",
+  "item.dangerzone.bismuth_ingot": "Bismuth Ingot",
 
 
   "_comment": "Petrified Ores",
@@ -159,6 +162,10 @@
 
   "_comment": "Armor",
   "item.dangerzone.coarse_amethyst_helmet": "Coarse Amethyst Helmet",
+  "item.dangerzone.queen_ghidorah_scale_chestplate": "Queen Ghidorah Scale Chestplate",
+  "item.dangerzone.queen_ghidorah_scale_leggings": "Queen Ghidorah Scale Leggings",
+  "item.dangerzone.queen_ghidorah_scale_boots": "Queen Ghidorah Scale Boots",
+  "item.dangerzone.queen_ghidorah_scale_helmet": "Queen Ghidorah Scale Helmet",
   "item.dangerzone.coarse_amethyst_chestplate": "Coarse Amethyst Chestplate",
   "item.dangerzone.coarse_amethyst_leggings": "Coarse Amethyst Leggings",
   "item.dangerzone.coarse_amethyst_boots": "Coarse Amethyst Boots",

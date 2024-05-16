@@ -77,9 +77,11 @@ public class RegistryHandler {
     public static final RegistryObject<LapisHelmet> LAPIS_HELMET = ITEMS.register("lapis_helmet", LapisHelmet::new);
 
     public static final RegistryObject<LapisLeggings> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings",  LapisLeggings::new);
-
+    public static final RegistryObject<QueenGhidorahScaleBoots> QUEEN_GHIDORAH_SCALE_BOOTS = ITEMS.register("queen_ghidorah_scale_boots", QueenGhidorahScaleBoots::new);
+    public static final RegistryObject<QueenGhidorahScaleChestplate> QUEEN_GHIDORAH_SCALE_CHESTPLATE = ITEMS.register("queen_ghidorah_scale_chestplate", QueenGhidorahScaleChestplate::new);
+    public static final RegistryObject<QueenGhidorahScaleHelmet> QUEEN_GHIDORAH_SCALE_HELMET = ITEMS.register("queen_ghidorah_scale_helmet", QueenGhidorahScaleHelmet::new);
+    public static final RegistryObject<QueenGhidorahScaleLeggings> QUEEN_GHIDORAH_SCALE_LEGGINGS = ITEMS.register("queen_ghidorah_scale_leggings", QueenGhidorahScaleLeggings::new);
     public static final RegistryObject<SapphireBoots> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", SapphireBoots::new);
-
     public static final RegistryObject<SapphireChestplate> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", SapphireChestplate::new);
 
     public static final RegistryObject<SapphireHelmet> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", SapphireHelmet::new);
@@ -448,11 +450,8 @@ public class RegistryHandler {
     public static final RegistryObject<MinersDreamItem> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
     public static final RegistryObject<Item> MITHRIL_LUMP = ITEMS.register("mithril_lump", MithrilLump::new);
     public static final RegistryObject<Popcorn> POPCORN = ITEMS.register("popcorn", Popcorn::new);
-
     public static final RegistryObject<RainbowAntAbdomen> RAINBOW_ANT_ABDOMEN = ITEMS.register("rainbow_ant_abdomen", RainbowAntAbdomen::new);
-
     public static final RegistryObject<RainbowAntEye> RAINBOW_ANT_EYE = ITEMS.register("rainbow_ant_eye", RainbowAntEye::new);
-
     public static final RegistryObject<RainbowAntLeg> RAINBOW_ANT_LEG = ITEMS.register("rainbow_ant_leg", RainbowAntLeg::new);
 
     public static final RegistryObject<RainbowAntToken> RAINBOW_ANT_TOKEN = ITEMS.register("rainbow_ant_token", RainbowAntToken::new);
