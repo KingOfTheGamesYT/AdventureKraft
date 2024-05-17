@@ -327,11 +327,11 @@ public class RegistryHandler {
                             .size(9.9F, 5.05F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "godzilla").toString()));
 
-    public static final RegistryObject<EntityType<Hydrolisc>> HYDROLISC = ENTITIES
+  /*  public static final RegistryObject<EntityType<Hydrolisc>> HYDROLISC = ENTITIES
             .register("hydrolisc",
                     () -> EntityType.Builder.<Hydrolisc>create(Hydrolisc::new, EntityClassification.CREATURE)
                             .size(1.0F, 3.5F)
-                            .build(new ResourceLocation(DangerZone.MOD_ID, "hydrolisc").toString()));
+                            .build(new ResourceLocation(DangerZone.MOD_ID, "hydrolisc").toString())); */
 
     public static final RegistryObject<EntityType<Mermaid>> MERMAID = ENTITIES
             .register("mermaid",
