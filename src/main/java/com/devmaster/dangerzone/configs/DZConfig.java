@@ -517,7 +517,30 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue BRIDGE_LENGTH;
     public static ForgeConfigSpec.IntValue STAIR_HEIGHT;
     public static ForgeConfigSpec.IntValue STAIR_DEPTH;
-
+    public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_ARMOR;
+    public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_DURABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_HIT_COST;
+    public static ForgeConfigSpec.IntValue TITANIUM_HELMET_ARMOR;
+    public static ForgeConfigSpec.IntValue TITANIUM_HELMET_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_HELMET_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue TITANIUM_HELMET_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue TITANIUM_HELMET_DURABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_HELMET_HIT_COST;
+    public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_ARMOR;
+    public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_DURABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_HIT_COST;
+    public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_ARMOR;
+    public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_DURABILITY;
+    public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_HIT_COST;
 
     public DZConfig() {
     }
@@ -1118,6 +1141,30 @@ public class DZConfig {
         TITANIUM_SHOVEL_ENCHANTABILITY = builder.comment("Titanium Shovel Encahntability").defineInRange("TITANIUM_SHOVEL_ENCHANTABILITY", 16, 0, 20000);
         TITANIUM_SHOVEL_EFFICIENCY = builder.comment("Titanium Shovel Efficiency").defineInRange("TITANIUM_SHOVEL_EFFICIENCY", 21, 0, 20000);
         TITANIUM_SHOVEL_ATTACK_SPEED = builder.comment("Titanium Shovel Attack Speed, must be whole number").defineInRange("TITANIUM_SHOVEL_ATTACK_SPEED", -1, -20000, 20000);
+        TITANIUM_HELMET_ARMOR = builder.comment("Titanium helmet Armor").defineInRange("TITANIUM_HELMET_ARMOR", 3, 0, 1000);
+        TITANIUM_HELMET_ENCHANTABILITY = builder.comment("Titanium helmet Enchantability").defineInRange("TITANIUM_HELMET_ENCHANTABILITY", 810, 0, 100000);
+        TITANIUM_HELMET_TOUGHNESS = builder.comment("Titanium helmet Toughness, must be a whole number").defineInRange("TITANIUM_HELMET_TOUGHNESS", 0, 0, 100000);
+        TITANIUM_HELMET_KNOCK_BACK_RESISTANCE = builder.comment("Titanium helmet Knockback Resistance").defineInRange("TITANIUM_HELMET_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+        TITANIUM_HELMET_DURABILITY = builder.comment("Titanium helmet Durability").defineInRange("TITANIUM_HELMET_DURABILITY", 231, 0, 100000);
+        TITANIUM_HELMET_HIT_COST = builder.comment("How much durability a Titanium helmet loses when an entity is hit").defineInRange("TITANIUM_HELMET_HIT_COST", 1, 0, 1000);
+        TITANIUM_LEGGINGS_ARMOR = builder.comment("Titanium Leggings Armor").defineInRange("TITANIUM_LEGGINGS_ARMOR", 5, 0, 1000);
+        TITANIUM_LEGGINGS_ENCHANTABILITY = builder.comment("Titanium Leggings Enchantability").defineInRange("TITANIUM_LEGGINGS_ENCHANTABILITY", 810, 0, 100000);
+        TITANIUM_LEGGINGS_TOUGHNESS = builder.comment("Titanium Leggings Toughness, must be a whole number").defineInRange("TITANIUM_LEGGINGS_TOUGHNESS", 0, 0, 100000);
+        TITANIUM_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Titanium Leggings Knockback Resistance").defineInRange("TITANIUM_LEGGINGS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+        TITANIUM_LEGGINGS_DURABILITY = builder.comment("Titanium Leggings Durability").defineInRange("TITANIUM_LEGGINGS_DURABILITY", 315, 0, 100000);
+        TITANIUM_LEGGINGS_HIT_COST = builder.comment("How much durability the Titanium Leggings loses when an entity is hit").defineInRange("TITANIUM_LEGGINGS_HIT_COST", 1, 0, 1000);
+        TITANIUM_CHESTPLATE_ARMOR = builder.comment("Titanium Chestplate Armor").defineInRange("TITANIUM_CHESTPLATE_ARMOR", 6, 0, 1000);
+        TITANIUM_CHESTPLATE_ENCHANTABILITY = builder.comment("Titanium Chestplate Enchantability").defineInRange("TITANIUM_CHESTPLATE_ENCHANTABILITY", 810, 0, 100000);
+        TITANIUM_CHESTPLATE_TOUGHNESS = builder.comment("Titanium Chestplate Toughness, must be a whole number").defineInRange("TITANIUM_CHESTPLATE_TOUGHNESS", 0, 0, 100000);
+        TITANIUM_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Titanium Chestplate Knockback Resistance").defineInRange("TITANIUM_CHESTPLATE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+        TITANIUM_CHESTPLATE_DURABILITY = builder.comment("Titanium Chestplate Durability").defineInRange("TITANIUM_CHESTPLATE_DURABILITY", 336, 0, 100000);
+        TITANIUM_CHESTPLATE_HIT_COST = builder.comment("How much durability a Titanium Chestplatet loses when an entity is hit").defineInRange("TITANIUM_CHESTPLATE_HIT_COST", 1, 0, 1000);
+        TITANIUM_BOOTS_ARMOR = builder.comment("Titanium Boots Armor").defineInRange("TITANIUM_BOOTS_ARMOR", 3, 0, 1000);
+        TITANIUM_BOOTS_ENCHANTABILITY = builder.comment("Titanium Boots Enchantability").defineInRange("TITANIUM_BOOTS_ENCHANTABILITY", 810, 0, 100000);
+        TITANIUM_BOOTS_TOUGHNESS = builder.comment("Titanium Boots Toughness, must be a whole number").defineInRange("TITANIUM_BOOTS_TOUGHNESS", 0, 0, 100000);
+        TITANIUM_BOOTS_KNOCK_BACK_RESISTANCE = builder.comment("Titanium Boots Knockback Resistance").defineInRange("TITANIUM_BOOTS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+        TITANIUM_BOOTS_DURABILITY = builder.comment("Titanium Boots Durability").defineInRange("TITANIUM_BOOTS_DURABILITY", 273, 0, 100000);
+        TITANIUM_BOOTS_HIT_COST = builder.comment("How much durability Titanium Boots lose when an entity is hit").defineInRange("TITANIUM_BOOTS_HIT_COST", 1, 0, 1000);
 
         builder.comment("Godzilla Set Attributes");
         GODZILLA_AXE_DAMAGE = builder.comment("Godzilla Axe Damage").defineInRange("GODZILLA_AXE_DAMAGE", 45, 0, 1000);

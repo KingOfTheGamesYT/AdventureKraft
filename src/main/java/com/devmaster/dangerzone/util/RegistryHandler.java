@@ -87,6 +87,12 @@ public class RegistryHandler {
     public static final RegistryObject<SapphireHelmet> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", SapphireHelmet::new);
 
     public static final RegistryObject<SapphireLeggings> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", SapphireLeggings::new);
+    public static final RegistryObject<TitaniumBoots> TITANIUM_BOOTS = ITEMS.register("titanium_boots", TitaniumBoots::new);
+    public static final RegistryObject<TitaniumChestplate> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate", TitaniumChestplate::new);
+
+    public static final RegistryObject<TitaniumHelmet> TITANIUM_HELMET = ITEMS.register("titanium_helmet", TitaniumHelmet::new);
+
+    public static final RegistryObject<TitaniumLeggings> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings", TitaniumLeggings::new);
 
     //Blocks
     public static final RegistryObject<Block> ABYSSAL_ORE_BLOCK = BLOCKS.register("abyssal_ore_block", AbyssalOreBlock::new);
