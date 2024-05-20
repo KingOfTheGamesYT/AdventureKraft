@@ -43,7 +43,7 @@ public class GodzillaAxe extends AxeItem {
             return (Integer) DZConfig.GODZILLA_AXE_ENCHANTABILITY.get();
 
         }
-        
+
         public Ingredient getRepairMaterial() {
             return Ingredient.fromItems(Items.AIR);
 
