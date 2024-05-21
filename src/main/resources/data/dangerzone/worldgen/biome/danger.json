@@ -190,6 +190,12 @@
         "weight": 100,
         "minCount": 4,
         "maxCount": 4
+      },
+      {
+        "type": "dangerzone:captainsparkelz",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
       }
     ]
   },
