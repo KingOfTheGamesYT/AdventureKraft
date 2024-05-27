@@ -100,11 +100,17 @@ public class EasterBunny extends RabbitEntity {
 
     public ItemStack randomEgg() {
         List<Item> itemList = new ArrayList<>(ForgeRegistries.ITEMS.getValues());
-        itemList.removeIf(item -> !((ResourceLocation) Objects.<ResourceLocation>requireNonNull(item.getRegistryName())).getPath().contains("_spawn_egg"));
+        itemList.removeIf(item -> {
+            ResourceLocation registryName = item.getRegistryName();
+            if (registryName == null) {
+                return true;
+            }
+            String path = registryName.getPath();
+            return !(path.contains("_spawn_egg") || path.contains("spawn_egg_"));
+        });
         Item randomItem = itemList.get(this.rand.nextInt(itemList.size()));
         return randomItem.getDefaultInstance();
     }
-
 }
 
 
