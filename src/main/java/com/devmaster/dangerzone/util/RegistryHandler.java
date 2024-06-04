@@ -112,39 +112,23 @@ public class RegistryHandler {
     public static final RegistryObject<Block> BLOODSTONE_BLOCK = BLOCKS.register("bloodstone_block", BloodStoneBlock::new);
 
     public static final RegistryObject<Block> BROWN_BLOCK = BLOCKS.register("brown_block", BrownBlock::new);
-
     public static final RegistryObject<Block> CATS_EYE_BLOCK = BLOCKS.register("cats_eye_block", CatsEyeBlock::new);
-
     public static final RegistryObject<Block> CATS_EYE_ORE = BLOCKS.register("cats_eye_ore", CatsEyeOre::new);
-
     public static final RegistryObject<Block> COARSE_AMETHYST_BLOCK = BLOCKS.register("coarse_amethyst_block", CoarseAmethystBlock::new);
-
     public static final RegistryObject<Block> COARSE_AMETHYST_ORE_BLOCK = BLOCKS.register("coarse_amethyst_ore_block", CoarseAmethystOreBlock::new);
-
     public static final RegistryObject<Block> COMPRESSED_POPPY_BLOCK = BLOCKS.register("compressed_poppy_block", CompressedPoppyBlock::new);
-
     public static final RegistryObject<Block> CRYSTAL_GRASS = BLOCKS.register("crystal_grass", CrystalGrass::new);
-
     public static final RegistryObject<Block> DARK_BROWN_BLOCK = BLOCKS.register("dark_brown_block", DarkBrownBlock::new);
-
     public static final RegistryObject<Block> DARK_ORANGE_BLOCK = BLOCKS.register("dark_orange_block", DarkOrangeBlock::new);
-
+    public static final RegistryObject<Block> DARK_RED_BLOCK = BLOCKS.register("dark_red_block", DarkRedBlock::new);
     public static final RegistryObject<Block> HEART_BLOCK = BLOCKS.register("heart_block", HeartBlock::new);
-
     public static final RegistryObject<Block> KYANITE = BLOCKS.register("kyanite", Kyanite::new);
-
     public static final RegistryObject<Block> LEATHER_BLOCK = BLOCKS.register("leather_block", LeatherBlock::new);
-
     public static final RegistryObject<Block> ORANGE_BLOCK = BLOCKS.register("orange_block", OrangeBlock::new);
-
     public static final RegistryObject<Block> PLAY_BUTTON_ORE_BLOCK = BLOCKS.register("play_button_ore_block", PlayButtonOreBlock::new);
-
     public static final RegistryObject<Block> RED_BLOCK = BLOCKS.register("red_block", RedBlock::new);
-
     public static final RegistryObject<Block> SALT_ORE_BLOCK = BLOCKS.register("salt_ore_block", SaltOreBlock::new);
-
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = BLOCKS.register("sapphire_block", SapphireBlock::new);
-
     public static final RegistryObject<Block> SAPPHIRE_ORE_BLOCK = BLOCKS.register("sapphire_ore_block", SapphireOreBlock::new);
     public static final RegistryObject<Block> STICKY_BLOCK = BLOCKS.register("sticky_block", StickyBlock::new);
     public static final RegistryObject<Block> TERMITE_TROLL_ORE = BLOCKS.register("termite_troll_ore_block", TermiteTrollOre::new);
@@ -171,6 +155,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> CRYSTAL_GRASS_ITEM = ITEMS.register("crystal_grass", () -> new BlockItemBase(CRYSTAL_GRASS.get()));
     public static final RegistryObject<Item> DARK_BROWN_BLOCK_ITEM = ITEMS.register("dark_brown_block", () -> new BlockItemBase(DARK_BROWN_BLOCK.get()));
     public static final RegistryObject<Item> DARK_ORANGE_BLOCK_ITEM = ITEMS.register("dark_orange_block", () -> new BlockItemBase(DARK_ORANGE_BLOCK.get()));
+    public static final RegistryObject<Item> DARK_RED_BLOCK_ITEM = ITEMS.register("dark_red_block", () -> new BlockItemBase(DARK_RED_BLOCK.get()));
     public static final RegistryObject<Item> HEART_BLOCK_ITEM = ITEMS.register("heart_block", () -> new WIPBlockItemBase(HEART_BLOCK.get()));
     public static final RegistryObject<Item> KYANITE_BLOCK_ITEM = ITEMS.register("kyanite", () -> new BlockItemBase(KYANITE.get()));
     public static final RegistryObject<Item> LEATHER_BLOCK_ITEM = ITEMS.register("leather_block", () -> new BlockItemBase(LEATHER_BLOCK.get()));
@@ -423,42 +408,29 @@ public class RegistryHandler {
     public static final RegistryObject<StairItem> INSTANT_BRIDGE = ITEMS.register("instant_bridge", StairItem::new);
     public static final RegistryObject<StairItem> INSTANT_STAIRS_UP = ITEMS.register("instant_stairs_up", StairItem::new);
     public static final RegistryObject<StairItem> INSTANT_STAIRS_DOWN = ITEMS.register("instant_stairs_down", StairItem::new);
+    public static final RegistryObject<Item> KING_GHIDORAH_SCALE = ITEMS.register("king_ghidorah_scale", KingGhidorahScale::new);
     public static final RegistryObject<MinersDreamItem> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
     public static final RegistryObject<Item> MITHRIL_LUMP = ITEMS.register("mithril_lump", MithrilLump::new);
     public static final RegistryObject<Popcorn> POPCORN = ITEMS.register("popcorn", Popcorn::new);
+    public static final RegistryObject<QueenGhidorahScale> QUEEN_GHIDORAH_SCALE = ITEMS.register("queen_ghidorah_scale", QueenGhidorahScale::new);
     public static final RegistryObject<RainbowAntAbdomen> RAINBOW_ANT_ABDOMEN = ITEMS.register("rainbow_ant_abdomen", RainbowAntAbdomen::new);
     public static final RegistryObject<RainbowAntEye> RAINBOW_ANT_EYE = ITEMS.register("rainbow_ant_eye", RainbowAntEye::new);
     public static final RegistryObject<RainbowAntLeg> RAINBOW_ANT_LEG = ITEMS.register("rainbow_ant_leg", RainbowAntLeg::new);
-
     public static final RegistryObject<RainbowAntToken> RAINBOW_ANT_TOKEN = ITEMS.register("rainbow_ant_token", RainbowAntToken::new);
-
     public static final RegistryObject<RawBacon> RAW_BACON = ITEMS.register("raw_bacon", RawBacon::new);
     public static final RegistryObject<RedAntEye> RED_ANT_EYE = ITEMS.register("red_ant_eye", RedAntEye::new);
-
     public static final RegistryObject<RedAntToken> RED_ANT_TOKEN = ITEMS.register("red_ant_token", RedAntToken::new);
-
     public static final RegistryObject<Item> ROBOT_FINGER = ITEMS.register("robot_finger", RobotFinger::new);
-
     public static final RegistryObject<Item> ROBOT_HAND = ITEMS.register("robot_hand", RobotHand::new);
-
     public static final RegistryObject<Item> SALT = ITEMS.register("salt", Salt::new);
-
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", Sapphire::new);
-
     public static final RegistryObject<Item> STONE_RUNE = ITEMS.register("stone_rune", StoneRune::new);
-
     public static final RegistryObject<TermiteAbdomen> TERMITE_ABDOMEN = ITEMS.register("termite_abdomen", TermiteAbdomen::new);
-
     public static final RegistryObject<TermiteEye> TERMITE_EYE = ITEMS.register("termite_eye", TermiteEye::new);
-
     public static final RegistryObject<TermiteLeg> TERMITE_LEG = ITEMS.register("termite_leg", TermiteLeg::new);
-
     public static final RegistryObject<TermiteToken> TERMITE_TOKEN = ITEMS.register("termite_token", TermiteToken::new);
-
     public static final RegistryObject<Item> TITANIUM_CAKE = ITEMS.register("titanium_cake", TitaniumCake::new);
-
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", TitaniumIngot::new);
-
     public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget", TitaniumNugget::new);
     public static final RegistryObject<Item> WATER_DRAGON_SCALE = ITEMS.register("water_dragon_scale", WaterDragonScale::new);
 
@@ -511,22 +483,14 @@ public class RegistryHandler {
 
     //Spawn Eggs
     public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", () -> new SpawnEgg(RegistryHandler.ALLOSAURUS, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-
     public static final RegistryObject<SpawnEgg> ATTACK_SQUID_SPAWN_EGG = ITEMS.register("attack_squid_spawn_egg", () -> new SpawnEgg(RegistryHandler.ATTACK_SQUID, 0, 0,new Item.Properties().group(DangerZone.TAB)));
     public static final RegistryObject<Item> BASILISK_SCALE = ITEMS.register("basilisk_scale", BasiliskScale::new);
     public static final RegistryObject<Item> BEAVER_SPAWN_EGG = ITEMS.register("beaver_spawn_egg", BeaverSpawnEgg::new);
-
     public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", () -> new SpawnEgg(RegistryHandler.BIRD, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-
     public static final RegistryObject<SpawnEgg> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg", () -> new SpawnEgg(RegistryHandler.BUTTERFLY, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-
     public static final RegistryObject<SpawnEgg> ENT_SPAWN_EGG = ITEMS.register("ent_spawn_egg", () -> new SpawnEgg(RegistryHandler.ENT, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-
     public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", FireFishSpawnEgg::new);
-
     public static final RegistryObject<Item> GODZILLA_SPAWN_EGG = ITEMS.register("godzilla_spawn_egg", () -> new SpawnEgg(RegistryHandler.GODZILLA, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<Item> KING_GHIDORAH_SCALE = ITEMS.register("king_ghidorah_scale", KingGhidorahScale::new);
-
     public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", () -> new SpawnEgg(RegistryHandler.MERMAID, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     public static final RegistryObject<Item> MOLDY_SPAWN_EGG = ITEMS.register("moldy_spawn_egg", MoldySpawnEgg::new);
