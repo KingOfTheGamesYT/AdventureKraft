@@ -31,3 +31,11 @@ run/logs/latest.log
 # Files from Forge MDK
 forge*changelog.txt
 *.log
+.gradle/5.3/executionHistory/executionHistory.bin
+.gradle/5.3/executionHistory/executionHistory.bin
+.gradle/5.3/fileContent/fileContent.lock
+.gradle/5.3/fileHashes/fileHashes.bin
+.gradle/5.3/fileHashes/fileHashes.lock
+.gradle/5.3/javaCompile/classAnalysis.bin
+.gradle/5.3/javaCompile/javaCompile.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
