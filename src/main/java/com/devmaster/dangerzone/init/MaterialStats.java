@@ -79,7 +79,7 @@ public class MaterialStats {
 
 	public enum ArmorMaterials implements IArmorMaterial {
 		//Chestplate durability = 16 * durability
-		COARSE_AMETHYST_ARMOR("coarse_amethyst", 44, new int[]{4, 7, 8, 4}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, COARSE_AMETHYST),
+		COARSE_AMETHYST_ARMOR("coarse_amethyst", 44, new int[]{23, 23, 23, 23}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, COARSE_AMETHYST),
 		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, RUBY),
 		LAPIS_ARMOR("lapis", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, Items.LAPIS_LAZULI),
 		LAVA_ARMOR("lava", 57, new int[]{6,8,9,6}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, LAVA_CRYSTAL),
@@ -88,7 +88,7 @@ public class MaterialStats {
 		TIGER_EYE_ARMOR("tiger_eye", 44, new int[]{4,7,8,4}, 55, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, TIGER_EYE);
 
 
-		private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
+		private static final int[] max_damage_array = new int[]{30, 15, 16, 11};
 		private String name;
 		private SoundEvent equipSound;
 		private int durability, enchantability;
