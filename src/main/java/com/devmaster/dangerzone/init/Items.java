@@ -28,6 +28,7 @@ public class Items {
 	public static Item COARSE_AMETHYST_PICKAXE;
 	public static Item COARSE_AMETHYST_AXE;
 	public static Item COARSE_AMETHYST_SHOVEL;
+	public static Item COARSE_AMETHYST_HOE;
 	public static Item COARSE_AMETHYST_SWORD;
 	public static Item COARSE_AMETHYST_HELMET;
 	public static Item COARSE_AMETHYST_CHESTPLATE;
@@ -260,11 +261,12 @@ public class Items {
 
 				//region materials
 				COARSE_AMETHYST = new CoarseAmethyst().setRegistryName("coarse_amethyst"),
-				COARSE_AMETHYST_PICKAXE = new PickaxeItem(COARSE_AMETHYST_TIER, 1, -2.8F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_pickaxe"),
-				COARSE_AMETHYST_AXE = new AxeItem(COARSE_AMETHYST_TIER, 2, -3F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_axe"),
+				COARSE_AMETHYST_PICKAXE = new PickaxeItem(COARSE_AMETHYST_TIER, 20, -2.8F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_pickaxe"),
+				COARSE_AMETHYST_AXE = new AxeItem(COARSE_AMETHYST_TIER, 20, -3F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_axe"),
 			//	COARSE_AMETHYST_HAMMER = new HammerItem().setReistryName("coarse_amethyst_hammer"),
-				//COARSE_AMETHYST_SHOVEL = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("coarse_amethyst_shovel"),
-				COARSE_AMETHYST_SWORD = new SwordItem(COARSE_AMETHYST_TIER, 3, -2F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_sword"),
+				COARSE_AMETHYST_SHOVEL = new ShovelItem(COARSE_AMETHYST_TIER, 15, -3F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_shovel"),
+				COARSE_AMETHYST_HOE = new ShovelItem(COARSE_AMETHYST_TIER, 10, -3F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_hoe"),
+				COARSE_AMETHYST_SWORD = new SwordItem(COARSE_AMETHYST_TIER, 30, -2F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_sword"),
 				COARSE_AMETHYST_BOOTS = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_helmet"),
 				COARSE_AMETHYST_CHESTPLATE = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_chestplate"),
 				COARSE_AMETHYST_LEGGINGS = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_leggings"),

@@ -18,7 +18,7 @@ public class MaterialStats {
 
 
 	public enum ToolTier implements IItemTier {
-		COARSE_AMETHYST_TIER(11f, 11f, 2000, 4, 19, COARSE_AMETHYST),
+		COARSE_AMETHYST_TIER(-1f, 11f, 2000, 4, 19, COARSE_AMETHYST),
 		RUBY_TIER(16f, 11f, 1500, 5, 21, RUBY),
 		ULTIMATE_TIER(36f, 18f, 3000, 10, 30, null),
 		PINK_TOURMALINE_TIER(7f, 10f, 1100, 4, 17, PINK_TOURMALINE),
@@ -88,7 +88,7 @@ public class MaterialStats {
 		TIGER_EYE_ARMOR("tiger_eye", 44, new int[]{4,7,8,4}, 55, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, TIGER_EYE);
 
 
-		private static final int[] max_damage_array = new int[]{30, 15, 16, 11};
+		private static final int[] max_damage_array = new int[]{25, 36, 34, 30};
 		private String name;
 		private SoundEvent equipSound;
 		private int durability, enchantability;
