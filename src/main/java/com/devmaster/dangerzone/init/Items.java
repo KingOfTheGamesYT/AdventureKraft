@@ -12,8 +12,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.util.function.Supplier;
+
 import static com.devmaster.dangerzone.DangerZone.TAB;
 import static com.devmaster.dangerzone.init.MaterialStats.ArmorMaterials.COARSE_AMETHYST_ARMOR;
+import static com.devmaster.dangerzone.init.MaterialStats.ArmorMaterials.RUBY_ARMOR;
 import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.*;
 
 
@@ -32,7 +35,7 @@ public class Items {
 	public static Item COARSE_AMETHYST_CHESTPLATE;
 	public static Item COARSE_AMETHYST_LEGGINGS;
 	public static Item COARSE_AMETHYST_BOOTS;
-	//private static Supplier<ToolItemProperties> AMETHYST_HAMMER = () -> new ToolItemProperties().attackDamage(6).attackSpeed(-3.5f).tier(AMETHYST_TIER).width(1).setGroup(TAB);
+	private static Item COARSE_AMETHYST_HAMMER;
 
 	public static Item RUBY;
 	public static Item RUBY_PICKAXE;
@@ -43,6 +46,8 @@ public class Items {
 	public static Item RUBY_CHESTPLATE;
 	public static Item RUBY_LEGGINGS;
 	public static Item RUBY_BOOTS;
+	public static Item RUBY_HOE;
+
 	public static Item PINK_TOURMALINE;
 	public static Item PINK_TOURMALINE_PICKAXE;
 	public static Item PINK_TOURMALINE_AXE;
@@ -247,9 +252,9 @@ public class Items {
 				COARSE_AMETHYST = new CoarseAmethyst().setRegistryName("coarse_amethyst"),
 				COARSE_AMETHYST_PICKAXE = new PickaxeItem(COARSE_AMETHYST_TIER, 20, -2.8F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_pickaxe"),
 				COARSE_AMETHYST_AXE = new AxeItem(COARSE_AMETHYST_TIER, 20, -3F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_axe"),
-			//	COARSE_AMETHYST_HAMMER = new HammerItem().setReistryName("coarse_amethyst_hammer"),
+				COARSE_AMETHYST_HAMMER = new HammerItem(new ToolItemProperties().attackDamage(6).attackSpeed(-3.5f).tier(COARSE_AMETHYST_TIER).width(1).setGroup(TAB)).setRegistryName("coarse_amethyst_hammer"),
 				COARSE_AMETHYST_SHOVEL = new ShovelItem(COARSE_AMETHYST_TIER, 15, -3F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_shovel"),
-				COARSE_AMETHYST_HOE = new ShovelItem(COARSE_AMETHYST_TIER, 10, -3F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_hoe"),
+				COARSE_AMETHYST_HOE = new HoeItem(COARSE_AMETHYST_TIER, 10, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_hoe"),
 				COARSE_AMETHYST_SWORD = new SwordItem(COARSE_AMETHYST_TIER, 30, -2F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_sword"),
 				COARSE_AMETHYST_BOOTS = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_helmet"),
 				COARSE_AMETHYST_CHESTPLATE = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_chestplate"),
@@ -257,14 +262,15 @@ public class Items {
 				COARSE_AMETHYST_BOOTS = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_boots"),
 
 				RUBY = new Item(new Item.Properties().group(TAB)).setRegistryName("ruby"),
-			//	RUBY_PICKAXE = new PickaxeItem(RUBY_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_pickaxe"),
-				//RUBY_AXE = new AxeItem(RUBY_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_axe"),
-				//RUBY_SHOVEL = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_shovel"),
-			//	RUBY_SWORD = new SwordItem(RUBY_TIER, 3, -1.7F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_sword"),
-			//	RUBY_HELMET = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_helmet"),
-			//	RUBY_CHESTPLATE = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_chestplate"),
-			//	RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_leggings"),
-			//	RUBY_BOOTS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_boots"),
+				RUBY_PICKAXE = new PickaxeItem(RUBY_TIER, 1, -2.8F, new Item.Properties().group(TAB)).setRegistryName("ruby_pickaxe"),
+				RUBY_AXE = new AxeItem(RUBY_TIER, 6, -3F, new Item.Properties().group(TAB)).setRegistryName("ruby_axe"),
+				RUBY_SHOVEL = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(TAB)).setRegistryName("ruby_shovel"),
+				RUBY_SWORD = new SwordItem(RUBY_TIER, 3, -1.7F, new Item.Properties().group(TAB)).setRegistryName("ruby_sword"),
+				RUBY_HOE = new SwordItem(RUBY_TIER, 3, -1.7F, new Item.Properties().group(TAB)).setRegistryName("ruby_hoe"),
+				RUBY_HELMET = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(TAB)).setRegistryName("ruby_helmet"),
+				RUBY_CHESTPLATE = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(TAB)).setRegistryName("ruby_chestplate"),
+				RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(TAB)).setRegistryName("ruby_leggings"),
+				RUBY_BOOTS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(TAB)).setRegistryName("ruby_boots"),
 
 			//	PINK_TOURMALINE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline"),
 			//	PINK_TOURMALINE_PICKAXE = new PickaxeItem(PINK_TOURMALINE_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_pickaxe"),
@@ -349,8 +355,6 @@ public class Items {
 			//	STAIRS_DOWN = new StairItem().setRegistryName("stairs_down"),
 
 				//STRUCTURE_TRACKER = new TrackerItem().setRegistryName("structure_tracker"),
-
-			//	RED_SHOE = new ShoeItem().setRegistryName("red_shoe"),
 
 				ENDER_DRAGON_SPAWN_EGG = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 333333, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
 				WITHER_SPAWN_EGG = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg"),
@@ -438,13 +442,6 @@ public class Items {
 				ZOMBIE_HORSE_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_HORSE_EGG_ORE),
 				ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_PIGMAN_EGG_ORE),
 				ZOMBIE_VILLAGER_EGG_ORE = registerItemBlockMobOre(Blocks.ZOMBIE_VILLAGER_EGG_ORE)
-
-
-				//endregion
-
-				//endregion
-
-
 				);
 
 	}

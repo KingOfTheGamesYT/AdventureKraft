@@ -1,7 +1,10 @@
 package com.devmaster.dangerzone.items;
 
+import com.devmaster.dangerzone.init.MaterialStats;
 import com.devmaster.dangerzone.util.BreakUtil;
+
 import com.google.common.collect.ImmutableSet;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
