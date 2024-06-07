@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    " / ",
+    " / "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "dangerzone:coarse_amethyst_block"
+    },
+
+    "/":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "dangerzone:coarse_amethyst_hoe",
+    "count": 1
+  }
+}
