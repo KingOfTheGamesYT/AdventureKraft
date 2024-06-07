@@ -42,3 +42,5 @@ forge*changelog.txt
 /.gradle
 /build
 /run
+run/.mixin.out/audit/mixin_implementation_report.txt
+run/logs/debug.log
