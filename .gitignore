@@ -40,3 +40,5 @@ forge*changelog.txt
 .gradle/5.3/javaCompile/javaCompile.lock
 .gradle/buildOutputCleanup/buildOutputCleanup.lock
 /.gradle
+/build
+/run

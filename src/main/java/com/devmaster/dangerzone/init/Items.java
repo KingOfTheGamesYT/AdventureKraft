@@ -377,7 +377,7 @@ public class Items {
 				IRON_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.IRON_GOLEM, 13545366, 14144467, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("iron_golem_spawn_egg"),
 				SNOW_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.SNOW_GOLEM, 15921906, 15690005, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("snow_golem_spawn_egg"),
 
-			//	BLANK_DISC = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("blank_disc"),
+				BLANK_DISC = new Item(new Item.Properties().group(TAB)).setRegistryName("blank_disc"),
 
 				//endregion
 
