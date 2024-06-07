@@ -20,8 +20,6 @@ import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.*;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(DangerZone.MODID)
 public class Items {
-	static Item DEBUG;
-	static Item DEV_STICK;
 
 	//region materials //TODO rewrite registry
 	public static Item COARSE_AMETHYST;
@@ -94,8 +92,6 @@ public class Items {
 	public static Item LAVA_LEGGINGS;
 	public static Item LAVA_BOOTS;
 
-	//endregion
-
 	public static Item BATTLE_AXE;
 	public static Item BIG_HAMMER;
 	public static Item QUEEN_BATTLE_AXE;
@@ -133,8 +129,6 @@ public class Items {
 	//discs
 	public static Item BLANK_DISC;
 
-	//public static Item disc;
-
 	public static Item ENDER_DRAGON_TOOTH;
 	public static Item MOLE_NOSE;
 	public static Item TRIFFID_GOO;
@@ -146,8 +140,6 @@ public class Items {
 	public static Item BASILISC_SCALE;
 	public static Item BIORAPTOR_SCALE;
 	public static Item KATTERKILLER_JAW;
-
-	//endregion
 
 
 	//region item that are not registered here
@@ -166,7 +158,6 @@ public class Items {
 
 	public static Item GIRLFRIEND_SPAWN_EGG;
 
-	//endregion
 
 
 	//region Blocks
@@ -247,16 +238,9 @@ public class Items {
 	public static Item ZOMBIE_VILLAGER_EGG_ORE;
 
 
-	//endregion
-
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
-	//if(InsanityOverworld.debug) {
-		//	event.getRegistry().registerAll(
-				//	DEBUG = new ItemDebug(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("debug"),
-			//		DEV_STICK = new ItemDevStick().setRegistryName("dev_stick")
-					//);
-	//	}
+
 		event.getRegistry().registerAll(
 
 				//region materials
@@ -272,7 +256,7 @@ public class Items {
 				COARSE_AMETHYST_LEGGINGS = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_leggings"),
 				COARSE_AMETHYST_BOOTS = new ArmorItem(COARSE_AMETHYST_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_boots"),
 
-			//	RUBY = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby"),
+				RUBY = new Item(new Item.Properties().group(TAB)).setRegistryName("ruby"),
 			//	RUBY_PICKAXE = new PickaxeItem(RUBY_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_pickaxe"),
 				//RUBY_AXE = new AxeItem(RUBY_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_axe"),
 				//RUBY_SHOVEL = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_shovel"),
@@ -347,15 +331,11 @@ public class Items {
 				BASILISC_SCALE = new Item(new Item.Properties().group(TAB)).setRegistryName("basilisc_scale"),
 				BIORAPTOR_SCALE = new Item(new Item.Properties().group(TAB)).setRegistryName("bioraptor_scale"),
 				TREX_TOOTH = new Item(new Item.Properties().group(TAB)).setRegistryName("trex_tooth"),
-			//	KRAKEN_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("kraken_tooth"),
+				KRAKEN_TOOTH = new Item(new Item.Properties().group(TAB)).setRegistryName("kraken_tooth"),
 				TRIFFID_GOO = new Item(new Item.Properties().group(TAB)).setRegistryName("triffid_goo"),
 
 				MANTIS_CLAW = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(TAB)).setRegistryName("mantis_claw"),
 				SCORPION_TAIL = new SpecialSwordItem(SCORPION_TAIL_TIER, 3, -2.4f, new Item.Properties().group(TAB)).setRegistryName("scorpion_tail"),
-
-				//endregion
-
-
 
 				//region misc
 
