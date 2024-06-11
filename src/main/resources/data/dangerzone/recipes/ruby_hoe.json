@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    " / ",
+    " / "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "dangerzone:ruby_block"
+    },
+
+    "/":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "dangerzone:ruby_hoe",
+    "count": 1
+  }
+}
