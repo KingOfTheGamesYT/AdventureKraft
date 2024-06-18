@@ -7,6 +7,7 @@ import com.devmaster.dangerzone.blocks.CoarseAmethystOreBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.GlassBlock;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.ResourceLocation;
@@ -122,15 +123,15 @@ public class Blocks {
 				COARSE_AMETHYST_BLOCK = new CoarseAmethystBlock().setRegistryName("coarse_amethyst_block"),
 				COARSE_AMETHYST_ORE_BLOCK = new CoarseAmethystOreBlock().setRegistryName("coarse_amethyst_ore_block"),
 				RUBY_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_block"),
-				//RUBY_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_ore"),
+				RUBY_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_ore"),
 
 				TITANIUM_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_block"),
-			//	TITANIUM_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_ore"),
+				TITANIUM_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_ore"),
 				URANIUM_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_block"),
-				//URANIUM_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_ore"),
+				URANIUM_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_ore"),
 
 				PINK_TOURMALINE_BLOCK = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_block"),
-				//PINK_TOURMALINE_ORE = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_ore"),
+				PINK_TOURMALINE_ORE = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_ore"),
 
 				TIGER_EYE_BLOCK = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("tiger_eye_block"),
 				//TIGER_EYE_ORE = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("tiger_eye_ore"),
@@ -214,7 +215,7 @@ public class Blocks {
 
 	public static void setRenderLayers() {
 		RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_BLOCK, RenderType.getTranslucent());
-	//	RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_ORE, RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_ORE, RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(TIGER_EYE_BLOCK, RenderType.getTranslucent());
 	//	RenderTypeLookup.setRenderLayer(TIGER_EYE_ORE, RenderType.getTranslucent());
 	}

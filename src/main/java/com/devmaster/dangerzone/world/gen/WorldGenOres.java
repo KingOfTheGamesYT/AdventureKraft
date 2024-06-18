@@ -56,9 +56,9 @@ public class WorldGenOres {
 			}
 
 			addOre(biome, NATURAL_STONE, COARSE_AMETHYST_ORE_BLOCK, coarseamethystVeinSize, coarseamethystConfig);
-			//addOre(biome, NATURAL_STONE, RUBY_ORE, rubyVeinSize, rubyConfig);
-			//addOre(biome, NATURAL_STONE, TITANIUM_ORE, titaniumVeinSize, titaniumConfig);
-		//	addOre(biome, NATURAL_STONE, URANIUM_ORE, uraniumVeinSize, uraniumConfig);
+			addOre(biome, NATURAL_STONE, RUBY_ORE, rubyVeinSize, rubyConfig);
+			addOre(biome, NATURAL_STONE, TITANIUM_ORE, titaniumVeinSize, titaniumConfig);
+			addOre(biome, NATURAL_STONE, URANIUM_ORE, uraniumVeinSize, uraniumConfig);
 
 			//region Mob Ore spawn
 			if(config.shouldEggOresGenerate.get()) {
