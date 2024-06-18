@@ -272,7 +272,7 @@ public class Items {
 				RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(TAB)).setRegistryName("ruby_leggings"),
 				RUBY_BOOTS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(TAB)).setRegistryName("ruby_boots"),
 
-			//	PINK_TOURMALINE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline"),
+				PINK_TOURMALINE = new Item(new Item.Properties().group(TAB)).setRegistryName("pink_tourmaline"),
 			//	PINK_TOURMALINE_PICKAXE = new PickaxeItem(PINK_TOURMALINE_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_pickaxe"),
 				//PINK_TOURMALINE_AXE = new AxeItem(PINK_TOURMALINE_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_axe"),
 			//	PINK_TOURMALINE_SHOVEL = new ShovelItem(PINK_TOURMALINE_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_shovel"),
@@ -282,7 +282,7 @@ public class Items {
 			//	PINK_TOURMALINE_LEGGINGS = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_leggings"),
 			//	PINK_TOURMALINE_BOOTS = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_boots"),
 
-				//TIGER_EYE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye"),
+				TIGER_EYE = new Item(new Item.Properties().group(TAB)).setRegistryName("tiger_eye"),
 				//TIGER_EYE_PICKAXE = new PickaxeItem(TIGER_EYE_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_pickaxe"),
 				//TIGER_EYE_AXE = new AxeItem(TIGER_EYE_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_axe"),
 				//TIGER_EYE_SHOVEL = new ShovelItem(TIGER_EYE_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_shovel"),
@@ -292,10 +292,10 @@ public class Items {
 				//TIGER_EYE_LEGGINGS = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_leggings"),
 				//TIGER_EYE_BOOTS = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_boots"),
 
-				//TITANIUM_INGOT = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("titanium_ingot"),
-			//	TITANIUM_NUGGET = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("titanium_nugget"),
-			//	URANIUM_INGOT = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("uranium_ingot"),
-			//	URANIUM_NUGGET = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("uranium_nugget"),
+				TITANIUM_INGOT = new Item(new Item.Properties().group(TAB)).setRegistryName("titanium_ingot"),
+				TITANIUM_NUGGET = new Item(new Item.Properties().group(TAB)).setRegistryName("titanium_nugget"),
+				URANIUM_INGOT = new Item(new Item.Properties().group(TAB)).setRegistryName("uranium_ingot"),
+				URANIUM_NUGGET = new Item(new Item.Properties().group(TAB)).setRegistryName("uranium_nugget"),
 			//	ULTIMATE_PICKAXE = new EnchantedPickaxe(ULTIMATE_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_pickaxe"),
 			//	ULTIMATE_AXE = new EnchantedAxeItem(ULTIMATE_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_axe"),
 			//	ULTIMATE_SHOVEL = new EnchantedShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_shovel"),
