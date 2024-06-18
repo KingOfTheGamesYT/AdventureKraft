@@ -5,11 +5,17 @@ import com.devmaster.dangerzone.blocks.CoarseAmethystBlock;
 import com.devmaster.dangerzone.blocks.BlockMobOre;
 import com.devmaster.dangerzone.blocks.CoarseAmethystOreBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.GlassBlock;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
+
+import static net.minecraftforge.common.ToolType.PICKAXE;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(DangerZone.MODID)
@@ -115,18 +121,18 @@ public class Blocks {
 				//region Materials
 				COARSE_AMETHYST_BLOCK = new CoarseAmethystBlock().setRegistryName("coarse_amethyst_block"),
 				COARSE_AMETHYST_ORE_BLOCK = new CoarseAmethystOreBlock().setRegistryName("coarse_amethyst_ore_block"),
-			//	RUBY_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_block"),
+				RUBY_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_block"),
 				//RUBY_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_ore"),
 
-				//TITANIUM_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_block"),
+				TITANIUM_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_block"),
 			//	TITANIUM_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_ore"),
-				//URANIUM_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_block"),
+				URANIUM_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_block"),
 				//URANIUM_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_ore"),
 
-				//PINK_TOURMALINE_BLOCK = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_block"),
+				PINK_TOURMALINE_BLOCK = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_block"),
 				//PINK_TOURMALINE_ORE = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_ore"),
 
-			//	TIGER_EYE_BLOCK = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("tiger_eye_block"),
+				TIGER_EYE_BLOCK = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("tiger_eye_block"),
 				//TIGER_EYE_ORE = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("tiger_eye_ore"),
 				//endregion
 
@@ -195,10 +201,8 @@ public class Blocks {
 				ZOMBIE_PIGMAN_EGG_ORE = new BlockMobOre(getLocation("zombie_pigman_ore")),
 				ZOMBIE_VILLAGER_EGG_ORE = new BlockMobOre(getLocation("zombie_villager_ore"))
 
-				//endregion
-
 				//region misc
-				//endregion
+
 
 				//region not usable blocks
 			//	appleBlock = new MushroomBlock(Block.Properties.create(Material.AIR)).setRegistryName("apple_block"),
@@ -208,12 +212,12 @@ public class Blocks {
 
 	}
 
-	//public static void setRenderLayers() {
-	//	RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_BLOCK, RenderType.getTranslucent());
+	public static void setRenderLayers() {
+		RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_BLOCK, RenderType.getTranslucent());
 	//	RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_ORE, RenderType.getTranslucent());
-	//	RenderTypeLookup.setRenderLayer(TIGER_EYE_BLOCK, RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(TIGER_EYE_BLOCK, RenderType.getTranslucent());
 	//	RenderTypeLookup.setRenderLayer(TIGER_EYE_ORE, RenderType.getTranslucent());
-//	}
+	}
 
 	private static ResourceLocation getLocation(String name) {
 		return new ResourceLocation(DangerZone.MODID, name);

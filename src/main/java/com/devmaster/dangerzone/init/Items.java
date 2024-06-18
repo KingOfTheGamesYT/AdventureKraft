@@ -368,15 +368,15 @@ public class Items {
 				//region Blocks
 				COARSE_AMETHYST_BLOCK = registerItemBlock(Blocks.COARSE_AMETHYST_BLOCK),
 				COARSE_AMETHYST_ORE = registerItemBlock(Blocks.COARSE_AMETHYST_ORE_BLOCK),
-			//	RUBY_BLOCK = registerItemBlock(Blocks.RUBY_BLOCK),
+				RUBY_BLOCK = registerItemBlock(Blocks.RUBY_BLOCK),
 				//RUBY_ORE = registerItemBlock(Blocks.RUBY_ORE),
-			//	TITANIUM_BLOCK = registerItemBlock(Blocks.TITANIUM_BLOCK),
+				TITANIUM_BLOCK = registerItemBlock(Blocks.TITANIUM_BLOCK),
 				//TITANIUM_ORE = registerItemBlock(Blocks.TITANIUM_ORE),
-			//	URANIUM_BLOCK = registerItemBlock(Blocks.URANIUM_BLOCK),
+				URANIUM_BLOCK = registerItemBlock(Blocks.URANIUM_BLOCK),
 				//URANIUM_ORE = registerItemBlock(Blocks.URANIUM_ORE),
-			//	PINK_TOURMALINE_BLOCK = registerItemBlock(Blocks.PINK_TOURMALINE_BLOCK),
+				PINK_TOURMALINE_BLOCK = registerItemBlock(Blocks.PINK_TOURMALINE_BLOCK),
 			//	PINK_TOURMALINE_ORE = registerItemBlock(Blocks.PINK_TOURMALINE_ORE),
-				//TIGER_EYE_BLOCK = registerItemBlock(Blocks.TIGER_EYE_BLOCK),
+				TIGER_EYE_BLOCK = registerItemBlock(Blocks.TIGER_EYE_BLOCK),
 				//TIGER_EYE_ORE = registerItemBlock(Blocks.TIGER_EYE_ORE),
 
 				//region Egg Ores

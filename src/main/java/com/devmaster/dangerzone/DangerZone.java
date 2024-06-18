@@ -45,7 +45,7 @@ public class DangerZone {
         }
 
         private void clientSetup(final FMLClientSetupEvent event) {
-          //  DangerZoneBlocks.setRenderLayers();
+            Blocks.setRenderLayers();
            // DangerZoneEntities.registerEntityRenders();
           // DangerZoneContainerTypes.registerScreens();
         }
