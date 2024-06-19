@@ -14,13 +14,13 @@ import net.minecraft.world.World;
 import java.util.List;
 
 
-public class BirdSpawnEgg extends Item {
+public class ScorpionSpawnEgg extends Item {
 
-    public BirdSpawnEgg() {
+    public ScorpionSpawnEgg() {
         super(new Properties().group(DangerZone.WIP));
     }
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A7f" + "tweedle dee tweedle dum" + "\u00A7f"));
+        tooltip.add(new StringTextComponent("\u00A70" + "Get over here" + "\u00A70"));
     }
 }
