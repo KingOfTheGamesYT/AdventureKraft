@@ -25,6 +25,9 @@ import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.*;
 public class Items {
 
 	//region materials //TODO rewrite registry
+
+	public static Item ALUMINIUM_INGOT;
+
 	public static Item COARSE_AMETHYST;
 	public static Item COARSE_AMETHYST_PICKAXE;
 	public static Item COARSE_AMETHYST_AXE;
@@ -249,6 +252,10 @@ public class Items {
 		event.getRegistry().registerAll(
 
 				//region materials
+
+				ALUMINIUM_INGOT = new AluminiumIngot().setRegistryName("aluminium_ingot"),
+
+
 				COARSE_AMETHYST = new CoarseAmethyst().setRegistryName("coarse_amethyst"),
 				COARSE_AMETHYST_PICKAXE = new PickaxeItem(COARSE_AMETHYST_TIER, 20, -2.8F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_pickaxe"),
 				COARSE_AMETHYST_AXE = new AxeItem(COARSE_AMETHYST_TIER, 20, -3F, new Item.Properties().group(TAB)).setRegistryName("coarse_amethyst_axe"),
