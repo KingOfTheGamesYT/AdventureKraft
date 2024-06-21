@@ -1,12 +1,15 @@
 
 #General settings
 [general]
-	#The length and height of the Instant Stair items
+	#The height of the Instant Stairs down item
 	#Range: 0 ~ 128
 	stairHeight = 32
 	#The length of the Instant Bridge Item
 	#Range: 0 ~ 128
 	bridgeLength = 32
+	#The Depth of the Instant Stair down item
+	#Range: 0 ~ 128
+	stairDepth = 32
 
 #World gen
 [world_gen]

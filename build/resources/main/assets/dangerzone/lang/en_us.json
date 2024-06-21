@@ -120,6 +120,10 @@
 	"item.dangerzone.insta_nether_portal": "Instant Nether Portal",
 	"item.dangerzone.insta_shelter": "Instant Shelter",
 	"item.dangerzone.insta_garden": "Instant Garden",
+	"item.dangerzone.instant_stairs_down": "Instant Stairs down",
+	"item.dangerzone.instant_stairs_up": "Instant Stiars up",
+	"item.dangerzone.instant_bridge": "Instant Bridge",
+
 
 	"comment_": "My Mob spawn eggs",
 	"item.dangerzone.apple_cow_spawn_egg": "Apple Cow Spawn Egg",

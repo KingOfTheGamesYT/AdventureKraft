@@ -14,6 +14,8 @@ public class DangerZoneConfig {
 
 	public IntValue bridgeLength;
 	public IntValue stairHeight;
+	public IntValue stairDepth;
+
 
 	//region Egg ore
 	public BooleanValue shouldEggOresGenerate;
@@ -90,7 +92,9 @@ public class DangerZoneConfig {
 
 		bridgeLength = builder.comment("The length of the Instant Bridge Item").translation("config.dangerzone.prop.bridgelength.desc").defineInRange("bridgeLength", 32, 0, 128);
 
-		stairHeight = builder.comment("The length and height of the Instant Stair items").translation("config.dangerzone.prop.stairheight.desc").defineInRange("stairHeight", 32, 0, 128);
+		stairHeight = builder.comment("The height of the Instant Stairs down item").translation("config.dangerzone.prop.stairheight.desc").defineInRange("stairHeight", 32, 0, 128);
+		stairDepth = builder.comment("The Depth of the Instant Stair down item").translation("config.dangerzone.prop.stairdepth.desc").defineInRange("stairDepth", 32, 0, 128);
+
 
 		builder.pop();
 

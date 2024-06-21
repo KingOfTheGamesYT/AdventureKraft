@@ -126,9 +126,9 @@ public class Items {
 	public static Item INSTANT_GARDEN;
 	public static Item MINERS_DREAM;
 
-	public static Item STAIRS_UP;
-	public static Item STAIRS_DOWN;
-	public static Item BRIDGE;
+	public static Item INSTANT_STAIRS_UP;
+	public static Item INSTANT_STAIRS_DOWN;
+	public static Item INSTANT_BRIDGE;
 
 	public static Item STRUCTURE_TRACKER;
 
@@ -357,9 +357,9 @@ public class Items {
 				INSTANT_GARDEN = new InstaGardenItem().setRegistryName("insta_garden"),
 				MINERS_DREAM = new MinersDreamItem().setRegistryName("miners_dream"),
 
-			//	BRIDGE = new StairItem().setRegistryName("bridge"),
-			//	STAIRS_UP = new StairItem().setRegistryName("stairs_up"),
-			//	STAIRS_DOWN = new StairItem().setRegistryName("stairs_down"),
+				INSTANT_BRIDGE = new StairItem().setRegistryName("instant_bridge"),
+				INSTANT_STAIRS_UP = new StairItem().setRegistryName("instant_stairs_up"),
+				INSTANT_STAIRS_DOWN = new StairItem().setRegistryName("instant_stairs_down"),
 
 				//STRUCTURE_TRACKER = new TrackerItem().setRegistryName("structure_tracker"),
 
