@@ -50,15 +50,15 @@ public class Items {
 	public static Item RUBY_BOOTS;
 	public static Item RUBY_HOE;
 
-	public static Item PINK_TOURMALINE;
+	public static Item PINK_INGOT;
 	public static Item PINK_TOURMALINE_PICKAXE;
 	public static Item PINK_TOURMALINE_AXE;
 	public static Item PINK_TOURMALINE_SHOVEL;
 	public static Item PINK_TOURMALINE_SWORD;
-	public static Item PINK_TOURMALINE_HELMET;
-	public static Item PINK_TOURMALINE_CHESTPLATE;
-	public static Item PINK_TOURMALINE_LEGGINGS;
-	public static Item PINK_TOURMALINE_BOOTS;
+	public static Item PINK_HELMET;
+	public static Item PINK_CHESTPLATE;
+	public static Item PINK_LEGGINGS;
+	public static Item PINK_BOOTS;
 
 	public static Item TIGER_EYE;
 	public static Item TIGER_EYE_PICKAXE;
@@ -278,15 +278,15 @@ public class Items {
 				RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(TAB)).setRegistryName("ruby_leggings"),
 				RUBY_BOOTS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(TAB)).setRegistryName("ruby_boots"),
 
-				PINK_TOURMALINE = new Item(new Item.Properties().group(TAB)).setRegistryName("pink_tourmaline"),
+				PINK_INGOT = new Item(new Item.Properties().group(TAB)).setRegistryName("pink_ingot"),
 			//	PINK_TOURMALINE_PICKAXE = new PickaxeItem(PINK_TOURMALINE_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_pickaxe"),
 				//PINK_TOURMALINE_AXE = new AxeItem(PINK_TOURMALINE_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_axe"),
 			//	PINK_TOURMALINE_SHOVEL = new ShovelItem(PINK_TOURMALINE_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_shovel"),
 			//	PINK_TOURMALINE_SWORD = new SwordItem(PINK_TOURMALINE_TIER, 3, -2F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_sword"),
-			//	PINK_TOURMALINE_HELMET = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_helmet"),
-			//	PINK_TOURMALINE_CHESTPLATE = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_chestplate"),
-			//	PINK_TOURMALINE_LEGGINGS = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_leggings"),
-			//	PINK_TOURMALINE_BOOTS = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_boots"),
+				PINK_HELMET = new ArmorItem(PINK_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(TAB)).setRegistryName("pink_helmet"),
+				PINK_CHESTPLATE = new ArmorItem(PINK_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(TAB)).setRegistryName("pink_chestplate"),
+				PINK_LEGGINGS = new ArmorItem(PINK_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(TAB)).setRegistryName("pink_leggings"),
+				PINK_BOOTS = new ArmorItem(PINK_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(TAB)).setRegistryName("pink_boots"),
 
 				TIGER_EYE = new Item(new Item.Properties().group(TAB)).setRegistryName("tiger_eye"),
 				//TIGER_EYE_PICKAXE = new PickaxeItem(TIGER_EYE_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_pickaxe"),

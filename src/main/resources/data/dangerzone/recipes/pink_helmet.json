@@ -1,16 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X X",
     "XXX",
-    "XXX"
+    "X X"
   ],
   "key": {
     "X": {
-      "item": "dangerzone:lava_crystal"
+      "item": "dangerzone:pink_ingot"
     }
   },
   "result": {
-    "item": "dangerzone:lava_chestplate"
+    "item": "dangerzone:pink_helmet"
   }
 }

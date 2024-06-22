@@ -7,10 +7,10 @@
   ],
   "key": {
     "X": {
-      "item": "dangerzone:pink_tourmaline"
+      "item": "dangerzone:lava_crystal"
     }
   },
   "result": {
-    "item": "dangerzone:pink_tourmaline_chestplate"
+    "item": "dangerzone:lava_crystal_chestplate"
   }
 }

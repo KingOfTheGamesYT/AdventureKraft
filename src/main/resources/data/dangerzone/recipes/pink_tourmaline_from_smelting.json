@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "dangerzone:pink_tourmaline_ore"
-  },
-  "result": "dangerzone:pink_tourmaline",
-  "experience": 1.0,
-  "cookingtime": 200
-}

@@ -21,7 +21,7 @@ public class MaterialStats {
 		COARSE_AMETHYST_TIER(-1f, 11f, 2000, 4, 19, COARSE_AMETHYST),
 		RUBY_TIER(16f, 11f, 1500, 5, 21, RUBY),
 		ULTIMATE_TIER(36f, 18f, 3000, 10, 30, null),
-		PINK_TOURMALINE_TIER(7f, 10f, 1100, 4, 17, PINK_TOURMALINE),
+		PINK_TIER(7f, 10f, 1100, 4, 17, PINK_INGOT),
 		TIGER_EYE_TIER(8f, 12f, 1600, 4, 22, TIGER_EYE),
 		LAPIS_TIER(2f, 6f, 250, 2, 14, Items.LAPIS_LAZULI),
 
@@ -82,9 +82,9 @@ public class MaterialStats {
 		COARSE_AMETHYST_ARMOR("coarse_amethyst", 44, new int[]{23, 23, 23, 23}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, COARSE_AMETHYST),
 		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, RUBY),
 		LAPIS_ARMOR("lapis", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, Items.LAPIS_LAZULI),
-		LAVA_ARMOR("lava", 57, new int[]{6,8,9,6}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, LAVA_CRYSTAL),
+		LAVA_ARMOR("lava_crystal", 57, new int[]{6,8,9,6}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, LAVA_CRYSTAL),
 		ULTIMATE_ARMOR("ultimate", 75, new int[]{7, 9, 10, 7}, 100, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0f, TITANIUM_INGOT),
-		PINK_TOURMALINE_ARMOR("pink_tourmaline", 33, new int[]{2,5,7,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, PINK_TOURMALINE),
+		PINK_ARMOR("pink", 33, new int[]{2,5,7,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, PINK_INGOT),
 		TIGER_EYE_ARMOR("tiger_eye", 44, new int[]{4,7,8,4}, 55, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, TIGER_EYE);
 
 

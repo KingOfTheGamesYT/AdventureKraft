@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "dangerzone:pink_tourmaline_ore"
   },
-  "result": "dangerzone:pink_tourmaline",
+  "result": "dangerzone:pink_ingot",
   "experience": 1.0,
   "cookingtime": 100
 }

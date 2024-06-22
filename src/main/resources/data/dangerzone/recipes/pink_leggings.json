@@ -2,14 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "XXX",
+    "X X",
     "X X"
   ],
   "key": {
     "X": {
-      "item": "dangerzone:pink_tourmaline"
+      "item": "dangerzone:pink_ingot"
     }
   },
   "result": {
-    "item": "dangerzone:pink_tourmaline_helmet"
+    "item": "dangerzone:pink_leggings"
   }
 }
