@@ -15,8 +15,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import java.util.function.Supplier;
 
 import static com.devmaster.dangerzone.DangerZone.TAB;
-import static com.devmaster.dangerzone.init.MaterialStats.ArmorMaterials.COARSE_AMETHYST_ARMOR;
-import static com.devmaster.dangerzone.init.MaterialStats.ArmorMaterials.RUBY_ARMOR;
+import static com.devmaster.dangerzone.init.MaterialStats.ArmorMaterials.*;
 import static com.devmaster.dangerzone.init.MaterialStats.ToolTier.*;
 
 
@@ -316,17 +315,17 @@ public class Items {
 				//LAPIS_PICKAXE = new EnchantedPickaxe(LAPIS_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_pickaxe"),
 			//	LAPIS_AXE = new EnchantedAxeItem(LAPIS_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_axe"),
 				//LAPIS_SHOVEL = new EnchantedShovelItem(LAPIS_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_shovel"),
-				//LAPIS_SWORD = new EnchantedSwordItem(LAPIS_TIER, 3, -2F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_sword"),
-			//	LAPIS_HELMET = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_helmet"),
-				//LAPIS_CHESTPLATE = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_chestplate"),
-				//LAPIS_LEGGINGS = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_leggings"),
-			//	LAPIS_BOOTS = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_boots"),
+				LAPIS_SWORD = new EnchantedSwordItem(LAPIS_TIER, 3, -2F, new Item.Properties().group(TAB)).setRegistryName("lapis_sword"),
+				LAPIS_HELMET = new ArmorItem(LAPIS_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(TAB)).setRegistryName("lapis_helmet"),
+				LAPIS_CHESTPLATE = new ArmorItem(LAPIS_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(TAB)).setRegistryName("lapis_chestplate"),
+				LAPIS_LEGGINGS = new ArmorItem(LAPIS_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(TAB)).setRegistryName("lapis_leggings"),
+				LAPIS_BOOTS = new ArmorItem(LAPIS_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(TAB)).setRegistryName("lapis_boots"),
 
-			//	LAVA_CRYSTAL = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_crystal"),
-			//	LAVA_HELMET = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_helmet"),
-				//LAVA_CHESTPLATE = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_chestplate"),
-				//LAVA_LEGGINGS = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_leggings"),
-				//LAVA_BOOTS = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_boots"),
+				LAVA_CRYSTAL = new Item(new Item.Properties().group(TAB)).setRegistryName("lava_crystal"),
+				LAVA_HELMET = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(TAB)).setRegistryName("lava_crystal_helmet"),
+				LAVA_CHESTPLATE = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(TAB)).setRegistryName("lava_crystal_chestplate"),
+				LAVA_LEGGINGS = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(TAB)).setRegistryName("lava_crystal_leggings"),
+				LAVA_BOOTS = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(TAB)).setRegistryName("lava_crystal_boots"),
 
 				//endregion
 
