@@ -16,9 +16,11 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.gen.feature.Feature;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -52,6 +54,7 @@ public class DangerZone {
     public static final ITag.INamedTag<Block> MINERS_DREAM_MINEABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":miners_dream_breakable");
     public static final ITag.INamedTag<Block> GODZILLA_DESTROYABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":godzilla_breakable");
     public static final ITag.INamedTag<Block> TERMITE_FOOD = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":termite_food");
+    public static final ITag.INamedTag<Item> CRYSTAL_DIMENSION_ALLOWED_ITEMS = ItemTags.makeWrapperTag(DangerZone.MOD_ID+":crystal_dimension_allowed");
 
     public DangerZone() {
         ModLoadingContext.get().registerConfig(Type.COMMON, BaseConfig.COMMON, "dangerzone-common.toml");

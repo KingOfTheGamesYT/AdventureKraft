@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "dangerzone:termite_token",
+    "dangerzone:kyanite",
+    "dangerzone:crystal_grass",
+    "dangerzone:termite_troll_ore_block"
+  ]
+}

@@ -13,6 +13,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.stats.Stats;
+import net.minecraft.tags.ITag;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
@@ -37,6 +39,23 @@ public class TermiteToken extends Item {
                         .build()));
     }
 
+    private boolean isInventoryEmpty(PlayerEntity player) {
+        ITag<Item> allowedItemsTag = DangerZone.CRYSTAL_DIMENSION_ALLOWED_ITEMS;
+
+        for (ItemStack stack : player.inventory.mainInventory) {
+            if (!stack.isEmpty() && !allowedItemsTag.contains(stack.getItem())) {
+                return false;
+            }
+        }
+        for (ItemStack stack : player.inventory.armorInventory) {
+            if (!stack.isEmpty()) {
+                return false;
+            }
+        }
+        return player.inventory.offHandInventory.get(0).isEmpty() ||
+                allowedItemsTag.contains(player.inventory.offHandInventory.get(0).getItem());
+    }
+
     @Nonnull
     @Override
     @ParametersAreNonnullByDefault
@@ -47,31 +66,33 @@ public class TermiteToken extends Item {
                 PlayerEntity player = (PlayerEntity) entity;
                 player.addStat(Stats.ITEM_USED.get(stack.getItem()));
                 if (player instanceof ServerPlayerEntity && world.getDimensionKey() == RegistryHandler.CRYSTAL) {
-                    CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayerEntity)player, stack);
+                    CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayerEntity) player, stack);
                 }
             }
 
-            if (!(entity instanceof PlayerEntity) || (world.getDimensionKey() == RegistryHandler.CRYSTAL || (!((PlayerEntity) entity).abilities.isCreativeMode))) {
-                stack.shrink(1);
+            if (!world.isRemote && entity instanceof PlayerEntity) {
+                ServerPlayerEntity player = (ServerPlayerEntity) entity;
+
+                if (world.getDimensionKey() == RegistryHandler.CRYSTAL) {
+                    if (!ForgeHooks.onTravelToDimension(player, World.OVERWORLD))
+                        return stack;
+
+                    teleportToDimension(world, player, World.OVERWORLD);
+                } else {
+                    if (!isInventoryEmpty(player)) {
+                        player.sendMessage(new StringTextComponent("You're inventory must be clear as a crystal to enter"), player.getUniqueID());
+                        return stack;
+                    }
+
+                    if (!ForgeHooks.onTravelToDimension(player, RegistryHandler.CRYSTAL))
+                        return stack;
+
+                    teleportToDimension(world, player, RegistryHandler.CRYSTAL);
+                }
             }
         }
-        if (!world.isRemote && entity instanceof PlayerEntity)  {
-            ServerPlayerEntity player = (ServerPlayerEntity) entity;
-
-            if (world.getDimensionKey() == RegistryHandler.CRYSTAL) {
-                if (!ForgeHooks.onTravelToDimension(player, World.OVERWORLD))
-                    return stack;
-
-                teleportToDimension(world, player, World.OVERWORLD);
-            } else {
-                if (!ForgeHooks.onTravelToDimension(player, RegistryHandler.CRYSTAL))
-                    return stack;
-
-                teleportToDimension(world, player, RegistryHandler.CRYSTAL);
-            }
+            return stack;
         }
-        return stack;
-    }
 
     public int getUseDuration(ItemStack p_77626_1_) {
         if (p_77626_1_.getItem().isFood()) {
