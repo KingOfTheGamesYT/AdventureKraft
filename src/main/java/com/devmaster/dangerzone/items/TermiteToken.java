@@ -3,6 +3,7 @@ package com.devmaster.dangerzone.items;
 import com.devmaster.dangerzone.world.teleportors.CrystalTeleporter;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
+
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
@@ -14,7 +15,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.ITag;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
@@ -23,10 +23,14 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+
 import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.fml.ModList;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.lang.reflect.Method;
 import java.util.List;
 
 
@@ -48,12 +52,34 @@ public class TermiteToken extends Item {
             }
         }
         for (ItemStack stack : player.inventory.armorInventory) {
-            if (!stack.isEmpty()) {
+            if (!stack.isEmpty()&& !allowedItemsTag.contains(stack.getItem())) {
                 return false;
             }
+
         }
-        return player.inventory.offHandInventory.get(0).isEmpty() ||
-                allowedItemsTag.contains(player.inventory.offHandInventory.get(0).getItem());
+        for (ItemStack stack : player.inventory.offHandInventory) {
+            if (!stack.isEmpty()&& !allowedItemsTag.contains(stack.getItem())) {
+                return false;
+            }
+    }
+
+      if (ModList.get().isLoaded("curios")) {
+        return checkCuriosSlots(player, allowedItemsTag);
+    }
+
+        return true;
+}
+
+    private boolean checkCuriosSlots(PlayerEntity player, ITag<Item> allowedItemsTag) {
+        return top.theillusivec4.curios.api.CuriosApi.getCuriosHelper().getEquippedCurios(player).map(handler -> {
+            for (int i = 0; i < handler.getSlots(); i++) {
+                ItemStack stack = handler.getStackInSlot(i);
+                if (!stack.isEmpty() && !allowedItemsTag.contains(stack.getItem())) {
+                    return false;
+                }
+            }
+            return true;
+        }).orElse(true);
     }
 
     @Nonnull
@@ -68,6 +94,9 @@ public class TermiteToken extends Item {
                 if (player instanceof ServerPlayerEntity && world.getDimensionKey() == RegistryHandler.CRYSTAL) {
                     CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayerEntity) player, stack);
                 }
+            }
+            if (!(entity instanceof PlayerEntity) || (world.getDimensionKey() == RegistryHandler.CRYSTAL || (!((PlayerEntity) entity).abilities.isCreativeMode))) {
+                stack.shrink(1);
             }
 
             if (!world.isRemote && entity instanceof PlayerEntity) {
