@@ -1,17 +1,9 @@
-buildscript {
-    repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
-        jcenter()
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
-    }
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
-apply plugin: 'net.minecraftforge.gradle'
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
 
 version = '4.2.6-1.16.5-Dev'
 group = 'com.devmaster.dangerzone' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -21,8 +13,6 @@ sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = co
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-
-
     mappings channel: 'snapshot', version: '20210309-1.16.5'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 
@@ -83,10 +73,9 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.20'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
 
-
-//project name, project id, file id
+    //project name, project id, file id
     implementation fg.deobf("curse.maven:mutant_beasts-336272:3131604")
     implementation fg.deobf("curse.maven:jei-238222:3189632")
     implementation fg.deobf("curse.maven:curios-309927:3456953")
