@@ -16,10 +16,12 @@
     "minecraft:netherrack",
     "minecraft:end_stone",
     "minecraft:water",
-    "minecraft:lava"
+    "minecraft:lava",
+    "minecraft:basalt"
   ],
   "optional": [
     "quark:smooth_basalt",
-    "quark:deepslate"
+    "quark:deepslate",
+    "fandomcraft:rock"
     ]
 }
