@@ -135,6 +135,7 @@
   "block.dangerzone.titanium_block": "Titanium Block",
   "block.dangerzone.titanium_ore_block": "Titanium Ore",
   "block.dangerzone.uranium_block": "Uranium Block",
+  "block.dangerzone.random_structure_spawner": "Spawn Random Structure",
 
   "_comment": "Creative Tabs",
   "itemGroup.dangerzonetab": "AdventureKraft Items",
@@ -241,7 +242,6 @@
   "entity.dangerzone.termite": "Termite",
   "entity.dangerzone.easter_bunny": "Easter Bunny",
 
-
   "_comment": "Biomes",
   "biome.dangerzone.villages": "Villages",
   "biome.dangerzone.villagess": "Villages",
@@ -251,7 +251,6 @@
   "biome.dangerzone.crystal": "Crystal",
   "biome.dangerzone.crystall": "Crystal",
   "biome.dangerzone.crystal_ocean": "Crystal Ocean",
-
 
   "_comment": "Tips Integration",
   "dangerzone.tip.title": "AdventureKraft Tip",

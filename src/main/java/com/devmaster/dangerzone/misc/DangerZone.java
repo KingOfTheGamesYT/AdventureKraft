@@ -140,6 +140,7 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RED_ANT.get(), RedAntRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TERMITE.get(), TermiteRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.EASTER_BUNNY.get(), EasterBunnyRender::new);
+        RenderTypeLookup.setRenderLayer(RegistryHandler.RANDOM_STRUCTURE_BLOCK.get(), RenderType.getCutout());
         SpawnEgg.initSpawnEggs();
     }
 }

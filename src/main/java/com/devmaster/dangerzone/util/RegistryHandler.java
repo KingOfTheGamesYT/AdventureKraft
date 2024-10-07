@@ -5,6 +5,7 @@ import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.items.EmeraldPickaxe;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
@@ -14,6 +15,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -21,7 +23,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
-
 
 public class RegistryHandler {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DangerZone.MOD_ID);
@@ -38,44 +39,25 @@ public class RegistryHandler {
 
     //Armor
     public static final RegistryObject<CatsEyeBoots> CATS_EYE_BOOTS = ITEMS.register("cats_eye_boots", CatsEyeBoots::new);
-
     public static final RegistryObject<CatsEyeChestplate> CATS_EYE_CHESTPLATE = ITEMS.register("cats_eye_chestplate", CatsEyeChestplate::new);
-
     public static final RegistryObject<CatsEyeHelmet> CATS_EYE_HELMET = ITEMS.register("cats_eye_helmet", CatsEyeHelmet::new);
-
     public static final RegistryObject<CatsEyeLeggings> CATS_EYE_LEGGINGS = ITEMS.register("cats_eye_leggings", CatsEyeLeggings::new);
-
     public static final RegistryObject<CoarseAmethystBoots> COARSE_AMETHYST_BOOTS = ITEMS.register("coarse_amethyst_boots", CoarseAmethystBoots::new);
-
     public static final RegistryObject<CoarseAmethystChestplate> COARSE_AMETHYST_CHESTPLATE = ITEMS.register("coarse_amethyst_chestplate", CoarseAmethystChestplate::new);
-
     public static final RegistryObject<CoarseAmethystHelmet> COARSE_AMETHYST_HELMET = ITEMS.register("coarse_amethyst_helmet", CoarseAmethystHelmet::new);
-
     public static final RegistryObject<CoarseAmethystLeggings> COARSE_AMETHYST_LEGGINGS = ITEMS.register("coarse_amethyst_leggings", CoarseAmethystLeggings::new);
-
     public static final RegistryObject<CopperBoots> COPPER_BOOTS = ITEMS.register("copper_boots", CopperBoots::new);
-
     public static final RegistryObject<CopperChestplate> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", CopperChestplate::new);
-
     public static final RegistryObject<CopperHelmet> COPPER_HELMET = ITEMS.register("copper_helmet", CopperHelmet::new);
-
     public static final RegistryObject<CopperLeggings> COPPER_LEGGINGS = ITEMS.register("copper_leggings", CopperLeggings::new);
-
     public static final RegistryObject<EmeraldBoots> EMERALD_BOOTS = ITEMS.register("emerald_boots", EmeraldBoots::new);
-
     public static final RegistryObject<EmeraldChestplate> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", EmeraldChestplate::new);
-
     public static final RegistryObject<EmeraldHelmet> EMERALD_HELMET = ITEMS.register("emerald_helmet", EmeraldHelmet::new);
-
     public static final RegistryObject<EmeraldLeggings> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", EmeraldLeggings::new);
     public static final RegistryObject<ExperienceScythe> EXPERIENCE_SCYTHE = ITEMS.register("experience_scythe", ExperienceScythe::new);
-
     public static final RegistryObject<LapisBoots> LAPIS_BOOTS = ITEMS.register("lapis_boots", LapisBoots::new);
-
     public static final RegistryObject<LapisChestplate> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate", LapisChestplate::new);
-
     public static final RegistryObject<LapisHelmet> LAPIS_HELMET = ITEMS.register("lapis_helmet", LapisHelmet::new);
-
     public static final RegistryObject<LapisLeggings> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings",  LapisLeggings::new);
     public static final RegistryObject<QueenGhidorahScaleBoots> QUEEN_GHIDORAH_SCALE_BOOTS = ITEMS.register("queen_ghidorah_scale_boots", QueenGhidorahScaleBoots::new);
     public static final RegistryObject<QueenGhidorahScaleChestplate> QUEEN_GHIDORAH_SCALE_CHESTPLATE = ITEMS.register("queen_ghidorah_scale_chestplate", QueenGhidorahScaleChestplate::new);
@@ -83,34 +65,23 @@ public class RegistryHandler {
     public static final RegistryObject<QueenGhidorahScaleLeggings> QUEEN_GHIDORAH_SCALE_LEGGINGS = ITEMS.register("queen_ghidorah_scale_leggings", QueenGhidorahScaleLeggings::new);
     public static final RegistryObject<SapphireBoots> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", SapphireBoots::new);
     public static final RegistryObject<SapphireChestplate> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", SapphireChestplate::new);
-
     public static final RegistryObject<SapphireHelmet> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", SapphireHelmet::new);
-
     public static final RegistryObject<SapphireLeggings> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", SapphireLeggings::new);
     public static final RegistryObject<TitaniumBoots> TITANIUM_BOOTS = ITEMS.register("titanium_boots", TitaniumBoots::new);
     public static final RegistryObject<TitaniumChestplate> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate", TitaniumChestplate::new);
-
     public static final RegistryObject<TitaniumHelmet> TITANIUM_HELMET = ITEMS.register("titanium_helmet", TitaniumHelmet::new);
-
     public static final RegistryObject<TitaniumLeggings> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings", TitaniumLeggings::new);
 
     //Blocks
     public static final RegistryObject<Block> ABYSSAL_ORE_BLOCK = BLOCKS.register("abyssal_ore_block", AbyssalOreBlock::new);
     public static final RegistryObject<Block> ABYSSAL_ORE_VERTICAL_SLAB = conditionallyRegisterBlock("abyssal_ore_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.from(Blocks.STONE_SLAB)), () -> isLoaded("quark"));
     public static final RegistryObject<Block> ADAMANTINE_BLOCK = BLOCKS.register("adamantine_block", AdamantineBlock::new);
-
     public static final RegistryObject<Block> ALUMINIUM_BLOCK = BLOCKS.register("aluminium_block", AluminiumBlock::new);
-
     public static final RegistryObject<Block> ALUMINIUM_ORE_BLOCK = BLOCKS.register("aluminium_ore_block", AluminiumOreBlock::new);
-
     public static final RegistryObject<Block> APPLE_BLOCK = BLOCKS.register("apple_block", AppleBlock::new);
-
     public static final RegistryObject<Block> APPLE_LEAVES = BLOCKS.register("apple_leaves", AppleLeaves::new);
-
     public static final RegistryObject<Block> APPLE_LOG = BLOCKS.register("apple_log", AppleLog::new);
-
     public static final RegistryObject<Block> BLOODSTONE_BLOCK = BLOCKS.register("bloodstone_block", BloodStoneBlock::new);
-
     public static final RegistryObject<Block> BROWN_BLOCK = BLOCKS.register("brown_block", BrownBlock::new);
     public static final RegistryObject<Block> CATS_EYE_BLOCK = BLOCKS.register("cats_eye_block", CatsEyeBlock::new);
     public static final RegistryObject<Block> CATS_EYE_ORE = BLOCKS.register("cats_eye_ore", CatsEyeOre::new);
@@ -275,7 +246,7 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<EasterBunny>> EASTER_BUNNY = ENTITIES
             .register("easter_bunny",
                     () -> EntityType.Builder.<EasterBunny>create(EasterBunny::new, EntityClassification.CREATURE)
-                            .size(2.0F, 1.5F)
+                            .size(1.0F, 1.2F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "easter_bunny").toString()));
 
     public static final RegistryObject<EntityType<Ent>> ENT = ENTITIES
@@ -319,7 +290,6 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<RedAnt>create(RedAnt::new, EntityClassification.CREATURE)
                             .size(0.9f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "red_ant").toString()));
-
 
     public static final RegistryObject<EntityType<RedCow>> RED_COW = ENTITIES
             .register("red_cow",
@@ -370,42 +340,26 @@ public class RegistryHandler {
                             .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
 
     //Items
-    public static final RegistryObject<Item> ALLOSAURUS_TOOTH = ITEMS.register("allosaurus_tooth", AllosaurusTooth::new);
-    public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("aluminium_ingot", AluminiumIngot::new);
-
-    public static final RegistryObject<Item> ALUMINIUM_LUMP = ITEMS.register("aluminium_lump", AluminiumLump::new);
-
-    public static final RegistryObject<AppleSeed> APPLE_SEED = ITEMS.register("apple_seed", AppleSeed::new);
-    public static final RegistryObject<Item> BISMUTH_INGOT = ITEMS.register("bismuth_ingot", BismuthIngot::new);
-
-    public static final RegistryObject<Item> BLOODSTONE = ITEMS.register("bloodstone", BloodStone::new);
-
+    public static final RegistryObject<Item> ALLOSAURUS_TOOTH = ITEMS.register("allosaurus_tooth", () -> new AItem(DangerZone.TAB));
+    public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("aluminium_ingot",() -> new AItem(DangerZone.TAB));
+    public static final RegistryObject<Item> ALUMINIUM_LUMP = ITEMS.register("aluminium_lump", () -> new AItem(DangerZone.TAB));
+    public static final RegistryObject<Item> APPLE_SEED = ITEMS.register("apple_seed", () -> new AItem(DangerZone.WIP));
+    public static final RegistryObject<Item> BISMUTH_INGOT = ITEMS.register("bismuth_ingot", () -> new AItem(DangerZone.TAB));
+    public static final RegistryObject<Item> BLOODSTONE = ITEMS.register("bloodstone", () -> new AItem(DangerZone.TAB));
     public static final RegistryObject<BLT> BLT = ITEMS.register("blt", BLT::new);
-
     public static final RegistryObject<Butter> BUTTER = ITEMS.register("butter", Butter::new);
-
     public static final RegistryObject<ButterCandy> BUTTER_CANDY = ITEMS.register("butter_candy", ButterCandy::new);
-
     public static final RegistryObject<CandyCane> CANDY_CANE = ITEMS.register("candy_cane", CandyCane::new);
-
-    public static final RegistryObject<Item> CATS_EYE = ITEMS.register("cats_eye", CatsEye::new);
-
+    public static final RegistryObject<Item> CATS_EYE = ITEMS.register("cats_eye", () -> new AItem(DangerZone.TAB));
     public static final RegistryObject<Cheese> CHEESE = ITEMS.register("cheese", Cheese::new);
 
-    public static final RegistryObject<Item> COARSE_AMETHYST = ITEMS.register("coarse_amethyst", CoarseAmethyst::new);
-
+    public static final RegistryObject<Item> COARSE_AMETHYST = ITEMS.register("coarse_amethyst", () -> new AItem(DangerZone.TAB));
     public static final RegistryObject<CookedBacon> COOKED_BACON = ITEMS.register("cooked_bacon", CookedBacon::new);
-
     public static final RegistryObject<Item> COPPER_LUMP = ITEMS.register("copper_lump", CopperLump::new);
-
     public static final RegistryObject<CritterCage> CRITTER_CAGE = ITEMS.register("critter_cage", CritterCage::new);
-
     public static final RegistryObject<CrystalApple> CRYSTAL_APPLE = ITEMS.register("crystal_apple", CrystalApple::new);
-
     public static final RegistryObject<CZLoinCoin> CZ_LOIN_COIN = ITEMS.register("cz_loin_coin", CZLoinCoin::new);
-
     public static final RegistryObject<DeadRainbowAnt> DEAD_RAINBOW_ANT = ITEMS.register("dead_rainbow_ant", DeadRainbowAnt::new);
-
     public static final RegistryObject<DeadTermite> DEAD_TERMITE = ITEMS.register("dead_termite", DeadTermite::new);
     public static final RegistryObject<StairItem> INSTANT_BRIDGE = ITEMS.register("instant_bridge", StairItem::new);
     public static final RegistryObject<StairItem> INSTANT_STAIRS_UP = ITEMS.register("instant_stairs_up", StairItem::new);
@@ -435,52 +389,33 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", TitaniumIngot::new);
     public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget", TitaniumNugget::new);
     public static final RegistryObject<Item> WATER_DRAGON_SCALE = ITEMS.register("water_dragon_scale", WaterDragonScale::new);
-
     public static final RegistryObject<Item> WRENCH = ITEMS.register("wrench", Wrench::new);
 
     //Petrified Mob blocks
     public static final RegistryObject<Block> BUTTERFLY_EGG_ORE = BLOCKS.register("butterfly_egg_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> GODZILLA_EGG_ORE = BLOCKS.register("godzilla_egg_ore", BlockMobOre::new);
     public static final RegistryObject<Block> GUARDIAN_EGG_ORE = BLOCKS.register("guardian_egg_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> MAGMA_CUBE_EGG_ORE = BLOCKS.register("magma_cube_egg_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> MUTANT_ZOMBIE_EGG_ORE = BLOCKS.register("mutant_zombie_egg_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> RAINBOW_ANT_EGG_ORE = BLOCKS.register("rainbow_ant_egg_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> REDROSEWARRIOR_EGG_ORE = BLOCKS.register("redrosewarrior_egg_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> STAMPYLONGNOSE_EGG_ORE = BLOCKS.register("petrified_stampylongnose_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> TERMITE_EGG_ORE = BLOCKS.register("termite_egg_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> TEWTIY_EGG_ORE = BLOCKS.register("petrified_tewtiy_ore", BlockMobOre::new);
-
     public static final RegistryObject<Block> ZOMBIE_EGG_ORE = BLOCKS.register("petrified_zombie_ore", BlockMobOre::new);
 
 
     //Petrified Mob items
     public static final RegistryObject<Item> BUTTERFLY_EGG_ORE_ITEM = ITEMS.register("butterfly_egg_ore", () -> new BlockItemMobOre(BUTTERFLY_EGG_ORE.get()));
-
     public static final RegistryObject<Item> GODZILLA_EGG_ORE_ITEM = ITEMS.register("godzilla_egg_ore", () -> new BlockItemMobOre(GODZILLA_EGG_ORE.get()));
     public static final RegistryObject<Item> GUARDIAN_EGG_ORE_ITEM = ITEMS.register("guardian_egg_ore", () -> new BlockItemMobOre(GUARDIAN_EGG_ORE.get()));
-
     public static final RegistryObject<Item> REDROSEWARRIOR_EGG_ORE_ITEM = ITEMS.register("redrosewarrior_egg_ore", () -> new BlockItemMobOre(REDROSEWARRIOR_EGG_ORE.get()));
-
     public static final RegistryObject<Item> MAGMA_CUBE_EGG_ORE_ITEM = ITEMS.register("magma_cube_egg_ore", () -> new BlockItemMobOre(MAGMA_CUBE_EGG_ORE.get()));
-
     public static final RegistryObject<Item> Mutant_Zombie_EGG_ORE_ITEM = ITEMS.register("mutant_zombie_egg_ore", () -> new BlockItemMobOre(MUTANT_ZOMBIE_EGG_ORE.get()));
-
     public static final RegistryObject<Item> RAINBOW_ANT_EGG_ORE_ITEM = ITEMS.register("rainbow_ant_egg_ore", () -> new BlockItemMobOre(RAINBOW_ANT_EGG_ORE.get()));
-
     public static final RegistryObject<Item> STAMPYLONGNOSE_EGG_ORE_ITEM = ITEMS.register("petrified_stampylongnose_ore", () -> new BlockItemMobOre(STAMPYLONGNOSE_EGG_ORE.get()));
-
     public static final RegistryObject<Item> TERMITE_EGG_ORE_ITEM = ITEMS.register("termite_egg_ore", () -> new BlockItemMobOre(TERMITE_EGG_ORE.get()));
-
     public static final RegistryObject<Item> TEWTIY_EGG_ORE_ITEM = ITEMS.register("petrified_tewtiy_ore", () -> new BlockItemMobOre(TEWTIY_EGG_ORE.get()));
-
     public static final RegistryObject<Item> ZOMBIE_EGG_ORE_ITEM = ITEMS.register("petrified_zombie_ore", () -> new BlockItemMobOre(ZOMBIE_EGG_ORE.get()));
 
     //Spawn Eggs
@@ -507,65 +442,38 @@ public class RegistryHandler {
     public static final RegistryObject<Item> SNOW_GOLEM_SPAWN_EGG = ITEMS.register("snow_golem_spawn_egg", () -> new SpawnEgg(EntityType.SNOW_GOLEM, 0, 0, new Item.Properties().group(DangerZone.TAB)));
     public static final RegistryObject<SpawnEgg> STAMPYLONGNOSE_SPAWN_EGG = ITEMS.register("stampylongnose_spawn_egg", () -> new SpawnEgg(RegistryHandler.STAMPYLONGNOSE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
     public static final RegistryObject<SpawnEgg> TECHNOBLADE_SPAWN_EGG = ITEMS.register("technoblade_spawn_egg", () -> new SpawnEgg(RegistryHandler.TECHNOBLADE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-
     public static final RegistryObject<SpawnEgg> TERMITE_SPAWN_EGG = ITEMS.register("termite_spawn_egg", () -> new SpawnEgg(RegistryHandler.TERMITE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-
     public static final RegistryObject<SpawnEgg> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEgg(RegistryHandler.TEWTIY, 0, 0, new Item.Properties().group(DangerZone.TAB)));
     public static final RegistryObject<Item> TREX_SPAWN_EGG = ITEMS.register("trex_spawn_egg", TrexSpawnEgg::new);
 
     //Tools and Weapons
 
     public static final RegistryObject<CoarseAmethystAxe> COARSE_AMETHYST_AXE = ITEMS.register("coarse_amethyst_axe", CoarseAmethystAxe::new);
-
     public static final RegistryObject<CoarseAmethystHoe> COARSE_AMETHYST_HOE = ITEMS.register("coarse_amethyst_hoe", CoarseAmethystHoe::new);
-
     public static final RegistryObject<CoarseAmethystPickaxe> COARSE_AMETHYST_PICKAXE = ITEMS.register("coarse_amethyst_pickaxe", CoarseAmethystPickaxe::new);
-
     public static final RegistryObject<CoarseAmethystShovel> COARSE_AMETHYST_SHOVEL = ITEMS.register("coarse_amethyst_shovel", CoarseAmethystShovel::new);
-
     public static final RegistryObject<CoarseAmethystSword> COARSE_AMETHYST_SWORD = ITEMS.register("coarse_amethyst_sword", CoarseAmethystSword::new);
-
     public static final RegistryObject<CakeSword> CAKE_SWORD = ITEMS.register("cake_sword", CakeSword::new);
-
     public static final RegistryObject<EmeraldAxe> EMERALD_AXE = ITEMS.register("emerald_axe", EmeraldAxe::new);
-
     public static final RegistryObject<EmeraldHoe> EMERALD_HOE = ITEMS.register("emerald_hoe", EmeraldHoe::new);
-
     public static final RegistryObject<EmeraldPickaxe> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", EmeraldPickaxe::new);
-
     public static final RegistryObject<EmeraldShovel> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", EmeraldShovel::new);
-
     public static final RegistryObject<EmeraldSword> EMERALD_SWORD = ITEMS.register("emerald_sword", EmeraldSword::new);
     public static final RegistryObject<Hammy> HAMMY = ITEMS.register("hammy", Hammy::new);
-
     public static final RegistryObject<MantisClaw> MANTIS_CLAW = ITEMS.register("mantis_claw", MantisClaw::new);
-
     public static final RegistryObject<PoppySword> POPPY_SWORD = ITEMS.register("poppy_sword", PoppySword::new);
-
     public static final RegistryObject<QueenGhidorahScaleBattleAxe> QUEEN_GHIDORAH_SCALE_BATTLE_AXE = ITEMS.register("queen_ghidorah_scale_battle_axe", QueenGhidorahScaleBattleAxe::new);
-
     public static final RegistryObject<SapphireAxe> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", SapphireAxe::new);
-
     public static final RegistryObject<SapphireHoe> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", SapphireHoe::new);
-
     public static final RegistryObject<SapphirePickaxe> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", SapphirePickaxe::new);
-
     public static final RegistryObject<SapphireShovel> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", SapphireShovel::new);
-
     public static final RegistryObject<SapphireSword> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", SapphireSword::new);
-
     public static final RegistryObject<AluminiumAxe> ALUMINIUM_AXE = ITEMS.register("aluminium_axe", AluminiumAxe::new);
-
     public static final RegistryObject<AluminiumHoe> ALUMINIUM_HOE = ITEMS.register("aluminium_hoe", AluminiumHoe::new);
-
     public static final RegistryObject<AluminiumPickaxe> ALUMINIUM_PICKAXE = ITEMS.register("aluminium_pickaxe", AluminiumPickaxe::new);
-
     public static final RegistryObject<AluminiumShovel> ALUMINIUM_SHOVEL = ITEMS.register("aluminium_shovel", AluminiumShovel::new);
-
     public static final RegistryObject<GodzillaAxe> GODZILLA_AXE = ITEMS.register("godzilla_axe", GodzillaAxe::new);
-
     public static final RegistryObject<FireCakeSword> FIRE_CAKE_SWORD = ITEMS.register("fire_cake_sword", FireCakeSword::new);
-
     public static final RegistryObject<TitaniumCakeSword> TITANIUM_CAKE_SWORD = ITEMS.register("titanium_cake_sword", TitaniumCakeSword::new);
     public static final RegistryObject<TitaniumHoe> TITANIUM_HOE = ITEMS.register("titanium_hoe", TitaniumHoe::new);
     public static final RegistryObject<TitaniumShovel> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", TitaniumShovel::new);
