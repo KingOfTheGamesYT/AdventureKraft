@@ -338,33 +338,34 @@ public class RegistryHandler {
                     () -> EntityType.Builder.<WaterProjectile>create(WaterProjectile::new, EntityClassification.MISC)
                             .size(1.0F, 3.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
+    //Item
 
-    //Items
-    public static final RegistryObject<Item> ALLOSAURUS_TOOTH = ITEMS.register("allosaurus_tooth", () -> new AItem(DangerZone.TAB));
-    public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("aluminium_ingot",() -> new AItem(DangerZone.TAB));
-    public static final RegistryObject<Item> ALUMINIUM_LUMP = ITEMS.register("aluminium_lump", () -> new AItem(DangerZone.TAB));
-    public static final RegistryObject<Item> APPLE_SEED = ITEMS.register("apple_seed", () -> new AItem(DangerZone.WIP));
-    public static final RegistryObject<Item> BISMUTH_INGOT = ITEMS.register("bismuth_ingot", () -> new AItem(DangerZone.TAB));
-    public static final RegistryObject<Item> BLOODSTONE = ITEMS.register("bloodstone", () -> new AItem(DangerZone.TAB));
+    public static final RegistryObject<Item> ALLOSAURUS_TOOTH = ITEMS.register("allosaurus_tooth", () -> new AItem(DangerZone.TAB).addInfo("\u00A7f" + "They don't wash their teeth" + "\u00A7f"));
+    public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("aluminium_ingot",() -> new AItem(DangerZone.TAB).addInfo("\u00A7f" + "A lightweight ingot"));
+    public static final RegistryObject<Item> ALUMINIUM_LUMP = ITEMS.register("aluminium_lump", () -> new AItem(DangerZone.TAB).addInfo("\u00A7f" + "A lightweight lump" + "\u00A7f"));
+    public static final RegistryObject<Item> APPLE_SEED = ITEMS.register("apple_seed", () -> new AItem(DangerZone.WIP).addInfo("\u00A76" +"Apples come to life!" + "\u00A76"));
+    public static final RegistryObject<Item> BASILISK_SCALE = ITEMS.register("basilisk_scale",() -> new AItem(DangerZone.TAB).addInfo("\u00A72" + "This is your badge of honor." + "\u00A72"));
+    public static final RegistryObject<Item> BISMUTH_INGOT = ITEMS.register("bismuth_ingot", () -> new AItem(DangerZone.TAB).addInfo("\u00A7f" + "Don't put it in your ear" + "\u00A7f"));
+    public static final RegistryObject<Item> BLOODSTONE = ITEMS.register("bloodstone", () -> new AItem(DangerZone.TAB).addInfo("\u00A74" + "Might be useful some day. Until then, it's still pretty cool!" + "\u00A74"));
     public static final RegistryObject<BLT> BLT = ITEMS.register("blt", BLT::new);
     public static final RegistryObject<Butter> BUTTER = ITEMS.register("butter", Butter::new);
     public static final RegistryObject<ButterCandy> BUTTER_CANDY = ITEMS.register("butter_candy", ButterCandy::new);
     public static final RegistryObject<CandyCane> CANDY_CANE = ITEMS.register("candy_cane", CandyCane::new);
-    public static final RegistryObject<Item> CATS_EYE = ITEMS.register("cats_eye", () -> new AItem(DangerZone.TAB));
+    public static final RegistryObject<Item> CATS_EYE = ITEMS.register("cats_eye", () -> new AItem(DangerZone.TAB).addInfo("\u00A76" + "Cats are connoisseurs of comfort" + "\u00A76"));
     public static final RegistryObject<Cheese> CHEESE = ITEMS.register("cheese", Cheese::new);
 
-    public static final RegistryObject<Item> COARSE_AMETHYST = ITEMS.register("coarse_amethyst", () -> new AItem(DangerZone.TAB));
+    public static final RegistryObject<Item> COARSE_AMETHYST = ITEMS.register("coarse_amethyst", () -> new AItem(DangerZone.TAB).addInfo("\u00A75" + "They make some pretty cool Coarse Amethyst Tools & a Coarse Amethyst Sword, you can also make Coarse Amethyst Armor" + "\u00A75"));
     public static final RegistryObject<CookedBacon> COOKED_BACON = ITEMS.register("cooked_bacon", CookedBacon::new);
-    public static final RegistryObject<Item> COPPER_LUMP = ITEMS.register("copper_lump", CopperLump::new);
-    public static final RegistryObject<CritterCage> CRITTER_CAGE = ITEMS.register("critter_cage", CritterCage::new);
+    public static final RegistryObject<Item> COPPER_LUMP = ITEMS.register("copper_lump", () -> new AItem(DangerZone.TAB).addInfo("\u00A76" + "Makes some of the worst armor in the game" + "\u00A76"));
+    public static final RegistryObject<Item> CRITTER_CAGE = ITEMS.register("critter_cage", () -> new AItem(DangerZone.TAB).addInfo("\u00A78" + "Critter Cages only work about 80% of the time. You may have to throw more than one. And yes, they catch all types of critters. Handy against creepers. Just throw one at an entity to catch it. Right click it on the ground to release the captured critter. Yes, they work on big critters too, but very rarely.\n" + "\u00A78"));
     public static final RegistryObject<CrystalApple> CRYSTAL_APPLE = ITEMS.register("crystal_apple", CrystalApple::new);
-    public static final RegistryObject<CZLoinCoin> CZ_LOIN_COIN = ITEMS.register("cz_loin_coin", CZLoinCoin::new);
+    public static final RegistryObject<Item> CZ_LOIN_COIN = ITEMS.register("cz_loin_coin", () -> new AItem(DangerZone.TAB).addInfo("\u00A7e" + "Wait isn't this AdventureKraft?" + "\u00A7e"));
     public static final RegistryObject<DeadRainbowAnt> DEAD_RAINBOW_ANT = ITEMS.register("dead_rainbow_ant", DeadRainbowAnt::new);
     public static final RegistryObject<DeadTermite> DEAD_TERMITE = ITEMS.register("dead_termite", DeadTermite::new);
     public static final RegistryObject<StairItem> INSTANT_BRIDGE = ITEMS.register("instant_bridge", StairItem::new);
     public static final RegistryObject<StairItem> INSTANT_STAIRS_UP = ITEMS.register("instant_stairs_up", StairItem::new);
     public static final RegistryObject<StairItem> INSTANT_STAIRS_DOWN = ITEMS.register("instant_stairs_down", StairItem::new);
-    public static final RegistryObject<Item> KING_GHIDORAH_SCALE = ITEMS.register("king_ghidorah_scale", KingGhidorahScale::new);
+    public static final RegistryObject<Item> KING_GHIDORAH_SCALE = ITEMS.register("king_ghidorah_scale", () -> new AItem(DangerZone.TAB).addInfo("\u00A76" + "Makes the gear of kings" + "\u00A76"));
     public static final RegistryObject<MinersDreamItem> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
     public static final RegistryObject<Item> MITHRIL_LUMP = ITEMS.register("mithril_lump", MithrilLump::new);
     public static final RegistryObject<Popcorn> POPCORN = ITEMS.register("popcorn", Popcorn::new);
@@ -421,7 +422,6 @@ public class RegistryHandler {
     //Spawn Eggs
     public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", () -> new SpawnEgg(RegistryHandler.ALLOSAURUS, 0, 0, new Item.Properties().group(DangerZone.TAB)));
     public static final RegistryObject<SpawnEgg> ATTACK_SQUID_SPAWN_EGG = ITEMS.register("attack_squid_spawn_egg", () -> new SpawnEgg(RegistryHandler.ATTACK_SQUID, 0, 0,new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<Item> BASILISK_SCALE = ITEMS.register("basilisk_scale", BasiliskScale::new);
     public static final RegistryObject<Item> BEAVER_SPAWN_EGG = ITEMS.register("beaver_spawn_egg", BeaverSpawnEgg::new);
     public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", () -> new SpawnEgg(RegistryHandler.BIRD, 0, 0, new Item.Properties().group(DangerZone.TAB)));
     public static final RegistryObject<SpawnEgg> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg", () -> new SpawnEgg(RegistryHandler.BUTTERFLY, 0, 0, new Item.Properties().group(DangerZone.TAB)));

@@ -1,0 +1,47 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": {
+            "values": [
+              {
+                "value": {
+                  "modid": "mekanism",
+                  "type": "forge:mod_loaded"
+                },
+                "type": "forge:not"
+              },
+              {
+                "item": "mekanism:pellet_plutonium",
+                "type": "forge:item_exists"
+              },
+              {
+                "type": "forge:false"
+              }
+            ],
+            "type": "forge:and"
+          },
+          "type": "forge:not"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "dangerzone:mutant_zombie_egg_ore"
+          },
+          {
+            "item": "minecraft:water_bucket"
+          }
+        ],
+        "result":
+        {
+          "item": "mekanism:pellet_plutonium",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

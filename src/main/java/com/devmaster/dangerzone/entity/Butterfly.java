@@ -32,7 +32,6 @@ public class Butterfly extends CreatureEntity {
         this.ignoreFrustumCheck = true;
         this.setPathPriority(PathNodeType.WATER, -1.0F);
         this.moveController = new FlyingMovementController(this, 20, true);
-
     }
 
     static {

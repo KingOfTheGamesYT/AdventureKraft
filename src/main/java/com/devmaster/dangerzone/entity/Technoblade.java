@@ -120,7 +120,6 @@ public class Technoblade extends CreatureEntity {
         return super.onInitialSpawn(world, diff, spawn, (ILivingEntityData)spawndata, comnbt);
     }
 
-
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
         return SoundEvents.ENTITY_PLAYER_HURT;
@@ -141,7 +140,6 @@ public class Technoblade extends CreatureEntity {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
 
-
     @Override
     public boolean onLivingFall(float distance, float damageMultiplier) {
         return true;
@@ -159,7 +157,6 @@ public class Technoblade extends CreatureEntity {
     public void writeAdditional(CompoundNBT comnbt) {
         super.writeAdditional(comnbt);
         comnbt.putInt("Variant", this.getTechnobladeVariant());
-
     }
 }
 
