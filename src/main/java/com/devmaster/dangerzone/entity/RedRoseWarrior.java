@@ -39,7 +39,7 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         this.experienceValue = 10;
     }
 
-    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName().copyRaw().mergeStyle(TextFormatting.RED).mergeStyle(TextFormatting.BOLD), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
+    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName().copyRaw().mergeStyle(TextFormatting.RED).mergeStyle(TextFormatting.BOLD), BossInfo.Color.RED, BossInfo.Overlay.PROGRESS));
 
     @Override
     public void livingTick() {
