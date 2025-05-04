@@ -20,6 +20,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
@@ -39,7 +40,7 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
 
     }
 
-    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.PURPLE, BossInfo.Overlay.PROGRESS));
+    private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName().copyRaw().mergeStyle(TextFormatting.DARK_PURPLE).mergeStyle(TextFormatting.BOLD), BossInfo.Color.PURPLE, BossInfo.Overlay.PROGRESS));
 
     @Override
     public void livingTick() {
