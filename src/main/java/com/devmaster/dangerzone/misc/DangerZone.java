@@ -5,7 +5,6 @@ import com.devmaster.dangerzone.CreativeTabs.*;
 import com.devmaster.dangerzone.client.render.RoboTechnobladeRender;
 import com.devmaster.dangerzone.configs.BaseConfig;
 import com.devmaster.dangerzone.entity.*;
-import com.devmaster.dangerzone.functions.ScytheHitEvent;
 import com.devmaster.dangerzone.items.SpawnEgg;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ArmoredMobSpawnEvents;
@@ -64,7 +63,6 @@ public class DangerZone {
         RegistryHandler.init();
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
-        MinecraftForge.EVENT_BUS.addListener(ScytheHitEvent::onAttackEntity);
         MinecraftForge.EVENT_BUS.addListener(ArmoredMobSpawnEvents::spawnMonster);
         new HitCostEvent();
 

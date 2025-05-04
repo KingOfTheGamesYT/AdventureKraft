@@ -29,7 +29,7 @@ import java.util.Arrays;
 public class ModOregen {
 
         public static void handleWorldGen(final BiomeLoadingEvent event) {
-            spawnOreInSpecificBiome(Biomes.MOUNTAINS, TERMITE_TROLL_ORE, event, Dimension.OVERWORLD.toString());
+            //spawnOreInSpecificBiome(Biomes.MOUNTAINS, TERMITE_TROLL_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(ALUMINIUM_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(ABYSSAL_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(COARSE_AETHYST_ORE, event, Dimension.OVERWORLD.toString());
@@ -39,7 +39,7 @@ public class ModOregen {
             spawnOreInAllBiomes(PLAY_BUTTON_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(RAINBOW_ANT_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(REDROSEWARRIOR_ORE, event, Dimension.OVERWORLD.toString());
-            spawnOreInAllBiomes(MAGMA_CUBE_ORE, event, Dimension.OVERWORLD.toString());
+          //  spawnOreInAllBiomes(MAGMA_CUBE_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(STAMPYLONGNOSE_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(TEWTIY_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(ZOMBIE_ORE, event, Dimension.OVERWORLD.toString());
@@ -134,7 +134,7 @@ public enum OreType {
     PLAY_BUTTON_ORE(Lazy.of(RegistryHandler.PLAY_BUTTON_ORE_BLOCK), 8, 0, 14, 16),
     RAINBOW_ANT_ORE(Lazy.of(RegistryHandler.RAINBOW_ANT_EGG_ORE), 3, 0, 128, 3),
     REDROSEWARRIOR_ORE(Lazy.of(RegistryHandler.REDROSEWARRIOR_EGG_ORE), 3, 0, 128, 3),
-    MAGMA_CUBE_ORE(Lazy.of(RegistryHandler.MAGMA_CUBE_EGG_ORE), 3, 0, 128, 3),
+  //  MAGMA_CUBE_ORE(Lazy.of(RegistryHandler.MAGMA_CUBE_EGG_ORE), 3, 0, 128, 3),
     STAMPYLONGNOSE_ORE(Lazy.of(RegistryHandler.STAMPYLONGNOSE_EGG_ORE), 3, 0, 128, 3),
     TEWTIY_ORE(Lazy.of(RegistryHandler.TEWTIY_EGG_ORE), 3, 0, 128, 3),
     ZOMBIE_ORE(Lazy.of(RegistryHandler.ZOMBIE_EGG_ORE), 3, 0, 128, 3),
@@ -144,8 +144,8 @@ public enum OreType {
     CATS_EYE_ORE(Lazy.of(RegistryHandler.CATS_EYE_ORE), 7, 1, 48, 5),
     GODZILLA_ORE(Lazy.of(RegistryHandler.GODZILLA_EGG_ORE), 3, 0, 128, 3),
     GUARDIAN_ORE(Lazy.of(RegistryHandler.GUARDIAN_EGG_ORE), 3, 0, 128, 3),
-    TERMITE_ORE(Lazy.of(RegistryHandler.TERMITE_EGG_ORE), 3, 0, 128, 3),
-    TERMITE_TROLL_ORE(Lazy.of(RegistryHandler.TERMITE_TROLL_ORE), 1, 4, 32, 3);
+    TERMITE_ORE(Lazy.of(RegistryHandler.TERMITE_EGG_ORE), 3, 0, 128, 3);
+   // TERMITE_TROLL_ORE(Lazy.of(RegistryHandler.TERMITE_TROLL_ORE), 1, 4, 32, 3);
 
     private final Lazy<Block> block;
     private final int maxVeinSize;

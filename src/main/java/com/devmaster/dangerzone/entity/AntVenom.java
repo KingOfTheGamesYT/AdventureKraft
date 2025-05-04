@@ -23,8 +23,8 @@ import javax.annotation.Nullable;
 
 
 public class AntVenom extends CreatureEntity {
-
     public AntVenom(final EntityType<? extends AntVenom> type, final World worldIn) {
+
         super(type, worldIn);
         this.experienceValue = 250;
 
