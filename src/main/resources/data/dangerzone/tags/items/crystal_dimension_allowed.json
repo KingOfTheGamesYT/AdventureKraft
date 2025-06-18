@@ -3,6 +3,16 @@
   "values": [
     "dangerzone:termite_token",
     "dangerzone:kyanite",
-    "dangerzone:crystal_grass"
+    "dangerzone:crystal_grass",
+    "dangerzone:termite_abdomen",
+    "dangerzone:termite_leg",
+    "dangerzone:termite_eye",
+    "dangerzone:termite_spawn_egg",
+    "dangerzone:dead_termite",
+    "dangerzone:butterfly_spawn_egg",
+    "dangerzone:random_structure_spawner",
+    "dangerzone:critter_cage",
+    "dangerzone:crystal_apple",
+    "dangerzone:termite_egg_ore"
   ]
 }

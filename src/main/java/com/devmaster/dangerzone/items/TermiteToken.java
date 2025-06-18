@@ -35,12 +35,9 @@ import java.util.List;
 
 
 public class TermiteToken extends Item {
+
     public TermiteToken() {
-        super(new Properties().group(DangerZone.TAB)
-                .food(new Food.Builder()
-                        .setAlwaysEdible()
-                        .fastToEat()
-                        .build()));
+        super(new Properties().group(DangerZone.TAB));
     }
 
     private boolean isInventoryEmpty(PlayerEntity player) {
@@ -51,24 +48,25 @@ public class TermiteToken extends Item {
                 return false;
             }
         }
+
         for (ItemStack stack : player.inventory.armorInventory) {
-            if (!stack.isEmpty()&& !allowedItemsTag.contains(stack.getItem())) {
+            if (!stack.isEmpty() && !allowedItemsTag.contains(stack.getItem())) {
                 return false;
             }
-
         }
+
         for (ItemStack stack : player.inventory.offHandInventory) {
-            if (!stack.isEmpty()&& !allowedItemsTag.contains(stack.getItem())) {
+            if (!stack.isEmpty() && !allowedItemsTag.contains(stack.getItem())) {
                 return false;
             }
-    }
+        }
 
-      if (ModList.get().isLoaded("curios")) {
-        return checkCuriosSlots(player, allowedItemsTag);
-    }
+        if (ModList.get().isLoaded("curios")) {
+            return checkCuriosSlots(player, allowedItemsTag);
+        }
 
         return true;
-}
+    }
 
     private boolean checkCuriosSlots(PlayerEntity player, ITag<Item> allowedItemsTag) {
         return top.theillusivec4.curios.api.CuriosApi.getCuriosHelper().getEquippedCurios(player).map(handler -> {
@@ -84,80 +82,58 @@ public class TermiteToken extends Item {
 
     @Nonnull
     @Override
-    @ParametersAreNonnullByDefault
-    public ItemStack onItemUseFinish (ItemStack stack, World world, LivingEntity entity) {
-        if (stack.isFood()) {
+    public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
+        ItemStack stack = player.getHeldItem(hand);
 
-            if (entity instanceof PlayerEntity) {
-                PlayerEntity player = (PlayerEntity) entity;
-                player.addStat(Stats.ITEM_USED.get(stack.getItem()));
-                if (player instanceof ServerPlayerEntity && world.getDimensionKey() == RegistryHandler.CRYSTAL) {
-                    CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayerEntity) player, stack);
+        if (!world.isRemote) {
+            ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
+
+            // Dimension logic
+            if (world.getDimensionKey() == RegistryHandler.CRYSTAL) {
+                if (!ForgeHooks.onTravelToDimension(serverPlayer, World.OVERWORLD)) {
+                    return new ActionResult<>(ActionResultType.FAIL, stack);
                 }
-            }
-            if (!(entity instanceof PlayerEntity) || (world.getDimensionKey() == RegistryHandler.CRYSTAL || (!((PlayerEntity) entity).abilities.isCreativeMode))) {
+
                 stack.shrink(1);
-            }
-
-            if (!world.isRemote && entity instanceof PlayerEntity) {
-                ServerPlayerEntity player = (ServerPlayerEntity) entity;
-
-                if (world.getDimensionKey() == RegistryHandler.CRYSTAL) {
-                    if (!ForgeHooks.onTravelToDimension(player, World.OVERWORLD))
-                        return stack;
-
-                    teleportToDimension(world, player, World.OVERWORLD);
-                } else {
-                    if (!isInventoryEmpty(player)) {
-                        player.sendMessage(new StringTextComponent("You're inventory must be clear as a crystal to enter"), player.getUniqueID());
-                        return stack;
-                    }
-
-                    if (!ForgeHooks.onTravelToDimension(player, RegistryHandler.CRYSTAL))
-                        return stack;
-
-                    teleportToDimension(world, player, RegistryHandler.CRYSTAL);
+                teleportToDimension(world, serverPlayer, World.OVERWORLD);
+            } else {
+                if (!isInventoryEmpty(serverPlayer)) {
+                    player.sendMessage(new StringTextComponent("Your inventory must be clear as a crystal to enter"), player.getUniqueID());
+                    return new ActionResult<>(ActionResultType.FAIL, stack);
                 }
+
+                if (!ForgeHooks.onTravelToDimension(serverPlayer, RegistryHandler.CRYSTAL)) {
+                    return new ActionResult<>(ActionResultType.FAIL, stack);
+                }
+
+                stack.shrink(1);
+                teleportToDimension(world, serverPlayer, RegistryHandler.CRYSTAL);
             }
-        }
-            return stack;
+
+            serverPlayer.addStat(Stats.ITEM_USED.get(stack.getItem()));
         }
 
-    public int getUseDuration(ItemStack p_77626_1_) {
-        if (p_77626_1_.getItem().isFood()) {
-            return this.getFood().isFastEating() ? 1 : 32;
-        } else {
-            return 0;
-        }
+        return new ActionResult<>(ActionResultType.SUCCESS, stack);
     }
 
     public void teleportToDimension(World worldIn, PlayerEntity player, RegistryKey<World> dimension) {
         if (player.isAlive() && !worldIn.isRemote()) {
-            if (!player.isPassenger() && !player.isPassenger() && player.canChangeDimension()) {
-                 ServerPlayerEntity playerMP = (ServerPlayerEntity) player;
+            if (!player.isPassenger() && player.canChangeDimension()) {
+                ServerPlayerEntity playerMP = (ServerPlayerEntity) player;
                 MinecraftServer server = player.getServer();
                 ServerWorld destinationWorld = server != null ? server.getWorld(dimension) : null;
                 if (destinationWorld == null) {
                     return;
                 }
 
-                  CrystalTeleporter teleporter = new CrystalTeleporter();
-                 playerMP.changeDimension(destinationWorld, teleporter);
+                CrystalTeleporter teleporter = new CrystalTeleporter();
+                playerMP.changeDimension(destinationWorld, teleporter);
             }
         }
     }
 
-    @Nonnull
     @Override
-    @ParametersAreNonnullByDefault
-    public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
-        ItemStack itemstack = player.getHeldItem(hand);
-        player.setActiveHand(hand);
-        return new ActionResult<>(ActionResultType.SUCCESS, itemstack);
-    }
-
-    @Override
-    public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn){
-        tooltip.add(new StringTextComponent("\u00A77" + "This is needed to get to the Crystal Dimension" + "\u00A77"));
+    public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        tooltip.add(new StringTextComponent("\u00A77This is needed to get to the Crystal Dimension\u00A77"));
     }
 }
