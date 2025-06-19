@@ -95,12 +95,6 @@ public class NotBreeBree extends CreatureEntity {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
 
-
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
     @Override
     protected boolean isDespawnPeaceful() {
         return true;

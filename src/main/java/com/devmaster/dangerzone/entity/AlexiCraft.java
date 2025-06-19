@@ -87,10 +87,7 @@ public class AlexiCraft extends CreatureEntity {
     protected float getSoundPitch() {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
+
     @Override
     protected boolean isDespawnPeaceful() {
         return true;

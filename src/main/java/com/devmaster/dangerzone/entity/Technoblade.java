@@ -141,11 +141,6 @@ public class Technoblade extends CreatureEntity {
     }
 
     @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
-    @Override
     protected boolean isDespawnPeaceful() {
         return true;
     }
