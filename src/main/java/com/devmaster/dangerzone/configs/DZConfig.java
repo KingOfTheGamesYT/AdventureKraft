@@ -611,7 +611,7 @@ public class DZConfig {
         builder.push("Rainbow Ant Spawn Chances");
         RainbowAntmin = builder.defineInRange("Rainbow Ant Min", 1, 0, 640);
         RainbowAntmax = builder.defineInRange("Rainbow Ant Max", 5, 0, 640);
-        RainbowAntweight = builder.defineInRange("Rainbow Ant Weight", 7, 0, 100);
+        RainbowAntweight = builder.defineInRange("Rainbow Ant Weight", 6, 0, 100);
         builder.pop();
 
         builder.push("StampyLongNose Spawn Chances");
@@ -725,7 +725,7 @@ public class DZConfig {
         builder.push("Butterfly Spawn Chances");
         Butterflymin = builder.defineInRange("Butterfly Min", 1, 0, 64);
         Butterflymax = builder.defineInRange("Butterfly Max", 5, 0, 64);
-        Butterflyweight = builder.defineInRange("Butterfly Weight", 7, 0, 100);
+        Butterflyweight = builder.defineInRange("Butterfly Weight", 6, 0, 100);
         builder.pop();
 
         builder.comment("Spawnable Biomes");
@@ -1153,7 +1153,7 @@ public class DZConfig {
         builder.push("Termite Spawn Chances");
         Termitemin = builder.defineInRange("Termite Min", 1, 0, 640);
         Termitemax = builder.defineInRange("Termite Max", 5, 0, 640);
-        Termiteweight = builder.defineInRange("Termite Weight", 7, 0, 100);
+        Termiteweight = builder.defineInRange("Termite Weight", 6, 0, 100);
         builder.pop();
 
         builder.push("Termite Biomes Whitelist/Blacklist");
