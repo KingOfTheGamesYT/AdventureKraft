@@ -1054,13 +1054,7 @@ public class DZConfig {
         QUEEN_GHIDORAH_SCALE_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Queen Ghidorah Scale Chestplate Knockback Resistance").defineInRange("QUEEN_GHIDORAH_SCALE_CHESTPLATE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
         QUEEN_GHIDORAH_SCALE_CHESTPLATE_DURABILITY = builder.comment("Queen Ghidorah Scale Chestplate Durability").defineInRange("QUEEN_GHIDORAH_SCALE_CHESTPLATE_DURABILITY", 30000, 0, 100000);
         QUEEN_GHIDORAH_SCALE_CHESTPLATE_HIT_COST = builder.comment("How much durability a Queen Ghidorah Scale chestplate loses when an entity is hit").defineInRange("QUEEN_GHIDORAH_SCALE_CHESTPLATE_HIT_COST", 1, 0, 1000);
-        QUEEN_GHIDORAH_SCALE_BOOTS_ARMOR = builder.comment("Queen Ghidorah Scale boots Armor").defineInRange("QUEEN_GHIDORAH_SCALE_BOOTS_ARMOR", 30, 0, 1000);
-        QUEEN_GHIDORAH_SCALE_BOOTS_ENCHANTABILITY = builder.comment("Queen Ghidorah boots  Enchantability").defineInRange("QUEEN_GHIDORAH_SCALE_BOOTS_ENCHANTABILITY", 60, 0, 100000);
-        QUEEN_GHIDORAH_SCALE_BOOTS_TOUGHNESS = builder.comment("Queen Ghidorah Scale boots Toughness, must be a whole number").defineInRange("QUEEN_GHIDORAH_SCALE_BOOTSE_TOUGHNESS", 0, 0, 100000);
-        QUEEN_GHIDORAH_SCALE_BOOTS_KNOCK_BACK_RESISTANCE = builder.comment("Queen Ghidorah Scale boots Knockback Resistance").defineInRange("QUEEN_GHIDORAH_SCALE_BOOTS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
-        QUEEN_GHIDORAH_SCALE_BOOTS_DURABILITY = builder.comment("Queen Ghidorah Scale boots Durability").defineInRange("QUEEN_GHIDORAH_SCALE_BOOTS_DURABILITY", 30000, 0, 100000);
-        QUEEN_GHIDORAH_SCALE_BOOTS_HIT_COST = builder.comment("How much durability a Queen Ghidorah scale boots loses when an entity is hit").defineInRange("QUEEN_GHIDORAH_SCALE_BOOTS_HIT_COST", 1, 0, 1000);
-        QUEEN_GHIDORAH_SCALE_LEGGINGS_ARMOR = builder.comment("Queen Ghidorah Scale leggings Armor").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_ARMOR", 30, 0, 1000);
+       QUEEN_GHIDORAH_SCALE_LEGGINGS_ARMOR = builder.comment("Queen Ghidorah Scale leggings Armor").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_ARMOR", 30, 0, 1000);
         QUEEN_GHIDORAH_SCALE_LEGGINGS_ENCHANTABILITY = builder.comment("Queen Ghidorah leggings  Enchantability").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_ENCHANTABILITY", 60, 0, 100000);
         QUEEN_GHIDORAH_SCALE_LEGGINGS_TOUGHNESS = builder.comment("Queen Ghidorah Scale leggings Toughness, must be a whole number").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_TOUGHNESS", 0, 0, 100000);
         QUEEN_GHIDORAH_SCALE_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Queen Ghidorah Scale leggings Knockback Resistance").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
