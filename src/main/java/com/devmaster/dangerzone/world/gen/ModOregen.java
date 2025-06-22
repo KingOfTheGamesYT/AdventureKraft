@@ -48,7 +48,7 @@ public class ModOregen {
             spawnOreInAllBiomes(TITANIUM_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(CATS_EYE_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(GODZILLA_ORE, event, Dimension.OVERWORLD.toString());
-            spawnOreInAllBiomes(GUARDIAN_ORE, event, Dimension.OVERWORLD.toString());
+         //   spawnOreInAllBiomes(GUARDIAN_ORE, event, Dimension.OVERWORLD.toString());
             spawnOreInAllBiomes(TERMITE_ORE, event, Dimension.OVERWORLD.toString());
         }
 
@@ -143,7 +143,7 @@ public enum OreType {
     TITANIUM_ORE(Lazy.of(RegistryHandler.TITANIUM_ORE_BLOCK), 4, 0, 20, 3),
     CATS_EYE_ORE(Lazy.of(RegistryHandler.CATS_EYE_ORE), 7, 1, 48, 5),
     GODZILLA_ORE(Lazy.of(RegistryHandler.GODZILLA_EGG_ORE), 3, 0, 128, 3),
-    GUARDIAN_ORE(Lazy.of(RegistryHandler.GUARDIAN_EGG_ORE), 3, 0, 128, 3),
+    //GUARDIAN_ORE(Lazy.of(RegistryHandler.GUARDIAN_EGG_ORE), 3, 0, 128, 3),
     TERMITE_ORE(Lazy.of(RegistryHandler.TERMITE_EGG_ORE), 3, 0, 128, 3);
    // TERMITE_TROLL_ORE(Lazy.of(RegistryHandler.TERMITE_TROLL_ORE), 1, 4, 32, 3);
 
