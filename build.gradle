@@ -8,6 +8,7 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
     }
 }
+
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
@@ -22,10 +23,8 @@ sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = co
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
 
-
     mappings channel: 'snapshot', version: '20210309-1.16.5'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
-
 
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
@@ -44,7 +43,6 @@ minecraft {
                 }
             }
         }
-
         server {
             workingDirectory project.file('run')
 
@@ -57,9 +55,7 @@ minecraft {
             mods {
                 dangerzone {
                     source sourceSets.main
-                }
-            }
-        }
+                }}}
 
         data {
             workingDirectory project.file('run')
@@ -70,26 +66,22 @@ minecraft {
             mods {
                 dangerzone {
                     source sourceSets.main
-                }
-            }
-        }
-    }
-}
+                }}}}}
 
 repositories {
     mavenCentral()
     maven { url 'https://www.cursemaven.com'}
-
+    maven { url "https://maven.ryanliptak.com/" }
 }
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.20'
 
-
 //project name, project id, file id
     implementation fg.deobf("curse.maven:mutant_beasts-336272:3131604")
     implementation fg.deobf("curse.maven:jei-238222:3189632")
     implementation fg.deobf("curse.maven:curios-309927:3456953")
+    implementation fg.deobf("squeek.appleskin:appleskin-forge:mc1.16.4-2.5.1")
 }
 
 jar {
