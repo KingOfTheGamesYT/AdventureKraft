@@ -1,5 +1,6 @@
 {
   "_comment": "Items",
+  "item.dangerzone.bugzilla_scale": "Bugzilla Scale",
   "item.dangerzone.aluminium_ingot": "Aluminium Ingot",
   "item.dangerzone.aluminium_lump": "Aluminium Lump",
   "item.dangerzone.apple_seed": "Apple Seed",
@@ -18,6 +19,7 @@
   "item.dangerzone.cooked_bacon": "Cooked Bacon",
   "item.dangerzone.copper_lump": "Copper Lump",
   "item.dangerzone.crystal_apple": "Crystal Apple",
+  "item.dangerzone.crystal_corn": "Crystal Corn",
   "item.dangerzone.cz_loin_coin": "CZ Loin Coin",
   "item.dangerzone.dead_rainbow_ant": "Dead Rainbow Ant",
   "item.dangerzone.dead_termite": "Dead Termite",
@@ -79,6 +81,7 @@
   "item.dangerzone.instant_stairs_down": "Instant Stairs down",
   "item.dangerzone.bismuth_ingot": "Bismuth Ingot",
   "item.dangerzone.queen_ghidorah_scale": "Queen Ghidorah Scale",
+  "item.dangerzone.jade": "Jade",
 
 
   "_comment": "Petrified Ores",
@@ -176,6 +179,7 @@
   "item.dangerzone.queen_ghidorah_scale_leggings": "Queen Ghidorah Scale Leggings",
   "item.dangerzone.queen_ghidorah_scale_boots": "Queen Ghidorah Scale Boots",
   "item.dangerzone.queen_ghidorah_scale_helmet": "Queen Ghidorah Scale Helmet",
+  "item.dangerzone.godzilla_chestplate": "Godzilla Chestplate",
   "item.dangerzone.titanium_chestplate": "Titanium Chestplate",
   "item.dangerzone.titanium_leggings": "Titanium Leggings",
   "item.dangerzone.titanium_boots": "Titanium Boots",
