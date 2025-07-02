@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.functions.MermaidTickUpdateFunction;
+
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -18,10 +19,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
 import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,7 +32,6 @@ public class Mermaid extends CreatureEntity {
     public Mermaid(final EntityType<? extends Mermaid> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 80;
-
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -43,7 +41,6 @@ public class Mermaid extends CreatureEntity {
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 10.0D)
                 .createMutableAttribute(Attributes.ARMOR, 1.5F)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 3.0F);
-
     }
 
     @Override
@@ -64,7 +61,6 @@ public class Mermaid extends CreatureEntity {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Tewtiy.class, true));
         this.goalSelector.addGoal(5,new RandomWalkingGoal(this, 1.0));
-
     }
 
     @Override
@@ -78,7 +74,6 @@ public class Mermaid extends CreatureEntity {
         MermaidTickUpdateFunction.heathGenerator(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
                 (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
     }
-
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
@@ -100,12 +95,6 @@ public class Mermaid extends CreatureEntity {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
 
-
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
     @Override
     protected boolean isDespawnPeaceful() {
         return true;
@@ -114,7 +103,4 @@ public class Mermaid extends CreatureEntity {
     public boolean canDespawn(double distanceToClosestPlayer) {
         return false;
     }
-
 }
-
-

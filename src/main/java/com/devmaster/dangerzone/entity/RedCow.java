@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
+
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -8,25 +9,23 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 
 public class RedCow extends CowEntity {
-
     private EatGrassGoal eatGrassGoal;
     private int eatTimer;
 
     public RedCow(final EntityType<? extends RedCow> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 45;
-
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -49,7 +48,6 @@ public class RedCow extends CowEntity {
         this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.25D));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
-
     }
 
     @Override
@@ -94,11 +92,6 @@ public class RedCow extends CowEntity {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
 
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
     public boolean canDespawn(double distanceToClosestPlayer) {
         return false;
     }
@@ -107,5 +100,4 @@ public class RedCow extends CowEntity {
     protected boolean isDespawnPeaceful() {
         return true;
     }
-
     }

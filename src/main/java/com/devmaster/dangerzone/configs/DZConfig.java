@@ -541,6 +541,12 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_DURABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_HIT_COST;
+    public static ForgeConfigSpec.IntValue GODZILLA_CHESTPLATE_ARMOR;
+    public static ForgeConfigSpec.IntValue GODZILLA_CHESTPLATE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue GODZILLA_CHESTPLATE_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue GODZILLA_CHESTPLATE_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue GODZILLA_CHESTPLATE_DURABILITY;
+    public static ForgeConfigSpec.IntValue GODZILLA_CHESTPLATE_HIT_COST;
 
     public DZConfig() {
     }
@@ -611,7 +617,7 @@ public class DZConfig {
         builder.push("Rainbow Ant Spawn Chances");
         RainbowAntmin = builder.defineInRange("Rainbow Ant Min", 1, 0, 640);
         RainbowAntmax = builder.defineInRange("Rainbow Ant Max", 5, 0, 640);
-        RainbowAntweight = builder.defineInRange("Rainbow Ant Weight", 7, 0, 100);
+        RainbowAntweight = builder.defineInRange("Rainbow Ant Weight", 6, 0, 100);
         builder.pop();
 
         builder.push("StampyLongNose Spawn Chances");
@@ -725,7 +731,7 @@ public class DZConfig {
         builder.push("Butterfly Spawn Chances");
         Butterflymin = builder.defineInRange("Butterfly Min", 1, 0, 64);
         Butterflymax = builder.defineInRange("Butterfly Max", 5, 0, 64);
-        Butterflyweight = builder.defineInRange("Butterfly Weight", 7, 0, 100);
+        Butterflyweight = builder.defineInRange("Butterfly Weight", 6, 0, 100);
         builder.pop();
 
         builder.comment("Spawnable Biomes");
@@ -1073,6 +1079,14 @@ public class DZConfig {
         QUEEN_GHIDORAH_SCALE_HELMET_DURABILITY = builder.comment("Queen Ghidorah Scale helmet Durability").defineInRange("QUEEN_GHIDORAH_SCALE_HELMET_DURABILITY", 30000, 0, 100000);
         QUEEN_GHIDORAH_SCALE_HELMET_HIT_COST = builder.comment("How much durability a Queen Ghidorah Scale helmet loses when an entity is hit").defineInRange("QUEEN_GHIDORAH_SCALE_HELMET_HIT_COST", 1, 0, 1000);
 
+        builder.comment("Godzilla Set Attributes");
+        GODZILLA_CHESTPLATE_ARMOR = builder.comment("Godzilla Chestplate Armor").defineInRange("GODZILLA_CHESTPLATE_ARMOR", 24, 0, 1000);
+        GODZILLA_CHESTPLATE_ENCHANTABILITY = builder.comment("Godzilla Chestplate  Enchantability").defineInRange("GODZILLA_CHESTPLATE_ENCHANTABILITY", 1, 0, 100000);
+        GODZILLA_CHESTPLATE_TOUGHNESS = builder.comment("Godzilla Chestplate Toughness, must be a whole number").defineInRange("GODZILLA_CHESTPLATE_TOUGHNESS", 0, 0, 100000);
+        GODZILLA_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Godzilla Chestplate Knockback Resistance").defineInRange("GODZILLA_CHESTPLATE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+        GODZILLA_CHESTPLATE_DURABILITY = builder.comment("Godzilla Chestplate Durability").defineInRange("GODZILLA_CHESTPLATE_DURABILITY", 20000, 0, 100000);
+        GODZILLA_CHESTPLATE_HIT_COST = builder.comment("How much durability a Godzilla chestplate loses when an entity is hit").defineInRange("GODZILLA_CHESTPLATE_HIT_COST", 1, 0, 1000);
+
         builder.comment("Mantis Claw Attributes");
         MANTIS_CLAW_DAMAGE = builder.comment("Mantis Claw Damage").defineInRange("MANTIS_CLAW_DAMAGE", 14, 0, 1000);
         MANTIS_CLAW_DURABILITY = builder.comment("Mantis Claw Durability").defineInRange("MANTIS_CLAW_DURABILITY", 800, 0, 10000);
@@ -1207,7 +1221,7 @@ public class DZConfig {
         builder.push("Termite Spawn Chances");
         Termitemin = builder.defineInRange("Termite Min", 1, 0, 640);
         Termitemax = builder.defineInRange("Termite Max", 5, 0, 640);
-        Termiteweight = builder.defineInRange("Termite Weight", 7, 0, 100);
+        Termiteweight = builder.defineInRange("Termite Weight", 6, 0, 100);
         builder.pop();
 
         builder.push("Termite Biomes Whitelist/Blacklist");

@@ -30,7 +30,6 @@ public class AlexiCraft extends CreatureEntity {
 
     }
 
-
     @Override
     public void setCustomName(@Nullable ITextComponent name) {
         super.setCustomName(name);
@@ -87,10 +86,7 @@ public class AlexiCraft extends CreatureEntity {
     protected float getSoundPitch() {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
+
     @Override
     protected boolean isDespawnPeaceful() {
         return true;
@@ -100,5 +96,3 @@ public class AlexiCraft extends CreatureEntity {
     }
 
 }
-
-

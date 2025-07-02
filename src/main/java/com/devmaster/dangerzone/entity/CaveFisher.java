@@ -2,7 +2,6 @@ package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.functions.CaveFisherOnInitialSpawnFunction;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -14,15 +13,11 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.passive.fish.AbstractGroupFishEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.*;
-
-import net.minecraftforge.fml.network.FMLPlayMessages;
 
 import javax.annotation.Nullable;
 import java.util.*;
@@ -81,10 +76,7 @@ public class CaveFisher extends CreatureEntity {
     protected float getSoundPitch() {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
+
     @Override
     protected boolean isDespawnPeaceful() {
         return true;

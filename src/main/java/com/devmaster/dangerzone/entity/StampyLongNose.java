@@ -32,7 +32,6 @@ public class StampyLongNose extends CreatureEntity {
     public StampyLongNose(final EntityType<? extends StampyLongNose> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 250;
-
     }
 
     public static boolean canStampyLongNoseSpawn(EntityType<? extends StampyLongNose> animal, IWorld world, SpawnReason reason, BlockPos pos, Random random) {
@@ -50,9 +49,7 @@ public class StampyLongNose extends CreatureEntity {
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.22D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 8.0D)
                 .createMutableAttribute(Attributes.ARMOR, 3.5F);
-
     }
-
 
     @Override
     protected void registerGoals() {
@@ -74,9 +71,6 @@ public class StampyLongNose extends CreatureEntity {
         this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1.0));
     }
 
-
-
-
         @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
         return SoundEvents.ENTITY_PLAYER_HURT;
@@ -97,12 +91,6 @@ public class StampyLongNose extends CreatureEntity {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
 
-
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
     @Override
     protected boolean isDespawnPeaceful() {
         return true;
@@ -111,7 +99,4 @@ public class StampyLongNose extends CreatureEntity {
     public boolean canDespawn(double distanceToClosestPlayer) {
         return true;
     }
-
 }
-
-

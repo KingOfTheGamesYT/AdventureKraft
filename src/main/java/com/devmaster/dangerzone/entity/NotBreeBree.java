@@ -1,6 +1,5 @@
 package com.devmaster.dangerzone.entity;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -15,29 +14,22 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
-import java.util.Random;
-
 
 public class NotBreeBree extends CreatureEntity {
 
     public NotBreeBree(final EntityType<? extends NotBreeBree> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 250;
-
     }
-
 
     @Override
     public void setCustomName(@Nullable ITextComponent name) {
         super.setCustomName(name);
     }
-
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
@@ -69,11 +61,7 @@ public class NotBreeBree extends CreatureEntity {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Tewtiy.class, true));
         this.goalSelector.addGoal(5,new RandomWalkingGoal(this, 1.0));
-
     }
-
-
-
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
@@ -95,12 +83,6 @@ public class NotBreeBree extends CreatureEntity {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
 
-
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
     @Override
     protected boolean isDespawnPeaceful() {
         return true;
@@ -109,7 +91,4 @@ public class NotBreeBree extends CreatureEntity {
     public boolean canDespawn(double distanceToClosestPlayer) {
         return true;
     }
-
 }
-
-

@@ -1,23 +1,16 @@
 package com.devmaster.dangerzone.entity;
 
-import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
-
-import javax.annotation.Nullable;
-
 
 public class RedAnt extends CreatureEntity {
 
@@ -27,7 +20,6 @@ public class RedAnt extends CreatureEntity {
         this.setPathPriority(PathNodeType.WATER, -1.0F);
         this.experienceValue = 1;
     }
-
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
@@ -48,7 +40,6 @@ public class RedAnt extends CreatureEntity {
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
 
     }
-
 
     public void livingTick() {
         super.livingTick();
@@ -84,12 +75,6 @@ public class RedAnt extends CreatureEntity {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
 
-
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
     @Override
     protected boolean isDespawnPeaceful() {
         return false;
@@ -98,6 +83,4 @@ public class RedAnt extends CreatureEntity {
     public boolean canDespawn(double distanceToClosestPlayer) {
         return true;
     }
-
-
 }

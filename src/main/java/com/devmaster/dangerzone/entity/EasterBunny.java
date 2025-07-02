@@ -27,7 +27,6 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class EasterBunny extends RabbitEntity {
     private static final DataParameter<Integer> EASTER_BUNNY_VARIANT;
 
@@ -121,11 +120,6 @@ public class EasterBunny extends RabbitEntity {
     }
 
     @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
-    @Override
     protected boolean isDespawnPeaceful() {
         return true;
     }
@@ -133,7 +127,6 @@ public class EasterBunny extends RabbitEntity {
     public boolean canDespawn(double distanceToClosestPlayer) {
         return true;
     }
-
 
     public int eggTime = this.rand.nextInt(450) + 450;
 
@@ -167,5 +160,3 @@ public class EasterBunny extends RabbitEntity {
         comnbt.putInt("Variant", this.getEasterBunnyVariant());
     }
 }
-
-

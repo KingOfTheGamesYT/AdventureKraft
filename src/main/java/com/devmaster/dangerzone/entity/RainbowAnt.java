@@ -13,7 +13,6 @@ import net.minecraft.util.*;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
-
 import javax.annotation.Nullable;
 
 
@@ -26,15 +25,12 @@ public class RainbowAnt extends AnimalEntity {
         this.experienceValue = 1;
     }
 
-
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 1)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.15000000596046448D)
                 .createMutableAttribute(Attributes.ARMOR, 0.5);
-
     }
-
 
     @Override
     protected void registerGoals() {
@@ -43,7 +39,6 @@ public class RainbowAnt extends AnimalEntity {
         this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
         this.goalSelector.addGoal(1,new RandomWalkingGoal(this, 0.15000000596046448D));
     }
-
 
     public void livingTick() {
         super.livingTick();
@@ -77,12 +72,6 @@ public class RainbowAnt extends AnimalEntity {
     @Override
     protected float getSoundPitch() {
         return 0.7F + rand.nextFloat() * 0.2F;
-    }
-
-
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
     }
 
     @Override

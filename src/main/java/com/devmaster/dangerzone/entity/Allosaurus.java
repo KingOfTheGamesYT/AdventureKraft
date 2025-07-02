@@ -1,6 +1,5 @@
 package com.devmaster.dangerzone.entity;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -20,13 +19,11 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.*;
 import net.minecraft.world.server.ServerBossInfo;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 
 public class Allosaurus extends CreatureEntity {
     private static final DataParameter<Integer> ALLOSAURUS_VARIANT;
@@ -34,7 +31,6 @@ public class Allosaurus extends CreatureEntity {
     public Allosaurus(final EntityType<? extends Allosaurus> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 199;
-
     }
 
     static {
@@ -140,11 +136,6 @@ public class Allosaurus extends CreatureEntity {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
 
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
     public boolean canDespawn(double distanceToClosestPlayer) {
         return false;
     }
@@ -169,6 +160,4 @@ public class Allosaurus extends CreatureEntity {
     public void removeTrackingPlayer(ServerPlayerEntity player) {
         super.removeTrackingPlayer(player);
         this.bossInfo.removePlayer(player);
-    }
-
-    }
+    }}

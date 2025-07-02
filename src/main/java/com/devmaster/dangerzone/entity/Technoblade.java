@@ -26,14 +26,12 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-
 public class Technoblade extends CreatureEntity {
     private static final DataParameter<Integer> TECHNOBLADE_VARIANT;
 
     public Technoblade(final EntityType<? extends Technoblade> type, final World worldIn) {
         super(type, worldIn);
         this.experienceValue = 250;
-
     }
 
     static {
@@ -70,7 +68,6 @@ public class Technoblade extends CreatureEntity {
     public void readAdditional(CompoundNBT compound) {
         super.readAdditional(compound);
         this.setBirdVariant(compound.getInt("Variant"));
-
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -103,7 +100,6 @@ public class Technoblade extends CreatureEntity {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Tewtiy.class, true));
         this.goalSelector.addGoal(5,new RandomWalkingGoal(this, 1.0));
-
     }
 
     @Nullable
@@ -141,11 +137,6 @@ public class Technoblade extends CreatureEntity {
     }
 
     @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
-    }
-
-    @Override
     protected boolean isDespawnPeaceful() {
         return true;
     }
@@ -159,5 +150,3 @@ public class Technoblade extends CreatureEntity {
         comnbt.putInt("Variant", this.getTechnobladeVariant());
     }
 }
-
-

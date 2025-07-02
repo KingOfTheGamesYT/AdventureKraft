@@ -1,23 +1,20 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.misc.DangerZone;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.pathfinding.PathNodeType;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
@@ -26,16 +23,12 @@ import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
-import java.util.EnumSet;
 import java.util.List;
-
 
 public class Termite extends AnimalEntity {
     private List<BlockState> eatenBlocks;
     private int eatTimer;
-    private final int EAT_RANGE = 5; // Adjust the range as needed
-
-
+    private final int EAT_RANGE = 5;
 
     public Termite(final EntityType<? extends Termite> type, final World worldIn) {
         super(type, worldIn);
@@ -43,9 +36,7 @@ public class Termite extends AnimalEntity {
         this.setPathPriority(PathNodeType.WATER, -1.0F);
         this.experienceValue = 1;
         this.eatenBlocks = new ArrayList<>();
-
     }
-
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
         return MobEntity.func_233666_p_()
@@ -62,16 +53,13 @@ public class Termite extends AnimalEntity {
         this.goalSelector.addGoal(2, new LookAtGoal(this, PlayerEntity.class, 10.0F));
         this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
         this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 0.15D));
-
     }
-
 
     @Nullable
     @Override
     public AgeableEntity createChild(ServerWorld world, AgeableEntity mate) {
         return null;
     }
-
 
         @Override
         public void livingTick() {
@@ -131,12 +119,6 @@ public class Termite extends AnimalEntity {
     @Override
     protected float getSoundPitch() {
         return 0.7F + rand.nextFloat() * 0.2F;
-    }
-
-
-    @Override
-    public boolean onLivingFall(float distance, float damageMultiplier) {
-        return true;
     }
 
     @Override
