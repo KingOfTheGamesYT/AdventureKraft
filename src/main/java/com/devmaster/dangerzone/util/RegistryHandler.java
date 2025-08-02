@@ -128,7 +128,7 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<Allosaurus>> ALLOSAURUS = ENTITIES
             .register("allosaurus",
                     () -> EntityType.Builder.<Allosaurus>create(Allosaurus::new, EntityClassification.MONSTER)
-                            .size(1.0f, 0.3f)
+                            .size(1.0f, 1.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "allosaurus").toString()));
 
     public static final RegistryObject<EntityType<AntVenom>> ANTVENOM = ENTITIES
@@ -187,13 +187,13 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<Bird>> BIRD = ENTITIES
             .register("bird",
                     () -> EntityType.Builder.<Bird>create(Bird::new, EntityClassification.AMBIENT)
-                            .size(0.9f, 1.3f)
+                            .size(0.9f, 0.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "bird").toString()));
 
     public static final RegistryObject<EntityType<Butterfly>> BUTTERFLY = ENTITIES
             .register("butterfly",
                     () -> EntityType.Builder.<Butterfly>create(Butterfly::new, EntityClassification.AMBIENT)
-                            .size(0.9f, 1.3f)
+                            .size(0.9f, 0.3f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "butterfly").toString()));
 
     public static final RegistryObject<EntityType<CaptainSparkelz>> CAPTAINSPARKELZ = ENTITIES
@@ -247,13 +247,13 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<RainbowAnt>> RAINBOWANT = ENTITIES
             .register("rainbow_ant",
                     () -> EntityType.Builder.<RainbowAnt>create(RainbowAnt::new, EntityClassification.CREATURE)
-                            .size(0.9f, 1.3f)
+                            .size(0.8f, 0.6f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "rainbow_ant").toString()));
 
     public static final RegistryObject<EntityType<RedAnt>> RED_ANT = ENTITIES
             .register("red_ant",
                     () -> EntityType.Builder.<RedAnt>create(RedAnt::new, EntityClassification.CREATURE)
-                            .size(0.9f, 1.3f)
+                            .size(0.8f, 0.6f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "red_ant").toString()));
 
     public static final RegistryObject<EntityType<RedCow>> RED_COW = ENTITIES
@@ -289,7 +289,7 @@ public class RegistryHandler {
    public static final RegistryObject<EntityType<Termite>> TERMITE = ENTITIES
             .register("termite",
                     () -> EntityType.Builder.<Termite>create(Termite::new, EntityClassification.CREATURE)
-                            .size(0.9f, .9f)
+                            .size(0.8f, 0.6f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "termite").toString()));
 
     public static final RegistryObject<EntityType<Tewtiy>> TEWTIY = ENTITIES
