@@ -182,8 +182,8 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<BetterFireball>> BETTER_FIREBALL = ENTITIES
             .register("better_fireball",
                     () ->  EntityType.Builder.<BetterFireball>create(BetterFireball::new, EntityClassification.MISC)
-                            .size(1.0F, 1.0F)
-                            .build(new ResourceLocation(DangerZone.MOD_ID, "better_fireball").toString()));
+                            .size(0.5F, 0.4F)
+                            .build("better_fireball"));
     public static final RegistryObject<EntityType<Bird>> BIRD = ENTITIES
             .register("bird",
                     () -> EntityType.Builder.<Bird>create(Bird::new, EntityClassification.AMBIENT)
@@ -301,7 +301,7 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<WaterProjectile>> WATER_PROJECTILE = ENTITIES
             .register("water_projectile",
                     () -> EntityType.Builder.<WaterProjectile>create(WaterProjectile::new, EntityClassification.MISC)
-                            .size(1.0F, 3.5F)
+                            .size(0.5F, 0.5F)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "water_projectile").toString()));
     //Item
 
