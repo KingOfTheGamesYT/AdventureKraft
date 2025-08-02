@@ -241,6 +241,9 @@
   "entity.dangerzone.red_ant": "Red Ant",
   "entity.dangerzone.termite": "Termite",
   "entity.dangerzone.easter_bunny": "Easter Bunny",
+  "entity.dangerzone.water_projectile": "Water Bending",
+  "entity.dangerzone.better_fireball": "Fire Ball",
+
 
   "_comment": "Biomes",
   "biome.dangerzone.villages": "Villages",
