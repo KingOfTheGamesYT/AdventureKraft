@@ -12,8 +12,10 @@ import com.devmaster.dangerzone.world.gen.EntitySpawns;
 import com.devmaster.dangerzone.world.gen.ModOregen;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -139,6 +141,8 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TERMITE.get(), TermiteRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.EASTER_BUNNY.get(), EasterBunnyRender::new);
         RenderTypeLookup.setRenderLayer(RegistryHandler.RANDOM_STRUCTURE_BLOCK.get(), RenderType.getCutout());
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BETTER_FIREBALL.get(),
+                manager -> new SpriteRenderer<>(manager, Minecraft.getInstance().getItemRenderer()));
         SpawnEgg.initSpawnEggs();
     }
 }

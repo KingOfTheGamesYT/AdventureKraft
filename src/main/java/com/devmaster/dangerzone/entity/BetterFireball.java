@@ -4,20 +4,24 @@ package com.devmaster.dangerzone.entity;
 import com.devmaster.dangerzone.util.RegistryHandler;
 
 import net.minecraft.entity.*;
+import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.network.IPacket;
 import net.minecraft.util.*;
 import net.minecraft.util.math.*;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.network.NetworkHooks;
 
 
-public class BetterFireball extends ProjectileItemEntity {
+public class BetterFireball extends ProjectileEntity implements IRendersAsItem{
 	public int explosionPower = 2;
 
-	public BetterFireball(EntityType<? extends ProjectileItemEntity> entityType, World world) {
+	public BetterFireball(EntityType<? extends ProjectileEntity> entityType, World world) {
 		super(entityType, world);
 	}
 
@@ -30,9 +34,10 @@ public class BetterFireball extends ProjectileItemEntity {
 	}
 
 	@Override
-	protected Item getDefaultItem() {
-		return Items.FIRE_CHARGE.getItem();
+	public ItemStack getItem() {
+		return Items.FIRE_CHARGE.getDefaultInstance();
 	}
+
 
 	protected BetterFireball(World worldIn, LivingEntity thrower) {
 		this(RegistryHandler.BETTER_FIREBALL.get(), worldIn);
@@ -89,6 +94,11 @@ public class BetterFireball extends ProjectileItemEntity {
 		compound.putInt("ExplosionPower", this.explosionPower);
 	}
 
+	@Override
+	protected void registerData() {
+
+	}
+
 	/**
 	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
@@ -98,5 +108,10 @@ public class BetterFireball extends ProjectileItemEntity {
 			this.explosionPower = compound.getInt("ExplosionPower");
 		}
 
+	}
+
+	@Override
+	public IPacket<?> createSpawnPacket() {
+		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 }
