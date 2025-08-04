@@ -176,11 +176,12 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
             double dy = target.getPosYEye() - this.getPosYEye();
             double dz = target.getPosZ() - this.getPosZ();
 
-            fireball.shoot(dx, dy, dz, 1.1F, 0.3F); // power, inaccuracy
             fireball.setPosition(this.getPosX(), this.getPosYEye(), this.getPosZ());
+            fireball.shoot(dx, dy, dz, 2.0F, 0.1F); // 🔥 Increased speed, low inaccuracy
             world.addEntity(fireball);
         }
     }
+
 
 
     @Override
