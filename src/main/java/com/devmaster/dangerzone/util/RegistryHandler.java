@@ -6,10 +6,7 @@ import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.blocks.*;
 import com.devmaster.dangerzone.items.*;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.*;
@@ -55,7 +52,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> ALUMINIUM_ORE_BLOCK = registerWIPBlock("aluminium_ore_block", () -> new ABlock(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance( 500F,20F).harvestLevel(35).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.STONE), 0).addInfo("\u00A7f" + "Worse than Iron but does the trick!" + "\u00A7f"));
     public static final RegistryObject<Block> APPLE_BLOCK =registerNormalBlock("apple_block", () -> new ABlock(AbstractBlock.Properties.create(Material.EARTH).hardnessAndResistance( 1F,1F).harvestLevel(1).sound(SoundType.PLANT), 0).addInfo("\u00A7c" + "So red, so wonderful" + "\u00A7c"));
     public static final RegistryObject<Block> APPLE_LEAVES = registerWIPBlock("apple_leaves", AppleLeaves::new);
-    public static final RegistryObject<Block> APPLE_LOG = registerWIPBlock("apple_log", () -> new ABlock(AbstractBlock.Properties.create(Material.WOOD).hardnessAndResistance( 2F,2F).harvestLevel(0).harvestTool(ToolType.AXE).sound(SoundType.WOOD), 0).addInfo("\u00A76" + "The log doesn't give apples you fool" + "\u00A76"));
+    public static final RegistryObject<Block> APPLE_LOG = registerWIPBlock("apple_log", () -> new ARotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD).hardnessAndResistance( 2F,2F).harvestLevel(0).harvestTool(ToolType.AXE).sound(SoundType.WOOD), 0).addInfo("\u00A76" + "The log doesn't give apples you fool" + "\u00A76"));
     public static final RegistryObject<Block> BLOODSTONE_BLOCK = registerWIPBlock("bloodstone_block", () -> new ABlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance( 4F,3F).harvestLevel(0).harvestTool(ToolType.PICKAXE).setRequiresTool().sound(SoundType.METAL), 0).addInfo("\u00A74" + "for when you have to much bloodstone" + "\u00A74"));
     public static final RegistryObject<Block> BROWN_BLOCK =registerNormalBlock("brown_block", () -> new ABlock(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance( 1F,1F).harvestLevel(0).harvestTool(ToolType.PICKAXE).setRequiresTool().sound(SoundType.STONE), 0).addInfo("\u00A76" + "A brown solid to build with" + "\u00A76"));
     public static final RegistryObject<Block> CATS_EYE_BLOCK = registerNormalBlock("cats_eye_block", () -> new ABlock(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance( 8.5F,12F).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().sound(SoundType.METAL).setLightLevel(state -> 5), 0).addInfo("\u00A76" + "A block of eyes" + "\u00A76"));
