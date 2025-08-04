@@ -1,113 +1,85 @@
-
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
 
 import net.minecraft.entity.*;
-import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.entity.projectile.ProjectileItemEntity;
-import net.minecraft.item.Item;
+import net.minecraft.entity.projectile.ProjectileHelper;
+import net.minecraft.entity.projectile.ThrowableEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.IPacket;
-import net.minecraft.util.*;
-import net.minecraft.util.math.*;
+import net.minecraft.particles.ParticleTypes;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.math.EntityRayTraceResult;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-
-public class BetterFireball extends ProjectileEntity implements IRendersAsItem{
+public class BetterFireball extends ThrowableEntity implements IRendersAsItem {
 	public int explosionPower = 2;
 
-	public BetterFireball(EntityType<? extends ProjectileEntity> entityType, World world) {
-		super(entityType, world);
+	public BetterFireball(EntityType<? extends BetterFireball> type, World world) {
+		super(type, world);
 	}
 
-	public static BetterFireball create(World worldIn, LivingEntity thrower) {
-		return new BetterFireball(worldIn, thrower);
-	}
-
-	public static BetterFireball create(World worldIn, EntityType<? extends BetterFireball> thrower) {
-		return new BetterFireball(thrower, worldIn);
+	public BetterFireball(World worldIn, LivingEntity thrower) {
+		super(RegistryHandler.BETTER_FIREBALL.get(), thrower, worldIn);
+		this.setPosition(thrower.getPosX(), thrower.getPosYEye() - 0.1D, thrower.getPosZ());
 	}
 
 	@Override
 	public ItemStack getItem() {
-		return Items.FIRE_CHARGE.getDefaultInstance();
+		return new ItemStack(Items.FIRE_CHARGE);
 	}
 
-
-	protected BetterFireball(World worldIn, LivingEntity thrower) {
-		this(RegistryHandler.BETTER_FIREBALL.get(), worldIn);
-		super.setShooter(thrower);
-		this.setPosition(thrower.getPosX(), thrower.getPosYEye() - 0.1D, thrower.getPosZ());
-		setDirectionAndMovement(thrower, thrower.rotationPitch, thrower.rotationYaw, 0.0F, 0.78F, 0.85F);
-		markVelocityChanged();
-	}
-
-	/**
-	 * Called when this hits a block or entity.
-	 */
-	protected void onImpact(RayTraceResult result) {
-		super.onImpact(result);
-		if (!this.world.isRemote) {
-			boolean flag = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this.getShooter());
-			this.world.createExplosion((Entity)null, this.getPosX(), this.getPosY(), this.getPosZ(), (float)this.explosionPower, flag, flag ? Explosion.Mode.DESTROY : Explosion.Mode.NONE);
-			this.remove();
-		}
-
-	}
 	@Override
-	public void setVelocity(double xMotion, double yMotion, double zMotion) {
-		// Update the entity's position based on its motion
-		this.prevPosX += xMotion;
-		this.prevPosY += yMotion;
-		this.prevPosZ += zMotion;
-
-		// Update the entity's bounding box
-		this.setPosition(this.prevPosX, this.prevPosY, this.prevPosZ);
-
-		// Update the entity's velocity
-		this.setMotion(xMotion, yMotion, zMotion);
-	}
-
-	/**
-	 * Called when the Better Fireball hits an entity
-	 */
-	protected void onEntityHit(EntityRayTraceResult result) {
-		super.onEntityHit(result);
+	protected void onImpact(RayTraceResult result) {
 		if (!this.world.isRemote) {
-			Entity entity = result.getEntity();
-			Entity entity1 = this.getShooter();
-			entity.attackEntityFrom(DamageSource.ON_FIRE.setFireDamage(), 6.0F);
-			if (entity1 instanceof LivingEntity) {
-				this.applyEnchantments((LivingEntity)entity1, entity);
+			if (result.getType() == RayTraceResult.Type.ENTITY) {
+				this.onEntityHit((EntityRayTraceResult) result);
 			}
 
+			boolean griefing = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this.getShooter());
+			this.world.createExplosion(this, this.getPosX(), this.getPosY(), this.getPosZ(), explosionPower, true, // <--- this is causeFire
+					griefing ? Explosion.Mode.DESTROY : Explosion.Mode.NONE);
+			this.remove();
 		}
 	}
 
-	public void writeAdditional(CompoundNBT compound) {
-		super.writeAdditional(compound);
-		compound.putInt("ExplosionPower", this.explosionPower);
+	@Override
+	protected void registerData() {}
+
+	@Override
+	public void tick() {
+		super.tick();
+
+		// Raytrace collision detection
+		RayTraceResult raytraceresult = ProjectileHelper.func_234618_a_(this, this::func_230298_a_);
+		if (raytraceresult != null && raytraceresult.getType() != RayTraceResult.Type.MISS) {
+			this.onImpact(raytraceresult);
+		}
+
+		// Apply movement
+		Vector3d motion = this.getMotion();
+		this.setPosition(this.getPosX() + motion.x, this.getPosY() + motion.y, this.getPosZ() + motion.z);
+		this.setMotion(motion.scale(0.95)); // Apply slight drag
 	}
 
 	@Override
-	protected void registerData() {
-
+	public void writeAdditional(CompoundNBT compound) {
+		super.writeAdditional(compound);
+		compound.putInt("ExplosionPower", explosionPower);
 	}
 
-	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
-	 */
+	@Override
 	public void readAdditional(CompoundNBT compound) {
 		super.readAdditional(compound);
 		if (compound.contains("ExplosionPower", 99)) {
 			this.explosionPower = compound.getInt("ExplosionPower");
 		}
-
 	}
 
 	@Override
