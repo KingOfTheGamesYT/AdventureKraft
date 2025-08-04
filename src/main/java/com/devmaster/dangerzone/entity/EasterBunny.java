@@ -1,5 +1,6 @@
 package com.devmaster.dangerzone.entity;
 
+import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -21,6 +22,7 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.IServerWorld;
 import net.minecraft.world.World;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
@@ -129,7 +131,6 @@ public class EasterBunny extends RabbitEntity {
         return true;
     }
 
-
     public int eggTime = this.rand.nextInt(450) + 450;
 
     @Override
@@ -161,6 +162,8 @@ public class EasterBunny extends RabbitEntity {
         super.writeAdditional(comnbt);
         comnbt.putInt("Variant", this.getEasterBunnyVariant());
     }
+
+    public EasterBunny createChild(ServerWorld world, AgeableEntity mate) {
+        return RegistryHandler.EASTER_BUNNY.get().create(world);
+    }
 }
-
-
