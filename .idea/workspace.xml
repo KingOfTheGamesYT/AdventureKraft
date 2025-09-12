@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe53bb81-b9f3-4f97-ac45-e4d2280e88ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/DangerZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/DangerZone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/init/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/init/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/items/AmethystOre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/devmaster/dangerzone/items/AmethystOre.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +43,6 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="DangerZone" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="fg_runs" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -68,21 +61,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1mEDBqh7K5bKA2d364LoQugyP0o" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="devmaster.dangerzone.tabs" />
       <recent name="devmaster.dangerzone.init" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DangerZone [build]">
+  <component name="RunManager" selected="Gradle.lDangerZone [runClient]">
     <configuration name="DangerZone [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -102,6 +100,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="DangerZone [genIntellijRuns]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -123,6 +122,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="lDangerZone [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -144,19 +144,18 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Gradle.DangerZone [genIntellijRuns]" />
       <item itemvalue="Gradle.lDangerZone [runClient]" />
       <item itemvalue="Gradle.DangerZone [build]" />
-      <item itemvalue="Application.runClient" />
-      <item itemvalue="Application.runServer" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DangerZone [build]" />
         <item itemvalue="Gradle.lDangerZone [runClient]" />
+        <item itemvalue="Gradle.DangerZone [build]" />
         <item itemvalue="Gradle.DangerZone [genIntellijRuns]" />
       </list>
     </recent_temporary>
@@ -182,6 +181,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

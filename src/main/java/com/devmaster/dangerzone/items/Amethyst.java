@@ -1,8 +1,8 @@
-package devmaster.dangerzone.items;
+package com.devmaster.dangerzone.items;
 
+import com.devmaster.dangerzone.DangerZone;
+import com.devmaster.dangerzone.init.ContentRegistryHandler;
 
-import devmaster.dangerzone.DangerZone;
-import devmaster.dangerzone.init.ModItems;
 import net.minecraft.item.Item;
 
 public class Amethyst extends Item
@@ -12,7 +12,7 @@ public class Amethyst extends Item
         setRegistryName(name);
         setCreativeTab(DangerZone.TAB);
 
-        ModItems.ITEMS.add(this);
+        ContentRegistryHandler.ITEMS.add(this);
     }
 
 

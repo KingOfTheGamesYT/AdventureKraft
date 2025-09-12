@@ -1,6 +1,7 @@
-package devmaster.dangerzone.tabs;
+package com.devmaster.dangerzone.tabs;
 
-import devmaster.dangerzone.init.ModBlocks;
+import com.devmaster.dangerzone.init.ContentRegistryHandler;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
@@ -14,6 +15,6 @@ public class blocks extends CreativeTabs
     @Override
     public ItemStack getTabIconItem()
     {
-        return new ItemStack(ModBlocks.AMETHYST_ORE_BLOCK);
+        return new ItemStack(ContentRegistryHandler.AMETHYST_ORE_BLOCK);
     }
 }

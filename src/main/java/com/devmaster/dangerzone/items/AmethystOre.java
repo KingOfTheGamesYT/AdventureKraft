@@ -1,8 +1,8 @@
-package devmaster.dangerzone.items;
+package com.devmaster.dangerzone.items;
 
-import devmaster.dangerzone.DangerZone;
-import devmaster.dangerzone.init.ModBlocks;
-import devmaster.dangerzone.init.ModItems;
+import com.devmaster.dangerzone.DangerZone;
+import com.devmaster.dangerzone.init.ContentRegistryHandler;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
@@ -19,7 +19,7 @@ public class AmethystOre extends Block {
         setHardness(10);
         setHarvestLevel("pickaxe",0);
 
-        ModBlocks.BLOCKS.add(this);
-        ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+        ContentRegistryHandler.BLOCKS.add(this);
+        ContentRegistryHandler.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
     }
 }

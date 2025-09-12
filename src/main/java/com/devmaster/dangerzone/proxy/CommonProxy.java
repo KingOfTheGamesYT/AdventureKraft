@@ -1,4 +1,4 @@
-package devmaster.dangerzone.proxy;
+package com.devmaster.dangerzone.proxy;
 
 import net.minecraft.item.Item;
 

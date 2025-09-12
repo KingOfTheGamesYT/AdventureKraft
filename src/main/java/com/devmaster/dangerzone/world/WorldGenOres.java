@@ -1,12 +1,14 @@
-package devmaster.dangerzone.world;
+package com.devmaster.dangerzone.world;
 
-import devmaster.dangerzone.init.ModBlocks;
+import com.devmaster.dangerzone.init.ContentRegistryHandler;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 import java.util.Random;
@@ -24,7 +26,7 @@ public class WorldGenOres implements IWorldGenerator
 
     private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
-        generateOre(ModBlocks.AMETHYST_ORE_BLOCK.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 25, 1 + random.nextInt(12), 6);
+        generateOre(ContentRegistryHandler.AMETHYST_ORE_BLOCK.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 25, 1 + random.nextInt(12), 6);
     }
 
     private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances)

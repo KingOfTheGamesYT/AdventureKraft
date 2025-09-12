@@ -23,13 +23,3 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
-build/_compileJava_7/net/minecraft/client/gui/social/FilterList.class
-.gradle/4.10.3/fileChanges/last-build.bin
-.gradle/4.10.3/fileContent/annotation-processors.bin
-.gradle/4.10.3/fileContent/fileContent.lock
-.gradle/4.10.3/fileHashes/fileHashes.bin
-.gradle/4.10.3/fileHashes/fileHashes.lock
-.gradle/4.10.3/fileHashes/resourceHashesCache.bin
-.gradle/4.10.3/gc.properties
-.gradle/4.10.3/javaCompile/classAnalysis.bin
-.idea/workspace.xml

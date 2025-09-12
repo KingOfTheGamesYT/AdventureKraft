@@ -1,11 +1,13 @@
-package devmaster.dangerzone;
+package com.devmaster.dangerzone;
 
-import devmaster.dangerzone.proxy.CommonProxy;
-import devmaster.dangerzone.tabs.blocks;
-import devmaster.dangerzone.tabs.items;
-import devmaster.dangerzone.util.Reference;
-import devmaster.dangerzone.util.handlers.RegistryHandler;
+import com.devmaster.dangerzone.tabs.blocks;
+import com.devmaster.dangerzone.tabs.items;
+import com.devmaster.dangerzone.util.Reference;
+import com.devmaster.dangerzone.util.handlers.RegistryHandler;
+import com.devmaster.dangerzone.proxy.CommonProxy;
+
 import net.minecraft.creativetab.CreativeTabs;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -17,8 +19,6 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class DangerZone {
-	
-
 
 	@Instance
 	public static DangerZone instance;
@@ -44,7 +44,6 @@ public class DangerZone {
 	@EventHandler
 	public static void PostInit(FMLPostInitializationEvent event)
 	{
-
 	}
 	
 	@EventHandler
