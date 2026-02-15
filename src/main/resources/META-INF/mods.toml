@@ -7,15 +7,12 @@ license="All rights reserved"
 issueTrackerURL="https://github.com/KingOfTheGamesYT/DangerZone/issues"
 
 [[mods]]
-catalogueitemIcon="dangerzone:cake_sword"
-
-configuredBackground="dangerzone:textures/blocks/egg/kyuubi_egg_ore.png"
 
 modId="dangerzone"
 
 updateJsonUrl="https://forge.curseupdate.com/406601/dangerzone"
 
-version="Dev4.2.6"
+version="Dev3.2.8"
 
 displayName="AdventureKraft"
 
@@ -60,3 +57,7 @@ mandatory=false
 versionRange="[1.16.5-4.0.5.3,)"
 ordering="AFTER"
 side="BOTH"
+
+[modproperties.dangerzone]
+catalogueImageIcon="pack_image.png"
+configuredBackground="dangerzone:textures/blocks/egg/kyuubi_egg_ore.png"
