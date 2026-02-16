@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_blocks/amethyst",
+    "#forge:storage_blocks/titanium",
+    "#forge:storage_blocks/uranium"
+  ]
+}
