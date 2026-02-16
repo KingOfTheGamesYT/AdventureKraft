@@ -67,7 +67,6 @@ public class DangerZone {
         MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
         MinecraftForge.EVENT_BUS.addListener(ArmoredMobSpawnEvents::spawnMonster);
         new HitCostEvent();
-
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -102,7 +101,6 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.TERMITE.get(), RedAnt.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.EASTER_BUNNY.get(), EasterBunny.getAttributes().create());
             EntitySpawns.registerSpawnPlacements();
-
         });
     }
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -141,8 +139,7 @@ public class DangerZone {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TERMITE.get(), TermiteRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.EASTER_BUNNY.get(), EasterBunnyRender::new);
         RenderTypeLookup.setRenderLayer(RegistryHandler.RANDOM_STRUCTURE_BLOCK.get(), RenderType.getCutout());
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BETTER_FIREBALL.get(),
-                manager -> new SpriteRenderer<>(manager, Minecraft.getInstance().getItemRenderer()));
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BETTER_FIREBALL.get(), manager -> new SpriteRenderer<>(manager, Minecraft.getInstance().getItemRenderer()));
         SpawnEgg.initSpawnEggs();
     }
 }
