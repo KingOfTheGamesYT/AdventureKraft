@@ -261,8 +261,8 @@
   "dangerzone.tip.villages": "Don't stay too long in the village dimension.",
 
   "_comment": "Subtitles",
-  "subtitles.leather_block_hit": "leather block hit sound",
-  "subtitles.leather_block_step": "leather block step sound",
-  "subtitles.leather_block_place": "leather block placed",
-  "subtitles.leather_block_break": "leather block broke"
+  "subtitles.leather_block_hit": "Leather Block Breaking",
+  "subtitles.leather_block_step": "Leather Block Being Stepped On",
+  "subtitles.leather_block_place": "Leather Block Placed",
+  "subtitles.leather_block_break": "Leather Block Broken"
 }
