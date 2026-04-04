@@ -71,9 +71,10 @@ public class BodyguardRender extends RenderBiped {
 
     protected ResourceLocation getEntityTexture(BodyguardEntity mobBodyGuard) {
         if (mobBodyGuard.isMale()) {
-            return TEXTURES_MALE[mobBodyGuard.textureIndexMale];
+            System.out.println("MALE TEXTURE INDEX     " + mobBodyGuard.getTextureMale());
+            return TEXTURES_MALE[mobBodyGuard.getTextureMale()];
         }
-        return TEXTURES_FEMALE[mobBodyGuard.textureIndexGirl];
+        return TEXTURES_FEMALE[mobBodyGuard.getTextureFemale()];
     }
 
     /**

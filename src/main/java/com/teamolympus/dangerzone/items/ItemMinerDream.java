@@ -1,5 +1,6 @@
 package com.teamolympus.dangerzone.items;
 
+import com.teamolympus.dangerzone.misc.Translations;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import com.teamolympus.dangerzone.world.BaseWorldHelper;
 import cpw.mods.fml.relauncher.Side;
@@ -7,13 +8,13 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.items.base.BaseAKItem;
-import com.teamolympus.dangerzone.config.DZConfig;
 
 import java.util.List;
 
@@ -156,18 +157,15 @@ public class ItemMinerDream extends BaseAKItem {
 
     }
 
+
     @Override
     @SideOnly(Side.CLIENT)
+    @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List tooltip, boolean b) {
-        tooltip.add("You've gotta try it! Make one.");
-       tooltip.add("Now. Take it underground,");
-      tooltip.add("tap it on a block in front of you at your feet,");
-        tooltip.add("and be amazed! Indeed. It removes blocks from");
-        tooltip.add("a large area,");
-        tooltip.add("leaving only the ores behind, instantly.");
-       tooltip.add("It even lights the place up with torches.");
-        tooltip.add("All you need to do is run amok with your");
-        tooltip.add("pickaxe and reap the rewards!");
+        super.addInformation(stack, player, tooltip, b);
+        for (byte i = 1; i <= 10; i++) {
+            tooltip.add(Translations.translate("MinerDreamDesc"+i));
+        }
     }
 
 }

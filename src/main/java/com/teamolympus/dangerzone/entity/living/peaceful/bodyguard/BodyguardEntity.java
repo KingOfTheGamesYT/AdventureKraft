@@ -62,36 +62,44 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
         this.setCanPickUpLoot(true);
     }
 
+   static final int GENDER = 19;
+    static final   int ENTITYREQUESTEDTAMEAMM=20;
+    static final int PLAYERGICENTAM = 21;
+
+    static final int TEXTUREID_MALE = 22;
+    static final  int TEXTUREID_FEMALE = 23;
+    static final  int HUNGER = 24;
+    static final int ANGA = 25;
+
     @Override
     // https://jabelarminecraft.blogspot.com/p/minecraft-modding-datawatcher.html
     protected void entityInit()
     {
         super.entityInit();
-        this.dataWatcher.addObject(18, (byte)0); //gender
+        this.dataWatcher.addObject(GENDER, (byte)0); //gender
 
-        this.dataWatcher.addObject(20, (byte)0); // entity tame requested amm
+        this.dataWatcher.addObject(ENTITYREQUESTEDTAMEAMM, (byte)0); // entity tame requested amm
 
-        this.dataWatcher.addObject(21, (byte)0); // Player given amm
+        this.dataWatcher.addObject(PLAYERGICENTAM, (byte)0); // Player given amm
 
-        // textures
         //TODO: REWRITE USING THE SYSTEM DEV PROVIDED
-        this.dataWatcher.addObject(22, (byte)0); // female
-        this.dataWatcher.addObject(23, (byte)0); // male
+        this.dataWatcher.addObject(TEXTUREID_FEMALE, (byte)0); // female
+        this.dataWatcher.addObject(TEXTUREID_MALE, (byte)0); // male
 
 
-        this.dataWatcher.addObject(24, (byte)20); // hunger
+        this.dataWatcher.addObject(HUNGER, (byte)20); // hunger
 
-        this.dataWatcher.addObject(25, (byte)0); // anger
+        this.dataWatcher.addObject(ANGA, (byte)0); // anger
     }
 
     public int getAnger()
     {
-        return this.dataWatcher.getWatchableObjectByte(25);
+        return this.dataWatcher.getWatchableObjectByte(ANGA);
     }
 
     public void setAnger(int text)
     {
-        this.dataWatcher.updateObject(25, (byte)text);
+        this.dataWatcher.updateObject(ANGA, (byte)text);
     }
 
     public void increaseAnger(int amm) {
@@ -101,12 +109,12 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
 
     public int getHunger()
     {
-        return this.dataWatcher.getWatchableObjectByte(24);
+        return this.dataWatcher.getWatchableObjectByte(HUNGER);
     }
 
     public void setHunger(int text)
     {
-        this.dataWatcher.updateObject(24, (byte)text);
+        this.dataWatcher.updateObject(HUNGER, (byte)text);
     }
 
     public void decreaseFoodLevel(int amm)
@@ -116,52 +124,52 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
 
     public int getPlayerGivenAmm()
     {
-        return this.dataWatcher.getWatchableObjectByte(21);
+        return this.dataWatcher.getWatchableObjectByte(PLAYERGICENTAM);
     }
 
     public void setPlayerGivenAmm(int givenAmm)
     {
-        this.dataWatcher.updateObject(21, (byte) givenAmm);
+        this.dataWatcher.updateObject(PLAYERGICENTAM, (byte) givenAmm);
     }
 
     public int getRequestedAmm()
     {
-        return this.dataWatcher.getWatchableObjectByte(20);
+        return this.dataWatcher.getWatchableObjectByte(ENTITYREQUESTEDTAMEAMM);
     }
 
     public void setRequestedAmm(int requestedAmm)
     {
-        this.dataWatcher.updateObject(20, (byte) requestedAmm);
+        this.dataWatcher.updateObject(ENTITYREQUESTEDTAMEAMM, (byte) requestedAmm);
     }
 
     public int getGender()
     {
-        return this.dataWatcher.getWatchableObjectByte(18);
+        return this.dataWatcher.getWatchableObjectByte(GENDER);
     }
 
     public void setGender(int gender)
     {
-        this.dataWatcher.updateObject(18, (byte)gender);
+        this.dataWatcher.updateObject(GENDER, (byte)gender);
     }
 
     public int getTextureFemale()
     {
-        return this.dataWatcher.getWatchableObjectByte(22);
+        return this.dataWatcher.getWatchableObjectByte(TEXTUREID_FEMALE);
     }
 
     public void setTextureFemale(int text)
     {
-        this.dataWatcher.updateObject(22, (byte)text);
+        this.dataWatcher.updateObject(TEXTUREID_FEMALE, (byte)text);
     }
 
     public int getTextureMale()
     {
-        return this.dataWatcher.getWatchableObjectByte(23);
+        return this.dataWatcher.getWatchableObjectByte(TEXTUREID_MALE);
     }
 
     public void setTextureMale(int text)
     {
-        this.dataWatcher.updateObject(23, (byte)text);
+        this.dataWatcher.updateObject(TEXTUREID_MALE, (byte)text);
     }
 
     public boolean isMale() {
@@ -259,14 +267,13 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
     public void onLivingUpdate() {
         super.onLivingUpdate();
 
-        if (this.ticksExisted - lastFoodCheckTick > 200)
+        if (this.ticksExisted - lastFoodCheckTick > 900)
         {
             lastFoodCheckTick = this.ticksExisted;
             decreaseFoodLevel(1);
 
             if (this.getHunger() <= 0)
             {
-                System.out.println("I am HUNGRY");
                 this.attackEntityFrom(DamageSource.starve, 1.0F);
                 increaseAnger(1);
             }
@@ -317,6 +324,12 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
                     this.aiSit.setSitting(true);
                     this.worldObj.setEntityState(this, (byte)7);
                 }
+            }
+
+            if (itemstack.getItem() == Items.diamond && getAnger() > 100) {
+                --itemstack.stackSize;
+                setAnger(0);
+                player.addChatMessage(new ChatComponentText("Your bodyguard has Calmed down"));
             }
 
             return true;

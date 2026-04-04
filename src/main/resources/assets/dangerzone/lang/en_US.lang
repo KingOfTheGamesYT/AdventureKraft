@@ -69,3 +69,16 @@ itemGroup.petrifiedOres=§fPetrified Ores Blocks
 # Mobs
 entity.dangerzone.mantis.name=Mantis
 entity.dangerzone.allosaurus.name=Allosaurus
+
+
+
+MinerDreamDesc1=You've gotta try it! Make one. Now.
+MinerDreamDesc2=Take it underground, tap it on a
+MinerDreamDesc3=block in front of you at your feet,
+MinerDreamDesc4=and be amazed! Indeed. It removes
+MinerDreamDesc5=blocks from a large area, leaving
+MinerDreamDesc6=only the ores behind, instantly. It
+MinerDreamDesc7=even lights the place up with
+MinerDreamDesc8=torches. All you need to do is run
+MinerDreamDesc9=amok with your pickaxe and reap the
+MinerDreamDesc10=rewards
