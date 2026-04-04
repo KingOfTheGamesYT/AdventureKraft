@@ -78,16 +78,19 @@ public class RegistryHandler {
     }
 
 
-    public static Block petrifiedCow, petrifiedPig, pertifiedCreeper, petrifiedWolf, petrifiedCaveSpider,
-        petrifiedSquid, petrifiedIronGolem, petrifiedSnowGolem, petrifiedChicken, petrifiedVillager, petrifiedPigman,
-        petrifiedSilverfish, petrifiedMooshroom, petrifiedAllo;
+    public static Block 
+		petrifiedCow, petrifiedPig, pertifiedCreeper, petrifiedWolf, petrifiedCaveSpider,
+        petrifiedSquid, petrifiedIronGolem, petrifiedSnowGolem, petrifiedChicken, petrifiedVillager, 
+		petrifiedPigman, petrifiedSilverfish, petrifiedMooshroom, petrifiedAllo;
 
     public static Block extremeTorch, krakenTorch;
 
     public static Block pizzaFoodBlock;
 
-    public static void addBlocks() {
+    public static void addBlocks() 
+	{
 
+		// PETRIFIED START
         petrifiedCow = new BaseAkPetrifiedBlock("petrified_cow");
         registerPetrifiedBlockByClass(petrifiedCow, "Cow", EntityCow.class);
 
@@ -129,6 +132,8 @@ public class RegistryHandler {
 
         petrifiedAllo = new BaseAkPetrifiedBlock("petrified_allosaurus");
         registerPetrifiedAKBlock(petrifiedAllo, "petrified allosaurus", alloSpawnEgg);
+		
+		// Petrified END
 
         extremeTorch = new ExtremeTorchBlock("extreme_torch");
         registerBlock(extremeTorch, "Extreme Torch");
@@ -141,16 +146,27 @@ public class RegistryHandler {
     }
 
 
-    private static void addMobs() {
+    private static void addMobs() 
+	{
+		// PEACEFUL
         registerEntity(BodyguardEntity.class, "bodyguard", 64, 1, true);
+		
+		
+		// NON-LIVING
+		
         registerEntity(RockEntity.class, "rock", 64, 1, true);
+		
+		
+		// HOSTILE
         registerEntity(MantisEntity.class, "mantis", 64, 1, true);
         registerEntity(AllosaurusEntity.class, "allosaurus", 64, 1, true);
     }
 
-    public static Item rubyAxe;
-    public static Item ruby;
-    public static Item appleSeed, popcornFood, rawcornDog, butterFood, butterCandy, cheeseFood, saladFood, crabbyPatty, rawCrab, pizzaItem, salt;
+    public static Item ruby, rubyAxe;
+	
+    public static Item 
+		appleSeed, popcornFood, rawcornDog, butterFood, butterCandy, cheeseFood,
+	saladFood, crabbyPatty, rawCrab, pizzaItem, salt;
 
     public static Item mobLauncher;
 
@@ -448,7 +464,6 @@ public class RegistryHandler {
     private static int id = 1;
     private static void registerEntity(Class<? extends Entity> entityClass, String entityName, int trackingRange,
                                        int updateFrequency, boolean sendsVelocityUpdates) {
-
         EntityRegistry.registerModEntity(
             entityClass,
             entityName,
