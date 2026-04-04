@@ -164,7 +164,7 @@ public class ItemMinerDream extends BaseAKItem {
     public void addInformation(ItemStack stack, EntityPlayer player, List tooltip, boolean b) {
         super.addInformation(stack, player, tooltip, b);
         for (byte i = 1; i <= 10; i++) {
-            tooltip.add(Translations.translate("MinerDreamDesc"+i));
+            tooltip.add(Translations.translate(EnumChatFormatting.DARK_GREEN + "MinerDreamDesc"+i));
         }
     }
 
