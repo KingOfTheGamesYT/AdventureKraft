@@ -20,17 +20,22 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
+// Thanks Dev!!!
 public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
 
     private EntityAITempt aiTempt;
-    public int textureIndexMale;
-    public int textureIndexGirl;
+ //   public int textureIndexMale;
+  //  public int textureIndexGirl;
+
+    private int lastFoodCheckTick;
 
     public BodyguardEntity(World world) {
         super(world);
-        this.textureIndexMale = this.rand.nextInt(BodyguardRender.TEXTURES_MALE.length);
-        this.textureIndexGirl = this.rand.nextInt(BodyguardRender.TEXTURES_FEMALE.length);
+      //   this.textureIndexMale = this.rand.nextInt(BodyguardRender.TEXTURES_MALE.length);
+       // this.textureIndexGirl = this.rand.nextInt(BodyguardRender.TEXTURES_FEMALE.length);
 
+        this.setTextureMale(this.rand.nextInt(BodyguardRender.TEXTURES_MALE.length));
+        this.setTextureFemale(this.rand.nextInt(BodyguardRender.TEXTURES_FEMALE.length));
 
 
         this.getNavigator().setAvoidsWater(false);
@@ -68,10 +73,45 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
 
         this.dataWatcher.addObject(21, (byte)0); // Player given amm
 
-
         // textures
-        this.dataWatcher.addObject(22, (byte)0);
-        this.dataWatcher.addObject(23, (byte)0);
+        //TODO: REWRITE USING THE SYSTEM DEV PROVIDED
+        this.dataWatcher.addObject(22, (byte)0); // female
+        this.dataWatcher.addObject(23, (byte)0); // male
+
+
+        this.dataWatcher.addObject(24, (byte)20); // hunger
+
+        this.dataWatcher.addObject(25, (byte)0); // anger
+    }
+
+    public int getAnger()
+    {
+        return this.dataWatcher.getWatchableObjectByte(25);
+    }
+
+    public void setAnger(int text)
+    {
+        this.dataWatcher.updateObject(25, (byte)text);
+    }
+
+    public void increaseAnger(int amm) {
+        this.setAnger(this.getAnger() + 1);
+    }
+
+
+    public int getHunger()
+    {
+        return this.dataWatcher.getWatchableObjectByte(24);
+    }
+
+    public void setHunger(int text)
+    {
+        this.dataWatcher.updateObject(24, (byte)text);
+    }
+
+    public void decreaseFoodLevel(int amm)
+    {
+        setHunger(this.getHunger() - amm);
     }
 
     public int getPlayerGivenAmm()
@@ -141,6 +181,8 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
         p_70014_1_.setInteger("PlayerGivenTameAmm", this.getPlayerGivenAmm());
         p_70014_1_.setInteger("femaleTextureIndex", this.getTextureFemale());
         p_70014_1_.setInteger("maleTextureIndex", this.getTextureMale());
+        p_70014_1_.setInteger("FoodLevel", this.getHunger());
+        p_70014_1_.setInteger("Anger", this.getAnger());
     }
 
     @Override
@@ -152,6 +194,8 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
         this.setPlayerGivenAmm(p_70037_1_.getInteger("PlayerGivenTameAmm"));
         this.setTextureFemale(p_70037_1_.getInteger("femaleTextureIndex"));
         this.setTextureMale(p_70037_1_.getInteger("maleTextureIndex"));
+        this.setHunger(p_70037_1_.getInteger("FoodLevel"));
+        this.setAnger(p_70037_1_.getInteger("Anger"));
     }
 
     @Override
@@ -176,13 +220,9 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
         ItemStack[] aitemstack = this.getLastActiveItems();
         int j = aitemstack.length;
 
-        for (int k = 0; k < j; ++k)
-        {
-            ItemStack itemstack = aitemstack[k];
-
-            if (itemstack != null && itemstack.getItem() instanceof ItemArmor)
-            {
-                int l = ((ItemArmor)itemstack.getItem()).damageReduceAmount;
+        for (ItemStack itemstack : aitemstack) {
+            if (itemstack != null && itemstack.getItem() instanceof ItemArmor) {
+                int l = ((ItemArmor) itemstack.getItem()).damageReduceAmount;
                 i += l;
             }
         }
@@ -218,6 +258,27 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
     @Override
     public void onLivingUpdate() {
         super.onLivingUpdate();
+
+        if (this.ticksExisted - lastFoodCheckTick > 200)
+        {
+            lastFoodCheckTick = this.ticksExisted;
+            decreaseFoodLevel(1);
+
+            if (this.getHunger() <= 0)
+            {
+                System.out.println("I am HUNGRY");
+                this.attackEntityFrom(DamageSource.starve, 1.0F);
+                increaseAnger(1);
+            }
+        }
+
+
+        if (this.getAnger() > 100 && isTamed()) {
+            System.out.println("I am angry");
+        }
+
+
+
     }
 
 
