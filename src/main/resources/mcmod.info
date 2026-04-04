@@ -4,12 +4,12 @@
   "name": "DangerZone",
   "description": "Brings DangerZone to minecraft",
   "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
+  "mcversion": "1.7.10",
+  "url": "https://officialteamolympus.weebly.com/adventurekraft.html",
   "updateUrl": "",
-  "authorList": ["RedRoseWarrior and Akio"],
-  "credits": "TheyCallMeDanger for making DangerZone the game",
-  "logoFile": "",
+  "authorList": ["DevMaster1015, Jerios"],
+  "credits": "TheyCallMeDanger for making DangerZone, the game.",
+  "logoFile": "dangerzone.png",
   "screenshots": [],
   "dependencies": []
 }

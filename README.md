@@ -1,15 +1,10 @@
-# CraftZone
+# DangerZone
 
- Adds Danger Zone to minecraft
+Adds TheyCallMeDanger's game, DangerZone, into Minecraft.
 
-Dangerzone is a game made by Richard Clark
+Original Game made by TheyCallMeDanger aka Richard Clark.
 
-## Download
-___
-[Download link to the latest build (CurseForge)](https://www.curseforge.com/minecraft/mc-mods/dangerzone)
+# Authors
+Made by RedRoseWarrior1 aka DevMaster1015 and Jerios("VortexBlender", "RustyVortex").
 
-It is currently only available for 1.16, but other versions are being worked on
-
-## Building
-___
-To build the mod, you must `git checkout` the branch of the version you would like to build.
+For information on the License, see: [The License Here](LICENSE)

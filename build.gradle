@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
         maven {
             name = "forge"
-            url = "https://files.minecraftforge.net/maven"
+            url = "https://maven.minecraftforge.net/"
         }
         maven {
             name = "sonatype"
@@ -11,14 +11,20 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.1.+') {
+			changing = true
+		}
     }
 }
 
 apply plugin: 'forge'
 
-version = "1.0.0"
-group= "com.devmaster.dangerzone" // https://maven.apache.org/guides/mini/guide-naming-conventions.html
+// These settings allow you to choose what version of Java you want to be compatible with. Forge 1.7.10 runs on Java 6 to 8.
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+version = "0.3.0.0-dev"
+group= "com.teamolympus.dangerzone" // https://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "dangerzone"
 
 minecraft {
@@ -30,18 +36,19 @@ dependencies {
 
 }
 
-processResources
-{
+processResources {
+    // This will ensure that this task is redone when the versions change.
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
 
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-                
+    // Replace values in only mcmod.info.
+    filesMatching('mcmod.info') {
+        // Replace version and mcversion.
         expand 'version':project.version, 'mcversion':project.minecraft.version
     }
-        
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
-    }
+}
+
+// Ensures that the encoding of source files is set to UTF-8, see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
