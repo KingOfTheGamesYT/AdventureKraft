@@ -1,6 +1,7 @@
 package com.teamolympus.dangerzone.items.base;
 
 import com.teamolympus.dangerzone.misc.DangerZone;
+import com.teamolympus.dangerzone.misc.Translations;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,10 +29,13 @@ public class BaseAKItem extends Item {
 
     @Override
     @SideOnly(Side.CLIENT)
+    @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean b)
     {
         super.addInformation(stack, player, info,b);
-        info.addAll(infoList);
+        for (String string : infoList) {
+            info.add(Translations.translate(string));
+        }
     }
 
 }

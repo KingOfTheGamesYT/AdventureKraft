@@ -70,8 +70,7 @@ itemGroup.petrifiedOres=§fPetrified Ores Blocks
 entity.dangerzone.mantis.name=Mantis
 entity.dangerzone.allosaurus.name=Allosaurus
 
-
-
+#Tooltips
 MinerDreamDesc1=You've gotta try it! Make one. Now.
 MinerDreamDesc2=Take it underground, tap it on a
 MinerDreamDesc3=block in front of you at your feet,
@@ -82,3 +81,15 @@ MinerDreamDesc7=even lights the place up with
 MinerDreamDesc8=torches. All you need to do is run
 MinerDreamDesc9=amok with your pickaxe and reap the
 MinerDreamDesc10=rewards
+
+ButterDesc=Fabulous yumminess from cows! At last, real butter!
+PopcornDesc=Put corn in a furnace and watch it pop!
+ButterCandyDesc=Thank you! For 3k downloads! :)
+CheeseDesc=Don't let the rats see you with it!
+
+MantisDesc1=You killed a Mantis. This is your reward!
+MantisDesc2=Not only does it do a respectable amount
+MantisDesc3=of damage but with every hit it sucks half
+MantisDesc4=a heart out of its victim... and gives it to you!
+
+EmeraldHoeDesc=Show those greedy villagers how to farm

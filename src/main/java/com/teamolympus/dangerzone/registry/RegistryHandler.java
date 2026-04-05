@@ -28,6 +28,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class RegistryHandler {
@@ -217,23 +218,25 @@ public class RegistryHandler {
         registerItem(appleSeed, "Apple seed");
 
         popcornFood = new BaseAKFood("popcorn", 8, 0, false).setUseDuration(8)
-            .addInfo("Put corn in a furnace and watch it pop!")
+            .addInfo("PopcornDesc", EnumChatFormatting.WHITE)
             .setAlwaysEdible();
         registerItem(popcornFood, "popcorn");
 
         butterFood = new BaseAKFood("butter", 1, 0.5f, false)
-            .addInfo("Fabulous yumminess from cows! At last, real butter!")
+            .addInfo("ButterDesc", EnumChatFormatting.YELLOW)
             .setUseDuration(32);
         registerItem(butterFood, "butter");
 
-        butterCandy = new BaseAKFood("butter_candy", 4, 0.5f, true).addInfo("Thank you! For 3k downloads! :)")
+        butterCandy = new BaseAKFood("butter_candy", 4, 0.5f, true)
+             .addInfo("ButterCandyDesc", EnumChatFormatting.YELLOW)
             .setUseDuration(32)
             .addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 2000, 0))
             .addPotionEffect(new PotionEffect(Potion.jump.id, 200, 0))
             .setAlwaysEdible();
         registerItem(butterCandy, "butter_candy");
 
-        cheeseFood = new BaseAKFood("cheese", 4, 0.5f, false).addInfo("Don't let the rats see you with it!")
+        cheeseFood = new BaseAKFood("cheese", 4, 0.5f, false)
+            .addInfo("CheeseDesc", EnumChatFormatting.DARK_GRAY)
             .setUseDuration(32);
         registerItem(cheeseFood, "cheese");
 
@@ -252,7 +255,8 @@ public class RegistryHandler {
         mobLauncher = new MobLauncherItem("mob_launcher");
         registerItem(mobLauncher, "Mob Launcher");
 
-        emeraldHoe = new BaseAKHoe("emerald_hoe", emeraldHoeMaterials);
+        emeraldHoe = new BaseAKHoe("emerald_hoe", emeraldHoeMaterials)
+         .addInfo("EmeraldHoeDesc", EnumChatFormatting.DARK_GREEN);
         registerItem(emeraldHoe, "Emerald Hoe");
 
         bigHammer = new BaseAKSword("big_hammer", bigHammerMaterials);

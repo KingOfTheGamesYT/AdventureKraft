@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.items;
 
 import java.util.List;
 
+import com.teamolympus.dangerzone.misc.Translations;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
@@ -34,11 +35,12 @@ public class MantisClawItem extends BaseAKSword {
 
     @Override
     @SideOnly(Side.CLIENT)
+    @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean b) {
-        info.add("You killed a Mantis. This is your reward!");
-        info.add("Not only does it do a respectable amount");
-        info.add("of damage but with every hit it sucks half");
-        info.add("a heart out of its victim... and gives it to you!");
+        for (byte i = 1; i <= 4; i++)
+        {
+            info.add(Translations.translate("MantisDesc" + i));
+        }
     }
 
 }
