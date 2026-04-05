@@ -18,6 +18,7 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
@@ -134,9 +135,9 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
         }
     }
 
-    public void openGUI(EntityPlayer p_110199_1_)
+    public void openGUI(EntityPlayer player)
     {
-        if (!this.worldObj.isRemote && (this.riddenByEntity == null || this.riddenByEntity == p_110199_1_) && this.isTamed())
+        if (!this.worldObj.isRemote && this.isTamed())
         {
             this.horseChest.func_110133_a(this.getCommandSenderName());
          //   p_110199_1_.displayGUIHorse(this, this.horseChest);
@@ -271,6 +272,25 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
         p_70014_1_.setInteger("maleTextureIndex", this.getTextureMale());
         p_70014_1_.setInteger("FoodLevel", this.getHunger());
         p_70014_1_.setInteger("Anger", this.getAnger());
+
+
+            NBTTagList nbttaglist = new NBTTagList();
+
+            for (int i = 2; i < this.horseChest.getSizeInventory(); ++i)
+            {
+                ItemStack itemstack = this.horseChest.getStackInSlot(i);
+
+                if (itemstack != null)
+                {
+                    NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                    nbttagcompound1.setByte("Slot", (byte)i);
+                    itemstack.writeToNBT(nbttagcompound1);
+                    nbttaglist.appendTag(nbttagcompound1);
+                }
+            }
+
+            p_70014_1_.setTag("Items", nbttaglist);
+
     }
 
     @Override
@@ -284,6 +304,21 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
         this.setTextureMale(p_70037_1_.getInteger("maleTextureIndex"));
         this.setHunger(p_70037_1_.getInteger("FoodLevel"));
         this.setAnger(p_70037_1_.getInteger("Anger"));
+
+
+        NBTTagList nbttaglist = p_70037_1_.getTagList("Items", 10);
+        this.func_110226_cD();
+
+        for (int i = 0; i < nbttaglist.tagCount(); ++i)
+        {
+            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+            int j = nbttagcompound1.getByte("Slot") & 255;
+
+            if (j >= 2 && j < this.horseChest.getSizeInventory())
+            {
+                this.horseChest.setInventorySlotContents(j, ItemStack.loadItemStackFromNBT(nbttagcompound1));
+            }
+        }
     }
 
     @Override

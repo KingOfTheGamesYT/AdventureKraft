@@ -14,14 +14,14 @@ public class ContainerGuardInventory extends Container {
     private IInventory inventory;
     private BodyguardEntity bodyguardEntity;
 
-    public ContainerGuardInventory(IInventory p_i1817_1_, final IInventory p_i1817_2_, final BodyguardEntity bodyguardEntity)
+    public ContainerGuardInventory(IInventory playerInv, final IInventory mobInv, final BodyguardEntity bodyguardEntity)
     {
-        this.inventory = p_i1817_2_;
+        this.inventory = mobInv;
         this.bodyguardEntity = bodyguardEntity;
         byte b0 = 3;
-        p_i1817_2_.openInventory();
+        mobInv.openInventory();
         int i = (b0 - 4) * 18;
-        this.addSlotToContainer(new Slot(p_i1817_2_, 0, 8, 18)
+        this.addSlotToContainer(new Slot(mobInv, 0, 8, 18)
         {
             /**
              * Check if the stack is a valid item for this slot. Always true beside for the armor slots.
@@ -31,7 +31,7 @@ public class ContainerGuardInventory extends Container {
                 return super.isItemValid(p_75214_1_) /**&& p_75214_1_.getItem() == Items.saddle**/ && !this.getHasStack();
             }
         });
-        this.addSlotToContainer(new Slot(p_i1817_2_, 1, 8, 36)
+        this.addSlotToContainer(new Slot(mobInv, 1, 8, 36)
         {
             /**
              * Check if the stack is a valid item for this slot. Always true beside for the armor slots.
@@ -57,7 +57,7 @@ public class ContainerGuardInventory extends Container {
             {
                 for (k = 0; k < 5; ++k)
                 {
-                    this.addSlotToContainer(new Slot(p_i1817_2_, 2 + k + j * 5, 80 + k * 18, 18 + j * 18));
+                    this.addSlotToContainer(new Slot(mobInv, 2 + k + j * 5, 80 + k * 18, 18 + j * 18));
                 }
             }
         }
@@ -66,13 +66,13 @@ public class ContainerGuardInventory extends Container {
         {
             for (k = 0; k < 9; ++k)
             {
-                this.addSlotToContainer(new Slot(p_i1817_1_, k + j * 9 + 9, 8 + k * 18, 102 + j * 18 + i));
+                this.addSlotToContainer(new Slot(playerInv, k + j * 9 + 9, 8 + k * 18, 102 + j * 18 + i));
             }
         }
 
         for (j = 0; j < 9; ++j)
         {
-            this.addSlotToContainer(new Slot(p_i1817_1_, j, 8 + j * 18, 160 + i));
+            this.addSlotToContainer(new Slot(playerInv, j, 8 + j * 18, 160 + i));
         }
     }
 

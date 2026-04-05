@@ -1,10 +1,8 @@
-package com.teamolympus.dangerzone.entity.living.peaceful.bodyguard;
+package com.teamolympus.dangerzone.entity.living.peaceful.bodyguard.ai;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAITarget;
 import net.minecraft.entity.passive.EntityTameable;
-import net.minecraft.entity.projectile.EntityPotion;
-import net.minecraft.util.MathHelper;
 
 public class BodyguardAILightExplosives extends EntityAITarget {
     EntityTameable theDefendingTameable;

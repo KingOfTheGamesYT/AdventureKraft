@@ -1,4 +1,4 @@
-package com.teamolympus.dangerzone.entity.living.peaceful.bodyguard;
+package com.teamolympus.dangerzone.entity.living.peaceful.bodyguard.ai;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAITarget;

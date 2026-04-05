@@ -48,7 +48,7 @@ public class BaseWorldHelper {
 
                 boolean flag = setFastChunk3(chunk, x & 15, y, z & 15, blockIn, metadataIn);
 
-       //  chunk.func_150807_a(x & 15, y, z & 15, blockIn, metadataIn);
+            //  chunk.func_150807_a(x & 15, y, z & 15, blockIn, metadataIn);
 
                 if (!flag && blockSnapshot != null)
                 {
@@ -92,8 +92,8 @@ public class BaseWorldHelper {
           //      block1.onBlockPreDestroy(chunk.worldObj, l1, p_150807_2_, i2, k1);
           //  }
 
-            extendedblockstorage.func_150818_a(p_150807_1_, p_150807_2_ & 15, p_150807_3_, p_150807_4_);
-            extendedblockstorage.setExtBlockMetadata(p_150807_1_, p_150807_2_ & 15, p_150807_3_, p_150807_5_); // This line duplicates the one below, so breakBlock fires with valid worldstate
+                extendedblockstorage.func_150818_a(p_150807_1_, p_150807_2_ & 15, p_150807_3_, p_150807_4_);
+                extendedblockstorage.setExtBlockMetadata(p_150807_1_, p_150807_2_ & 15, p_150807_3_, p_150807_5_); // This line duplicates the one below, so breakBlock fires with valid worldstate
 
                 chunk.isModified = true;
                 return true;
