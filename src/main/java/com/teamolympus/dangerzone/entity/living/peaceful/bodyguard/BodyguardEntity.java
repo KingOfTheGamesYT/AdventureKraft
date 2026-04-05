@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
@@ -299,9 +300,9 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
         if (!this.isTamed() && hasClickedMobRecentlyCounter < 3)
         {
             hasClickedMobRecentlyCounter++;
-            player.addChatMessage(new ChatComponentText("If you give me a random amount of steak/poppies between 1 and 100, then I will ensure your safety forever."));
-            player.addChatMessage(new ChatComponentText("Needed AMM" + this.getRequestedAmm()));
-            player.addChatMessage(new ChatComponentText("Given Amm" + this.getPlayerGivenAmm()));
+            player.addChatMessage(new ChatComponentTranslation("BodyguardSafety"));
+           // player.addChatMessage(new ChatComponentTranslation("Needed AMM" + this.getRequestedAmm()));
+          //  player.addChatMessage(new ChatComponentTranslation("Given Amm" + this.getPlayerGivenAmm()));
         }
 
         if (this.isTamed())
@@ -329,7 +330,7 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
             if (itemstack.getItem() == Items.diamond && getAnger() > 100) {
                 --itemstack.stackSize;
                 setAnger(0);
-                player.addChatMessage(new ChatComponentText("Your bodyguard has Calmed down"));
+                player.addChatMessage(new ChatComponentTranslation("BodyguardClamed"));
             }
 
             return true;
@@ -358,17 +359,17 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
 
     private void incorrectItemFemale(int random, EntityPlayer player) {
         if (random == 1) {
-            player.addChatMessage(new ChatComponentText("Did you get me my Poppy yet?"));
+            player.addChatMessage(new ChatComponentTranslation("BodyguardTamePoppy"));
         } else {
-            player.addChatMessage(new ChatComponentText("That is not what I asked for!"));
+            player.addChatMessage(new ChatComponentTranslation("BodyguardIncorrectItem"));
         }
     }
 
     private void incorrectItemMale(int random, EntityPlayer player) {
         if (random == 1) {
-            player.addChatMessage(new ChatComponentText("Did you get me my Steak yet?"));
+            player.addChatMessage(new ChatComponentTranslation("BodyguardTameSteak"));
         } else {
-            player.addChatMessage(new ChatComponentText("That is not what I asked for!"));
+            player.addChatMessage(new ChatComponentTranslation("BodyguardIncorrectItem"));
         }
     }
 
