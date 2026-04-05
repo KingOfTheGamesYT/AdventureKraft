@@ -23,18 +23,16 @@ public class ContainerGuardInventory extends Container {
         int i = (b0 - 4) * 18;
         this.addSlotToContainer(new Slot(p_i1817_2_, 0, 8, 18)
         {
-            private static final String __OBFID = "CL_00001752";
             /**
              * Check if the stack is a valid item for this slot. Always true beside for the armor slots.
              */
             public boolean isItemValid(ItemStack p_75214_1_)
             {
-                return super.isItemValid(p_75214_1_) && p_75214_1_.getItem() == Items.saddle && !this.getHasStack();
+                return super.isItemValid(p_75214_1_) /**&& p_75214_1_.getItem() == Items.saddle**/ && !this.getHasStack();
             }
         });
         this.addSlotToContainer(new Slot(p_i1817_2_, 1, 8, 36)
         {
-            private static final String __OBFID = "CL_00001753";
             /**
              * Check if the stack is a valid item for this slot. Always true beside for the armor slots.
              */
