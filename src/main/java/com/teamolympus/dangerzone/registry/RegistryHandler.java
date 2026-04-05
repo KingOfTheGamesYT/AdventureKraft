@@ -240,7 +240,8 @@ public class RegistryHandler {
             .setUseDuration(32);
         registerItem(cheeseFood, "cheese");
 
-        saladFood = new BaseAKFood("salad", 10, 10, true).setUseDuration(32);
+        saladFood = new BaseAKFood("salad", 10, 10, true)
+                .setUseDuration(32);
         registerItem(saladFood, "Salad");
 
         crabbyPatty = new BaseAKFood("crabby_patty", 16, 2.35f, true);

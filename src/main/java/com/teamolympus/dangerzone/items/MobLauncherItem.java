@@ -24,26 +24,40 @@ public class MobLauncherItem extends BaseAKItem {
 
         if (entity instanceof EntityLiving) {
 
-            // for (int i = 0; i < 6; i++) {
+            double d0 = (double) ((float) entity.posX + 0.5F) + (double) (player.worldObj.rand.nextFloat() - 0.5F) * 0.2D;
+            double d1 = (double) ((float) entity.posY + 0.7F) + (double) (player.worldObj.rand.nextFloat() - 0.5F) * 0.5D;
+            double d2 = (double) ((float) entity.posZ + 0.5F) + (double) (player.worldObj.rand.nextFloat() - 0.5F) * 0.2D;
+            double velY =0.699999988079071D;
 
-            // }
+            double d3 = 0.2199999988079071D;
+            double d4 = 0.27000001072883606D;
 
-            // TODO: ADD PARTICLES
+             for (byte i = 0; i < 6; i++)
+             {
+                spawnParticle(player, "reddust", d0 - d4, d1 + d3, d2, 0.0D, velY, 0.0D);
+                spawnParticle(player, "smoke", d0 - d4, d1 + d3, d2, 0.0D, velY, 0.0D);
+                spawnParticle(player, "explode", d0 - d4, d1 + d3, d2, 0.0D, velY, 0.0D);
+             }
+            player.worldObj.playSoundAtEntity(player, "fireworks.launch", 2.0F, 1.5F);
+
             EntityLiving entityLiving = (EntityLiving) entity;
-            // entityLiving.motionY = 1;
-            entityLiving.addVelocity(0.0D, 4.5D, 0.0D);
+
+            entityLiving.motionY += 4.5D;
+            entityLiving.isAirBorne = true;
 
             if (!player.capabilities.isCreativeMode) {
                 --stack.stackSize;
             }
 
+            return true;
         }
 
         return false;
     }
 
     private void spawnParticle(EntityPlayer player, String particleName, double x, double y, double z, double velocityX,
-        double velocityY, double velocityZ) {
+        double velocityY, double velocityZ)
+    {
         player.worldObj.spawnParticle(particleName, x, y, z, velocityX, velocityY, velocityZ);
     }
 }
