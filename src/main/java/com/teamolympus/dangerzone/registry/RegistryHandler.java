@@ -15,6 +15,7 @@ import com.teamolympus.dangerzone.entity.RockEntity;
 import com.teamolympus.dangerzone.entity.living.hostile.AllosaurusEntity;
 import com.teamolympus.dangerzone.entity.living.hostile.MantisEntity;
 import com.teamolympus.dangerzone.entity.living.peaceful.bodyguard.BodyguardEntity;
+import com.teamolympus.dangerzone.networking.DangerZoneNetworking;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -68,6 +69,7 @@ public class RegistryHandler {
 
     public static void initPre()
     {
+        DangerZoneNetworking.init();
         addMobs();
         addBlocks();
         addItems();

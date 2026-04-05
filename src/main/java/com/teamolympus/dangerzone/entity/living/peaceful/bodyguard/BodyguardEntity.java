@@ -10,23 +10,27 @@ import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.AnimalChest;
+import net.minecraft.inventory.IInvBasic;
+import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 // Thanks Dev!!!
-public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
+public class BodyguardEntity extends EntityTameable implements IInvBasic {
 
     private EntityAITempt aiTempt;
  //   public int textureIndexMale;
   //  public int textureIndexGirl;
+
+    private AnimalChest horseChest;
 
     private int lastFoodCheckTick;
 
@@ -63,14 +67,91 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
         this.setCanPickUpLoot(true);
     }
 
-   static final int GENDER = 19;
-    static final   int ENTITYREQUESTEDTAMEAMM=20;
-    static final int PLAYERGICENTAM = 21;
+    static final int INV_SIZE = 41;
+
+    // InitalInv
+    private void func_110226_cD()
+    {
+        AnimalChest animalchest = this.horseChest;
+        this.horseChest = new AnimalChest("HorseChest", INV_SIZE);
+        this.horseChest.func_110133_a(this.getCommandSenderName());
+
+        if (animalchest != null)
+        {
+            animalchest.func_110132_b(this);
+            int i = Math.min(animalchest.getSizeInventory(), this.horseChest.getSizeInventory());
+
+            for (int j = 0; j < i; ++j)
+            {
+                ItemStack itemstack = animalchest.getStackInSlot(j);
+
+                if (itemstack != null)
+                {
+                    this.horseChest.setInventorySlotContents(j, itemstack.copy());
+                }
+            }
+
+            animalchest = null;
+        }
+
+        this.horseChest.func_110134_a(this);
+        this.func_110232_cE();
+    }
+
+    private void func_110232_cE()
+    {
+    }
+
+    @Override
+    public void onDeath(DamageSource p_70645_1_)
+    {
+        super.onDeath(p_70645_1_);
+
+        if (!this.worldObj.isRemote)
+        {
+            this.dropChestItems();
+        }
+    }
+
+    public void dropChestItems()
+    {
+        this.dropItemsInChest(this, this.horseChest);
+    }
+
+    private void dropItemsInChest(Entity p_110240_1_, AnimalChest p_110240_2_)
+    {
+        if (p_110240_2_ != null && !this.worldObj.isRemote)
+        {
+            for (int i = 0; i < p_110240_2_.getSizeInventory(); ++i)
+            {
+                ItemStack itemstack = p_110240_2_.getStackInSlot(i);
+
+                if (itemstack != null)
+                {
+                    this.entityDropItem(itemstack, 0.0F);
+                }
+            }
+        }
+    }
+
+    public void openGUI(EntityPlayer p_110199_1_)
+    {
+        if (!this.worldObj.isRemote && (this.riddenByEntity == null || this.riddenByEntity == p_110199_1_) && this.isTamed())
+        {
+            this.horseChest.func_110133_a(this.getCommandSenderName());
+         //   p_110199_1_.displayGUIHorse(this, this.horseChest);
+        }
+    }
+
+
+    static final int GENDER = 19;
+    static final int ENTITY_REQUESTED_TAME_AMM =20;
+    static final int PLAYER_GIVEN_TAME_AMM = 21;
 
     static final int TEXTUREID_MALE = 22;
-    static final  int TEXTUREID_FEMALE = 23;
-    static final  int HUNGER = 24;
-    static final int ANGA = 25;
+    static final int TEXTUREID_FEMALE = 23;
+    static final int HUNGER = 24;
+    static final int ANGER = 25;
 
     @Override
     // https://jabelarminecraft.blogspot.com/p/minecraft-modding-datawatcher.html
@@ -79,28 +160,26 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
         super.entityInit();
         this.dataWatcher.addObject(GENDER, (byte)0); //gender
 
-        this.dataWatcher.addObject(ENTITYREQUESTEDTAMEAMM, (byte)0); // entity tame requested amm
+        this.dataWatcher.addObject(ENTITY_REQUESTED_TAME_AMM, (byte)0); // entity tame requested amm
 
-        this.dataWatcher.addObject(PLAYERGICENTAM, (byte)0); // Player given amm
+        this.dataWatcher.addObject(PLAYER_GIVEN_TAME_AMM, (byte)0); // Player given amm
 
         //TODO: REWRITE USING THE SYSTEM DEV PROVIDED
         this.dataWatcher.addObject(TEXTUREID_FEMALE, (byte)0); // female
         this.dataWatcher.addObject(TEXTUREID_MALE, (byte)0); // male
 
-
         this.dataWatcher.addObject(HUNGER, (byte)20); // hunger
-
-        this.dataWatcher.addObject(ANGA, (byte)0); // anger
+        this.dataWatcher.addObject(ANGER, (byte)0); // anger
     }
 
     public int getAnger()
     {
-        return this.dataWatcher.getWatchableObjectByte(ANGA);
+        return this.dataWatcher.getWatchableObjectByte(ANGER);
     }
 
     public void setAnger(int text)
     {
-        this.dataWatcher.updateObject(ANGA, (byte)text);
+        this.dataWatcher.updateObject(ANGER, (byte)text);
     }
 
     public void increaseAnger(int amm) {
@@ -125,22 +204,22 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
 
     public int getPlayerGivenAmm()
     {
-        return this.dataWatcher.getWatchableObjectByte(PLAYERGICENTAM);
+        return this.dataWatcher.getWatchableObjectByte(PLAYER_GIVEN_TAME_AMM);
     }
 
     public void setPlayerGivenAmm(int givenAmm)
     {
-        this.dataWatcher.updateObject(PLAYERGICENTAM, (byte) givenAmm);
+        this.dataWatcher.updateObject(PLAYER_GIVEN_TAME_AMM, (byte) givenAmm);
     }
 
     public int getRequestedAmm()
     {
-        return this.dataWatcher.getWatchableObjectByte(ENTITYREQUESTEDTAMEAMM);
+        return this.dataWatcher.getWatchableObjectByte(ENTITY_REQUESTED_TAME_AMM);
     }
 
     public void setRequestedAmm(int requestedAmm)
     {
-        this.dataWatcher.updateObject(ENTITYREQUESTEDTAMEAMM, (byte) requestedAmm);
+        this.dataWatcher.updateObject(ENTITY_REQUESTED_TAME_AMM, (byte) requestedAmm);
     }
 
     public int getGender()
@@ -417,9 +496,9 @@ public class BodyguardEntity extends EntityTameable /**implements IInvBasic **/{
         return null;
     }
 
- /**   @Override
+   @Override
     public void onInventoryChanged(InventoryBasic p_76316_1_) {
 
     }
- **/
+
 }
