@@ -1,9 +1,14 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
+import com.teamolympus.dangerzone.misc.DropHelper;
+import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.*;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.pathfinding.PathEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
@@ -52,6 +57,65 @@ public class MantisEntity extends EntityMob {
     }
 
     @Override
+    public void moveEntityWithHeading(float p_70612_1_, float p_70612_2_)
+    {
+        if (this.isInWater())
+        {
+            this.moveFlying(p_70612_1_, p_70612_2_, 0.02F);
+            this.moveEntity(this.motionX, this.motionY, this.motionZ);
+            this.motionX *= 0.800000011920929D;
+            this.motionY *= 0.800000011920929D;
+            this.motionZ *= 0.800000011920929D;
+        }
+        else if (this.handleLavaMovement())
+        {
+            this.moveFlying(p_70612_1_, p_70612_2_, 0.02F);
+            this.moveEntity(this.motionX, this.motionY, this.motionZ);
+            this.motionX *= 0.5D;
+            this.motionY *= 0.5D;
+            this.motionZ *= 0.5D;
+        }
+        else
+        {
+            float f2 = 0.91F;
+
+            if (this.onGround)
+            {
+                f2 = this.worldObj.getBlock(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.boundingBox.minY) - 1, MathHelper.floor_double(this.posZ)).slipperiness * 0.91F;
+            }
+
+            float f3 = 0.16277136F / (f2 * f2 * f2);
+            this.moveFlying(p_70612_1_, p_70612_2_, this.onGround ? 0.1F * f3 : 0.02F);
+            f2 = 0.91F;
+
+            if (this.onGround)
+            {
+                f2 = this.worldObj.getBlock(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.boundingBox.minY) - 1, MathHelper.floor_double(this.posZ)).slipperiness * 0.91F;
+            }
+
+            this.moveEntity(this.motionX, this.motionY, this.motionZ);
+            this.motionX *= (double)f2;
+            this.motionY *= (double)f2;
+            this.motionZ *= (double)f2;
+        }
+
+        this.prevLimbSwingAmount = this.limbSwingAmount;
+        double d1 = this.posX - this.prevPosX;
+        double d0 = this.posZ - this.prevPosZ;
+        float f4 = MathHelper.sqrt_double(d1 * d1 + d0 * d0) * 4.0F;
+
+        if (f4 > 1.0F)
+        {
+            f4 = 1.0F;
+        }
+
+        this.limbSwingAmount += (f4 - this.limbSwingAmount) * 0.4F;
+        this.limbSwing += this.limbSwingAmount;
+    }
+
+    @Override
+    //TODO: Hook it up to the actual pathfinder to make it alot smarter.
+    //TODO: BORROW FROM isCourseTraversable() IN entityGhast to hopefully fully prevent  mob from getting stuck.
     protected void updateEntityActionState()
     {
         super.updateEntityActionState();
@@ -59,6 +123,8 @@ public class MantisEntity extends EntityMob {
         {
             this.spawnPosition = null;
         }
+
+
         // Prevent Mob from getting stuck On Flight
         if (this.lastPosX == (int)this.posX && this.lastPosZ == (int)this.posZ)
         {
@@ -99,30 +165,22 @@ public class MantisEntity extends EntityMob {
         this.rotationYaw += f1;
 
 
-        if (this.worldObj.rand.nextInt(100) == 0) {
+        if (this.worldObj.rand.nextInt(100) == 0)
+        {
             this.heal(1);
         }
     }
 
     protected void updatePosStuck()
     {
-        int i = -1;
-        int j = -1;
-        int k = -1;
-
-
-            int i1 = MathHelper.floor_double(this.posX + (double)this.rand.nextInt(9) + 4D);
-            int j1 = MathHelper.floor_double(this.posY + (double)this.rand.nextInt(6) - 3.0D);
-            int k1 = MathHelper.floor_double(this.posZ + (double)this.rand.nextInt(9) + 4D);
-            i = i1;
-            j = j1;
-            k = k1;
-
+            int x = MathHelper.floor_double(this.posX + (double)this.rand.nextInt(9) + 4D);
+            int y = MathHelper.floor_double(this.posY + (double)this.rand.nextInt(6) - 3.0D);
+            int z = MathHelper.floor_double(this.posZ + (double)this.rand.nextInt(9) + 4D);
 
             if (this.spawnPosition != null)
             {
-                this.spawnPosition.set(i,j,k);
-                setPathToEntity(this.worldObj.getEntityPathToXYZ(this, i, j, k, 10.0F, true, false, false, true));
+                this.spawnPosition.set(x,y,z);
+                setPathToEntity(this.worldObj.getEntityPathToXYZ(this, x, y, z, 10.0F, true, false, false, true));
             }
 
     }
@@ -174,25 +232,21 @@ public class MantisEntity extends EntityMob {
       return this.posY > 50 && mantisIsNear && super.getCanSpawnHere();
     }
 
-    public boolean isAttacking()
+    @Override
+    protected Item getDropItem()
     {
-        return (this.dataWatcher.getWatchableObjectByte(16) & 1) != 0;
+        return Item.getItemFromBlock(Blocks.yellow_flower);
     }
 
-    public void setAttackState(boolean state)
+    @Override
+    protected void dropFewItems(boolean hitByPlayer, int lootingLevel)
     {
-        byte b0 = this.dataWatcher.getWatchableObjectByte(16);
+        super.dropFewItems(hitByPlayer, lootingLevel);
+        DropHelper.dropItemMultipleNonStackable(this, RegistryHandler.mantisClaw,2);
+        DropHelper.dropItem(this, Items.item_frame, 1);
+        DropHelper.dropItem(this, Items.gold_nugget, 2+ this.rand.nextInt(10));
 
-        if (state)
-        {
-            b0 = (byte)(b0 | 1);
-        }
-        else
-        {
-            b0 &= -2;
-        }
-
-        this.dataWatcher.updateObject(16, b0);
+        //TODO: ADD TITANIUM AND URANIUM NUGGET
     }
 
 
@@ -202,12 +256,12 @@ public class MantisEntity extends EntityMob {
         List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(16.0D, 8.0D, 16.0D));
 
         for (Entity entity : list) {
-        //    Entity entity1 = entity;
-
-            if (entity instanceof IAdventureKraftAttackableMobs) {
+            if (entity instanceof IAdventureKraftAttackableMobs)
+            {
                 IAdventureKraftAttackableMobs attackableMob = ((IAdventureKraftAttackableMobs) entity);
 
-                if (attackableMob.entityAttackInstance() != null) {
+                if (attackableMob.entityAttackInstance() != null)
+                {
                     return attackableMob.entityAttackInstance();
                 }
 
