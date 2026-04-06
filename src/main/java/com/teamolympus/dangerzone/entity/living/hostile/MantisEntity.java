@@ -185,6 +185,7 @@ public class MantisEntity extends EntityMob {
 
     }
 
+    @Override
     protected void attackEntity(Entity mob, float dist)
     {
         if (this.attackTime <= 0 && dist < 4.0F && mob.boundingBox.maxY > this.boundingBox.minY && mob.boundingBox.minY < this.boundingBox.maxY)
