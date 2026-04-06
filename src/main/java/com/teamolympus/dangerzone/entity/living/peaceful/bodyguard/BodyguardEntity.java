@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.entity.living.peaceful.bodyguard;
 
 
 import com.teamolympus.dangerzone.client.render.BodyguardRender;
+import com.teamolympus.dangerzone.copypastesoup.BodyGuardChest;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
