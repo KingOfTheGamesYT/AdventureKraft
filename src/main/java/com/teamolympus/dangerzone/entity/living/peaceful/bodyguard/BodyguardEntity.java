@@ -10,7 +10,6 @@ import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.inventory.AnimalChest;
 import net.minecraft.inventory.IInvBasic;
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.Item;
@@ -18,7 +17,6 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
@@ -28,22 +26,13 @@ import net.minecraft.world.World;
 public class BodyguardEntity extends EntityTameable implements IInvBasic {
 
     private EntityAITempt aiTempt;
- //   public int textureIndexMale;
-  //  public int textureIndexGirl;
-
-    private AnimalChest horseChest;
 
     private int lastFoodCheckTick;
 
     public BodyguardEntity(World world) {
         super(world);
-      //   this.textureIndexMale = this.rand.nextInt(BodyguardRender.TEXTURES_MALE.length);
-       // this.textureIndexGirl = this.rand.nextInt(BodyguardRender.TEXTURES_FEMALE.length);
-
         this.setTextureMale(this.rand.nextInt(BodyguardRender.TEXTURES_MALE.length));
         this.setTextureFemale(this.rand.nextInt(BodyguardRender.TEXTURES_FEMALE.length));
-
-
         this.getNavigator().setAvoidsWater(false);
         this.getNavigator().setCanSwim(true);
         this.setGender(this.worldObj.rand.nextInt(2));
@@ -57,7 +46,6 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
         this.tasks.addTask(5, new EntityAIFollowOwner(this, 1.0D, 10.0F, 2.0F));
         this.tasks.addTask(6, new EntityAIMate(this, 1.0D));
         this.tasks.addTask(7, new EntityAIWander(this, 1.0D));
-     //   this.tasks.addTask(8, new EntityAIBeg(this, 8.0F));
         this.tasks.addTask(9, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(9, new EntityAILookIdle(this));
         this.targetTasks.addTask(1, new EntityAIOwnerHurtByTarget(this));
@@ -68,81 +56,6 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
         this.setCanPickUpLoot(true);
     }
 
-    static final int INV_SIZE = 41;
-
-    // InitalInv
-    private void func_110226_cD()
-    {
-        AnimalChest animalchest = this.horseChest;
-        this.horseChest = new AnimalChest("HorseChest", INV_SIZE);
-        this.horseChest.func_110133_a(this.getCommandSenderName());
-
-        if (animalchest != null)
-        {
-            animalchest.func_110132_b(this);
-            int i = Math.min(animalchest.getSizeInventory(), this.horseChest.getSizeInventory());
-
-            for (int j = 0; j < i; ++j)
-            {
-                ItemStack itemstack = animalchest.getStackInSlot(j);
-
-                if (itemstack != null)
-                {
-                    this.horseChest.setInventorySlotContents(j, itemstack.copy());
-                }
-            }
-
-            animalchest = null;
-        }
-
-        this.horseChest.func_110134_a(this);
-        this.func_110232_cE();
-    }
-
-    private void func_110232_cE()
-    {
-    }
-
-    @Override
-    public void onDeath(DamageSource p_70645_1_)
-    {
-        super.onDeath(p_70645_1_);
-
-        if (!this.worldObj.isRemote)
-        {
-            this.dropChestItems();
-        }
-    }
-
-    public void dropChestItems()
-    {
-        this.dropItemsInChest(this, this.horseChest);
-    }
-
-    private void dropItemsInChest(Entity p_110240_1_, AnimalChest p_110240_2_)
-    {
-        if (p_110240_2_ != null && !this.worldObj.isRemote)
-        {
-            for (int i = 0; i < p_110240_2_.getSizeInventory(); ++i)
-            {
-                ItemStack itemstack = p_110240_2_.getStackInSlot(i);
-
-                if (itemstack != null)
-                {
-                    this.entityDropItem(itemstack, 0.0F);
-                }
-            }
-        }
-    }
-
-    public void openGUI(EntityPlayer player)
-    {
-        if (!this.worldObj.isRemote && this.isTamed())
-        {
-            this.horseChest.func_110133_a(this.getCommandSenderName());
-         //   p_110199_1_.displayGUIHorse(this, this.horseChest);
-        }
-    }
 
 
     static final int GENDER = 19;
@@ -273,24 +186,6 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
         p_70014_1_.setInteger("FoodLevel", this.getHunger());
         p_70014_1_.setInteger("Anger", this.getAnger());
 
-
-            NBTTagList nbttaglist = new NBTTagList();
-
-            for (int i = 2; i < this.horseChest.getSizeInventory(); ++i)
-            {
-                ItemStack itemstack = this.horseChest.getStackInSlot(i);
-
-                if (itemstack != null)
-                {
-                    NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                    nbttagcompound1.setByte("Slot", (byte)i);
-                    itemstack.writeToNBT(nbttagcompound1);
-                    nbttaglist.appendTag(nbttagcompound1);
-                }
-            }
-
-            p_70014_1_.setTag("Items", nbttaglist);
-
     }
 
     @Override
@@ -305,20 +200,6 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
         this.setHunger(p_70037_1_.getInteger("FoodLevel"));
         this.setAnger(p_70037_1_.getInteger("Anger"));
 
-
-        NBTTagList nbttaglist = p_70037_1_.getTagList("Items", 10);
-        this.func_110226_cD();
-
-        for (int i = 0; i < nbttaglist.tagCount(); ++i)
-        {
-            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-            int j = nbttagcompound1.getByte("Slot") & 255;
-
-            if (j >= 2 && j < this.horseChest.getSizeInventory())
-            {
-                this.horseChest.setInventorySlotContents(j, ItemStack.loadItemStackFromNBT(nbttagcompound1));
-            }
-        }
     }
 
     @Override
@@ -398,8 +279,6 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
         if (this.getAnger() > 100 && isTamed()) {
             System.out.println("I am angry");
         }
-
-
 
     }
 

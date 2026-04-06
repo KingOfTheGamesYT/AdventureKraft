@@ -13,6 +13,7 @@ import net.minecraft.inventory.IInventory;
 
 public class BodyGuardPacket implements IMessage {
 
+    // Needed for initilization
     public BodyGuardPacket()
     {
 
@@ -20,8 +21,10 @@ public class BodyGuardPacket implements IMessage {
 
      BodyguardEntity guard;
      IInventory inv;
+     EntityPlayer player;
     public BodyGuardPacket(EntityPlayer player, BodyguardEntity guard, IInventory inv)
     {
+        this.player = player;
         this.guard = guard;
         this.inv = inv;
     }
@@ -29,6 +32,7 @@ public class BodyGuardPacket implements IMessage {
     @Override
     public void fromBytes(ByteBuf buf)
     {
+
     }
 
     @Override
@@ -41,7 +45,6 @@ public class BodyGuardPacket implements IMessage {
         @Override
         public IMessage onMessage(BodyGuardPacket message, MessageContext ctx)
         {
-
             return null;
         }
     }
