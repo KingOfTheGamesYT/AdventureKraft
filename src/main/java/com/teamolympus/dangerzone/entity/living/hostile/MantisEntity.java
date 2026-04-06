@@ -4,8 +4,10 @@ import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
 import net.minecraft.entity.*;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.pathfinding.PathEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -15,6 +17,7 @@ public class MantisEntity extends EntityMob {
     private ChunkCoordinates spawnPosition;
     private int lastPosZ;
     private int lastPosX;
+    private int stuckTicks;
 
     public MantisEntity(World world) {
         super(world);
@@ -43,6 +46,12 @@ public class MantisEntity extends EntityMob {
     }
 
     @Override
+    public boolean canEntityBeSeen(Entity entity)
+    {
+        return this.worldObj.rayTraceBlocks(Vec3.createVectorHelper(this.posX, this.posY + 0.75, this.posZ), Vec3.createVectorHelper(entity.posX, entity.posY, entity.posZ)) == null;
+    }
+
+    @Override
     protected void updateEntityActionState()
     {
         super.updateEntityActionState();
@@ -50,21 +59,31 @@ public class MantisEntity extends EntityMob {
         {
             this.spawnPosition = null;
         }
-
+        // Prevent Mob from getting stuck On Flight
+        if (this.lastPosX == (int)this.posX && this.lastPosZ == (int)this.posZ)
+        {
+            ++stuckTicks;
+            if (stuckTicks > 60)
+            {
+               updatePosStuck();
+            }
+        } else {
+            this.lastPosX = (int) this.posX;
+            this.lastPosZ = (int) this.posZ;
+            stuckTicks = 0;
+        }
 
         if (this.spawnPosition == null || this.rand.nextInt(300) == 0 || this.spawnPosition.getDistanceSquared((int)this.posX, (int)this.posY, (int)this.posZ) < 4.0F)
         {
             this.spawnPosition = new ChunkCoordinates((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
 		}
 
-
         if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack()))
         {
             spawnPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
         } else if (this.findEntityInBoundingBox() != null) {
-            spawnPosition.set((int) findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
+            spawnPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
         }
-
 
         double d0 = (double)this.spawnPosition.posX + 0.5D - this.posX;
         double d1 = (double)this.spawnPosition.posY + 0.1D - this.posY;
@@ -76,13 +95,51 @@ public class MantisEntity extends EntityMob {
         this.motionZ += (Math.signum(d2) * 0.5D - this.motionZ) * 0.10000000149011612D;
         float f = (float)(Math.atan2(this.motionZ, this.motionX) * 180.0D / Math.PI) - 90.0F;
         float f1 = MathHelper.wrapAngleTo180_float(f - this.rotationYaw);
-        this.moveForward = 0.5F;
+        this.moveForward = 1.0F;
         this.rotationYaw += f1;
 
 
         if (this.worldObj.rand.nextInt(100) == 0) {
             this.heal(1);
         }
+    }
+
+    protected void updatePosStuck()
+    {
+        int i = -1;
+        int j = -1;
+        int k = -1;
+
+
+            int i1 = MathHelper.floor_double(this.posX + (double)this.rand.nextInt(9) + 4D);
+            int j1 = MathHelper.floor_double(this.posY + (double)this.rand.nextInt(6) - 3.0D);
+            int k1 = MathHelper.floor_double(this.posZ + (double)this.rand.nextInt(9) + 4D);
+            i = i1;
+            j = j1;
+            k = k1;
+
+
+            if (this.spawnPosition != null)
+            {
+                this.spawnPosition.set(i,j,k);
+                setPathToEntity(this.worldObj.getEntityPathToXYZ(this, i, j, k, 10.0F, true, false, false, true));
+            }
+
+    }
+
+    protected void attackEntity(Entity mob, float dist)
+    {
+        if (this.attackTime <= 0 && dist < 4.0F && mob.boundingBox.maxY > this.boundingBox.minY && mob.boundingBox.minY < this.boundingBox.maxY)
+        {
+            this.attackTime = 20;
+            this.attackEntityAsMob(mob);
+        }
+
+        if (spawnPosition != null)
+        {
+            spawnPosition.set((int) mob.posX, (int) mob.posY, (int) mob.posZ);
+        }
+
     }
 
     @Override
@@ -104,25 +161,17 @@ public class MantisEntity extends EntityMob {
     }
 
     @Override
+    protected boolean isValidLightLevel()
+    {
+        return this.worldObj.isDaytime();
+    }
+
+    @Override
     public boolean getCanSpawnHere()
     {
       Entity mantis =  this.worldObj.findNearestEntityWithinAABB(MantisEntity.class, this.boundingBox.expand(32.0, 16.0, 32.0), this);
       boolean mantisIsNear = mantis == null;
-
-      /**  for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 3; j++) {
-                for (int k = 0; k < 5; k++) {
-
-                }
-
-            }
-
-
-
-        }
-       **/
-
-        return this.posY > 50 && mantisIsNear && super.getCanSpawnHere();
+      return this.posY > 50 && mantisIsNear && super.getCanSpawnHere();
     }
 
     public boolean isAttacking()
@@ -148,6 +197,7 @@ public class MantisEntity extends EntityMob {
 
 
     // Borrowed from EntityPigZombie.java
+    @SuppressWarnings("unchecked")
     public Entity findEntityInBoundingBox() {
         List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(16.0D, 8.0D, 16.0D));
 

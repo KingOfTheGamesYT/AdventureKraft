@@ -174,31 +174,40 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
         return !(getGender() == 1);
     }
 
+
+    static final String GENDER_NBT = "Gender";
+    static final String REQUESTED_AMM_ENTITY_NBT = "RequestedAmountEntity";
+    static final String PLAYER_GIVEN_TO_TAME_AMOUNT_NBT = "PlayerGivenTameAmount";
+    static final String MALE_TEXTURE_INDEX_NBT = "MaleTextureIndex";
+    static final String FEMALE_TEXTURE_INDEX_NBT = "FemaleTextureIndex";
+    static final String FOOD_LEVEL_NBT = "FoodLevel";
+    static final String ANGER_NBT = "AngerLevels";
+
     @Override
-    public void writeEntityToNBT(NBTTagCompound p_70014_1_)
+    public void writeEntityToNBT(NBTTagCompound tag)
     {
-        super.writeEntityToNBT(p_70014_1_);
-        p_70014_1_.setInteger("Gender", this.getGender());
-        p_70014_1_.setInteger("RequestedAmm", this.getRequestedAmm());
-        p_70014_1_.setInteger("PlayerGivenTameAmm", this.getPlayerGivenAmm());
-        p_70014_1_.setInteger("femaleTextureIndex", this.getTextureFemale());
-        p_70014_1_.setInteger("maleTextureIndex", this.getTextureMale());
-        p_70014_1_.setInteger("FoodLevel", this.getHunger());
-        p_70014_1_.setInteger("Anger", this.getAnger());
+        super.writeEntityToNBT(tag);
+        tag.setInteger(GENDER_NBT, this.getGender());
+        tag.setInteger(REQUESTED_AMM_ENTITY_NBT, this.getRequestedAmm());
+        tag.setInteger(PLAYER_GIVEN_TO_TAME_AMOUNT_NBT, this.getPlayerGivenAmm());
+        tag.setInteger(FEMALE_TEXTURE_INDEX_NBT, this.getTextureFemale());
+        tag.setInteger(MALE_TEXTURE_INDEX_NBT, this.getTextureMale());
+        tag.setInteger(FOOD_LEVEL_NBT, this.getHunger());
+        tag.setInteger(ANGER_NBT, this.getAnger());
 
     }
 
     @Override
-    public void readEntityFromNBT(NBTTagCompound p_70037_1_)
+    public void readEntityFromNBT(NBTTagCompound tag)
     {
-        super.readEntityFromNBT(p_70037_1_);
-        this.setGender(p_70037_1_.getInteger("Gender"));
-        this.setRequestedAmm(p_70037_1_.getInteger("RequestedAmm"));
-        this.setPlayerGivenAmm(p_70037_1_.getInteger("PlayerGivenTameAmm"));
-        this.setTextureFemale(p_70037_1_.getInteger("femaleTextureIndex"));
-        this.setTextureMale(p_70037_1_.getInteger("maleTextureIndex"));
-        this.setHunger(p_70037_1_.getInteger("FoodLevel"));
-        this.setAnger(p_70037_1_.getInteger("Anger"));
+        super.readEntityFromNBT(tag);
+        this.setGender(tag.getInteger(GENDER_NBT));
+        this.setRequestedAmm(tag.getInteger(REQUESTED_AMM_ENTITY_NBT));
+        this.setPlayerGivenAmm(tag.getInteger(PLAYER_GIVEN_TO_TAME_AMOUNT_NBT));
+        this.setTextureFemale(tag.getInteger(FEMALE_TEXTURE_INDEX_NBT));
+        this.setTextureMale(tag.getInteger(MALE_TEXTURE_INDEX_NBT));
+        this.setHunger(tag.getInteger(FOOD_LEVEL_NBT));
+        this.setAnger(tag.getInteger(ANGER_NBT));
 
     }
 
