@@ -22,7 +22,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
-// Thanks Dev!!!
 public class BodyguardEntity extends EntityTameable implements IInvBasic {
 
     private EntityAITempt aiTempt;

@@ -14,7 +14,6 @@ public class BodyguardRender extends RenderBiped {
 
     public static final ResourceLocation[] TEXTURES_MALE = new ResourceLocation[]
     {
-            registerMale(""),
             registerMale("akio"),
             registerMale("bobby"),
             registerMale("elyasisly"),
@@ -26,7 +25,6 @@ public class BodyguardRender extends RenderBiped {
 
     public static final ResourceLocation[] TEXTURES_FEMALE = new ResourceLocation[]
     {
-            registerFemale(""),
             registerFemale("alice"),
             registerFemale("bee"),
             registerFemale("egirl"),
