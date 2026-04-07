@@ -34,6 +34,7 @@ public class KrakenEntity extends EntityMob {
         return this.worldObj.rayTraceBlocks(Vec3.createVectorHelper(this.posX, this.posY + 0.75, this.posZ), Vec3.createVectorHelper(entity.posX, entity.posY, entity.posZ)) == null;
     }
 
+    @Override
     public void onUpdate() {
         super.onUpdate();
 

@@ -9,7 +9,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
@@ -19,7 +18,7 @@ import java.util.List;
 
 public class MantisEntity extends EntityMob {
 
-    private ChunkCoordinates spawnPosition;
+    private ChunkCoordinates attackerPosition;
     private int lastPosZ;
     private int lastPosX;
     private int stuckTicks;
@@ -144,13 +143,12 @@ public class MantisEntity extends EntityMob {
 
     @Override
     //TODO: Hook it up to the actual pathfinder to make it alot smarter.
-    //TODO: BORROW FROM isCourseTraversable() IN entityGhast to hopefully fully prevent  mob from getting stuck.
     protected void updateEntityActionState()
     {
         super.updateEntityActionState();
-        if (this.spawnPosition != null && (!this.worldObj.isAirBlock(this.spawnPosition.posX, this.spawnPosition.posY, this.spawnPosition.posZ) || this.spawnPosition.posY < 1))
+        if (this.attackerPosition != null && (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ) || this.attackerPosition.posY < 1))
         {
-            this.spawnPosition = null;
+            this.attackerPosition = null;
         }
 
 
@@ -168,27 +166,27 @@ public class MantisEntity extends EntityMob {
             stuckTicks = 0;
         }
 
-        if (this.spawnPosition == null || this.rand.nextInt(300) == 0 || this.spawnPosition.getDistanceSquared((int)this.posX, (int)this.posY, (int)this.posZ) < 4.0F)
+        if (this.attackerPosition == null || this.rand.nextInt(300) == 0 || this.attackerPosition.getDistanceSquared((int)this.posX, (int)this.posY, (int)this.posZ) < 4.0F)
         {
-            this.spawnPosition = new ChunkCoordinates((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
+            this.attackerPosition = new ChunkCoordinates((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
 		}
 
         if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack()))
         {
-            spawnPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
-          //  double d0 = spawnPosition.posX - this.posX;
-          //  double d1 = spawnPosition.posY - this.posY;
-          //  double d2 = spawnPosition.posZ - this.posZ;
+            attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
+          //  double d0 = attackerPosition.posX - this.posX;
+          //  double d1 = attackerPosition.posY - this.posY;
+          //  double d2 = attackerPosition.posZ - this.posZ;
          //   double d3 = d0 * d0 + d1 * d1 + d2 * d2;
           //  double d4 = (double)MathHelper.sqrt_double(d3);
         } else if (this.findEntityInBoundingBox() != null) {
-            spawnPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
+            attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
         }
 
 
-        double d0 = (double)this.spawnPosition.posX + 0.5D - this.posX;
-        double d1 = (double)this.spawnPosition.posY + 0.1D - this.posY;
-        double d2 = (double)this.spawnPosition.posZ + 0.5D - this.posZ;
+        double d0 = (double)this.attackerPosition.posX + 0.5D - this.posX;
+        double d1 = (double)this.attackerPosition.posY + 0.1D - this.posY;
+        double d2 = (double)this.attackerPosition.posZ + 0.5D - this.posZ;
 
 
         this.motionX += (Math.signum(d0) * 0.5D - this.motionX) * 0.10000000149011612D;
@@ -212,9 +210,9 @@ public class MantisEntity extends EntityMob {
             int y = MathHelper.floor_double(this.posY + (double)this.rand.nextInt(6) - 3.0D);
             int z = MathHelper.floor_double(this.posZ + (double)this.rand.nextInt(9) + 4D);
 
-            if (this.spawnPosition != null)
+            if (this.attackerPosition != null)
             {
-                this.spawnPosition.set(x,y,z);
+                this.attackerPosition.set(x,y,z);
                 setPathToEntity(this.worldObj.getEntityPathToXYZ(this, x, y, z, 10.0F, true, false, false, true));
             }
 
@@ -222,9 +220,9 @@ public class MantisEntity extends EntityMob {
 
   /**  private boolean isCourseTraversable(double p_70790_1_, double p_70790_3_, double p_70790_5_, double p_70790_7_)
     {
-        double d4 = (this.spawnPosition.posX - this.posX) / p_70790_7_;
-        double d5 = (this.spawnPosition.posY - this.posY) / p_70790_7_;
-        double d6 = (this.spawnPosition.posZ - this.posZ) / p_70790_7_;
+        double d4 = (this.attackerPosition.posX - this.posX) / p_70790_7_;
+        double d5 = (this.attackerPosition.posY - this.posY) / p_70790_7_;
+        double d6 = (this.attackerPosition.posZ - this.posZ) / p_70790_7_;
         AxisAlignedBB axisalignedbb = this.boundingBox.copy();
 
         for (int i = 1; (double)i < p_70790_7_; ++i)
@@ -252,9 +250,9 @@ public class MantisEntity extends EntityMob {
             this.attackEntityAsMob(mob);
         }
 
-        if (spawnPosition != null)
+        if (attackerPosition != null)
         {
-            spawnPosition.set((int) mob.posX, (int) mob.posY, (int) mob.posZ);
+            attackerPosition.set((int) mob.posX, (int) mob.posY, (int) mob.posZ);
         }
 
     }

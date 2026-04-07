@@ -21,6 +21,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.monster.*;
 import net.minecraft.entity.passive.*;
 import net.minecraft.init.Blocks;
@@ -30,6 +32,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class RegistryHandler {
@@ -280,16 +283,16 @@ public class RegistryHandler {
         mantisClaw = new MantisClawItem("mantis_claw", mantisClawMaterials);
         registerItem(mantisClaw, "Mantis Claws");
 
-        redRock = new RockItem("RedRock", EnumRockTypes.RED_ROCK);
+        redRock = new RockItem("red_rock", EnumRockTypes.RED_ROCK);
         registerItem(redRock, "Red Rock");
 
-        greenRock = new RockItem("GreenRock", EnumRockTypes.GREEN_ROCK);
+        greenRock = new RockItem("green_rock", EnumRockTypes.GREEN_ROCK);
         registerItem(greenRock, "Green Rock");
 
-        explosiveRock = new RockItem("ExplosiveRock", EnumRockTypes.EXPLOSIVE_ROCK);
-        registerItem(explosiveRock, "Explosive Rocks");
+        explosiveRock = new RockItem("explosive_rock", EnumRockTypes.EXPLOSIVE_ROCK);
+        registerItem(explosiveRock, "Explosive Rock");
 
-        smallRock = new RockItem("SmallRock", EnumRockTypes.SMALL_ROCK);
+        smallRock = new RockItem("small_rock", EnumRockTypes.SMALL_ROCK);
         registerItem(smallRock, "Small Rock");
 
         minerDream = new ItemMinerDream("miners_dream");
@@ -304,7 +307,7 @@ public class RegistryHandler {
         godzillaScale = new BaseAKMaterials("godzilla_scale");
         registerItem(godzillaScale, "Godzilla Scale");
 
-        katterKillerJaw = new BaseAKMaterials("KatterkillerJaw");
+        katterKillerJaw = new BaseAKMaterials("Katter_killer_Jaw");
         registerItem(katterKillerJaw, "Katter Killer Jaw");
 
        bodyGuardSpawnegg = new BaseItemAKSpawnEgg("bodyguard");
@@ -325,13 +328,15 @@ public class RegistryHandler {
         vortexEye = new BaseAKMaterials("vortex_eye");
         registerItem(vortexEye, "Vortex Eye");
 
-        krakenTooth = new BaseAKMaterials("krakentooth");
+        krakenTooth = new BaseAKMaterials("kraken_tooth");
         registerItem(krakenTooth, "KrakenTooth");
 
-        salt = new BaseAKItem("salt");
+        salt = new BaseAKItem("salt").addInfo("Put a salt block in the furnace and add some salt to your food!", EnumChatFormatting.WHITE)
+                                            .addInfo("Forget what the doctors say, this is Minecraft! :)", EnumChatFormatting.WHITE)
+                                            .setTextureName(DangerZone.FOOD_PREFIX + "salt");
         registerItem(salt, "Salt");
 
-        zangesuGuard = new BaseAKMaterials("zanGuard");
+        zangesuGuard = new BaseAKMaterials("zan_guard");
         registerItem(zangesuGuard, "Zangesu Guard");
 
         wrench = new WrenchItem("wrench");
@@ -469,8 +474,10 @@ public class RegistryHandler {
     }
 
     private static int id = 1;
-    private static void registerEntity(Class<? extends Entity> entityClass, String entityName, int trackingRange,
-                                       int updateFrequency, boolean sendsVelocityUpdates) {
+    private static void registerEntity(
+            Class<? extends Entity> entityClass, String entityName, int trackingRange,
+            int updateFrequency, boolean sendsVelocityUpdates) {
+
         EntityRegistry.registerModEntity(
             entityClass,
             entityName,
@@ -479,6 +486,28 @@ public class RegistryHandler {
             trackingRange,
             updateFrequency,
             sendsVelocityUpdates);
+    }
+
+    private static void registerEntity(
+        Class<? extends Entity> entityClass, String entityName, int trackingRange,
+        int updateFrequency, boolean sendsVelocityUpdates, int weightProb, int min, int max,
+        EnumCreatureType typeOfCreature, BiomeGenBase... biomes
+
+    ) {
+        EntityRegistry.registerModEntity(
+                entityClass,
+                entityName,
+                id++,
+                DangerZone.INSTANCE,
+                trackingRange,
+                updateFrequency,
+                sendsVelocityUpdates);
+        addBiomes(entityClass, weightProb, min, max, typeOfCreature, biomes);
+    }
+
+    private static void addBiomes(Class entityClass, int weightedProb, int min, int max, EnumCreatureType typeOfCreature, BiomeGenBase... biomes)
+    {
+        EntityRegistry.addSpawn(entityClass, weightedProb, min, max, typeOfCreature, biomes);
     }
 
 }

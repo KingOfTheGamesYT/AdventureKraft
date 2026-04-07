@@ -58,6 +58,8 @@ public class DangerZone {
 
     public static final String SPAWN_EGG_PREFIX = MODID_PREFIX + "eggs/";
 
+    public static final String ROCK_PREFIX =MODID_PREFIX + "rock/";
+
     public static final String MAT_PREFIX = MODID_PREFIX + "materials/";
 
     public static final String SPECIAL_PREFIX = MODID_PREFIX + "special/";

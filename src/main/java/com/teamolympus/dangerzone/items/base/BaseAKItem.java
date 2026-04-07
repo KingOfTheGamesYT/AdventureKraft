@@ -8,6 +8,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,11 +20,13 @@ public class BaseAKItem extends Item {
     public BaseAKItem(String name) {
         this.setUnlocalizedName(name);
         this.setCreativeTab(CreativeTabs.tabCombat);
-        this.setTextureName(DangerZone.MODID_PREFIX + name);
+        this.setTextureName(DangerZone.ROCK_PREFIX + name);
     }
 
-    public Item addMultInfoString(String desc) {
+    EnumChatFormatting formatting;
+    public BaseAKItem addInfo(String desc, EnumChatFormatting formatting) {
         infoList.add(desc);
+        this.formatting = formatting;
         return this;
     }
 
@@ -34,7 +37,7 @@ public class BaseAKItem extends Item {
     {
         super.addInformation(stack, player, info,b);
         for (String string : infoList) {
-            info.add(Translations.translate(string));
+            info.add(formatting + Translations.translate(string));
         }
     }
 

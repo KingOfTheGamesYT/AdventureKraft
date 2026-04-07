@@ -17,6 +17,7 @@ public class PizzaBlockItem extends BaseAKItem
         super(name);
         this.block = block;
         this.setCreativeTab(DangerZone.BLOCKS);
+        this.setTextureName(DangerZone.FOOD_PREFIX + name);
     }
 
     /**
