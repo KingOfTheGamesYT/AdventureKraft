@@ -19,9 +19,9 @@ public class ModdedTier implements IItemTier
 		this.swingspeed = swingspeed;
 	}
 
-	public ModdedTier level(int i)
+	public ModdedTier level(int level)
 	{
-		this.harvestlevel = i;
+		this.harvestlevel = level;
 		return this;
 	}
 
@@ -37,24 +37,11 @@ public class ModdedTier implements IItemTier
 		return this;
 	}
 
-	public ItemStack getRepairItem()
-	{
-		return repairitem;
-	}
-
 	@Override
 	public int getMaxUses() {
 		return uses;
 	}
 
-	// Modified method to set attack speed
-	public ModdedTier speed(float f)
-	{
-		this.swingspeed = f;
-		return this;
-	}
-
-	// New getter method for attack speed
 	public float getAttackSpeed() {
 		return swingspeed;
 	}
