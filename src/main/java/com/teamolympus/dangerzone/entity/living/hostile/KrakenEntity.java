@@ -1,8 +1,16 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
+import com.teamolympus.dangerzone.config.DZConfig;
+import com.teamolympus.dangerzone.misc.DropHelper;
+import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.WorldInfo;
@@ -35,6 +43,13 @@ public class KrakenEntity extends EntityMob {
     }
 
     @Override
+    public boolean attackEntityFrom(DamageSource ds, float damage)
+    {
+        this.hurtResistantTime = DZConfig.KrakenHurtTimer;
+        return super.attackEntityFrom(ds, damage);
+    }
+
+    @Override
     public void onUpdate() {
         super.onUpdate();
 
@@ -47,4 +62,67 @@ public class KrakenEntity extends EntityMob {
             worldInfo.setThunderTime(900);
         }
     }
+
+Item[] lootableList = new Item[]
+{
+        Items.diamond,
+        Item.getItemFromBlock(Blocks.diamond_block),
+        Items.iron_ingot
+};
+
+    @Override
+    protected void dropFewItems(boolean hitByPlayer, int lootingLevel)
+    {
+        super.dropFewItems(hitByPlayer, lootingLevel);
+        DropHelper.dropItem(this, RegistryHandler.krakenTooth, 1, 8);
+        DropHelper.dropItem(this, Items.item_frame, 1,8);
+        DropHelper.dropItem(this, Items.dye, 120 + this.rand.nextInt(160),8);
+    }
+
+
+
+    @Override
+    protected void updateEntityActionState()
+    {
+        super.updateEntityActionState();
+        if (this.worldObj.rand.nextInt(400) == 0)
+        {
+            EntityLightningBolt bolt = new EntityLightningBolt(this.worldObj, this.posX + randomOffset(), this.posY + randomOffsetY(), this.posZ + randomOffset());
+            this.worldObj.addWeatherEffect(bolt);
+        }
+
+    }
+
+    private int randomOffset() {
+        return this.worldObj.rand.nextInt(8) - this.worldObj.rand.nextInt(8);
+    }
+
+    private int randomOffsetY() {
+        return this.worldObj.rand.nextInt(16) - this.worldObj.rand.nextInt(16);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

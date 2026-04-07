@@ -7,28 +7,28 @@ import net.minecraft.item.ItemStack;
 
 public class DropHelper {
 
-    public static EntityItem dropItemMultipleNonStackable(EntityLiving ent, Item item, int amm) {
+    public static EntityItem dropItemMultipleNonStackable(EntityLiving ent, Item item, int amm, int randomPos) {
         for (int i = 0; i < amm; i++) {
-            dropItem(ent, item, 1);
+            dropItem(ent, item, 1, randomPos);
         }
         return null;
     }
 
-    public static EntityItem dropItem(EntityLiving ent, Item item, int amm)
+    public static EntityItem dropItem(EntityLiving ent, Item item, int amm, int randomPos)
     {
-        return dropItemItemStack(ent, item, amm);
+        return dropItemItemStack(ent, item, amm, randomPos);
     }
 
-    public static EntityItem dropItemItemStack(EntityLiving ent, Item item, int amm)
+    public static EntityItem dropItemItemStack(EntityLiving ent, Item item, int amm, int randomPos)
     {
-        return entityDropItem(ent, new ItemStack(item, amm, 0));
+        return entityDropItem(ent, new ItemStack(item, amm, 0), randomPos);
     }
 
-    public static EntityItem entityDropItem(EntityLiving ent, ItemStack itemStack)
+    public static EntityItem entityDropItem(EntityLiving ent, ItemStack itemStack, int randomPos)
     {
         if (itemStack.stackSize != 0 && itemStack.getItem() != null)
         {
-            EntityItem entityitem = new EntityItem(ent.worldObj, ent.posX + generateRandomPos(ent), ent.posY + generateRandomPos(ent), ent.posZ + generateRandomPos(ent), itemStack);
+            EntityItem entityitem = new EntityItem(ent.worldObj, ent.posX + generateRandomPos(ent, randomPos), ent.posY + generateRandomPos(ent, randomPos), ent.posZ + generateRandomPos(ent, randomPos), itemStack);
             entityitem.delayBeforeCanPickup = 10;
             if (ent.captureDrops)
             {
@@ -46,8 +46,8 @@ public class DropHelper {
         }
     }
 
-    private static int generateRandomPos(EntityLiving ent) {
-        return ent.getRNG().nextInt(5) - ent.getRNG().nextInt(5);
+    private static int generateRandomPos(EntityLiving ent, int randomPos) {
+        return ent.getRNG().nextInt(randomPos) - ent.getRNG().nextInt(randomPos);
     }
 
 }

@@ -299,10 +299,10 @@ public class MantisEntity extends EntityMob {
     protected void dropFewItems(boolean hitByPlayer, int lootingLevel)
     {
         super.dropFewItems(hitByPlayer, lootingLevel);
-        DropHelper.dropItemMultipleNonStackable(this, RegistryHandler.mantisClaw,2);
-        DropHelper.dropItem(this, Items.item_frame, 1);
-        DropHelper.dropItem(this, Items.gold_nugget, 2+ this.rand.nextInt(10));
-        DropHelper.dropItem(this, Items.diamond, 2 + this.rand.nextInt(3));
+        DropHelper.dropItemMultipleNonStackable(this, RegistryHandler.mantisClaw,2,5);
+        DropHelper.dropItem(this, Items.item_frame, 1,5);
+        DropHelper.dropItem(this, Items.gold_nugget, 2+ this.rand.nextInt(10),5);
+        DropHelper.dropItem(this, Items.diamond, 2 + this.rand.nextInt(3),5);
 
         //TODO: ADD TITANIUM AND URANIUM NUGGET
     }
