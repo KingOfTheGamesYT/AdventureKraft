@@ -331,9 +331,10 @@ public class RegistryHandler {
         krakenTooth = new BaseAKMaterials("kraken_tooth");
         registerItem(krakenTooth, "KrakenTooth");
 
-        salt = new BaseAKItem("salt").addInfo("Put a salt block in the furnace and add some salt to your food!", EnumChatFormatting.WHITE)
-                                            .addInfo("Forget what the doctors say, this is Minecraft! :)", EnumChatFormatting.WHITE)
-                                            .setTextureName(DangerZone.FOOD_PREFIX + "salt");
+        salt = new BaseAKItem("salt")
+        .addInfo("Put a salt block in the furnace and add some salt to your food!", EnumChatFormatting.WHITE)
+        .addInfo("Forget what the doctors say, this is Minecraft! :)", EnumChatFormatting.WHITE)
+        .setTextureName(DangerZone.FOOD_PREFIX + "salt");
         registerItem(salt, "Salt");
 
         zangesuGuard = new BaseAKMaterials("zan_guard");
