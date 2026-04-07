@@ -9,7 +9,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.pathfinding.PathEntity;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
@@ -56,9 +56,10 @@ public class MantisEntity extends EntityMob {
         return this.worldObj.rayTraceBlocks(Vec3.createVectorHelper(this.posX, this.posY + 0.75, this.posZ), Vec3.createVectorHelper(entity.posX, entity.posY, entity.posZ)) == null;
     }
 
-    @Override
     public void moveEntityWithHeading(float p_70612_1_, float p_70612_2_)
     {
+        double d0;
+
         if (this.isInWater())
         {
             this.moveFlying(p_70612_1_, p_70612_2_, 0.02F);
@@ -85,7 +86,18 @@ public class MantisEntity extends EntityMob {
             }
 
             float f3 = 0.16277136F / (f2 * f2 * f2);
-            this.moveFlying(p_70612_1_, p_70612_2_, this.onGround ? 0.1F * f3 : 0.02F);
+            float f4;
+
+            if (this.onGround)
+            {
+                f4 = this.getAIMoveSpeed() * f3;
+            }
+            else
+            {
+                f4 = this.jumpMovementFactor;
+            }
+
+            this.moveFlying(p_70612_1_, p_70612_2_, f4);
             f2 = 0.91F;
 
             if (this.onGround)
@@ -94,22 +106,39 @@ public class MantisEntity extends EntityMob {
             }
 
             this.moveEntity(this.motionX, this.motionY, this.motionZ);
-            this.motionX *= (double)f2;
-            this.motionY *= (double)f2;
-            this.motionZ *= (double)f2;
+
+            if (this.worldObj.isRemote && (!this.worldObj.blockExists((int)this.posX, 0, (int)this.posZ) || !this.worldObj.getChunkFromBlockCoords((int)this.posX, (int)this.posZ).isChunkLoaded))
+            {
+                if (this.posY > 0.0D)
+                {
+                    this.motionY = -0.1D;
+                }
+                else
+                {
+                    this.motionY = 0.0D;
+                }
+            }
+            else
+            {
+                this.motionY -= 0.08D;
+            }
+
+            this.motionY *= 0.9800000190734863D;
+            this.motionX *= f2;
+            this.motionZ *= f2;
         }
 
         this.prevLimbSwingAmount = this.limbSwingAmount;
-        double d1 = this.posX - this.prevPosX;
-        double d0 = this.posZ - this.prevPosZ;
-        float f4 = MathHelper.sqrt_double(d1 * d1 + d0 * d0) * 4.0F;
+        d0 = this.posX - this.prevPosX;
+        double d1 = this.posZ - this.prevPosZ;
+        float f6 = MathHelper.sqrt_double(d0 * d0 + d1 * d1) * 4.0F;
 
-        if (f4 > 1.0F)
+        if (f6 > 1.0F)
         {
-            f4 = 1.0F;
+            f6 = 1.0F;
         }
 
-        this.limbSwingAmount += (f4 - this.limbSwingAmount) * 0.4F;
+        this.limbSwingAmount += (f6 - this.limbSwingAmount) * 0.4F;
         this.limbSwing += this.limbSwingAmount;
     }
 
@@ -147,9 +176,15 @@ public class MantisEntity extends EntityMob {
         if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack()))
         {
             spawnPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
+          //  double d0 = spawnPosition.posX - this.posX;
+          //  double d1 = spawnPosition.posY - this.posY;
+          //  double d2 = spawnPosition.posZ - this.posZ;
+         //   double d3 = d0 * d0 + d1 * d1 + d2 * d2;
+          //  double d4 = (double)MathHelper.sqrt_double(d3);
         } else if (this.findEntityInBoundingBox() != null) {
             spawnPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
         }
+
 
         double d0 = (double)this.spawnPosition.posX + 0.5D - this.posX;
         double d1 = (double)this.spawnPosition.posY + 0.1D - this.posY;
@@ -185,10 +220,33 @@ public class MantisEntity extends EntityMob {
 
     }
 
+  /**  private boolean isCourseTraversable(double p_70790_1_, double p_70790_3_, double p_70790_5_, double p_70790_7_)
+    {
+        double d4 = (this.spawnPosition.posX - this.posX) / p_70790_7_;
+        double d5 = (this.spawnPosition.posY - this.posY) / p_70790_7_;
+        double d6 = (this.spawnPosition.posZ - this.posZ) / p_70790_7_;
+        AxisAlignedBB axisalignedbb = this.boundingBox.copy();
+
+        for (int i = 1; (double)i < p_70790_7_; ++i)
+        {
+            axisalignedbb.offset(d4, d5, d6);
+
+            if (!this.worldObj.getCollidingBoundingBoxes(this, axisalignedbb).isEmpty())
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+   **/
+
+
+
     @Override
     protected void attackEntity(Entity mob, float dist)
     {
-        if (this.attackTime <= 0 && dist < 4.0F && mob.boundingBox.maxY > this.boundingBox.minY && mob.boundingBox.minY < this.boundingBox.maxY)
+        if (this.attackTime <= 0 && dist < 4.0F)
         {
             this.attackTime = 20;
             this.attackEntityAsMob(mob);
@@ -246,6 +304,7 @@ public class MantisEntity extends EntityMob {
         DropHelper.dropItemMultipleNonStackable(this, RegistryHandler.mantisClaw,2);
         DropHelper.dropItem(this, Items.item_frame, 1);
         DropHelper.dropItem(this, Items.gold_nugget, 2+ this.rand.nextInt(10));
+        DropHelper.dropItem(this, Items.diamond, 2 + this.rand.nextInt(3));
 
         //TODO: ADD TITANIUM AND URANIUM NUGGET
     }

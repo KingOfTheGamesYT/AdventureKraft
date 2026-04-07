@@ -19,7 +19,7 @@ public class UltimatePickaxeItem extends BaseAKPickaxe {
     }
 
     // TODO: FINISH LIST
-    static final Item[] itemDroppables = new Item[]
+    static final Item[] itemDroppable = new Item[]
      {Items.iron_ingot, Items.gold_ingot, Items.diamond, Items.emerald
 
     };
@@ -47,9 +47,10 @@ public class UltimatePickaxeItem extends BaseAKPickaxe {
                 dropBlockAsItem(worldIn, x, y, z, new ItemStack(Items.gold_ingot));
             }
 
-            if (blockIn == Blocks.stone && worldIn.rand.nextInt(100) == 0) {
-                int randomDroppable = worldIn.rand.nextInt(itemDroppables.length);
-                dropBlockAsItem(worldIn, x, y, z, new ItemStack(itemDroppables[randomDroppable]));
+            if (blockIn == Blocks.stone && worldIn.rand.nextInt(100) == 0)
+            {
+                int randomDroppable = worldIn.rand.nextInt(itemDroppable.length);
+                dropBlockAsItem(worldIn, x, y, z, new ItemStack(itemDroppable[randomDroppable]));
             }
 
         }

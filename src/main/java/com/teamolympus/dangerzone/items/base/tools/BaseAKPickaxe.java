@@ -45,17 +45,8 @@ public class BaseAKPickaxe extends ItemPickaxe {
 
     protected void dropBlockAsItem(World worldIn, int x, int y, int z, ItemStack itemIn) {
         if (!worldIn.isRemote && worldIn.getGameRules()
-            .getGameRuleBooleanValue("doTileDrops") && !worldIn.restoringBlockSnapshots) // do not drop items while
-                                                                                         // restoring blockstates,
-                                                                                         // prevents item dupe
+            .getGameRuleBooleanValue("doTileDrops") && !worldIn.restoringBlockSnapshots)
         {
-            /**
-             * if (captureDrops.get())
-             * {
-             * capturedDrops.get().add(itemIn);
-             * return;
-             * }
-             **/
             float f = 0.7F;
             double d0 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
             double d1 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
