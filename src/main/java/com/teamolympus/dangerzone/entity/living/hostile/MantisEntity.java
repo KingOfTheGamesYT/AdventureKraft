@@ -77,58 +77,27 @@ public class MantisEntity extends EntityMob {
             this.attackerPosition = new ChunkCoordinates((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
 		}
 
-        if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack()))
+        if (hasAttackTarget() && this.canEntityBeSeen(this.getEntityToAttack()))
         {
-            if (pathToEntity != null)
+            if (this.hasPath())
             {
-              //  System.out.println("MAIN ATTACK");
                 Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
-             //   double d0 = (double)(this.width * 2.0F);
-
-                double d0 = attackerPosition.posX - this.posX;
-                double d1 = attackerPosition.posY - this.posY;
-                double d2 = attackerPosition.posZ - this.posZ;
-                double d3 = d0 * d0 + d1 * d1 + d2 * d2;
-                double d4 = (double)MathHelper.sqrt_double(d3);
-
-              //  if (!this.isCourseTraversable(vec.xCoord, vec.yCoord, vec.zCoord, d4))
-              //  {
-
-              //  }
-
-                if (vec != null) {
-                    attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+                if (isVecNull(vec))
+                {
+                        attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
                 }
-
             } else {
-                attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
+           //     attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
             }
-          //  attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
-            double d0 = attackerPosition.posX - this.posX;
-            double d1 = attackerPosition.posY - this.posY;
-            double d2 = attackerPosition.posZ - this.posZ;
-            double d3 = d0 * d0 + d1 * d1 + d2 * d2;
-            double d4 = (double)MathHelper.sqrt_double(d3);
-
-        //    if(!this.isCourseTraversable(attackerPosition.posX, attackerPosition.posY, attackerPosition.posZ, d4))
-         //   {
-
-         //   }
-
-
-
         } else if (this.findEntityInBoundingBox() != null) {
-            if (pathToEntity != null) {
-              //  System.out.println("ELSE BOUND BOX");
+            if (this.hasPath()) {
                 Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
-                if (vec != null) {
+                if (isVecNull(vec)) {
                     attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
                 }
             } else {
-                attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
+           //     attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
             }
-
-          //  attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
         }
 
         double d0 = (double)this.attackerPosition.posX + 0.5D - this.posX;
@@ -144,20 +113,20 @@ public class MantisEntity extends EntityMob {
         this.moveForward = 1.0F;
         this.rotationYaw += f1;
 
-        if (this.getEntityToAttack() != null) {
+        if (hasAttackTarget()) {
             if (isEntityInsideOpaqueBlock()) {
-                updateToPlayerPos(this.entityToAttack);
+               // updateToPlayerPos(this.entityToAttack);
             }
             if (wouldEntitySuffocate(attackerPosition.posX, attackerPosition.posY, attackerPosition.posZ)) {
-                updateToPlayerPos(this.getEntityToAttack());
+               // updateToPlayerPos(this.getEntityToAttack());
             }
         } else {
-            if (this.attackerPosition != null) {
+            if (hasAttackingPos()) {
                 if (isEntityInsideOpaqueBlock()) {
-                    updatePosStuck();
+                  //  updatePosStuck();
                 }
                 if (wouldEntitySuffocate(attackerPosition.posX, attackerPosition.posY, attackerPosition.posZ)) {
-                    updatePosStuck();
+                  //  updatePosStuck();
                 }
             }
         }
@@ -178,10 +147,10 @@ public class MantisEntity extends EntityMob {
 
             // clear the path, because we are SUPER STUCK!.
             if (stuckTicks > 200) {
-                if (this.pathToEntity != null) {
+                if (hasPath()) {
                     this.pathToEntity = null;
                 }
-                if (this.attackerPosition != null)  {
+                if (hasAttackingPos())  {
                     this.attackerPosition = null;
                 }
 
@@ -194,9 +163,22 @@ public class MantisEntity extends EntityMob {
 
     }
 
+    private boolean isVecNull(Vec3 vec) {
+        return vec != null;
+    }
+
+    private boolean hasAttackTarget() {
+        return this.getEntityToAttack() != null;
+    }
+
+    private boolean hasAttackingPos() {
+        return this.attackerPosition != null;
+    }
+
+
 
     private void updateToPlayerPos(Entity target) {
-        if (pathToEntity != null) {
+        if (hasPath()) {
             if (target != null) {
               this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
             }
@@ -211,12 +193,12 @@ public class MantisEntity extends EntityMob {
             int y = MathHelper.floor_double(this.posY + 3 + (double)this.rand.nextInt(6) - 3.0D);
             int z = MathHelper.floor_double(this.posZ + (double)this.rand.nextInt(9) + 4D);
 
-            if (this.pathToEntity != null)
+            if (hasPath())
             {
                 this.pathToEntity = this.worldObj.getEntityPathToXYZ(this, x, y, z, 16.0F, true, false, false, true);
             } else {
-                if (this.attackerPosition != null) {
-                    this.attackerPosition.set(x,y,z);
+                if (hasAttackingPos()) {
+                 //   this.attackerPosition.set(x,y,z);
                 }
             }
     }
@@ -256,11 +238,11 @@ public class MantisEntity extends EntityMob {
             this.attackEntityAsMob(mob);
         }
 
-        if (pathToEntity != null) {
+        if (hasPath()) {
             this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
         } else{
-            if (attackerPosition != null) {
-                attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
+            if (hasAttackingPos()) {
+            //    attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
             }
 
         }
