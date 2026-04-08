@@ -45,7 +45,7 @@ public class KrakenEntity extends EntityMob {
     @Override
     public boolean attackEntityFrom(DamageSource ds, float damage)
     {
-        this.hurtResistantTime = DZConfig.KrakenHurtTimer;
+        this.hurtResistantTime = DZConfig.krakenHurtTimer;
         return super.attackEntityFrom(ds, damage);
     }
 

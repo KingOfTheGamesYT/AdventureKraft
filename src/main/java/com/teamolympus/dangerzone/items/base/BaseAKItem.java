@@ -20,7 +20,7 @@ public class BaseAKItem extends Item {
     public BaseAKItem(String name) {
         this.setUnlocalizedName(name);
         this.setCreativeTab(CreativeTabs.tabCombat);
-        this.setTextureName(DangerZone.ROCK_PREFIX + name);
+        this.setTextureName(DangerZone.MODID_PREFIX + name);
     }
 
     EnumChatFormatting formatting;

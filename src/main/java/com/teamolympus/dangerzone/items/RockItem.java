@@ -1,5 +1,6 @@
 package com.teamolympus.dangerzone.items;
 
+import com.teamolympus.dangerzone.misc.DangerZone;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -15,6 +16,7 @@ public class RockItem extends BaseAKItem {
     public RockItem(String name, EnumRockTypes rockTypes) {
         super(name);
         this.rockTypes = rockTypes;
+        this.setTextureName(DangerZone.ROCK_PREFIX + name);
     }
 
     @Override // ItemSnowball

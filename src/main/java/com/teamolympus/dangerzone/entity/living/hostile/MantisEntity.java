@@ -55,6 +55,7 @@ public class MantisEntity extends EntityMob {
         return this.worldObj.rayTraceBlocks(Vec3.createVectorHelper(this.posX, this.posY + 0.75, this.posZ), Vec3.createVectorHelper(entity.posX, entity.posY, entity.posZ)) == null;
     }
 
+    @Override
     public void moveEntityWithHeading(float p_70612_1_, float p_70612_2_)
     {
         double d0;
@@ -106,7 +107,7 @@ public class MantisEntity extends EntityMob {
 
             this.moveEntity(this.motionX, this.motionY, this.motionZ);
 
-            if (this.worldObj.isRemote && (!this.worldObj.blockExists((int)this.posX, 0, (int)this.posZ) || !this.worldObj.getChunkFromBlockCoords((int)this.posX, (int)this.posZ).isChunkLoaded))
+       /**     if (this.worldObj.isRemote && (!this.worldObj.blockExists((int)this.posX, 0, (int)this.posZ) || !this.worldObj.getChunkFromBlockCoords((int)this.posX, (int)this.posZ).isChunkLoaded))
             {
                 if (this.posY > 0.0D)
                 {
@@ -116,11 +117,11 @@ public class MantisEntity extends EntityMob {
                 {
                     this.motionY = 0.0D;
                 }
-            }
-            else
-            {
+            }**/
+           // else
+           // {
                 this.motionY -= 0.08D;
-            }
+          //  }
 
             this.motionY *= 0.9800000190734863D;
             this.motionX *= f2;
@@ -151,7 +152,6 @@ public class MantisEntity extends EntityMob {
             this.attackerPosition = null;
         }
 
-
         // Prevent Mob from getting stuck On Flight
         if (this.lastPosX == (int)this.posX && this.lastPosZ == (int)this.posZ)
         {
@@ -166,6 +166,7 @@ public class MantisEntity extends EntityMob {
             stuckTicks = 0;
         }
 
+
         if (this.attackerPosition == null || this.rand.nextInt(300) == 0 || this.attackerPosition.getDistanceSquared((int)this.posX, (int)this.posY, (int)this.posZ) < 4.0F)
         {
             this.attackerPosition = new ChunkCoordinates((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
@@ -173,14 +174,30 @@ public class MantisEntity extends EntityMob {
 
         if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack()))
         {
-            attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
+            if (pathToEntity != null)
+            {
+              //  System.out.println("MAIN ATTACK");
+                Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
+                attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+            } else {
+                attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
+            }
+          //  attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
           //  double d0 = attackerPosition.posX - this.posX;
           //  double d1 = attackerPosition.posY - this.posY;
           //  double d2 = attackerPosition.posZ - this.posZ;
          //   double d3 = d0 * d0 + d1 * d1 + d2 * d2;
           //  double d4 = (double)MathHelper.sqrt_double(d3);
         } else if (this.findEntityInBoundingBox() != null) {
-            attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
+            if (pathToEntity != null) {
+              //  System.out.println("ELSE BOUND BOX");
+                Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
+                attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+            } else {
+                attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
+            }
+
+          //  attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
         }
 
 
@@ -207,13 +224,18 @@ public class MantisEntity extends EntityMob {
     protected void updatePosStuck()
     {
             int x = MathHelper.floor_double(this.posX + (double)this.rand.nextInt(9) + 4D);
-            int y = MathHelper.floor_double(this.posY + (double)this.rand.nextInt(6) - 3.0D);
+            int y = MathHelper.floor_double(this.posY + 3 + (double)this.rand.nextInt(6) - 3.0D);
             int z = MathHelper.floor_double(this.posZ + (double)this.rand.nextInt(9) + 4D);
 
-            if (this.attackerPosition != null)
+            if (this.pathToEntity != null)
             {
-                this.attackerPosition.set(x,y,z);
-                setPathToEntity(this.worldObj.getEntityPathToXYZ(this, x, y, z, 10.0F, true, false, false, true));
+              //  System.out.println("WANDER");
+             //   this.attackerPosition.set(x,y,z);
+                this.pathToEntity = this.worldObj.getEntityPathToXYZ(this, x, y, z, 16.0F, true, false, false, true);
+            } else {
+                if (this.attackerPosition != null) {
+                    this.attackerPosition.set(x,y,z);
+                }
             }
 
     }
@@ -244,16 +266,26 @@ public class MantisEntity extends EntityMob {
     @Override
     protected void attackEntity(Entity mob, float dist)
     {
-        if (this.attackTime <= 0 && dist < 4.0F)
+        if (this.attackTime <= 0 && dist < 3F)
         {
             this.attackTime = 20;
             this.attackEntityAsMob(mob);
         }
 
-        if (attackerPosition != null)
-        {
-            attackerPosition.set((int) mob.posX, (int) mob.posY, (int) mob.posZ);
+        if (pathToEntity != null) {
+            this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
+         //   System.out.println("RANATTAKC");
+        } else{
+            if (attackerPosition != null) {
+                attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
+            }
+
         }
+
+      //  if (attackerPosition != null)
+      //  {
+         //   attackerPosition.set((int) mob.posX, (int) mob.posY, (int) mob.posZ);
+      //  }
 
     }
 
