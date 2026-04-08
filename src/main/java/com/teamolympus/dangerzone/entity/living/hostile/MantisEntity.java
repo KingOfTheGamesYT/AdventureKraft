@@ -86,17 +86,14 @@ public class MantisEntity extends EntityMob {
                 {
                         attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
                 }
-            } else {
-           //     attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
             }
         } else if (this.findEntityInBoundingBox() != null) {
             if (this.hasPath()) {
-                Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
-                if (isVecNull(vec)) {
+                Vec3 vec = pathToEntity.getPosition(this.findEntityInBoundingBox());
+                if (isVecNull(vec))
+                {
                     attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
                 }
-            } else {
-           //     attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
             }
         }
 
@@ -115,18 +112,18 @@ public class MantisEntity extends EntityMob {
 
         if (hasAttackTarget()) {
             if (isEntityInsideOpaqueBlock()) {
-               // updateToPlayerPos(this.entityToAttack);
+                updateToPlayerPos(this.entityToAttack);
             }
             if (wouldEntitySuffocate(attackerPosition.posX, attackerPosition.posY, attackerPosition.posZ)) {
-               // updateToPlayerPos(this.getEntityToAttack());
+                updateToPlayerPos(this.getEntityToAttack());
             }
         } else {
             if (hasAttackingPos()) {
                 if (isEntityInsideOpaqueBlock()) {
-                  //  updatePosStuck();
+                   updatePosStuck();
                 }
                 if (wouldEntitySuffocate(attackerPosition.posX, attackerPosition.posY, attackerPosition.posZ)) {
-                  //  updatePosStuck();
+                    updatePosStuck();
                 }
             }
         }
@@ -140,21 +137,13 @@ public class MantisEntity extends EntityMob {
         if (this.lastPosX == MathHelper.floor_double(this.posX) && this.lastPosZ == MathHelper.floor_double(this.posZ))
         {
             ++stuckTicks;
-            if (stuckTicks > 60 && stuckTicks < 200)
+            if (stuckTicks > 120)
             {
-               updatePosStuck();
-            }
-
-            // clear the path, because we are SUPER STUCK!.
-            if (stuckTicks > 200) {
                 if (hasPath()) {
                     this.pathToEntity = null;
                 }
-                if (hasAttackingPos())  {
-                    this.attackerPosition = null;
-                }
-
             }
+
         } else {
             this.lastPosX = MathHelper.floor_double(this.posX);
             this.lastPosZ = MathHelper.floor_double(this.posZ);
@@ -196,10 +185,6 @@ public class MantisEntity extends EntityMob {
             if (hasPath())
             {
                 this.pathToEntity = this.worldObj.getEntityPathToXYZ(this, x, y, z, 16.0F, true, false, false, true);
-            } else {
-                if (hasAttackingPos()) {
-                 //   this.attackerPosition.set(x,y,z);
-                }
             }
     }
 
