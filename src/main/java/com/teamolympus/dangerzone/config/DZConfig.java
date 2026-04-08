@@ -12,6 +12,10 @@ public class DZConfig {
     public static int pizzaFoodLevels = 4;
     public static float pizzaSatLevels = 0.2F;
 
+    public static final double mantisAttackDamage = 6.0D;
+    public static final double mantisSpeed = 0.319D;
+    public static final double mantisMaxHp = 120;
+
     static final String MOB_CATEGORY = "MOB_CONFIGURATION";
     static final String PIZZA_CATEGORY = "PIZZA_CONFIGURATION";
 
@@ -27,7 +31,17 @@ public class DZConfig {
 
         pizzaSatLevels = configuration.getFloat(PIZZA_CATEGORY, "Pizza Food levels", 0.2F, 0.1F , 20, "The amount of saturation given when a slice of pizza is eaten.");
 
+         mantisAttackDamage = configuration.getFloat(MOB_CATEGORY, "Mantis Attack Damage", 6.0f, 1.0f, 9000, "The Attack damage of the Mantis");
+
+         mantisSpeed = configuration.getFloat(MOB_CATEGORY, "Mantis Speed", 0.319f, 0.1f, 9000, "The Movement Speed of the Mantis");
+
+         mantisMaxHp = configuration.getFloat(MOB_CATEGORY, "Mantis HP", 120f, 1f, 9000, "The HP of the Mantis");
          **/
+
+
+
+
+
         if (configuration.hasChanged()) {
             configuration.save();
         }
