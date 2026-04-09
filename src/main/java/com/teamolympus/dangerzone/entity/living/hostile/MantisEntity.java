@@ -1,18 +1,14 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
-import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.*;
-import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
@@ -22,31 +18,28 @@ import java.util.List;
 
 public class MantisEntity extends EntityMob {
 
-    public ChunkCoordinates attackerPosition;
-
-    public int lastPosX;
-    public int lastPosZ;
-
+    private ChunkCoordinates attackerPosition;
+    private int lastPosZ;
+    private int lastPosX;
     private int stuckTicks;
-
 
     public MantisEntity(World world) {
         super(world);
+        this.setSize(2.5F, 3.25F);
         this.experienceValue = 100;
         this.isImmuneToFire = false;
         this.fireResistance = 5;
-        this.setSize(2.5F, 3.25F);
- }
+    }
 
     @Override
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.attackDamage)
-            .setBaseValue(DZConfig.mantisAttackDamage);
+                .setBaseValue(6.0D);
         this.getEntityAttribute(SharedMonsterAttributes.movementSpeed)
-            .setBaseValue(DZConfig.mantisSpeed);
+                .setBaseValue(0.319);
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth)
-            .setBaseValue(DZConfig.mantisMaxHp);
+                .setBaseValue(120D);
     }
 
     @Override
@@ -62,6 +55,7 @@ public class MantisEntity extends EntityMob {
         return this.worldObj.rayTraceBlocks(Vec3.createVectorHelper(this.posX, this.posY + 0.75, this.posZ), Vec3.createVectorHelper(entity.posX, entity.posY, entity.posZ)) == null;
     }
 
+
     @Override
     //TODO: Hook it up to the actual pathfinder to make it alot smarter.
     protected void updateEntityActionState()
@@ -72,30 +66,48 @@ public class MantisEntity extends EntityMob {
             this.attackerPosition = null;
         }
 
+
         if (this.attackerPosition == null || this.rand.nextInt(300) == 0 || this.attackerPosition.getDistanceSquared((int)this.posX, (int)this.posY, (int)this.posZ) < 4.0F)
         {
             this.attackerPosition = new ChunkCoordinates((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
-		}
+        }
 
-        if (hasAttackTarget() && this.canEntityBeSeen(this.getEntityToAttack()))
+        if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack()))
         {
-            if (this.hasPath())
+            if (pathToEntity != null)
             {
                 Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
-                if (isVecNull(vec))
-                {
-                        attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
-                }
+                attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+            } else {
+                attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
             }
         } else if (this.findEntityInBoundingBox() != null) {
-            if (this.hasPath()) {
-                Vec3 vec = pathToEntity.getPosition(this.findEntityInBoundingBox());
-                if (isVecNull(vec))
-                {
-                    attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
-                }
+            if (pathToEntity != null) {
+                //  System.out.println("ELSE BOUND BOX");
+                Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
+                attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+            } else {
+                attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
             }
+
+            //  attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
         }
+
+        // Prevent Mob from getting stuck On Flight
+        if (this.lastPosX == (int)this.posX && this.lastPosZ == (int)this.posZ)
+        {
+            ++stuckTicks;
+            if (stuckTicks > 60)
+            {
+                updatePosStuck();
+                this.pathToEntity = null;
+            }
+        } else {
+            this.lastPosX = (int) this.posX;
+            this.lastPosZ = (int) this.posZ;
+            stuckTicks = 0;
+        }
+
 
         double d0 = (double)this.attackerPosition.posX + 0.5D - this.posX;
         double d1 = (double)this.attackerPosition.posY + 0.1D - this.posY;
@@ -110,108 +122,21 @@ public class MantisEntity extends EntityMob {
         this.moveForward = 1.0F;
         this.rotationYaw += f1;
 
-        if (hasAttackTarget()) {
-            if (isEntityInsideOpaqueBlock()) {
-                updateToPlayerPos(this.entityToAttack);
-            }
-            if (wouldEntitySuffocate(attackerPosition.posX, attackerPosition.posY, attackerPosition.posZ)) {
-                updateToPlayerPos(this.getEntityToAttack());
-            }
-        } else {
-            if (hasAttackingPos()) {
-                if (isEntityInsideOpaqueBlock()) {
-                   updatePosStuck();
-                }
-                if (wouldEntitySuffocate(attackerPosition.posX, attackerPosition.posY, attackerPosition.posZ)) {
-                    updatePosStuck();
-                }
-            }
-        }
 
 
         if (this.worldObj.rand.nextInt(100) == 0)
         {
             this.heal(1);
         }
-
-        if (this.lastPosX == MathHelper.floor_double(this.posX) && this.lastPosZ == MathHelper.floor_double(this.posZ))
-        {
-            ++stuckTicks;
-            if (stuckTicks > 120)
-            {
-                if (hasPath()) {
-                    this.pathToEntity = null;
-                }
-            }
-
-        } else {
-            this.lastPosX = MathHelper.floor_double(this.posX);
-            this.lastPosZ = MathHelper.floor_double(this.posZ);
-            stuckTicks = 0;
-        }
-
     }
 
-    private boolean isVecNull(Vec3 vec) {
-        return vec != null;
-    }
-
-    private boolean hasAttackTarget() {
-        return this.getEntityToAttack() != null;
-    }
-
-    private boolean hasAttackingPos() {
-        return this.attackerPosition != null;
-    }
-
-
-
-    private void updateToPlayerPos(Entity target) {
-        if (hasPath()) {
-            if (target != null) {
-              this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
-            }
-
-        }
-
-    }
-
-    private void updatePosStuck()
-        {
-            int x = MathHelper.floor_double(this.posX + (double)this.rand.nextInt(9) + 4D);
-            int y = MathHelper.floor_double(this.posY + 3 + (double)this.rand.nextInt(6) - 3.0D);
-            int z = MathHelper.floor_double(this.posZ + (double)this.rand.nextInt(9) + 4D);
-
-            if (hasPath())
-            {
-                this.pathToEntity = this.worldObj.getEntityPathToXYZ(this, x, y, z, 16.0F, true, false, false, true);
-            }
-    }
-
-    private boolean isCourseTraversable(double p_70790_1_, double p_70790_3_, double p_70790_5_, double p_70790_7_)
+    protected void updatePosStuck()
     {
-        double d4 = (this.attackerPosition.posX - this.posX) / p_70790_7_;
-        double d5 = (this.attackerPosition.posY - this.posY) / p_70790_7_;
-        double d6 = (this.attackerPosition.posZ - this.posZ) / p_70790_7_;
-        AxisAlignedBB axisalignedbb = this.boundingBox.copy();
+        int x = MathHelper.floor_double(this.posX + (double)this.rand.nextInt(9) + 4D);
+        int y = MathHelper.floor_double(this.posY + 3 + (double)this.rand.nextInt(6) - 3.0D);
+        int z = MathHelper.floor_double(this.posZ + (double)this.rand.nextInt(9) + 4D);
 
-        for (int i = 1; (double)i < p_70790_7_; ++i)
-        {
-            axisalignedbb.offset(d4, d5, d6);
-
-            if (!this.worldObj.getCollidingBoundingBoxes(this, axisalignedbb).isEmpty())
-            {
-                return false;
-            }
-
-         //   if (wouldEntitySuffocate((int) d4, (int) d5, (int) d6))
-         //   {
-              //  return false;
-          //  }
-
-        }
-
-        return true;
+        this.attackerPosition.set(x,y,z);
     }
 
     @Override
@@ -223,14 +148,15 @@ public class MantisEntity extends EntityMob {
             this.attackEntityAsMob(mob);
         }
 
-        if (hasPath()) {
+        if (pathToEntity != null) {
             this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
         } else{
-            if (hasAttackingPos()) {
-            //    attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
+            if (attackerPosition != null) {
+                attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
             }
 
         }
+
 
     }
 
@@ -261,9 +187,9 @@ public class MantisEntity extends EntityMob {
     @Override
     public boolean getCanSpawnHere()
     {
-      Entity mantis =  this.worldObj.findNearestEntityWithinAABB(MantisEntity.class, this.boundingBox.expand(32.0, 16.0, 32.0), this);
-      boolean mantisIsNear = mantis == null;
-      return this.posY > 50 && mantisIsNear && super.getCanSpawnHere();
+        Entity mantis =  this.worldObj.findNearestEntityWithinAABB(MantisEntity.class, this.boundingBox.expand(32.0, 16.0, 32.0), this);
+        boolean mantisIsNear = mantis == null;
+        return this.posY > 50 && mantisIsNear && super.getCanSpawnHere();
     }
 
     @Override
@@ -282,40 +208,6 @@ public class MantisEntity extends EntityMob {
         DropHelper.dropItem(this, Items.diamond, 2 + this.rand.nextInt(3),5);
 
         //TODO: ADD TITANIUM AND URANIUM NUGGET
-    }
-
-    public boolean wouldEntitySuffocate(int x, int y, int z)
-    {
-        for (int i = 0; i < 8; ++i)
-        {
-            float f = ((float)((i >> 0) % 2) - 0.5F) * this.width * 0.8F;
-            float f1 = ((float)((i >> 1) % 2) - 0.5F) * 0.1F;
-            float f2 = ((float)((i >> 2) % 2) - 0.5F) * this.width * 0.8F;
-            int j = MathHelper.floor_double(x + (double)f);
-            int k = MathHelper.floor_double(y + (double)this.getEyeHeight() + (double)f1);
-            int l = MathHelper.floor_double(z + (double)f2);
-
-            if (this.worldObj.getBlock(j, k, l).isNormalCube())
-            {
-                return true;
-            }
-
-
-            if (
-                 this.worldObj.getBlock(j,k,l) == Blocks.lava
-                || this.worldObj.getBlock(j,k,l) == Blocks.flowing_lava
-                || this.worldObj.getBlock(j,k,l) == Blocks.cactus
-                ||this.worldObj.getBlock(j,k,l).isBurning(worldObj, x,y,z)
-                || this.worldObj.getBlock(j,k,l) == Blocks.fire
-                || this.worldObj.getBlock(j,k,l) == Blocks.water
-                || this.worldObj.getBlock(j,k,l) == Blocks.flowing_water) {
-                return true;
-            }
-
-
-        }
-
-        return false;
     }
 
 

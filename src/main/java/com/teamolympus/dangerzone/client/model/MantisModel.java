@@ -273,14 +273,6 @@ public class MantisModel extends ModelBase {
 		frontLeg.render(f5);
 		fontLeg2.render(f5);
 
-    //    f6 = (180F / (float)Math.PI);
-        this.wings.setRotationPoint(0.0F, 0.0F, 0.0F);
-        this.wings2.setRotationPoint(0.0F, 0.0F, 0.0F);
-        this.wings.rotateAngleY = MathHelper.cos(f3 * 1.3F) * (float)Math.PI * 0.25F;
-        this.wings2.rotateAngleY = -this.wings.rotateAngleY;
-        this.wings.rotateAngleY = this.wings.rotateAngleY * 8.0F;
-        this.wings2.rotateAngleY = -this.wings.rotateAngleY * 8.5F;
-
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
