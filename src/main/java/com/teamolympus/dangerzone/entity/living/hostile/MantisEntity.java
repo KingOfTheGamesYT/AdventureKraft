@@ -22,6 +22,7 @@ public class MantisEntity extends EntityMob {
     private int lastPosZ;
     private int lastPosX;
     private int stuckTicks;
+    Vec3 vec;
 
     public MantisEntity(World world) {
         super(world);
@@ -60,7 +61,9 @@ public class MantisEntity extends EntityMob {
     //TODO: Hook it up to the actual pathfinder to make it alot smarter.
     protected void updateEntityActionState()
     {
+        this.fleeingTick = 0;
         super.updateEntityActionState();
+        this.fleeingTick = 0;
         if (this.attackerPosition != null && (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ) || this.attackerPosition.posY < 1))
         {
             this.attackerPosition = null;
@@ -76,14 +79,14 @@ public class MantisEntity extends EntityMob {
         {
             if (pathToEntity != null)
             {
-                Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
+                vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
             } else {
                 attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
             }
         } else if (this.findEntityInBoundingBox() != null) {
             if (pathToEntity != null) {
-                Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
+                vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
             } else {
                 attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
@@ -96,8 +99,11 @@ public class MantisEntity extends EntityMob {
             ++stuckTicks;
             if (stuckTicks > 60)
             {
+                vec = null;
+                pathToEntity = null;
                 updatePosStuck();
-                this.pathToEntity = null;
+                pathToEntity = null;
+                vec = null;
             }
         } else {
             this.lastPosX = (int) this.posX;
@@ -137,9 +143,14 @@ public class MantisEntity extends EntityMob {
     }
 
     @Override
+    protected void updateWanderPath()
+    {
+    }
+
+    @Override
     protected void attackEntity(Entity mob, float dist)
     {
-        if (this.attackTime <= 0 && dist < 3F)
+        if (this.attackTime <= 0 && dist < 2.0F)
         {
             this.attackTime = 20;
             this.attackEntityAsMob(mob);
