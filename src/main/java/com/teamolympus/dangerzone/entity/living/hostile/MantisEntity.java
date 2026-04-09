@@ -83,14 +83,11 @@ public class MantisEntity extends EntityMob {
             }
         } else if (this.findEntityInBoundingBox() != null) {
             if (pathToEntity != null) {
-                //  System.out.println("ELSE BOUND BOX");
                 Vec3 vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
             } else {
                 attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
             }
-
-            //  attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
         }
 
         // Prevent Mob from getting stuck On Flight
