@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.registry;
 
 import com.teamolympus.dangerzone.blocks.KrakenRepellentBlock;
 import com.teamolympus.dangerzone.blocks.base.BaseAkPetrifiedBlock;
+import com.teamolympus.dangerzone.entity.living.hostile.KrakenEntity;
 import com.teamolympus.dangerzone.items.base.*;
 import com.teamolympus.dangerzone.items.base.tools.BaseAKAxe;
 import com.teamolympus.dangerzone.items.base.tools.BaseAKHoe;
@@ -166,6 +167,7 @@ public class RegistryHandler {
 		// HOSTILE
         registerEntity(MantisEntity.class, "mantis", 64, 1, true);
         registerEntity(AllosaurusEntity.class, "allosaurus", 64, 1, true);
+        registerEntity(KrakenEntity.class, "kraken", 64, 1, true);
     }
 
     public static Item ruby, rubyAxe;
@@ -198,7 +200,7 @@ public class RegistryHandler {
 
     public static Item experienceSword;
 
-    public static Item alloSpawnEgg,mantisSpawnEgg, bodyGuardSpawnegg, robotAntKit;
+    public static Item alloSpawnEgg,mantisSpawnEgg, bodyGuardSpawnegg, robotAntKit, krakenSpawnEgg;
 
     public static Item katterKillerJaw;
 
@@ -318,6 +320,9 @@ public class RegistryHandler {
 
        alloSpawnEgg = new BaseItemAKSpawnEgg("allosaurus");
         registerItem(alloSpawnEgg, "Allosaurus Spawn Egg");
+
+        krakenSpawnEgg = new BaseItemAKSpawnEgg("kraken");
+        registerItem(krakenSpawnEgg, "Kraken Spawn Egg");
 
         peacockFeather = new BaseAKMaterials("peacock_feather");
         registerItem(peacockFeather, "Peacock Feather");

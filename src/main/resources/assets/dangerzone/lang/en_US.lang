@@ -39,6 +39,7 @@ item.crystal_stick.name=Crystal Stick
 item.mantis_spawn_egg.name=Mantis Spawn Egg
 item.allosaurus_spawn_egg.name=Allosaurus Spawn Egg
 item.robot_ant_kit_spawn_egg.name=Robot Ant Kit
+item.kraken_spawn_egg=kraken Spawn Egg
 
 # Blocks
 tile.petrified_cow.name=Petrified Cow

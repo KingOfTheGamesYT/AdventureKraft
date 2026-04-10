@@ -10,12 +10,15 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.WorldInfo;
 
 public class KrakenEntity extends EntityMob {
+
+    private ChunkCoordinates attackerPosition;
 
     public KrakenEntity(World world) {
         super(world);
@@ -50,7 +53,39 @@ public class KrakenEntity extends EntityMob {
     }
 
     @Override
-    public void onUpdate() {
+    public boolean attackEntityAsMob(Entity mob)
+    {
+        if (pathToEntity != null) {
+            this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
+        } else{
+            if (attackerPosition != null) {
+                attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
+            }
+
+        }
+        return super.attackEntityAsMob(mob);
+
+    }
+
+    @Override
+    protected void attackEntity(Entity mob, float dist)
+    {
+        super.attackEntity(mob, dist);
+        if (pathToEntity != null) {
+            this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
+        } else{
+            if (attackerPosition != null) {
+                attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
+            }
+
+        }
+
+
+    }
+
+    @Override
+    public void onUpdate()
+    {
         super.onUpdate();
 
         if (this.ticksExisted % 100 == 0 && !this.worldObj.isRemote)
@@ -81,6 +116,7 @@ Item[] lootableList = new Item[]
 
 
 
+
     @Override
     protected void updateEntityActionState()
     {
@@ -102,9 +138,11 @@ Item[] lootableList = new Item[]
     }
 
 
+    @Override
+    protected void fall(float distance) {}
 
-
-
+    @Override
+    protected void updateFallState(double distanceFallenThisTick, boolean isOnGround) {}
 
 
 

@@ -1,5 +1,6 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
+import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
@@ -10,6 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
@@ -36,11 +38,11 @@ public class MantisEntity extends EntityMob {
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.attackDamage)
-                .setBaseValue(6.0D);
+                .setBaseValue(DZConfig.mantisAttackDamage);
         this.getEntityAttribute(SharedMonsterAttributes.movementSpeed)
-                .setBaseValue(0.319);
+                .setBaseValue(DZConfig.mantisSpeed);
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth)
-                .setBaseValue(120D);
+                .setBaseValue(DZConfig.mantisMaxHp);
     }
 
     @Override
@@ -48,6 +50,10 @@ public class MantisEntity extends EntityMob {
     {
         super.onUpdate();
         this.motionY *= 0.6000000238418579D;
+
+        if (this.isInWater() && rand.nextInt(20) == 0) {
+            this.attackEntityFrom(DamageSource.drown, this.rand.nextInt((int) DZConfig.mantisAttackDamage));
+        }
     }
 
     @Override
