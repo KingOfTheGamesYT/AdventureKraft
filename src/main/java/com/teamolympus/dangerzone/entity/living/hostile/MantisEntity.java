@@ -4,6 +4,7 @@ import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
@@ -59,7 +60,7 @@ public class MantisEntity extends EntityMob {
     @Override
     public boolean canEntityBeSeen(Entity entity)
     {
-        return this.worldObj.rayTraceBlocks(Vec3.createVectorHelper(this.posX, this.posY + 0.75, this.posZ), Vec3.createVectorHelper(entity.posX, entity.posY, entity.posZ)) == null;
+        return this.worldObj.rayTraceBlocks(Vec3.createVectorHelper(this.posX, this.posY - 0.75, this.posZ), Vec3.createVectorHelper(entity.posX, entity.posY + getEyeHeight(), entity.posZ)) == null;
     }
 
 
@@ -70,13 +71,14 @@ public class MantisEntity extends EntityMob {
         this.fleeingTick = 0;
         super.updateEntityActionState();
         this.fleeingTick = 0;
+
         if (this.attackerPosition != null && (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ) || this.attackerPosition.posY < 1))
         {
             this.attackerPosition = null;
         }
 
 
-        if (this.attackerPosition == null || this.rand.nextInt(300) == 0 || this.attackerPosition.getDistanceSquared((int)this.posX, (int)this.posY, (int)this.posZ) < 4.0F)
+        if (this.attackerPosition == null || this.rand.nextInt(300) == 0 || this.attackerPosition.getDistanceSquared((int)this.posX, (int)this.posY, (int)this.posZ) < 4.1F)
         {
             this.attackerPosition = new ChunkCoordinates((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
         }
@@ -87,6 +89,7 @@ public class MantisEntity extends EntityMob {
             {
                 vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+
             } else {
                 attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
             }
@@ -94,6 +97,7 @@ public class MantisEntity extends EntityMob {
             if (pathToEntity != null) {
                 vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+
             } else {
                 attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
             }
@@ -153,24 +157,26 @@ public class MantisEntity extends EntityMob {
     {
     }
 
+
     @Override
     protected void attackEntity(Entity mob, float dist)
     {
-        if (this.attackTime <= 0 && dist < 2.0F)
+        if (dist < 3.0F && this.attackTime <= 0)
         {
             this.attackTime = 20;
             this.attackEntityAsMob(mob);
         }
 
         if (pathToEntity != null) {
+            this.entityToAttack = mob;
             this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
         } else{
             if (attackerPosition != null) {
+                this.entityToAttack = mob;
                 attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
             }
 
         }
-
 
     }
 
