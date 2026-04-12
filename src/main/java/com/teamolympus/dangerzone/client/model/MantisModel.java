@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.util.MathHelper;
 
 @SuppressWarnings("all")
 public class MantisModel extends ModelBase {
@@ -277,12 +278,15 @@ public class MantisModel extends ModelBase {
 		bone4.render(f5);
 
 
+
 		float ageInTicks = f2;
 		//Movement
-		final float bone5Math = 31.25F + 48.75F;
-		final float bone6Math = -17.5F + 40.0F;
-		this.bone5.rotateAngleY = (float) Math.toRadians(bone5Math * Math.cos(ageInTicks * 12.0F));
-		this.bone6.rotateAngleY = (float) Math.toRadians(bone6Math * Math.cos(ageInTicks * 12.0F + Math.PI));
+
+	//	this.bone5.setRotationPoint(0.0F, 0.0F, 0.0F);
+	//	this.bone6.setRotationPoint(0.0F, 0.0F, 0.0F);
+		this.bone5.rotateAngleY = MathHelper.cos(f2 * 1.3F) * (float)Math.PI * 0.25F;
+		this.bone6.rotateAngleY = -this.bone5.rotateAngleY;
+		//this.bone6.rotateAngleY =
 
 
 
