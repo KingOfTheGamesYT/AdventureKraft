@@ -17,6 +17,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
@@ -60,7 +61,6 @@ public class Hammy extends SwordItem {
         }
     }
 
-
     public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker, World world, PlayerEntity player) {
         stack.damageItem((Integer)DZConfig.HAMMY_HIT_COST.get(), attacker, (playerEntity) -> {
             if (attacker instanceof PlayerEntity) {
@@ -81,14 +81,15 @@ public class Hammy extends SwordItem {
         }
         return super.onEntitySwing(stack, entity);
     }
+
     private void createExplosion(World world, LivingEntity entity) {
         double x = entity.getPosX();
         double y = entity.getPosY();
         double z = entity.getPosZ();
-        float explosionStrength = 2.0f; // Adjust this value to change the explosion power.
+        float explosionStrength = 2.0f;
 
-        world.createExplosion(null, x, y, z, explosionStrength, true, net.minecraft.world.Explosion.Mode.DESTROY);
-        setBlocksOnFire(world, x, y, z, 3); // Set blocks on fire within a radius of 3 blocks.
+        world.createExplosion(null, x, y, z, explosionStrength, true, Explosion.Mode.DESTROY);
+        setBlocksOnFire(world, x, y, z, 3);
     }
 
     private void setBlocksOnFire(World world, double x, double y, double z, int radius) {

@@ -22,16 +22,13 @@ public class ArmourEvents {
 	private float eventmodifier;
 	private QuadConsumer<PlayerEntity, Entity, DamageSource, ItemStack> action;
 	private QuadPredicate<PlayerEntity, Entity, DamageSource, ItemStack> condition;
-
-	// HashMap to store the list of events
 	public static HashMap<EventType, ArrayList<ArmourEvents>> eventlist = new HashMap<>();
 
-	// Constructor for ArmourEvents
 	public ArmourEvents(EventType type, QuadPredicate<PlayerEntity, Entity, DamageSource, ItemStack> condition, QuadConsumer<PlayerEntity, Entity, DamageSource, ItemStack> action) {
 		this.type = type;
 		this.condition = condition != null ? condition : (player, enemy, source, helditem) -> true; // Default to true if condition is null
 		this.action = action;
-		this.eventmodifier = 1.0f; // Default modifier value
+		this.eventmodifier = 1.0f;
 	}
 
 	public static void addEvent(ArmourEvents event) {
@@ -54,35 +51,34 @@ public class ArmourEvents {
 		return action;
 	}
 
-	// The method that processes events
 	private void doEvents(EventType type, Event event, PlayerEntity player, LivingEntity target) {
 		if (eventlist.containsKey(type)) {
 			ItemStack stack = player.getHeldItemMainhand();
 			for (ArmourEvents e : eventlist.get(type)) {
-				if (event instanceof LivingHurtEvent) { // Player is hurt
+				if (event instanceof LivingHurtEvent) { //Player is hurt
 					LivingHurtEvent ev = (LivingHurtEvent) event;
 					if (e.getCondition().test(player, target, ev.getSource(), stack)) {
 						ev.setAmount(ev.getAmount() * e.getModifier());
 						e.getAction().accept(player, target, ev.getSource(), stack);
 					}
-				} else if (event instanceof LivingDamageEvent) { // Player deals damage
+				} else if (event instanceof LivingDamageEvent) { //Player deals damage
 					LivingDamageEvent ev = (LivingDamageEvent) event;
 					if (e.getCondition().test(player, target, ev.getSource(), stack)) {
 						ev.setAmount(ev.getAmount() * e.getModifier());
 						e.getAction().accept(player, target, ev.getSource(), stack);
 					}
-				} else if (event instanceof LivingFallEvent) { // Player falls
+				} else if (event instanceof LivingFallEvent) { //Player falls
 					LivingFallEvent ev = (LivingFallEvent) event;
 					if (e.getCondition().test(player, null, null, stack)) {
 						ev.setDistance(ev.getDistance() * e.getModifier());
 						e.getAction().accept(player, null, null, stack);
 					}
-				} else if (event instanceof LivingJumpEvent) { // Player jumps
+				} else if (event instanceof LivingJumpEvent) { //Player jumps
 					if (e.getCondition().test(player, null, null, stack)) {
 						player.setMotion(player.getMotion().x, player.getMotion().y * e.getModifier(), player.getMotion().z);
 						e.getAction().accept(player, null, null, stack);
 					}
-				} else if (event instanceof LivingUpdateEvent) { // Auto event (continuous)
+				} else if (event instanceof LivingUpdateEvent) { //Auto event
 					if (e.getCondition().test(player, null, null, stack)) {
 						e.getAction().accept(player, null, null, stack);
 					}
@@ -91,7 +87,6 @@ public class ArmourEvents {
 		}
 	}
 
-	// Enum for event types
 	public static enum EventType {
 		Auto,
 		PlayerFell,

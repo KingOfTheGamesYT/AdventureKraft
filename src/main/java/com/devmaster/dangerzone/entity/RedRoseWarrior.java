@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.entity.goals.IntervalRangedAttackGoal;
+
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -23,6 +24,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
+
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -33,6 +35,10 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     private static final byte STILL = (byte)0;
     private static final byte BENDING = (byte)2;
     private static final byte BENDING_CLIENT = 9;
+    public void setRRWState(final byte state) { this.getDataManager().set(STATE, Byte.valueOf(state)); }
+    public byte getrrwstate() { return this.getDataManager().get(STATE).byteValue(); }
+    public boolean isNoneState() { return getrrwstate() == STILL; }
+    public void setBendingAttack(final boolean smash) { setRRWState(smash ? BENDING : STILL); }
 
     public RedRoseWarrior(final EntityType<? extends RedRoseWarrior> type, final World worldIn) {
         super(type, worldIn);
@@ -49,10 +55,9 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     }
 
     @Override
-    public void readAdditional(CompoundNBT compound) {
-        super.readAdditional(compound);
-        this.setRRWState(compound.getByte(KEY_STATE));
-
+    public void readAdditional(CompoundNBT nbt) {
+        super.readAdditional(nbt);
+        this.setRRWState(nbt.getByte(KEY_STATE));
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -84,24 +89,18 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         this.goalSelector.addGoal(2, new RedRoseWarrior.WaterBending(this, MAX_BEND_TIME, 3, 6));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, MonsterEntity.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, StampyLongNose.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, BaseYoutuber.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, SlimeEntity.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, PhantomEntity.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, GhastEntity.class, true));
     }
+
     @Override
     public void writeAdditional(CompoundNBT compound) {
         super.writeAdditional(compound);
         compound.putByte(KEY_STATE, this.getrrwstate());
     }
-
-    public void setRRWState(final byte state) { this.getDataManager().set(STATE, Byte.valueOf(state)); }
-    public byte getrrwstate() { return this.getDataManager().get(STATE).byteValue(); }
-    public boolean isNoneState() { return getrrwstate() == STILL; }
-    public boolean isBendingAttack() { return getrrwstate() == BENDING; }
-    public void setBendingAttack(final boolean smash) { setRRWState(smash ? BENDING : STILL); }
 
     @OnlyIn(Dist.CLIENT)
     public void handleStatusUpdate(byte id) {
@@ -134,7 +133,6 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
     protected float getSoundPitch() {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
-
 
     @Override
     public boolean onLivingFall(float distance, float damageMultiplier) {
@@ -196,5 +194,4 @@ public class RedRoseWarrior extends CreatureEntity implements IRangedAttackMob{
         super.removeTrackingPlayer(player);
         this.bossInfo.removePlayer(player);
     }
-
 }

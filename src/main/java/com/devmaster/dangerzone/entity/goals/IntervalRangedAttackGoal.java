@@ -21,6 +21,7 @@ public class IntervalRangedAttackGoal extends Goal {
         if(!(entityIn instanceof MobEntity)) {
             throw new IllegalArgumentException("IntervalRangedAttackGoal requires MobEntity that implements IRangedAttackMob");
         }
+
         this.setMutexFlags(EnumSet.allOf(Goal.Flag.class));
         rangedEntity = entityIn;
         entity = (MobEntity)entityIn;
@@ -57,16 +58,16 @@ public class IntervalRangedAttackGoal extends Goal {
 
     @Override
     public void tick() {
-        // stop the entity from moving, and adjust look vecs
+        //Stop the entity from moving, and adjust look vecs
         final LivingEntity target = entity.getAttackTarget();
         entity.getNavigator().clearPath();
         entity.faceEntity(target, 100.0F, 100.0F);
         entity.getLookController().setLookPositionWithEntity(target, 100.0F, 100.0F);
-        // spit attack on interval
+        //Attack on interval
         if(goalTime % interval == 0) {
             rangedEntity.attackEntityWithRangedAttack(target, 0.1F);
         }
-        // finish the spit attack
+        //Finish the spit attack
         if(goalTime++ >= maxTime) {
             resetTask();
         }

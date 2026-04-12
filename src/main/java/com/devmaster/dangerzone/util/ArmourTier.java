@@ -93,5 +93,4 @@ public class ArmourTier implements IArmorMaterial
 	{
 		return knockback;
 	}
-
 }

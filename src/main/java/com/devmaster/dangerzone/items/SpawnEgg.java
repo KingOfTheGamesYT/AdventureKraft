@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.items;
 
 import net.minecraft.block.DispenserBlock;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.dispenser.DefaultDispenseItemBehavior;
 import net.minecraft.dispenser.IBlockSource;
 import net.minecraft.entity.EntityType;
@@ -9,7 +10,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.Direction;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+
 import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.fml.RegistryObject;
 
@@ -19,6 +24,7 @@ import java.util.*;
 public class SpawnEgg extends SpawnEggItem {
     protected static final List<SpawnEgg> UNADDED_EGGS = new ArrayList<>();
     private final Lazy<? extends EntityType<?>> entityTypeSupplier;
+    private String[] info = new String[0];
 
     public SpawnEgg(EntityType<?> entityType, int primaryColor, int secondaryColor, Properties properties) {
         super(null, primaryColor, secondaryColor, properties);
@@ -52,5 +58,22 @@ public class SpawnEgg extends SpawnEggItem {
     @Override
     public EntityType<?> getType(@Nullable final CompoundNBT nbt) {
         return entityTypeSupplier.get();
+    }
+
+    public SpawnEgg addInfo(String... newInfo) {
+        if (newInfo != null && newInfo.length > 0) {
+            String[] combinedInfo = new String[this.info.length + newInfo.length];
+            System.arraycopy(this.info, 0, combinedInfo, 0, this.info.length);
+            System.arraycopy(newInfo, 0, combinedInfo, this.info.length, newInfo.length);
+            this.info = combinedInfo;
+        }
+        return this;
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> list, ITooltipFlag flagIn){
+        for (String s : info) {
+            list.add(new StringTextComponent(s));
+        }
     }
 }

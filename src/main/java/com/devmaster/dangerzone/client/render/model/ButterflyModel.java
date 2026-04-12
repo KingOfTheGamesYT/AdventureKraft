@@ -1,11 +1,12 @@
-package com.devmaster.dangerzone.client.render.model;// Made with Blockbench 3.8.4
+package com.devmaster.dangerzone.client.render.model;
+// Made with Blockbench 3.8.4
 // Exported for Minecraft version 1.15 - 1.16
-// Paste this class into your mod and generate all required imports
-
 
 import com.devmaster.dangerzone.entity.Butterfly;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.CreatureEntity;
@@ -87,10 +88,7 @@ public class ButterflyModel<B extends CreatureEntity> extends EntityModel<Butter
 			this.leftwing2.rotateAngleZ = -this.rightwing.rotateAngleZ;
 			this.leftwing3.rotateAngleZ = -this.rightwing.rotateAngleZ;
 			this.leftwing4.rotateAngleZ = -this.rightwing.rotateAngleZ;
-
 		}
-
-
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
 		modelRenderer.rotateAngleX = x;

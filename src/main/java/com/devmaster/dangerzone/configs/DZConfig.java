@@ -9,11 +9,78 @@ import static net.minecraftforge.common.BiomeDictionary.Type.*;
 import java.util.Arrays;
 import java.util.List;
 
-
 public class DZConfig {
+
+    public static ForgeConfigSpec.IntValue AlexiCraftmin;
+    public static ForgeConfigSpec.IntValue AlexiCraftmax;
+    public static ForgeConfigSpec.IntValue AlexiCraftweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AlexiCraftinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AlexiCraftexclude;
+
+    public static ForgeConfigSpec.IntValue AntVenommin;
+    public static ForgeConfigSpec.IntValue AntVenommax;
+    public static ForgeConfigSpec.IntValue AntVenomweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AntVenominclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AntVenomexclude;
+
+    public static ForgeConfigSpec.IntValue Aphmaumin;
+    public static ForgeConfigSpec.IntValue Aphmaumax;
+    public static ForgeConfigSpec.IntValue Aphmauweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Aphmauinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Aphmauexclude;
+
+    public static ForgeConfigSpec.IntValue BabyAngelmin;
+    public static ForgeConfigSpec.IntValue BabyAngelmax;
+    public static ForgeConfigSpec.IntValue BabyAngelweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyAngelinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyAngelexclude;
+
+    public static ForgeConfigSpec.IntValue BabyDuckymin;
+    public static ForgeConfigSpec.IntValue BabyDuckmax;
+    public static ForgeConfigSpec.IntValue BabyDuckweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyDuckinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyDuckexclude;
+
+    public static ForgeConfigSpec.IntValue BabyLeahymin;
+    public static ForgeConfigSpec.IntValue BabyLeahmax;
+    public static ForgeConfigSpec.IntValue BabyLeahweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyLeahinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyLeahexclude;
+
+    public static ForgeConfigSpec.IntValue BabyMaxmin;
+    public static ForgeConfigSpec.IntValue BabyMaxmax;
+    public static ForgeConfigSpec.IntValue BabyMaxweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyMaxinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyMaxexclude;
+
+    public static ForgeConfigSpec.IntValue BajanCanadianymin;
+    public static ForgeConfigSpec.IntValue BajanCanadianmax;
+    public static ForgeConfigSpec.IntValue BajanCanadianweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BajanCanadianinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BajanCanadianexclude;
+
+    public static ForgeConfigSpec.IntValue CaptainSparkelzymin;
+    public static ForgeConfigSpec.IntValue CaptainSparkelzmax;
+    public static ForgeConfigSpec.IntValue CaptainSparkelzweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzexclude;
+
+    public static ForgeConfigSpec.IntValue Termitemin;
+    public static ForgeConfigSpec.IntValue Termitemax;
+    public static ForgeConfigSpec.IntValue Termiteweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Termiteinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Termiteexclude;
+
     public static ForgeConfigSpec.IntValue NotBreeBreemin;
     public static ForgeConfigSpec.IntValue NotBreeBreemax;
     public static ForgeConfigSpec.IntValue NotBreeBreeweight;
+
+    public static ForgeConfigSpec.IntValue RedAntmin;
+    public static ForgeConfigSpec.IntValue RedAntmax;
+    public static ForgeConfigSpec.IntValue RedAntweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedAntinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedAntexclude;
+
     public static ForgeConfigSpec.IntValue RainbowAntmin;
     public static ForgeConfigSpec.IntValue RainbowAntmax;
     public static ForgeConfigSpec.IntValue RainbowAntweight;
@@ -21,183 +88,363 @@ public class DZConfig {
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> RainbowAntexclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> NotBreeBreeinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> NotBreeBreeexclude;
+
     public static ForgeConfigSpec.IntValue StampyLongNosemin;
     public static ForgeConfigSpec.IntValue StampyLongNosemax;
     public static ForgeConfigSpec.IntValue StampyLongNoseweight;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> StampyLongNoseinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> StampyLongNoseexclude;
+
     public static ForgeConfigSpec.IntValue Technoblademin;
     public static ForgeConfigSpec.IntValue Technoblademax;
     public static ForgeConfigSpec.IntValue Technobladeweight;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Technobladeinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Technobladeexclude;
+
     public static ForgeConfigSpec.IntValue Tewitymin;
     public static ForgeConfigSpec.IntValue Tewitymax;
     public static ForgeConfigSpec.IntValue Tewityweight;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Tewityinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Tewityexclude;
+
     public static ForgeConfigSpec.IntValue Entmin;
     public static ForgeConfigSpec.IntValue Entmax;
     public static ForgeConfigSpec.IntValue Entweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Entinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Entexclude;
+
     public static ForgeConfigSpec.IntValue Butterflymin;
     public static ForgeConfigSpec.IntValue Butterflymax;
     public static ForgeConfigSpec.IntValue Butterflyweight;
-    public static ForgeConfigSpec.IntValue Birdmin;
-    public static ForgeConfigSpec.IntValue Birdmax;
-    public static ForgeConfigSpec.IntValue Birdweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Entinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Entexclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaveFisherexclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaveFisherinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Butterflyexclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Butterflyinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Birdexclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> Birdinclude;
 
+    public static ForgeConfigSpec.IntValue Birdmin;
+    public static ForgeConfigSpec.IntValue Birdmax;
+    public static ForgeConfigSpec.IntValue Birdweight;
+
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaveFisherexclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaveFisherinclude;
     public static ForgeConfigSpec.IntValue CaveFishermin;
-
     public static ForgeConfigSpec.IntValue CaveFishermax;
-
     public static ForgeConfigSpec.IntValue CaveFisherweight;
+
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedCowexclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedCowinclude;
-
     public static ForgeConfigSpec.IntValue RedCowmin;
-
     public static ForgeConfigSpec.IntValue RedCowmax;
-
     public static ForgeConfigSpec.IntValue RedCowweight;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_DAMAGE;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_DURABILITY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue BRIDGE_LENGTH;
+    public static ForgeConfigSpec.IntValue STAIR_HEIGHT;
+    public static ForgeConfigSpec.IntValue STAIR_DEPTH;
+
+    public static ForgeConfigSpec.IntValue CAKE_SWORD_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue CAKE_SWORD_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue CAKE_SWORD_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue CAKE_SWORD_EFFICIENCY;
     public static ForgeConfigSpec.IntValue CAKE_SWORD_DAMAGE;
     public static ForgeConfigSpec.IntValue CAKE_SWORD_DURABILITY;
     public static ForgeConfigSpec.IntValue CAKE_SWORD_HIT_COST;
-    public static ForgeConfigSpec.IntValue EMERALD_SWORD_DAMAGE;
-    public static ForgeConfigSpec.IntValue EMERALD_SWORD_DURABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_SWORD_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_DAMAGE;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_DURABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue POPPY_SWORD_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue POPPY_SWORD_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue POPPY_SWORD_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue POPPY_SWORD_EFFICIENCY;
     public static ForgeConfigSpec.IntValue POPPY_SWORD_DAMAGE;
     public static ForgeConfigSpec.IntValue POPPY_SWORD_DURABILITY;
     public static ForgeConfigSpec.IntValue POPPY_SWORD_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_DAMAGE;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_DURABILITY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_HIT_COST;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_AXE_DAMAGE;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_AXE_DURABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_AXE_HIT_COST;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_BOOTS_DURABILTY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_BOOTS_HIT_COST;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_CHESTPLATE_DURABILITY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_CHESTPLATE_HIT_COST;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HELMET_DURABILITY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HELMET_HIT_COST;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_DAMAGE;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_DURABILITY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_HIT_COST;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_LEGGINGS_DURABILITY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_LEGGINGS_HIT_COST;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_DURABILITY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_DAMAGE;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_HIT_COST;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_DURABILITY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_DAMAGE;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_HIT_COST;
-    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_DURABILITY;
-    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_HIT_COST;
-    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_DURABILITY;
-    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_HIT_COST;
-    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_DURABILITY;
-    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_HIT_COST;
-    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_DURABILITY;
-    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_HIT_COST;
-    public static ForgeConfigSpec.IntValue COPPER_BOOTS_DURABILITY;
-    public static ForgeConfigSpec.IntValue COPPER_BOOTS_HIT_COST;
-    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_DURABILITY;
-    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_HIT_COST;
-    public static ForgeConfigSpec.IntValue COPPER_HELMET_DURABILITY;
-    public static ForgeConfigSpec.IntValue COPPER_HELMET_HIT_COST;
-    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_DURABILITY;
-    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_HIT_COST;
-    public static ForgeConfigSpec.IntValue EMERALD_AXE_DAMAGE;
-    public static ForgeConfigSpec.IntValue EMERALD_AXE_DURABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_AXE_HIT_COST;
-    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_DURABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_HIT_COST;
-    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_DURABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_HIT_COST;
-    public static ForgeConfigSpec.IntValue EMERALD_HELMET_DURABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_HELMET_HIT_COST;
-    public static ForgeConfigSpec.IntValue EMERALD_HOE_DAMAGE;
-    public static ForgeConfigSpec.IntValue EMERALD_HOE_DURABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_HOE_HIT_COST;
-    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_HIT_COST;
-    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_DURABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_DAMAGE;
-    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_DURABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_HIT_COST;
-    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_DAMAGE;
-    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_DURABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_HIT_COST;
-    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_DURABILITY;
-    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_HIT_COST;
-    public static ForgeConfigSpec.IntValue LAPIS_HELMET_DURABILITY;
-    public static ForgeConfigSpec.IntValue LAPIS_HELMET_HIT_COST;
-    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_DURABILITY;
-    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_HIT_COST;
-    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_DURABILITY;
-    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_DURABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_DURABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_DURABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_DURABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_DAMAGE;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_DURABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_DAMAGE;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_DURABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_DAMAGE;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_DURABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_DAMAGE;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_DURABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_HIT_COST;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_ARMOR;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_ARMOR;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_BOOTS_ARMOR;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_TOUGHNESS;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_AXE_EFFICIENCY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_AXE_HARVEST_LEVEL;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_AXE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_AXE_ATTACK_SPEED;
+
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_BOOTS_DURABILTY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_BOOTS_HIT_COST;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_BOOTS_ARMOR;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_BOOTS_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_BOOTS_TOUGHNESS;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_BOOTS_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_CHESTPLATE_DURABILITY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_CHESTPLATE_HIT_COST;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_CHESTPLATE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_CHESTPLATE_TOUGHNESS;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_CHESTPLATE_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_CHESTPLATE_ARMOR;
+
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_LEGGINGS_DURABILITY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_LEGGINGS_HIT_COST;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_LEGGINGS_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_LEGGINGS_TOUGHNESS;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_LEGGINGS_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_LEGGINGS_ARMOR;
+
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HELMET_DURABILITY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HELMET_HIT_COST;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HELMET_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HELMET_TOUGHNESS;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HELMET_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HELMET_ARMOR;
+
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_DAMAGE;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_DURABILITY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_HIT_COST;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_HARVEST_LEVEL;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_ATTACK_SPEED;
+
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_DURABILITY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_DAMAGE;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_HIT_COST;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_ATTACK_SPEED;
+
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_DURABILITY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_DAMAGE;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_HIT_COST;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_ATTACK_SPEED;
+
+    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_DURABILITY;
+    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_HIT_COST;
+    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_ARMOR;
+    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_DURABILITY;
+    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_HIT_COST;
+    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_ARMOR;
+    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_DURABILITY;
+    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_HIT_COST;
+    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_ARMOR;
+    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_DURABILITY;
+    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_HIT_COST;
+    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_ARMOR;
+    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue COPPER_BOOTS_DURABILITY;
+    public static ForgeConfigSpec.IntValue COPPER_BOOTS_HIT_COST;
+    public static ForgeConfigSpec.IntValue COPPER_BOOTS_ARMOR;
+    public static ForgeConfigSpec.IntValue COPPER_BOOTS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COPPER_BOOTS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue COPPER_BOOTS_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_DURABILITY;
+    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_HIT_COST;
+    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_ARMOR;
+    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue COPPER_HELMET_DURABILITY;
+    public static ForgeConfigSpec.IntValue COPPER_HELMET_HIT_COST;
+    public static ForgeConfigSpec.IntValue COPPER_HELMET_ARMOR;
+    public static ForgeConfigSpec.IntValue COPPER_HELMET_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COPPER_HELMET_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue COPPER_HELMET_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_DURABILITY;
+    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_HIT_COST;
+    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_ARMOR;
+    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_ARMOR;
+    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_DURABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_HIT_COST;
+    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_DURABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_HIT_COST;
+    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_ARMOR;
+    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue EMERALD_HELMET_ARMOR;
+    public static ForgeConfigSpec.IntValue EMERALD_HELMET_DURABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_HELMET_HIT_COST;
+    public static ForgeConfigSpec.IntValue EMERALD_HELMET_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue EMERALD_HELMET_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_HELMET_TOUGHNESS;
+
+    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_HIT_COST;
+    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_DURABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_ARMOR;
+    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_TOUGHNESS;
+
+    public static ForgeConfigSpec.IntValue EMERALD_AXE_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue EMERALD_AXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue EMERALD_AXE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_AXE_DAMAGE;
+    public static ForgeConfigSpec.IntValue EMERALD_AXE_DURABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_AXE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue EMERALD_AXE_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue EMERALD_HOE_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue EMERALD_HOE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue EMERALD_HOE_DAMAGE;
+    public static ForgeConfigSpec.IntValue EMERALD_HOE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_HOE_DURABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_HOE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue EMERALD_HOE_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_DAMAGE;
+    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_DURABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_DAMAGE;
+    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_DURABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue EMERALD_SWORD_DAMAGE;
+    public static ForgeConfigSpec.IntValue EMERALD_SWORD_DURABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_SWORD_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue EMERALD_SWORD_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue EMERALD_SWORD_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue EMERALD_SWORD_HIT_COST;
+    public static ForgeConfigSpec.IntValue EMERALD_SWORD_ATTACK_SPEED;
+
+    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_ARMOR;
+    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_DURABILITY;
+    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue LAPIS_HELMET_ARMOR;
+    public static ForgeConfigSpec.IntValue LAPIS_HELMET_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue LAPIS_HELMET_DURABILITY;
+    public static ForgeConfigSpec.IntValue LAPIS_HELMET_HIT_COST;
+    public static ForgeConfigSpec.IntValue LAPIS_HELMET_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue LAPIS_HELMET_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_ARMOR;
+    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_DURABILITY;
+    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_HIT_COST;
+    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_ARMOR;
+    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_DURABILITY;
+    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_DURABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_HIT_COST;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_ARMOR;
+
+    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_ARMOR;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_DURABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_HIT_COST;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATES_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_DURABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_HIT_COST;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_ARMOR;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_TOUGHNESS;
+
+    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_DURABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_HIT_COST;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_ARMOR;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_ENCHANTABILITY;
+
+    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_DAMAGE;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_DURABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_DAMAGE;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_DURABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_HIT_COST;
+
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_DAMAGE;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_DURABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_HIT_COST;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_ENCHANTABILITY;
+
+    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_DAMAGE;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_DURABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_HIT_COST;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_HARVEST_LEVEL;
+
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_ATTACK_SPEED;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_EFFICIENCY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_HARVEST_LEVEL;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_DAMAGE;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_DURABILITY;
+    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_HIT_COST;
+
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DAMAGE;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DURABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_HIT_COST;
@@ -205,162 +452,35 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_CHESTPLATE_ARMOR;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_CHESTPLATE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_CHESTPLATE_TOUGHNESS;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_CHESTPLATE_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_CHESTPLATE_DURABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_CHESTPLATE_HIT_COST;
+
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BOOTS_ARMOR;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BOOTS_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BOOTS_TOUGHNESS;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BOOTS_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BOOTS_DURABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_BOOTS_HIT_COST;
+
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_LEGGINGS_ARMOR;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_LEGGINGS_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_LEGGINGS_TOUGHNESS;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_LEGGINGS_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_LEGGINGS_DURABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_LEGGINGS_HIT_COST;
+
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_HELMET_ARMOR;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_HELMET_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_HELMET_TOUGHNESS;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_HELMET_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_HELMET_DURABILITY;
     public static ForgeConfigSpec.IntValue QUEEN_GHIDORAH_SCALE_HELMET_HIT_COST;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_HOE_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SWORD_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_PICKAXE_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue COARSE_AMETHYST_SHOVEL_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_ARMOR;
-    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue CATS_EYE_HELMET_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_ARMOR;
-    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue CATS_EYE_CHESTPLATE_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_ARMOR;
-    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue CATS_EYE_LEGGINGS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_ARMOR;
-    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue CATS_EYE_BOOTS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue EMERALD_SWORD_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue COPPER_HELMET_ARMOR;
-    public static ForgeConfigSpec.IntValue COPPER_HELMET_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue COPPER_HELMET_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_ARMOR;
-    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue COPPER_CHESTPLATE_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_ARMOR;
-    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue COPPER_BOOTS_ARMOR;
-    public static ForgeConfigSpec.IntValue COPPER_BOOTS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue COPPER_BOOTS_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue COPPER_BOOTS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue COPPER_HELMET_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue EMERALD_HELMET_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_HELMET_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_ARMOR;
-    public static ForgeConfigSpec.IntValue EMERALD_HELMET_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_HELMET_ARMOR;
-    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue EMERALD_BOOTS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue EMERALD_SWORD_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_SWORD_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue EMERALD_SWORD_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue EMERALD_PICKAXE_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue EMERALD_HOE_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue EMERALD_HOE_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_ARMOR;
-    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue EMERALD_CHESTPLATE_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_ARMOR;
-    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_LEGGINGS_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue EMERALD_AXE_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue EMERALD_AXE_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue EMERALD_AXE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_HOE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_AXE_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue EMERALD_HOE_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue EMERALD_SHOVEL_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue LAPIS_HELMET_ARMOR;
-    public static ForgeConfigSpec.IntValue LAPIS_HELMET_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue LAPIS_HELMET_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue LAPIS_HELMET_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_ARMOR;
-    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue LAPIS_CHESTPLATE_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_ARMOR;
-    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue LAPIS_LEGGINGS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_ARMOR;
-    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue LAPIS_BOOTS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue CAKE_SWORD_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue CAKE_SWORD_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue CAKE_SWORD_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue CAKE_SWORD_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue POPPY_SWORD_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue POPPY_SWORD_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue POPPY_SWORD_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue POPPY_SWORD_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SHOVEL_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HOE_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_PICKAXE_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_AXE_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_SWORD_HARVEST_LEVEL;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_ARMOR;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_HELMET_ARMOR;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_BOOTS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_KNOCK_BACK_RESISTANCE;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_LEGGINGS_ENCHANTABILITY;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATE_TOUGHNESS;
-    public static ForgeConfigSpec.IntValue SAPPHIRE_CHESTPLATES_KNOCK_BACK_RESISTANCE;
+
     public static ForgeConfigSpec.IntValue MANTIS_CLAW_DAMAGE;
     public static ForgeConfigSpec.IntValue MANTIS_CLAW_DURABILITY;
     public static ForgeConfigSpec.IntValue MANTIS_CLAW_HIT_COST;
@@ -368,6 +488,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue MANTIS_CLAW_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue MANTIS_CLAW_EFFICIENCY;
     public static ForgeConfigSpec.IntValue MANTIS_CLAW_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_DAMAGE;
     public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_DURABILITY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_HIT_COST;
@@ -375,6 +496,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_EFFICIENCY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_AXE_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_DAMAGE;
     public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_DURABILITY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_HIT_COST;
@@ -382,6 +504,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_EFFICIENCY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_SHOVEL_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_DAMAGE;
     public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_DURABILITY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_HIT_COST;
@@ -389,6 +512,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_EFFICIENCY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_HOE_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_DAMAGE;
     public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_DURABILITY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_HIT_COST;
@@ -396,12 +520,14 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_EFFICIENCY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_PICKAXE_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_DAMAGE;
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_DURABILITY;
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_HIT_COST;
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_HARVEST_LEVEL;
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_EFFICIENCY;
+
     public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_ATTACK_SPEED;
     public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_DAMAGE;
     public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_DURABILITY;
@@ -409,7 +535,9 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_HARVEST_LEVEL;
     public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue FIRE_CAKE_SWORD_EFFICIENCY;
+
     public static ForgeConfigSpec.IntValue GODZILLA_AXE_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_ATTACK_SPEED;
     public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_DAMAGE;
     public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_DURABILITY;
@@ -417,61 +545,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_HARVEST_LEVEL;
     public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_CAKE_SWORD_EFFICIENCY;
-    public static ForgeConfigSpec.IntValue AlexiCraftmin;
-    public static ForgeConfigSpec.IntValue AlexiCraftmax;
-    public static ForgeConfigSpec.IntValue AlexiCraftweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AlexiCraftinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AlexiCraftexclude;
-    public static ForgeConfigSpec.IntValue AntVenommin;
-    public static ForgeConfigSpec.IntValue AntVenommax;
-    public static ForgeConfigSpec.IntValue AntVenomweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AntVenominclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> AntVenomexclude;
-    public static ForgeConfigSpec.IntValue Aphmaumin;
-    public static ForgeConfigSpec.IntValue Aphmaumax;
-    public static ForgeConfigSpec.IntValue Aphmauweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Aphmauinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Aphmauexclude;
-    public static ForgeConfigSpec.IntValue BabyAngelmin;
-    public static ForgeConfigSpec.IntValue BabyAngelmax;
-    public static ForgeConfigSpec.IntValue BabyAngelweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyAngelinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyAngelexclude;
-    public static ForgeConfigSpec.IntValue BabyDuckymin;
-    public static ForgeConfigSpec.IntValue BabyDuckmax;
-    public static ForgeConfigSpec.IntValue BabyDuckweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyDuckinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyDuckexclude;
-    public static ForgeConfigSpec.IntValue BabyLeahymin;
-    public static ForgeConfigSpec.IntValue BabyLeahmax;
-    public static ForgeConfigSpec.IntValue BabyLeahweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyLeahinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyLeahexclude;
-    public static ForgeConfigSpec.IntValue BabyMaxmin;
-    public static ForgeConfigSpec.IntValue BabyMaxmax;
-    public static ForgeConfigSpec.IntValue BabyMaxweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyMaxinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BabyMaxexclude;
-    public static ForgeConfigSpec.IntValue BajanCanadianymin;
-    public static ForgeConfigSpec.IntValue BajanCanadianmax;
-    public static ForgeConfigSpec.IntValue BajanCanadianweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BajanCanadianinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> BajanCanadianexclude;
-    public static ForgeConfigSpec.IntValue CaptainSparkelzymin;
-    public static ForgeConfigSpec.IntValue CaptainSparkelzmax;
-    public static ForgeConfigSpec.IntValue CaptainSparkelzweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzexclude;
-    public static ForgeConfigSpec.IntValue RedAntmin;
-    public static ForgeConfigSpec.IntValue RedAntmax;
-    public static ForgeConfigSpec.IntValue RedAntweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedAntinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> RedAntexclude;
-    public static ForgeConfigSpec.IntValue Termitemin;
-    public static ForgeConfigSpec.IntValue Termitemax;
-    public static ForgeConfigSpec.IntValue Termiteweight;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Termiteinclude;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Termiteexclude;
+
     public static ForgeConfigSpec.IntValue HAMMY_DAMAGE;
     public static ForgeConfigSpec.IntValue HAMMY_DURABILITY;
     public static ForgeConfigSpec.IntValue HAMMY_HIT_COST;
@@ -479,6 +553,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue HAMMY_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue HAMMY_EFFICIENCY;
     public static ForgeConfigSpec.IntValue HAMMY_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue EXPERIENCE_SCYTHE_DAMAGE;
     public static ForgeConfigSpec.IntValue EXPERIENCE_SCYTHE_DURABILITY;
     public static ForgeConfigSpec.IntValue EXPERIENCE_SCYTHE_HIT_COST;
@@ -486,6 +561,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue EXPERIENCE_SCYTHE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue EXPERIENCE_SCYTHE_EFFICIENCY;
     public static ForgeConfigSpec.IntValue EXPERIENCE_SCYTHE_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue TITANIUM_PICKAXE_DAMAGE;
     public static ForgeConfigSpec.IntValue TITANIUM_PICKAXE_DURABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_PICKAXE_HIT_COST;
@@ -493,6 +569,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue TITANIUM_PICKAXE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_PICKAXE_EFFICIENCY;
     public static ForgeConfigSpec.IntValue TITANIUM_PICKAXE_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue TITANIUM_AXE_DAMAGE;
     public static ForgeConfigSpec.IntValue TITANIUM_AXE_DURABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_AXE_HIT_COST;
@@ -500,6 +577,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue TITANIUM_AXE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_AXE_EFFICIENCY;
     public static ForgeConfigSpec.IntValue TITANIUM_AXE_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue TITANIUM_SHOVEL_DAMAGE;
     public static ForgeConfigSpec.IntValue TITANIUM_SHOVEL_DURABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_SHOVEL_HIT_COST;
@@ -507,6 +585,7 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue TITANIUM_SHOVEL_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_SHOVEL_EFFICIENCY;
     public static ForgeConfigSpec.IntValue TITANIUM_SHOVEL_ATTACK_SPEED;
+
     public static ForgeConfigSpec.IntValue TITANIUM_HOE_DAMAGE;
     public static ForgeConfigSpec.IntValue TITANIUM_HOE_DURABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_HOE_HIT_COST;
@@ -514,27 +593,28 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue TITANIUM_HOE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_HOE_EFFICIENCY;
     public static ForgeConfigSpec.IntValue TITANIUM_HOE_ATTACK_SPEED;
-    public static ForgeConfigSpec.IntValue BRIDGE_LENGTH;
-    public static ForgeConfigSpec.IntValue STAIR_HEIGHT;
-    public static ForgeConfigSpec.IntValue STAIR_DEPTH;
+
     public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_ARMOR;
     public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_TOUGHNESS;
     public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_DURABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_BOOTS_HIT_COST;
+
     public static ForgeConfigSpec.IntValue TITANIUM_HELMET_ARMOR;
     public static ForgeConfigSpec.IntValue TITANIUM_HELMET_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_HELMET_TOUGHNESS;
     public static ForgeConfigSpec.IntValue TITANIUM_HELMET_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue TITANIUM_HELMET_DURABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_HELMET_HIT_COST;
+
     public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_ARMOR;
     public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_TOUGHNESS;
     public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_KNOCK_BACK_RESISTANCE;
     public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_DURABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_CHESTPLATE_HIT_COST;
+
     public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_ARMOR;
     public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue TITANIUM_LEGGINGS_TOUGHNESS;
@@ -548,10 +628,45 @@ public class DZConfig {
     public static void COMMON(ForgeConfigSpec.Builder builder) {
         builder.comment("Spawn Chances");
         builder.comment("Configure mob spawn weight (How frequently they spawn & min/max group size. Set weight to 0 to disable.) (Make sure the max is not lower than your min or the game will crash)");
+
+        builder.push("CaveFisher Spawn Chances");
+        CaveFishermin = builder.defineInRange("CaveFisher Min", 1, 0, 640);
+        CaveFishermax = builder.defineInRange("CaveFisher Max", 5, 0, 640);
+        CaveFisherweight = builder.defineInRange("CaveFisher Weight", 7, 0, 100);
+        builder.pop();
+        builder.push("CaveFisher Biomes Whitelist/Blacklist");
+        CaveFisherinclude = builder.defineList("include CaveFisher", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        CaveFisherexclude = builder.defineList("exclude CaveFisher", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
+
+        builder.push("Red Ant Spawn Chances");
+        RedAntmin = builder.defineInRange("Red Ant Min", 1, 0, 640);
+        RedAntmax = builder.defineInRange("Red Ant Max", 5, 0, 640);
+        RedAntweight = builder.defineInRange("Red Ant Weight", 7, 0, 100);
+        builder.pop();
+        builder.push("Red Ant Biomes Whitelist/Blacklist");
+        RedAntinclude = builder.defineList("include Red Ant", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        RedAntexclude = builder.defineList("exclude Red Ant", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
+
+        builder.push("Termite Spawn Chances");
+        Termitemin = builder.defineInRange("Termite Min", 1, 0, 640);
+        Termitemax = builder.defineInRange("Termite Max", 5, 0, 640);
+        Termiteweight = builder.defineInRange("Termite Weight", 6, 0, 100);
+        builder.pop();
+        builder.push("Termite Biomes Whitelist/Blacklist");
+        Termiteinclude = builder.defineList("include Termite", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        Termiteexclude = builder.defineList("exclude Termite", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
+
         builder.push("NotBreeBree Spawn Chances");
         NotBreeBreemin = builder.defineInRange("NotBreeBree Min", 1, 0, 640);
         NotBreeBreemax = builder.defineInRange("NotBreeBree Max", 2, 0, 640);
         NotBreeBreeweight = builder.defineInRange("NotBreeBree Weight", 7, 0, 100);
+        builder.pop();
+        builder.push("NotBreeBree Biomes Whitelist/Blacklist");
+        NotBreeBreeinclude = builder.defineList("include NotBreeBree", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        NotBreeBreeexclude = builder.defineList("exclude NotBreeBree", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
         builder.push("AlexiCraft Spawn Chances");
@@ -559,11 +674,21 @@ public class DZConfig {
         AlexiCraftmax = builder.defineInRange("AlexiCraft Max", 2, 0, 640);
         AlexiCraftweight = builder.defineInRange("AlexiCraft Weight", 7, 0, 100);
         builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("AlexiCraft Biomes Whitelist/Blacklist");
+        AlexiCraftinclude = builder.defineList("include AlexiCraft", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        AlexiCraftexclude = builder.defineList("exclude AlexiCraft", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
 
         builder.push("AntVenom Spawn Chances");
         AntVenommin = builder.defineInRange("AntVenom Min", 1, 0, 640);
         AntVenommax = builder.defineInRange("AntVenom Max", 2, 0, 640);
         AntVenomweight = builder.defineInRange("AntVenom Weight", 7, 0, 100);
+        builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("AntVenom Biomes Whitelist/Blacklist");
+        AntVenominclude = builder.defineList("include AntVenom", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        AntVenomexclude = builder.defineList("exclude AntVenom", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
         builder.push("Aphmau Spawn Chances");
@@ -571,11 +696,21 @@ public class DZConfig {
         Aphmaumax = builder.defineInRange("Aphmau Max", 2, 0, 640);
         Aphmauweight = builder.defineInRange("Aphmau Weight", 7, 0, 100);
         builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("Aphmau Biomes Whitelist/Blacklist");
+        Aphmauinclude = builder.defineList("include Aphmau", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        Aphmauexclude = builder.defineList("exclude Aphmau", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
 
         builder.push("BabyAngel Spawn Chances");
         BabyAngelmin = builder.defineInRange("BabyAngel Min", 1, 0, 640);
         BabyAngelmax = builder.defineInRange("BabyAngel Max", 2, 0, 640);
         BabyAngelweight = builder.defineInRange("BabyAngel Weight", 7, 0, 100);
+        builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("BabyAngel Biomes Whitelist/Blacklist");
+        BabyAngelinclude = builder.defineList("include BabyAngel", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        BabyAngelexclude = builder.defineList("exclude BabyAngel", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
         builder.push("BabyDuck Spawn Chances");
@@ -583,11 +718,21 @@ public class DZConfig {
         BabyDuckmax = builder.defineInRange("BabyDuck Max", 2, 0, 640);
         BabyDuckweight = builder.defineInRange("BabyDuck Weight", 7, 0, 100);
         builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("BabyDuck Biomes Whitelist/Blacklist");
+        BabyDuckinclude = builder.defineList("include BabyDuck", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        BabyDuckexclude = builder.defineList("exclude BabyDuck", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
 
         builder.push("BabyLeah Spawn Chances");
         BabyLeahymin = builder.defineInRange("BabyLeah Min", 1, 0, 640);
         BabyLeahmax = builder.defineInRange("BabyLeah Max", 2, 0, 640);
         BabyLeahweight = builder.defineInRange("BabyLeah Weight", 7, 0, 100);
+        builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("BabyLeah Biomes Whitelist/Blacklist");
+        BabyLeahinclude = builder.defineList("include BabyLeah", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        BabyLeahexclude = builder.defineList("exclude BabyLeah", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
         builder.push("BajanCanadian Spawn Chances");
@@ -595,11 +740,21 @@ public class DZConfig {
         BajanCanadianmax = builder.defineInRange("BajanCanadian Max", 2, 0, 640);
         BajanCanadianweight = builder.defineInRange("BajanCanadian Weight", 7, 0, 100);
         builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("BajanCanadian Biomes Whitelist/Blacklist");
+        BajanCanadianinclude = builder.defineList("include BajanCanadian", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        BajanCanadianexclude = builder.defineList("exclude BajanCanadian", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
 
         builder.push("BabyMax Spawn Chances");
         BabyMaxmin = builder.defineInRange("BabyMax Min", 1, 0, 640);
         BabyMaxmax = builder.defineInRange("BabyMax Max", 2, 0, 640);
         BabyMaxweight = builder.defineInRange("BabyMax Weight", 7, 0, 100);
+        builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("BabyMax Biomes Whitelist/Blacklist");
+        BabyMaxinclude = builder.defineList("include BabyMax", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        BabyMaxexclude = builder.defineList("exclude BabyMax", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
         builder.push("CaptainSparkelz Spawn Chances");
@@ -607,11 +762,20 @@ public class DZConfig {
         CaptainSparkelzmax = builder.defineInRange("CaptainSparkelz Max", 2, 0, 640);
         CaptainSparkelzweight = builder.defineInRange("CaptainSparkelz Weight", 7, 0, 100);
         builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("CaptainSparkelz Biomes Whitelist/Blacklist");
+        CaptainSparkelzinclude = builder.defineList("include CaptainSparkelz", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        CaptainSparkelzexclude = builder.defineList("exclude CaptainSparkelz", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
 
         builder.push("Rainbow Ant Spawn Chances");
         RainbowAntmin = builder.defineInRange("Rainbow Ant Min", 1, 0, 640);
         RainbowAntmax = builder.defineInRange("Rainbow Ant Max", 5, 0, 640);
         RainbowAntweight = builder.defineInRange("Rainbow Ant Weight", 6, 0, 100);
+        builder.pop();
+        builder.push("Rainbow Ant Biomes Whitelist/Blacklist");
+        RainbowAntinclude = builder.defineList("include Rainbow Ant", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        RainbowAntexclude = builder.defineList("exclude Rainbow Ant", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
         builder.push("StampyLongNose Spawn Chances");
@@ -619,11 +783,21 @@ public class DZConfig {
         StampyLongNosemax = builder.defineInRange("StampyLongNose Max", 2, 0, 64);
         StampyLongNoseweight = builder.defineInRange("StampyLongNose Weight", 7, 0, 100);
         builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("StampyLongNose Biomes Whitelist/Blacklist");
+        StampyLongNoseinclude = builder.defineList("include Stampy", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        StampyLongNoseexclude = builder.defineList("exclude Stampy", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
 
         builder.push("Technoblade Spawn Chances");
         Technoblademin = builder.defineInRange("Technoblade Min", 1, 0, 64);
         Technoblademax = builder.defineInRange("Technoblade Max", 2, 0, 64);
         Technobladeweight = builder.defineInRange("Technoblade Weight", 7, 0, 100);
+        builder.pop();
+        builder.comment("Spawnable Biomes");
+        builder.push("Technoblade Biomes Whitelist/Blacklist");
+        Technobladeinclude = builder.defineList("include Techno", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        Technobladeexclude = builder.defineList("exclude Techno", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
         builder.push("Tewity Spawn Chances");
@@ -631,11 +805,19 @@ public class DZConfig {
         Tewitymax = builder.defineInRange("Tewity Max", 2, 0, 640);
         Tewityweight = builder.defineInRange("Tewity Weight", 7, 0, 100);
         builder.pop();
+        builder.push("Tewity Biomes Whitelist/Blacklist");
+        Tewityinclude = builder.defineList("include Tewity", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        Tewityexclude = builder.defineList("exclude Tewity", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
 
         builder.push("Ent Spawn Chances");
         Entmin = builder.defineInRange("Ent Min", 1, 0, 640);
         Entmax = builder.defineInRange("Ent Max", 1, 0, 640);
         Entweight = builder.defineInRange("Ent Weight", 7, 0, 100);
+        builder.pop();
+        builder.push("Ent Biomes Whitelist/Blacklist");
+        Entinclude = builder.defineList("include Ent", Arrays.asList(FOREST.toString(), MAGICAL.toString(), SAVANNA.toString(), SWAMP.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        Entexclude = builder.defineList("exclude Ent", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
         builder.push("Red Cow Spawn Chances");
@@ -643,7 +825,6 @@ public class DZConfig {
         RedCowmax = builder.defineInRange("Red Cow Max", 8, 0, 640);
         RedCowweight = builder.defineInRange("Red cow Weight", 3, 0, 100);
         builder.pop();
-
         builder.comment("Spawnable Biomes");
         builder.push("Red Cow Biomes Whitelist/Blacklist");
         RedCowinclude = builder.defineList("include Red Cow", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
@@ -651,77 +832,10 @@ public class DZConfig {
         builder.pop();
 
         builder.comment("Spawnable Biomes");
-        builder.push("StampyLongNose Biomes Whitelist/Blacklist");
-        StampyLongNoseinclude = builder.defineList("include Stampy", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        StampyLongNoseexclude = builder.defineList("exclude Stampy", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("AlexiCraft Biomes Whitelist/Blacklist");
-        AlexiCraftinclude = builder.defineList("include AlexiCraft", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        AlexiCraftexclude = builder.defineList("exclude AlexiCraft", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("AntVenom Biomes Whitelist/Blacklist");
-        AntVenominclude = builder.defineList("include AntVenom", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        AntVenomexclude = builder.defineList("exclude AntVenom", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("Aphmau Biomes Whitelist/Blacklist");
-        Aphmauinclude = builder.defineList("include Aphmau", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        Aphmauexclude = builder.defineList("exclude Aphmau", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("BabyAngel Biomes Whitelist/Blacklist");
-        BabyAngelinclude = builder.defineList("include BabyAngel", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        BabyAngelexclude = builder.defineList("exclude BabyAngel", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("BabyDuck Biomes Whitelist/Blacklist");
-        BabyDuckinclude = builder.defineList("include BabyDuck", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        BabyDuckexclude = builder.defineList("exclude BabyDuck", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("BabyLeah Biomes Whitelist/Blacklist");
-        BabyLeahinclude = builder.defineList("include BabyLeah", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        BabyLeahexclude = builder.defineList("exclude BabyLeah", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("BabyMax Biomes Whitelist/Blacklist");
-        BabyMaxinclude = builder.defineList("include BabyMax", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        BabyMaxexclude = builder.defineList("exclude BabyMax", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("BajanCanadian Biomes Whitelist/Blacklist");
-        BajanCanadianinclude = builder.defineList("include BajanCanadian", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        BajanCanadianexclude = builder.defineList("exclude BajanCanadian", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("CaptainSparkelz Biomes Whitelist/Blacklist");
-        CaptainSparkelzinclude = builder.defineList("include CaptainSparkelz", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        CaptainSparkelzexclude = builder.defineList("exclude CaptainSparkelz", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
-        builder.push("Technoblade Biomes Whitelist/Blacklist");
-        Technobladeinclude = builder.defineList("include Techno", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        Technobladeexclude = builder.defineList("exclude Techno", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.comment("Spawnable Biomes");
         builder.push("Butterfly Biomes Whitelist/Blacklist");
         Butterflyinclude = builder.defineList("include Butterfly", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString(), OCEAN.toString(), MAGICAL.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         Butterflyexclude = builder.defineList("exclude Butterfly", Arrays.asList(END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
-
         builder.push("Butterfly Spawn Chances");
         Butterflymin = builder.defineInRange("Butterfly Min", 1, 0, 64);
         Butterflymax = builder.defineInRange("Butterfly Max", 5, 0, 64);
@@ -733,32 +847,12 @@ public class DZConfig {
         Birdinclude = builder.defineList("include Bird", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString(), OCEAN.toString(), MAGICAL.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         Birdexclude = builder.defineList("exclude Bird", Arrays.asList(END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
-
         builder.push("Bird Spawn Chances");
         Birdmin = builder.defineInRange("Bird Min", 1, 0, 64);
         Birdmax = builder.defineInRange("Bird Max", 5, 0, 64);
         Birdweight = builder.defineInRange("Bird Weight", 7, 0, 100);
         builder.pop();
 
-        builder.push("Tewity Biomes Whitelist/Blacklist");
-        Tewityinclude = builder.defineList("include Tewity", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        Tewityexclude = builder.defineList("exclude Tewity", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.push("NotBreeBree Biomes Whitelist/Blacklist");
-        NotBreeBreeinclude = builder.defineList("include NotBreeBree", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        NotBreeBreeexclude = builder.defineList("exclude NotBreeBree", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.push("Rainbow Ant Biomes Whitelist/Blacklist");
-        RainbowAntinclude = builder.defineList("include Rainbow Ant", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        RainbowAntexclude = builder.defineList("exclude Rainbow Ant", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.push("Ent Biomes Whitelist/Blacklist");
-        Entinclude = builder.defineList("include Ent", Arrays.asList(FOREST.toString(), MAGICAL.toString(), SAVANNA.toString(), SWAMP.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        Entexclude = builder.defineList("exclude Ent", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
 
         builder.push("Weapon/Tools/Armor");
         builder.comment("Coarse Amethyst Set Attributes");
@@ -769,6 +863,7 @@ public class DZConfig {
         COARSE_AMETHYST_AXE_HARVEST_LEVEL = builder.comment("Coarse Amethyst Axe Harvest Level").defineInRange("COARSE_AMETHYST_AXE_HARVEST_LEVEL", 4, 0, 1000);
         COARSE_AMETHYST_AXE_ENCHANTABILITY = builder.comment("Coarse Amethyst Axe Encahntability").defineInRange("COARSE_AMETHYST_AXE_ENCHANTABILITY", 70, 0, 1000);
         COARSE_AMETHYST_AXE_ATTACK_SPEED = builder.comment("Coarse Amethyst Axe Attack Speed, must be whole number").defineInRange("COARSE_AMETHYST_AXE_ATTACK_SPEED", 1, 0, 1000);
+
         COARSE_AMETHYST_HOE_DAMAGE = builder.comment("Coarse Amethyst Hoe Damage").defineInRange("COARSE_AMETHYST_HOE_DAMAGE", 10, 0, 1000);
         COARSE_AMETHYST_HOE_DURABILITY = builder.comment("Coarse Amethyst Hoe Durability").defineInRange("COARSE_AMETHYST_HOE_DURABILITY", 2000, 0, 10000);
         COARSE_AMETHYST_HOE_HIT_COST = builder.comment("How much durability a Coarse Amethyst hoe loses when an entity is hit").defineInRange("COARSE_AMETHYST_HOE_HIT_COST", 1, 0, 10000);
@@ -776,6 +871,7 @@ public class DZConfig {
         COARSE_AMETHYST_HOE_ENCHANTABILITY = builder.comment("Coarse Amethyst Hoe Encahntability").defineInRange("COARSE_AMETHYST_HOE_ENCHANTABILITY", 70, 0, 1000);
         COARSE_AMETHYST_HOE_EFFICIENCY = builder.comment("Coarse Amethyst Hoe Efficiency").defineInRange("COARSE_AMETHYST_HOE_EFFICIENCY", 11, 0, 1000);
         COARSE_AMETHYST_HOE_ATTACK_SPEED = builder.comment("Coarse Amethyst Hoe Attack Speed, must be whole number").defineInRange("COARSE_AMETHYST_HOE_ATTACK_SPEED", 1, 0, 1000);
+
         COARSE_AMETHYST_SHOVEL_DAMAGE = builder.comment("Coarse Amethyst Shovel Damage").defineInRange("COARSE_AMETHYST_SHOVEL_DAMAGE", 15, 0, 1000);
         COARSE_AMETHYST_SHOVEL_DURABILITY = builder.comment("Coarse Amethyst Shovel Durability").defineInRange("COARSE_AMETHYST_SHOVEL_DURABILITY", 2000, 0, 10000);
         COARSE_AMETHYST_SHOVEL_HIT_COST = builder.comment("How much durability a CoarseAmethyst shovel loses when an entity is hit").defineInRange("COARSE_AMETHYST_SHOVEL_HIT_COST", 1, 0, 1000);
@@ -783,13 +879,7 @@ public class DZConfig {
         COARSE_AMETHYST_SHOVEL_ENCHANTABILITY = builder.comment("Coarse Amethyst Shovel Encahntability").defineInRange("COARSE_AMETHYST_SHOVEL_ENCHANTABILITY", 70, 0, 1000);
         COARSE_AMETHYST_SHOVEL_EFFICIENCY = builder.comment("Coarse Amethyst Shovel Efficiency").defineInRange("COARSE_AMETHYST_SHOVEL_EFFICIENCY", 11, 0, 1000);
         COARSE_AMETHYST_SHOVEL_ATTACK_SPEED = builder.comment("Coarse Amethyst Shovel Attack Speed, must be whole number").defineInRange("COARSE_AMETHYST_SHOVEL_ATTACK_SPEED", 1, 0, 1000);
-        COARSE_AMETHYST_SWORD_DAMAGE = builder.comment("Coarse Amethyst Sword Damage").defineInRange("COARSE_AMETHYST_SWORD_DAMAGE", 30, 0, 1000);
-        COARSE_AMETHYST_SWORD_DURABILITY = builder.comment("Coarse Amethyst Sword Durability").defineInRange("COARSE_AMETHYST_SWORD_DURABILITY", 2000, 0, 10000);
-        COARSE_AMETHYST_SWORD_HIT_COST = builder.comment("How much durability a Coarse Amethyst sword loses when an entity is hit").defineInRange("COARSE_AMETHYST_SWORD_HIT_COST", 1, 0, 10000);
-        COARSE_AMETHYST_SWORD_HARVEST_LEVEL = builder.comment("Coarse Amethyst Sword Harvest Level").defineInRange("COARSE_AMETHYST_SWORD_HARVEST_LEVEL", 4, 0, 1000);
-        COARSE_AMETHYST_SWORD_ENCHANTABILITY = builder.comment("Coarse Amethyst Sword Encahntability").defineInRange("COARSE_AMETHYST_SWORD_ENCHANTABILITY", 70, 0, 1000);
-        COARSE_AMETHYST_SWORD_EFFICIENCY = builder.comment("Coarse Amethyst Sword Efficiency").defineInRange("COARSE_AMETHYST_SWORD_EFFICIENCY", 11, 0, 1000);
-        COARSE_AMETHYST_SWORD_ATTACK_SPEED = builder.comment("Coarse Amethyst Sword Attack Speed, must be whole number").defineInRange("COARSE_AMETHYST_SWORD_ATTACK_SPEED", 1, 0, 1000);
+
         COARSE_AMETHYST_PICKAXE_DAMAGE = builder.comment("Coarse Amethyst Pickaxe Damage").defineInRange("COARSE_AMETHYST_PICKAXE_DAMAGE", 20, 0, 1000);
         COARSE_AMETHYST_PICKAXE_DURABILITY = builder.comment("Coarse Amethyst Pickaxe Durability").defineInRange("COARSE_AMETHYST_PICKAXE_DURABILITY", 2000, 0, 10000);
         COARSE_AMETHYST_PICKAXE_HIT_COST = builder.comment("How much durability a Coarse Amethyst pickaxe loses when an entity is hit").defineInRange("COARSE_AMETHYST_PICKAXE_HIT_COST", 1, 0, 10000);
@@ -797,30 +887,42 @@ public class DZConfig {
         COARSE_AMETHYST_PICKAXE_ENCHANTABILITY = builder.comment("Coarse Amethyst Pickaxe Encahntability").defineInRange("COARSE_AMETHYST_PICKAXE_ENCHANTABILITY", 70, 0, 1000);
         COARSE_AMETHYST_PICKAXE_EFFICIENCY = builder.comment("Coarse Amethyst Pickaxe Efficiency").defineInRange("COARSE_AMETHYST_PICKAXE_EFFICIENCY", 11, 0, 1000);
         COARSE_AMETHYST_PICKAXE_ATTACK_SPEED = builder.comment("Coarse Amethyst Pickaxe Attack Speed, must be whole number").defineInRange("COARSE_AMETHYST_PICKAXE_ATTACK_SPEED", 1, 0, 1000);
+
+        COARSE_AMETHYST_SWORD_DAMAGE = builder.comment("Coarse Amethyst Sword Damage").defineInRange("COARSE_AMETHYST_SWORD_DAMAGE", 30, 0, 1000);
+        COARSE_AMETHYST_SWORD_DURABILITY = builder.comment("Coarse Amethyst Sword Durability").defineInRange("COARSE_AMETHYST_SWORD_DURABILITY", 2000, 0, 10000);
+        COARSE_AMETHYST_SWORD_HIT_COST = builder.comment("How much durability a Coarse Amethyst sword loses when an entity is hit").defineInRange("COARSE_AMETHYST_SWORD_HIT_COST", 1, 0, 10000);
+        COARSE_AMETHYST_SWORD_HARVEST_LEVEL = builder.comment("Coarse Amethyst Sword Harvest Level").defineInRange("COARSE_AMETHYST_SWORD_HARVEST_LEVEL", 4, 0, 1000);
+        COARSE_AMETHYST_SWORD_ENCHANTABILITY = builder.comment("Coarse Amethyst Sword Encahntability").defineInRange("COARSE_AMETHYST_SWORD_ENCHANTABILITY", 70, 0, 1000);
+        COARSE_AMETHYST_SWORD_EFFICIENCY = builder.comment("Coarse Amethyst Sword Efficiency").defineInRange("COARSE_AMETHYST_SWORD_EFFICIENCY", 11, 0, 1000);
+        COARSE_AMETHYST_SWORD_ATTACK_SPEED = builder.comment("Coarse Amethyst Sword Attack Speed, must be whole number").defineInRange("COARSE_AMETHYST_SWORD_ATTACK_SPEED", 1, 0, 1000);
+
+        COARSE_AMETHYST_HELMET_ARMOR = builder.comment("How much armor the Coarse Amethyst Helmet Has").defineInRange("COARSE_AMETHYST_HELMET_ARMOR", 23, 0, 1000);
+        COARSE_AMETHYST_HELMET_ENCHANTABILITY = builder.comment("Coarse Amethyst Helmet Enchantability").defineInRange("COARSE_AMETHYST_HELMET_ENCHANTABILITY", 40, 0, 1000);
+        COARSE_AMETHYST_HELMET_TOUGHNESS = builder.comment("Coarse Amethyst Helmet Toughness").defineInRange("COARSE_AMETHYST_HELMET_TOUGHNESS", 0, 0, 1000);
+        COARSE_AMETHYST_HELMET_KNOCK_BACK_RESISTANCE = builder.comment("Coarse Amethyst Helmet Knockback Resistance").defineInRange("COARSE_AMETHYST_HELMET_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
         COARSE_AMETHYST_HELMET_DURABILITY = builder.comment("Coarse Amethyst Helmet Durability").defineInRange("COARSE_AMETHYST_HELMET_DURABILITY", 1300, 0, 10000);
         COARSE_AMETHYST_HELMET_HIT_COST = builder.comment("How much durability a Coarse Amethyst helmet loses when a entity hits").defineInRange("COARSE_AMETHYST_HELMET_HIT_COST", 1, 0, 1000);
+
+        COARSE_AMETHYST_CHESTPLATE_ARMOR = builder.comment("How much armor the Coarse Amethyst Chestplate has").defineInRange("COARSE_AMETHYST_CHESTPLATE_ARMOR", 23, 0, 1000);
+        COARSE_AMETHYST_CHESTPLATE_ENCHANTABILITY = builder.comment("Coarse Amethyst Chestplate Enchantability").defineInRange("COARSE_AMETHYST_CHESTPLATE_ENCHANTABILITY", 40, 0, 1000);
+        COARSE_AMETHYST_CHESTPLATE_TOUGHNESS = builder.comment("Coarse Amethyst Boots Toughness").defineInRange("COARSE_AMETHYST_CHESTPLATE_TOUGHNESS", 0, 0, 1000);
+        COARSE_AMETHYST_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Coarse Amethyst Chestplate  Knockback Resistance").defineInRange("COARSE_AMETHYST_CHESTPLATE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
         COARSE_AMETHYST_CHESTPLATE_DURABILITY = builder.comment("Coarse Amethyst Chestplate Durability").defineInRange("COARSE_AMETHYST_CHESTPLATE_DURABILITY", 1500, 0, 10000);
         COARSE_AMETHYST_CHESTPLATE_HIT_COST = builder.comment("How much durability a Coarse Amethyst chestplate loses when a entity hits").defineInRange("COARSE_AMETHYST_CHESTPLATE_HIT_COST", 1, 0, 1000);
+
+        COARSE_AMETHYST_LEGGINGS_ARMOR = builder.comment("How much armor the Coarse Amethyst Leggings have").defineInRange("COARSE_AMETHYST_LEGGINGS_ARMOR", 23, 0, 1000);
+        COARSE_AMETHYST_LEGGINGS_ENCHANTABILITY = builder.comment("Coarse Amethyst Leggings Enchantability").defineInRange("COARSE_AMETHYST_LEGGINGS_ENCHANTABILITY", 40, 0, 1000);
+        COARSE_AMETHYST_LEGGINGS_TOUGHNESS = builder.comment("Coarse Amethyst Leggings Toughness").defineInRange("COARSE_AMETHYST_LEGGINGS_TOUGHNESS", 0, 0, 1000);
+        COARSE_AMETHYST_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Coarse Amethyst Leggings Knockback Resistance").defineInRange("COARSE_AMETHYST_LEGGINGS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
         COARSE_AMETHYST_LEGGINGS_DURABILITY = builder.comment("Coarse Amethyst Leggings Durability").defineInRange("COARSE_AMETHYST_LEGGINGS_DURABILITY", 1600, 0, 10000);
         COARSE_AMETHYST_LEGGINGS_HIT_COST = builder.comment("How much durability the Coarse Amethyst leggings lose when a entity hits").defineInRange("COARSE_AMETHYST_LEGGINGS_HIT_COST", 1, 0, 1000);
+
         COARSE_AMETHYST_BOOTS_DURABILTY = builder.comment("Coarse Amethyst Boots Durability").defineInRange("COARSE_AMETHYST_BOOTS_DURABILITY", 1100, 0, 10000);
         COARSE_AMETHYST_BOOTS_HIT_COST = builder.comment("How much durability the Coarse Amethyst boots lose when a entity hits").defineInRange("COARSE_AMETHYST_BOOTS_HIT_COST", 1, 0, 1000);
         COARSE_AMETHYST_BOOTS_ARMOR = builder.comment("How much armor the Coarse Amethyst boots have").defineInRange("COARSE_AMETHYST_BOOTS_ARMOR", 23, 0, 1000);
         COARSE_AMETHYST_BOOTS_ENCHANTABILITY = builder.comment("Coarse Amethyst Boots Enchantability").defineInRange("COARSE_AMETHYST_BOOTS_ENCHANTABILITY", 40, 0, 1000);
         COARSE_AMETHYST_BOOTS_TOUGHNESS = builder.comment("Coarse Amethyst Boots Toughness").defineInRange("COARSE_AMETHYST_BOOTS_TOUGHNESS", 0, 0, 1000);
         COARSE_AMETHYST_BOOTS_KNOCK_BACK_RESISTANCE = builder.comment("Coarse Amethyst Boots Knockback Resistance").defineInRange("COARSE_AMETHYST_BOOTS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
-        COARSE_AMETHYST_CHESTPLATE_ARMOR = builder.comment("How much armor the Coarse Amethyst Chestplate has").defineInRange("COARSE_AMETHYST_CHESTPLATE_ARMOR", 23, 0, 1000);
-        COARSE_AMETHYST_CHESTPLATE_ENCHANTABILITY = builder.comment("Coarse Amethyst Chestplate Enchantability").defineInRange("COARSE_AMETHYST_CHESTPLATE_ENCHANTABILITY", 40, 0, 1000);
-        COARSE_AMETHYST_CHESTPLATE_TOUGHNESS = builder.comment("Coarse Amethyst Boots Toughness").defineInRange("COARSE_AMETHYST_CHESTPLATE_TOUGHNESS", 0, 0, 1000);
-        COARSE_AMETHYST_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Coarse Amethyst Chestplate  Knockback Resistance").defineInRange("COARSE_AMETHYST_CHESTPLATE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
-        COARSE_AMETHYST_HELMET_ARMOR = builder.comment("How much armor the Coarse Amethyst Helmet Has").defineInRange("COARSE_AMETHYST_HELMET_ARMOR", 23, 0, 1000);
-        COARSE_AMETHYST_HELMET_ENCHANTABILITY = builder.comment("Coarse Amethyst Helmet Enchantability").defineInRange("COARSE_AMETHYST_HELMET_ENCHANTABILITY", 40, 0, 1000);
-        COARSE_AMETHYST_HELMET_TOUGHNESS = builder.comment("Coarse Amethyst Helmet Toughness").defineInRange("COARSE_AMETHYST_HELMET_TOUGHNESS", 0, 0, 1000);
-        COARSE_AMETHYST_HELMET_KNOCK_BACK_RESISTANCE = builder.comment("Coarse Amethyst Helmet Knockback Resistance").defineInRange("COARSE_AMETHYST_HELMET_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
-        COARSE_AMETHYST_LEGGINGS_ARMOR = builder.comment("How much armor the Coarse Amethyst Leggings have").defineInRange("COARSE_AMETHYST_LEGGINGS_ARMOR", 23, 0, 1000);
-        COARSE_AMETHYST_LEGGINGS_ENCHANTABILITY = builder.comment("Coarse Amethyst Leggings Enchantability").defineInRange("COARSE_AMETHYST_LEGGINGS_ENCHANTABILITY", 40, 0, 1000);
-        COARSE_AMETHYST_LEGGINGS_TOUGHNESS = builder.comment("Coarse Amethyst Leggings Toughness").defineInRange("COARSE_AMETHYST_LEGGINGS_TOUGHNESS", 0, 0, 1000);
-        COARSE_AMETHYST_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Coarse Amethyst Leggings Knockback Resistance").defineInRange("COARSE_AMETHYST_LEGGINGS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
 
         builder.comment("Cat's Eye Set Attributes");
         CATS_EYE_HELMET_DURABILITY = builder.comment("Cat's Eye Durability").defineInRange("CATS_EYE_HELMET_DURABILITY", 1500, 0, 10000);
@@ -829,18 +931,21 @@ public class DZConfig {
         CATS_EYE_HELMET_ENCHANTABILITY = builder.comment("Cat's Eye Helmet Enchantability").defineInRange("CATS_EYE_HELMET_ENCHANTABILITY", 40, 0, 1000);
         CATS_EYE_HELMET_TOUGHNESS = builder.comment("Cat's Eye Helmet Toughness").defineInRange("CATS_EYE_HELMET_TOUGHNESS", 3, 0, 1000);
         CATS_EYE_HELMET_KNOCK_BACK_RESISTANCE = builder.comment("Cat's Eye Helmet Knockback Resistance. Must be a whole number").defineInRange("CATS_EYE_HELMET_KNOCK_BACK_RESISTANCE", 4, 0, 1000);
+
         CATS_EYE_CHESTPLATE_DURABILITY = builder.comment("Cat's Eye Chestplate Durability").defineInRange("CATS_EYE_CHESTPLATE_DURABILITY", 2000, 0, 10000);
         CATS_EYE_CHESTPLATE_HIT_COST = builder.comment("How much durability a Cat's Eye chestplate loses when an entity is hit").defineInRange("CATS_EYE_CHESTPLATE_HIT_COST", 1, 0, 1000);
         CATS_EYE_CHESTPLATE_ARMOR = builder.comment("How much armor the Cat's Eye Chestplate has").defineInRange("CATS_EYE_CHESTPLATE_ARMOR", 12, 0, 1000);
         CATS_EYE_CHESTPLATE_ENCHANTABILITY = builder.comment("Cat's Eye Chestplate Enchantability").defineInRange("CATS_EYE_CHESTPLATE_ENCHANTABILITY", 40, 0, 1000);
         CATS_EYE_CHESTPLATE_TOUGHNESS = builder.comment("Cat's Eye Chestplate Toughness").defineInRange("CATS_EYE_CHESTPLATES_TOUGHNESS", 5, 0, 1000);
         CATS_EYE_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Cat's Eye Chestplate Knockback Resistance. Must be a whole number").defineInRange("CATS_EYE_CHESTPLATE_KNOCK_BACK_RESISTANCE", 5, 0, 1000);
+
         CATS_EYE_LEGGINGS_DURABILITY = builder.comment("Cat's Eye Leggings Durability").defineInRange("CATS_EYE_LEGGINGS_DURABILITY", 1500, 0, 10000);
         CATS_EYE_LEGGINGS_HIT_COST = builder.comment("How much durability the Cat's Eye leggings lose when a entity is hit").defineInRange("CATS_EYE_LEGGINGS_HIT_COST", 1, 0, 1000);
         CATS_EYE_LEGGINGS_ARMOR = builder.comment("How much armor the Cat's Eye Leggings have").defineInRange("CATS_EYE_LEGGINGS_ARMOR", 14, 0, 1000);
         CATS_EYE_LEGGINGS_ENCHANTABILITY = builder.comment("Cat's Eye Leggings Enchantability").defineInRange("CATS_EYE_LEGGINGS_ENCHANTABILITY", 40, 0, 1000);
         CATS_EYE_LEGGINGS_TOUGHNESS = builder.comment("Cat's Eye Leggings Toughness").defineInRange("CATS_EYE_LEGGINGS_TOUGHNESS", 2, 0, 1000);
         CATS_EYE_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Cat's Eye Leggings Knockback Resistance. Must be a whole number").defineInRange("CATS_EYE_LEGGINGS_KNOCK_BACK_RESISTANCE", 9, 0, 1000);
+
         CATS_EYE_BOOTS_DURABILITY = builder.comment("Cat's Eye Boots Durability").defineInRange("CATS_EYE_BOOTS_DURABILITY", 500, 0, 10000);
         CATS_EYE_BOOTS_HIT_COST = builder.comment("How much durability the Cat's Eye boots lose when a entity hits").defineInRange("CATS_EYE_BOOTS_HIT_COST", 1, 0, 1000);
         CATS_EYE_BOOTS_ARMOR = builder.comment("How much armor the Cat's Eye Boots have").defineInRange("CATS_EYE_BOOTS_ARMOR", 18, 0, 1000);
@@ -855,18 +960,21 @@ public class DZConfig {
         COPPER_HELMET_ENCHANTABILITY = builder.comment("Copper Helmet Enchantability").defineInRange("COPPER_HELMET_ENCHANTABILITY", 6, 0, 1000);
         COPPER_HELMET_TOUGHNESS = builder.comment("Copper Helmet Toughness").defineInRange("COPPER_HELMET_TOUGHNESS", 0, 0, 1000);
         COPPER_HELMET_KNOCK_BACK_RESISTANCE = builder.comment("Copper Helmet Knockback Resistance").defineInRange("COPPER_HELMET_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         COPPER_CHESTPLATE_DURABILITY = builder.comment("Copper Chestplate Durability").defineInRange("COPPER_CHESTPLATE_DURABILITY", 690, 0, 10000);
         COPPER_CHESTPLATE_HIT_COST = builder.comment("How much durability a Copper Chestplate loses when an entity is hit").defineInRange("COPPER_CHESTPLETE_HIT_COST", 1, 0, 10000);
         COPPER_CHESTPLATE_ARMOR = builder.comment("How much armor the Copper Chestplate has").defineInRange("COPPER_CHESTPLETE_ARMOR", 3, 0, 1000);
         COPPER_CHESTPLATE_ENCHANTABILITY = builder.comment("Copper Chestplate Enchantability").defineInRange("COPPER_CHESTPLETE_ENCHANTABILITY", 6, 0, 1000);
         COPPER_CHESTPLATE_TOUGHNESS = builder.comment("Copper Chestplate Toughness").defineInRange("COPPER_CHESTPLETE_TOUGHNESS", 0, 0, 1000);
         COPPER_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Copper Chestplate Knockback Resistance").defineInRange("COPPER_CHESTPLETE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         COPPER_LEGGINGS_DURABILITY = builder.comment("Copper Leggings Durability").defineInRange("COPPER_LEGGINGS_DURABILITY", 736, 0, 10000);
         COPPER_LEGGINGS_HIT_COST = builder.comment("How much durability the Copper leggings lose when a entity hits").defineInRange("COPPER_LEGGINGS_HIT_COST", 1, 0, 10000);
         COPPER_LEGGINGS_ARMOR = builder.comment("How much armor the Copper Helmet has").defineInRange("COPPER_HELMET_ARMOR", 3, 0, 1000);
         COPPER_LEGGINGS_ENCHANTABILITY = builder.comment("Copper Helmet Enchantability").defineInRange("COPPER_HELMET_ENCHANTABILITY", 6, 0, 1000);
         COPPER_LEGGINGS_TOUGHNESS = builder.comment("Copper Helmet Toughness").defineInRange("COPPER_HELMET_TOUGHNESS", 0, 0, 1000);
         COPPER_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Copper Helmet Knockback Resistance").defineInRange("COPPER_HELMET_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         COPPER_BOOTS_DURABILITY = builder.comment("Copper Boots Durability").defineInRange("COPPER_BOOTS_DURABILITY", 506, 0, 10000);
         COPPER_BOOTS_HIT_COST = builder.comment("How much durability the Copper boots lose when a entity hits").defineInRange("COPPER_BOOTS_HIT_COST", 1, 0, 10000);
         COPPER_BOOTS_ARMOR = builder.comment("How much armor the Copper Boots has").defineInRange("COPPER_BOOTS_ARMOR", 3, 0, 1000);
@@ -882,6 +990,7 @@ public class DZConfig {
         EMERALD_AXE_ENCHANTABILITY = builder.comment("Emerald Axe Encahntability").defineInRange("EMERALD_AXE_ENCHANTABILITY", 70, 0, 1000);
         EMERALD_AXE_EFFICIENCY = builder.comment("Emerald Axe Efficiency").defineInRange("EMERALD_AXE_EFFICIENCY", 10, 0, 1000);
         EMERALD_AXE_ATTACK_SPEED = builder.comment("Emerald Axe Attack Speed, must be whole number").defineInRange("EMERALD_AXE_ATTACK_SPEED", 2, 0, 1000);
+
         EMERALD_HOE_DAMAGE = builder.comment("Emerald Hoe Damage").defineInRange("EMERALD_HOE_DAMAGE", 5, 0, 1000);
         EMERALD_HOE_DURABILITY = builder.comment("Emerald Hoe Durability").defineInRange("EMERALD_HOE_DURABILITY", 1300, 0, 10000);
         EMERALD_HOE_HIT_COST = builder.comment("How much durability a Emerald hoe loses when an entity is hit").defineInRange("EMERALD_HOE_HIT_COST", 1, 0, 10000);
@@ -889,6 +998,7 @@ public class DZConfig {
         EMERALD_HOE_ENCHANTABILITY = builder.comment("Emerald Hoe Encahntability").defineInRange("EMERALD_HOE_ENCHANTABILITY", 70, 0, 1000);
         EMERALD_HOE_EFFICIENCY = builder.comment("Emerald Hoe Efficiency").defineInRange("EMERALD_HOE_EFFICIENCY", 10, 0, 1000);
         EMERALD_HOE_ATTACK_SPEED = builder.comment("Emerald Hoe Attack Speed, must be whole number").defineInRange("EMERALD_HOE_ATTACK_SPEED", 2, 0, 1000);
+
         EMERALD_PICKAXE_DAMAGE = builder.comment("Emerald pickaxe Damage").defineInRange("EMERALD_PICKAXE_DAMAGE", 16, 0, 1000);
         EMERALD_PICKAXE_DURABILITY = builder.comment("Emerald Pickaxe Durability").defineInRange("EMERALD_PICKAXE_DURABILITY", 1300, 0, 10000);
         EMERALD_PICKAXE_HIT_COST = builder.comment("How much durability a Emerald pickaxe loses when an entity is hit").defineInRange("EMERALD_PICKAXE_HIT_COST", 1, 0, 10000);
@@ -896,6 +1006,7 @@ public class DZConfig {
         EMERALD_PICKAXE_ENCHANTABILITY = builder.comment("Emerald Pickaxe Encahntability").defineInRange("EMERALD_PICKAXE_ENCHANTABILITY", 70, 0, 1000);
         EMERALD_PICKAXE_EFFICIENCY = builder.comment("Emerald Pickaxe Efficiency").defineInRange("EMERALD_PICKAXE_EFFICIENCY", 10, 0, 1000);
         EMERALD_PICKAXE_ATTACK_SPEED = builder.comment("Emerald Pickaxe Attack Speed, must be whole number").defineInRange("EMERALD_PICKAXE_ATTACK_SPEED", 2, 0, 1000);
+
         EMERALD_SHOVEL_DAMAGE = builder.comment("Emerald Shovel Damage").defineInRange("EMERALD_SHOVEL_DAMAGE", 10, 0, 1000);
         EMERALD_SHOVEL_DURABILITY = builder.comment("Emerald Shovel Durability").defineInRange("EMERALD_SHOVEL_DURABILITY", 1300, 0, 10000);
         EMERALD_SHOVEL_HIT_COST = builder.comment("How much durability a Emerald shovel loses when an entity is hit").defineInRange("EMERALD_SHOVEL_HIT_COST", 1, 0, 10000);
@@ -903,6 +1014,7 @@ public class DZConfig {
         EMERALD_SHOVEL_ENCHANTABILITY = builder.comment("Emerald Shovel Encahntability").defineInRange("EMERALD_SHOVEL_ENCHANTABILITY", 70, 0, 1000);
         EMERALD_SHOVEL_EFFICIENCY = builder.comment("Emerald Shovel Efficiency").defineInRange("EMERALD_SHOVEL_EFFICIENCY", 10, 0, 1000);
         EMERALD_SHOVEL_ATTACK_SPEED = builder.comment("Emerald Shovel Attack Speed, must be whole number").defineInRange("EMERALD_SHOVEL_ATTACK_SPEED", 2, 0, 1000);
+
         EMERALD_SWORD_DAMAGE = builder.comment("Emerald Sword Damage").defineInRange("EMERALD_SWORD_DAMAGE", 24, 0, 1000);
         EMERALD_SWORD_DURABILITY = builder.comment("Emerald Sword Durability").defineInRange("EMERALD_SWORD_DURABILITY", 1300, 0, 10000);
         EMERALD_SWORD_HIT_COST = builder.comment("How much durability a Emerald sword loses when an entity is hit").defineInRange("EMERALD_SWORD_HIT_COST", 1, 0, 10000);
@@ -910,24 +1022,28 @@ public class DZConfig {
         EMERALD_SWORD_ENCHANTABILITY = builder.comment("Emerald Sword Encahntability").defineInRange("EMERALD_SWORD_ENCHANTABILITY", 70, 0, 1000);
         EMERALD_SWORD_EFFICIENCY = builder.comment("Emerald Sword Efficiency").defineInRange("EMERALD_SWORD_EFFICIENCY", 10, 0, 1000);
         EMERALD_SWORD_ATTACK_SPEED = builder.comment("Emerald Sword Attack Speed, must be whole number").defineInRange("EMERALD_SWORD_ATTACK_SPEED", 2, 0, 1000);
+
         EMERALD_HELMET_DURABILITY = builder.comment("Emerald Helmet Durability").defineInRange("EMERALD_HELMET_DURABILITY", 1170, 0, 10000);
         EMERALD_HELMET_HIT_COST = builder.comment("How much durability a Emerald Helmet loses when an entity is hit").defineInRange("EMERALD_HELMET_HIT_COST", 1, 0, 10000);
         EMERALD_HELMET_ARMOR = builder.comment("How much armor the Emerald Helmet has").defineInRange("EMERALD_HELMET_ARMOR", 6, 0, 1000);
         EMERALD_HELMET_ENCHANTABILITY = builder.comment("Emerald Helmet Enchantability").defineInRange("EMERALD_HELMET_ENCHANTABILITY", 60, 0, 1000);
         EMERALD_HELMET_TOUGHNESS = builder.comment("Emerald Helmet Toughness").defineInRange("EMERALD_HELMET_TOUGHNESS", 0, 0, 1000);
         EMERALD_HELMET_KNOCK_BACK_RESISTANCE = builder.comment("Emerald Helmet Knockback Resistance").defineInRange("EMERALD_HELMET_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         EMERALD_CHESTPLATE_DURABILITY = builder.comment("Emerald Chestplate Durability").defineInRange("EMERALD_CHESTPLATE_DURABILITY", 1350, 0, 10000);
         EMERALD_CHESTPLATE_HIT_COST = builder.comment("How much durability a Emerald Chestplate loses when an entity is hit").defineInRange("EMERALD_CHESTPLATE_HIT_COST", 1, 0, 10000);
         EMERALD_CHESTPLATE_ARMOR = builder.comment("How much armor the Emerald Chestplate has").defineInRange("EMERALD_CHESTPLATE_ARMOR", 9, 0, 1000);
         EMERALD_CHESTPLATE_ENCHANTABILITY = builder.comment("Emerald Chestplate Enchantability").defineInRange("EMERALD_CHESTPLATE_ENCHANTABILITY", 6, 0, 1000);
         EMERALD_CHESTPLATE_TOUGHNESS = builder.comment("Emerald Chestplate Toughness").defineInRange("EMERALD_CHESTPLATE_TOUGHNESS", 0, 0, 1000);
         EMERALD_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Emerald Chestplate Knockback Resistance").defineInRange("EMERALD_CHESTPLATE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         EMERALD_LEGGINGS_DURABILITY = builder.comment("Emerald Leggings Durability").defineInRange("EMERALD_LEGGINGS_DURABILITY", 1440, 0, 10000);
         EMERALD_LEGGINGS_HIT_COST = builder.comment("How much durability the Emerald Leggings lose when a entity hits").defineInRange("EMERALD_LEGGINGS_HIT_COST", 1, 0, 10000);
         EMERALD_LEGGINGS_ARMOR = builder.comment("How much armor the Emerald Leggings has").defineInRange("EMERALD_LEGGINGS_ARMOR", 6, 0, 1000);
         EMERALD_LEGGINGS_ENCHANTABILITY = builder.comment("Emerald Leggings Enchantability").defineInRange("EMERALD_LEGGINGS_ENCHANTABILITY", 6, 0, 1000);
         EMERALD_LEGGINGS_TOUGHNESS = builder.comment("Emerald Leggings Toughness").defineInRange("EMERALD_LEGGINGS_TOUGHNESS", 0, 0, 1000);
         EMERALD_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Emerald Leggings Knockback Resistance").defineInRange("EMERALD_LEGGINGS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         EMERALD_BOOTS_DURABILITY = builder.comment("Emerald Boots Durability").defineInRange("EMERALD_BOOTS_DURABILITY", 990, 0, 10000);
         EMERALD_BOOTS_HIT_COST = builder.comment("How much durability the Emerald Boots lose when a entity hits").defineInRange("EMERALD_BOOTS_HIT_COST", 1, 0, 10000);
         EMERALD_BOOTS_ARMOR = builder.comment("How much armor the Emerald Boots has").defineInRange("EMERALD_BOOTS_ARMOR", 5, 0, 1000);
@@ -942,18 +1058,21 @@ public class DZConfig {
         LAPIS_HELMET_ENCHANTABILITY = builder.comment("Lapis Helmet Enchantability").defineInRange("LAPIS_HELMET_ENCHANTABILITY", 60, 0, 1000);
         LAPIS_HELMET_TOUGHNESS = builder.comment("Lapis Helmet Toughness").defineInRange("LAPIS_HELMET_TOUGHNESS", 0, 0, 1000);
         LAPIS_HELMET_KNOCK_BACK_RESISTANCE = builder.comment("Lapis Helmet Knockback Resistance").defineInRange("LAPIS_HELMET_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         LAPIS_CHESTPLATE_DURABILITY = builder.comment("Lapis Chestplate Durability").defineInRange("LAPIS_CHESTPLATE_DURABILITY", 1350, 0, 10000);
         LAPIS_CHESTPLATE_HIT_COST = builder.comment("How much durability the Lapis chestplate loses when an entity is hit").defineInRange("LAPIS_CHESTPLATE_HIT_COST", 1, 0, 10000);
         LAPIS_CHESTPLATE_ARMOR = builder.comment("How much armor the Lapis Chestplate has").defineInRange("LAPIS_CHESTPLATE_ARMOR", 3, 0, 1000);
         LAPIS_CHESTPLATE_ENCHANTABILITY = builder.comment("Lapis Chestplate Enchantability").defineInRange("LAPIS_CHESTPLATE_ENCHANTABILITY", 60, 0, 1000);
         LAPIS_CHESTPLATE_TOUGHNESS = builder.comment("Lapis Chestplate Toughness").defineInRange("LAPIS_CHESTPLATE_TOUGHNESS", 0, 0, 1000);
         LAPIS_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Lapis Chestplate Knockback Resistance").defineInRange("LAPIS_CHESTPLATE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         LAPIS_LEGGINGS_DURABILITY = builder.comment("Lapis Leggings Durability").defineInRange("LAPIS_LEGGINGS_DURABILITY", 1440, 100, 10000);
         LAPIS_LEGGINGS_HIT_COST = builder.comment("How much durability the Lapis leggings loses when an entity is hit").defineInRange("LAPIS_LEGGINGS_HIT_COST", 1, 0, 10000);
         LAPIS_LEGGINGS_ARMOR = builder.comment("How much armor the Lapis Leggings has").defineInRange("LAPIS_LEGGINGS_ARMOR", 3, 0, 1000);
         LAPIS_LEGGINGS_ENCHANTABILITY = builder.comment("Lapis Leggings Enchantability").defineInRange("LAPIS_LEGGINGS_ENCHANTABILITY", 60, 0, 1000);
         LAPIS_LEGGINGS_TOUGHNESS = builder.comment("Lapis Leggings Toughness").defineInRange("LAPIS_LEGGINGS_TOUGHNESS", 0, 0, 1000);
         LAPIS_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Lapis Leggings Knockback Resistance").defineInRange("LAPIS_LEGGINGS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         LAPIS_BOOTS_DURABILITY = builder.comment("Lapis Boots Durability").defineInRange("LAPIS_BOOTS_DURABILITY", 990, 0, 10000);
         LAPIS_BOOTS_HIT_COST = builder.comment("How much durability the Lapis boots lose when an entity hits").defineInRange("LAPIS_BOOTS_HIT_COST", 1, 0, 10000);
         LAPIS_BOOTS_ARMOR = builder.comment("How much armor the Lapis Boots has").defineInRange("LAPIS_BOOTS_ARMOR", 3, 0, 1000);
@@ -987,22 +1106,35 @@ public class DZConfig {
         SAPPHIRE_SWORD_ENCHANTABILITY = builder.comment("Sapphire Sword Encahntability").defineInRange("SAPPHIRE_SWORD_ENCHANTABILITY", 83, 0, 1000);
         SAPPHIRE_SWORD_EFFICIENCY = builder.comment("Sapphire Sword Efficiency").defineInRange("SAPPHIRE_SWORD_EFFICIENCY", 10, 0, 1000);
         SAPPHIRE_SWORD_ATTACK_SPEED = builder.comment("Sapphire Sword Attack Speed, must be whole number").defineInRange("SAPPHIRE_SWORD_ATTACK_SPEED", 2, 0, 1000);
+
         SAPPHIRE_HELMET_DURABILITY = builder.comment("Sapphire Helmet Durability").defineInRange("SAPPHIRE_HELMET_DURABILITY", 1170, 0, 10000);
         SAPPHIRE_HELMET_HIT_COST = builder.comment("How much durability the Sapphire helmet loses when an entity is hit").defineInRange("SAPPHIRE_HELMET_HIT_COST", 1, 0, 10000);
         SAPPHIRE_HELMET_ARMOR = builder.comment("Sapphire Helmet Armor").defineInRange("SAPPHIRE_HELMET_ARMOR", 3, 0, 1000);
         SAPPHIRE_HELMET_ENCHANTABILITY = builder.comment("Helmet Leggings Enchantability").defineInRange("SAPPHIRE_HELMET_ENCHANTABILITY", 40, 0, 1000);
         SAPPHIRE_HELMET_TOUGHNESS = builder.comment("Sapphire Helmet Toughness, must be a whole number").defineInRange("SAPPHIRE_HELMET_TOUGHNESS", 0, 0, 1000);
         SAPPHIRE_HELMET_KNOCK_BACK_RESISTANCE = builder.comment("Sapphire Helmet Knockback Resistance").defineInRange("SAPPHIRE_HELMET_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
         SAPPHIRE_CHESTPLATE_DURABILITY = builder.comment("Sapphire Chestplate Durability").defineInRange("SAPPHIRE_CHESTPLATE_DURABILITY", 1350, 0, 10000);
         SAPPHIRE_CHESTPLATE_HIT_COST = builder.comment("How much durability the Sapphire chestplate loses when an entity is hit").defineInRange("SAPPHIRE_CHESTPLATE_HIT_COST", 1, 0, 10000);
         SAPPHIRE_CHESTPLATE_ARMOR = builder.comment("Sapphire Chestplate Armor").defineInRange("SAPPHIRE_CHESTPLATE_ARMOR", 8, 0, 1000);
         SAPPHIRE_CHESTPLATE_ENCHANTABILITY = builder.comment("Sapphire Chestplate Enchantability").defineInRange("SAPPHIRE_CHESTPLATE_ENCHANTABILITY", 40, 0, 1000);
         SAPPHIRE_CHESTPLATE_TOUGHNESS = builder.comment("Sapphire Chestplate Toughness, must be a whole number").defineInRange("SAPPHIRE_CHESTPLATE_TOUGHNESS", 0, 0, 1000);
         SAPPHIRE_CHESTPLATES_KNOCK_BACK_RESISTANCE = builder.comment("Sapphire Chestplate Knockback Resistance").defineInRange("SAPPHIRE_CHESTPLATE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
+        SAPPHIRE_LEGGINGS_ARMOR = builder.comment("Sapphire Leggings Armor").defineInRange("SAPPHIRE_LEGGINGS_ARMOR", 7, 0, 1000);
+        SAPPHIRE_LEGGINGS_ENCHANTABILITY = builder.comment("Sapphire Leggings Enchantability").defineInRange("SAPPHIRE_LEGGINGS_ENCHANTABILITY", 40, 0, 1000);
+        SAPPHIRE_LEGGINGS_TOUGHNESS = builder.comment("Sapphire Leggings Toughness, must be a whole number").defineInRange("SAPPHIRE_LEGGINGS_TOUGHNESS", 0, 0, 1000);
+        SAPPHIRE_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Sapphire Leggings Knockback Resistance").defineInRange("SAPPHIRE_LEGGINGS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
         SAPPHIRE_LEGGINGS_DURABILITY = builder.comment("Sapphire Leggings Durability").defineInRange("SAPPHIRE_LEGGINGS_DURABILITY", 1440, 0, 10000);
         SAPPHIRE_LEGGINGS_HIT_COST = builder.comment("How much durability the Sapphire leggings lose when a entity hits").defineInRange("SAPPHIRE_LEGGINGS_HIT_COST", 1, 0, 10000);
+
+        SAPPHIRE_BOOTS_ARMOR = builder.comment("Sapphire Boots Armor").defineInRange("SAPPHIRE_BOOTS_ARMOR", 3, 0, 1000);
+        SAPPHIRE_BOOTS_ENCHANTABILITY = builder.comment("Sapphire Boots Enchantability").defineInRange("SAPPHIRE_BOOTS_ENCHANTABILITY", 40, 0, 1000);
+        SAPPHIRE_BOOTS_TOUGHNESS = builder.comment("Sapphire Boots Toughness, must be a whole number").defineInRange("SAPPHIRE_BOOTS_TOUGHNESS", 0, 0, 1000);
+        SAPPHIRE_BOOTS_KNOCK_BACK_RESISTANCE = builder.comment("Sapphire Boots Knockback Resistance").defineInRange("SAPPHIRE_BOOTS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
         SAPPHIRE_BOOTS_DURABILITY = builder.comment("Sapphire Boots Durability").defineInRange("SAPPHIRE_BOOTS_DURABILITY", 990, 0, 10000);
         SAPPHIRE_BOOTS_HIT_COST = builder.comment("How much durability the Sapphire boots lose when a entity hits").defineInRange("SAPPHIRE_BOOTS_HIT_COST", 1, 0, 10000);
+
         SAPPHIRE_AXE_DAMAGE = builder.comment("Sapphire Axe Damage").defineInRange("SAPPHIRE_AXE_DAMAGE", 18, 0, 1000);
         SAPPHIRE_AXE_DURABILITY = builder.comment("Sapphire Axe Durability").defineInRange("SAPPHIRE_AXE_DURABILITY", 1400, 0, 10000);
         SAPPHIRE_AXE_HIT_COST = builder.comment("How much durability a Sapphire axe loses when an entity is hit").defineInRange("SAPPHIRE_AXE_HIT_COST", 1, 0, 10000);
@@ -1010,6 +1142,7 @@ public class DZConfig {
         SAPPHIRE_AXE_ENCHANTABILITY = builder.comment("Sapphire Axe Encahntability").defineInRange("SAPPHIRE_AXED_ENCHANTABILITY", 83, 0, 1000);
         SAPPHIRE_AXE_EFFICIENCY = builder.comment("Sapphire Axe Efficiency").defineInRange("SAPPHIRE_AXE_EFFICIENCY", 10, 0, 1000);
         SAPPHIRE_AXE_ATTACK_SPEED = builder.comment("Sapphire Axe Attack Speed, must be whole number").defineInRange("SAPPHIRE_AXE_ATTACK_SPEED", 2, 0, 1000);
+
         SAPPHIRE_HOE_DAMAGE = builder.comment("Sapphire Hoe Damage").defineInRange("SAPPHIRE_HOE_DAMAGE", 0, 0, 1000);
         SAPPHIRE_HOE_DURABILITY = builder.comment("Sapphire Hoe Durability").defineInRange("SAPPHIRE_HOE_DURABILITY", 1400, 0, 10000);
         SAPPHIRE_HOE_HIT_COST = builder.comment("How much durability a Sapphire hoe loses when an entity is hit").defineInRange("SAPPHIRE_HOE_HIT_COST", 1, 0, 10000);
@@ -1017,6 +1150,7 @@ public class DZConfig {
         SAPPHIRE_HOE_ENCHANTABILITY = builder.comment("Sapphire Hoe Encahntability").defineInRange("SAPPHIRE_HOE_ENCHANTABILITY", 83, 0, 1000);
         SAPPHIRE_HOE_EFFICIENCY = builder.comment("Sapphire Hoe Efficiency").defineInRange("SAPPHIRE_HOE_EFFICIENCY", 10, 0, 1000);
         SAPPHIRE_HOE_ATTACK_SPEED = builder.comment("Sapphire Hoe Attack Speed, must be whole number").defineInRange("SAPPHIRE_HOE_ATTACK_SPEED", 2, 0, 1000);
+
         SAPPHIRE_SHOVEL_DAMAGE = builder.comment("Sapphire Shovel Damage").defineInRange("SAPPHIRE_SHOVEL_DAMAGE", 16, 0, 1000);
         SAPPHIRE_SHOVEL_DURABILITY = builder.comment("Sapphire Shovel Durability").defineInRange("SAPPHIRE_SHOVEL_DURABILITY", 1400, 0, 10000);
         SAPPHIRE_SHOVEL_HIT_COST = builder.comment("How much durability a Sapphire shovel loses when an entity is hit").defineInRange("SAPPHIRE_SHOVEL_HIT_COST", 1, 0, 1000);
@@ -1024,6 +1158,7 @@ public class DZConfig {
         SAPPHIRE_SHOVEL_ENCHANTABILITY = builder.comment("Sapphire Shovel Encahntability").defineInRange("SAPPHIRE_SHOVEL_ENCHANTABILITY", 83, 0, 1000);
         SAPPHIRE_SHOVEL_EFFICIENCY = builder.comment("Sapphire Shovel Efficiency").defineInRange("SAPPHIRE_SHOVEL_EFFICIENCY", 10, 0, 1000);
         SAPPHIRE_SHOVEL_ATTACK_SPEED = builder.comment("Sapphire Shovel Attack Speed, must be whole number").defineInRange("SAPPHIRE_SHOVEL_ATTACK_SPEED", 1, 0, 1000);
+
         SAPPHIRE_PICKAXE_DAMAGE = builder.comment("Sapphire Pickaxe Damage").defineInRange("SAPPHIRE_PICKAXE_DAMAGE", 17, 0, 1000);
         SAPPHIRE_PICKAXE_DURABILITY = builder.comment("Sapphire Pickaxe Durability").defineInRange("SAPPHIRE_PICKAXE_DURABILITY", 1400, 0, 10000);
         SAPPHIRE_PICKAXE_HIT_COST = builder.comment("How much durability a Sapphire pickaxe loses when an entity is hit").defineInRange("SAPPHIRE_PICKAXE_HIT_COST", 1, 0, 10000);
@@ -1031,14 +1166,6 @@ public class DZConfig {
         SAPPHIRE_PICKAXE_HARVEST_LEVEL = builder.comment("Sapphire Pickaxe Harvest Level").defineInRange("SAPPHIRE_PICKAXE_HARVEST_LEVEL", 4, 0, 1000);
         SAPPHIRE_PICKAXE_ENCHANTABILITY = builder.comment("Sapphire Pickaxe Encahntability").defineInRange("SAPPHIRE_PICKAXE_ENCHANTABILITY", 83, 0, 1000);
         SAPPHIRE_PICKAXE_EFFICIENCY = builder.comment("Sapphire Pickaxe Efficiency").defineInRange("SAPPHIRE_PICKAXE_EFFICIENCY", 10, 0, 1000);
-        SAPPHIRE_LEGGINGS_ARMOR = builder.comment("Sapphire Leggings Armor").defineInRange("SAPPHIRE_LEGGINGS_ARMOR", 7, 0, 1000);
-        SAPPHIRE_LEGGINGS_ENCHANTABILITY = builder.comment("Sapphire Leggings Enchantability").defineInRange("SAPPHIRE_LEGGINGS_ENCHANTABILITY", 40, 0, 1000);
-        SAPPHIRE_LEGGINGS_TOUGHNESS = builder.comment("Sapphire Leggings Toughness, must be a whole number").defineInRange("SAPPHIRE_LEGGINGS_TOUGHNESS", 0, 0, 1000);
-        SAPPHIRE_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Sapphire Leggings Knockback Resistance").defineInRange("SAPPHIRE_LEGGINGS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
-        SAPPHIRE_BOOTS_ARMOR = builder.comment("Sapphire Boots Armor").defineInRange("SAPPHIRE_BOOTS_ARMOR", 3, 0, 1000);
-        SAPPHIRE_BOOTS_ENCHANTABILITY = builder.comment("Sapphire Boots Enchantability").defineInRange("SAPPHIRE_BOOTS_ENCHANTABILITY", 40, 0, 1000);
-        SAPPHIRE_BOOTS_TOUGHNESS = builder.comment("Sapphire Boots Toughness, must be a whole number").defineInRange("SAPPHIRE_BOOTS_TOUGHNESS", 0, 0, 1000);
-        SAPPHIRE_BOOTS_KNOCK_BACK_RESISTANCE = builder.comment("Sapphire Boots Knockback Resistance").defineInRange("SAPPHIRE_BOOTS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
 
         builder.comment("Queen Ghidorah Scale Set Attributes");
         QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DAMAGE = builder.comment("Queen Ghidorah Scale Battle Axe Damage").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_DAMAGE", 667, 0, 10000);
@@ -1048,18 +1175,21 @@ public class DZConfig {
         QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ENCHANTABILITY = builder.comment("Queen Ghidorah Scale Battle Axe Encahntability").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ENCHANTABILITY", 10, 0, 10000);
         QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY = builder.comment("Queen Ghidorah Scale Battle Axe Efficiency").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_EFFICIENCY", 15, 0, 1000);
         QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED = builder.comment("Queen Ghidorah Scale Battle Axe Attack Speed, must be whole number").defineInRange("QUEEN_GHIDORAH_SCALE_BATTLE_AXE_ATTACK_SPEED", 1, 0, 1000);
+
         QUEEN_GHIDORAH_SCALE_CHESTPLATE_ARMOR = builder.comment("Queen Ghidorah Scale Chestplate Armor").defineInRange("QUEEN_GHIDORAH_SCALE_CHESTPLATE_ARMOR", 30, 0, 1000);
         QUEEN_GHIDORAH_SCALE_CHESTPLATE_ENCHANTABILITY = builder.comment("Queen Ghidorah Chestplate  Enchantability").defineInRange("QUEEN_GHIDORAH_SCALE_CHESTPLATE_ENCHANTABILITY", 60, 0, 100000);
         QUEEN_GHIDORAH_SCALE_CHESTPLATE_TOUGHNESS = builder.comment("Queen Ghidorah Scale Chestplate Toughness, must be a whole number").defineInRange("QUEEN_GHIDORAH_SCALE_CHESTPLATE_TOUGHNESS", 0, 0, 100000);
         QUEEN_GHIDORAH_SCALE_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Queen Ghidorah Scale Chestplate Knockback Resistance").defineInRange("QUEEN_GHIDORAH_SCALE_CHESTPLATE_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
         QUEEN_GHIDORAH_SCALE_CHESTPLATE_DURABILITY = builder.comment("Queen Ghidorah Scale Chestplate Durability").defineInRange("QUEEN_GHIDORAH_SCALE_CHESTPLATE_DURABILITY", 30000, 0, 100000);
         QUEEN_GHIDORAH_SCALE_CHESTPLATE_HIT_COST = builder.comment("How much durability a Queen Ghidorah Scale chestplate loses when an entity is hit").defineInRange("QUEEN_GHIDORAH_SCALE_CHESTPLATE_HIT_COST", 1, 0, 1000);
-       QUEEN_GHIDORAH_SCALE_LEGGINGS_ARMOR = builder.comment("Queen Ghidorah Scale leggings Armor").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_ARMOR", 30, 0, 1000);
+
+        QUEEN_GHIDORAH_SCALE_LEGGINGS_ARMOR = builder.comment("Queen Ghidorah Scale leggings Armor").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_ARMOR", 30, 0, 1000);
         QUEEN_GHIDORAH_SCALE_LEGGINGS_ENCHANTABILITY = builder.comment("Queen Ghidorah leggings  Enchantability").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_ENCHANTABILITY", 60, 0, 100000);
         QUEEN_GHIDORAH_SCALE_LEGGINGS_TOUGHNESS = builder.comment("Queen Ghidorah Scale leggings Toughness, must be a whole number").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_TOUGHNESS", 0, 0, 100000);
         QUEEN_GHIDORAH_SCALE_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Queen Ghidorah Scale leggings Knockback Resistance").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
         QUEEN_GHIDORAH_SCALE_LEGGINGS_DURABILITY = builder.comment("Queen Ghidorah Scale leggings Durability").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_DURABILITY", 30000, 0, 100000);
         QUEEN_GHIDORAH_SCALE_LEGGINGS_HIT_COST = builder.comment("How much durability a Queen Ghidorah Scale leggings  loses when an entity is hit").defineInRange("QUEEN_GHIDORAH_SCALE_LEGGINGS_HIT_COST", 1, 0, 1000);
+
         QUEEN_GHIDORAH_SCALE_HELMET_ARMOR = builder.comment("Queen Ghidorah Scale helmet Armor").defineInRange("QUEEN_GHIDORAH_SCALE_HELMET_ARMOR", 30, 0, 1000);
         QUEEN_GHIDORAH_SCALE_HELMET_ENCHANTABILITY = builder.comment("Queen Ghidorah helmet  Enchantability").defineInRange("QUEEN_GHIDORAH_SCALE_HELMET_ENCHANTABILITY", 60, 0, 100000);
         QUEEN_GHIDORAH_SCALE_HELMET_TOUGHNESS = builder.comment("Queen Ghidorah Scale helmet Toughness, must be a whole number").defineInRange("QUEEN_GHIDORAH_SCALE_HELMET_TOUGHNESS", 0, 0, 100000);
@@ -1084,6 +1214,7 @@ public class DZConfig {
         ALUMINIUM_AXE_ENCHANTABILITY = builder.comment("Aluminium Axe Encahntability").defineInRange("ALUMINIUM_AXE_ENCHANTABILITY", 14, 0, 1000);
         ALUMINIUM_AXE_EFFICIENCY = builder.comment("Aluminium Axe Efficiency").defineInRange("ALUMINIUM_AXE_EFFICIENCY", 6, 0, 1000);
         ALUMINIUM_AXE_ATTACK_SPEED = builder.comment("Aluminium Axe Attack Speed, must be whole number").defineInRange("ALUMINIUM_AXE_ATTACK_SPEED", 1, 0, 1000);
+
         ALUMINIUM_HOE_DAMAGE = builder.comment("Aluminium Hoe Damage").defineInRange("ALUMINIUM_HOE_DAMAGE", 1, 0, 1000);
         ALUMINIUM_HOE_DURABILITY = builder.comment("Aluminium Hoe Durability").defineInRange("ALUMINIUM_HOE_DURABILITY", 250, 0, 10000);
         ALUMINIUM_HOE_HIT_COST = builder.comment("How much durability a Aluminium hoe loses when an entity is hit").defineInRange("ALUMINIUM_HOE_HIT_COST", 1, 0, 10000);
@@ -1091,6 +1222,7 @@ public class DZConfig {
         ALUMINIUM_HOE_ENCHANTABILITY = builder.comment("Aluminium Hoe Encahntability").defineInRange("ALUMINIUM_HOE_ENCHANTABILITY", 14, 0, 1000);
         ALUMINIUM_HOE_EFFICIENCY = builder.comment("Aluminium Hoe Efficiency").defineInRange("ALUMINIUM_HOE_EFFICIENCY", 6, 0, 1000);
         ALUMINIUM_HOE_ATTACK_SPEED = builder.comment("Aluminium Hoe Attack Speed, must be whole number").defineInRange("ALUMINIUM_HOE_ATTACK_SPEED", 1, 0, 1000);
+
         ALUMINIUM_PICKAXE_DAMAGE = builder.comment("Aluminium pickaxe Damage").defineInRange("ALUMINIUM_PICKAXE_DAMAGE", 4, 0, 1000);
         ALUMINIUM_PICKAXE_DURABILITY = builder.comment("Aluminium Pickaxe Durability").defineInRange("ALUMINIUM_PICKAXE_DURABILITY", 250, 0, 10000);
         ALUMINIUM_PICKAXE_HIT_COST = builder.comment("How much durability a Aluminium pickaxe loses when an entity is hit").defineInRange("ALUMINIUM_PICKAXE_HIT_COST", 1, 0, 10000);
@@ -1098,6 +1230,7 @@ public class DZConfig {
         ALUMINIUM_PICKAXE_ENCHANTABILITY = builder.comment("Aluminium Pickaxe Encahntability").defineInRange("ALUMINIUM_PICKAXE_ENCHANTABILITY", 14, 0, 1000);
         ALUMINIUM_PICKAXE_EFFICIENCY = builder.comment("Aluminium Pickaxe Efficiency").defineInRange("ALUMINIUM_PICKAXE_EFFICIENCY", 6, 0, 1000);
         ALUMINIUM_PICKAXE_ATTACK_SPEED = builder.comment("Aluminium Pickaxe Attack Speed, must be whole number").defineInRange("ALUMINIUM_PICKAXE_ATTACK_SPEED", 1, 0, 1000);
+
         ALUMINIUM_SHOVEL_DAMAGE = builder.comment("Aluminium Shovel Damage").defineInRange("ALUMINIUM_SHOVEL_DAMAGE", 5, 0, 1000);
         ALUMINIUM_SHOVEL_DURABILITY = builder.comment("Aluminium Shovel Durability").defineInRange("ALUMINIUM_SHOVEL_DURABILITY", 250, 0, 10000);
         ALUMINIUM_SHOVEL_HIT_COST = builder.comment("How much durability a Aluminium shovel loses when an entity is hit").defineInRange("ALUMINIUM_SHOVEL_HIT_COST", 1, 0, 10000);
@@ -1133,35 +1266,10 @@ public class DZConfig {
         TITANIUM_CAKE_SWORD_EFFICIENCY = builder.comment("Titanium Cake Sword Efficiency").defineInRange("TITANIUM_CAKE_SWORD_EFFICIENCY", 6, 0, 1000);
         TITANIUM_CAKE_SWORD_ATTACK_SPEED = builder.comment("Titanium Cake Sword Attack Speed, must be whole number").defineInRange("TITANIUM_CAKE_SWORD_ATTACK_SPEED", 1, 0, 1000);
 
-        builder.push("Red Ant Spawn Chances");
-        RedAntmin = builder.defineInRange("Red Ant Min", 1, 0, 640);
-        RedAntmax = builder.defineInRange("Red Ant Max", 5, 0, 640);
-        RedAntweight = builder.defineInRange("Red Ant Weight", 7, 0, 100);
-        builder.pop();
-
-        builder.push("Red Ant Biomes Whitelist/Blacklist");
-        RedAntinclude = builder.defineList("include Red Ant", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        RedAntexclude = builder.defineList("exclude Red Ant", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
-        builder.push("Termite Spawn Chances");
-        Termitemin = builder.defineInRange("Termite Min", 1, 0, 640);
-        Termitemax = builder.defineInRange("Termite Max", 5, 0, 640);
-        Termiteweight = builder.defineInRange("Termite Weight", 6, 0, 100);
-        builder.pop();
-
-        builder.push("Termite Biomes Whitelist/Blacklist");
-        Termiteinclude = builder.defineList("include Termite", Arrays.asList(SNOWY.toString(), MOUNTAIN.toString(), MESA.toString(), FOREST.toString(), HILLS.toString(), SANDY.toString(), SAVANNA.toString(), SWAMP.toString(), BEACH.toString(), PLAINS.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        Termiteexclude = builder.defineList("exclude Termite", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
-        builder.pop();
-
         builder.push("Stair and Bridge stats");
         BRIDGE_LENGTH = builder.comment("The length of the Instant Bridge Item").defineInRange("BRIDGE_LENGTH", 32, 0, 128);
         STAIR_DEPTH = builder.comment("The length and height of the Instant Stair items").defineInRange("STAIR_DEPTH", 32, 0, 128);
         STAIR_HEIGHT = builder.comment("The length and height of the Instant Stair items").defineInRange("STAIR_HEIGHT", 32, 0, 128);
         builder.pop();
     }
-
 }
-
-

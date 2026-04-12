@@ -9,13 +9,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.IPacket;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
 import net.minecraftforge.fml.network.NetworkHooks;
 
 public class BetterFireball extends ThrowableEntity implements IRendersAsItem {
@@ -43,8 +42,7 @@ public class BetterFireball extends ThrowableEntity implements IRendersAsItem {
 			}
 
 			boolean griefing = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this.getShooter());
-			this.world.createExplosion(this, this.getPosX(), this.getPosY(), this.getPosZ(), explosionPower, true, // <--- this is causeFire
-					griefing ? Explosion.Mode.DESTROY : Explosion.Mode.NONE);
+			this.world.createExplosion(this, this.getPosX(), this.getPosY(), this.getPosZ(), explosionPower, true, griefing ? Explosion.Mode.DESTROY : Explosion.Mode.NONE);
 			this.remove();
 		}
 	}
@@ -56,16 +54,16 @@ public class BetterFireball extends ThrowableEntity implements IRendersAsItem {
 	public void tick() {
 		super.tick();
 
-		// Raytrace collision detection
+		//Raytrace collision detection
 		RayTraceResult raytraceresult = ProjectileHelper.func_234618_a_(this, this::func_230298_a_);
 		if (raytraceresult != null && raytraceresult.getType() != RayTraceResult.Type.MISS) {
 			this.onImpact(raytraceresult);
 		}
 
-		// Apply movement
+		//Apply movement
 		Vector3d motion = this.getMotion();
 		this.setPosition(this.getPosX() + motion.x, this.getPosY() + motion.y, this.getPosZ() + motion.z);
-		this.setMotion(motion.scale(0.95)); // Apply slight drag
+		this.setMotion(motion.scale(0.95)); //Apply slight drag
 	}
 
 	@Override

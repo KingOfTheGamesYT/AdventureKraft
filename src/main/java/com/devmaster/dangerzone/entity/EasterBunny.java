@@ -1,6 +1,7 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.util.RegistryHandler;
+
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -29,9 +30,9 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class EasterBunny extends RabbitEntity {
     private static final DataParameter<Integer> EASTER_BUNNY_VARIANT;
+    public int eggTime = this.rand.nextInt(450) + 450;
 
     public EasterBunny(final EntityType<? extends EasterBunny> type, final World worldIn) {
         super(type, worldIn);
@@ -89,7 +90,7 @@ public class EasterBunny extends RabbitEntity {
     }
 
     @Nullable
-    public ILivingEntityData onInitialSpawn(IServerWorld world, DifficultyInstance diff, SpawnReason spawn, @Nullable ILivingEntityData spawndata, @Nullable CompoundNBT comnbt) {
+    public ILivingEntityData onInitialSpawn(IServerWorld world, DifficultyInstance diff, SpawnReason spawn, @Nullable ILivingEntityData spawndata, @Nullable CompoundNBT nbt) {
         int x;
         if (spawndata instanceof EasterBunny.EasterBunnyData) {
             x = ((EasterBunny.EasterBunnyData)spawndata).variant;
@@ -97,9 +98,8 @@ public class EasterBunny extends RabbitEntity {
             x = this.rand.nextInt(2);
             spawndata = new EasterBunny.EasterBunnyData(x);
         }
-
         this.setEasterBunnyVariant(x);
-        return super.onInitialSpawn(world, diff, spawn, (ILivingEntityData)spawndata, comnbt);
+        return super.onInitialSpawn(world, diff, spawn, (ILivingEntityData)spawndata, nbt);
     }
 
     @Override
@@ -130,8 +130,6 @@ public class EasterBunny extends RabbitEntity {
     public boolean canDespawn(double distanceToClosestPlayer) {
         return true;
     }
-
-    public int eggTime = this.rand.nextInt(450) + 450;
 
     @Override
     public void livingTick() {

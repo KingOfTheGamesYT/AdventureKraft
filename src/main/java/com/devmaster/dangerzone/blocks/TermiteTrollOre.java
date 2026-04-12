@@ -28,7 +28,7 @@ public class TermiteTrollOre extends OreBlock {
     }
 
     private void spawnTermite(ServerWorld world, BlockPos pos) {
-            Termite termite = RegistryHandler.TERMITE.get().create(world);
+            BaseAnt termite = RegistryHandler.TERMITE.get().create(world);
             termite.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
             world.addEntity(termite);
             world.addEntity(termite);

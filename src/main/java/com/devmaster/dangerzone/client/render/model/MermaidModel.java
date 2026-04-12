@@ -1,6 +1,6 @@
-package com.devmaster.dangerzone.client.render.model;// Made with Blockbench 4.2.5
+package com.devmaster.dangerzone.client.render.model;
+// Made with Blockbench 4.2.5
 // Exported for Minecraft version 1.15 - 1.16 with MCP mappings
-// Paste this class into your mod and generate all required imports
 
 import com.devmaster.dangerzone.entity.Mermaid;
 
@@ -9,7 +9,6 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.util.math.MathHelper;
 
 public class MermaidModel<t> extends EntityModel<Mermaid> {
 	private final ModelRenderer mermaid;
@@ -34,12 +33,10 @@ public class MermaidModel<t> extends EntityModel<Mermaid> {
 
 		mermaid = new ModelRenderer(this);
 		mermaid.setRotationPoint(0.0F, 27.0F, -7.0F);
-		
 
 		fish = new ModelRenderer(this);
 		fish.setRotationPoint(0.0F, 0.0F, 0.0F);
 		mermaid.addChild(fish);
-		
 
 		cube_r1 = new ModelRenderer(this);
 		cube_r1.setRotationPoint(0.0F, 0.4F, 3.85F);
@@ -56,7 +53,6 @@ public class MermaidModel<t> extends EntityModel<Mermaid> {
 		tail = new ModelRenderer(this);
 		tail.setRotationPoint(2.625F, -8.9978F, 19.0353F);
 		fish.addChild(tail);
-		
 
 		cube_r3 = new ModelRenderer(this);
 		cube_r3.setRotationPoint(0.0F, 0.0F, 0.0F);

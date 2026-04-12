@@ -1,7 +1,7 @@
 package com.devmaster.dangerzone.items;
 
-
 import com.devmaster.dangerzone.misc.DangerZone;
+
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -52,9 +52,7 @@ public class MinersDreamItem extends Item {
 							world.setBlockState(topPos, COBBLESTONE.getDefaultState());
 						}
 
-
 						if (world.getBlockState(newPos).isIn(DangerZone.MINERS_DREAM_MINEABLE)) {
-
 
 							world.setBlockState(newPos, AIR.getDefaultState());
 							if(x == 0 && y == 0 && z % 5 == 0) {

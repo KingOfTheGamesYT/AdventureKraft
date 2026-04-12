@@ -1,11 +1,12 @@
-package com.devmaster.dangerzone.client.render.model;// Made with Blockbench 4.3.1
+package com.devmaster.dangerzone.client.render.model;
+// Made with Blockbench 4.3.1
 // Exported for Minecraft version 1.15 - 1.16 with MCP mappings
-// Paste this class into your mod and generate all required imports
-
 
 import com.devmaster.dangerzone.entity.Ent;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.CreatureEntity;
@@ -44,7 +45,6 @@ public class EntModel<E extends CreatureEntity> extends EntityModel<Ent> {
 
 		body = new ModelRenderer(this);
 		body.setRotationPoint(0.0F, 24.0F, 0.0F);
-		
 
 		cube_r1 = new ModelRenderer(this);
 		cube_r1.setRotationPoint(0.0F, 0.0F, 1.9F);
@@ -80,7 +80,6 @@ public class EntModel<E extends CreatureEntity> extends EntityModel<Ent> {
 		left_leg.setRotationPoint(2.9F, -33.0F, 3.1F);
 		body.addChild(left_leg);
 		setRotationAngle(left_leg, 0.0385F, -0.2148F, -0.1787F);
-		
 
 		cube_r6 = new ModelRenderer(this);
 		cube_r6.setRotationPoint(-10.2F, 33.0F, -2.8F);
@@ -97,7 +96,6 @@ public class EntModel<E extends CreatureEntity> extends EntityModel<Ent> {
 		left_foot = new ModelRenderer(this);
 		left_foot.setRotationPoint(0.1F, 23.1F, 0.7F);
 		left_leg.addChild(left_foot);
-		
 
 		foot_r1 = new ModelRenderer(this);
 		foot_r1.setRotationPoint(-10.3F, 9.9F, -3.5F);
@@ -109,7 +107,6 @@ public class EntModel<E extends CreatureEntity> extends EntityModel<Ent> {
 		right_leg.setRotationPoint(-2.9F, -33.0F, 3.1F);
 		body.addChild(right_leg);
 		setRotationAngle(right_leg, 0.0385F, 0.2148F, 0.1787F);
-		
 
 		cube_r8 = new ModelRenderer(this);
 		cube_r8.setRotationPoint(10.2F, 33.0F, -2.8F);
@@ -126,7 +123,6 @@ public class EntModel<E extends CreatureEntity> extends EntityModel<Ent> {
 		right_foot = new ModelRenderer(this);
 		right_foot.setRotationPoint(-0.1F, 23.1F, 0.7F);
 		right_leg.addChild(right_foot);
-		
 
 		foot_r2 = new ModelRenderer(this);
 		foot_r2.setRotationPoint(10.3F, 9.9F, -3.5F);
@@ -137,7 +133,6 @@ public class EntModel<E extends CreatureEntity> extends EntityModel<Ent> {
 		head = new ModelRenderer(this);
 		head.setRotationPoint(0.0F, -45.6F, -2.6F);
 		body.addChild(head);
-		
 
 		cube_r10 = new ModelRenderer(this);
 		cube_r10.setRotationPoint(0.0F, 45.6F, 4.5F);
@@ -156,7 +151,6 @@ public class EntModel<E extends CreatureEntity> extends EntityModel<Ent> {
 		left_arm.setRotationPoint(7.6F, -42.5F, 0.4F);
 		body.addChild(left_arm);
 		setRotationAngle(left_arm, 0.0F, 0.0F, -0.5236F);
-		
 
 		cube_r12 = new ModelRenderer(this);
 		cube_r12.setRotationPoint(-7.6F, 42.5F, 1.5F);
@@ -174,7 +168,6 @@ public class EntModel<E extends CreatureEntity> extends EntityModel<Ent> {
 		right_arm.setRotationPoint(-7.6F, -42.5F, 0.4F);
 		body.addChild(right_arm);
 		setRotationAngle(right_arm, 0.0F, 0.0F, 0.5236F);
-		
 
 		cube_r14 = new ModelRenderer(this);
 		cube_r14.setRotationPoint(7.6F, 42.5F, 1.5F);
@@ -197,8 +190,6 @@ public class EntModel<E extends CreatureEntity> extends EntityModel<Ent> {
 		this.left_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 		this.right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
 	}
-
-
 
 	@Override
 	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){

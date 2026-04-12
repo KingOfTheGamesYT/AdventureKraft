@@ -3,11 +3,8 @@ package com.devmaster.dangerzone.items;
 import com.devmaster.dangerzone.configs.DZConfig;
 import com.devmaster.dangerzone.misc.DangerZone;
 
-import com.devmaster.dangerzone.util.RegistryHandler;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.item.ExperienceBottleEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -20,8 +17,6 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.event.entity.player.AttackEntityEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import java.util.List;
 
@@ -63,7 +58,6 @@ public class ExperienceScythe extends SwordItem {
             ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)entity;
         }
     }
-
 
     public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker, World world, PlayerEntity player) {
 

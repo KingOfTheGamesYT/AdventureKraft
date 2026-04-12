@@ -3,8 +3,10 @@ package com.devmaster.dangerzone.client.render;
 import com.devmaster.dangerzone.client.render.model.WaterProjectileModel;
 import com.devmaster.dangerzone.entity.WaterProjectile;
 import com.devmaster.dangerzone.misc.DangerZone;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderer;
@@ -16,7 +18,6 @@ public class WaterProjectileRender <T extends WaterProjectile> extends EntityRen
 
     private static final ResourceLocation TEXTURE = new ResourceLocation(DangerZone.MOD_ID, "textures/entity/water_projectile.png");
     private static final float SCALE = 0.8F;
-
     protected WaterProjectileModel<T> entityModel;
 
     public WaterProjectileRender(final EntityRendererManager renderManagerIn) {
@@ -25,8 +26,7 @@ public class WaterProjectileRender <T extends WaterProjectile> extends EntityRen
     }
 
     @Override
-    public void render(final T entityIn, final float rotationYawIn, final float ageInTicks, final MatrixStack matrixStackIn,
-                       final IRenderTypeBuffer bufferIn, final int packedLightIn) {
+    public void render(final T entityIn, final float rotationYawIn, final float ageInTicks, final MatrixStack matrixStackIn, final IRenderTypeBuffer bufferIn, final int packedLightIn) {
         matrixStackIn.push();
         matrixStackIn.scale(SCALE, -SCALE, SCALE);
         final IVertexBuilder vertexBuilder = bufferIn.getBuffer(RenderType.getEntityCutoutNoCull(getEntityTexture(entityIn)));
@@ -39,5 +39,4 @@ public class WaterProjectileRender <T extends WaterProjectile> extends EntityRen
     public ResourceLocation getEntityTexture(final T entity) {
         return TEXTURE;
     }
-
 }

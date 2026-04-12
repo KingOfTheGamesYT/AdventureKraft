@@ -84,7 +84,6 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 	private final ModelRenderer Spike6;
 	private final ModelRenderer Spikes7;
 
-
 	public GodzillaModel() {
 		textureWidth = 1024;
 		textureHeight = 1024;
@@ -95,420 +94,490 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 		this.LToe1.setTextureSize(1024, 1024);
 		this.LToe1.mirror = true;
 		this.setRotationAngle(this.LToe1, 0.0F, 0.7853982F, 0.0F);
+
 		this.LToe3 = new ModelRenderer(this, 0, 955);
 		this.LToe3.addBox(-8.0F, -8.0F, -26.0F, 16, 16, 30);
 		this.LToe3.setRotationPoint(54.0F, 16.0F, 6.0F);
 		this.LToe3.setTextureSize(1024, 1024);
 		this.LToe3.mirror = true;
 		this.setRotationAngle(this.LToe3, 0.0F, 0.7853982F, 0.0F);
+
 		this.LToe2 = new ModelRenderer(this, 0, 1002);
 		this.LToe2.addBox(-7.0F, -6.0F, -34.0F, 14, 14, 8);
 		this.LToe2.setRotationPoint(54.0F, 16.0F, 6.0F);
 		this.LToe2.setTextureSize(1024, 1024);
 		this.LToe2.mirror = true;
 		this.setRotationAngle(this.LToe2, 0.0F, 0.7853982F, 0.0F);
+
 		this.LToe9 = new ModelRenderer(this, 0, 955);
 		this.LToe9.addBox(-8.0F, -8.0F, -26.0F, 16, 16, 30);
 		this.LToe9.setRotationPoint(54.0F, 16.0F, 6.0F);
 		this.LToe9.setTextureSize(1024, 1024);
 		this.LToe9.mirror = true;
 		this.setRotationAngle(this.LToe9, 0.0F, -0.7853982F, 0.0F);
+
 		this.LToe8 = new ModelRenderer(this, 0, 1002);
 		this.LToe8.addBox(-7.0F, -6.0F, -34.0F, 14, 14, 8);
 		this.LToe8.setRotationPoint(54.0F, 16.0F, 6.0F);
 		this.LToe8.setTextureSize(1024, 1024);
 		this.LToe8.mirror = true;
 		this.setRotationAngle(this.LToe8, 0.0F, -0.7853982F, 0.0F);
+
 		this.LToe7 = new ModelRenderer(this, 45, 1002);
 		this.LToe7.addBox(-5.0F, -2.0F, -40.0F, 10, 10, 6);
 		this.LToe7.setRotationPoint(54.0F, 16.0F, 6.0F);
 		this.LToe7.setTextureSize(1024, 1024);
 		this.LToe7.mirror = true;
 		this.setRotationAngle(this.LToe7, 0.0F, -0.7853982F, 0.0F);
+
 		this.LToe6 = new ModelRenderer(this, 92, 955);
 		this.LToe6.addBox(-8.0F, -8.0F, -26.0F, 16, 16, 36);
 		this.LToe6.setRotationPoint(54.0F, 16.0F, 6.0F);
 		this.LToe6.setTextureSize(1024, 1024);
 		this.LToe6.mirror = true;
 		this.setRotationAngle(this.LToe6, 0.0F, 0.0F, 0.0F);
+
 		this.LToe5 = new ModelRenderer(this, 0, 1002);
 		this.LToe5.addBox(-7.0F, -6.0F, -34.0F, 14, 14, 8);
 		this.LToe5.setRotationPoint(54.0F, 16.0F, 6.0F);
 		this.LToe5.setTextureSize(1024, 1024);
 		this.LToe5.mirror = true;
 		this.setRotationAngle(this.LToe5, 0.0F, 0.0F, 0.0F);
+
 		this.LToe4 = new ModelRenderer(this, 45, 1002);
 		this.LToe4.addBox(-5.0F, -2.0F, -40.0F, 10, 10, 6);
 		this.LToe4.setRotationPoint(54.0F, 16.0F, 6.0F);
 		this.LToe4.setTextureSize(1024, 1024);
 		this.LToe4.mirror = true;
 		this.setRotationAngle(this.LToe4, 0.0F, 0.0F, 0.0F);
+
 		this.RToe9 = new ModelRenderer(this, 0, 955);
 		this.RToe9.addBox(-8.0F, -8.0F, -26.0F, 16, 16, 30);
 		this.RToe9.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RToe9.setTextureSize(1024, 1024);
 		this.RToe9.mirror = true;
 		this.setRotationAngle(this.RToe9, 0.0F, 0.7853982F, 0.0F);
+
 		this.RToe6 = new ModelRenderer(this, 92, 955);
 		this.RToe6.addBox(-8.0F, -8.0F, -26.0F, 16, 16, 36);
 		this.RToe6.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RToe6.setTextureSize(1024, 1024);
 		this.RToe6.mirror = true;
 		this.setRotationAngle(this.RToe6, 0.0F, 0.0F, 0.0F);
+
 		this.RToe5 = new ModelRenderer(this, 0, 1002);
 		this.RToe5.addBox(-7.0F, -6.0F, -34.0F, 14, 14, 8);
 		this.RToe5.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RToe5.setTextureSize(1024, 1024);
 		this.RToe5.mirror = true;
 		this.setRotationAngle(this.RToe5, 0.0F, 0.0F, 0.0F);
+
 		this.RToe2 = new ModelRenderer(this, 0, 1002);
 		this.RToe2.addBox(-7.0F, -6.0F, -34.0F, 14, 14, 8);
 		this.RToe2.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RToe2.setTextureSize(1024, 1024);
 		this.RToe2.mirror = true;
 		this.setRotationAngle(this.RToe2, 0.0F, -0.7853982F, 0.0F);
+
 		this.RToe1 = new ModelRenderer(this, 45, 1002);
 		this.RToe1.addBox(-5.0F, -2.0F, -40.0F, 10, 10, 6);
 		this.RToe1.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RToe1.setTextureSize(1024, 1024);
 		this.RToe1.mirror = true;
 		this.setRotationAngle(this.RToe1, 0.0F, -0.7853982F, 0.0F);
+
 		this.RToe4 = new ModelRenderer(this, 45, 1002);
 		this.RToe4.addBox(-5.0F, -2.0F, -40.0F, 10, 10, 6);
 		this.RToe4.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RToe4.setTextureSize(1024, 1024);
 		this.RToe4.mirror = true;
 		this.setRotationAngle(this.RToe4, 0.0F, 0.0F, 0.0F);
+
 		this.RToe7 = new ModelRenderer(this, 45, 1002);
 		this.RToe7.addBox(-5.0F, -2.0F, -40.0F, 10, 10, 6);
 		this.RToe7.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RToe7.setTextureSize(1024, 1024);
 		this.RToe7.mirror = true;
 		this.setRotationAngle(this.RToe7, 0.0F, 0.7853982F, 0.0F);
+
 		this.RToe8 = new ModelRenderer(this, 0, 1002);
 		this.RToe8.addBox(-7.0F, -6.0F, -34.0F, 14, 14, 8);
 		this.RToe8.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RToe8.setTextureSize(1024, 1024);
 		this.RToe8.mirror = true;
 		this.setRotationAngle(this.RToe8, 0.0F, 0.7853982F, 0.0F);
+
 		this.RToe3 = new ModelRenderer(this, 0, 955);
 		this.RToe3.addBox(-8.0F, -8.0F, -26.0F, 16, 16, 30);
 		this.RToe3.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RToe3.setTextureSize(1024, 1024);
 		this.RToe3.mirror = true;
 		this.setRotationAngle(this.RToe3, 0.0F, -0.7853982F, 0.0F);
+
 		this.LThigh = new ModelRenderer(this, 192, 350);
 		this.LThigh.addBox(0.0F, -14.0F, -21.0F, 28, 28, 42);
 		this.LThigh.setRotationPoint(40.0F, -91.0F, 2.0F);
 		this.LThigh.setTextureSize(1024, 1024);
 		this.LThigh.mirror = true;
 		this.setRotationAngle(this.LThigh, -0.5585054F, 0.0F, 0.0F);
+
 		this.LLowerLeg = new ModelRenderer(this, 202, 556);
 		this.LLowerLeg.addBox(-15.0F, -62.0F, -15.0F, 30, 62, 30);
 		this.LLowerLeg.setRotationPoint(54.0F, 14.0F, 6.0F);
 		this.LLowerLeg.setTextureSize(1024, 1024);
 		this.LLowerLeg.mirror = true;
 		this.setRotationAngle(this.LLowerLeg, 0.1745329F, -0.1308997F, 0.0F);
+
 		this.LUpperLeg = new ModelRenderer(this, 152, 420);
 		this.LUpperLeg.addBox(-16.0F, -52.0F, -16.0F, 32, 52, 32);
 		this.LUpperLeg.setRotationPoint(56.0F, -36.0F, -5.0F);
 		this.LUpperLeg.setTextureSize(1024, 1024);
 		this.LUpperLeg.mirror = true;
 		this.setRotationAngle(this.LUpperLeg, -0.1745329F, -0.3926991F, -0.0872665F);
+
 		this.TailTip = new ModelRenderer(this, 0, 694);
 		this.TailTip.addBox(-6.0F, 0.0F, -5.0F, 12, 21, 10);
 		this.TailTip.setRotationPoint(0.0F, 18.0F, 203.0F);
 		this.TailTip.setTextureSize(1024, 1024);
 		this.TailTip.mirror = true;
 		this.setRotationAngle(this.TailTip, 1.53589F, 0.0F, 0.0F);
+
 		this.RLegLower = new ModelRenderer(this, 200, 646);
 		this.RLegLower.addBox(-15.0F, -62.0F, -15.0F, 30, 62, 30);
 		this.RLegLower.setRotationPoint(-54.0F, 16.0F, 6.0F);
 		this.RLegLower.setTextureSize(1024, 1024);
 		this.RLegLower.mirror = true;
 		this.setRotationAngle(this.RLegLower, 0.1745329F, 0.1308997F, 0.0F);
+
 		this.RLegUpper = new ModelRenderer(this, 152, 420);
 		this.RLegUpper.addBox(-16.0F, -52.0F, -16.0F, 32, 52, 32);
 		this.RLegUpper.setRotationPoint(-56.0F, -36.0F, -5.0F);
 		this.RLegUpper.setTextureSize(1024, 1024);
 		this.RLegUpper.mirror = true;
 		this.setRotationAngle(this.RLegUpper, -0.1745329F, 0.3926991F, 0.0872665F);
+
 		this.RThigh = new ModelRenderer(this, 192, 350);
 		this.RThigh.addBox(-28.0F, -14.0F, -21.0F, 28, 28, 42);
 		this.RThigh.setRotationPoint(-40.0F, -91.0F, 2.0F);
 		this.RThigh.setTextureSize(1024, 1024);
 		this.RThigh.mirror = true;
 		this.setRotationAngle(this.RThigh, -0.5585054F, 0.0F, 0.0F);
+
 		this.LowerJaw = new ModelRenderer(this, 272, 0);
 		this.LowerJaw.addBox(-13.0F, -5.0F, -50.0F, 26, 11, 50);
 		this.LowerJaw.setRotationPoint(0.0F, -142.0F, -109.0F);
 		this.LowerJaw.setTextureSize(1024, 1024);
 		this.LowerJaw.mirror = true;
 		this.setRotationAngle(this.LowerJaw, 0.5235988F, 0.0F, 0.0F);
+
 		this.TailBase = new ModelRenderer(this, 0, 240);
 		this.TailBase.addBox(-32.0F, 0.0F, -29.0F, 64, 40, 58);
 		this.TailBase.setRotationPoint(0.0F, -73.0F, 26.0F);
 		this.TailBase.setTextureSize(1024, 1024);
 		this.TailBase.mirror = true;
 		this.setRotationAngle(this.TailBase, 0.7853982F, 0.0F, 0.0F);
+
 		this.Tail2 = new ModelRenderer(this, 0, 338);
 		this.Tail2.addBox(-25.0F, 0.0F, -23.0F, 50, 36, 46);
 		this.Tail2.setRotationPoint(0.0F, -48.0F, 48.0F);
 		this.Tail2.setTextureSize(1024, 1024);
 		this.Tail2.mirror = true;
 		this.setRotationAngle(this.Tail2, 0.6981317F, 0.0F, 0.0F);
+
 		this.Tail3 = new ModelRenderer(this, 0, 420);
 		this.Tail3.addBox(-20.0F, 0.0F, -18.0F, 40, 36, 36);
 		this.Tail3.setRotationPoint(0.0F, -24.0F, 66.0F);
 		this.Tail3.setTextureSize(1024, 1024);
 		this.Tail3.mirror = true;
 		this.setRotationAngle(this.Tail3, 0.8726646F, 0.0F, 0.0F);
+
 		this.Tail4 = new ModelRenderer(this, 0, 492);
 		this.Tail4.addBox(-16.0F, 0.0F, -14.0F, 32, 42, 28);
 		this.Tail4.setRotationPoint(0.0F, -3.0F, 87.0F);
 		this.Tail4.setTextureSize(1024, 1024);
 		this.Tail4.mirror = true;
 		this.setRotationAngle(this.Tail4, 1.134464F, 0.0F, 0.0F);
+
 		this.Tail5 = new ModelRenderer(this, 0, 556);
 		this.Tail5.addBox(-13.0F, 0.0F, -11.0F, 26, 42, 22);
 		this.Tail5.setRotationPoint(0.0F, 12.0F, 116.0F);
 		this.Tail5.setTextureSize(1024, 1024);
 		this.Tail5.mirror = true;
 		this.setRotationAngle(this.Tail5, 1.53589F, 0.0F, 0.0F);
+
 		this.Tail6 = new ModelRenderer(this, 0, 614);
 		this.Tail6.addBox(-10.0F, 0.0F, -9.0F, 20, 32, 18);
 		this.Tail6.setRotationPoint(0.0F, 14.0F, 154.0F);
 		this.Tail6.setTextureSize(1024, 1024);
 		this.Tail6.mirror = true;
 		this.setRotationAngle(this.Tail6, 1.53589F, 0.0F, 0.0F);
+
 		this.Tail7 = new ModelRenderer(this, 0, 658);
 		this.Tail7.addBox(-8.0F, 0.0F, -7.0F, 16, 22, 14);
 		this.Tail7.setRotationPoint(0.0F, 16.0F, 185.0F);
 		this.Tail7.setTextureSize(1024, 1024);
 		this.Tail7.mirror = true;
 		this.setRotationAngle(this.Tail7, 1.53589F, 0.0F, 0.0F);
+
 		this.BodyBottom = new ModelRenderer(this, 0, 104);
 		this.BodyBottom.addBox(-40.0F, 0.0F, -36.0F, 80, 64, 72);
 		this.BodyBottom.setRotationPoint(0.0F, -112.0F, -20.0F);
 		this.BodyBottom.setTextureSize(1024, 1024);
 		this.BodyBottom.mirror = true;
 		this.setRotationAngle(this.BodyBottom, 0.8726646F, 0.0F, 0.0F);
+
 		this.RLowerArm = new ModelRenderer(this, 245, 240);
 		this.RLowerArm.addBox(-48.0F, -11.0F, -11.0F, 48, 22, 22);
 		this.RLowerArm.setRotationPoint(-80.0F, -115.0F, -61.0F);
 		this.RLowerArm.setTextureSize(1024, 1024);
 		this.RLowerArm.mirror = true;
 		this.setRotationAngle(this.RLowerArm, 0.0F, -0.7853982F, -0.2617994F);
+
 		this.BodyCenter = new ModelRenderer(this, 0, 0);
 		this.BodyCenter.addBox(-36.0F, -32.0F, -32.0F, 72, 40, 64);
 		this.BodyCenter.setRotationPoint(0.0F, -112.0F, -20.0F);
 		this.BodyCenter.setTextureSize(1024, 1024);
 		this.BodyCenter.mirror = true;
 		this.setRotationAngle(this.BodyCenter, 1.134464F, 0.0F, 0.0F);
+
 		this.Neck = new ModelRenderer(this, 0, 720);
 		this.Neck.addBox(-23.0F, -23.0F, -32.0F, 46, 46, 32);
 		this.Neck.setRotationPoint(0.0F, -144.0F, -71.0F);
 		this.Neck.setTextureSize(1024, 1024);
 		this.Neck.mirror = true;
 		this.setRotationAngle(this.Neck, -0.0698132F, 0.0F, 0.0F);
+
 		this.TopJaw = new ModelRenderer(this, 0, 892);
 		this.TopJaw.addBox(-14.0F, -8.0F, -73.0F, 28, 26, 33);
 		this.TopJaw.setRotationPoint(0.0F, -156.0F, -98.0F);
 		this.TopJaw.setTextureSize(1024, 1024);
 		this.TopJaw.mirror = true;
 		this.setRotationAngle(this.TopJaw, 0.0872665F, 0.0F, 0.0F);
+
 		this.Head = new ModelRenderer(this, 0, 808);
 		this.Head.addBox(-17.0F, -18.0F, -40.0F, 34, 36, 40);
 		this.Head.setRotationPoint(0.0F, -156.0F, -98.0F);
 		this.Head.setTextureSize(1024, 1024);
 		this.Head.mirror = true;
 		this.setRotationAngle(this.Head, 0.0872665F, 0.0F, 0.0F);
+
 		this.BodyTop = new ModelRenderer(this, 0, 0);
 		this.BodyTop.addBox(-36.0F, -32.0F, -32.0F, 72, 40, 64);
 		this.BodyTop.setRotationPoint(0.0F, -126.0F, -50.0F);
 		this.BodyTop.setTextureSize(1024, 1024);
 		this.BodyTop.mirror = true;
 		this.setRotationAngle(this.BodyTop, 1.308997F, 0.0F, 0.0F);
+
 		this.RShoulder = new ModelRenderer(this, 304, 96);
 		this.RShoulder.addBox(-16.0F, -32.0F, -32.0F, 16, 42, 46);
 		this.RShoulder.setRotationPoint(-36.0F, -130.0F, -42.0F);
 		this.RShoulder.setTextureSize(1024, 1024);
 		this.RShoulder.mirror = true;
 		this.setRotationAngle(this.RShoulder, 1.308997F, 0.0F, 0.0F);
+
 		this.RThumbTip = new ModelRenderer(this, 422, 18);
 		this.RThumbTip.addBox(5.0F, 1.0F, -43.0F, 8, 8, 12);
 		this.RThumbTip.setRotationPoint(-115.0F, -100.0F, -99.0F);
 		this.RThumbTip.setTextureSize(1024, 1024);
 		this.RThumbTip.mirror = true;
 		this.setRotationAngle(this.RThumbTip, 0.0F, 0.0F, 0.0F);
+
 		this.RUpperArm = new ModelRenderer(this, 304, 184);
 		this.RUpperArm.addBox(-54.0F, -13.0F, -13.0F, 54, 26, 26);
 		this.RUpperArm.setRotationPoint(-38.0F, -130.0F, -52.0F);
 		this.RUpperArm.setTextureSize(1024, 1024);
 		this.RUpperArm.mirror = true;
 		this.setRotationAngle(this.RUpperArm, 0.0F, -0.2617994F, -0.3490659F);
+
 		this.RHand = new ModelRenderer(this, 245, 292);
 		this.RHand.addBox(-13.0F, -13.0F, -13.0F, 26, 26, 26);
 		this.RHand.setRotationPoint(-115.0F, -100.0F, -99.0F);
 		this.RHand.setTextureSize(1024, 1024);
 		this.RHand.mirror = true;
 		this.setRotationAngle(this.RHand, -1.071467F, 2.007129F, 0.1745329F);
+
 		this.RThumbBase = new ModelRenderer(this, 424, 57);
 		this.RThumbBase.addBox(2.0F, 1.0F, -32.0F, 8, 8, 20);
 		this.RThumbBase.setRotationPoint(-115.0F, -100.0F, -99.0F);
 		this.RThumbBase.setTextureSize(1024, 1024);
 		this.RThumbBase.mirror = true;
 		this.setRotationAngle(this.RThumbBase, 0.0F, -0.1047198F, 0.0F);
+
 		this.R3rdFingerTip = new ModelRenderer(this, 422, 18);
 		this.R3rdFingerTip.addBox(-10.0F, 0.0F, -41.0F, 8, 8, 12);
 		this.R3rdFingerTip.setRotationPoint(-115.0F, -100.0F, -99.0F);
 		this.R3rdFingerTip.setTextureSize(1024, 1024);
 		this.R3rdFingerTip.mirror = true;
 		this.setRotationAngle(this.R3rdFingerTip, 0.0F, 0.6806784F, 0.0F);
+
 		this.R3rdFingerBase = new ModelRenderer(this, 424, 57);
 		this.R3rdFingerBase.addBox(-11.0F, -3.0F, -30.0F, 8, 8, 20);
 		this.R3rdFingerBase.setRotationPoint(-115.0F, -100.0F, -99.0F);
 		this.R3rdFingerBase.setTextureSize(1024, 1024);
 		this.R3rdFingerBase.mirror = true;
 		this.setRotationAngle(this.R3rdFingerBase, 0.122173F, 0.6457718F, 0.0F);
+
 		this.RIndexTip = new ModelRenderer(this, 422, 18);
 		this.RIndexTip.addBox(-4.0F, -12.0F, -43.0F, 8, 8, 12);
 		this.RIndexTip.setRotationPoint(-115.0F, -100.0F, -99.0F);
 		this.RIndexTip.setTextureSize(1024, 1024);
 		this.RIndexTip.mirror = true;
 		this.setRotationAngle(this.RIndexTip, -0.2094395F, 0.1745329F, 0.0F);
+
 		this.RIndexBase = new ModelRenderer(this, 424, 57);
 		this.RIndexBase.addBox(-4.0F, -9.0F, -34.0F, 8, 8, 20);
 		this.RIndexBase.setRotationPoint(-115.0F, -100.0F, -99.0F);
 		this.RIndexBase.setTextureSize(1024, 1024);
 		this.RIndexBase.mirror = true;
 		this.setRotationAngle(this.RIndexBase, -0.2792527F, 0.1570796F, 0.0F);
+
 		this.LShoulder = new ModelRenderer(this, 304, 96);
 		this.LShoulder.addBox(0.0F, -32.0F, -32.0F, 16, 42, 46);
 		this.LShoulder.setRotationPoint(36.0F, -130.0F, -42.0F);
 		this.LShoulder.setTextureSize(1024, 1024);
 		this.LShoulder.mirror = true;
 		this.setRotationAngle(this.LShoulder, 1.308997F, 0.0F, 0.0F);
+
 		this.LUpperArm = new ModelRenderer(this, 304, 184);
 		this.LUpperArm.addBox(0.0F, -13.0F, -13.0F, 54, 26, 26);
 		this.LUpperArm.setRotationPoint(38.0F, -130.0F, -52.0F);
 		this.LUpperArm.setTextureSize(1024, 1024);
 		this.LUpperArm.mirror = true;
 		this.setRotationAngle(this.LUpperArm, 0.0F, 0.296706F, 0.3490659F);
+
 		this.LLowerArm = new ModelRenderer(this, 245, 240);
 		this.LLowerArm.addBox(0.0F, -11.0F, -11.0F, 48, 22, 22);
 		this.LLowerArm.setRotationPoint(80.0F, -115.0F, -61.0F);
 		this.LLowerArm.setTextureSize(1024, 1024);
 		this.LLowerArm.mirror = true;
 		this.setRotationAngle(this.LLowerArm, 0.0F, 0.7853982F, 0.2617994F);
+
 		this.LIndexBase = new ModelRenderer(this, 424, 57);
 		this.LIndexBase.addBox(-4.0F, -13.0F, -32.0F, 8, 8, 20);
 		this.LIndexBase.setRotationPoint(115.0F, -100.0F, -99.0F);
 		this.LIndexBase.setTextureSize(1024, 1024);
 		this.LIndexBase.mirror = true;
 		this.setRotationAngle(this.LIndexBase, -0.1570796F, -0.1396263F, 0.0F);
+
 		this.LIndexTip = new ModelRenderer(this, 422, 18);
 		this.LIndexTip.addBox(-1.0F, -18.0F, -41.0F, 8, 8, 12);
 		this.LIndexTip.setRotationPoint(115.0F, -100.0F, -99.0F);
 		this.LIndexTip.setTextureSize(1024, 1024);
 		this.LIndexTip.mirror = true;
 		this.setRotationAngle(this.LIndexTip, 0.0F, -0.0349066F, 0.0F);
+
 		this.LHand = new ModelRenderer(this, 245, 292);
 		this.LHand.addBox(-13.0F, -13.0F, -13.0F, 26, 26, 26);
 		this.LHand.setRotationPoint(115.0F, -100.0F, -99.0F);
 		this.LHand.setTextureSize(1024, 1024);
 		this.LHand.mirror = true;
 		this.setRotationAngle(this.LHand, 0.9599311F, 1.308997F, 0.1745329F);
+
 		this.LThumbBase = new ModelRenderer(this, 424, 57);
 		this.LThumbBase.addBox(-8.0F, -2.0F, -32.0F, 8, 8, 20);
 		this.LThumbBase.setRotationPoint(115.0F, -100.0F, -98.0F);
 		this.LThumbBase.setTextureSize(1024, 1024);
 		this.LThumbBase.mirror = true;
 		this.setRotationAngle(this.LThumbBase, 0.1396263F, 0.2617994F, 0.0F);
+
 		this.LThumbTip = new ModelRenderer(this, 422, 18);
 		this.LThumbTip.addBox(-12.0F, 2.0F, -40.0F, 8, 8, 12);
 		this.LThumbTip.setRotationPoint(115.0F, -100.0F, -99.0F);
 		this.LThumbTip.setTextureSize(1024, 1024);
 		this.LThumbTip.mirror = true;
 		this.setRotationAngle(this.LThumbTip, 0.0F, 0.1396263F, 0.0F);
+
 		this.L3rdFingerTip = new ModelRenderer(this, 422, 18);
 		this.L3rdFingerTip.addBox(9.0F, 2.0F, -42.0F, 8, 8, 12);
 		this.L3rdFingerTip.setRotationPoint(115.0F, -100.0F, -99.0F);
 		this.L3rdFingerTip.setTextureSize(1024, 1024);
 		this.L3rdFingerTip.mirror = true;
 		this.setRotationAngle(this.L3rdFingerTip, 0.0349066F, -0.3316126F, 0.0F);
+
 		this.L3rdFingerBase = new ModelRenderer(this, 424, 57);
 		this.L3rdFingerBase.addBox(4.0F, -5.0F, -33.0F, 8, 8, 20);
 		this.L3rdFingerBase.setRotationPoint(115.0F, -100.0F, -99.0F);
 		this.L3rdFingerBase.setTextureSize(1024, 1024);
 		this.L3rdFingerBase.mirror = true;
 		this.setRotationAngle(this.L3rdFingerBase, 0.2617994F, -0.4712389F, 0.0F);
+
 		this.Lspikes1 = new ModelRenderer(this, 500, 0);
 		this.Lspikes1.addBox(0.0F, -10.0F, 0.0F, 0, 10, 11);
 		this.Lspikes1.setRotationPoint(5.0F, -168.0F, -86.0F);
 		this.Lspikes1.setTextureSize(1024, 1024);
 		this.Lspikes1.mirror = true;
 		this.setRotationAngle(this.Lspikes1, -0.0872665F, 0.0F, -0.0174533F);
+
 		this.Rspikes1 = new ModelRenderer(this, 500, 0);
 		this.Rspikes1.addBox(0.0F, -10.0F, 0.0F, 0, 10, 11);
 		this.Rspikes1.setRotationPoint(-5.0F, -168.0F, -86.0F);
 		this.Rspikes1.setTextureSize(1024, 1024);
 		this.Rspikes1.mirror = true;
 		this.setRotationAngle(this.Rspikes1, -0.0872665F, 0.0F, -0.0174533F);
+
 		this.Lspike2 = new ModelRenderer(this, 500, 30);
 		this.Lspike2.addBox(0.0F, -25.0F, 0.0F, 0, 25, 21);
 		this.Lspike2.setRotationPoint(10.0F, -162.0F, -63.0F);
 		this.Lspike2.setTextureSize(1024, 1024);
 		this.Lspike2.mirror = true;
 		this.setRotationAngle(this.Lspike2, -0.2617994F, 0.0F, -0.0174533F);
+
 		this.Rspike2 = new ModelRenderer(this, 500, 30);
 		this.Rspike2.addBox(0.0F, -25.0F, 0.0F, 0, 25, 21);
 		this.Rspike2.setRotationPoint(-10.0F, -162.0F, -63.0F);
 		this.Rspike2.setTextureSize(1024, 1024);
 		this.Rspike2.mirror = true;
 		this.setRotationAngle(this.Rspike2, -0.2617994F, 0.0F, -0.0174533F);
+
 		this.Lspike3 = new ModelRenderer(this, 500, 80);
 		this.Lspike3.addBox(0.0F, -45.0F, 0.0F, 0, 45, 34);
 		this.Lspike3.setRotationPoint(14.0F, -153.0F, -32.0F);
 		this.Lspike3.setTextureSize(1024, 1024);
 		this.Lspike3.mirror = true;
 		this.setRotationAngle(this.Lspike3, -0.4363323F, 0.0F, -0.0174533F);
+
 		this.Rspike3 = new ModelRenderer(this, 500, 80);
 		this.Rspike3.addBox(0.0F, -45.0F, 0.0F, 0, 45, 34);
 		this.Rspike3.setRotationPoint(-14.0F, -153.0F, -32.0F);
 		this.Rspike3.setTextureSize(1024, 1024);
 		this.Rspike3.mirror = true;
 		this.setRotationAngle(this.Rspike3, -0.4363323F, 0.0F, -0.0174533F);
+
 		this.Lspike4 = new ModelRenderer(this, 500, 165);
 		this.Lspike4.addBox(0.0F, -50.0F, 0.0F, 0, 50, 36);
 		this.Lspike4.setRotationPoint(18.0F, -131.0F, 13.0F);
 		this.Lspike4.setTextureSize(1024, 1024);
 		this.Lspike4.mirror = true;
 		this.setRotationAngle(this.Lspike4, -0.715585F, 0.0F, -0.0174533F);
+
 		this.Rspike4 = new ModelRenderer(this, 500, 165);
 		this.Rspike4.addBox(0.0F, -50.0F, 0.0F, 0, 50, 36);
 		this.Rspike4.setRotationPoint(-18.0F, -131.0F, 13.0F);
 		this.Rspike4.setTextureSize(1024, 1024);
 		this.Rspike4.mirror = true;
 		this.setRotationAngle(this.Rspike4, -0.715585F, 0.0F, -0.0174533F);
+
 		this.Lspike5 = new ModelRenderer(this, 500, 255);
 		this.Lspike5.addBox(12.0F, -67.0F, 5.0F, 0, 39, 27);
 		this.Lspike5.setRotationPoint(0.0F, -73.0F, 26.0F);
 		this.Lspike5.setTextureSize(1024, 1024);
 		this.Lspike5.mirror = true;
 		this.setRotationAngle(this.Lspike5, -0.7853982F, 0.0F, -0.0174533F);
+
 		this.Rspike5 = new ModelRenderer(this, 500, 255);
 		this.Rspike5.addBox(-12.0F, -67.0F, 5.0F, 0, 39, 27);
 		this.Rspike5.setRotationPoint(0.0F, -73.0F, 26.0F);
 		this.Rspike5.setTextureSize(1024, 1024);
 		this.Rspike5.mirror = true;
 		this.setRotationAngle(this.Rspike5, -0.7853982F, 0.0F, -0.0174533F);
+
 		this.Spike6 = new ModelRenderer(this, 500, 325);
 		this.Spike6.addBox(0.0F, -48.0F, 11.0F, 0, 25, 21);
 		this.Spike6.setRotationPoint(0.0F, -48.0F, 48.0F);
 		this.Spike6.setTextureSize(1024, 1024);
 		this.Spike6.mirror = true;
 		this.setRotationAngle(this.Spike6, -0.8901179F, 0.0F, -0.0174533F);
+
 		this.Spikes7 = new ModelRenderer(this, 500, 376);
 		this.Spikes7.addBox(0.0F, -29.0F, 20.0F, 0, 10, 11);
 		this.Spikes7.setRotationPoint(0.0F, -24.0F, 66.0F);
@@ -527,8 +596,6 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 		float clawY = 16.0F;
 		float clawZamp = 35.0F * pscale;
 		float clawYamp = 18.0F * pscale;
-		//float spikeamp = 1.0F;
-		//float spikefreq = 1.0F;
 		float t1 = 0.0F;
 		float t2 = 0.0F;
 		if ((double)limbSwingAmount > 0.001) {
@@ -539,7 +606,6 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 			newangle2 = 0.0F;
 			newangle = 0.0F;
 			t1 = 0.0F;
-			//t2 = 0.0F;
 		}
 
 		if (t1 > 0.0F) {
@@ -560,8 +626,7 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 		this.LUpperLeg.rotationPointZ = this.LLowerLeg.rotationPointZ - (float)Math.sin((double)this.LLowerLeg.rotateAngleX) * 55.0F;
 		this.LThigh.rotateAngleX = -0.558F + newangle2 * 3.1415927F * 0.1F * limbSwingAmount;
 		this.LThigh.rotationPointZ = 2.0F + clawZamp * newangle * limbSwingAmount / 4.0F;
-		//t1 = 0.0F;
-		//t2 = 0.0F;
+
 		if ((double)limbSwingAmount > 0.001) {
 			newangle = MathHelper.cos(limbSwing * 0.75F * this.wingspeed / pscale + pi4 * 4.0F);
 			newangle2 = MathHelper.cos(limbSwing * 0.75F * this.wingspeed / pscale + pi4 * 5.0F);
@@ -569,7 +634,6 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 		} else {
 			newangle = 0.0F;
 			t1 = 0.0F;
-			//t2 = 0.0F;
 		}
 
 		if (t1 > 0.0F) {
@@ -592,15 +656,12 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 		this.RThigh.rotationPointZ = 2.0F + clawZamp * newangle * limbSwingAmount / 4.0F;
 		this.LToe2.rotateAngleX = this.LToe3.rotateAngleX = this.LToe4.rotateAngleX = this.LToe5.rotateAngleX = this.LToe6.rotateAngleX = this.LToe7.rotateAngleX = this.LToe8.rotateAngleX = this.LToe9.rotateAngleX = this.LToe1.rotateAngleX = 0.0F;
 		this.RToe2.rotateAngleX = this.RToe3.rotateAngleX = this.RToe4.rotateAngleX = this.RToe5.rotateAngleX = this.RToe6.rotateAngleX = this.RToe7.rotateAngleX = this.RToe8.rotateAngleX = this.RToe9.rotateAngleX = this.RToe1.rotateAngleX = 0.0F;
-		//if (entityIn.getAttacking() != 0) {
-		//	newangle = MathHelper.cos(limbSwingAmount * this.wingspeed * 1.75F) * 3.1415927F * 0.2F;
-		//} else {
+
 		{
 			newangle = MathHelper.cos(limbSwing * this.wingspeed * 0.75F) * 3.1415927F * 0.05F;
 		}
 
 		this.doTail(newangle);
-		//newangle = (float)Math.toRadians((double)ageInTicks) * 0.55F;
 		this.Head.rotateAngleY = newangle;
 		this.TopJaw.rotateAngleY = newangle;
 		this.LowerJaw.rotateAngleY = newangle;
@@ -608,14 +669,9 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 		this.LowerJaw.rotationPointX = this.Head.rotationPointX - (float)Math.sin((double)this.Head.rotateAngleY) * 11.0F;
 		this.TopJaw.rotateAngleX = this.Head.rotateAngleX = (float)Math.toRadians((double)netHeadYaw);
 		newangle = MathHelper.cos(limbSwing * this.wingspeed * 1.5F) * 3.1415927F * 0.12F;
-	//	float newrf1 = limbSwingAmount * 1.5F * this.wingspeed % 6.2831855F;
-	//	newrf1 = Math.abs(newrf1);
 
 		this.LowerJaw.rotateAngleX = 0.52F + newangle + this.TopJaw.rotateAngleX;
 		newangle = newangle2 = MathHelper.sin(limbSwing * this.wingspeed * 1.75F) * 3.1415927F * 0.16F;
-		//newrf1 = limbSwingAmount * 1.75F * this.wingspeed % 6.2831855F;
-	//	newrf1 = Math.abs(newrf1);
-
 
 		this.LUpperArm.rotateAngleY = 0.65F + newangle;
 		this.LLowerArm.rotateAngleY = 0.78F + newangle * 3.0F / 2.0F;
@@ -660,7 +716,6 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 		this.R3rdFingerTip.rotateAngleY = 0.68F - newangle2 * 3.0F;
 		this.R3rdFingerBase.rotateAngleY = 0.645F - newangle2 * 3.0F;
 	}
-
 
 	@Override
 	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
@@ -742,8 +797,6 @@ public class GodzillaModel<G extends CreatureEntity> extends EntityModel<Godzill
 		modelRenderer.rotateAngleY = y;
 		modelRenderer.rotateAngleZ = z;
 	}
-
-
 
 	private void doTail(float angle) {
 		this.TailBase.rotateAngleY = angle * 0.25F;

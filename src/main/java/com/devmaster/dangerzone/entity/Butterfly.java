@@ -65,7 +65,6 @@ public class Butterfly extends CreatureEntity {
         super.readAdditional(compound);
         this.setButterflyVariant(compound.getInt("Variant"));
         this.dataManager.set(FLYING, compound.getByte("ButterflyFlags"));
-
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -76,13 +75,11 @@ public class Butterfly extends CreatureEntity {
                 .createMutableAttribute(Attributes.ARMOR, 0.5);
     }
 
-
     @Override
     protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(5, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
-
     }
 
     @Nullable
@@ -94,7 +91,6 @@ public class Butterfly extends CreatureEntity {
             x = this.rand.nextInt(4);
             spawndata = new Butterfly.ButterflyData(x);
         }
-
         this.setButterflyVariant(x);
         return super.onInitialSpawn(world, diff, spawn, (ILivingEntityData)spawndata, comnbt);
     }
@@ -118,7 +114,6 @@ public class Butterfly extends CreatureEntity {
     protected float getSoundPitch() {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
-
 
     @Override
     public boolean onLivingFall(float distance, float damageMultiplier) {
@@ -149,7 +144,6 @@ public class Butterfly extends CreatureEntity {
         } else {
             this.dataManager.set(FLYING, (byte)(b0 & -2));
         }
-
     }
 
     /**
@@ -172,11 +166,11 @@ public class Butterfly extends CreatureEntity {
         BlockPos blockpos1 = blockpos.up();
         if (this.getIsButterflyHanging()) {
             boolean flag = this.isSilent();
-            if (this.world.getBlockState(blockpos1).isNormalCube(this.world, blockpos)) {
+            if (this.world.getBlockState(blockpos1).isNormalCube(this.world, blockpos))
+            {
                 if (this.rand.nextInt(200) == 0) {
                     this.rotationYawHead = (float)this.rand.nextInt(360);
                 }
-
                 if (this.world.getClosestPlayer(field_213813_c, this) != null) {
                     this.setIsButterflyHanging(false);
                     if (!flag) {
@@ -193,7 +187,6 @@ public class Butterfly extends CreatureEntity {
             if (this.spawnPosition != null && (!this.world.isAirBlock(this.spawnPosition) || this.spawnPosition.getY() < 1)) {
                 this.spawnPosition = null;
             }
-
             if (this.spawnPosition == null || this.rand.nextInt(30) == 0 || this.spawnPosition.withinDistance(this.getPositionVec(), 2.0D)) {
                 this.spawnPosition = new BlockPos(this.getPosX() + (double)this.rand.nextInt(7) - (double)this.rand.nextInt(7), this.getPosY() + (double)this.rand.nextInt(6) - 2.0D, this.getPosZ() + (double)this.rand.nextInt(7) - (double)this.rand.nextInt(7));
             }
@@ -212,15 +205,11 @@ public class Butterfly extends CreatureEntity {
                 this.setIsButterflyHanging(true);
             }
         }
-
     }
-
 
     public void writeAdditional(CompoundNBT comnbt) {
         super.writeAdditional(comnbt);
         comnbt.putInt("Variant", this.getButterflyVariant());
 
         }
-
     }
-

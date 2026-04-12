@@ -11,14 +11,13 @@ import net.minecraft.item.ItemStack;
 
 public class HitCostEvent {
 
-    // Constructor to register the event handler
     public HitCostEvent() {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     @SubscribeEvent
     public void onLivingHurt(LivingHurtEvent event) {
-        //(this includes players and mobs)
+
         if (event.getEntityLiving() instanceof LivingEntity) {
             LivingEntity entity = (LivingEntity) event.getEntityLiving();
 
@@ -29,8 +28,8 @@ public class HitCostEvent {
     private void applyArmorHitCost(LivingEntity entity) {
 
         for (ItemStack armorPiece : entity.getArmorInventoryList()) {
-            if (armorPiece.getItem() instanceof Armour) {
-                Armour armour = (Armour) armorPiece.getItem();
+            if (armorPiece.getItem() instanceof BaseArmour) {
+                BaseArmour armour = (BaseArmour) armorPiece.getItem();
 
                 //Apply custom durability multiplier
                 int damage = (int) (armour.durabilityMultiplier);

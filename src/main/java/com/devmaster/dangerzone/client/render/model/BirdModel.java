@@ -1,11 +1,11 @@
-package com.devmaster.dangerzone.client.render.model;// Made with Blockbench 4.2.5
+package com.devmaster.dangerzone.client.render.model;
+// Made with Blockbench 4.2.5
 // Exported for Minecraft version 1.15 - 1.16 with MCP mappings
-// Paste this class into your mod and generate all required imports
-
 
 import com.devmaster.dangerzone.entity.Bird;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
@@ -36,12 +36,10 @@ public class BirdModel<t> extends EntityModel<Bird> {
 		bird = new ModelRenderer(this);
 		bird.setRotationPoint(0.0F, 23.075F, 0.0F);
 		setRotationAngle(bird, 0.1396F, 0.0F, 0.0F);
-		
 
 		wing2 = new ModelRenderer(this);
 		wing2.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bird.addChild(wing2);
-		
 
 		cube_r1 = new ModelRenderer(this);
 		cube_r1.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -52,7 +50,6 @@ public class BirdModel<t> extends EntityModel<Bird> {
 		wing1 = new ModelRenderer(this);
 		wing1.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bird.addChild(wing1);
-		
 
 		cube_r2 = new ModelRenderer(this);
 		cube_r2.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -63,7 +60,6 @@ public class BirdModel<t> extends EntityModel<Bird> {
 		head = new ModelRenderer(this);
 		head.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bird.addChild(head);
-		
 
 		cube_r3 = new ModelRenderer(this);
 		cube_r3.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -75,7 +71,6 @@ public class BirdModel<t> extends EntityModel<Bird> {
 		leg2 = new ModelRenderer(this);
 		leg2.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bird.addChild(leg2);
-		
 
 		cube_r4 = new ModelRenderer(this);
 		cube_r4.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -92,7 +87,6 @@ public class BirdModel<t> extends EntityModel<Bird> {
 		leg1 = new ModelRenderer(this);
 		leg1.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bird.addChild(leg1);
-		
 
 		cube_r6 = new ModelRenderer(this);
 		cube_r6.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -109,7 +103,6 @@ public class BirdModel<t> extends EntityModel<Bird> {
 		torso = new ModelRenderer(this);
 		torso.setRotationPoint(0.5F, -1.775F, 4.275F);
 		bird.addChild(torso);
-		
 
 		cube_r8 = new ModelRenderer(this);
 		cube_r8.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -131,8 +124,6 @@ public class BirdModel<t> extends EntityModel<Bird> {
 		this.wing1.rotateAngleZ = MathHelper.cos(limbSwing * 1.3F * this.wingspeed) * 1.1415927F * 0.25F;
 		this.wing2.rotateAngleZ = this.wing1.rotateAngleZ;
 	}
-
-
 
 	@Override
 	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){

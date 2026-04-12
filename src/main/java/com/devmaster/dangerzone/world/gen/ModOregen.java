@@ -10,7 +10,6 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.Dimension;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
@@ -24,7 +23,6 @@ import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import java.util.Arrays;
-
 
 public class ModOregen {
 
@@ -67,7 +65,7 @@ public class ModOregen {
                     ore.getBlock().get().getDefaultState(), ore.getMaxVeinSize());
         }
 
-        // Currently only supports vanilla Dimensions
+        //Currently only supports vanilla Dimensions
         private static ConfiguredFeature<?, ?> makeOreFeature(OreType ore, String dimensionToSpawnIn) {
             OreFeatureConfig oreFeatureConfig = null;
 
@@ -100,8 +98,7 @@ public class ModOregen {
         }
 
 
-        private static void spawnOreInSpecificModBiome(Biome biomeToSpawnIn, OreType currentOreType,
-                                                       final BiomeLoadingEvent event, String dimension) {
+        private static void spawnOreInSpecificModBiome(Biome biomeToSpawnIn, OreType currentOreType, final BiomeLoadingEvent event, String dimension) {
             if (event.getName().toString().contains(biomeToSpawnIn.getRegistryName().toString())) {
                 event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, makeOreFeature(currentOreType, dimension));
             }

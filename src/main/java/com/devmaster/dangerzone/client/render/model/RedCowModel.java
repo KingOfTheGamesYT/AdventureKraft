@@ -1,11 +1,12 @@
-package com.devmaster.dangerzone.client.render.model;// Made with Blockbench 4.2.5
+package com.devmaster.dangerzone.client.render.model;
+// Made with Blockbench 4.2.5
 // Exported for Minecraft version 1.15 - 1.16 with MCP mappings
-// Paste this class into your mod and generate all required imports
-
 
 import com.devmaster.dangerzone.entity.RedCow;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.passive.CowEntity;

@@ -5,6 +5,7 @@ import java.util.List;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileHelper;
 import net.minecraft.network.IPacket;
@@ -16,13 +17,13 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+
 import net.minecraftforge.common.util.ITeleporter;
 import net.minecraftforge.fml.network.NetworkHooks;
 
 public abstract class BaseProjectile extends ProjectileEntity {
 
     protected int lifespan = 300;
-
 
     public BaseProjectile(EntityType<? extends ProjectileEntity> entityType, World world) {
         super(entityType, world);
@@ -56,7 +57,7 @@ public abstract class BaseProjectile extends ProjectileEntity {
     @Override
     public void tick() {
         Entity thrower = getShooter();
-        if (thrower instanceof net.minecraft.entity.player.PlayerEntity && !thrower.isAlive()) {
+        if (thrower instanceof PlayerEntity && !thrower.isAlive()) {
             remove();
             return;
         }
@@ -128,5 +129,4 @@ public abstract class BaseProjectile extends ProjectileEntity {
             }
         }
     }
-
 }

@@ -19,7 +19,6 @@ public static BiomeDictionary.Type getType(String name) {
     name = name.toUpperCase();
     return byName.get(name);
 }
-
         /**
          * Converts a List <? extends String> to a {@link BiomeDictionary.Type} array
          *

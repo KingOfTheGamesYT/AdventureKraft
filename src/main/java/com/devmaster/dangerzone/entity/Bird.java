@@ -68,7 +68,6 @@ public class Bird extends CreatureEntity {
         super.readAdditional(compound);
         this.setBirdVariant(compound.getInt("Variant"));
         this.dataManager.set(FLYING, compound.getByte("BirdFlags"));
-
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -77,9 +76,7 @@ public class Bird extends CreatureEntity {
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.10000000149011612D)
                 .createMutableAttribute(Attributes.FLYING_SPEED, 0.10000000149011612D)
                 .createMutableAttribute(Attributes.ARMOR, 0.5);
-
     }
-
 
     @Override
     protected void registerGoals() {
@@ -138,8 +135,6 @@ public class Bird extends CreatureEntity {
         return false;
     }
 
-
-
     public boolean getIsBirdHanging() {
         return (this.dataManager.get(FLYING) & 1) != 0;
     }
@@ -151,7 +146,6 @@ public class Bird extends CreatureEntity {
         } else {
             this.dataManager.set(FLYING, (byte)(b0 & -2));
         }
-
     }
 
     /**
@@ -165,7 +159,6 @@ public class Bird extends CreatureEntity {
         } else {
             this.setMotion(this.getMotion().mul(1.0D, 0.6D, 1.0D));
         }
-
     }
 
     protected void updateAITasks() {
@@ -195,7 +188,6 @@ public class Bird extends CreatureEntity {
             if (this.spawnPosition != null && (!this.world.isAirBlock(this.spawnPosition) || this.spawnPosition.getY() < 1)) {
                 this.spawnPosition = null;
             }
-
             if (this.spawnPosition == null || this.rand.nextInt(30) == 0 || this.spawnPosition.withinDistance(this.getPositionVec(), 2.0D)) {
                 this.spawnPosition = new BlockPos(this.getPosX() + (double)this.rand.nextInt(7) - (double)this.rand.nextInt(7), this.getPosY() + (double)this.rand.nextInt(6) - 2.0D, this.getPosZ() + (double)this.rand.nextInt(7) - (double)this.rand.nextInt(7));
             }
@@ -226,6 +218,4 @@ public class Bird extends CreatureEntity {
         comnbt.putInt("Variant", this.getBirdVariant());
 
         }
-
     }
-

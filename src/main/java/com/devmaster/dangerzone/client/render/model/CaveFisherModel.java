@@ -1,16 +1,17 @@
 // Made with Blockbench 4.1.5
 // Exported for Minecraft version 1.15 - 1.16 with MCP mappings
-// Paste this class into your mod and generate all required imports
 
 package com.devmaster.dangerzone.client.render.model;
+
 import com.devmaster.dangerzone.entity.CaveFisher;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.entity.CreatureEntity;
 
-public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveFisher> {
+public class CaveFisherModel<N> extends EntityModel<CaveFisher> {
 	private final ModelRenderer Cave_Fisher;
 	private final ModelRenderer Main_body;
 	private final ModelRenderer Right_arm;
@@ -104,7 +105,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 
 		Cave_Fisher = new ModelRenderer(this);
 		Cave_Fisher.setRotationPoint(0.0F, 24.0F, 0.0F);
-		
 
 		Main_body = new ModelRenderer(this);
 		Main_body.setRotationPoint(0.0F, -6.1625F, 10.5F);
@@ -114,7 +114,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_arm = new ModelRenderer(this);
 		Right_arm.setRotationPoint(-2.7675F, 2.5567F, -13.022F);
 		Main_body.addChild(Right_arm);
-		
 
 		Right_arm_r1 = new ModelRenderer(this);
 		Right_arm_r1.setRotationPoint(-1.5349F, -2.2505F, -1.9625F);
@@ -131,7 +130,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_arm_segment = new ModelRenderer(this);
 		Right_arm_segment.setRotationPoint(-1.8524F, 0.3599F, -4.3465F);
 		Right_arm.addChild(Right_arm_segment);
-		
 
 		Right_arm_segment_r1 = new ModelRenderer(this);
 		Right_arm_segment_r1.setRotationPoint(-1.25F, 0.0F, -2.5F);
@@ -143,7 +141,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_arm = new ModelRenderer(this);
 		Left_arm.setRotationPoint(2.7675F, 2.5567F, -13.022F);
 		Main_body.addChild(Left_arm);
-		
 
 		Left_arm_r1 = new ModelRenderer(this);
 		Left_arm_r1.setRotationPoint(1.5349F, -2.2505F, -1.9625F);
@@ -160,7 +157,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_arm_segment = new ModelRenderer(this);
 		Left_arm_segment.setRotationPoint(1.8524F, 0.3599F, -4.3465F);
 		Left_arm.addChild(Left_arm_segment);
-		
 
 		Left_arm_segment_r1 = new ModelRenderer(this);
 		Left_arm_segment_r1.setRotationPoint(1.25F, 0.0F, -2.5F);
@@ -172,7 +168,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Head = new ModelRenderer(this);
 		Head.setRotationPoint(0.0F, -0.8754F, -13.0207F);
 		Main_body.addChild(Head);
-		
 
 		Head_r1 = new ModelRenderer(this);
 		Head_r1.setRotationPoint(-3.25F, -2.4621F, 0.0207F);
@@ -201,7 +196,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Eye = new ModelRenderer(this);
 		Eye.setRotationPoint(0.0F, -0.8371F, -2.9168F);
 		Head.addChild(Eye);
-		
 
 		Eye_r1 = new ModelRenderer(this);
 		Eye_r1.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -227,7 +221,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg_1 = new ModelRenderer(this);
 		Left_Leg_1.setRotationPoint(3.1513F, -4.5362F, 4.0862F);
 		Cave_Fisher.addChild(Left_Leg_1);
-		
 
 		Left_Leg_1_r1 = new ModelRenderer(this);
 		Left_Leg_1_r1.setRotationPoint(-0.5609F, 0.7046F, -1.1316F);
@@ -238,7 +231,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg_5 = new ModelRenderer(this);
 		Left_Leg_5.setRotationPoint(-0.7958F, 1.5945F, -2.7191F);
 		Left_Leg_1.addChild(Left_Leg_5);
-		
 
 		Left_Leg_6 = new ModelRenderer(this);
 		Left_Leg_6.setRotationPoint(2.918F, -2.9417F, 1.3671F);
@@ -249,7 +241,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg_8 = new ModelRenderer(this);
 		Left_Leg_8.setRotationPoint(1.2986F, 0.153F, -0.2187F);
 		Left_Leg_5.addChild(Left_Leg_8);
-		
 
 		Left_Leg_9 = new ModelRenderer(this);
 		Left_Leg_9.setRotationPoint(3.6541F, -2.7887F, 1.1484F);
@@ -260,7 +251,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg3 = new ModelRenderer(this);
 		Left_Leg3.setRotationPoint(4.8416F, 1.1863F, 0.6484F);
 		Left_Leg_8.addChild(Left_Leg3);
-		
 
 		Left_Leg3_r1 = new ModelRenderer(this);
 		Left_Leg3_r1.setRotationPoint(0.0F, -0.35F, 0.0F);
@@ -271,7 +261,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg_1 = new ModelRenderer(this);
 		Right_Leg_1.setRotationPoint(-3.1513F, -4.5362F, 4.0862F);
 		Cave_Fisher.addChild(Right_Leg_1);
-		
 
 		Right_Leg_1_r1 = new ModelRenderer(this);
 		Right_Leg_1_r1.setRotationPoint(0.5609F, 0.7046F, -1.1316F);
@@ -282,7 +271,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg_5 = new ModelRenderer(this);
 		Right_Leg_5.setRotationPoint(0.7958F, 1.5945F, -2.7191F);
 		Right_Leg_1.addChild(Right_Leg_5);
-		
 
 		Right4_r1 = new ModelRenderer(this);
 		Right4_r1.setRotationPoint(-2.918F, -2.9417F, 1.3671F);
@@ -293,7 +281,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg_6 = new ModelRenderer(this);
 		Right_Leg_6.setRotationPoint(-1.2986F, 0.153F, -0.2187F);
 		Right_Leg_5.addChild(Right_Leg_6);
-		
 
 		Right_Leg5_r1 = new ModelRenderer(this);
 		Right_Leg5_r1.setRotationPoint(-3.6541F, -2.7887F, 1.1484F);
@@ -304,7 +291,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg8 = new ModelRenderer(this);
 		Right_Leg8.setRotationPoint(-4.8416F, 1.1863F, 0.6484F);
 		Right_Leg_6.addChild(Right_Leg8);
-		
 
 		Right_Leg6_r1 = new ModelRenderer(this);
 		Right_Leg6_r1.setRotationPoint(0.0F, -0.35F, 0.0F);
@@ -316,7 +302,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg_2.setRotationPoint(3.1513F, -4.5362F, 6.3362F);
 		Cave_Fisher.addChild(Left_Leg_2);
 		setRotationAngle(Left_Leg_2, 0.0F, -0.4538F, 0.0F);
-		
 
 		Left_Leg_2_r1 = new ModelRenderer(this);
 		Left_Leg_2_r1.setRotationPoint(-0.5609F, 0.7046F, -1.1316F);
@@ -327,7 +312,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg7 = new ModelRenderer(this);
 		Left_Leg7.setRotationPoint(-0.7958F, 1.5945F, -3.8441F);
 		Left_Leg_2.addChild(Left_Leg7);
-		
 
 		Left_Leg7_r1 = new ModelRenderer(this);
 		Left_Leg7_r1.setRotationPoint(2.918F, -2.9417F, 2.4921F);
@@ -338,7 +322,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg8 = new ModelRenderer(this);
 		Left_Leg8.setRotationPoint(1.2986F, 0.153F, -0.2187F);
 		Left_Leg7.addChild(Left_Leg8);
-		
 
 		Left_Leg8_r1 = new ModelRenderer(this);
 		Left_Leg8_r1.setRotationPoint(3.6541F, -2.7887F, 2.2734F);
@@ -349,7 +332,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg9 = new ModelRenderer(this);
 		Left_Leg9.setRotationPoint(4.8416F, 1.1863F, 1.7734F);
 		Left_Leg8.addChild(Left_Leg9);
-		
 
 		Left_Leg9_r1 = new ModelRenderer(this);
 		Left_Leg9_r1.setRotationPoint(0.0F, -0.35F, 0.0F);
@@ -361,7 +343,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg_2.setRotationPoint(-3.1513F, -4.5362F, 6.3362F);
 		Cave_Fisher.addChild(Right_Leg_2);
 		setRotationAngle(Right_Leg_2, 0.0F, 0.4538F, 0.0F);
-		
 
 		Right_Leg_2_r1 = new ModelRenderer(this);
 		Right_Leg_2_r1.setRotationPoint(0.5609F, 0.7046F, -1.1316F);
@@ -372,7 +353,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg10 = new ModelRenderer(this);
 		Right_Leg10.setRotationPoint(0.7958F, 1.5945F, -3.8441F);
 		Right_Leg_2.addChild(Right_Leg10);
-		
 
 		Right_Leg10_r1 = new ModelRenderer(this);
 		Right_Leg10_r1.setRotationPoint(-2.918F, -2.9417F, 2.4921F);
@@ -383,7 +363,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg11 = new ModelRenderer(this);
 		Right_Leg11.setRotationPoint(-1.2986F, 0.153F, -0.2187F);
 		Right_Leg10.addChild(Right_Leg11);
-		
 
 		Right_Leg11_r1 = new ModelRenderer(this);
 		Right_Leg11_r1.setRotationPoint(-3.6541F, -2.7887F, 2.2734F);
@@ -394,7 +373,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg12 = new ModelRenderer(this);
 		Right_Leg12.setRotationPoint(-4.8416F, 1.1863F, 1.7734F);
 		Right_Leg11.addChild(Right_Leg12);
-		
 
 		Right_Leg12_r1 = new ModelRenderer(this);
 		Right_Leg12_r1.setRotationPoint(0.0F, -0.35F, 0.0F);
@@ -406,7 +384,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg_3.setRotationPoint(2.6513F, -4.5362F, 8.3362F);
 		Cave_Fisher.addChild(Left_Leg_3);
 		setRotationAngle(Left_Leg_3, 0.0F, -0.8029F, 0.0F);
-		
 
 		Left_Leg_3_r1 = new ModelRenderer(this);
 		Left_Leg_3_r1.setRotationPoint(-0.5609F, 0.7046F, -1.1316F);
@@ -417,7 +394,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg13 = new ModelRenderer(this);
 		Left_Leg13.setRotationPoint(-0.5458F, 1.5945F, -4.8441F);
 		Left_Leg_3.addChild(Left_Leg13);
-		
 
 		Left_Leg13_r1 = new ModelRenderer(this);
 		Left_Leg13_r1.setRotationPoint(2.668F, -2.9417F, 3.4921F);
@@ -428,7 +404,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg14 = new ModelRenderer(this);
 		Left_Leg14.setRotationPoint(1.2986F, 0.153F, -0.2187F);
 		Left_Leg13.addChild(Left_Leg14);
-		
 
 		Left_Leg14_r1 = new ModelRenderer(this);
 		Left_Leg14_r1.setRotationPoint(3.4041F, -2.7887F, 3.2734F);
@@ -439,7 +414,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg15 = new ModelRenderer(this);
 		Left_Leg15.setRotationPoint(4.5916F, 1.1863F, 2.7734F);
 		Left_Leg14.addChild(Left_Leg15);
-		
 
 		Left_Leg15_r1 = new ModelRenderer(this);
 		Left_Leg15_r1.setRotationPoint(0.0F, -0.35F, 0.0F);
@@ -451,7 +425,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg_3.setRotationPoint(-2.6513F, -4.5362F, 8.3362F);
 		Cave_Fisher.addChild(Right_Leg_3);
 		setRotationAngle(Right_Leg_3, 0.0F, 0.8029F, 0.0F);
-		
 
 		Right_Leg_3_r1 = new ModelRenderer(this);
 		Right_Leg_3_r1.setRotationPoint(0.5609F, 0.7046F, -1.1316F);
@@ -462,7 +435,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg16 = new ModelRenderer(this);
 		Right_Leg16.setRotationPoint(0.5458F, 1.5945F, -4.8441F);
 		Right_Leg_3.addChild(Right_Leg16);
-		
 
 		Right_Leg16_r1 = new ModelRenderer(this);
 		Right_Leg16_r1.setRotationPoint(-2.668F, -2.9417F, 3.4921F);
@@ -473,7 +445,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg17 = new ModelRenderer(this);
 		Right_Leg17.setRotationPoint(-1.2986F, 0.153F, -0.2187F);
 		Right_Leg16.addChild(Right_Leg17);
-		
 
 		Right_Leg17_r1 = new ModelRenderer(this);
 		Right_Leg17_r1.setRotationPoint(-3.4041F, -2.7887F, 3.2734F);
@@ -484,7 +455,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_leg18 = new ModelRenderer(this);
 		Right_leg18.setRotationPoint(-4.5916F, 1.1863F, 2.7734F);
 		Right_Leg17.addChild(Right_leg18);
-		
 
 		Right_Leg18_r1 = new ModelRenderer(this);
 		Right_Leg18_r1.setRotationPoint(0.0F, -0.35F, 0.0F);
@@ -496,7 +466,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg_4.setRotationPoint(2.4013F, -4.5362F, 10.3362F);
 		Cave_Fisher.addChild(Left_Leg_4);
 		setRotationAngle(Left_Leg_4, 0.0F, -1.309F, 0.0F);
-		
 
 		Left_Leg_4_r1 = new ModelRenderer(this);
 		Left_Leg_4_r1.setRotationPoint(-0.5609F, 0.7046F, -1.1316F);
@@ -507,7 +476,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg_back_upper = new ModelRenderer(this);
 		Left_Leg_back_upper.setRotationPoint(-0.4208F, 1.5945F, -5.8441F);
 		Left_Leg_4.addChild(Left_Leg_back_upper);
-		
 
 		Left_Leg2 = new ModelRenderer(this);
 		Left_Leg2.setRotationPoint(2.543F, -2.9417F, 4.4921F);
@@ -518,7 +486,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg_back_mid = new ModelRenderer(this);
 		Left_Leg_back_mid.setRotationPoint(1.2986F, 0.153F, -0.2187F);
 		Left_Leg_back_upper.addChild(Left_Leg_back_mid);
-		
 
 		Left_Leg4 = new ModelRenderer(this);
 		Left_Leg4.setRotationPoint(3.2791F, -2.7887F, 4.2734F);
@@ -529,7 +496,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Left_Leg_Lower_Back = new ModelRenderer(this);
 		Left_Leg_Lower_Back.setRotationPoint(4.4666F, 1.1863F, 3.7734F);
 		Left_Leg_back_mid.addChild(Left_Leg_Lower_Back);
-		
 
 		Left_Leg = new ModelRenderer(this);
 		Left_Leg.setRotationPoint(0.0F, -0.35F, 0.0F);
@@ -541,7 +507,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg_4.setRotationPoint(-2.4013F, -4.5362F, 10.3362F);
 		Cave_Fisher.addChild(Right_Leg_4);
 		setRotationAngle(Right_Leg_4, 0.0F, 1.309F, 0.0F);
-		
 
 		Right_Leg_4_r1 = new ModelRenderer(this);
 		Right_Leg_4_r1.setRotationPoint(0.5609F, 0.7046F, -1.1316F);
@@ -552,7 +517,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg_Back_Upper = new ModelRenderer(this);
 		Right_Leg_Back_Upper.setRotationPoint(0.4208F, 1.5945F, -5.8441F);
 		Right_Leg_4.addChild(Right_Leg_Back_Upper);
-		
 
 		Right_Leg_Back_Upper2 = new ModelRenderer(this);
 		Right_Leg_Back_Upper2.setRotationPoint(-2.543F, -2.9417F, 4.4921F);
@@ -563,7 +527,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg_Mid_Back = new ModelRenderer(this);
 		Right_Leg_Mid_Back.setRotationPoint(-1.2986F, 0.153F, -0.2187F);
 		Right_Leg_Back_Upper.addChild(Right_Leg_Mid_Back);
-		
 
 		Right_Leg_mig_Back = new ModelRenderer(this);
 		Right_Leg_mig_Back.setRotationPoint(-3.2791F, -2.7887F, 4.2734F);
@@ -574,7 +537,6 @@ public class CaveFisherModel<N extends CreatureEntity> extends EntityModel<CaveF
 		Right_Leg_Back_Lower = new ModelRenderer(this);
 		Right_Leg_Back_Lower.setRotationPoint(-4.4666F, 1.1863F, 3.7734F);
 		Right_Leg_Mid_Back.addChild(Right_Leg_Back_Lower);
-		
 
 		Right_Lower_Back_Leg = new ModelRenderer(this);
 		Right_Lower_Back_Leg.setRotationPoint(0.0F, -0.35F, 0.0F);

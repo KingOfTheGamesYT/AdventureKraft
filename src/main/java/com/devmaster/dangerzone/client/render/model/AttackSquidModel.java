@@ -1,15 +1,16 @@
-package com.devmaster.dangerzone.client.render.model;//Made with Blockbench
-//Paste this code into your mod.
+package com.devmaster.dangerzone.client.render.model;
+//Made with Blockbench
 
 import com.devmaster.dangerzone.entity.AttackSquid;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
 
 public class AttackSquidModel<t> extends EntityModel<AttackSquid> {
-	private float wingspeed = 1.0F;
 	private final ModelRenderer HeadBody;
 	private final ModelRenderer Fin1;
 	private final ModelRenderer Fin2;
@@ -109,8 +110,6 @@ public class AttackSquidModel<t> extends EntityModel<AttackSquid> {
 		TentacleRight2.rotateAngleZ = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 		TentacleRight3.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 	}
-
-
 
 	@Override
 	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){

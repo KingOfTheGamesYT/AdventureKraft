@@ -3,13 +3,12 @@ package com.devmaster.dangerzone.world.gen;
 import com.devmaster.dangerzone.configs.DZConfig;
 import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.RegistryHandler;
+
 import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.EntitySpawnPlacementRegistry;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.MobSpawnInfo;
-import net.minecraft.world.gen.Heightmap;
+
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -29,8 +28,10 @@ public class EntitySpawns {
             Biome biome = ForgeRegistries.BIOMES.getValue(event.getName());
             if (biome != null) {
                 RegistryKey<Biome> biomeKey = RegistryKey.getOrCreateKey(ForgeRegistries.Keys.BIOMES, event.getName());
-                List<BiomeDictionary.Type> includeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.NotBreeBreeinclude.get()));
-                List<BiomeDictionary.Type> excludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.NotBreeBreeexclude.get()));
+                List<BiomeDictionary.Type> CaveFisherincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherinclude.get()));
+                List<BiomeDictionary.Type> CaveFisherexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherexclude.get()));
+                List<BiomeDictionary.Type> NotBreeBreeincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.NotBreeBreeinclude.get()));
+                List<BiomeDictionary.Type> NotBreeBreeexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.NotBreeBreeexclude.get()));
                 List<BiomeDictionary.Type> StampyLongNoseincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.StampyLongNoseinclude.get()));
                 List<BiomeDictionary.Type> StampyLongNoseexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.StampyLongNoseexclude.get()));
                 List<BiomeDictionary.Type> TewityincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Tewityinclude.get()));
@@ -70,10 +71,13 @@ public class EntitySpawns {
                 List<BiomeDictionary.Type> TermiteincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Termiteinclude.get()));
                 List<BiomeDictionary.Type> TermiteexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Termiteexclude.get()));
 
-                if (!includeList.isEmpty()) {
+                if (!NotBreeBreeincludeList.isEmpty()) {
                     Set<BiomeDictionary.Type> biomeTypes = BiomeDictionary.getTypes(biomeKey);
-                    if (biomeTypes.stream().noneMatch(excludeList::contains) && biomeTypes.stream().anyMatch(includeList::contains)) {
+                    if (biomeTypes.stream().noneMatch(NotBreeBreeexcludeList::contains) && biomeTypes.stream().anyMatch(NotBreeBreeincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.NOTBREEBREE.get(), DZConfig.NotBreeBreeweight.get(), DZConfig.NotBreeBreemin.get(), DZConfig.NotBreeBreemax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(CaveFisherexcludeList::contains) && biomeTypes.stream().anyMatch(CaveFisherincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(RegistryHandler.CAVE_FISHER.get(), DZConfig.CaveFisherweight.get(), DZConfig.CaveFishermin.get(), DZConfig.CaveFishermax.get()));
                     }
                     if (biomeTypes.stream().noneMatch(StampyLongNoseexcludeList::contains) && biomeTypes.stream().anyMatch(StampyLongNoseincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), DZConfig.StampyLongNoseweight.get(), DZConfig.StampyLongNosemin.get(), DZConfig.StampyLongNosemax.get()));
@@ -105,7 +109,7 @@ public class EntitySpawns {
                     if (biomeTypes.stream().noneMatch(AntVenomexcludeList::contains) && biomeTypes.stream().anyMatch(AntVenomincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.ANTVENOM.get(), DZConfig.AntVenomweight.get(), DZConfig.AntVenommin.get(), DZConfig.AntVenommax.get()));
                     }
-                    if (biomeTypes.stream().noneMatch(AntVenomexcludeList::contains) && biomeTypes.stream().anyMatch(AntVenomincludeList::contains)) {
+                    if (biomeTypes.stream().noneMatch(AphmauexcludeList::contains) && biomeTypes.stream().anyMatch(AphmauincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.APHMAU.get(), DZConfig.AntVenomweight.get(), DZConfig.AntVenommin.get(), DZConfig.Aphmaumax.get()));
                     }
                     if (biomeTypes.stream().noneMatch(BabyAngelexcludeList::contains) && biomeTypes.stream().anyMatch(BabyAngelincludeList::contains)) {
@@ -138,9 +142,5 @@ public class EntitySpawns {
                 }
             }
         }
-    }
-    public static void registerSpawnPlacements() {
-        EntitySpawnPlacementRegistry.register(RegistryHandler.ATTACK_SQUID.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
-        EntitySpawnPlacementRegistry.register(RegistryHandler.BIRD.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
     }
 }

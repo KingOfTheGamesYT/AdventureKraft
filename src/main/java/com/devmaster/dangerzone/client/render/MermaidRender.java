@@ -3,10 +3,10 @@ package com.devmaster.dangerzone.client.render;
 import com.devmaster.dangerzone.client.render.model.MermaidModel;
 import com.devmaster.dangerzone.entity.Mermaid;
 import com.devmaster.dangerzone.misc.DangerZone;
+
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
-
 
 public class MermaidRender extends MobRenderer<Mermaid, MermaidModel<Mermaid>> {
 

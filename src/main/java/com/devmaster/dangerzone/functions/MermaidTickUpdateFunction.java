@@ -50,7 +50,7 @@ public class MermaidTickUpdateFunction {
             return;
         }
 
-        // To make the health run up faster change 0.08 to a higher number.
+        //To make the health run up faster change 0.08 to a higher number.
         Entity entity = (Entity) dependencies.get("entity");
         if (!(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) == 0)) {
             for (int index0 = 0; index0 < (int) (MathHelper.nextInt(new Random(), 1, 4)); index0++) {

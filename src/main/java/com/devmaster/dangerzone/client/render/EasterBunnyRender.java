@@ -3,8 +3,8 @@ package com.devmaster.dangerzone.client.render;
 import com.devmaster.dangerzone.client.render.model.EasterBunnyModel;
 import com.devmaster.dangerzone.entity.EasterBunny;
 
-import com.devmaster.dangerzone.entity.RedCow;
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -29,6 +29,4 @@ public class EasterBunnyRender extends MobRenderer<EasterBunny, EasterBunnyModel
     public ResourceLocation getEntityTexture(EasterBunny entity) {
         return TEXTURE[entity.getEasterBunnyVariant()];
     }
-
 }
-

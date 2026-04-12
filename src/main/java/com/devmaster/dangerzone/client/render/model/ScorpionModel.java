@@ -1,10 +1,10 @@
-package com.devmaster.dangerzone.client.render.model;// Made with Blockbench 3.9.3
+package com.devmaster.dangerzone.client.render.model;
+// Made with Blockbench 3.9.3
 // Exported for Minecraft version 1.15 - 1.16 with MCP mappings
-// Paste this class into your mod and generate all required imports
-
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
@@ -67,7 +67,6 @@ public class ScorpionModel extends EntityModel<Entity> {
 
 		tail1 = new ModelRenderer(this);
 		tail1.setRotationPoint(0.0F, 21.0F, 2.0F);
-		
 
 		tail1_r1 = new ModelRenderer(this);
 		tail1_r1.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -77,7 +76,6 @@ public class ScorpionModel extends EntityModel<Entity> {
 
 		tail2 = new ModelRenderer(this);
 		tail2.setRotationPoint(0.0F, 20.0F, 6.0F);
-		
 
 		tail2_r1 = new ModelRenderer(this);
 		tail2_r1.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -87,7 +85,6 @@ public class ScorpionModel extends EntityModel<Entity> {
 
 		tail3 = new ModelRenderer(this);
 		tail3.setRotationPoint(0.0F, 18.0F, 10.0F);
-		
 
 		tail3_r1 = new ModelRenderer(this);
 		tail3_r1.setRotationPoint(0.0F, -1.0F, 0.0F);
@@ -97,7 +94,6 @@ public class ScorpionModel extends EntityModel<Entity> {
 
 		tail4 = new ModelRenderer(this);
 		tail4.setRotationPoint(0.0F, 13.0F, 4.0F);
-		
 
 		tail4_r1 = new ModelRenderer(this);
 		tail4_r1.setRotationPoint(0.0F, -1.0F, -2.0F);
@@ -293,7 +289,6 @@ public class ScorpionModel extends EntityModel<Entity> {
 
 	@Override
 	public void setRotationAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch){
-		//previously the render function, render code was moved to a method below
 	}
 
 	@Override

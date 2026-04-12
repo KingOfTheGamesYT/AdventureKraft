@@ -2,7 +2,6 @@ package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.misc.DangerZone;
 
-import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -27,11 +26,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
 
 public class Godzilla extends CreatureEntity implements IRangedAttackMob{
-    public boolean collided = false;
-    public boolean crush = false;
     private int jumped = 0;
-    private static final int LIGHTNING_CHANCE = 50; // Chance of summoning lightning in percent
-
+    private static final int LIGHTNING_CHANCE = 50; //Percent
 
     public Godzilla(final EntityType<? extends Godzilla> type, final World worldIn) {
         super(type, worldIn);
@@ -47,14 +43,13 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
         if (!this.onGround) {
             return;
         }
+
         AxisAlignedBB axisalignedbb = this.getBoundingBox().expand(0.2D, -0.5, 0.2D);
 
         for (BlockPos blockpos : BlockPos.getAllInBoxMutable(MathHelper.floor(axisalignedbb.minX), MathHelper.floor(axisalignedbb.minY), MathHelper.floor(axisalignedbb.minZ), MathHelper.floor(axisalignedbb.maxX), MathHelper.floor(axisalignedbb.maxY), MathHelper.floor(axisalignedbb.maxZ))) {
-            boolean drops = true;
 
             if (world.getBlockState(blockpos).isIn(DangerZone.GODZILLA_DESTROYABLE)) {
-                // Break the block and drop the items
-                this.world.destroyBlock(blockpos, drops, this);
+                this.world.destroyBlock(blockpos, true, this);
             }
 
             if (!this.world.isRemote) {
@@ -69,7 +64,6 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
                 } else {
                     this.setJumping(false);
                 }
-
                 this.jumped--;
             }
         }
@@ -77,13 +71,17 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
         this.bossInfo.setVisible(true);
 }
 
+    @Override
+    protected void collideWithEntity(Entity entityIn) {
+        super.collideWithEntity(entityIn);
 
-    public void onCollideWithPlayer(PlayerEntity entityIn) {
-            entityIn.attackEntityFrom(DamageSource.causeMobDamage(this), this.getAttackStrength());
-    }
+        if (entityIn instanceof LivingEntity && entityIn != this) {
+            LivingEntity target = (LivingEntity) entityIn;
 
-    protected float getAttackStrength() {
-        return (float) this.getAttributeValue(Attributes.ATTACK_DAMAGE);
+            if (!this.world.isRemote) {
+                target.attackEntityFrom(DamageSource.causeMobDamage(this), (float) this.getAttributeValue(Attributes.ATTACK_DAMAGE));
+            }
+        }
     }
 
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -92,7 +90,8 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.31D)
                 .createMutableAttribute(Attributes.ARMOR, 7.5)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 100)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 120);
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 120)
+                .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 1.0);
     }
 
     @Override
@@ -106,13 +105,17 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, MonsterEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
-        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, StampyLongNose.class, true));
+        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, BaseYoutuber.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, SlimeEntity.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
-        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
         this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, RedRoseWarrior.class, true));
         this.goalSelector.addGoal(2, new RangedAttackGoal(this, 1.0D, 20, 10.0F));
+    }
+
+    @Override
+    public boolean isPushedByWater() {
+        return false;
     }
 
     @Override
@@ -149,24 +152,21 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
         return true;
     }
 
-
     @Override
     public void attackEntityWithRangedAttack(LivingEntity target, float distance) {
         if (!this.world.isRemote) {
             if (rand.nextInt(100) < LIGHTNING_CHANCE) {
-                // Summon lightning at the mob's current position
+                //Summon lightning at the mob's current position
                 LightningBoltEntity lightning = EntityType.LIGHTNING_BOLT.create(world);
                 lightning.moveForced(target.getPositionVec());
-                lightning.setEffectOnly(false); // true if you don't want fire
+                lightning.setEffectOnly(false); //Fire with the strike
                 world.addEntity(lightning);
             }
-            if (world.getRandom().nextFloat() < 0.5f ) { // 50% chance to do fireball attack
+            if (world.getRandom().nextFloat() < 0.5f ) { //50% chance to do fireball attack
             this.shoot(target);
             }
-
         }
     }
-
 
     protected void shoot(LivingEntity target) {
         for (int i = 0; i < 4; i++) {
@@ -177,12 +177,10 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
             double dz = target.getPosZ() - this.getPosZ();
 
             fireball.setPosition(this.getPosX(), this.getPosYEye(), this.getPosZ());
-            fireball.shoot(dx, dy, dz, 2.0F, 0.1F); // 🔥 Increased speed, low inaccuracy
+            fireball.shoot(dx, dy, dz, 2.0F, 0.1F);
             world.addEntity(fireball);
         }
     }
-
-
 
     @Override
     public void addTrackingPlayer(ServerPlayerEntity player) {
@@ -204,8 +202,8 @@ public class Godzilla extends CreatureEntity implements IRangedAttackMob{
 
         float cappedDamage = Math.min(amount, 100.0f);
 
-        if (source.isFireDamage() || source.isFireDamage()) {
-            return false; // Make the mob immune to fire and lava damage
+        if (source.isFireDamage() || source == DamageSource.LAVA) {
+            return false; //Make Godzilla immune to fire and lava damage
         }
         return super.attackEntityFrom(source, cappedDamage);
     }

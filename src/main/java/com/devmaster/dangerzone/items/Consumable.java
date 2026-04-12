@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class Consumable extends AItem
+public class Consumable extends BaseItem
 {
 	private Supplier<SoundEvent> useSoundSupplier;
 	protected boolean alwaysEdible = false;
@@ -164,14 +164,14 @@ public class Consumable extends AItem
 				player.getFoodStats().addStats(foodamount, saturationamount);
 			}
 		}
-		// Apply effects (add positive effects)
+
+		//Apply effects
 		if (effects != null) {
-			for (EffectInstance i : effects) {
-				// Check if duration is 0; if so, remove the effect
-				if (i.getDuration() == 0) {
-					player.removePotionEffect(i.getPotion());
+			for (EffectInstance effect : effects) {
+				if (effect.getDuration() == 0) {
+					player.removePotionEffect(effect.getPotion());
 				} else {
-					player.addPotionEffect(i);
+					player.addPotionEffect(effect);
 				}
 			}
 		}
@@ -211,13 +211,11 @@ public class Consumable extends AItem
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
 		ItemStack stack = player.getHeldItem(hand);
-		// Check if the player is hungry or the item is always edible
-		boolean canEat = player.getFoodStats().needFood() || alwaysEdible;
-		// Only allow consumption if the player is hungry or the item is marked as always edible
+        boolean canEat = player.getFoodStats().needFood() || alwaysEdible;
+
 		if (canEat) {
 			if (useinstantly) {
-				// Play sound and consume item instantly
-				if (useSoundSupplier != null && !world.isRemote) {
+                if (useSoundSupplier != null && !world.isRemote) {
 					SoundEvent sound = useSoundSupplier.get();
 					if (sound != null) {
 						world.playSound(null, player.getPosX(), player.getPosY(), player.getPosZ(), sound, SoundCategory.PLAYERS, 1.0F, 1.0F);
@@ -226,27 +224,22 @@ public class Consumable extends AItem
 				use(world, player, stack);
 				return ActionResult.resultConsume(stack);
 			}
-			// Start normal consumption (holding the item to eat)
+			//Start normal consumption
 			player.setActiveHand(hand);
 			return ActionResult.resultConsume(stack);
 		}
-		// If the player can't eat, return fail
 		return ActionResult.resultFail(stack);
 	}
 
 	@Override
 	public ItemStack onItemUseFinish(ItemStack stack, World world, LivingEntity entity) {
-		// Ensure we only apply the effect if the entity is a player and they can eat
 		if (entity instanceof PlayerEntity) {
 			PlayerEntity player = (PlayerEntity) entity;
-			// Check if the player can eat (either because they need food or it's always edible)
 			boolean canEat = player.getFoodStats().needFood() || alwaysEdible;
-			// Only consume the item if the player can eat
 			if (canEat) {
 				use(world, player, stack);
 			}
 		}
-
 		return stack;
 	}
 

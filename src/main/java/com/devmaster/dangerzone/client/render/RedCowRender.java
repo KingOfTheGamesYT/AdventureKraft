@@ -9,10 +9,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.ResourceLocation;
-import org.lwjgl.opengl.GL11;
-
 
 public class RedCowRender extends MobRenderer<RedCow, RedCowModel<RedCow>> {
 
@@ -21,7 +18,6 @@ public class RedCowRender extends MobRenderer<RedCow, RedCowModel<RedCow>> {
     public RedCowRender(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new RedCowModel<RedCow>(), 0.7F);
     }
-
 
     public void render(RedCow redCow, float entityYaw, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int packedLightIn) {
         matrixStackIn.push();

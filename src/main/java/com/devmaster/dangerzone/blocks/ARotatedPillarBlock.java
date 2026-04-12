@@ -2,7 +2,6 @@ package com.devmaster.dangerzone.blocks;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RotatedPillarBlock;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -11,7 +10,6 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
-import net.minecraftforge.common.ToolType;
 
 import java.util.Collections;
 import java.util.List;
@@ -23,9 +21,6 @@ public class ARotatedPillarBlock extends RotatedPillarBlock {
 	protected String name;
 	private String[] info = new String[0];
 
-	public ARotatedPillarBlock(String name, Material material, int harvestlevel, ToolType harvesttool, int xpdropped) {
-		this(name, material, harvestlevel, harvesttool, 1 + harvestlevel, 1 + harvestlevel, xpdropped);
-	}
 
 	@Override
 	public int getExpDrop(BlockState state, IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
@@ -35,10 +30,6 @@ public class ARotatedPillarBlock extends RotatedPillarBlock {
 		int min = (int) (xpdropped * 0.667);
 		int max = (int) (xpdropped * 1.5);
 		return silktouch == 0 ? new Random().nextInt(max - min) + min : 0;
-	}
-
-	public ARotatedPillarBlock(String name, Material material, int harvestlevel, ToolType harvesttool, float hardness, float resistance, int xpdroped) {
-		this(Properties.create(material).harvestLevel(harvestlevel).harvestTool(harvesttool).hardnessAndResistance(hardness, resistance), xpdroped);
 	}
 
 	public ARotatedPillarBlock(Properties properties, int xpdropped) {

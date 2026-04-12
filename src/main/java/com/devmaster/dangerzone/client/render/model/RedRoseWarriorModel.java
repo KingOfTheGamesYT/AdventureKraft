@@ -1,16 +1,15 @@
 package com.devmaster.dangerzone.client.render.model;
 // Made with Blockbench 3.7.4
 // Exported for Minecraft version 1.15
-// Paste this class into your mod and generate all required imports
-
 
 import com.devmaster.dangerzone.entity.RedRoseWarrior;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.CreatureEntity;
-import net.minecraft.util.HandSide;
 import net.minecraft.util.math.MathHelper;
 
 public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<RedRoseWarrior> {
@@ -43,13 +42,10 @@ public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<R
 
         body = new ModelRenderer(this);
         body.setRotationPoint(0.0F, 14.0F, 2.0F);
-
-
         body_rotation = new ModelRenderer(this);
         body_rotation.setRotationPoint(0.0F, 0.0F, 0.0F);
         body.addChild(body_rotation);
         setRotationAngle(body_rotation, 1.5708F, 0.0F, 0.0F);
-
 
         body_sub_1 = new ModelRenderer(this);
         body_sub_1.setRotationPoint(0.1667F, -2.8333F, 0.0F);
@@ -58,13 +54,10 @@ public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<R
 
         mane = new ModelRenderer(this);
         mane.setRotationPoint(1.0F, 14.0F, 2.0F);
-
-
         mane_rotation = new ModelRenderer(this);
         mane_rotation.setRotationPoint(-1.0F, 2.5F, -2.5F);
         mane.addChild(mane_rotation);
         setRotationAngle(mane_rotation, 1.5708F, 0.0F, 0.0F);
-
 
         mane_sub_1 = new ModelRenderer(this);
         mane_sub_1.setRotationPoint(0.0F, 0.2083F, 3.2083F);
@@ -91,7 +84,6 @@ public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<R
         tail = new ModelRenderer(this);
         tail.setRotationPoint(-0.0833F, 12.0F, 9.0417F);
         setRotationAngle(tail, 0.0F, 0.0F, 3.1343F);
-
 
         tail_r1 = new ModelRenderer(this);
         tail_r1.setRotationPoint(0.0833F, -1.125F, 0.7083F);
@@ -124,9 +116,7 @@ public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<R
             } else {
                 this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
             }
-
             this.head.rotateAngleY = 0.0F;
-
 
         this.tail.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
         if (flag) {
@@ -143,7 +133,6 @@ public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<R
         this.leg3.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
         this.leg4.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
     }
-
 
     @Override
     public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
@@ -162,5 +151,4 @@ public class RedRoseWarriorModel<N extends CreatureEntity> extends EntityModel<R
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;
     }
-
 }

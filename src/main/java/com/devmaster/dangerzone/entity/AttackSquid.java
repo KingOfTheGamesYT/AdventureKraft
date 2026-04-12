@@ -1,19 +1,16 @@
 package com.devmaster.dangerzone.entity;
 
 import com.devmaster.dangerzone.entity.goals.IntervalRangedAttackGoal;
-import net.minecraft.block.Blocks;
+
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.brain.task.SwimTask;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.monster.SlimeEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.GolemEntity;
-import net.minecraft.entity.passive.WaterMobEntity;
-import net.minecraft.entity.passive.fish.AbstractFishEntity;
 import net.minecraft.entity.passive.fish.AbstractGroupFishEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.datasync.DataParameter;
@@ -23,13 +20,8 @@ import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
-
-import java.util.Random;
-
 
 public class AttackSquid extends CreatureEntity implements IRangedAttackMob {
     private static final int MAX_BEND_TIME = 66;
@@ -37,6 +29,10 @@ public class AttackSquid extends CreatureEntity implements IRangedAttackMob {
     private static final byte STILL = (byte)0;
     private static final byte BENDING_CLIENT = 9;
     private static final byte BENDING = (byte)2;
+    public void setAttackSquidState(final byte state) { this.getDataManager().set(STATE, Byte.valueOf(state)); }
+    public boolean isNoneState() { return getAttackSquidState() == STILL; }
+    public byte getAttackSquidState() { return this.getDataManager().get(STATE).byteValue(); }
+    public void setBendingAttack(final boolean smash) { setAttackSquidState(smash ? BENDING : STILL); }
 
     public AttackSquid(final EntityType<? extends AttackSquid> type, final World worldIn) {
         super(type, worldIn);
@@ -52,6 +48,7 @@ public class AttackSquid extends CreatureEntity implements IRangedAttackMob {
     public CreatureAttribute getCreatureAttribute() {
         return CreatureAttribute.WATER;
     }
+
     public void travel(Vector3d travelVector) {
         if (this.isServerWorld() && this.isInWater()) {
             this.moveRelative(0.01F, travelVector);
@@ -63,7 +60,6 @@ public class AttackSquid extends CreatureEntity implements IRangedAttackMob {
         } else {
             super.travel(travelVector);
         }
-
     }
     
     public static AttributeModifierMap.MutableAttribute getAttributes() {
@@ -95,26 +91,20 @@ public class AttackSquid extends CreatureEntity implements IRangedAttackMob {
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, MonsterEntity.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, true));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, StampyLongNose.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, BaseYoutuber.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, SlimeEntity.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, GolemEntity.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, AbstractGroupFishEntity.class, true));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, NotBreeBree.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, RedRoseWarrior.class, true));
     }
-
-    public void setAttackSquidState(final byte state) { this.getDataManager().set(STATE, Byte.valueOf(state)); }
-    public boolean isNoneState() { return getAttackSquidState() == STILL; }
-    public byte getAttackSquidState() { return this.getDataManager().get(STATE).byteValue(); }
-    public void setBendingAttack(final boolean smash) { setAttackSquidState(smash ? BENDING : STILL); }
-
 
     class WaterBending extends IntervalRangedAttackGoal {
 
         protected WaterBending(final IRangedAttackMob entityIn, final int duration, final int count, final int maxCooldownIn) {
             super(entityIn, duration, count, maxCooldownIn);
         }
+
         @Override
         public boolean shouldExecute() {
             return super.shouldExecute() && AttackSquid.this.isNoneState();
@@ -154,7 +144,6 @@ public class AttackSquid extends CreatureEntity implements IRangedAttackMob {
     protected float getSoundPitch() {
         return 0.7F + rand.nextFloat() * 0.2F;
     }
-
 
     @Override
     public boolean onLivingFall(float distance, float damageMultiplier) {

@@ -2,13 +2,11 @@ package com.devmaster.dangerzone.misc;
 
 import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.CreativeTabs.*;
-import com.devmaster.dangerzone.client.render.RoboTechnobladeRender;
 import com.devmaster.dangerzone.configs.BaseConfig;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.items.SpawnEgg;
 import com.devmaster.dangerzone.util.RegistryHandler;
 import com.devmaster.dangerzone.world.gen.ArmoredMobSpawnEvents;
-import com.devmaster.dangerzone.world.gen.EntitySpawns;
 import com.devmaster.dangerzone.world.gen.ModOregen;
 
 import net.minecraft.block.Block;
@@ -16,12 +14,15 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.gen.Heightmap;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -40,7 +41,7 @@ import org.apache.logging.log4j.Logger;
 
 @Mod("dangerzone")
 public class DangerZone {
-    public static final Logger LOGGER = LogManager.getLogger("DangerZone");
+    public static final Logger LOGGER = LogManager.getLogger("AdventureKraft");
     public static final String MOD_ID = "dangerzone";
     public static final ItemGroup TAB = new DangerZoneItems();
     public static final ItemGroup  ARMOR = new DangerZoneArmory();
@@ -61,7 +62,6 @@ public class DangerZone {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modEventBus.addListener(this::setup);
         RegistryHandler.init();
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(ModOregen::handleWorldGen);
@@ -70,48 +70,52 @@ public class DangerZone {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        EntitySpawnPlacementRegistry.register(RegistryHandler.ATTACK_SQUID.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
+        EntitySpawnPlacementRegistry.register(RegistryHandler.BIRD.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
+        EntitySpawnPlacementRegistry.register(RegistryHandler.CAVE_FISHER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CaveFisher::canSpawn);
+
         DeferredWorkQueue.runLater(() -> {
-            GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), Tewtiy.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNose.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.NOTBREEBREE.get(), NotBreeBree.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.NOTBREEBREE.get(), BaseYoutuber.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarrior.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.RAINBOWANT.get(), RainbowAnt.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.RAINBOWANT.get(), BaseAnt.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.BUTTERFLY.get(), Butterfly.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.ENT.get(), Ent.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.CAVE_FISHER.get(), CaveFisher.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.ATTACK_SQUID.get(), AttackSquid.getAttributes().create());
-          //  GlobalEntityTypeAttributes.put(RegistryHandler.HYDROLISC.get(), Hydrolisc.getAttributes().create());
+          //GlobalEntityTypeAttributes.put(RegistryHandler.HYDROLISC.get(), Hydrolisc.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.ALLOSAURUS.get(), Allosaurus.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.BIRD.get(), Bird.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.TECHNOBLADE.get(), Technoblade.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.TECHNOBLADE.get(), BaseYoutuber.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.MERMAID.get(), Mermaid.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.RED_COW.get(), RedCow.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.GODZILLA.get(), Godzilla.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.ALEXICRAFT.get(), AlexiCraft.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.ANTVENOM.get(), AntVenom.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.APHMAU.get(), Aphmau.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.BABYANGEL.get(), BabyAngel.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.BABYDUCK.get(), BabyDuck.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.BABYLEAH.get(), BabyLeah.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.BABYMAX.get(), BabyMax.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.BAJANCANADIAN.get(), BajanCanadian.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelz.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.ROBO_TECHNOBLADE.get(), RoboTechnoblade.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.RED_ANT.get(), RedAnt.getAttributes().create());
-            GlobalEntityTypeAttributes.put(RegistryHandler.TERMITE.get(), RedAnt.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ALEXICRAFT.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ANTVENOM.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.APHMAU.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BABYANGEL.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BABYDUCK.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BABYLEAH.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BABYMAX.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.BAJANCANADIAN.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.CAPTAINSPARKELZ.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.ROBO_TECHNOBLADE.get(), BaseYoutuber.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.RED_ANT.get(), BaseAnt.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.TERMITE.get(), BaseAnt.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.EASTER_BUNNY.get(), EasterBunny.getAttributes().create());
-            EntitySpawns.registerSpawnPlacements();
         });
     }
+
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(RegistryHandler.STICKY_BLOCK.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.APPLE_LEAVES.get(), RenderType.getCutout());
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TEWTIY.get(), TewtiyRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TEWTIY.get(), BaseYoutuberRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ATTACK_SQUID.get(), AttackSquidRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), StampyLongNoseRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.NOTBREEBREE.get(), NotBreeBreeRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.NOTBREEBREE.get(), BaseYoutuberRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.REDROSEWARRIOR.get(), RedRoseWarriorRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RAINBOWANT.get(), RainbowAntRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RAINBOWANT.get(), BaseAntRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BUTTERFLY.get(), ButterflyRender::new);
         RenderTypeLookup.setRenderLayer(RegistryHandler.KYANITE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.CRYSTAL_GRASS .get(), RenderType.getCutout());
@@ -121,28 +125,26 @@ public class DangerZone {
         //RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.HYDROLISC.get(), HydroliscRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ALLOSAURUS.get(), AllosaurusRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BIRD.get(), BirdRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TECHNOBLADE.get(), TechnobladeRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TECHNOBLADE.get(), BaseYoutuberRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.MERMAID.get(), MermaidRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RED_COW.get(), RedCowRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.GODZILLA.get(), GodzillaRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ALEXICRAFT.get(), AlexiCraftRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ANTVENOM.get(), AntVenomRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.APHMAU.get(), AphmauRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYANGEL.get(), BabyAngelRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYDUCK.get(), BabyDuckRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYLEAH.get(), BabyLeahRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYMAX.get(), BabyMaxRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BAJANCANADIAN.get(), BajanCanadianRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.CAPTAINSPARKELZ.get(), CaptainSparkelzRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ROBO_TECHNOBLADE.get(), RoboTechnobladeRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RED_ANT.get(), RedAntRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TERMITE.get(), TermiteRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ALEXICRAFT.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ANTVENOM.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.APHMAU.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYANGEL.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYDUCK.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYLEAH.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BABYMAX.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BAJANCANADIAN.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.CAPTAINSPARKELZ.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ROBO_TECHNOBLADE.get(), BaseYoutuberRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.RED_ANT.get(), BaseAntRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TERMITE.get(), BaseAntRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.EASTER_BUNNY.get(), EasterBunnyRender::new);
         RenderTypeLookup.setRenderLayer(RegistryHandler.RANDOM_STRUCTURE_BLOCK.get(), RenderType.getCutout());
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BETTER_FIREBALL.get(), manager -> new SpriteRenderer<>(manager, Minecraft.getInstance().getItemRenderer()));
+
         SpawnEgg.initSpawnEggs();
     }
 }
-
-
-
