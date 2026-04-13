@@ -3,16 +3,22 @@ package com.teamolympus.dangerzone.registry;
 import com.teamolympus.dangerzone.blocks.KrakenRepellentBlock;
 import com.teamolympus.dangerzone.blocks.base.BaseAkPetrifiedBlock;
 import com.teamolympus.dangerzone.entity.living.hostile.KrakenEntity;
+import com.teamolympus.dangerzone.entity.rocks.ExplosiveRockEntity;
+import com.teamolympus.dangerzone.entity.rocks.GreenRockEntity;
+import com.teamolympus.dangerzone.entity.rocks.RedRockEntity;
+import com.teamolympus.dangerzone.entity.rocks.SmallRockEntity;
 import com.teamolympus.dangerzone.items.base.*;
 import com.teamolympus.dangerzone.items.base.tools.BaseAKAxe;
 import com.teamolympus.dangerzone.items.base.tools.BaseAKHoe;
 import com.teamolympus.dangerzone.items.base.tools.BaseAKSword;
 import com.teamolympus.dangerzone.blocks.ExtremeTorchBlock;
 import com.teamolympus.dangerzone.blocks.PizzaBlock;
-import com.teamolympus.dangerzone.enums.EnumRockTypes;
 import com.teamolympus.dangerzone.items.*;
+import com.teamolympus.dangerzone.items.rocks.ExplosiveRockItem;
+import com.teamolympus.dangerzone.items.rocks.GreenRockItem;
+import com.teamolympus.dangerzone.items.rocks.RedRockItem;
+import com.teamolympus.dangerzone.items.rocks.SmallRockItem;
 import com.teamolympus.dangerzone.misc.DangerZone;
-import com.teamolympus.dangerzone.entity.RockEntity;
 import com.teamolympus.dangerzone.entity.living.hostile.AllosaurusEntity;
 import com.teamolympus.dangerzone.entity.living.hostile.MantisEntity;
 import com.teamolympus.dangerzone.entity.living.peaceful.bodyguard.BodyguardEntity;
@@ -22,7 +28,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.monster.*;
 import net.minecraft.entity.passive.*;
@@ -160,11 +165,13 @@ public class RegistryHandler {
 		
 		
 		// NON-LIVING
-		
-        registerEntity(RockEntity.class, "rock", 64, 1, true);
-		
-		
-		// HOSTILE
+        registerEntity(RedRockEntity.class, "rockRed", 64, 1, true);
+        registerEntity(SmallRockEntity.class, "rockSmall", 64, 1, true);
+        registerEntity(GreenRockEntity.class, "rockGreen", 64, 1, true);
+        registerEntity(ExplosiveRockEntity.class, "rockExplosive", 64, 1, true);
+
+
+        // HOSTILE
         registerEntity(MantisEntity.class, "mantis", 64, 1, true);
         registerEntity(AllosaurusEntity.class, "allosaurus", 64, 1, true);
         registerEntity(KrakenEntity.class, "kraken", 64, 1, true);
@@ -192,7 +199,10 @@ public class RegistryHandler {
 
     public static Item mantisClaw;
 
-    public static Item redRock, greenRock, explosiveRock, smallRock;
+    public static Item redRock;
+    public static Item greenRock;
+    public static Item explosiveRock;
+    public static Item smallRock;
 
     public static Item minerDream;
 
@@ -285,17 +295,17 @@ public class RegistryHandler {
         mantisClaw = new MantisClawItem("mantis_claw", mantisClawMaterials);
         registerItem(mantisClaw, "Mantis Claws");
 
-        redRock = new RockItem("red_rock", EnumRockTypes.RED_ROCK);
+        redRock = new RedRockItem("red_rock");
         registerItem(redRock, "Red Rock");
 
-        greenRock = new RockItem("green_rock", EnumRockTypes.GREEN_ROCK);
+        greenRock = new GreenRockItem("green_rock");
         registerItem(greenRock, "Green Rock");
 
-        explosiveRock = new RockItem("explosive_rock", EnumRockTypes.EXPLOSIVE_ROCK);
+       explosiveRock = new ExplosiveRockItem("explosive_rock");
         registerItem(explosiveRock, "Explosive Rock");
 
-        smallRock = new RockItem("small_rock", EnumRockTypes.SMALL_ROCK);
-        registerItem(smallRock, "Small Rock");
+        smallRock = new SmallRockItem("small_rock");
+       registerItem(smallRock, "Small Rock");
 
         minerDream = new ItemMinerDream("miners_dream");
         registerItem(minerDream, "Miner's Dream");
