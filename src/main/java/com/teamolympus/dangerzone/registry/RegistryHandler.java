@@ -14,14 +14,11 @@ import com.teamolympus.dangerzone.items.base.tools.BaseAKSword;
 import com.teamolympus.dangerzone.blocks.ExtremeTorchBlock;
 import com.teamolympus.dangerzone.blocks.PizzaBlock;
 import com.teamolympus.dangerzone.items.*;
-import com.teamolympus.dangerzone.items.rocks.ExplosiveRockItem;
-import com.teamolympus.dangerzone.items.rocks.GreenRockItem;
-import com.teamolympus.dangerzone.items.rocks.RedRockItem;
-import com.teamolympus.dangerzone.items.rocks.SmallRockItem;
 import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.entity.living.hostile.AllosaurusEntity;
 import com.teamolympus.dangerzone.entity.living.hostile.MantisEntity;
 import com.teamolympus.dangerzone.entity.living.peaceful.bodyguard.BodyguardEntity;
+import com.teamolympus.dangerzone.misc.EnumRockTypes;
 import com.teamolympus.dangerzone.networking.DangerZoneNetworking;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -295,17 +292,17 @@ public class RegistryHandler {
         mantisClaw = new MantisClawItem("mantis_claw", mantisClawMaterials);
         registerItem(mantisClaw, "Mantis Claws");
 
-        redRock = new RedRockItem("red_rock");
+        redRock = new RockItem("red_rock", EnumRockTypes.RED_ROCK);
         registerItem(redRock, "Red Rock");
 
-        greenRock = new GreenRockItem("green_rock");
+        greenRock = new RockItem("green_rock", EnumRockTypes.GREEN_ROCK);
         registerItem(greenRock, "Green Rock");
 
-       explosiveRock = new ExplosiveRockItem("explosive_rock");
+        explosiveRock = new RockItem("explosive_rock", EnumRockTypes.EXPLOSIVE_ROCK);
         registerItem(explosiveRock, "Explosive Rock");
 
-        smallRock = new SmallRockItem("small_rock");
-       registerItem(smallRock, "Small Rock");
+        smallRock = new RockItem("small_rock", EnumRockTypes.SMALL_ROCK);
+        registerItem(smallRock, "Small Rock");
 
         minerDream = new ItemMinerDream("miners_dream");
         registerItem(minerDream, "Miner's Dream");

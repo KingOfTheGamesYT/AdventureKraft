@@ -36,10 +36,21 @@ processResources {
     inputs.property "version", project.version
 
     // Replace values in only mcmod.info.
-    filesMatching('mcmod.info') {
+    filesMatching('mcmod.info') 
+	{
         expand 'version':project.version
     }
 }
+
+jar {
+
+	manifest {
+		attributes 'FMLAT' : 'dangerzone_at.cfg'
+	}
+
+}
+
+
 
 // Ensures that the encoding of source files is set to UTF-8, see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
 tasks.withType(JavaCompile) {

@@ -15,14 +15,16 @@ public abstract class RockEntity extends EntityThrowable {
         super(world);
     }
 
-    @Override
-    protected void onImpact(MovingObjectPosition movingObjectPosition)
-    {
-    }
-
 
     public RockEntity(World world, EntityLivingBase entityLivingBase) {
         super(world, entityLivingBase);
+    }
+
+
+
+    @Override
+    protected void onImpact(MovingObjectPosition movingObjectPosition)
+    {
     }
 
 
