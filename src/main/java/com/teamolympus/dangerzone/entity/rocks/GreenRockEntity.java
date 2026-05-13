@@ -14,29 +14,15 @@ public class GreenRockEntity extends RockEntity{
         super(world);
     }
 
+    @Override
+    public void hitEntityHook(MovingObjectPosition movingObjectPosition)
+    {
+        EntityLiving entityLiving = (EntityLiving) movingObjectPosition.entityHit;
+        entityLiving.addPotionEffect(new PotionEffect(Potion.poison.id, 100, 0));
+    }
+
 
     public GreenRockEntity(World world, EntityLivingBase entityLivingBase) {
-        super(world, entityLivingBase);
-    }
-
-
-    public GreenRockEntity(World world, double posX, double posY, double posZ) {
-        super(world, posX, posY, posZ);
-    }
-
-    @Override
-    protected void onImpact(MovingObjectPosition movingObjectPosition) {
-        if (movingObjectPosition.entityHit instanceof EntityLiving)
-        {
-            EntityLiving entityLiving = (EntityLiving) movingObjectPosition.entityHit;
-            entityLiving.addPotionEffect(new PotionEffect(Potion.poison.id, 100, 0));
-        }
-
-        if (!this.worldObj.isRemote)
-        {
-            this.dropBlockAsItem(this.worldObj, (int) this.posX,(int) this.posY,(int) this.posZ, new ItemStack(RegistryHandler.greenRock));
-        }
-        this.setDead();
-
+        super(world, entityLivingBase, RegistryHandler.greenRock);
     }
 }

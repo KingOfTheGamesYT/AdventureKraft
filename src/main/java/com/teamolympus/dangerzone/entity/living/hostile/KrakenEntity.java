@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
+import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.Entity;
@@ -12,6 +13,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
@@ -28,6 +30,7 @@ public class KrakenEntity extends EntityMob {
     private int lastPosX;
     private int stuckTicks;
     Vec3 vec;
+    int immuneTime = 900;
 
     public KrakenEntity(World world) {
         super(world);
@@ -35,7 +38,6 @@ public class KrakenEntity extends EntityMob {
         this.isImmuneToFire = true;
         this.fireResistance = 120;
         this.experienceValue = 500;
-        this.maxHurtResistantTime = 30;
     }
 
     @Override
@@ -58,14 +60,22 @@ public class KrakenEntity extends EntityMob {
     @Override
     public boolean attackEntityFrom(DamageSource ds, float damage)
     {
-        return super.attackEntityFrom(ds, damage);
+        if (immuneTime < 0) {
+            DZLogger.LOGGER.info("TRUE");
+            return super.attackEntityFrom(ds, damage);
+        }
+        return false;
     }
 
 
     @Override
     protected void attackEntity(Entity mob, float dist)
     {
-        super.attackEntity(mob, dist);
+        if (this.attackTime <= 0 && dist < 12.0F && mob.boundingBox.maxY > this.boundingBox.minY && mob.boundingBox.minY < this.boundingBox.maxY)
+        {
+            this.attackTime = 20;
+            this.attackEntityAsMob(mob);
+        }
         if (pathToEntity != null) {
             this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
         } else{
@@ -81,6 +91,7 @@ public class KrakenEntity extends EntityMob {
     public void onUpdate()
     {
         super.onUpdate();
+        immuneTime--;
 
         if (this.attackerPosition == null)
         {
@@ -194,40 +205,10 @@ public class KrakenEntity extends EntityMob {
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Override
     protected void updateWanderPath()
     {
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Item[] lootableList = new Item[]
 {
@@ -270,10 +251,6 @@ Item[] lootableList = new Item[]
     @Override
     protected void updateFallState(double distanceFallenThisTick, boolean isOnGround) {}
 
-
-
-
-
     public Entity findEntityInBoundingBox() {
         List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(16.0D, 8.0D, 16.0D));
 
@@ -299,16 +276,19 @@ Item[] lootableList = new Item[]
     }
 
 
+    @Override
+    public void readEntityFromNBT(NBTTagCompound tag)
+    {
+        super.readEntityFromNBT(tag);
+        tag.setInteger("Immune", this.immuneTime);
+    }
 
-
-
-
-
-
-
-
-
-
-
+    @Override
+    public void writeEntityToNBT(NBTTagCompound tag)
+    {
+        super.writeEntityToNBT(tag);
+        this.immuneTime = tag.getInteger("Immune");
+    }
+    
 
 }

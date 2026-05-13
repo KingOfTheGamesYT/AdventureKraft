@@ -1,8 +1,7 @@
 package com.teamolympus.dangerzone.entity.living.peaceful.bodyguard;
 
-
 import com.teamolympus.dangerzone.client.render.BodyguardRender;
-import com.teamolympus.dangerzone.copypastesoup.BodyGuardChest;
+import com.teamolympus.dangerzone.misc.DZLogger;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -78,7 +77,7 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
 
         this.dataWatcher.addObject(PLAYER_GIVEN_TAME_AMM, (byte)0); // Player given amm
 
-        //TODO: REWRITE USING THE SYSTEM DEV PROVIDED
+        //TODO: REWRITE USING THE SYSTEM DEVMASTER PROVIDED
         this.dataWatcher.addObject(TEXTUREID_FEMALE, (byte)0); // female
         this.dataWatcher.addObject(TEXTUREID_MALE, (byte)0); // male
 
@@ -286,7 +285,7 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
 
 
         if (this.getAnger() > 100 && isTamed()) {
-            System.out.println("I am angry");
+            DZLogger.LOGGER.debug("I am angry");
         }
 
     }

@@ -12,29 +12,14 @@ public class RedRockEntity extends RockEntity{
         super(world);
     }
 
+    @Override
+    public void hitEntityHook(MovingObjectPosition movingObjectPosition) {
+        EntityLiving entityLiving = (EntityLiving) movingObjectPosition.entityHit;
+        entityLiving.setFire(20);
+    }
+
 
     public RedRockEntity(World world, EntityLivingBase entityLivingBase) {
-        super(world, entityLivingBase);
-    }
-
-
-    public RedRockEntity(World world, double posX, double posY, double posZ) {
-        super(world, posX, posY, posZ);
-    }
-
-    @Override
-    protected void onImpact(MovingObjectPosition movingObjectPosition) {
-        if (movingObjectPosition.entityHit instanceof EntityLiving)
-        {
-            EntityLiving entityLiving = (EntityLiving) movingObjectPosition.entityHit;
-            entityLiving.setFire(20);
-        }
-
-        if (!this.worldObj.isRemote)
-        {
-            this.dropBlockAsItem(this.worldObj, (int) this.posX,(int) this.posY,(int) this.posZ, new ItemStack(RegistryHandler.redRock));
-        }
-        this.setDead();
-
+        super(world, entityLivingBase, RegistryHandler.redRock);
     }
 }

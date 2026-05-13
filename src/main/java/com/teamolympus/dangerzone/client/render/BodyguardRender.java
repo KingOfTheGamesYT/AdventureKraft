@@ -30,7 +30,7 @@ public class BodyguardRender extends RenderBiped {
             registerFemale("egirl"),
             registerFemale("knight"),
             registerFemale("korean"),
-            registerFemale("matcha_stream"),
+            registerFemale("matcha_steam"),
             registerFemale("peach"),
             registerFemale("princess"),
             registerFemale("princess_eleven"),
@@ -61,48 +61,18 @@ public class BodyguardRender extends RenderBiped {
         super(new ModelBiped(), 0.5F);
     }
 
-    /**
-     * Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args:
-     * entityLiving, partialTickTime
-     */
-
-
     protected ResourceLocation getEntityTexture(BodyguardEntity mobBodyGuard) {
         if (mobBodyGuard.isMale()) {
-            System.out.println("MALE TEXTURE INDEX     " + mobBodyGuard.getTextureMale());
             return TEXTURES_MALE[mobBodyGuard.getTextureMale()];
         }
         return TEXTURES_FEMALE[mobBodyGuard.getTextureFemale()];
     }
 
-    /**
-     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
-     */
     @Override
     protected ResourceLocation getEntityTexture(EntityLiving p_110775_1_) {
         return this.getEntityTexture((BodyguardEntity) p_110775_1_);
     }
 
-    /**
-     * Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args:
-     * entityLiving, partialTickTime
-     */
-
-
-
-    protected void preRenderCallback(BodyguardEntity mob, float f1)
-    {
-
-    }
-
-    @Override
-    protected void preRenderCallback(EntityLivingBase p_77041_1_, float p_77041_2_) {
-        this.preRenderCallback((BodyguardEntity) p_77041_1_, p_77041_2_);
-    }
-
-    /**
-     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
-     */
     @Override
     protected ResourceLocation getEntityTexture(Entity p_110775_1_) {
         return this.getEntityTexture((BodyguardEntity) p_110775_1_);

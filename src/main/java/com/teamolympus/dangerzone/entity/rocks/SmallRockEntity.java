@@ -13,8 +13,15 @@ public class SmallRockEntity extends RockEntity{
         super(world);
     }
 
+    @Override
+    public void hitEntityHook(MovingObjectPosition movingObjectPosition)
+    {
+        EntityLiving entityLiving = (EntityLiving) movingObjectPosition.entityHit;
+        entityLiving.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), 2);
+    }
+
     public SmallRockEntity(World world, EntityLivingBase entityLivingBase) {
-        super(world, entityLivingBase);
+        super(world, entityLivingBase, RegistryHandler.smallRock);
     }
 
 
@@ -24,16 +31,7 @@ public class SmallRockEntity extends RockEntity{
 
     @Override
     protected void onImpact(MovingObjectPosition movingObjectPosition) {
-        if (movingObjectPosition.entityHit instanceof EntityLiving)
-        {
-            EntityLiving entityLiving = (EntityLiving) movingObjectPosition.entityHit;
-            entityLiving.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), 2);
-        }
-        if (!this.worldObj.isRemote)
-        {
-            this.dropBlockAsItem(this.worldObj, (int) this.posX,(int) this.posY,(int) this.posZ, new ItemStack(RegistryHandler.smallRock));
-        }
-        this.setDead();
+        super.onImpact(movingObjectPosition);
 
     }
 }

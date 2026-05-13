@@ -11,7 +11,7 @@ import com.teamolympus.dangerzone.entity.living.hostile.AllosaurusEntity;
 
 public class AllosaurusRender extends RenderLiving {
 
-    static final ResourceLocation[] resourceLocations = new ResourceLocation[]
+   public static final ResourceLocation[] resourceLocations = new ResourceLocation[]
         {
         new ResourceLocation(DangerZone.MODID, DangerZone.ENTITY_PREFIX_HOSTILE+ "allo1.png"),
         new ResourceLocation(DangerZone.MODID, DangerZone.ENTITY_PREFIX_HOSTILE + "allo2.png"),

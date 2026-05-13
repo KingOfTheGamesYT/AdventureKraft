@@ -1,0 +1,2 @@
+- Do not bring up unnecessary drama. This means no political topics or any past or present drama of anything.
+- Always act in good faith.

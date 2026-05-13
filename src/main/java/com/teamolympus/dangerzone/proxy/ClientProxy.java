@@ -15,6 +15,7 @@ import com.teamolympus.dangerzone.client.render.MantisRender;
 import com.teamolympus.dangerzone.entity.living.hostile.AllosaurusEntity;
 import com.teamolympus.dangerzone.entity.living.hostile.MantisEntity;
 import com.teamolympus.dangerzone.entity.living.peaceful.bodyguard.BodyguardEntity;
+import net.minecraft.item.Item;
 
 public class ClientProxy extends CommonProxy {
 
@@ -24,14 +25,18 @@ public class ClientProxy extends CommonProxy {
         renderEntity(BodyguardEntity.class, new BodyguardRender());
         renderEntity(MantisEntity.class, new MantisRender());
         renderEntity(AllosaurusEntity.class, new AllosaurusRender());
-        renderEntity(ExplosiveRockEntity.class, new RenderSnowball(RegistryHandler.explosiveRock));
-        renderEntity(SmallRockEntity.class, new RenderSnowball(RegistryHandler.smallRock));
-        renderEntity(RedRockEntity.class, new RenderSnowball(RegistryHandler.redRock));
-        renderEntity(GreenRockEntity.class, new RenderSnowball(RegistryHandler.greenRock));
+        render2D(ExplosiveRockEntity.class, RegistryHandler.explosiveRock);
+        render2D(SmallRockEntity.class, RegistryHandler.smallRock);
+        render2D(RedRockEntity.class, RegistryHandler.redRock);
+        render2D(GreenRockEntity.class, RegistryHandler.greenRock);
     }
 
     private void renderEntity(Class<? extends Entity> clazz, Render render) {
         RenderingRegistry.registerEntityRenderingHandler(clazz, render);
+    }
+
+    private void render2D(Class<? extends Entity> clazz, Item item) {
+        renderEntity(clazz, new RenderSnowball(item));
     }
 
 }

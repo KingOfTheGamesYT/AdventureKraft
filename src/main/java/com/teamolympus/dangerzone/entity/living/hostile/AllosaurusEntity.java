@@ -1,5 +1,6 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
+import com.teamolympus.dangerzone.client.render.AllosaurusRender;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.boss.IBossDisplayData;
@@ -17,7 +18,7 @@ public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
         super(world);
         this.setSize(1.5f, 1.5f);
         this.experienceValue = 199;
-        randomTextureSelector = rand.nextInt(4);
+        randomTextureSelector = rand.nextInt(AllosaurusRender.resourceLocations.length);
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         this.tasks.addTask(4, new EntityAIAttackOnCollide(this, EntityVillager.class, 1.0D, true));

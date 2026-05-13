@@ -2,10 +2,10 @@
 
 Adds TheyCallMeDanger's game, DangerZone, into Minecraft.
 
-Original Game made by TheyCallMeDanger aka Richard Clark.
+Original Game made by TheyCallMeDanger("Richard Clark").
 
 # Authors
-Made by RedRoseWarrior1 aka DevMaster1015 and Jerios("VortexBlender", "RustyVortex").
+Made by RedRoseWarrior1("DevMaster1015") and Jerios("VortexBlender", "RustyVortex").
 
 For information on the License, see: [The License Here](LICENSE)
 

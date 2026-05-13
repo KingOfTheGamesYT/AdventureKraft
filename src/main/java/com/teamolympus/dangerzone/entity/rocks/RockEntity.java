@@ -1,30 +1,46 @@
 package com.teamolympus.dangerzone.entity.rocks;
 
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 public abstract class RockEntity extends EntityThrowable {
 
-
-    // needed forfor MC
     public RockEntity(World world) {
         super(world);
     }
 
 
-    public RockEntity(World world, EntityLivingBase entityLivingBase) {
+
+    Item dropItem;
+    public RockEntity(World world, EntityLivingBase entityLivingBase, Item item) {
         super(world, entityLivingBase);
+        this.dropItem = item;
     }
 
 
+    public abstract void hitEntityHook(MovingObjectPosition movingObjectPosition);
 
     @Override
     protected void onImpact(MovingObjectPosition movingObjectPosition)
     {
+
+        if (movingObjectPosition.entityHit instanceof EntityLiving)
+        {
+            hitEntityHook(movingObjectPosition);
+        }
+
+        if (!this.worldObj.isRemote)
+        {
+            this.dropBlockAsItem(this.worldObj, (int) this.posX,(int) this.posY,(int) this.posZ, new ItemStack(dropItem));
+        }
+
+        this.setDead();
     }
 
 
@@ -39,10 +55,7 @@ public abstract class RockEntity extends EntityThrowable {
 
 
         if (!worldIn.isRemote && worldIn.getGameRules()
-            .getGameRuleBooleanValue("doTileDrops") && !worldIn.restoringBlockSnapshots) // do not drop items while
-                                                                                         // restoring blockstates,
-                                                                                         // prevents item dupe
-        {
+            .getGameRuleBooleanValue("doTileDrops") && !worldIn.restoringBlockSnapshots) {
             float f = 0.7F;
             double d0 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
             double d1 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
