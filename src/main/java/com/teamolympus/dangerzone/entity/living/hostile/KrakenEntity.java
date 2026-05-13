@@ -269,6 +269,7 @@ Item[] lootableList = new Item[]{
     @Override
     protected void updateFallState(double distanceFallenThisTick, boolean isOnGround) {}
 
+    @SuppressWarnings("unchecked")
     public Entity findEntityInBoundingBox() {
         List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(25.0D, 40.0D, 25.0D));
 

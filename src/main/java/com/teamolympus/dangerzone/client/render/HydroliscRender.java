@@ -1,6 +1,5 @@
 package com.teamolympus.dangerzone.client.render;
 
-import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.misc.ResourceLocationUtils;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
