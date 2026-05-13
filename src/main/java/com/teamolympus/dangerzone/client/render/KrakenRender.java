@@ -4,7 +4,6 @@ import com.teamolympus.dangerzone.misc.ResourceLocationUtils;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
-import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.client.model.KrakenModel;
 
 public class KrakenRender extends RenderLiving {

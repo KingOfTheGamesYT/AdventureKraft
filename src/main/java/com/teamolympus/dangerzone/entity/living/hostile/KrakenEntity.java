@@ -1,7 +1,6 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
-import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.Entity;
