@@ -1,5 +1,8 @@
 package com.teamolympus.dangerzone.items;
 
+import com.teamolympus.dangerzone.misc.Translations;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLivingBase;
@@ -8,9 +11,12 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 import com.teamolympus.dangerzone.items.base.tools.BaseAKPickaxe;
+
+import java.util.List;
 
 public class UltimatePickaxeItem extends BaseAKPickaxe {
 
@@ -56,6 +62,13 @@ public class UltimatePickaxeItem extends BaseAKPickaxe {
         }
 
         return super.onBlockDestroyed(stack, worldIn, blockIn, x, y, z, entityLivingBase);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    @SuppressWarnings("unchecked")
+    public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean b) {
+        info.add(EnumChatFormatting.DARK_BLUE + Translations.translate("UltaPick1"));
     }
 
 }

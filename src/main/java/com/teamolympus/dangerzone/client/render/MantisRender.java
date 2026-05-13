@@ -1,5 +1,6 @@
 package com.teamolympus.dangerzone.client.render;
 
+import com.teamolympus.dangerzone.misc.ResourceLocationUtils;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -11,7 +12,8 @@ import com.teamolympus.dangerzone.entity.living.hostile.MantisEntity;
 
 public class MantisRender extends RenderLiving {
 
-    private static final ResourceLocation mantisTexture = new ResourceLocation(DangerZone.MODID, DangerZone.ENTITY_PREFIX_HOSTILE + "mantis.png");
+    private static final ResourceLocation mantisTexture =
+            ResourceLocationUtils.makeResourceLocationEntityHostile("mantis");
 
     private static final float scaleFactor = 1.1f;
 

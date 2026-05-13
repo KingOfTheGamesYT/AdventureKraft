@@ -1,6 +1,7 @@
 package com.teamolympus.dangerzone.client.render;
 
 import com.teamolympus.dangerzone.misc.DangerZone;
+import com.teamolympus.dangerzone.misc.ResourceLocationUtils;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -13,10 +14,10 @@ public class AllosaurusRender extends RenderLiving {
 
    public static final ResourceLocation[] resourceLocations = new ResourceLocation[]
         {
-        new ResourceLocation(DangerZone.MODID, DangerZone.ENTITY_PREFIX_HOSTILE+ "allo1.png"),
-        new ResourceLocation(DangerZone.MODID, DangerZone.ENTITY_PREFIX_HOSTILE + "allo2.png"),
-        new ResourceLocation(DangerZone.MODID, DangerZone.ENTITY_PREFIX_HOSTILE + "allo3.png"),
-        new ResourceLocation(DangerZone.MODID, DangerZone.ENTITY_PREFIX_HOSTILE + "allo4.png")
+                ResourceLocationUtils.makeResourceLocationEntityHostile("allo1"),
+                ResourceLocationUtils.makeResourceLocationEntityHostile("allo2"),
+                ResourceLocationUtils.makeResourceLocationEntityHostile("allo3"),
+                ResourceLocationUtils.makeResourceLocationEntityHostile("allo4")
     };
 
     public AllosaurusRender() {
@@ -34,7 +35,7 @@ public class AllosaurusRender extends RenderLiving {
     public void doRender(AllosaurusEntity allosaurus, double p, double p2, double p3, float p4, float p5)
     {
         BossStatus.setBossStatus(allosaurus, true);
-        super.doRender((EntityLiving)allosaurus, p,p2,p3,p4,p5);
+        super.doRender(allosaurus, p,p2,p3,p4,p5);
     }
 
     public void doRender(EntityLiving entityLiving, double p1, double p2, double p3, float p4, float p5)

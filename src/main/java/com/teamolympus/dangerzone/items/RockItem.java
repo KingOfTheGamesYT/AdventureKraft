@@ -39,7 +39,7 @@ public class RockItem extends BaseAKItem {
                     worldIn.spawnEntityInWorld(new SmallRockEntity(worldIn, player));
                     break;
                 default:
-                    break;
+                    return itemStackIn;
             }
         }
 

@@ -1,9 +1,7 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
-import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
 import com.teamolympus.dangerzone.misc.DZLogger;
-import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.Entity;
@@ -33,9 +31,10 @@ public class KrakenEntity extends EntityMob {
     private int stuckTicks;
     Vec3 vec;
     int immuneTime = 30;
-    public int reinforcementsTimer;
+    public int reinforcementsTimer = 3600;
     private boolean reinforcements = false;
-    private static final byte REENFORCEMENTS_AMM = 10;
+    private static final byte REINFORCEMENT_AMM = 10;
+    private static final int GROUND_CHECK = 31;
 
     public KrakenEntity(World world) {
         super(world);
@@ -84,7 +83,6 @@ public class KrakenEntity extends EntityMob {
             if (attackerPosition != null) {
                 attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
             }
-
         }
 
     }
@@ -119,6 +117,7 @@ public class KrakenEntity extends EntityMob {
         this.fleeingTick = 0;
         super.updateEntityActionState();
         this.fleeingTick = 0;
+        reinforcementsTimer--;
 
         if (this.worldObj.rand.nextInt(400) == 0) {
             EntityLightningBolt bolt = new EntityLightningBolt(this.worldObj, this.posX + randomOffset(), this.posY + randomOffsetY(), this.posZ + randomOffset());
@@ -137,21 +136,21 @@ public class KrakenEntity extends EntityMob {
 
         if (
                 (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ)
-                        || this.attackerPosition.getDistanceSquared((int) this.posX, (int) this.posY, (int) this.posZ) < 9.1F)
-        ) {
+                        || this.attackerPosition.getDistanceSquared((int) this.posX, (int) this.posY, (int) this.posZ) < 9.1F)) {
             int groundDist;
-            for (groundDist = 0; groundDist < 31; groundDist++) {
+            for (groundDist = 0; groundDist < GROUND_CHECK; groundDist++) {
                 if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) != Blocks.air) {
-                    this.attackerPosition.posY = groundDist;
+                    this.attackerPosition.posY -= groundDist;
                     break;
                 }
 
             }
+
           //  DZLogger.LOGGER.error("POZY "+attackerPosition.posY);
             attackerPosition.set
             (
                     (int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7),
-                    (int)this.posY + this.rand.nextInt(9) - 2,
+                    (int)this.posY + 20 - groundDist + this.rand.nextInt(9) - 6,
                     (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7)
             );
 
@@ -174,9 +173,10 @@ public class KrakenEntity extends EntityMob {
             }
         }
 
-        if (this.getHealth() < 150 && !this.reinforcements) {
+
+        if (this.reinforcementsTimer < 0 && this.getHealth() < (this.getMaxHealth() / 4) && !this.reinforcements) {
             this.reinforcements = true;
-            for (int i = 0; i < REENFORCEMENTS_AMM ; i++) {
+            for (int i = 0; i < REINFORCEMENT_AMM; i++) {
                 KrakenEntity krakenEntity = new KrakenEntity(this.worldObj);
                 krakenEntity.posZ = this.posZ + this.worldObj.rand.nextInt(10)  - this.worldObj.rand.nextInt(10);
                 krakenEntity.posX = this.posX + this.worldObj.rand.nextInt(12) + this.worldObj.rand.nextInt(5);
@@ -217,8 +217,6 @@ public class KrakenEntity extends EntityMob {
         float f1 = MathHelper.wrapAngleTo180_float(f - this.rotationYaw);
         this.moveForward = 1.0F;
         this.rotationYaw += f1;
-
-        int groundDist;
 
 
         if (this.worldObj.rand.nextInt(100) == 0) {
@@ -302,6 +300,7 @@ Item[] lootableList = new Item[]{
         super.readEntityFromNBT(tag);
         tag.setInteger("Immune", this.immuneTime);
         tag.setBoolean("Reinforcements", this.reinforcements);
+        tag.setInteger("Timer", this.reinforcementsTimer);
     }
 
     @Override
@@ -310,6 +309,7 @@ Item[] lootableList = new Item[]{
         super.writeEntityToNBT(tag);
         this.immuneTime = tag.getInteger("Immune");
         this.reinforcements = tag.getBoolean("Reinforcements");
+        this.reinforcementsTimer = tag.getInteger("Timer");
     }
 
 

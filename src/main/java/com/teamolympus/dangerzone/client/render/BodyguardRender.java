@@ -1,59 +1,40 @@
 package com.teamolympus.dangerzone.client.render;
 
+import com.teamolympus.dangerzone.misc.ResourceLocationUtils;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderBiped;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 
-import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.entity.living.peaceful.bodyguard.BodyguardEntity;
 
 public class BodyguardRender extends RenderBiped {
 
     public static final ResourceLocation[] TEXTURES_MALE = new ResourceLocation[]
     {
-            registerMale("akio"),
-            registerMale("bobby"),
-            registerMale("elyasisly"),
-            registerMale("jtrent238"),
-            registerMale("kostuch"),
-            registerMale("litchking"),
-            registerMale("prince")
+            ResourceLocationUtils.registerMale("akio"),
+            ResourceLocationUtils.registerMale("bobby"),
+            ResourceLocationUtils.registerMale("elyasisly"),
+            ResourceLocationUtils.registerMale("jtrent238"),
+            ResourceLocationUtils.registerMale("kostuch"),
+            ResourceLocationUtils.registerMale("litchking"),
+            ResourceLocationUtils.registerMale("prince")
     };
 
     public static final ResourceLocation[] TEXTURES_FEMALE = new ResourceLocation[]
     {
-            registerFemale("alice"),
-            registerFemale("bee"),
-            registerFemale("egirl"),
-            registerFemale("knight"),
-            registerFemale("korean"),
-            registerFemale("matcha_steam"),
-            registerFemale("peach"),
-            registerFemale("princess"),
-            registerFemale("princess_eleven"),
-            registerFemale("rose")
+            ResourceLocationUtils.registerFemale("alice"),
+            ResourceLocationUtils.registerFemale("bee"),
+            ResourceLocationUtils.registerFemale("egirl"),
+            ResourceLocationUtils.registerFemale("knight"),
+            ResourceLocationUtils.registerFemale("korean"),
+            ResourceLocationUtils.registerFemale("matcha_steam"),
+            ResourceLocationUtils.registerFemale("peach"),
+            ResourceLocationUtils.registerFemale("princess"),
+            ResourceLocationUtils.registerFemale("princess_eleven"),
+            ResourceLocationUtils.registerFemale("rose")
     };
-
-
-    private static ResourceLocation registerMale(String name) {
-        final String textureName =
-        DangerZone.ENTITY_PREFIX_MALE_GUARDS_PEACEFUL + use18Textures() + "bodyguard_male_" + name + ".png";
-        return new ResourceLocation(
-                DangerZone.MODID,
-                textureName);
-    }
-
-    private static ResourceLocation registerFemale(String name) {
-        final String textureName = DangerZone.ENTITY_PREFIX_FEMALE_GUARDS_PEACEFUL + use18Textures() + "bodyguard_female_" + name + ".png";
-        return new ResourceLocation(DangerZone.MODID,textureName);
-    }
-
-    private static String use18Textures() {
-        return DangerZone.isAbleToLoader18Skin ? "18/" : "";
-    }
 
 
     public BodyguardRender()
