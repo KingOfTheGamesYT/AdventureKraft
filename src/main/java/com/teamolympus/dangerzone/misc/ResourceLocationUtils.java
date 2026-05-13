@@ -9,7 +9,7 @@ public class ResourceLocationUtils {
     }
 
     public static ResourceLocation makeResourceLocationEntityPeaceful(String filename) {
-        return new ResourceLocation(DangerZone.MODID, DangerZone.ENTITY_PREFIX_MALE_GUARDS_PEACEFUL + filename + ".png");
+        return new ResourceLocation(DangerZone.MODID, DangerZone.ENTITY_PREFIX_PEACEFUL + filename + ".png");
     }
 
 
