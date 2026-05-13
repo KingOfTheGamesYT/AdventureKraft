@@ -37,8 +37,7 @@ public class MantisClawItem extends BaseAKSword {
     @SideOnly(Side.CLIENT)
     @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean b) {
-        for (byte i = 1; i <= 4; i++)
-        {
+        for (byte i = 1; i <= 4; i++) {
             info.add(Translations.translate("MantisDesc" + i));
         }
     }

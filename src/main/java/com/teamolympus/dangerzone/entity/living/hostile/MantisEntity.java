@@ -48,8 +48,7 @@ public class MantisEntity extends EntityMob {
     {
         super.onUpdate();
         this.motionY *= 0.6000000238418579D;
-        if (this.isInWater() && rand.nextInt(20) == 0)
-        {
+        if (this.isInWater() && rand.nextInt(20) == 0) {
             this.attackEntityFrom(DamageSource.drown, this.rand.nextInt((int) DZConfig.mantisAttackDamage));
         }
     }
@@ -63,8 +62,7 @@ public class MantisEntity extends EntityMob {
         super.updateEntityActionState();
         this.fleeingTick = 0;
 
-        if (this.attackerPosition == null)
-        {
+        if (this.attackerPosition == null) {
             this.attackerPosition = new ChunkCoordinates((int) this.posX, (int) this.posY, (int) this.posZ);
          //   this.attackerPosition = null;
         }
@@ -74,8 +72,7 @@ public class MantisEntity extends EntityMob {
         if (
         (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ)
                 || this.attackerPosition.getDistanceSquared((int) this.posX, (int) this.posY, (int) this.posZ) < 2.1F)
-        )
-        {
+        ) {
             attackerPosition.set((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
         }
 
@@ -91,7 +88,6 @@ public class MantisEntity extends EntityMob {
             {
                 vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
-
             } else {
                 attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
             }
@@ -99,7 +95,6 @@ public class MantisEntity extends EntityMob {
             if (pathToEntity != null) {
                 vec = pathToEntity.getPosition(this.findEntityInBoundingBox());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
-
             } else {
                 attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
             }
@@ -139,14 +134,12 @@ public class MantisEntity extends EntityMob {
 
 
 
-        if (this.worldObj.rand.nextInt(100) == 0)
-        {
+        if (this.worldObj.rand.nextInt(100) == 0) {
             this.heal(1);
         }
     }
 
-    protected void updatePosStuck()
-    {
+    protected void updatePosStuck() {
         int x = MathHelper.floor_double(this.posX + (double)this.rand.nextInt(9) + 4D);
         int y = MathHelper.floor_double(this.posY + 3 + (double)this.rand.nextInt(6) - 3.0D);
         int z = MathHelper.floor_double(this.posZ + (double)this.rand.nextInt(9) + 4D);
@@ -169,7 +162,7 @@ public class MantisEntity extends EntityMob {
         if (pathToEntity != null) {
             this.entityToAttack = mob;
             this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
-        } else{
+        } else {
             if (attackerPosition != null) {
                 this.entityToAttack = mob;
                 attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
@@ -204,22 +197,19 @@ public class MantisEntity extends EntityMob {
     }
 
     @Override
-    public boolean getCanSpawnHere()
-    {
+    public boolean getCanSpawnHere() {
         Entity mantis =  this.worldObj.findNearestEntityWithinAABB(MantisEntity.class, this.boundingBox.expand(32.0, 16.0, 32.0), this);
         boolean mantisIsNear = mantis == null;
         return this.posY > 50 && mantisIsNear && super.getCanSpawnHere();
     }
 
     @Override
-    protected Item getDropItem()
-    {
+    protected Item getDropItem() {
         return Item.getItemFromBlock(Blocks.yellow_flower);
     }
 
     @Override
-    protected void dropFewItems(boolean hitByPlayer, int lootingLevel)
-    {
+    protected void dropFewItems(boolean hitByPlayer, int lootingLevel) {
         super.dropFewItems(hitByPlayer, lootingLevel);
         DropHelper.dropItemMultipleNonStackable(this, RegistryHandler.mantisClaw,2,5);
         DropHelper.dropItem(this, Items.item_frame, 1,5);
@@ -236,12 +226,10 @@ public class MantisEntity extends EntityMob {
         List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(16.0D, 8.0D, 16.0D));
 
         for (Entity entity : list) {
-            if (entity instanceof IAdventureKraftAttackableMobs)
-            {
+            if (entity instanceof IAdventureKraftAttackableMobs) {
                 IAdventureKraftAttackableMobs attackableMob = ((IAdventureKraftAttackableMobs) entity);
 
-                if (attackableMob.entityAttackInstance() != null)
-                {
+                if (attackableMob.entityAttackInstance() != null) {
                     return attackableMob.entityAttackInstance();
                 }
 

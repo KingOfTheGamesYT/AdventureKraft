@@ -3,6 +3,7 @@ package com.teamolympus.dangerzone.entity.living.hostile;
 import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
 import com.teamolympus.dangerzone.misc.DZLogger;
+import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.Entity;
@@ -32,6 +33,9 @@ public class KrakenEntity extends EntityMob {
     private int stuckTicks;
     Vec3 vec;
     int immuneTime = 30;
+    public int reinforcementsTimer;
+    private boolean reinforcements = false;
+    private static final byte REENFORCEMENTS_AMM = 10;
 
     public KrakenEntity(World world) {
         super(world);
@@ -53,14 +57,12 @@ public class KrakenEntity extends EntityMob {
     }
 
     @Override
-    public boolean canEntityBeSeen(Entity entity)
-    {
+    public boolean canEntityBeSeen(Entity entity) {
         return this.worldObj.rayTraceBlocks(Vec3.createVectorHelper(this.posX, this.posY + 0.75, this.posZ), Vec3.createVectorHelper(entity.posX, entity.posY, entity.posZ)) == null;
     }
 
     @Override
-    public boolean attackEntityFrom(DamageSource ds, float damage)
-    {
+    public boolean attackEntityFrom(DamageSource ds, float damage) {
         if (immuneTime < 0) {
             immuneTime = 100;
             return super.attackEntityFrom(ds, damage);
@@ -72,14 +74,13 @@ public class KrakenEntity extends EntityMob {
     @Override
     protected void attackEntity(Entity mob, float dist)
     {
-        if (this.attackTime <= 0 && dist < 12.0F && mob.boundingBox.maxY > this.boundingBox.minY && mob.boundingBox.minY < this.boundingBox.maxY)
-        {
+        if (this.attackTime <= 0 && dist < 12.0F && mob.boundingBox.maxY > this.boundingBox.minY && mob.boundingBox.minY < this.boundingBox.maxY) {
             this.attackTime = 20;
             this.attackEntityAsMob(mob);
         }
         if (pathToEntity != null) {
             this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
-        } else{
+        } else {
             if (attackerPosition != null) {
                 attackerPosition.set((int) mob.posX, (int) mob.posY + 1, (int) mob.posZ);
             }
@@ -89,24 +90,21 @@ public class KrakenEntity extends EntityMob {
     }
 
     @Override
-    public void onUpdate()
-    {
+    public void onUpdate() {
         super.onUpdate();
         immuneTime--;
 
-        if (this.attackerPosition == null)
-        {
+        if (this.attackerPosition == null) {
             this.attackerPosition = new ChunkCoordinates((int)this.posX, (int)this.posY - 10, (int)this.posZ);
         }
 
-        if(this.posZ < this.attackerPosition.posY) {
+        if (this.posZ < this.attackerPosition.posY) {
             this.motionY *= 0.74894930;
         } else {
             this.motionY *= 0.568533;
         }
 
-        if (this.ticksExisted % 100 == 0 && !this.worldObj.isRemote)
-        {
+        if (this.ticksExisted % 100 == 0 && !this.worldObj.isRemote) {
             WorldInfo worldInfo = worldObj.getWorldInfo();
             worldInfo.setRaining(true);
             worldInfo.setThundering(true);
@@ -122,53 +120,75 @@ public class KrakenEntity extends EntityMob {
         super.updateEntityActionState();
         this.fleeingTick = 0;
 
-        if (this.worldObj.rand.nextInt(400) == 0)
-        {
+        if (this.worldObj.rand.nextInt(400) == 0) {
             EntityLightningBolt bolt = new EntityLightningBolt(this.worldObj, this.posX + randomOffset(), this.posY + randomOffsetY(), this.posZ + randomOffset());
             this.worldObj.addWeatherEffect(bolt);
         }
 
 
-        if (this.attackerPosition != null && (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ) || this.attackerPosition.posY < 1))
-        {
+        if (this.attackerPosition != null && (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ) || this.attackerPosition.posY < 1)) {
             this.attackerPosition = null;
         }
 
 
-        if (this.attackerPosition == null)
-        {
+        if (this.attackerPosition == null) {
             this.attackerPosition = new ChunkCoordinates((int)this.posX, (int)this.posY, (int)this.posZ);
         }
 
         if (
                 (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ)
                         || this.attackerPosition.getDistanceSquared((int) this.posX, (int) this.posY, (int) this.posZ) < 9.1F)
-        )
-        {
-            attackerPosition.set((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
+        ) {
+            int groundDist;
+            for (groundDist = 0; groundDist < 31; groundDist++) {
+                if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) != Blocks.air) {
+                    this.attackerPosition.posY = groundDist;
+                    break;
+                }
+
+            }
+          //  DZLogger.LOGGER.error("POZY "+attackerPosition.posY);
+            attackerPosition.set
+            (
+                    (int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7),
+                    (int)this.posY + this.rand.nextInt(9) - 2,
+                    (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7)
+            );
+
+
         }
 
-        if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack()))
-        {
-            if (pathToEntity != null)
-            {
+        if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack())) {
+            if (pathToEntity != null) {
                 vec = pathToEntity.getPosition(this.getEntityToAttack());
-                attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+                attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 15, (int) vec.zCoord);
             } else {
-                attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
+                attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 15, (int) getEntityToAttack().posZ);
             }
         } else if (this.findEntityInBoundingBox() != null) {
             if (pathToEntity != null) {
                 vec = pathToEntity.getPosition(this.getEntityToAttack());
-                attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+                attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 15, (int) vec.zCoord);
             } else {
-                attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
+                attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 15, (int) findEntityInBoundingBox().posZ);
+            }
+        }
+
+        if (this.getHealth() < 150 && !this.reinforcements) {
+            this.reinforcements = true;
+            for (int i = 0; i < REENFORCEMENTS_AMM ; i++) {
+                KrakenEntity krakenEntity = new KrakenEntity(this.worldObj);
+                krakenEntity.posZ = this.posZ + this.worldObj.rand.nextInt(10)  - this.worldObj.rand.nextInt(10);
+                krakenEntity.posX = this.posX + this.worldObj.rand.nextInt(12) + this.worldObj.rand.nextInt(5);
+                krakenEntity.posY = this.posY + this.worldObj.rand.nextInt(10) - this.worldObj.rand.nextInt(10);
+
+                this.worldObj.spawnEntityInWorld(krakenEntity);
+
             }
         }
 
         // Prevent Mob from getting stuck On Flight
-        if (this.lastPosX == (int)this.posX && this.lastPosZ == (int)this.posZ)
-        {
+        if (this.lastPosX == (int)this.posX && this.lastPosZ == (int)this.posZ) {
             ++stuckTicks;
             if (stuckTicks > 60)
             {
@@ -200,17 +220,8 @@ public class KrakenEntity extends EntityMob {
 
         int groundDist;
 
-        for (groundDist = 0; groundDist < 31; groundDist++) {
-            if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) != Blocks.air) {
-                this.attackerPosition.posY = groundDist;
-                break;
-            }
-            
-        }
 
-
-        if (this.worldObj.rand.nextInt(100) == 0)
-        {
+        if (this.worldObj.rand.nextInt(100) == 0) {
             this.heal(1);
         }
 
@@ -220,12 +231,11 @@ public class KrakenEntity extends EntityMob {
     {
     }
 
-Item[] lootableList = new Item[]
-{
+Item[] lootableList = new Item[]{
         Items.diamond,
         Item.getItemFromBlock(Blocks.diamond_block),
         Items.iron_ingot
-};
+    };
 
     @Override
     protected void dropFewItems(boolean hitByPlayer, int lootingLevel)
@@ -262,7 +272,7 @@ Item[] lootableList = new Item[]
     protected void updateFallState(double distanceFallenThisTick, boolean isOnGround) {}
 
     public Entity findEntityInBoundingBox() {
-        List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(16.0D, 8.0D, 16.0D));
+        List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(25.0D, 40.0D, 25.0D));
 
         for (Entity entity : list) {
             if (entity instanceof IAdventureKraftAttackableMobs)
@@ -291,6 +301,7 @@ Item[] lootableList = new Item[]
     {
         super.readEntityFromNBT(tag);
         tag.setInteger("Immune", this.immuneTime);
+        tag.setBoolean("Reinforcements", this.reinforcements);
     }
 
     @Override
@@ -298,6 +309,7 @@ Item[] lootableList = new Item[]
     {
         super.writeEntityToNBT(tag);
         this.immuneTime = tag.getInteger("Immune");
+        this.reinforcements = tag.getBoolean("Reinforcements");
     }
 
 

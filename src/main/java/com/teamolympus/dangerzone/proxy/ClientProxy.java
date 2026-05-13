@@ -22,8 +22,7 @@ import net.minecraft.item.Item;
 public class ClientProxy extends CommonProxy {
 
     @Override
-    public void clientRegistry()
-    {
+    public void clientRegistry() {
         renderEntity(BodyguardEntity.class, new BodyguardRender());
         renderEntity(MantisEntity.class, new MantisRender());
         renderEntity(AllosaurusEntity.class, new AllosaurusRender());

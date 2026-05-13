@@ -32,8 +32,7 @@ public class MobLauncherItem extends BaseAKItem {
             double d3 = 0.2199999988079071D;
             double d4 = 0.27000001072883606D;
 
-             for (byte i = 0; i < 6; i++)
-             {
+             for (byte i = 0; i < 6; i++) {
                 spawnParticle(player, "reddust", d0 - d4, d1 + d3, d2, 0.0D, velY, 0.0D);
                 spawnParticle(player, "smoke", d0 - d4, d1 + d3, d2, 0.0D, velY, 0.0D);
                 spawnParticle(player, "explode", d0 - d4, d1 + d3, d2, 0.0D, velY, 0.0D);
@@ -56,8 +55,7 @@ public class MobLauncherItem extends BaseAKItem {
     }
 
     private void spawnParticle(EntityPlayer player, String particleName, double x, double y, double z, double velocityX,
-        double velocityY, double velocityZ)
-    {
+        double velocityY, double velocityZ) {
         player.worldObj.spawnParticle(particleName, x, y, z, velocityX, velocityY, velocityZ);
     }
 }

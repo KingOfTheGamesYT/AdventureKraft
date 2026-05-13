@@ -183,8 +183,7 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
     static final String ANGER_NBT = "AngerLevels";
 
     @Override
-    public void writeEntityToNBT(NBTTagCompound tag)
-    {
+    public void writeEntityToNBT(NBTTagCompound tag) {
         super.writeEntityToNBT(tag);
         tag.setInteger(GENDER_NBT, this.getGender());
         tag.setInteger(REQUESTED_AMM_ENTITY_NBT, this.getRequestedAmm());
@@ -197,8 +196,7 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
     }
 
     @Override
-    public void readEntityFromNBT(NBTTagCompound tag)
-    {
+    public void readEntityFromNBT(NBTTagCompound tag) {
         super.readEntityFromNBT(tag);
         this.setGender(tag.getInteger(GENDER_NBT));
         this.setRequestedAmm(tag.getInteger(REQUESTED_AMM_ENTITY_NBT));
@@ -306,20 +304,15 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
           //  player.addChatMessage(new ChatComponentTranslation("Given Amm" + this.getPlayerGivenAmm()));
         }
 
-        if (this.isTamed())
-        {
-            if (this./*IsPlayerOwner*/func_152114_e(player) && !this.worldObj.isRemote && !this.isBreedingItem(itemstack))
-            {
+        if (this.isTamed()) {
+            if (this./*IsPlayerOwner*/func_152114_e(player) && !this.worldObj.isRemote && !this.isBreedingItem(itemstack)) {
                 this.aiSit.setSitting(!this.isSitting());
             }
         }
-        else if (itemstack != null)
-        {
+        else if (itemstack != null) {
             executeItemRemovalTameLogic(player, itemstack);
-            if (!this.worldObj.isRemote)
-            {
-                if (this.getPlayerGivenAmm() >= this.getRequestedAmm())
-                {
+            if (!this.worldObj.isRemote) {
+                if (this.getPlayerGivenAmm() >= this.getRequestedAmm()) {
                     this.setTamed(true);
                     this.func_152115_b(player.getUniqueID().toString());
                     this.playTameEffect(true);
@@ -375,14 +368,12 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
     }
 
     private void removeItemDependingOnGender(EntityPlayer player, ItemStack itemstack) {
-        if (!player.capabilities.isCreativeMode)
-        {
+        if (!player.capabilities.isCreativeMode) {
             --itemstack.stackSize;
         }
 
         this.setPlayerGivenAmm(this.getPlayerGivenAmm() + 1);
-        if (itemstack.stackSize <= 0)
-        {
+        if (itemstack.stackSize <= 0) {
             player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack)null);
         }
     }
@@ -408,8 +399,7 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
     }
 
     @Override
-    public String getCommandSenderName()
-    {
+    public String getCommandSenderName() {
         return this.hasCustomNameTag() ? this.getCustomNameTag() : (this.isTamed() ? StatCollector.translateToLocal("entity.Cat.name") : super.getCommandSenderName());
     }
 
@@ -420,7 +410,6 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
 
    @Override
     public void onInventoryChanged(InventoryBasic p_76316_1_) {
-
     }
 
 }

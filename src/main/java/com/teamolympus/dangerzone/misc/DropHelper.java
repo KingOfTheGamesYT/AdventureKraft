@@ -17,34 +17,25 @@ public class DropHelper {
         return null;
     }
 
-    public static EntityItem dropItem(EntityLiving ent, Item item, int amm, int randomPos)
-    {
+    public static EntityItem dropItem(EntityLiving ent, Item item, int amm, int randomPos) {
         return dropItemItemStack(ent, item, amm, randomPos);
     }
 
-    public static EntityItem dropItemItemStack(EntityLiving ent, Item item, int amm, int randomPos)
-    {
+    public static EntityItem dropItemItemStack(EntityLiving ent, Item item, int amm, int randomPos) {
         return entityDropItem(ent, new ItemStack(item, amm, 0), randomPos);
     }
 
-    public static EntityItem entityDropItem(EntityLiving ent, ItemStack itemStack, int randomPos)
-    {
-        if (itemStack.stackSize != 0 && itemStack.getItem() != null)
-        {
+    public static EntityItem entityDropItem(EntityLiving ent, ItemStack itemStack, int randomPos) {
+        if (itemStack.stackSize != 0 && itemStack.getItem() != null) {
             EntityItem entityitem = new EntityItem(ent.worldObj, ent.posX + generateRandomPos(ent, randomPos), ent.posY + generateRandomPos(ent, randomPos), ent.posZ + generateRandomPos(ent, randomPos), itemStack);
             entityitem.delayBeforeCanPickup = 10;
-            if (ent.captureDrops)
-            {
+            if (ent.captureDrops) {
                 ent.capturedDrops.add(entityitem);
-            }
-            else
-            {
+            } else {
                 ent.worldObj.spawnEntityInWorld(entityitem);
             }
             return entityitem;
-        }
-        else
-        {
+        } else {
             return null;
         }
     }
@@ -54,7 +45,7 @@ public class DropHelper {
     }
 
 
-     static class Drops {
+   /**  static class Drops {
         Item item;
         int amm;
         int randPos;
@@ -64,6 +55,7 @@ public class DropHelper {
             this.randPos = randPos;
         }
     }
+    **/
 
     // TODO: MAKE DROPS NOT HARDCODED, read file a file.
 /**    public static void dropLootFromFile(EntityLiving ent, String filename) {

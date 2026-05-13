@@ -42,8 +42,8 @@ public class ItemMinerDream extends BaseAKItem {
             final int EAST = 3;
 
             final int playerX = (int) player.posX;
-           final int playerY = (int) player.posY;
-           final int playerZ = (int) player.posZ;
+            final int playerY = (int) player.posY;
+            final int playerZ = (int) player.posZ;
 
             int newX = playerX;
             int newY = playerY;

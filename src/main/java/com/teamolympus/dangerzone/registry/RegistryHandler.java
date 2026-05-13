@@ -223,8 +223,7 @@ public class RegistryHandler {
 
     public static Item wrench;
 
-    private static void addItems()
-    {
+    private static void addItems() {
         ruby = new BaseAKMaterials("ruby");
         registerItem(ruby, "ruby");
 
@@ -494,7 +493,6 @@ public class RegistryHandler {
     private static void registerEntity(
             Class<? extends Entity> entityClass, String entityName, int trackingRange,
             int updateFrequency, boolean sendsVelocityUpdates) {
-
         EntityRegistry.registerModEntity(
             entityClass,
             entityName,
@@ -522,8 +520,7 @@ public class RegistryHandler {
         addBiomes(entityClass, weightProb, min, max, typeOfCreature, biomes);
     }
 
-    private static void addBiomes(Class entityClass, int weightedProb, int min, int max, EnumCreatureType typeOfCreature, BiomeGenBase... biomes)
-    {
+    private static void addBiomes(Class entityClass, int weightedProb, int min, int max, EnumCreatureType typeOfCreature, BiomeGenBase... biomes) {
         EntityRegistry.addSpawn(entityClass, weightedProb, min, max, typeOfCreature, biomes);
     }
 

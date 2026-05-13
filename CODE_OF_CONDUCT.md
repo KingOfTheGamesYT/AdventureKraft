@@ -1,2 +1,3 @@
 - Do not bring up unnecessary drama. This means no political topics or any past or present drama of anything.
-- Always act in good faith.
+- Always treat everybody with respect, even if they have differing views from yours.
+- Always act in good faith and with respect - Always try your best. If you have made a mistake, learn frm it. Celebrate each other's success. Be a role model for others.
