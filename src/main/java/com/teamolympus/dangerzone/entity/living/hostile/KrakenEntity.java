@@ -39,7 +39,6 @@ public class KrakenEntity extends EntityMob {
         this.isImmuneToFire = true;
         this.fireResistance = 120;
         this.experienceValue = 500;
-        this.maxHurtResistantTime = 100;
     }
 
     @Override
@@ -199,6 +198,15 @@ public class KrakenEntity extends EntityMob {
         this.moveForward = 1.0F;
         this.rotationYaw += f1;
 
+        int groundDist;
+
+        for (groundDist = 0; groundDist < 31; groundDist++) {
+            if (this.worldObj.getBlock((int) this.posX, (int) this.posY, (int) this.posZ) != Blocks.air) {
+                this.attackerPosition.posY = groundDist;
+                break;
+            }
+            
+        }
 
 
         if (this.worldObj.rand.nextInt(100) == 0)

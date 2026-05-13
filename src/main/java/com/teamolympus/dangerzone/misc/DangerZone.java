@@ -20,8 +20,6 @@ import com.teamolympus.dangerzone.tabs.AKFoodTab;
 import com.teamolympus.dangerzone.tabs.AKPetOresTab;
 import com.teamolympus.dangerzone.tabs.AKToolsTab;
 
-import java.io.File;
-
 @Mod(
     modid = DangerZone.MODID,
     version = DangerZone.VERSION,
@@ -86,7 +84,6 @@ public class DangerZone {
         DZConfig.synchronizeConfiguration(event.getSuggestedConfigurationFile());
         RegistryHandler.initPre();
         proxy.clientRegistry();
-        
     }
 
 

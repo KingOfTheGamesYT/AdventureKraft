@@ -5,9 +5,7 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 
 
 public class DropHelper {
@@ -56,14 +54,19 @@ public class DropHelper {
     }
 
 
-     class Drops {
+     static class Drops {
         Item item;
         int amm;
         int randPos;
+        public Drops(Item item, int amm, int randPos) {
+            this.item = item;
+            this.amm = amm;
+            this.randPos = randPos;
+        }
     }
 
     // TODO: MAKE DROPS NOT HARDCODED, read file a file.
-    public static void dropLootFromFile(EntityLiving ent, String filename) {
+/**    public static void dropLootFromFile(EntityLiving ent, String filename) {
         try {
             FileInputStream file = new FileInputStream(filename);
             ObjectInputStream in = new ObjectInputStream(file);
@@ -77,7 +80,29 @@ public class DropHelper {
 
 
     }
+**/
 
+  /**  public static void test() {
+        try (Writer writer = new FileWriter("AKDrops.json")) {
+            Drops drop = new Drops(RegistryHandler.redRock, 6,6);
+            Gson gson = new GsonBuilder().create();
+            gson.toJson(drop, writer);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void test2(EntityLiving ent) {
+        try {
+            DZLogger.LOGGER.fatal("TEST SHOULD WORK");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            Drops deserializedUser = gson.fromJson(new FileReader("AKDrops.json"), Drops.class);
+        //    dropItem(ent, deserializedUser.item, deserializedUser.amm, deserializedUser.randPos);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+**/
 
 
 }

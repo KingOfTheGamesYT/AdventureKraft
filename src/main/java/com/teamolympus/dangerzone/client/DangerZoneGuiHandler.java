@@ -1,4 +1,4 @@
-package com.teamolympus.dangerzone;
+package com.teamolympus.dangerzone.client;
 
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
