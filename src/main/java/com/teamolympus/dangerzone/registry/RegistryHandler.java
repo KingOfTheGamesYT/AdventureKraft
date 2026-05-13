@@ -75,7 +75,7 @@ public class RegistryHandler {
 
     public static void initPre()
     {
-        DangerZoneNetworking.init();
+        addNetwork();
         addMobs();
         addBlocks();
         addItems();
@@ -374,6 +374,10 @@ public class RegistryHandler {
         // rubySword = new BaseAKSword("rubySword", null);
         // registerItem(rubySword, "RubySword");
 
+    }
+
+    public static void addNetwork() {
+        DangerZoneNetworking.init();
     }
 
     private static void addRecipe() {

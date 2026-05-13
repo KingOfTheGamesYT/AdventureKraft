@@ -5,6 +5,11 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+
 public class DropHelper {
 
     public static EntityItem dropItemMultipleNonStackable(EntityLiving ent, Item item, int amm, int randomPos) {
@@ -49,5 +54,30 @@ public class DropHelper {
     private static int generateRandomPos(EntityLiving ent, int randomPos) {
         return ent.getRNG().nextInt(randomPos) - ent.getRNG().nextInt(randomPos);
     }
+
+
+     class Drops {
+        Item item;
+        int amm;
+        int randPos;
+    }
+
+    // TODO: MAKE DROPS NOT HARDCODED, read file a file.
+    public static void dropLootFromFile(EntityLiving ent, String filename) {
+        try {
+            FileInputStream file = new FileInputStream(filename);
+            ObjectInputStream in = new ObjectInputStream(file);
+            Drops item = (Drops) in.readObject();
+            dropItemItemStack(ent, item.item, item.amm, item.randPos);
+            in.close();
+            file.close();
+        } catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
 
 }

@@ -21,6 +21,7 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.WorldInfo;
 
+
 import java.util.List;
 
 public class KrakenEntity extends EntityMob {
@@ -30,7 +31,7 @@ public class KrakenEntity extends EntityMob {
     private int lastPosX;
     private int stuckTicks;
     Vec3 vec;
-    int immuneTime = 900;
+    int immuneTime = 30;
 
     public KrakenEntity(World world) {
         super(world);
@@ -38,6 +39,7 @@ public class KrakenEntity extends EntityMob {
         this.isImmuneToFire = true;
         this.fireResistance = 120;
         this.experienceValue = 500;
+        this.maxHurtResistantTime = 100;
     }
 
     @Override
@@ -61,7 +63,7 @@ public class KrakenEntity extends EntityMob {
     public boolean attackEntityFrom(DamageSource ds, float damage)
     {
         if (immuneTime < 0) {
-            DZLogger.LOGGER.info("TRUE");
+            immuneTime = 100;
             return super.attackEntityFrom(ds, damage);
         }
         return false;
@@ -289,6 +291,6 @@ Item[] lootableList = new Item[]
         super.writeEntityToNBT(tag);
         this.immuneTime = tag.getInteger("Immune");
     }
-    
+
 
 }

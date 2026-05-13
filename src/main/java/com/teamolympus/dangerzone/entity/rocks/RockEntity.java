@@ -29,7 +29,6 @@ public abstract class RockEntity extends EntityThrowable {
     @Override
     protected void onImpact(MovingObjectPosition movingObjectPosition)
     {
-
         if (movingObjectPosition.entityHit instanceof EntityLiving)
         {
             hitEntityHook(movingObjectPosition);

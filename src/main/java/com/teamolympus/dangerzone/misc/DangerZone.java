@@ -86,6 +86,7 @@ public class DangerZone {
         DZConfig.synchronizeConfiguration(event.getSuggestedConfigurationFile());
         RegistryHandler.initPre();
         proxy.clientRegistry();
+        
     }
 
 

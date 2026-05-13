@@ -16,8 +16,7 @@ public class ExplosiveRockEntity extends RockEntity{
 
     @Override
     public void hitEntityHook(MovingObjectPosition movingObjectPosition) {
-        EntityLiving entityLiving = (EntityLiving) movingObjectPosition.entityHit;
-        this.worldObj.createExplosion(getThrower(), this.posX, this.posY, this.posZ, 1.0f, true);
+        this.worldObj.newExplosion(getThrower(), this.posX, this.posY, this.posZ, 2.5f, true,true);
     }
 
     public ExplosiveRockEntity(World world, EntityLivingBase entityLivingBase) {

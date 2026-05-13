@@ -14,6 +14,10 @@ public class GreenRockEntity extends RockEntity{
         super(world);
     }
 
+    public GreenRockEntity(World world, EntityLivingBase entityLivingBase) {
+        super(world, entityLivingBase, RegistryHandler.greenRock);
+    }
+
     @Override
     public void hitEntityHook(MovingObjectPosition movingObjectPosition)
     {
@@ -21,8 +25,4 @@ public class GreenRockEntity extends RockEntity{
         entityLiving.addPotionEffect(new PotionEffect(Potion.poison.id, 100, 0));
     }
 
-
-    public GreenRockEntity(World world, EntityLivingBase entityLivingBase) {
-        super(world, entityLivingBase, RegistryHandler.greenRock);
-    }
 }

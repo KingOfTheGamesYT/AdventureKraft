@@ -22,23 +22,25 @@ public class RockItem extends BaseAKItem {
         this.rockTypes = rockTypes;
     }
 
-    @Override // ItemSnowball
+    @Override
     public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer player) {
-        switch (rockTypes) {
-            case GREEN_ROCK:
-                worldIn.spawnEntityInWorld(new GreenRockEntity(worldIn, player));
-                break;
-            case RED_ROCK:
-                worldIn.spawnEntityInWorld(new RedRockEntity(worldIn, player));
-                break;
-            case EXPLOSIVE_ROCK:
-                worldIn.spawnEntityInWorld(new ExplosiveRockEntity(worldIn, player));
-                break;
-            case SMALL_ROCK:
-                worldIn.spawnEntityInWorld(new SmallRockEntity(worldIn, player));
-                break;
-            default:
-                break;
+        if (!worldIn.isRemote) {
+            switch (rockTypes) {
+                case GREEN_ROCK:
+                    worldIn.spawnEntityInWorld(new GreenRockEntity(worldIn, player));
+                    break;
+                case RED_ROCK:
+                    worldIn.spawnEntityInWorld(new RedRockEntity(worldIn, player));
+                    break;
+                case EXPLOSIVE_ROCK:
+                    worldIn.spawnEntityInWorld(new ExplosiveRockEntity(worldIn, player));
+                    break;
+                case SMALL_ROCK:
+                    worldIn.spawnEntityInWorld(new SmallRockEntity(worldIn, player));
+                    break;
+                default:
+                    break;
+            }
         }
 
         return itemStackIn;
