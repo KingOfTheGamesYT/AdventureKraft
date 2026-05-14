@@ -4,8 +4,10 @@ import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
 import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
+import com.teamolympus.dangerzone.world.BaseWorldHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,7 +25,7 @@ import net.minecraft.world.storage.WorldInfo;
 
 import java.util.List;
 
-public class KrakenEntity extends EntityMob {
+public class KrakenEntity extends EntityMob implements IBossDisplayData {
 
     private ChunkCoordinates attackerPosition;
     private int lastPosZ;
@@ -34,8 +36,7 @@ public class KrakenEntity extends EntityMob {
     public int reinforcementsTimer = 3600;
     private boolean reinforcements = false;
     private static final byte REINFORCEMENT_AMM = 10;
-    private static final int GROUND_CHECK = 31;
-    private static final int TOO_HIGH_CHECK = GROUND_CHECK * 2;
+    private Entity attackedEntity = null;
 
     public KrakenEntity(World world) {
         super(world);
@@ -71,9 +72,10 @@ public class KrakenEntity extends EntityMob {
     @Override
     protected void attackEntity(Entity mob, float dist)
     {
-        if (this.attackTime <= 0 && dist < 12.0F) {
+        if (this.attackTime <= 0 && dist < 20.0F) {
             this.attackTime = 20;
             this.attackEntityAsMob(mob);
+            attackedEntity = mob;
         }
         if (pathToEntity != null) {
             this.pathToEntity = this.worldObj.getPathEntityToEntity(this, this.entityToAttack, 16.0F, true, false, false, true);
@@ -135,39 +137,61 @@ public class KrakenEntity extends EntityMob {
         if (
                 (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ)
                         || this.attackerPosition.getDistanceSquared((int) this.posX, (int) this.posY, (int) this.posZ) < 9.1F)) {
-            int groundDist;
-            int groundDist2 = 0;
-            for (groundDist = 0; groundDist < GROUND_CHECK; groundDist++) {
-                if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) != Blocks.air) {
-                  //  DZLogger.LOGGER.info("I AM TRUE");
-                    groundDist2 = groundDist;
-                   // groundDist2 = groundDist;
-               //     this.attackerPosition.posY += groundDist;
-              //      break;
+
+
+
+         /**   int groundDist;
+            for (groundDist = 0; groundDist < 31; groundDist++) {
+                if (!BaseWorldHelper.fastIsAirBlock(worldObj, (int) this.posX, (int) this.posY - groundDist, (int) this.posZ)) {
+                    DZLogger.LOGGER.error("YOOOOO");
+                    break;
+                } else {
+                    DZLogger.LOGGER.error("Test");
                 }
-
+                DZLogger.LOGGER.error("COUNTER  " + groundDist);
             }
+          **/
 
-            // if we are too far up...
-            for (groundDist = 0; groundDist < TOO_HIGH_CHECK; groundDist++) {
-                if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) == Blocks.air) {
-                    groundDist2 -= groundDist;
-                }
-
-            }
-
-       //   int ground = 20;
-      //   int ground2 = ground - groundDist;
-        //  int  ground2 = groundDist;
-        //    DZLogger.LOGGER.error("GROUND DIST "+ground2);
-            int ground2 = groundDist2;
-          //  DZLogger.LOGGER.error("POZY "+attackerPosition.posY);
             attackerPosition.set
             (
                     (int)this.posX + this.rand.nextInt(6) + this.rand.nextInt(12),
-                    (int)this.posY + ground2 + this.rand.nextInt(9) - 5,
+                  //  (int)this.posY + this.rand.nextInt(10) - 2,
+                //   (int)this.posY + this.rand.nextInt(10) - 4,
+                 //   (int)this.posY + this.rand.nextInt(6) - 1,
+                 //  (int)this.posY + this.rand.nextInt(6) - 2,
+                 //   (int)this.posY + this.rand.nextInt(9) - 4,
+                //  (int)this.posY + groundDist /2 - groundDist + this.rand.nextInt(10) - 7,
+                   // (int)this.posY + this.rand.nextInt(10) - 7,,
+                    (int) (this.posY + this.rand.nextInt(9) - 6),
                     (int)this.posZ + this.rand.nextInt(6) + this.rand.nextInt(12)
             );
+
+           int groundDist;
+            for (groundDist = 0; groundDist < 31; groundDist++) {
+                if (!BaseWorldHelper.fastIsAirBlock(worldObj, (int) this.posX, (int) this.posY - groundDist, (int) this.posZ)) {
+                    attackerPosition.posY += groundDist / 2;
+                    DZLogger.LOGGER.error("YOOOOO");
+                    break;
+                } else {
+                    DZLogger.LOGGER.error("Test");
+                }
+                DZLogger.LOGGER.error("COUNTER  " + groundDist);
+            }
+
+
+
+            // we are prob to high up
+
+        /**    for (int i = 15; i < 20; i++)
+            {
+                if (BaseWorldHelper.fastIsAirBlock(worldObj, (int) this.posX, (int) this.posY - i, (int) this.posZ))
+                {
+                    DZLogger.LOGGER.error("TOO HIGH, LOWERING");
+                    attackerPosition.posY -= i;
+                    break;
+                }
+            }
+         **/
 
 
         }
@@ -200,6 +224,13 @@ public class KrakenEntity extends EntityMob {
                 this.worldObj.spawnEntityInWorld(krakenEntity);
 
             }
+        }
+
+        if (attackedEntity != null)
+        {
+            this.attackedEntity.motionY = this.motionY;
+            this.attackedEntity.motionZ = this.motionZ;
+            this.attackedEntity.motionX = this.motionX;
         }
 
         // Prevent Mob from getting stuck On Flight
