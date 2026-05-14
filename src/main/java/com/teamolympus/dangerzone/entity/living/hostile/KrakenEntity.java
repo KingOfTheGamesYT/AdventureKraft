@@ -35,6 +35,7 @@ public class KrakenEntity extends EntityMob {
     private boolean reinforcements = false;
     private static final byte REINFORCEMENT_AMM = 10;
     private static final int GROUND_CHECK = 31;
+    private static final int TOO_HIGH_CHECK = GROUND_CHECK * 2;
 
     public KrakenEntity(World world) {
         super(world);
@@ -135,23 +136,37 @@ public class KrakenEntity extends EntityMob {
                 (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ)
                         || this.attackerPosition.getDistanceSquared((int) this.posX, (int) this.posY, (int) this.posZ) < 9.1F)) {
             int groundDist;
+            int groundDist2 = 0;
             for (groundDist = 0; groundDist < GROUND_CHECK; groundDist++) {
                 if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) != Blocks.air) {
-                //    this.attackerPosition.posZ -= groundDist;
-                    break;
+                  //  DZLogger.LOGGER.info("I AM TRUE");
+                    groundDist2 = groundDist;
+                   // groundDist2 = groundDist;
+               //     this.attackerPosition.posY += groundDist;
+              //      break;
                 }
 
             }
 
-         //   int ground = 20;
-        //    int ground2 = ground - groundDist;
+            // if we are too far up...
+            for (groundDist = 0; groundDist < TOO_HIGH_CHECK; groundDist++) {
+                if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) == Blocks.air) {
+                    groundDist2 -= groundDist;
+                }
+
+            }
+
+       //   int ground = 20;
+      //   int ground2 = ground - groundDist;
+        //  int  ground2 = groundDist;
         //    DZLogger.LOGGER.error("GROUND DIST "+ground2);
+            int ground2 = groundDist2;
           //  DZLogger.LOGGER.error("POZY "+attackerPosition.posY);
             attackerPosition.set
             (
-                    (int)this.posX + this.rand.nextInt(6) - this.rand.nextInt(12),
-                    (int)this.posY + this.rand.nextInt(9) - 6,
-                    (int)this.posZ + this.rand.nextInt(6) - this.rand.nextInt(12)
+                    (int)this.posX + this.rand.nextInt(6) + this.rand.nextInt(12),
+                    (int)this.posY + ground2 + this.rand.nextInt(9) - 5,
+                    (int)this.posZ + this.rand.nextInt(6) + this.rand.nextInt(12)
             );
 
 
