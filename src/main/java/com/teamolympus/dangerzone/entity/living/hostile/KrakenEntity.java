@@ -1,6 +1,7 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
+import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.Entity;
@@ -54,10 +55,7 @@ public class KrakenEntity extends EntityMob {
                 .setBaseValue(120D);
     }
 
-    @Override
-    public boolean canEntityBeSeen(Entity entity) {
-        return this.worldObj.rayTraceBlocks(Vec3.createVectorHelper(this.posX, this.posY + 0.75, this.posZ), Vec3.createVectorHelper(entity.posX, entity.posY, entity.posZ)) == null;
-    }
+
 
     @Override
     public boolean attackEntityFrom(DamageSource ds, float damage) {
@@ -72,7 +70,7 @@ public class KrakenEntity extends EntityMob {
     @Override
     protected void attackEntity(Entity mob, float dist)
     {
-        if (this.attackTime <= 0 && dist < 12.0F && mob.boundingBox.maxY > this.boundingBox.minY && mob.boundingBox.minY < this.boundingBox.maxY) {
+        if (this.attackTime <= 0 && dist < 12.0F) {
             this.attackTime = 20;
             this.attackEntityAsMob(mob);
         }
@@ -139,18 +137,20 @@ public class KrakenEntity extends EntityMob {
             int groundDist;
             for (groundDist = 0; groundDist < GROUND_CHECK; groundDist++) {
                 if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) != Blocks.air) {
-                    this.attackerPosition.posY -= groundDist;
                     break;
                 }
 
             }
 
+            int ground = 20;
+            int ground2 = ground - groundDist;
+            DZLogger.LOGGER.error("GROUND DIST "+ground2);
           //  DZLogger.LOGGER.error("POZY "+attackerPosition.posY);
             attackerPosition.set
             (
-                    (int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7),
-                    (int)this.posY + 20 - groundDist + this.rand.nextInt(9) - 6,
-                    (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7)
+                    (int)this.posX + this.rand.nextInt(6) - this.rand.nextInt(12),
+                    (int)this.posY + this.rand.nextInt(9) - 6,
+                    (int)this.posZ + this.rand.nextInt(6) - this.rand.nextInt(12)
             );
 
 
@@ -204,23 +204,18 @@ public class KrakenEntity extends EntityMob {
         }
 
 
-        double d0 = (double)this.attackerPosition.posX + 0.5D - this.posX;
+        double d0 = (double)this.attackerPosition.posX + 0.3D - this.posX;
         double d1 = (double)this.attackerPosition.posY + 0.1D - this.posY;
-        double d2 = (double)this.attackerPosition.posZ + 0.5D - this.posZ;
+        double d2 = (double)this.attackerPosition.posZ + 0.3D - this.posZ;
 
 
-        this.motionX += (Math.signum(d0) * 0.5D - this.motionX) * 0.10000000149011612D;
-        this.motionY += (Math.signum(d1) * 0.699999988079071D - this.motionY) * 0.10000000149011612D;
-        this.motionZ += (Math.signum(d2) * 0.5D - this.motionZ) * 0.10000000149011612D;
+        this.motionX += (Math.signum(d0) * 0.45D - this.motionX) * 0.15D;
+        this.motionY += (Math.signum(d1) * 0.709D - this.motionY) * 0.202;
+        this.motionZ += (Math.signum(d2) * 0.45D - this.motionZ) * 0.15D;
         float f = (float)(Math.atan2(this.motionZ, this.motionX) * 180.0D / Math.PI) - 90.0F;
         float f1 = MathHelper.wrapAngleTo180_float(f - this.rotationYaw);
-        this.moveForward = 1.0F;
+        this.moveForward = 0.4F;
         this.rotationYaw += f1;
-
-
-        if (this.worldObj.rand.nextInt(100) == 0) {
-            this.heal(1);
-        }
 
     }
     @Override

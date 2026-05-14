@@ -10,11 +10,9 @@ public class PizzaBlockItem extends ItemReed
 
     public PizzaBlockItem(String name, Block block) {
         super(block);
+        this.setUnlocalizedName(name);
         this.setCreativeTab(DangerZone.BLOCKS);
         this.setTextureName(DangerZone.FOOD_PREFIX + name);
-        this.setUnlocalizedName(name);
-        this.setCreativeTab(CreativeTabs.tabCombat);
-        this.setTextureName(DangerZone.MODID_PREFIX + name);
     }
 
 
