@@ -137,7 +137,7 @@ public class KrakenEntity extends EntityMob {
             int groundDist;
             for (groundDist = 0; groundDist < GROUND_CHECK; groundDist++) {
                 if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) != Blocks.air) {
-                    this.attackerPosition.posZ -= groundDist;
+                //    this.attackerPosition.posZ -= groundDist;
                     break;
                 }
 

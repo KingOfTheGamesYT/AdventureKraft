@@ -23,6 +23,9 @@ public class MantisEntity extends EntityMob {
     private int lastPosX;
     private int stuckTicks;
     Vec3 vec;
+    double EXPAND_Z = 16.0D;
+    double EXPAND_Y = 8.0D;
+    double EXPAND_X = EXPAND_Z;
 
     public MantisEntity(World world) {
         super(world);
@@ -220,10 +223,9 @@ public class MantisEntity extends EntityMob {
     }
 
 
-    // Borrowed from EntityPigZombie.java
     @SuppressWarnings("unchecked")
     public Entity findEntityInBoundingBox() {
-        List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(16.0D, 8.0D, 16.0D));
+        List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(EXPAND_X, EXPAND_Y, EXPAND_Z));
 
         for (Entity entity : list) {
             if (entity instanceof IAdventureKraftAttackableMobs) {
