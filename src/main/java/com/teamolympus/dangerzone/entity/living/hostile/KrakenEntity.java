@@ -137,14 +137,15 @@ public class KrakenEntity extends EntityMob {
             int groundDist;
             for (groundDist = 0; groundDist < GROUND_CHECK; groundDist++) {
                 if (this.worldObj.getBlock((int) this.posX, (int) this.posY - groundDist, (int) this.posZ) != Blocks.air) {
+                    this.attackerPosition.posZ -= groundDist;
                     break;
                 }
 
             }
 
-            int ground = 20;
-            int ground2 = ground - groundDist;
-            DZLogger.LOGGER.error("GROUND DIST "+ground2);
+         //   int ground = 20;
+        //    int ground2 = ground - groundDist;
+        //    DZLogger.LOGGER.error("GROUND DIST "+ground2);
           //  DZLogger.LOGGER.error("POZY "+attackerPosition.posY);
             attackerPosition.set
             (
