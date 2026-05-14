@@ -1,6 +1,5 @@
 package com.teamolympus.dangerzone.client.render;
 
-import com.teamolympus.dangerzone.entity.living.hostile.AllosaurusEntity;
 import com.teamolympus.dangerzone.entity.living.hostile.KrakenEntity;
 import com.teamolympus.dangerzone.misc.ResourceLocationUtils;
 import net.minecraft.client.renderer.entity.RenderLiving;

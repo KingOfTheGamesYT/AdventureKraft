@@ -119,8 +119,12 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
         this.fleeingTick = 0;
         reinforcementsTimer--;
 
+        final int ePosZ = (int) this.posZ;
+        final int ePosX = (int) this.posX;
+        final int ePosY = (int) this.posY;
+
         if (this.worldObj.rand.nextInt(400) == 0) {
-            EntityLightningBolt bolt = new EntityLightningBolt(this.worldObj, this.posX + randomOffset(), this.posY + randomOffsetY(), this.posZ + randomOffset());
+            EntityLightningBolt bolt = new EntityLightningBolt(this.worldObj, ePosX + randomOffset(), ePosY + randomOffsetY(), ePosZ + randomOffset());
             this.worldObj.addWeatherEffect(bolt);
         }
 
@@ -131,12 +135,12 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
 
 
         if (this.attackerPosition == null) {
-            this.attackerPosition = new ChunkCoordinates((int)this.posX, (int)this.posY, (int)this.posZ);
+            this.attackerPosition = new ChunkCoordinates(ePosX, ePosY, ePosZ);
         }
 
         if (
                 (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ)
-                        || this.attackerPosition.getDistanceSquared((int) this.posX, (int) this.posY, (int) this.posZ) < 9.1F)) {
+                        || this.attackerPosition.getDistanceSquared(ePosX, ePosY, ePosZ) < 9.1F)) {
 
 
 
@@ -154,7 +158,7 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
 
             attackerPosition.set
             (
-                    (int)this.posX + this.rand.nextInt(6) + this.rand.nextInt(12),
+                    ePosX + this.rand.nextInt(6) + this.rand.nextInt(12),
                   //  (int)this.posY + this.rand.nextInt(10) - 2,
                 //   (int)this.posY + this.rand.nextInt(10) - 4,
                  //   (int)this.posY + this.rand.nextInt(6) - 1,
@@ -162,20 +166,16 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
                  //   (int)this.posY + this.rand.nextInt(9) - 4,
                 //  (int)this.posY + groundDist /2 - groundDist + this.rand.nextInt(10) - 7,
                    // (int)this.posY + this.rand.nextInt(10) - 7,,
-                    (int) (this.posY + this.rand.nextInt(9) - 6),
-                    (int)this.posZ + this.rand.nextInt(6) + this.rand.nextInt(12)
+                    ePosY + this.rand.nextInt(9) - 6,
+                    ePosZ + this.rand.nextInt(6) + this.rand.nextInt(12)
             );
 
-           int groundDist;
-            for (groundDist = 0; groundDist < 31; groundDist++) {
-                if (!BaseWorldHelper.fastIsAirBlock(worldObj, (int) this.posX, (int) this.posY - groundDist, (int) this.posZ)) {
-                    attackerPosition.posY += groundDist / 2;
+            for (int groundDist = 0; groundDist < 31; groundDist++) {
+                if (!BaseWorldHelper.fastIsAirBlock(worldObj, ePosX, ePosY - groundDist, ePosZ)) {
+                    attackerPosition.posY += groundDist;
                     DZLogger.LOGGER.error("YOOOOO");
                     break;
-                } else {
-                    DZLogger.LOGGER.error("Test");
-                }
-                DZLogger.LOGGER.error("COUNTER  " + groundDist);
+                    }
             }
 
 
@@ -217,9 +217,9 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
             this.reinforcements = true;
             for (int i = 0; i < REINFORCEMENT_AMM; i++) {
                 KrakenEntity krakenEntity = new KrakenEntity(this.worldObj);
-                krakenEntity.posZ = this.posZ + this.worldObj.rand.nextInt(10)  - this.worldObj.rand.nextInt(10);
-                krakenEntity.posX = this.posX + this.worldObj.rand.nextInt(12) + this.worldObj.rand.nextInt(5);
-                krakenEntity.posY = this.posY + this.worldObj.rand.nextInt(10) - this.worldObj.rand.nextInt(10);
+                krakenEntity.posZ = ePosZ + this.worldObj.rand.nextInt(10)  - this.worldObj.rand.nextInt(10);
+                krakenEntity.posX = ePosX + this.worldObj.rand.nextInt(12) + this.worldObj.rand.nextInt(5);
+                krakenEntity.posY = ePosY + this.worldObj.rand.nextInt(10) - this.worldObj.rand.nextInt(10);
 
                 this.worldObj.spawnEntityInWorld(krakenEntity);
 
@@ -234,7 +234,7 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
         }
 
         // Prevent Mob from getting stuck On Flight
-        if (this.lastPosX == (int)this.posX && this.lastPosZ == (int)this.posZ) {
+        if (this.lastPosX == ePosX && this.lastPosZ == ePosZ) {
             ++stuckTicks;
             if (stuckTicks > 60)
             {
@@ -245,15 +245,15 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
                 vec = null;
             }
         } else {
-            this.lastPosX = (int) this.posX;
-            this.lastPosZ = (int) this.posZ;
+            this.lastPosX = ePosX;
+            this.lastPosZ = ePosZ;
             stuckTicks = 0;
         }
 
 
-        double d0 = (double)this.attackerPosition.posX + 0.3D - this.posX;
-        double d1 = (double)this.attackerPosition.posY + 0.1D - this.posY;
-        double d2 = (double)this.attackerPosition.posZ + 0.3D - this.posZ;
+        double d0 = (double)this.attackerPosition.posX + 0.3D - ePosX;
+        double d1 = (double)this.attackerPosition.posY + 0.1D - ePosY;
+        double d2 = (double)this.attackerPosition.posZ + 0.3D - ePosZ;
 
 
         this.motionX += (Math.signum(d0) * 0.45D - this.motionX) * 0.15D;
