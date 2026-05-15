@@ -282,8 +282,7 @@ public class MantisModel extends ModelBase {
 		this.bone6.rotateAngleY = -this.bone5.rotateAngleY;
 
 		//Attacks
-	//	float attackTime = (entity.ticksExisted % 19) / 19.0F;
-		float attackTime = (f2 % 19) / 19.0F;
+		float attackTime = (entity.ticksExisted % 19) / 19.0F;
 
 		if (attackTime <= 0.2F) {
 			float t = attackTime / 0.2F;
