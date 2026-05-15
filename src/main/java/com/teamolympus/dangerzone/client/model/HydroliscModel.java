@@ -9,7 +9,7 @@ import net.minecraft.entity.Entity;
 // Exported for Minecraft version 1.7 - 1.12
 // Paste this class into your mod and generate all required imports
 
-
+@SuppressWarnings("all")
 public class HydroliscModel extends ModelBase {
 	private final ModelRenderer hydrolisc;
 	private final ModelRenderer torso;

@@ -278,11 +278,11 @@ public class MantisModel extends ModelBase {
 		bone8.render(f5);
 		bone4.render(f5);
 
-		this.bone5.rotateAngleY = MathHelper.cos(f2 * 1.3F) * (float)Math.PI * 0.25F;
+		this.bone5.rotateAngleY = MathHelper.cos(f2 * 1.3F) * (float)Math.PI * 0.35F;
 		this.bone6.rotateAngleY = -this.bone5.rotateAngleY;
 
 		//Attacks
-		float attackTime = (entity.ticksExisted % 19) / 19.0F;
+		/**float attackTime = (entity.ticksExisted % 19) / 19.0F;
 
 		if (attackTime <= 0.2F) {
 			float t = attackTime / 0.2F;
@@ -298,6 +298,7 @@ public class MantisModel extends ModelBase {
 
 		this.bone10.rotateAngleX = (float) Math.toRadians(-82.5F);
 		this.bone12.rotateAngleX = (float) Math.toRadians(-75F);
+		 **/
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

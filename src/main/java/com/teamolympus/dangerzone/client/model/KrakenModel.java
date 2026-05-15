@@ -3,14 +3,12 @@
 // Paste this class into your mod and generate all required imports
 package com.teamolympus.dangerzone.client.model;
 
-import com.teamolympus.dangerzone.misc.DZLogger;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
-import org.lwjgl.opengl.GL11;
-
+@SuppressWarnings("all")
 public class KrakenModel extends ModelBase {
 	private final ModelRenderer HeadBody;
 	private final ModelRenderer LeftFins;
@@ -326,22 +324,30 @@ public class KrakenModel extends ModelBase {
 		InnerTentacle6_2.cubeList.add(new ModelBox(InnerTentacle6_2, 26, 212, -1.05F, -0.9F, -34.5083F, 2, 2, 35, 0.0F));
 	}
 
-	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		HeadBody.render(f5);
-		Mouth.render(f5);
-		Tentacle1.render(f5);
-		Tentacle2.render(f5);
-		Tentacle3.render(f5);
-		Tentacle4.render(f5);
-		InnerTentacle1.render(f5);
-		InnerTentacle2.render(f5);
-		InnerTentacle3.render(f5);
-		InnerTentacle4.render(f5);
-		InnerTentacle5.render(f5);
-		InnerTentacle6.render(f5);
+
+	public void render(Entity entity, float par1, float par2, float par3, float par4, float par5, float par6) {
+		HeadBody.render(par6);
+		Mouth.render(par6);
+		Tentacle1.render(par6);
+		Tentacle2.render(par6);
+		Tentacle3.render(par6);
+		Tentacle4.render(par6);
+		InnerTentacle1.render(par6);
+		InnerTentacle2.render(par6);
+		InnerTentacle3.render(par6);
+		InnerTentacle4.render(par6);
+		InnerTentacle5.render(par6);
+		InnerTentacle6.render(par6);
+
+
+		this.Tentacle1.setRotationPoint(0.0F, 0.0F, 0.0F);
+		this.Tentacle2.setRotationPoint(0.0F, 0.0F, 0.0F);
+
+		this.Tentacle1.rotateAngleY = MathHelper.cos(par1 * 1.3F) * (float)Math.PI * 0.25F;
+		this.Tentacle2.rotateAngleY = -this.Tentacle1.rotateAngleY;
 
 	}
+
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
 		modelRenderer.rotateAngleX = x;

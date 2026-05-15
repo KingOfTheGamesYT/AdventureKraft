@@ -8,7 +8,7 @@ import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
-
+@SuppressWarnings("all")
 public class AllosaurusModel extends ModelBase {
 	private final ModelRenderer body;
 	private final ModelRenderer below_torso_part_r1;
