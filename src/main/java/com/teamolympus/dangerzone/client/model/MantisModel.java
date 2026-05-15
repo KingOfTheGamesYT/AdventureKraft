@@ -3,6 +3,7 @@ package com.teamolympus.dangerzone.client.model;// Made with Blockbench 5.1.3
 // Paste this class into your mod and generate all required imports
 
 
+import com.teamolympus.dangerzone.misc.DZLogger;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
@@ -277,21 +278,12 @@ public class MantisModel extends ModelBase {
 		bone8.render(f5);
 		bone4.render(f5);
 
-
-
-		float ageInTicks = f2;
-		//Movement
-
-	//	this.bone5.setRotationPoint(0.0F, 0.0F, 0.0F);
-	//	this.bone6.setRotationPoint(0.0F, 0.0F, 0.0F);
 		this.bone5.rotateAngleY = MathHelper.cos(f2 * 1.3F) * (float)Math.PI * 0.25F;
 		this.bone6.rotateAngleY = -this.bone5.rotateAngleY;
-		//this.bone6.rotateAngleY =
-
-
 
 		//Attacks
-		float attackTime = (entity.ticksExisted % 19) / 19.0F;
+	//	float attackTime = (entity.ticksExisted % 19) / 19.0F;
+		float attackTime = (f2 % 19) / 19.0F;
 
 		if (attackTime <= 0.2F) {
 			float t = attackTime / 0.2F;
@@ -307,8 +299,6 @@ public class MantisModel extends ModelBase {
 
 		this.bone10.rotateAngleX = (float) Math.toRadians(-82.5F);
 		this.bone12.rotateAngleX = (float) Math.toRadians(-75F);
-
-
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

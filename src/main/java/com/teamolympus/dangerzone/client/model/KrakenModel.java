@@ -7,6 +7,8 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
+import org.lwjgl.opengl.GL11;
 
 public class KrakenModel extends ModelBase {
 	private final ModelRenderer HeadBody;
@@ -337,6 +339,18 @@ public class KrakenModel extends ModelBase {
 		InnerTentacle4.render(f5);
 		InnerTentacle5.render(f5);
 		InnerTentacle6.render(f5);
+
+		this.Tentacle1.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)1) + 0.4F;
+		this.Tentacle2.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)2) + 0.4F;
+		this.Tentacle3.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)3) + 0.4F;
+		this.Tentacle4.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)4) + 0.4F;
+
+		this.InnerTentacle1.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)1) + 0.4F;
+		this.InnerTentacle2.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)2) + 0.4F;
+		this.InnerTentacle3.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)3) + 0.4F;
+		this.InnerTentacle4.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)4) + 0.4F;
+		this.InnerTentacle5.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)5) + 0.4F;
+		this.InnerTentacle6.rotateAngleX = 0.2F * MathHelper.sin(f2 * 0.3F + (float)6) + 0.4F;
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
