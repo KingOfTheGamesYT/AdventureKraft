@@ -6,7 +6,9 @@ import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import com.teamolympus.dangerzone.world.BaseWorldHelper;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.monster.EntityMob;
@@ -34,7 +36,6 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
     Vec3 vec;
     int immuneTime = 30;
     public int reinforcementsTimer = 3600;
-    private boolean reinforcements = false;
     private static final byte REINFORCEMENT_AMM = 10;
     private Entity attackedEntity = null;
 
@@ -119,12 +120,8 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
         this.fleeingTick = 0;
         reinforcementsTimer--;
 
-        final int ePosZ = (int) this.posZ;
-        final int ePosX = (int) this.posX;
-        final int ePosY = (int) this.posY;
-
         if (this.worldObj.rand.nextInt(400) == 0) {
-            EntityLightningBolt bolt = new EntityLightningBolt(this.worldObj, ePosX + randomOffset(), ePosY + randomOffsetY(), ePosZ + randomOffset());
+            EntityLightningBolt bolt = new EntityLightningBolt(this.worldObj, this.posX + randomOffset(), this.posY + randomOffsetY(), this.posZ + randomOffset());
             this.worldObj.addWeatherEffect(bolt);
         }
 
@@ -135,76 +132,51 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
 
 
         if (this.attackerPosition == null) {
-            this.attackerPosition = new ChunkCoordinates(ePosX, ePosY, ePosZ);
+            this.attackerPosition = new ChunkCoordinates((int)this.posX, (int)this.posY, (int)this.posZ);
         }
 
         if (
                 (!this.worldObj.isAirBlock(this.attackerPosition.posX, this.attackerPosition.posY, this.attackerPosition.posZ)
-                        || this.attackerPosition.getDistanceSquared(ePosX, ePosY, ePosZ) < 9.1F)) {
-
-
-
-         /**   int groundDist;
-            for (groundDist = 0; groundDist < 31; groundDist++) {
-                if (!BaseWorldHelper.fastIsAirBlock(worldObj, (int) this.posX, (int) this.posY - groundDist, (int) this.posZ)) {
-                    DZLogger.LOGGER.error("YOOOOO");
-                    break;
-                } else {
-                    DZLogger.LOGGER.error("Test");
-                }
-                DZLogger.LOGGER.error("COUNTER  " + groundDist);
-            }
-          **/
+                        || this.attackerPosition.getDistanceSquared((int) this.posX, (int) this.posY, (int) this.posZ) < 9.1F)) {
 
             attackerPosition.set
-            (
-                    ePosX + this.rand.nextInt(6) + this.rand.nextInt(12),
-                  //  (int)this.posY + this.rand.nextInt(10) - 2,
-                //   (int)this.posY + this.rand.nextInt(10) - 4,
-                 //   (int)this.posY + this.rand.nextInt(6) - 1,
-                 //  (int)this.posY + this.rand.nextInt(6) - 2,
-                 //   (int)this.posY + this.rand.nextInt(9) - 4,
-                //  (int)this.posY + groundDist /2 - groundDist + this.rand.nextInt(10) - 7,
-                   // (int)this.posY + this.rand.nextInt(10) - 7,,
-                    ePosY + this.rand.nextInt(9) - 6,
-                    ePosZ + this.rand.nextInt(6) + this.rand.nextInt(12)
-            );
+                    (
+                            (int)this.posX + this.rand.nextInt(6) + this.rand.nextInt(12),
+                            (int) (this.posY + this.rand.nextInt(9) - 6),
+                            (int)this.posZ + this.rand.nextInt(6) + this.rand.nextInt(12)
+                    );
 
-            for (int groundDist = 0; groundDist < 31; groundDist++) {
-                if (!BaseWorldHelper.fastIsAirBlock(worldObj, ePosX, ePosY - groundDist, ePosZ)) {
-                    attackerPosition.posY += groundDist;
-                    DZLogger.LOGGER.error("YOOOOO");
-                    break;
-                    }
-            }
-
-
-
-            // we are prob to high up
-
-        /**    for (int i = 15; i < 20; i++)
-            {
-                if (BaseWorldHelper.fastIsAirBlock(worldObj, (int) this.posX, (int) this.posY - i, (int) this.posZ))
-                {
-                    DZLogger.LOGGER.error("TOO HIGH, LOWERING");
-                    attackerPosition.posY -= i;
+            int groundDist;
+            for (groundDist = 0; groundDist < 31; groundDist++) {
+                if (!BaseWorldHelper.fastIsAirBlock(worldObj, (int) this.posX, (int) this.posY - groundDist, (int) this.posZ)) {
+                    attackerPosition.posY += 25 - groundDist;
                     break;
                 }
             }
-         **/
+
+
+
+            // likely too far up
+            for (groundDist = 50; groundDist < 60; groundDist++) {
+                if (this.posY > 120 && BaseWorldHelper.fastIsAirBlock(worldObj, (int) this.posX, (int) this.posY - groundDist, (int) this.posZ)) {
+                    attackerPosition.posY -= (int) (groundDist / 1.5);
+                    DZLogger.LOGGER.error("I am too far up");
+                    break;
+                }
+            }
 
 
         }
 
         if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack())) {
-            if (pathToEntity != null) {
+            if (vec != null && pathToEntity != null) {
                 vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 15, (int) vec.zCoord);
             } else {
                 attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 15, (int) getEntityToAttack().posZ);
             }
         } else if (this.findEntityInBoundingBox() != null) {
-            if (pathToEntity != null) {
+            if (vec != null && pathToEntity != null) {
                 vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 15, (int) vec.zCoord);
             } else {
@@ -213,13 +185,12 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
         }
 
 
-        if (this.reinforcementsTimer < 0 && this.getHealth() < (this.getMaxHealth() / 4) && !this.reinforcements) {
-            this.reinforcements = true;
+        if (this.reinforcementsTimer < 0 && this.getHealth() < (this.getMaxHealth() / 4)) {
             for (int i = 0; i < REINFORCEMENT_AMM; i++) {
                 KrakenEntity krakenEntity = new KrakenEntity(this.worldObj);
-                krakenEntity.posZ = ePosZ + this.worldObj.rand.nextInt(10)  - this.worldObj.rand.nextInt(10);
-                krakenEntity.posX = ePosX + this.worldObj.rand.nextInt(12) + this.worldObj.rand.nextInt(5);
-                krakenEntity.posY = ePosY + this.worldObj.rand.nextInt(10) - this.worldObj.rand.nextInt(10);
+                krakenEntity.posZ = this.posZ + this.worldObj.rand.nextInt(10)  - this.worldObj.rand.nextInt(10);
+                krakenEntity.posX = this.posX + this.worldObj.rand.nextInt(12) + this.worldObj.rand.nextInt(5);
+                krakenEntity.posY = this.posY + this.worldObj.rand.nextInt(10) - this.worldObj.rand.nextInt(10);
 
                 this.worldObj.spawnEntityInWorld(krakenEntity);
 
@@ -234,7 +205,7 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
         }
 
         // Prevent Mob from getting stuck On Flight
-        if (this.lastPosX == ePosX && this.lastPosZ == ePosZ) {
+        if (this.lastPosX == (int)this.posX && this.lastPosZ == (int)this.posZ) {
             ++stuckTicks;
             if (stuckTicks > 60)
             {
@@ -245,15 +216,15 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
                 vec = null;
             }
         } else {
-            this.lastPosX = ePosX;
-            this.lastPosZ = ePosZ;
+            this.lastPosX = (int) this.posX;
+            this.lastPosZ = (int) this.posZ;
             stuckTicks = 0;
         }
 
 
-        double d0 = (double)this.attackerPosition.posX + 0.3D - ePosX;
-        double d1 = (double)this.attackerPosition.posY + 0.1D - ePosY;
-        double d2 = (double)this.attackerPosition.posZ + 0.3D - ePosZ;
+        double d0 = (double)this.attackerPosition.posX + 0.3D - this.posX;
+        double d1 = (double)this.attackerPosition.posY + 0.1D - this.posY;
+        double d2 = (double)this.attackerPosition.posZ + 0.3D - this.posZ;
 
 
         this.motionX += (Math.signum(d0) * 0.45D - this.motionX) * 0.15D;
@@ -263,17 +234,23 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
         float f1 = MathHelper.wrapAngleTo180_float(f - this.rotationYaw);
         this.moveForward = 0.4F;
         this.rotationYaw += f1;
-
     }
     @Override
     protected void updateWanderPath()
     {
     }
 
-Item[] lootableList = new Item[]{
-        Items.diamond,
-        Item.getItemFromBlock(Blocks.diamond_block),
-        Items.iron_ingot
+    @Override
+    public IEntityLivingData onSpawnWithEgg(IEntityLivingData data)
+    {
+        this.posY += 15;
+        return super.onSpawnWithEgg(data);
+    }
+
+    Item[] lootableList = new Item[]{
+            Items.diamond,
+            Item.getItemFromBlock(Blocks.diamond_block),
+            Items.iron_ingot
     };
 
     @Override
@@ -341,8 +318,7 @@ Item[] lootableList = new Item[]{
     {
         super.readEntityFromNBT(tag);
         tag.setInteger("Immune", this.immuneTime);
-        tag.setBoolean("Reinforcements", this.reinforcements);
-        tag.setInteger("Timer", this.reinforcementsTimer);
+        tag.setInteger("KrakenSpawnerTimer", this.reinforcementsTimer);
     }
 
     @Override
@@ -350,8 +326,7 @@ Item[] lootableList = new Item[]{
     {
         super.writeEntityToNBT(tag);
         this.immuneTime = tag.getInteger("Immune");
-        this.reinforcements = tag.getBoolean("Reinforcements");
-        this.reinforcementsTimer = tag.getInteger("Timer");
+        this.reinforcementsTimer = tag.getInteger("KrakenSpawnerTimer");
     }
 
 

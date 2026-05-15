@@ -70,6 +70,7 @@ itemGroup.petrifiedOres=§fPetrified Ores Blocks
 # Mobs
 entity.dangerzone.mantis.name=Mantis
 entity.dangerzone.allosaurus.name=Allosaurus
+entity.dangerzone.kraken.name=The Kraken
 
 # Speech
 BodyguardSafety=If you give me a random amount of steak/poppies between 1 and 100, then I will ensure your safety forever.
