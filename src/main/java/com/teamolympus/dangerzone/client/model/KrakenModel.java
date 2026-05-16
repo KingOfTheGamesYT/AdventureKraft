@@ -327,26 +327,26 @@ public class KrakenModel extends ModelBase {
 		InnerTentacle6_2.cubeList.add(new ModelBox(InnerTentacle6_2, 26, 212, -1.05F, -0.9F, -34.5083F, 2, 2, 35, 0.0F));
 	}
 
-
-	public void render(Entity entity, float par1, float par2, float par3, float par4, float par5, float par6) {
-		HeadBody.render(par6);
-		Mouth.render(par6);
-		Tentacle1.render(par6);
-		Tentacle2.render(par6);
-		Tentacle3.render(par6);
-		Tentacle4.render(par6);
-		InnerTentacle1.render(par6);
-		InnerTentacle2.render(par6);
-		InnerTentacle3.render(par6);
-		InnerTentacle4.render(par6);
-		InnerTentacle5.render(par6);
-		InnerTentacle6.render(par6);
+	@Override
+	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float rotateYaw, float rotatePitch, float pixelSize) {
+		HeadBody.render(pixelSize);
+		Mouth.render(pixelSize);
+		Tentacle1.render(pixelSize);
+		Tentacle2.render(pixelSize);
+		Tentacle3.render(pixelSize);
+		Tentacle4.render(pixelSize);
+		InnerTentacle1.render(pixelSize);
+		InnerTentacle2.render(pixelSize);
+		InnerTentacle3.render(pixelSize);
+		InnerTentacle4.render(pixelSize);
+		InnerTentacle5.render(pixelSize);
+		InnerTentacle6.render(pixelSize);
 
 
 		this.Tentacle1.setRotationPoint(0.0F, 0.0F, 0.0F);
 		this.Tentacle2.setRotationPoint(0.0F, 0.0F, 0.0F);
 
-		this.Tentacle1.rotateAngleY = MathHelper.cos(par1 * 1.3F) * (float)Math.PI * 0.25F;
+		this.Tentacle1.rotateAngleY = MathHelper.cos(limbSwing * 1.3F) * (float)Math.PI * 0.25F;
 		this.Tentacle2.rotateAngleY = -this.Tentacle1.rotateAngleY;
 
 	}

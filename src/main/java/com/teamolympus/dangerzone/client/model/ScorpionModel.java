@@ -296,22 +296,22 @@ public class ScorpionModel extends ModelBase {
 	}
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		body.render(f5);
-		tail1.render(f5);
-		tail2.render(f5);
-		tail3.render(f5);
-		tail4.render(f5);
-		leftarm.render(f5);
-		rightarm.render(f5);
-		rightleg1.render(f5);
-		rightleg2.render(f5);
-		rightleg3.render(f5);
-		rightleg4.render(f5);
-		leftleg1.render(f5);
-		leftleg2.render(f5);
-		leftleg3.render(f5);
-		leftleg4.render(f5);
+	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float rotateYaw, float rotatePitch, float pixelSize) {
+		body.render(pixelSize);
+		tail1.render(pixelSize);
+		tail2.render(pixelSize);
+		tail3.render(pixelSize);
+		tail4.render(pixelSize);
+		leftarm.render(pixelSize);
+		rightarm.render(pixelSize);
+		rightleg1.render(pixelSize);
+		rightleg2.render(pixelSize);
+		rightleg3.render(pixelSize);
+		rightleg4.render(pixelSize);
+		leftleg1.render(pixelSize);
+		leftleg2.render(pixelSize);
+		leftleg3.render(pixelSize);
+		leftleg4.render(pixelSize);
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

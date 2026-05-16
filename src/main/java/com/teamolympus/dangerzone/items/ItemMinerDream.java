@@ -10,9 +10,13 @@ import com.teamolympus.dangerzone.world.BaseWorldHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.command.NumberInvalidException;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -37,7 +41,7 @@ public class ItemMinerDream extends BaseAKItem {
         player.worldObj.playSoundAtEntity(player, "random.explode", 1.0f, 1.5f);
 
         if (!worldIn.isRemote) {
-           final int facingPos = MathHelper.floor_double((double) (player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+            final int facingPos = MathHelper.floor_double((double) (player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
             final int SOUTH = 0;
             final int WEST = 1;
@@ -53,13 +57,8 @@ public class ItemMinerDream extends BaseAKItem {
             int newZ = playerZ;
 
             for (int x = -5; x <= 5; x++) {
-             //   int newX = playerX;
                 for (int y = 0; y <= 5; y++) {
-                  //  int newY = playerY;
                     for (int z = 0; z <= 50; z++) {
-                        // int newX = playerX;
-                        // int newY = playerY;
-                     //   int newZ = playerZ;
                         switch (facingPos) {
                             case SOUTH:
                                 newX = playerX + x;
@@ -117,23 +116,42 @@ public class ItemMinerDream extends BaseAKItem {
     // I am so sorry.....
     private boolean isValidBreakableBlock(World worldIn, int newX, int newY, int newZ) {
 
-       Block block = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
+        Block block = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
 
-        return
-                 block == Blocks.dirt
-                || block == Blocks.stone
-                || block== Blocks.grass
-                || block == Blocks.sand
-                || block == Blocks.sandstone
-                || block == Blocks.water
-                || block == Blocks.flowing_water
-                || block == Blocks.gravel
-                || block == Blocks.netherrack
-                || block == Blocks.end_stone
-                || block == Blocks.lava
-                || block == Blocks.flowing_lava;
+     if (BaseWorldHelper.fastIsAirBlock(worldIn, newX, newY, newZ)) {
+           return false;
+       }
+
+       final String[] array = DZConfig.bannedBlocksStrings;
+       final int arrLen = array.length;
+
+        for (int i = 0; i < arrLen; i++) {
+            boolean list1 = block.toString().contains(array[i]);
+            boolean list2 = block.getUnlocalizedName().contains(array[i]);
+
+            if (list1 || list2) {
+                return true;
+            }
+        }
+        return false;
+
+      /**  return
+                        block == Blocks.dirt
+                        || block == Blocks.stone
+                        || block== Blocks.grass
+                        || block == Blocks.sand
+                        || block == Blocks.sandstone
+                        || block == Blocks.water
+                        || block == Blocks.flowing_water
+                        || block == Blocks.gravel
+                        || block == Blocks.netherrack
+                        || block == Blocks.end_stone
+                        || block == Blocks.lava
+                        || block == Blocks.flowing_lava;
+       **/
 
     }
+
 
     @Override
     @SideOnly(Side.CLIENT)

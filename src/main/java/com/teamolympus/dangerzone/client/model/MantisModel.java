@@ -272,16 +272,16 @@ public class MantisModel extends ModelBase {
 	}
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		bone.render(f5);
-		bone3.render(f5);
-		bone2.render(f5);
-		bone5.render(f5);
-		bone6.render(f5);
-		bone8.render(f5);
-		bone4.render(f5);
+	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float rotateYaw, float rotatePitch, float pixelSize) {
+		bone.render(pixelSize);
+		bone3.render(pixelSize);
+		bone2.render(pixelSize);
+		bone5.render(pixelSize);
+		bone6.render(pixelSize);
+		bone8.render(pixelSize);
+		bone4.render(pixelSize);
 
-		this.bone5.rotateAngleY = MathHelper.cos(f2 * 1.3F) * (float)Math.PI * 0.35F;
+		this.bone5.rotateAngleY = MathHelper.cos(ageInTicks * 1.3F) * (float)Math.PI * 0.35F;
 		this.bone6.rotateAngleY = -this.bone5.rotateAngleY;
 
 		//Attacks

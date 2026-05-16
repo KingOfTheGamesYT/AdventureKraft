@@ -158,8 +158,8 @@ public class HydroliscModel extends ModelBase {
 	}
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		hydrolisc.render(f5);
+	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float rotateYaw, float rotatePitch, float pixelSize) {
+		hydrolisc.render(pixelSize);
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

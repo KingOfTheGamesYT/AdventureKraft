@@ -677,13 +677,13 @@ public class AllosaurusModel extends ModelBase {
 
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		body.render(f5);
-		left_leg.render(f5);
-		right_leg.render(f5);
-        this.left_leg.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
-        this.right_leg.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
-        this.lower_jaw.rotateAngleX = MathHelper.cos(f * 0.6662F) * 0.4F * f1;
+	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float rotateYaw, float rotatePitch, float pixelSize) {
+		body.render(pixelSize);
+		left_leg.render(pixelSize);
+		right_leg.render(pixelSize);
+        this.left_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        this.right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        this.lower_jaw.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 0.4F * limbSwingAmount;
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
