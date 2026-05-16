@@ -4,6 +4,8 @@ package com.teamolympus.dangerzone.client.model;// Made with Blockbench 5.1.3
 
 
 import com.teamolympus.dangerzone.misc.DZLogger;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
@@ -11,6 +13,7 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.util.MathHelper;
 
 @SuppressWarnings("all")
+@SideOnly(Side.CLIENT)
 public class MantisModel extends ModelBase {
 	private final ModelRenderer bone;
 	private final ModelRenderer bone_r1;

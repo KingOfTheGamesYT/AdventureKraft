@@ -6,10 +6,10 @@ import net.minecraft.block.material.Material;
 
 public class BaseAKBlock extends Block {
 
-    public BaseAKBlock(String name, float hardness, float resitance, Material materialIn) {
+    public BaseAKBlock(String name, float hardness, float resistance, Material materialIn) {
         super(materialIn);
         this.setHardness(hardness);
-        this.setResistance(resitance);
+        this.setResistance(resistance);
         this.setCreativeTab(DangerZone.BLOCKS);
         this.setBlockName(name);
         this.setBlockTextureName(DangerZone.MODID_PREFIX + name);

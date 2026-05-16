@@ -1,5 +1,6 @@
 package com.teamolympus.dangerzone.items;
 
+import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.misc.Translations;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -26,8 +27,8 @@ public class UltimatePickaxeItem extends BaseAKPickaxe {
 
     // TODO: FINISH LIST
     static final Item[] itemDroppable = new Item[]
-     {Items.iron_ingot, Items.gold_ingot, Items.diamond, Items.emerald
-
+     {
+          Items.iron_ingot, Items.gold_ingot, Items.diamond, Items.emerald
     };
 
     @Override
@@ -45,18 +46,18 @@ public class UltimatePickaxeItem extends BaseAKPickaxe {
 
             if (blockIn == Blocks.iron_ore && dropIngotRand != 0) {
                 worldIn.setBlockToAir(x, y, z);
-                dropBlockAsItem(worldIn, x, y, z, new ItemStack(Items.iron_ingot));
+                DropHelper.dropBlockAsItem(worldIn, x, y, z, new ItemStack(Items.iron_ingot));
             }
 
             if (blockIn == Blocks.gold_ore && dropIngotRand != 0) {
                 worldIn.setBlockToAir(x, y, z);
-                dropBlockAsItem(worldIn, x, y, z, new ItemStack(Items.gold_ingot));
+                DropHelper.dropBlockAsItem(worldIn, x, y, z, new ItemStack(Items.gold_ingot));
             }
 
             if (blockIn == Blocks.stone && worldIn.rand.nextInt(100) == 0)
             {
                 int randomDroppable = worldIn.rand.nextInt(itemDroppable.length);
-                dropBlockAsItem(worldIn, x, y, z, new ItemStack(itemDroppable[randomDroppable]));
+                DropHelper.dropBlockAsItem(worldIn, x, y, z, new ItemStack(itemDroppable[randomDroppable]));
             }
 
         }

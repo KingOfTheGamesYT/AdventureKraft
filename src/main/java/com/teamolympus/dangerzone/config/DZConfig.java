@@ -1,12 +1,15 @@
 package com.teamolympus.dangerzone.config;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import net.minecraftforge.common.config.Configuration;
 
 public class DZConfig {
 
-  //   public static String[] bannedBlocksStrings = new String[]{};
+ // public static String[] bannedBlocksStrings = new String[]{"BlockObsidian"};
+  // public static ArrayList<String> list = new ArrayList<>(Arrays.asList(bannedBlocksStrings));
 
     public static int krakenHurtTimer = 30;
     public static int pizzaFoodLevels = 4;
@@ -22,7 +25,7 @@ public class DZConfig {
     public static void synchronizeConfiguration(File configFile) {
         Configuration configuration = new Configuration(configFile);
 
-      //    bannedBlocksStrings = configuration.getStringList("Miner's Dream Breakable Blocks", "Items", new String[]{""}, "The class Name of the Block");
+     //   bannedBlocksStrings = configuration.getStringList("Miner's Dream Breakable Blocks", "Items", new String[]{"BlockObsidian"}, "The class Name of the Block");
 
         /**
         krakenHurtTimer = configuration.getInt(MOB_CATEGORY, "Kraken Hurt Timer", 30, 1 , Integer.MAX_VALUE, "The amount of ticks the Kraken is immune to being hit.");

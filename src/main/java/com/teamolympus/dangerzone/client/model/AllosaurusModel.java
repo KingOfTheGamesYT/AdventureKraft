@@ -3,12 +3,15 @@ package com.teamolympus.dangerzone.client.model;// Made with Blockbench 5.1.1
 // Paste this class into your mod and generate all required imports
 
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 @SuppressWarnings("all")
+@SideOnly(Side.CLIENT)
 public class AllosaurusModel extends ModelBase {
 	private final ModelRenderer body;
 	private final ModelRenderer below_torso_part_r1;

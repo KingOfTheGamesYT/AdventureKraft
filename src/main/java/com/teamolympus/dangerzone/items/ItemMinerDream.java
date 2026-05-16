@@ -1,12 +1,15 @@
 package com.teamolympus.dangerzone.items;
 
+import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.items.base.BaseAKItem;
+import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.misc.Translations;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import com.teamolympus.dangerzone.world.BaseWorldHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -83,26 +86,23 @@ public class ItemMinerDream extends BaseAKItem {
                         int topPosX = newX;
                         int topPosY = newY + 1;
                         int topPosZ = newZ;
+
+                        Block block = BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ);
                         if (topPosY <= 14 &&
-                                BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ) == Blocks.air
-                                || BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ) == Blocks.lava
-                                || BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ) == Blocks.flowing_lava
-                                || BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ) == Blocks.water
-                                || BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ) == Blocks.flowing_water) {
+                                block == Blocks.air
+                                || block == Blocks.lava
+                                || block == Blocks.flowing_lava
+                                || block == Blocks.water
+                                || block == Blocks.flowing_water) {
                             BaseWorldHelper.setBlockFastNormalPars(worldIn, topPosX, topPosY, topPosZ, Blocks.cobblestone, 0, 2);
                         }
 
-
                         if (isValidBreakableBlock(worldIn, newX, newY, newZ)) {
-
-                        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 3);
-
-                            if (x == 0 && y == 0 && z % 5 == 0 && worldIn.isAirBlock(newX, newY, newZ)) {
+                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 3);
+                            if (x == 0 && y == 0 && z % 5 == 0 && BaseWorldHelper.fastIsAirBlock(worldIn, newX, newY, newZ)) {
                                 BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, RegistryHandler.extremeTorch, 5, 2);
                             }
-
                         }
-
 
                     }
 
@@ -111,26 +111,28 @@ public class ItemMinerDream extends BaseAKItem {
             }
 
         }
-
         return itemStackIn;
     }
 
     // I am so sorry.....
     private boolean isValidBreakableBlock(World worldIn, int newX, int newY, int newZ) {
 
+       Block block = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
+
         return
-                BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.dirt
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.stone
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.grass
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.sand
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.sandstone
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.water
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.flowing_water
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.gravel
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.netherrack
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.end_stone
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.lava
-                || BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ) == Blocks.flowing_lava;
+                 block == Blocks.dirt
+                || block == Blocks.stone
+                || block== Blocks.grass
+                || block == Blocks.sand
+                || block == Blocks.sandstone
+                || block == Blocks.water
+                || block == Blocks.flowing_water
+                || block == Blocks.gravel
+                || block == Blocks.netherrack
+                || block == Blocks.end_stone
+                || block == Blocks.lava
+                || block == Blocks.flowing_lava;
+
     }
 
     @Override

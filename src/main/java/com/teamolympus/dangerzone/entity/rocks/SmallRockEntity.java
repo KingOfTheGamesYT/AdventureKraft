@@ -3,12 +3,11 @@ package com.teamolympus.dangerzone.entity.rocks;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
-public class SmallRockEntity extends RockEntity{
+public class SmallRockEntity extends ThrownRockEntity {
     public SmallRockEntity(World world) {
         super(world);
     }

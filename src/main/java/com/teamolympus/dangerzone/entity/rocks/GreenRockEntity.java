@@ -3,13 +3,12 @@ package com.teamolympus.dangerzone.entity.rocks;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
-public class GreenRockEntity extends RockEntity{
+public class GreenRockEntity extends ThrownRockEntity {
     public GreenRockEntity(World world) {
         super(world);
     }

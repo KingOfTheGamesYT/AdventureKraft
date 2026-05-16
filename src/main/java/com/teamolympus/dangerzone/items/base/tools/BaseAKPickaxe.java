@@ -43,18 +43,4 @@ public class BaseAKPickaxe extends ItemPickaxe {
         }
     }
 
-    protected void dropBlockAsItem(World worldIn, int x, int y, int z, ItemStack itemIn) {
-        if (!worldIn.isRemote && worldIn.getGameRules()
-            .getGameRuleBooleanValue("doTileDrops") && !worldIn.restoringBlockSnapshots)
-        {
-            float f = 0.7F;
-            double d0 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
-            double d1 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
-            double d2 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
-            EntityItem entityitem = new EntityItem(worldIn, (double) x + d0, (double) y + d1, (double) z + d2, itemIn);
-            entityitem.delayBeforeCanPickup = 10;
-            worldIn.spawnEntityInWorld(entityitem);
-        }
-    }
-
 }

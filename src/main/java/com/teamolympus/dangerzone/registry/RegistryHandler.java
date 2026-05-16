@@ -394,7 +394,7 @@ public class RegistryHandler {
 
         addShapeless(new ItemStack(RegistryHandler.butterCandy, 4), new Object[] { RegistryHandler.butterFood, Items.sugar });
 
-        addShapedSpecific(new ItemStack(Blocks.web, 1), new Object[] { "WWW", "W W", "WWW", 'W', Blocks.web });
+        addShapedSpecific(new ItemStack(Blocks.web, 1), new Object[] { "WWW", "W W", "WWW", 'W', Items.string });
 
         addShapeless(
             new ItemStack(RegistryHandler.extremeTorch, 4),
@@ -409,7 +409,6 @@ public class RegistryHandler {
         addShapedSpecific(new ItemStack(RegistryHandler.wrench, 1),
                 new Object[]{"I I", " I ", " I ", 'I', Items.iron_ingot}
                 );
-
     }
 
     private static void addShapedSpecific(ItemStack output, Object... pars) {

@@ -1,6 +1,8 @@
 package com.teamolympus.dangerzone.client.render;
 
 import com.teamolympus.dangerzone.misc.ResourceLocationUtils;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderBiped;
 import net.minecraft.entity.Entity;
@@ -8,7 +10,7 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
 
 import com.teamolympus.dangerzone.entity.living.peaceful.bodyguard.BodyguardEntity;
-
+@SideOnly(Side.CLIENT)
 public class BodyguardRender extends RenderBiped {
 
     public static final ResourceLocation[] TEXTURES_MALE = new ResourceLocation[]

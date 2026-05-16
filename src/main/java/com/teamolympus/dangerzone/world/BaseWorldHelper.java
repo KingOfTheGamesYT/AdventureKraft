@@ -1,6 +1,7 @@
 package com.teamolympus.dangerzone.world;
 
 
+import com.teamolympus.dangerzone.misc.DZLogger;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
@@ -62,7 +63,19 @@ public class BaseWorldHelper {
 
         if (flag && blockSnapshot == null) // Don't notify clients or update physics while capturing blockstates
         {
-            world.markAndNotifyBlock(x, y, z, chunk, block1, blockIn, flags);
+
+            if ((flags & 2) != 0 && (chunk == null || chunk.func_150802_k()))
+            {
+                world.markBlockForUpdate(x, y, z);
+            }
+
+            if (!world.isRemote && (flags & 1) != 0)
+            {
+                world.notifyBlockChange(x, y, z, block1);
+            }
+
+          //  DZLogger.LOGGER.error("TEST TEST TEST TEST");
+       //    world.markAndNotifyBlock(x, y, z, chunk, block1, blockIn, flags);
         }
     }
 
@@ -70,7 +83,7 @@ public class BaseWorldHelper {
     {
         //  int i1 = p_150807_3_ << 4 | p_150807_1_;
 
-             Block block1 = chunk.getBlock(p_150807_1_, p_150807_2_, p_150807_3_);
+             Block block1 = fastChunkgetBlock(chunk, p_150807_1_, p_150807_2_, p_150807_3_);
             int k1 = chunk.getBlockMetadata(p_150807_1_, p_150807_2_, p_150807_3_);
 
         ExtendedBlockStorage extendedblockstorage = chunk.getBlockStorageArray()[p_150807_2_ >> 4];
@@ -90,7 +103,7 @@ public class BaseWorldHelper {
             if (!chunk.worldObj.isRemote)
             {
               block1.onBlockPreDestroy(chunk.worldObj, l1, p_150807_2_, i2, k1);
-          }
+            }
 
         extendedblockstorage.func_150818_a(p_150807_1_, p_150807_2_ & 15, p_150807_3_, p_150807_4_);
         extendedblockstorage.setExtBlockMetadata(p_150807_1_, p_150807_2_ & 15, p_150807_3_, p_150807_5_); // This line duplicates the one below, so breakBlock fires with valid worldstate

@@ -3,12 +3,15 @@
 // Paste this class into your mod and generate all required imports
 package com.teamolympus.dangerzone.client.model;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 @SuppressWarnings("all")
+@SideOnly(Side.CLIENT)
 public class KrakenModel extends ModelBase {
 	private final ModelRenderer HeadBody;
 	private final ModelRenderer LeftFins;
