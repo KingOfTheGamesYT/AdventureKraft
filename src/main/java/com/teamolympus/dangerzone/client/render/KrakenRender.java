@@ -13,7 +13,7 @@ import com.teamolympus.dangerzone.client.model.KrakenModel;
 @SideOnly(Side.CLIENT)
 public class KrakenRender extends RenderLiving {
 
-    private static final ResourceLocation TEXTURE = ResourceLocationUtils.makeResourceLocationEntityHostile("kraken");
+    private static final ResourceLocation KRAKEN_TEXTURE = ResourceLocationUtils.makeResourceLocationEntityHostile("kraken");
 
     public KrakenRender() {
         super(new KrakenModel(), 2.0f);
@@ -32,6 +32,6 @@ public class KrakenRender extends RenderLiving {
 
     @Override
     protected ResourceLocation getEntityTexture(Entity p_110775_1_) {
-        return TEXTURE;
+        return KRAKEN_TEXTURE;
     }
 }

@@ -13,7 +13,7 @@ import com.teamolympus.dangerzone.entity.living.hostile.AllosaurusEntity;
 @SideOnly(Side.CLIENT)
 public class AllosaurusRender extends RenderLiving {
 
-   public static final ResourceLocation[] resourceLocations = new ResourceLocation[]
+   public static final ResourceLocation[] TEXTURES = new ResourceLocation[]
         {
                 ResourceLocationUtils.makeResourceLocationEntityHostile("allo1"),
                 ResourceLocationUtils.makeResourceLocationEntityHostile("allo2"),
@@ -26,7 +26,7 @@ public class AllosaurusRender extends RenderLiving {
     }
 
     protected ResourceLocation getEntityTexture(AllosaurusEntity allosaurus) {
-        return resourceLocations[allosaurus.getRandomTextureSelector()];
+        return TEXTURES[allosaurus.getRandomTextureSelector()];
     }
 
     @Override

@@ -23,9 +23,9 @@ public class MantisEntity extends EntityMob {
     private int lastPosX;
     private int stuckTicks;
     Vec3 vec;
-    double EXPAND_Z = 16.0D;
-    double EXPAND_Y = 8.0D;
-    double EXPAND_X = EXPAND_Z;
+    private final double EXPAND_Z = 16.0D;
+    private final double EXPAND_Y = 8.0D;
+    private final double EXPAND_X = EXPAND_Z;
 
     public MantisEntity(World world) {
         super(world);

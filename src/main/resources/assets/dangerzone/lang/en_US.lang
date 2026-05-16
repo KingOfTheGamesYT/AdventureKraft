@@ -32,14 +32,6 @@ item.pink_crystal.name=Pink Crystal
 item.wrench.name=Wrench
 item.pizza.name=Pizza
 
-#Spawn Eggs
-item.bodyguard_spawn_egg.name=BodyGuard Spawn Egg
-item.vortex_eye.name=Vortex Eye
-item.crystal_stick.name=Crystal Stick
-item.mantis_spawn_egg.name=Mantis Spawn Egg
-item.allosaurus_spawn_egg.name=Allosaurus Spawn Egg
-item.robot_ant_kit_spawn_egg.name=Robot Ant Kit
-item.kraken_spawn_egg.name=kraken Spawn Egg
 
 # Blocks
 tile.petrified_cow.name=Petrified Cow
@@ -66,11 +58,21 @@ itemGroup.dangerzoneTools=§fdangerzone Tools
 itemGroup.dangerzoneBlocks=§fdangerzone Blocks
 itemGroup.petrifiedOres=§fPetrified Ores Blocks
 
+#Spawn Eggs
+item.bodyguard_spawn_egg.name=BodyGuard Spawn Egg
+item.vortex_eye.name=Vortex Eye
+item.crystal_stick.name=Crystal Stick
+item.mantis_spawn_egg.name=Mantis Spawn Egg
+item.allosaurus_spawn_egg.name=Allosaurus Spawn Egg
+item.robot_ant_kit_spawn_egg.name=Robot Ant Kit
+item.kraken_spawn_egg.name=kraken Spawn Egg
+item.scorpion_spawn_egg.name=Scorpion Spawn Egg
 
 # Mobs
 entity.dangerzone.mantis.name=Mantis
 entity.dangerzone.allosaurus.name=Allosaurus
 entity.dangerzone.kraken.name=The Kraken
+entity.dangerzone.scorpion.name=Scorpion
 
 # Speech
 BodyguardSafety=If you give me a random amount of steak/poppies between 1 and 100, then I will ensure your safety forever.

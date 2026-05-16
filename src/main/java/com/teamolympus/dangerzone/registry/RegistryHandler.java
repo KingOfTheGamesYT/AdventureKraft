@@ -3,6 +3,7 @@ package com.teamolympus.dangerzone.registry;
 import com.teamolympus.dangerzone.blocks.KrakenRepellentBlock;
 import com.teamolympus.dangerzone.blocks.base.BaseAkPetrifiedBlock;
 import com.teamolympus.dangerzone.entity.living.hostile.KrakenEntity;
+import com.teamolympus.dangerzone.entity.living.hostile.ScorpionEntity;
 import com.teamolympus.dangerzone.entity.rocks.ExplosiveRockEntity;
 import com.teamolympus.dangerzone.entity.rocks.GreenRockEntity;
 import com.teamolympus.dangerzone.entity.rocks.RedRockEntity;
@@ -173,6 +174,7 @@ public class RegistryHandler {
         registerEntity(MantisEntity.class, "mantis", 64, 1, true);
         registerEntity(AllosaurusEntity.class, "allosaurus", 64, 1, true);
         registerEntity(KrakenEntity.class, "kraken", 64, 1, true);
+        registerEntity(ScorpionEntity.class, "scorpion", 64, 1, true);
     }
 
     public static Item ruby, rubyAxe;
@@ -208,7 +210,7 @@ public class RegistryHandler {
 
     public static Item experienceSword;
 
-    public static Item alloSpawnEgg,mantisSpawnEgg, bodyGuardSpawnegg, robotAntKit, krakenSpawnEgg;
+    public static Item alloSpawnEgg,mantisSpawnEgg, bodyGuardSpawnegg, robotAntKit, krakenSpawnEgg, scorpionEgg;
 
     public static Item katterKillerJaw;
 
@@ -360,6 +362,9 @@ public class RegistryHandler {
 
         robotAntKit = new BaseItemAKSpawnEgg("robot_ant_kit");
         registerItem(robotAntKit, "Robot Ant Kit");
+
+        scorpionEgg = new BaseItemAKSpawnEgg("scorpion");
+        registerItem(scorpionEgg, "Scorpion Spawn Egg");
 
 
         // test = new BaseAKFood("test", 3,3,true).addMultInfoString("f").addMultInfoString("dfd");

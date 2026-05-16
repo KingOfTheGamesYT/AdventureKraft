@@ -12,7 +12,7 @@ import com.teamolympus.dangerzone.client.model.MantisModel;
 @SideOnly(Side.CLIENT)
 public class MantisRender extends RenderLiving {
 
-    private static final ResourceLocation mantisTexture =
+    private static final ResourceLocation MANTIS_TEXTURE =
             ResourceLocationUtils.makeResourceLocationEntityHostile("mantis");
 
     private static final float scaleFactor = 1.1f;
@@ -28,6 +28,6 @@ public class MantisRender extends RenderLiving {
 
     @Override
     protected ResourceLocation getEntityTexture(Entity p_110775_1_) {
-        return mantisTexture;
+        return MANTIS_TEXTURE;
     }
 }
