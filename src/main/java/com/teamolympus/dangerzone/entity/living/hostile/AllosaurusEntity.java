@@ -2,6 +2,9 @@ package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.client.render.AllosaurusRender;
 import com.teamolympus.dangerzone.entity.ai.DZAIWanderFrequent;
+import com.teamolympus.dangerzone.misc.DZLogger;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.boss.IBossDisplayData;
@@ -9,17 +12,19 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
 
-    private final int randomTextureSelector;
+    private int randomTextureSelector;
 
     public AllosaurusEntity(World world) {
         super(world);
         this.setSize(1.5f, 1.5f);
         this.experienceValue = 199;
         randomTextureSelector = rand.nextInt(AllosaurusRender.TEXTURES.length);
+
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         this.tasks.addTask(4, new EntityAIAttackOnCollide(this, EntityVillager.class, 1.0D, true));
@@ -35,6 +40,27 @@ public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
 
     public int getRandomTextureSelector() {
         return randomTextureSelector;
+    }
+
+    @Override
+    public boolean attackEntityAsMob(Entity entity) {
+        if (entity instanceof EntityLivingBase) {
+
+            double angleX = this.posX - entity.posX;
+            double angleZ = this.posZ - entity.posZ;
+
+            double velX = this.motionX + this.motionZ + entity.motionX + entity.motionX;
+            double velZ = this.motionZ + this.motionZ + entity.motionZ + entity.motionX;
+
+            double sqr = MathHelper.sqrt_double(velX + velZ);
+
+            double value = Math.atan2(angleX, angleZ);
+
+            entity.addVelocity(Math.cos(value) * 1.2f + sqr, 2.1f, Math.sin(value) * 1.2f + sqr);
+
+            return super.attackEntityAsMob(entity);
+        }
+        return super.attackEntityAsMob(entity);
     }
 
     @Override
@@ -89,6 +115,6 @@ public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
     public void readEntityFromNBT(NBTTagCompound tagCompund)
     {
         super.readEntityFromNBT(tagCompund);
-        tagCompund.getInteger("Variant");
+        this.randomTextureSelector = tagCompund.getInteger("Variant");
     }
 }
