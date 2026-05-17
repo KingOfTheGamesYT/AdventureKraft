@@ -2,9 +2,8 @@ package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.client.render.AllosaurusRender;
 import com.teamolympus.dangerzone.entity.ai.DZAIWanderFrequent;
-import com.teamolympus.dangerzone.misc.DZLogger;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.boss.IBossDisplayData;
@@ -17,14 +16,11 @@ import net.minecraft.world.World;
 
 public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
 
-    private int randomTextureSelector;
 
     public AllosaurusEntity(World world) {
         super(world);
         this.setSize(1.5f, 1.5f);
         this.experienceValue = 199;
-        randomTextureSelector = rand.nextInt(AllosaurusRender.TEXTURES.length);
-
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         this.tasks.addTask(4, new EntityAIAttackOnCollide(this, EntityVillager.class, 1.0D, true));
@@ -38,29 +34,54 @@ public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityVillager.class, 0, false));
     }
 
-    public int getRandomTextureSelector() {
-        return randomTextureSelector;
+    static final int TEXTURE = 22;
+    @Override
+    protected void entityInit()
+    {
+        super.entityInit();
+        this.dataWatcher.addObject(TEXTURE, (byte)1);
+    }
+
+    public int getRandomTextureSelector()
+    {
+        return this.dataWatcher.getWatchableObjectByte(TEXTURE);
+    }
+
+    public void setTexture(int text)
+    {
+        this.dataWatcher.updateObject(TEXTURE, (byte)text);
+    }
+
+
+    @Override
+    public IEntityLivingData onSpawnWithEgg(IEntityLivingData data) {
+        this.setTexture(rand.nextInt(AllosaurusRender.TEXTURES.length));
+        return super.onSpawnWithEgg(data);
     }
 
     @Override
     public boolean attackEntityAsMob(Entity entity) {
-        if (entity instanceof EntityLivingBase) {
+            final  double angleX = this.posX - entity.posX;
+            final double angleZ = this.posZ - entity.posZ;
 
-            double angleX = this.posX - entity.posX;
-            double angleZ = this.posZ - entity.posZ;
+            final double value = Math.atan2(angleX, angleZ);
 
-            double velX = this.motionX + this.motionZ + entity.motionX + entity.motionX;
-            double velZ = this.motionZ + this.motionZ + entity.motionZ + entity.motionX;
+            double throwFactor = 0;
+            if (rand.nextInt(25) == 0) {
+                throwFactor = 0.25D;
+            }
 
-            double sqr = MathHelper.sqrt_double(velX + velZ);
+            final double finalVX = Math.cos(value) * 1.2D ;
+            final double finalVZ = Math.sin(value) * 1.2D;
 
-            double value = Math.atan2(angleX, angleZ);
-
-            entity.addVelocity(Math.cos(value) * 1.2f + sqr, 2.1f, Math.sin(value) * 1.2f + sqr);
+            double airValue = 0.1D;
+            if (entity.isDead || entity instanceof EntityPlayer)
+            {
+                airValue += 2.1D;
+            }
+            entity.addVelocity(finalVX + throwFactor, airValue, finalVZ + throwFactor);
 
             return super.attackEntityAsMob(entity);
-        }
-        return super.attackEntityAsMob(entity);
     }
 
     @Override
@@ -105,16 +126,17 @@ public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
     }
 
     @Override
-    public void writeEntityToNBT(NBTTagCompound tagCompound)
+    public void writeEntityToNBT(NBTTagCompound tag)
     {
-        super.writeEntityToNBT(tagCompound);
-        tagCompound.setInteger("Variant", this.randomTextureSelector);
+        super.writeEntityToNBT(tag);
+        tag.setInteger("Variant",  this.getRandomTextureSelector());
     }
 
     @Override
-    public void readEntityFromNBT(NBTTagCompound tagCompund)
+    public void readEntityFromNBT(NBTTagCompound tag)
     {
-        super.readEntityFromNBT(tagCompund);
-        this.randomTextureSelector = tagCompund.getInteger("Variant");
+        super.readEntityFromNBT(tag);
+        this.setTexture(tag.getInteger("Variant"));
     }
+
 }
