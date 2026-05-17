@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
+import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -91,6 +92,7 @@ public class MantisEntity extends EntityMob {
             {
                 vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+                DZLogger.LOGGER.error("test BUT DIFF");
             } else {
                 attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
             }
@@ -98,6 +100,7 @@ public class MantisEntity extends EntityMob {
             if (pathToEntity != null) {
                 vec = pathToEntity.getPosition(this.findEntityInBoundingBox());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
+                DZLogger.LOGGER.error("test");
             } else {
                 attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
             }

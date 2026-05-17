@@ -21,13 +21,19 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void clientRegistry() {
+        registerMobs();
+        registerThrowables();
+    }
+
+    private void registerMobs() {
         renderEntity(BodyguardEntity.class, new BodyguardRender());
         renderEntity(MantisEntity.class, new MantisRender());
         renderEntity(AllosaurusEntity.class, new AllosaurusRender());
         renderEntity(KrakenEntity.class, new KrakenRender());
         renderEntity(ScorpionEntity.class, new ScorpionRender());
+    }
 
-
+    private void registerThrowables() {
         render2D(ExplosiveRockEntity.class, RegistryHandler.explosiveRock);
         render2D(SmallRockEntity.class, RegistryHandler.smallRock);
         render2D(RedRockEntity.class, RegistryHandler.redRock);
