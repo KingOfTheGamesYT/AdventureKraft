@@ -1,7 +1,7 @@
 [
 {
   "modid": "dangerzone",
-  "name": "DangerZone",
+  "name": "AdventureKraft",
   "description": "Brings DangerZone to Minecraft",
   "version": "${version}",
   "mcversion": "1.7.10",

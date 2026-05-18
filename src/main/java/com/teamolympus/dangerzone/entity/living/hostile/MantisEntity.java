@@ -87,21 +87,18 @@ public class MantisEntity extends EntityMob {
          //   this.attackerPosition = new ChunkCoordinates((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
     //    }
 
-        if (this.getEntityToAttack() != null && this.canEntityBeSeen(this.getEntityToAttack()))
-        {
-            if (pathToEntity != null)
-            {
+        if (this.getEntityToAttack() != null) {
+            if (pathToEntity != null) {
                 vec = pathToEntity.getPosition(this.getEntityToAttack());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
-                DZLogger.LOGGER.error("test BUT DIFF");
-            } else {
+            }
+            else {
                 attackerPosition.set((int) getEntityToAttack().posX, (int) getEntityToAttack().posY + 1, (int) getEntityToAttack().posZ);
             }
         } else if (this.findEntityInBoundingBox() != null) {
             if (pathToEntity != null) {
                 vec = pathToEntity.getPosition(this.findEntityInBoundingBox());
                 attackerPosition.set((int) vec.xCoord, (int) vec.yCoord + 1, (int) vec.zCoord);
-                DZLogger.LOGGER.error("test");
             } else {
                 attackerPosition.set((int)findEntityInBoundingBox().posX, (int) findEntityInBoundingBox().posY + 1, (int) findEntityInBoundingBox().posZ);
             }

@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.client.render.AllosaurusRender;
 import com.teamolympus.dangerzone.entity.ai.DZAIWanderFrequent;
+import com.teamolympus.dangerzone.misc.DangerZone;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -28,26 +29,25 @@ public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
         this.tasks.addTask(4, new DZAIWanderFrequent(this, 1.0D, 16));
         this.tasks.addTask(5, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(5, new EntityAILookIdle(this));
-        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
+        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
     }
 
-    static final int TEXTURE = 22;
     @Override
     protected void entityInit()
     {
         super.entityInit();
-        this.dataWatcher.addObject(TEXTURE, (byte)1);
+        this.dataWatcher.addObject(DangerZone.TEXTURE_DW, (byte)1);
     }
 
     public int getRandomTextureSelector()
     {
-        return this.dataWatcher.getWatchableObjectByte(TEXTURE);
+        return this.dataWatcher.getWatchableObjectByte(DangerZone.TEXTURE_DW);
     }
 
     public void setTexture(int text)
     {
-        this.dataWatcher.updateObject(TEXTURE, (byte)text);
+        this.dataWatcher.updateObject(DangerZone.TEXTURE_DW, (byte)text);
     }
 
 
@@ -127,14 +127,14 @@ public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
     public void writeEntityToNBT(NBTTagCompound tag)
     {
         super.writeEntityToNBT(tag);
-        tag.setInteger("Variant",  this.getRandomTextureSelector());
+        tag.setInteger(DangerZone.VARIANT,  this.getRandomTextureSelector());
     }
 
     @Override
     public void readEntityFromNBT(NBTTagCompound tag)
     {
         super.readEntityFromNBT(tag);
-        this.setTexture(tag.getInteger("Variant"));
+        this.setTexture(tag.getInteger(DangerZone.VARIANT));
     }
 
 }

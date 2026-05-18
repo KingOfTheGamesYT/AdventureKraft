@@ -23,7 +23,7 @@ import com.teamolympus.dangerzone.tabs.AKToolsTab;
 @Mod(
     modid = DangerZone.MODID,
     version = DangerZone.VERSION,
-    name = "dangerzone",
+    name = "AdventureKraft",
     acceptedMinecraftVersions = "[1.7.10]"
 )
 public class DangerZone {
@@ -73,6 +73,10 @@ public class DangerZone {
     public static final String ENTITY_PREFIX_MALE_GUARDS_PEACEFUL = ENTITY_PREFIX_GUARDS_PEACEFUL + "male/";
 
     public static final String ENTITY_PREFIX_FEMALE_GUARDS_PEACEFUL = ENTITY_PREFIX_GUARDS_PEACEFUL + "female/";
+
+    public static final int TEXTURE_DW = 22;
+    public static final String VARIANT = "Variant";
+
     @SidedProxy(
         clientSide = "com.teamolympus.dangerzone.proxy.ClientProxy",
         serverSide = "com.teamolympus.dangerzone.proxy.CommonProxy"
