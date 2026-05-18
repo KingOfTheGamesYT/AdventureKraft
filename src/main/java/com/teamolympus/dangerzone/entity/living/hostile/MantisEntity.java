@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
+import com.teamolympus.dangerzone.misc.BoundingBoxHelper;
 import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
@@ -226,27 +227,8 @@ public class MantisEntity extends EntityMob {
     }
 
 
-    @SuppressWarnings("unchecked")
     public Entity findEntityInBoundingBox() {
-        List<Entity> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(EXPAND_X, EXPAND_Y, EXPAND_Z));
-
-        for (Entity entity : list) {
-            if (entity instanceof IAdventureKraftAttackableMobs) {
-                IAdventureKraftAttackableMobs attackableMob = ((IAdventureKraftAttackableMobs) entity);
-
-                if (attackableMob.entityAttackInstance() != null) {
-                    return attackableMob.entityAttackInstance();
-                }
-
-            }
-
-            if (entity instanceof EntityPlayer && !((EntityPlayer) entity).capabilities.isCreativeMode) {
-                return entity;
-            }
-
-
-        }
-        return null;
+        return BoundingBoxHelper.findEntityInBoundingBox(this, EXPAND_X,EXPAND_Y,EXPAND_Z);
     }
 
 }
