@@ -6,9 +6,6 @@ import com.teamolympus.dangerzone.registry.RegistryHandler;
 import cpw.mods.fml.common.Loader;
 import net.minecraft.creativetab.CreativeTabs;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -32,7 +29,6 @@ public class DangerZone {
     public static DangerZone INSTANCE;
 
     public static final String MODID = "dangerzone";
-    public static final Logger LOG = LogManager.getLogger(MODID);
 
     public static final boolean isAbleToLoader18Skin = Loader.isModLoaded("skinport");
 

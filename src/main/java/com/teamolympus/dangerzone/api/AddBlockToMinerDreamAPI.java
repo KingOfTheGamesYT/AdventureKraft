@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
+ * This is to be done on the Initialization stage.
  * Allows for the registry name of blocks to be breakable by miner's dream.
  * EG. mymodid:mymodblock
  */
