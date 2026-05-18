@@ -160,7 +160,7 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
             for (groundDist = 50; groundDist < 60; groundDist++) {
                 if (this.posY > 120 && BaseWorldHelper.fastIsAirBlock(worldObj, (int) this.posX, (int) this.posY - groundDist, (int) this.posZ)) {
                     attackerPosition.posY -= (int) (groundDist / 1.5);
-                    DZLogger.LOGGER.error("I am too far up");
+                    DZLogger.info("I am too far up");
                     break;
                 }
             }

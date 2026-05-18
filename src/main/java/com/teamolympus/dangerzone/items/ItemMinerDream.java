@@ -20,8 +20,10 @@ import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import org.lwjgl.Sys;
 
 import java.util.List;
+import java.util.Objects;
 
 
 public class ItemMinerDream extends BaseAKItem {
@@ -122,18 +124,30 @@ public class ItemMinerDream extends BaseAKItem {
            return false;
        }
 
-       final String[] array = DZConfig.bannedBlocksStrings;
+      final String[] array = DZConfig.finalMinerDreamList;
        final int arrLen = array.length;
 
-        for (int i = 0; i < arrLen; i++) {
-            boolean list1 = block.toString().contains(array[i]);
-            boolean list2 = block.getUnlocalizedName().contains(array[i]);
+       String n = Block.blockRegistry.getNameForObject(block);
 
-            if (list1 || list2) {
+        for (int i = 0; i < arrLen; i++)
+        {
+            if (Objects.equals(n, array[i])) {
                 return true;
             }
         }
         return false;
+
+
+
+     /**   for (int i = 0; i < arrLen; i++) {
+            boolean list1 = strBlock.contains(array[i]);
+            boolean list2 = unlocalizedName.contains(array[i]);
+
+            if (list1 || list2) {
+                return true;
+            }
+        }**/
+
 
       /**  return
                         block == Blocks.dirt

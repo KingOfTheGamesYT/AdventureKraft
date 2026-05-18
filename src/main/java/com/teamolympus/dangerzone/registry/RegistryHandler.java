@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.registry;
 
 import com.teamolympus.dangerzone.blocks.KrakenRepellentBlock;
 import com.teamolympus.dangerzone.blocks.base.BaseAkPetrifiedBlock;
+import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.entity.living.hostile.KrakenEntity;
 import com.teamolympus.dangerzone.entity.living.hostile.ScorpionEntity;
 import com.teamolympus.dangerzone.entity.rocks.ExplosiveRockEntity;
@@ -86,6 +87,10 @@ public class RegistryHandler {
     public static void init()
     {
         addRecipe();
+    }
+
+    public static void postInit() {
+        DZConfig.finallyMergeBothLists();
     }
 
 

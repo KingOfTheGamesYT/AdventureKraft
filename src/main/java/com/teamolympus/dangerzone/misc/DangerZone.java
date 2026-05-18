@@ -90,7 +90,6 @@ public class DangerZone {
         proxy.clientRegistry();
     }
 
-
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         RegistryHandler.init();
@@ -98,6 +97,7 @@ public class DangerZone {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+       RegistryHandler.postInit();
     }
 
     @Mod.EventHandler

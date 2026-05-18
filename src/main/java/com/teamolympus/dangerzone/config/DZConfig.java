@@ -1,25 +1,27 @@
 package com.teamolympus.dangerzone.config;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
+import com.teamolympus.dangerzone.misc.DZLogger;
 import net.minecraftforge.common.config.Configuration;
 
 public class DZConfig {
 
-    private static final String[] bannedBlocksStringsDefault = new String[] {
-            "BlockDirt", "BlockStone", "BlockGrass" ,"BlockSand","BlockSandStone","BlockStaticLiquid","BlockDynamicLiquid","BlockGravel","BlockNetherrack","whiteStone"
+    private static String[] bannedBlocksStringsDefault = new String[] {
+            "minecraft:stone", "minecraft:dirt", "minecraft:grass", "minecraft:sand", "minecraft:sandstone",
+            "minecraft:water", "minecraft:lava", "minecraft:flowing_water", "minecraft:flowing_lava",
+            "minecraft:gravel", "minecraft:netherrack", "minecraft:end_stone"
     };
     public static String[] bannedBlocksStrings = new String[] {
-            "BlockDirt", "BlockStone", "BlockGrass" ,"BlockSand","BlockSandStone","BlockStaticLiquid","BlockDynamicLiquid","BlockGravel","BlockNetherrack","whiteStone"
+            "minecraft:stone", "minecraft:dirt", "minecraft:grass", "minecraft:sand", "minecraft:sandstone",
+            "minecraft:water", "minecraft:lava", "minecraft:flowing_water", "minecraft:flowing_lava",
+            "minecraft:gravel", "minecraft:netherrack", "minecraft:end_stone"
     };
 
     public static String[] finalMinerDreamList;
 
-    public static ArrayList<String> bannedBlockListArrayList = new ArrayList<>();
+    public static Set<String> bannedBlockListArrayList = new HashSet<>(512);
 
     public static int krakenHurtTimer = 30;
     public static int pizzaFoodLevels = 4;
@@ -29,13 +31,20 @@ public class DZConfig {
     public static final double mantisSpeed = 0.319D;
     public static final double mantisMaxHp = 120;
 
+  //public static int minerX;
+  //  public static int minerY;
+  //  public static int minerZ;
+
     static final String MOB_CATEGORY = "MOB_CONFIGURATION";
     static final String PIZZA_CATEGORY = "PIZZA_CONFIGURATION";
 
     public static void synchronizeConfiguration(File configFile) {
         Configuration configuration = new Configuration(configFile);
 
-     bannedBlocksStrings = configuration.getStringList("Miner Dream Category", "Miner dream breakable Block list", bannedBlocksStringsDefault, "In class or unlocalized name format.");
+        bannedBlocksStrings = configuration.getStringList("Miner Dream Category", "Miner dream breakable Block list", bannedBlocksStringsDefault, "In class or unlocalized name format.");
+      //  minerX = configuration.getInt("Miner Dream Z Search", "Miner Dream Category", 50, Integer.MIN_VALUE, Integer.MAX_VALUE, "How deep on the Z axis will the miner's dream search?");
+     //   minerY = configuration.getInt("Miner Dream Y Search", "Miner Dream Category", 5, Integer.MIN_VALUE, Integer.MAX_VALUE, "How deep on the Y axis will the miner's dream search?");
+     //   minerX = configuration.getInt("Miner Dream X Search", "Miner Dream Category", 5, Integer.MIN_VALUE, Integer.MAX_VALUE, "(Added by 5)How deep on the X axis will the miner's dream search?");
         /**
         krakenHurtTimer = configuration.getInt(MOB_CATEGORY, "Kraken Hurt Timer", 30, 1 , Integer.MAX_VALUE, "The amount of ticks the Kraken is immune to being hit.");
 
@@ -62,20 +71,21 @@ public class DZConfig {
    // static final List<String> tempList = new ArrayList<>(Arrays.asList(bannedBlocksStrings));
     public static void finallyMergeBothLists()
     {
-       Collections.addAll(bannedBlockListArrayList, bannedBlocksStrings);
+        try {
+            Collections.addAll(bannedBlockListArrayList, bannedBlocksStrings);
 
-        finalMinerDreamList = bannedBlockListArrayList.toArray(new String[0]);
+            finalMinerDreamList = bannedBlockListArrayList.toArray(new String[0]);
 
+            DZLogger.debug("MERGED API LIST AND CONFIG LIST FOR MINER'S DREAM");
+        } catch (Exception e) {
+            DZLogger.error("THERE WAS AN ERROR MERGING THE LISTS.");
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
 
-      /**  tempList.addAll(bannedBlockListArrayList);
-
-        finalList = tempList.toArray(new String[0]);
-
-        // clean up
-        tempList.clear();
         bannedBlockListArrayList.clear();
         bannedBlocksStrings = new String[0];
-        bannedBlocksStringsDefault = new String[0];**/
+        bannedBlocksStringsDefault = new String[0];
     }
 
 }

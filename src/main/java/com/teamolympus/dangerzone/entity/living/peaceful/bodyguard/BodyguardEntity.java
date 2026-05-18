@@ -283,7 +283,7 @@ public class BodyguardEntity extends EntityTameable implements IInvBasic {
 
 
         if (this.getAnger() > 100 && isTamed()) {
-            DZLogger.LOGGER.debug("I am angry");
+            DZLogger.info("I am angry");
         }
 
     }
