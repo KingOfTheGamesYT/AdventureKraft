@@ -73,6 +73,9 @@ public class DangerZone {
     public static final int TEXTURE_DW = 22;
     public static final String VARIANT = "Variant";
 
+    // float version of PI from Math.PI.
+    public static final float PI = 3.14159265358979323846F;
+
     @SidedProxy(
         clientSide = "com.teamolympus.dangerzone.proxy.ClientProxy",
         serverSide = "com.teamolympus.dangerzone.proxy.CommonProxy"

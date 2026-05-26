@@ -1,11 +1,13 @@
 package com.teamolympus.dangerzone.client.model;
 
+import com.teamolympus.dangerzone.misc.DangerZone;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.util.MathHelper;
 
 // Made with Blockbench 5.1.4
 // Exported for Minecraft version 1.7 - 1.12
@@ -312,6 +314,19 @@ public class ScorpionModel extends ModelBase {
 		leftleg2.render(pixelSize);
 		leftleg3.render(pixelSize);
 		leftleg4.render(pixelSize);
+
+		float rotateLeg1 = MathHelper.cos(limbSwing * 0.6F) * DangerZone.PI * 0.4F * limbSwingAmount;
+		rightleg1.rotateAngleY = rotateLeg1;
+		leftleg1.rotateAngleY = rotateLeg1;
+
+		rightleg2.rotateAngleY = rotateLeg1;
+		leftleg2.rotateAngleY = rotateLeg1;
+
+		rightleg3.rotateAngleY = rotateLeg1;
+		leftleg3.rotateAngleY = rotateLeg1;
+
+		rightleg4.rotateAngleY = rotateLeg1;
+		leftleg4.rotateAngleY = rotateLeg1;
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

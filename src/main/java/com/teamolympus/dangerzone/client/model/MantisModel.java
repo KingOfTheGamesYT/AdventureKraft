@@ -4,6 +4,7 @@ package com.teamolympus.dangerzone.client.model;// Made with Blockbench 5.1.3
 
 
 import com.teamolympus.dangerzone.misc.DZLogger;
+import com.teamolympus.dangerzone.misc.DangerZone;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.Entity;
@@ -281,7 +282,7 @@ public class MantisModel extends ModelBase {
 		bone8.render(pixelSize);
 		bone4.render(pixelSize);
 
-		this.bone5.rotateAngleY = MathHelper.cos(ageInTicks * 1.3F) * (float)Math.PI * 0.35F;
+		this.bone5.rotateAngleY = MathHelper.cos(ageInTicks * 1.3F) * DangerZone.PI * 0.35F;
 		this.bone6.rotateAngleY = -this.bone5.rotateAngleY;
 
 		//Attacks

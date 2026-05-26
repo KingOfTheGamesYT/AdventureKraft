@@ -3,6 +3,7 @@ package com.teamolympus.dangerzone.client.model;// Made with Blockbench 5.1.1
 // Paste this class into your mod and generate all required imports
 
 
+import com.teamolympus.dangerzone.misc.DangerZone;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
@@ -682,7 +683,7 @@ public class AllosaurusModel extends ModelBase {
 		left_leg.render(pixelSize);
 		right_leg.render(pixelSize);
         this.left_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        this.right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + DangerZone.PI) * 1.4F * limbSwingAmount;
         this.lower_jaw.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 0.4F * limbSwingAmount;
 	}
 
