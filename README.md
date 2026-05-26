@@ -21,7 +21,7 @@ To build the mod, you must `git checkout` the branch of the version you would li
 ## License
 our License is All Rights Reserved so the following terms apply:
 <br>
--You may use this mod in modpacks that follow the [Mojang End User License Agreement(EULA)](https://www.minecraft.net/en-us/eula).
+-You may use this mod in modpacks that follow the [Mojang End-User License Agreement(EULA)](https://www.minecraft.net/en-us/eula).
 <br>
 -You may use this mod in videos provided there is a link back to the original download page so people may easily download the mod.
 <br>
