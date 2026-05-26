@@ -1,5 +1,6 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
+import com.teamolympus.dangerzone.entity.ai.DZAIWanderFrequent;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
@@ -23,7 +24,7 @@ public class ScorpionEntity extends EntityMob {
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         this.tasks.addTask(3, new EntityAIMoveTowardsRestriction(this, 1.0D));
         this.tasks.addTask(4, new EntityAIMoveThroughVillage(this, 1.0D, false));
-        this.tasks.addTask(5, new EntityAIWander(this, 1.0D));
+        this.tasks.addTask(5, new DZAIWanderFrequent(this, 1.0D, 14));
         this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(6, new EntityAILookIdle(this));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
