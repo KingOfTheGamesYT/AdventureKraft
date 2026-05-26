@@ -299,6 +299,7 @@ public class ScorpionModel extends ModelBase {
 
 	@Override
 	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float rotateYaw, float rotatePitch, float pixelSize) {
+		setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, rotateYaw, rotatePitch, pixelSize, entity);
 		body.render(pixelSize);
 		tail1.render(pixelSize);
 		tail2.render(pixelSize);
@@ -314,19 +315,36 @@ public class ScorpionModel extends ModelBase {
 		leftleg2.render(pixelSize);
 		leftleg3.render(pixelSize);
 		leftleg4.render(pixelSize);
+	}
 
-		float rotateLeg1 = MathHelper.cos(limbSwing * 0.6F) * DangerZone.PI * 0.4F * limbSwingAmount;
-		rightleg1.rotateAngleY = rotateLeg1;
-		leftleg1.rotateAngleY = rotateLeg1;
+	@Override
+	public void setRotationAngles(float p_78087_1_, float p_78087_2_, float p_78087_3_, float p_78087_4_, float p_78087_5_, float p_78087_6_, Entity p_78087_7_) {
+		float test = 0.5f;
 
-		rightleg2.rotateAngleY = rotateLeg1;
-		leftleg2.rotateAngleY = rotateLeg1;
-
-		rightleg3.rotateAngleY = rotateLeg1;
-		leftleg3.rotateAngleY = rotateLeg1;
-
-		rightleg4.rotateAngleY = rotateLeg1;
-		leftleg4.rotateAngleY = rotateLeg1;
+		float f9 = -(MathHelper.cos(p_78087_1_ * 0.6662F * 2.0F + 0.0F) * 0.4F) * p_78087_2_ * test;
+		float f10 = -(MathHelper.cos(p_78087_1_ * 0.6662F * 2.0F + DangerZone.PI) * 0.4F) * p_78087_2_ * test;
+		float f11 = -(MathHelper.cos(p_78087_1_ * 0.6662F * 2.0F + (DangerZone.PI / 2F)) * 0.4F) * p_78087_2_ * test;
+		float f12 = -(MathHelper.cos(p_78087_1_ * 0.6662F * 2.0F + (DangerZone.PI * 3F / 2F)) * 0.4F) * p_78087_2_ * test;
+		float f13 = Math.abs(MathHelper.sin(p_78087_1_ * 0.6662F + 0.0F) * 0.4F) * p_78087_2_ * test;
+		float f14 = Math.abs(MathHelper.sin(p_78087_1_ * 0.6662F + DangerZone.PI) * 0.4F) * p_78087_2_ * test;
+		float f15 = Math.abs(MathHelper.sin(p_78087_1_ * 0.6662F + (DangerZone.PI / 2F)) * 0.4F) * p_78087_2_ * test;
+		float f16 = Math.abs(MathHelper.sin(p_78087_1_ * 0.6662F + (DangerZone.PI * 3F / 2F)) * 0.4F) * p_78087_2_ * test;
+		this.rightleg1.rotateAngleY += f9;
+		this.leftleg1.rotateAngleY += -f9;
+		this.rightleg2.rotateAngleY += f10;
+		this.leftleg2.rotateAngleY += -f10;
+		this.rightleg3.rotateAngleY += f11;
+		this.leftleg3.rotateAngleY += -f11;
+		this.rightleg4.rotateAngleY += f12;
+		this.leftleg4.rotateAngleY += -f12;
+		this.rightleg1.rotateAngleZ += f13;
+		this.leftleg1.rotateAngleZ += -f13;
+		this.rightleg2.rotateAngleZ += f14;
+		this.leftleg2.rotateAngleZ += -f14;
+		this.rightleg3.rotateAngleZ += f15;
+		this.leftleg3.rotateAngleZ += -f15;
+		this.rightleg4.rotateAngleZ += f16;
+		this.leftleg4.rotateAngleZ += -f16;
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
