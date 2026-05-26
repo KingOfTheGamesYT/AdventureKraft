@@ -1,5 +1,5 @@
 # NO AI
-Simple rule, do not AI or any LLM in any bug report or any submitted pull request.
+Do not A.I. or any LLMS in any bug report or any submitted pull requests.
 
 # Formatting Guidelines
 - Ensure every statement is [accompanied by their respective starting and closing brace](https://www.cs.cornell.edu/courses/JavaAndDS/JavaStyle.html#AlwaysBraces).

@@ -15,4 +15,4 @@ For information on the License, see: [The License Here](LICENSE)
 For guidelines on behavior, see the [CODE OF CONDUCT](CODE_OF_CONDUCT.md)
 
 ## AI Policy
-[Any obvious use of AI OR LLMS is prohibited](CONTRIBUTING.md)
+[Any obvious use of A.I. or LLMS is prohibited](CONTRIBUTING.md)
