@@ -24,9 +24,7 @@ public abstract class DZAIWanderFrequentBase extends EntityAIBase {
         this.setMutexBits(1);
     }
 
-    /**
-     * Returns whether the EntityAIBase should begin execution.
-     */
+    @Override
     public boolean shouldExecute()
     {
         if (this.entity.getRNG().nextInt(randFactor) != 0)
@@ -51,12 +49,13 @@ public abstract class DZAIWanderFrequentBase extends EntityAIBase {
         }
     }
 
-
+    @Override
     public boolean continueExecuting()
     {
         return !this.entity.getNavigator().noPath();
     }
 
+    @Override
     public void startExecuting()
     {
         this.entity.getNavigator().tryMoveToXYZ(this.xPosition, this.yPosition, this.zPosition, this.speed);

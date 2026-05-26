@@ -69,7 +69,7 @@ public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
                 throwFactor = 0.25D;
             }
 
-            final double finalVX = Math.cos(value) * 1.2D ;
+            final double finalVX = Math.cos(value) * 1.2D;
             final double finalVZ = Math.sin(value) * 1.2D;
 
             double airValue = 0.1D;

@@ -191,7 +191,6 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
                 krakenEntity.posZ = this.posZ + this.worldObj.rand.nextInt(10)  - this.worldObj.rand.nextInt(10);
                 krakenEntity.posX = this.posX + this.worldObj.rand.nextInt(12) + this.worldObj.rand.nextInt(5);
                 krakenEntity.posY = this.posY + this.worldObj.rand.nextInt(10) - this.worldObj.rand.nextInt(10);
-
                 this.worldObj.spawnEntityInWorld(krakenEntity);
 
             }

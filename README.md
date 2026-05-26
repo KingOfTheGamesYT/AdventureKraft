@@ -1,16 +1,18 @@
-# DangerZone
+# AdventureKraft
 
-Adds TheyCallMeDanger's game, DangerZone, into Minecraft.
+Adds TheyCallMeDanger's game, DangerZone, and its mods into Minecraft.
 
-Original Game made by TheyCallMeDanger("Richard Clark").
+Original Game made by TheyCallMeDanger("Richard Clark"). You can find a download [here](https://www.orespawn.com/download/)
 
-# Authors
+## Download
+[Download link to the CurseForge page](https://www.curseforge.com/minecraft/mc-mods/adventurekraft). This is the soon-to-be 1.7.10 port of AdventureKraft.
+## Authors
 Made by RedRoseWarrior1("DevMaster1015") and Jerios("VortexBlender", "RustyVortex").
-
+### LICENSE
 For information on the License, see: [The License Here](LICENSE)
 
 ## Code of Conduct
-For how once should behave, see the [CODE OF CONDUCT](CODE_OF_CONDUCT.md)
+For guidelines on behavior, see the [CODE OF CONDUCT](CODE_OF_CONDUCT.md)
 
 ## AI Policy
-If it is not clear by the [Claude](CLAUDE.md) and [AGENTS](AGENTS.MD) files, any obvious uses of AI is explicitly forbidden. DO NOT USE AI!
+[Any obvious use of AI OR LLMS is prohibited](CONTRIBUTING.md)
