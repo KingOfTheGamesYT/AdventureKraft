@@ -2,10 +2,9 @@ package com.teamolympus.dangerzone.items;
 
 import java.util.List;
 
-import com.teamolympus.dangerzone.misc.Translations;
+import com.teamolympus.dangerzone.misc.TranslationHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
@@ -38,7 +37,7 @@ public class MantisClawItem extends BaseAKSword {
     @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean b) {
         for (byte i = 1; i <= 4; i++) {
-            info.add(Translations.translate("MantisDesc" + i));
+            info.add(TranslationHelper.translate("MantisDesc" + i));
         }
     }
 

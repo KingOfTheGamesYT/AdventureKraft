@@ -1,11 +1,10 @@
 package com.teamolympus.dangerzone.items.base;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import com.teamolympus.dangerzone.misc.DangerZone;
-import com.teamolympus.dangerzone.misc.Translations;
+import com.teamolympus.dangerzone.misc.TranslationHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -70,7 +69,7 @@ public class BaseAKFood extends ItemFood {
     {
         super.addInformation(stack, player, info,b);
         for (String string : infoList) {
-            info.add(formatting + Translations.translate(string));
+            info.add(formatting + TranslationHelper.translate(string));
         }
     }
 }

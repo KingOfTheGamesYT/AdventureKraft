@@ -1,6 +1,6 @@
 package com.teamolympus.dangerzone.items.base.tools;
 
-import com.teamolympus.dangerzone.misc.Translations;
+import com.teamolympus.dangerzone.misc.TranslationHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -38,7 +38,7 @@ public class BaseAKSword extends ItemSword {
     {
         super.addInformation(stack, player, info,b);
         for (String string : infoList) {
-            info.add(formatting + Translations.translate(string));
+            info.add(formatting + TranslationHelper.translate(string));
         }
     }
 

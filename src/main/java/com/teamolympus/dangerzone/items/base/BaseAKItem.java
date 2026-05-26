@@ -1,7 +1,7 @@
 package com.teamolympus.dangerzone.items.base;
 
 import com.teamolympus.dangerzone.misc.DangerZone;
-import com.teamolympus.dangerzone.misc.Translations;
+import com.teamolympus.dangerzone.misc.TranslationHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
@@ -37,7 +37,7 @@ public class BaseAKItem extends Item {
     {
         super.addInformation(stack, player, info,b);
         for (String string : infoList) {
-            info.add(formatting + Translations.translate(string));
+            info.add(formatting + TranslationHelper.translate(string));
         }
     }
 

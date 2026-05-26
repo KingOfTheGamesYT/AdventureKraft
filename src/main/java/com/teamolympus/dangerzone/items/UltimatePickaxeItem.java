@@ -1,7 +1,7 @@
 package com.teamolympus.dangerzone.items;
 
 import com.teamolympus.dangerzone.misc.DropHelper;
-import com.teamolympus.dangerzone.misc.Translations;
+import com.teamolympus.dangerzone.misc.TranslationHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -69,7 +69,7 @@ public class UltimatePickaxeItem extends BaseAKPickaxe {
     @SideOnly(Side.CLIENT)
     @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean b) {
-        info.add(EnumChatFormatting.DARK_BLUE + Translations.translate("UltaPick1"));
+        info.add(EnumChatFormatting.DARK_BLUE + TranslationHelper.translate("UltaPick1"));
     }
 
 }

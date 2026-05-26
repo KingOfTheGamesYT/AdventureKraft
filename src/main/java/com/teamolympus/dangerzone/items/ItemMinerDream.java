@@ -2,25 +2,19 @@ package com.teamolympus.dangerzone.items;
 
 import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.items.base.BaseAKItem;
-import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DangerZone;
-import com.teamolympus.dangerzone.misc.Translations;
+import com.teamolympus.dangerzone.misc.TranslationHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
 import com.teamolympus.dangerzone.world.BaseWorldHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.command.CommandBase;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.command.NumberInvalidException;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import org.lwjgl.Sys;
 
 import java.util.List;
 import java.util.Objects;
@@ -173,7 +167,7 @@ public class ItemMinerDream extends BaseAKItem {
     public void addInformation(ItemStack stack, EntityPlayer player, List tooltip, boolean b) {
         super.addInformation(stack, player, tooltip, b);
         for (byte i = 1; i <= 10; i++) {
-            tooltip.add(EnumChatFormatting.DARK_GREEN + Translations.translate("MinerDreamDesc" + i));
+            tooltip.add(EnumChatFormatting.DARK_GREEN + TranslationHelper.translate("MinerDreamDesc" + i));
         }
     }
 
