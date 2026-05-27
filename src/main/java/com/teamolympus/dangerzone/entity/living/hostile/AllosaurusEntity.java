@@ -9,10 +9,8 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
@@ -20,9 +18,16 @@ public class AllosaurusEntity extends EntityMob implements IBossDisplayData {
 
     public AllosaurusEntity(World world) {
         super(world);
-        getNavigator().setAvoidsWater(true);
+        setupProperties();
+        addGoals();
+    }
+    public void setupProperties() {
         this.setSize(1.5f, 2.5f);
         this.experienceValue = 199;
+    }
+
+    public void addGoals() {
+        getNavigator().setAvoidsWater(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         this.tasks.addTask(3, new EntityAIMoveThroughVillage(this, 1.0D, false));

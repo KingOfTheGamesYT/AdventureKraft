@@ -1,22 +1,16 @@
 package com.teamolympus.dangerzone.entity.living.hostile;
 
 import com.teamolympus.dangerzone.config.DZConfig;
-import com.teamolympus.dangerzone.entity.living.IAdventureKraftAttackableMobs;
 import com.teamolympus.dangerzone.misc.BoundingBoxHelper;
-import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DropHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
-
-import java.util.List;
 
 public class MantisEntity extends EntityMob {
 

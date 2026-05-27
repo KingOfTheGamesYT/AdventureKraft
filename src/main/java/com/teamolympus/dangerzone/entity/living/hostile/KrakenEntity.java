@@ -8,7 +8,6 @@ import com.teamolympus.dangerzone.world.BaseWorldHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.monster.EntityMob;
@@ -41,6 +40,10 @@ public class KrakenEntity extends EntityMob implements IBossDisplayData {
 
     public KrakenEntity(World world) {
         super(world);
+        setupProperties();
+    }
+
+    public void setupProperties() {
         this.setSize(4.0f, 15.0f);
         this.isImmuneToFire = true;
         this.fireResistance = 120;
