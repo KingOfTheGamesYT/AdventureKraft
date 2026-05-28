@@ -18,7 +18,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.List;
-import java.util.Objects;
 
 
 public class MinerDreamItem extends BaseAKItem {
@@ -83,30 +82,28 @@ public class MinerDreamItem extends BaseAKItem {
                         int topPosY = newY + 1;
                         int topPosZ = newZ;
 
-                        final Block block = BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ);
+                        final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ);
 
 
                         if (topPosY <= 14 &&
-                                block == Blocks.air
-                                || block == Blocks.lava
-                                || block == Blocks.flowing_lava
-                                || block == Blocks.water
-                                || block == Blocks.flowing_water
-                                || block == Blocks.gravel
-                                || block == Blocks.sand) {
+                                topBlock == Blocks.air
+                                || topBlock == Blocks.lava
+                                || topBlock == Blocks.flowing_lava
+                                || topBlock == Blocks.water
+                                || topBlock == Blocks.flowing_water
+                                || topBlock == Blocks.gravel
+                                || topBlock == Blocks.sand) {
                             BaseWorldHelper.setBlockFastNormalPars(worldIn, topPosX, topPosY, topPosZ, Blocks.cobblestone, 0, 2);
                         }
 
-                        if (block.canPlaceBlockAt(worldIn, topPosX, topPosY,topPosZ))
-                        {
+                        if (topBlock.canPlaceBlockAt(worldIn, topPosX, topPosY,topPosZ)) {
                             BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 3);
                         }
 
 
-                        final Block block2 = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
+                        final Block blockBox = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
 
-                        if (isValidBreakableBlock(block2)) {
-                            // if our block is deemed breakable, replace with air and place torches every 5 blocks
+                        if (isValidBreakableBlock(blockBox)) { // if our block is deemed breakable, replace with air and place torches every 5 blocks.
                             BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 2);
                             if (x == 0 && y == 0 && z % 5 == 0) {
                                 BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, RegistryHandler.extremeTorch, 5, 2);
