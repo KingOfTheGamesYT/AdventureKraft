@@ -103,10 +103,8 @@ public class MinerDreamItem extends BaseAKItem {
                         final Block blockBox = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
 
                         if (y == 5) {
-                            int topPosX = newX;
                             int topPosY = newY + 1;
-                            int topPosZ = newZ;
-                            final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ);
+                            final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, newX, topPosY, newZ);
 
                             // only at the top positons do we get our block, else we can reuse the block we got.
                             if (topPosY <= 14 &&
@@ -117,10 +115,11 @@ public class MinerDreamItem extends BaseAKItem {
                                     || topBlock == Blocks.flowing_water
                                     || topBlock == Blocks.gravel
                                     || topBlock == Blocks.sand) {
-                                BaseWorldHelper.setBlockFastNormalPars(worldIn, topPosX, topPosY, topPosZ, Blocks.cobblestone, 0, 2);
+                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPosY, newZ, Blocks.cobblestone, 0, 2);
+                            } else {
+                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 3);
                             }
 
-                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 3);
                         } else {
                             if (isValidBreakableBlock(blockBox)) { // if our block is deemed breakable, replace with air and place torches every 5 blocks.
                                 BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 2);
