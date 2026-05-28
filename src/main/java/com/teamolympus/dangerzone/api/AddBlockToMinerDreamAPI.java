@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * This is to be done on the Initialization stage.
+ * This is to be done on the Initialization stage of Forge.
  * Allows for the registry name of blocks to be breakable by miner's dream.
  * EG. mymodid:mymodblock
  */
@@ -21,7 +21,7 @@ public class AddBlockToMinerDreamAPI {
     public static void addOntoMinerdreamList(String name)  {
         try {
             Class.forName(SEARCHED_CLASS_NAME);
-            com.teamolympus.dangerzone.config.DZConfig.bannedBlockListArrayList.add(name);
+            com.teamolympus.dangerzone.config.DZConfig.bannedBlockListAPI.add(name);
         } catch (ClassNotFoundException e) {
             logErrMsg();
         }
@@ -45,7 +45,7 @@ public class AddBlockToMinerDreamAPI {
     public static void addOntoMinerdreamList(Set<String> name) {
        try {
            Class.forName(SEARCHED_CLASS_NAME);
-           com.teamolympus.dangerzone.config.DZConfig.bannedBlockListArrayList.addAll(name);
+           com.teamolympus.dangerzone.config.DZConfig.bannedBlockListAPI.addAll(name);
        } catch (ClassNotFoundException e) {
            logErrMsg();
        }
@@ -57,7 +57,7 @@ public class AddBlockToMinerDreamAPI {
     public static void addOntoMinerdreamList(String[] name) {
         try {
            Class.forName(SEARCHED_CLASS_NAME);
-            com.teamolympus.dangerzone.config.DZConfig.bannedBlockListArrayList.addAll(Arrays.asList(name));
+            com.teamolympus.dangerzone.config.DZConfig.bannedBlockListAPI.addAll(Arrays.asList(name));
         } catch (ClassNotFoundException e) {
             logErrMsg();
         }
@@ -71,7 +71,7 @@ public class AddBlockToMinerDreamAPI {
             Class.forName(SEARCHED_CLASS_NAME);
 
             final int len = name.length;
-            for (int i = 0; i < len; i++) {
+            for (int i = 0; i < len; ++i) {
                 addOntoMinerdreamList(Block.blockRegistry.getNameForObject(name[i]));
             }
         } catch (ClassNotFoundException e) {
@@ -86,7 +86,7 @@ public class AddBlockToMinerDreamAPI {
     public static void addOntoMinerdreamList(List<String> name){
         try {
             Class.forName(SEARCHED_CLASS_NAME);
-            com.teamolympus.dangerzone.config.DZConfig.bannedBlockListArrayList.addAll(name);
+            com.teamolympus.dangerzone.config.DZConfig.bannedBlockListAPI.addAll(name);
         } catch (ClassNotFoundException e) {
             logErrMsg();
         }
@@ -99,9 +99,8 @@ public class AddBlockToMinerDreamAPI {
         try {
             Class.forName(SEARCHED_CLASS_NAME);
             final int arrSize = name.size();
-            for (int i = 0; i < arrSize; i++) {
+            for (int i = 0; i < arrSize; ++i) {
                 addOntoMinerdreamList( Block.blockRegistry.getNameForObject(name.get(i)));
-
             }
         } catch (ClassNotFoundException e) {
             logErrMsg();

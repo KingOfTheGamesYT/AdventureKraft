@@ -90,7 +90,7 @@ public class RegistryHandler {
     }
 
     public static void postInit() {
-        DZConfig.finallyMergeBothLists();
+        DZConfig.mergeConfigAPIListMinerDream();
     }
 
 
@@ -311,7 +311,7 @@ public class RegistryHandler {
         smallRock = new RockItem("small_rock", EnumRockTypes.SMALL_ROCK);
         registerItem(smallRock, "Small Rock");
 
-        minerDream = new ItemMinerDream("miners_dream");
+        minerDream = new MinerDreamItem("miners_dream");
         registerItem(minerDream, "Miner's Dream");
 
         crystalStick = new BaseAKMaterials("crystal_stick");

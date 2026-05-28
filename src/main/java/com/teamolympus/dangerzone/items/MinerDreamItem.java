@@ -9,6 +9,7 @@ import com.teamolympus.dangerzone.world.BaseWorldHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -20,9 +21,9 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class ItemMinerDream extends BaseAKItem {
+public class MinerDreamItem extends BaseAKItem {
 
-    public ItemMinerDream(String name) {
+    public MinerDreamItem(String name) {
         super(name);
         this.setMaxStackSize(16);
         this.setTextureName(DangerZone.SPECIAL_PREFIX + name);
@@ -82,19 +83,32 @@ public class ItemMinerDream extends BaseAKItem {
                         int topPosY = newY + 1;
                         int topPosZ = newZ;
 
-                        Block block = BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ);
+                        final Block block = BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ);
+
+
                         if (topPosY <= 14 &&
                                 block == Blocks.air
                                 || block == Blocks.lava
                                 || block == Blocks.flowing_lava
                                 || block == Blocks.water
-                                || block == Blocks.flowing_water) {
+                                || block == Blocks.flowing_water
+                                || block == Blocks.gravel
+                                || block == Blocks.sand) {
                             BaseWorldHelper.setBlockFastNormalPars(worldIn, topPosX, topPosY, topPosZ, Blocks.cobblestone, 0, 2);
                         }
 
-                        if (isValidBreakableBlock(worldIn, newX, newY, newZ)) {
+                        if (block.canPlaceBlockAt(worldIn, topPosX, topPosY,topPosZ))
+                        {
                             BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 3);
-                            if (x == 0 && y == 0 && z % 5 == 0 && BaseWorldHelper.fastIsAirBlock(worldIn, newX, newY, newZ)) {
+                        }
+
+
+                        final Block block2 = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
+
+                        if (isValidBreakableBlock(block2)) {
+                            // if our block is deemed breakable, replace with air and place torches every 5 blocks
+                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 2);
+                            if (x == 0 && y == 0 && z % 5 == 0) {
                                 BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, RegistryHandler.extremeTorch, 5, 2);
                             }
                         }
@@ -109,54 +123,23 @@ public class ItemMinerDream extends BaseAKItem {
         return itemStackIn;
     }
 
-    // I am so sorry.....
-    private boolean isValidBreakableBlock(World worldIn, int newX, int newY, int newZ) {
+    private boolean isValidBreakableBlock(Block block) {
 
-        Block block = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
-
-     if (BaseWorldHelper.fastIsAirBlock(worldIn, newX, newY, newZ)) {
+     if (block.getMaterial() == Material.air) {
            return false;
        }
 
-      final String[] array = DZConfig.finalMinerDreamList;
-       final int arrLen = array.length;
+       final String[] blockListArray = DZConfig.finalMinerDreamList;
+       final int arrLen = blockListArray.length;
 
-       String n = Block.blockRegistry.getNameForObject(block);
+       String blockName = Block.blockRegistry.getNameForObject(block);
 
-        for (int i = 0; i < arrLen; i++)
-        {
-            if (Objects.equals(n, array[i])) {
+        for (int i = 0; i < arrLen; ++i) {
+            if (blockName.equals(blockListArray[i])) {
                 return true;
             }
         }
         return false;
-
-
-
-     /**   for (int i = 0; i < arrLen; i++) {
-            boolean list1 = strBlock.contains(array[i]);
-            boolean list2 = unlocalizedName.contains(array[i]);
-
-            if (list1 || list2) {
-                return true;
-            }
-        }**/
-
-
-      /**  return
-                        block == Blocks.dirt
-                        || block == Blocks.stone
-                        || block== Blocks.grass
-                        || block == Blocks.sand
-                        || block == Blocks.sandstone
-                        || block == Blocks.water
-                        || block == Blocks.flowing_water
-                        || block == Blocks.gravel
-                        || block == Blocks.netherrack
-                        || block == Blocks.end_stone
-                        || block == Blocks.lava
-                        || block == Blocks.flowing_lava;
-       **/
 
     }
 

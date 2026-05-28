@@ -21,7 +21,7 @@ public class DZConfig {
 
     public static String[] finalMinerDreamList;
 
-    public static Set<String> bannedBlockListArrayList = new HashSet<>(512);
+    public static List<String> bannedBlockListAPI = new ArrayList<>(512);
 
     public static int krakenHurtTimer = 30;
     public static int pizzaFoodLevels = 4;
@@ -68,22 +68,13 @@ public class DZConfig {
         }
     }
 
-   // static final List<String> tempList = new ArrayList<>(Arrays.asList(bannedBlocksStrings));
-    public static void finallyMergeBothLists()
-    {
-        try {
-            Collections.addAll(bannedBlockListArrayList, bannedBlocksStrings);
+    public static void mergeConfigAPIListMinerDream() {
+         Collections.addAll(bannedBlockListAPI, bannedBlocksStrings);
+        finalMinerDreamList = bannedBlockListAPI.toArray(new String[0]);
 
-            finalMinerDreamList = bannedBlockListArrayList.toArray(new String[0]);
+        DZLogger.debug("Merged config and API list for Miner's dream.");
 
-            DZLogger.debug("MERGED API LIST AND CONFIG LIST FOR MINER'S DREAM");
-        } catch (Exception e) {
-            DZLogger.error("THERE WAS AN ERROR MERGING THE LISTS.");
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-
-        bannedBlockListArrayList.clear();
+        bannedBlockListAPI.clear();
         bannedBlocksStrings = new String[0];
         bannedBlocksStringsDefault = new String[0];
     }

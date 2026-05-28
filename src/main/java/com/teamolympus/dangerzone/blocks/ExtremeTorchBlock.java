@@ -19,10 +19,9 @@ public class ExtremeTorchBlock extends BlockTorch {
         this.setBlockTextureName(DangerZone.MODID_PREFIX + name);
     }
 
-    /**
-     * A randomly called display update to be able to add particles or other items for display
-     */
+    @Override
     @SideOnly(Side.CLIENT)
+    // why does vanilla's not using switch cases???
     public void randomDisplayTick(World worldIn, int x, int y, int z, Random random) {
         int metadata = worldIn.getBlockMetadata(x, y, z);
         double d0 = (double) ((float) x + 0.5F) + (double) (random.nextFloat() - 0.5F) * 0.2D;
