@@ -4,12 +4,17 @@ package com.teamolympus.dangerzone.world;
 import com.teamolympus.dangerzone.misc.DZLogger;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.crash.CrashReport;
+import net.minecraft.crash.CrashReportCategory;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ReportedException;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
+
+import java.util.concurrent.Callable;
 
 public class BaseWorldHelper {
 
@@ -77,6 +82,72 @@ public class BaseWorldHelper {
           //  DZLogger.LOGGER.error("TEST TEST TEST TEST");
        //    world.markAndNotifyBlock(x, y, z, chunk, block1, blockIn, flags);
         }
+    }
+
+    public static void setBlockFastNormalPars2(World world, int x, int y, int z, Block blockIn, int metadataIn, int flags)
+    {
+        Chunk chunk = world.getChunkFromChunkCoords(x >> 4, z >> 4);
+        Block block1 = null;
+        net.minecraftforge.common.util.BlockSnapshot blockSnapshot = null;
+
+        if ((flags & 1) != 0)
+        {
+            //  block1 = chunk.getBlock(x & 15, y, z & 15);
+            block1 = fastChunkgetBlock(chunk, x & 15, y, z & 15);
+        }
+
+        if (world.captureBlockSnapshots && !world.isRemote)
+        {
+            blockSnapshot = net.minecraftforge.common.util.BlockSnapshot.getBlockSnapshot(world, x, y, z, flags);
+            world.capturedBlockSnapshots.add(blockSnapshot);
+        }
+
+        boolean flag = setFastChunk3(chunk, x & 15, y, z & 15, blockIn, metadataIn);
+
+        //  boolean flag = chunk.func_150807_a(x & 15, y, z & 15, blockIn, metadataIn);
+
+        if (!flag && blockSnapshot != null)
+        {
+            world.capturedBlockSnapshots.remove(blockSnapshot);
+            blockSnapshot = null;
+        }
+
+        // relight the blocks and stuff!
+        world.func_147451_t(x, y, z);
+
+
+        if (flag && blockSnapshot == null) // Don't notify clients or update physics while capturing blockstates
+        {
+
+            if ((flags & 2) != 0 && (chunk == null || chunk.func_150802_k()))
+            {
+                world.markBlockForUpdate(x, y, z);
+            }
+
+            if (!world.isRemote && (flags & 1) != 0)
+            {
+                notifyBlockOfNeighborChange(world, x,y,z,block1);
+             //   world.notifyBlockChange(x, y, z, block1);
+            }
+
+            //  DZLogger.LOGGER.error("TEST TEST TEST TEST");
+            //    world.markAndNotifyBlock(x, y, z, chunk, block1, blockIn, flags);
+        }
+    }
+
+    public static void notifyBlockOfNeighborChange(World world, int p_147460_1_, int p_147460_2_, int p_147460_3_, final Block block)
+    {
+         //   Block block = fasterGetBlock(world, p_147460_1_, p_147460_2_, p_147460_3_);
+
+            block.onNeighborBlockChange(world, p_147460_1_ - 1, p_147460_2_, p_147460_3_, block);
+            block.onNeighborBlockChange(world, p_147460_1_ + 1, p_147460_2_, p_147460_3_, block);
+
+            block.onNeighborBlockChange(world, p_147460_1_, p_147460_2_ - 1, p_147460_3_, block);
+            block.onNeighborBlockChange(world, p_147460_1_, p_147460_2_, p_147460_3_ + 1, block);
+
+            block.onNeighborBlockChange(world, p_147460_1_, p_147460_2_, p_147460_3_ - 1, block);
+            block.onNeighborBlockChange(world, p_147460_1_, p_147460_2_, p_147460_3_ + 1, block);
+
     }
 
     public static boolean setFastChunk3(Chunk chunk, int p_150807_1_, int p_150807_2_, int p_150807_3_, Block p_150807_4_, int p_150807_5_)

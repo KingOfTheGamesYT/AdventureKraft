@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.items;
 
 import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.items.base.BaseAKItem;
+import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.misc.TranslationHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
@@ -54,37 +55,38 @@ public class MinerDreamItem extends BaseAKItem {
 
             for (int x = -5; x <= 5; x++) {
                 for (int y = 0; y <= 5; y++) {
+                    newY = playerY + y;
                     for (int z = 0; z <= 50; z++) {
                         switch (facingPos) {
                             case SOUTH:
                                 newX = playerX + x;
-                                newY = playerY + y;
+                            //    newY = playerY + y;
                                 newZ = playerZ + z;
                                 break;
                             case NORTH:
                                 newX = playerX - x;
-                                newY = playerY + y;
+                             //   newY = playerY + y;
                                 newZ = playerZ - z;
                                 break;
                             case EAST:
                                 newX = playerX + z;
-                                newY = playerY + y;
+                             //   newY = playerY + y;
                                 newZ = playerZ + x;
                                 break;
                             case WEST:
                                 newX = playerX - z;
-                                newY = playerY + y;
+                            //    newY = playerY + y;
                                 newZ = playerZ - x;
                                 break;
                         }
 
-                        int topPosX = newX;
+                        /**      int topPosX = newX;
                         int topPosY = newY + 1;
                         int topPosZ = newZ;
 
-                        final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ);
+                     final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, topPosX, topPosY, topPosZ);
 
-
+                        // protects from dangerous stuff by placing a cobblestone in the way!
                         if (topPosY <= 14 &&
                                 topBlock == Blocks.air
                                 || topBlock == Blocks.lava
@@ -95,13 +97,14 @@ public class MinerDreamItem extends BaseAKItem {
                                 || topBlock == Blocks.sand) {
                             BaseWorldHelper.setBlockFastNormalPars(worldIn, topPosX, topPosY, topPosZ, Blocks.cobblestone, 0, 2);
                         }
-
-                        if (topBlock.canPlaceBlockAt(worldIn, topPosX, topPosY,topPosZ)) {
-                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 3);
-                        }
+                    **/
 
 
                         final Block blockBox = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
+
+                        if (y != 0 && y % 5 == 0) {
+                            DZLogger.info("Y VAR"+y);
+                        }
 
                         if (isValidBreakableBlock(blockBox)) { // if our block is deemed breakable, replace with air and place torches every 5 blocks.
                             BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, 2);
