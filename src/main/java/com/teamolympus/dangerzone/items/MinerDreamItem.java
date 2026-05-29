@@ -80,28 +80,10 @@ public class MinerDreamItem extends BaseAKItem {
                         }
 
 
-
-                        // only at the top positons do we get our block, don't get the block twice!
-                        if (y == 5) {
-                            int topPosY = newY + 1;
-                            final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, newX, topPosY, newZ);
-
-                            if (topPosY <= 14 &&
-                                  topBlock == Blocks.air ||
-                                    topBlock == Blocks.lava
-                                    || topBlock == Blocks.flowing_lava
-                                    || topBlock == Blocks.water
-                                    || topBlock == Blocks.flowing_water
-                                    || topBlock == Blocks.gravel
-                                    || topBlock == Blocks.sand) {
-                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPosY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
-                            } else {
-                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPosY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
-                            }
-                        } else {
+                        if (!(y == 5)) {
                             final Block blockBox = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
                             if (newY <= 14 &&
-                                  blockBox == Blocks.air ||
+                                    blockBox == Blocks.air ||
                                     blockBox == Blocks.lava
                                     || blockBox == Blocks.flowing_lava
                                     || blockBox == Blocks.water
@@ -116,18 +98,22 @@ public class MinerDreamItem extends BaseAKItem {
                                 }
 
                             }
+                        } else {
+                            int topPosY = newY + 1;
+                            final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, newX, topPosY, newZ);
 
-
-                        /**    else {
-                                if (isValidBreakableBlock(blockBox)) { // if our block is deemed breakable, replace with air and place torches every 5 blocks.
-                                    BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
-                                    if (x == 0 && y == 0 && z % 5 == 0) {
-                                        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, RegistryHandler.extremeTorch, 5, MINER_DREAM_FLAG);
-                                    }
-                                }
+                            if (topPosY <= 14 &&
+                                    topBlock == Blocks.air ||
+                                    topBlock == Blocks.lava
+                                    || topBlock == Blocks.flowing_lava
+                                    || topBlock == Blocks.water
+                                    || topBlock == Blocks.flowing_water
+                                    || topBlock == Blocks.gravel
+                                    || topBlock == Blocks.sand) {
+                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPosY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+                            } else {
+                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPosY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
                             }
-                            **/
-
 
                         }
 
