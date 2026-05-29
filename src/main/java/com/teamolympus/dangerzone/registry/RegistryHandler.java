@@ -311,7 +311,7 @@ public class RegistryHandler {
         smallRock = new RockItem("small_rock", EnumRockTypes.SMALL_ROCK);
         registerItem(smallRock, "Small Rock");
 
-        minerDream = new MinerDreamItem("miners_dream");
+        minerDream = new MinersDreamItem("miners_dream");
         registerItem(minerDream, "Miner's Dream");
 
         crystalStick = new BaseAKMaterials("crystal_stick");

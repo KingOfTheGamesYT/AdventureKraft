@@ -21,12 +21,12 @@ import java.util.List;
 import java.util.Set;
 
 
-public class MinerDreamItem extends BaseAKItem {
+public class MinersDreamItem extends BaseAKItem {
 
     public static final int MINER_DREAM_FLAG = DZConfig.minerDreamFlag;
 
 
-    public MinerDreamItem(String name) {
+    public MinersDreamItem(String name) {
         super(name);
         this.setMaxStackSize(16);
         this.setTextureName(DangerZone.SPECIAL_PREFIX + name);
@@ -41,7 +41,7 @@ public class MinerDreamItem extends BaseAKItem {
         player.worldObj.playSoundAtEntity(player, "random.explode", 1.0f, 1.5f);
 
         if (!worldIn.isRemote) {
-            final int facingPos = MathHelper.floor_double((double) (player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+            final int facingPos = MathHelper.floor_float((player.rotationYaw * 4.0F / 360.0F) + 0.5F) & 3;
 
             final int SOUTH = 0;
             final int WEST = 1;
@@ -59,25 +59,39 @@ public class MinerDreamItem extends BaseAKItem {
            final int topPozY = playerY + 6;
 
             for (int x = -5; x <= 5; x++) {
+                switch (facingPos) {
+                    case SOUTH:
+                        newX = playerX + x;
+                        break;
+                    case NORTH:
+                        newX = playerX - x;
+                        break;
+                    case EAST:
+                        newZ = playerZ + x;
+                        break;
+                    case WEST:
+                        newZ = playerZ - x;
+                        break;
+                }
                 for (int y = 0; y <= 5; y++) {
                     newY = playerY + y;
                     for (int z = 0; z <= 50; z++) {
                         switch (facingPos) {
                             case SOUTH:
-                                newX = playerX + x;
+                              //  newX = playerX + x;
                                 newZ = playerZ + z;
                                 break;
                             case NORTH:
-                                newX = playerX - x;
+                              //  newX = playerX - x;
                                 newZ = playerZ - z;
                                 break;
                             case EAST:
                                 newX = playerX + z;
-                                newZ = playerZ + x;
+                             //   newZ = playerZ + x;
                                 break;
                             case WEST:
                                 newX = playerX - z;
-                                newZ = playerZ - x;
+                              //  newZ = playerZ - x;
                                 break;
                         }
 
@@ -100,9 +114,6 @@ public class MinerDreamItem extends BaseAKItem {
                             }
 
                         }
-
-
-
 
                     }
 
@@ -149,7 +160,6 @@ public class MinerDreamItem extends BaseAKItem {
         final String blockName = Block.blockRegistry.getNameForObject(block);
 
         final Set<String> list = DZConfig.bannedBlockListAPI;
-
 
         return list.contains(blockName);
 
