@@ -2,6 +2,7 @@ package com.teamolympus.dangerzone.items;
 
 import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.items.base.BaseAKItem;
+import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.misc.TranslationHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
@@ -52,46 +53,32 @@ public class MinersDreamItem extends BaseAKItem {
             final int playerY = (int) player.posY;
             final int playerZ = (int) player.posZ;
 
+            final int topPozY = playerY + 6;
+
             int newX = playerX;
             int newY = playerY;
             int newZ = playerZ;
 
-           final int topPozY = playerY + 6;
-
             for (int x = -5; x <= 5; x++) {
-                switch (facingPos) {
-                    case SOUTH:
-                        newX = playerX + x;
-                        break;
-                    case NORTH:
-                        newX = playerX - x;
-                        break;
-                    case EAST:
-                        newZ = playerZ + x;
-                        break;
-                    case WEST:
-                        newZ = playerZ - x;
-                        break;
-                }
                 for (int y = 0; y <= 5; y++) {
                     newY = playerY + y;
                     for (int z = 0; z <= 50; z++) {
                         switch (facingPos) {
                             case SOUTH:
-                              //  newX = playerX + x;
-                                newZ = playerZ + z;
-                                break;
+                              newX = playerX + x;
+                              newZ = playerZ + z;
+                              break;
                             case NORTH:
-                              //  newX = playerX - x;
-                                newZ = playerZ - z;
+                               newX = playerX - x;
+                               newZ = playerZ - z;
                                 break;
                             case EAST:
-                                newX = playerX + z;
-                             //   newZ = playerZ + x;
-                                break;
+                               newX = playerX + z;
+                               newZ = playerZ + x;
+                               break;
                             case WEST:
                                 newX = playerX - z;
-                              //  newZ = playerZ - x;
+                                newZ = playerZ - x;
                                 break;
                         }
 
