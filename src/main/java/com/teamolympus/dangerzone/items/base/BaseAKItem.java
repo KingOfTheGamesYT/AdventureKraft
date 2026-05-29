@@ -15,8 +15,6 @@ import java.util.List;
 
 public class BaseAKItem extends Item {
 
-    private final List<String> infoList = new ArrayList<>(8);
-
     public BaseAKItem(String name) {
         this.setUnlocalizedName(name);
         this.setCreativeTab(CreativeTabs.tabCombat);
@@ -24,6 +22,7 @@ public class BaseAKItem extends Item {
     }
 
     EnumChatFormatting formatting;
+    private final List<String> infoList = new ArrayList<>();
     public BaseAKItem addInfo(String desc, EnumChatFormatting formatting) {
         infoList.add(desc);
         this.formatting = formatting;

@@ -23,7 +23,7 @@ public class BaseAKSword extends ItemSword {
         this.setTextureName(DangerZone.TOOL_PREFIX + name);
     }
 
-    private final List<String> infoList = new ArrayList<>(8);
+    private final List<String> infoList = new ArrayList<>();
     EnumChatFormatting formatting;
     public Item addInfo(String desc, EnumChatFormatting formatting) {
         infoList.add(desc);

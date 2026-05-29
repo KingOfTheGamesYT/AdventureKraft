@@ -22,10 +22,7 @@ public class BaseItemAKSpawnEgg extends BaseAKItem {
     }
 
 
-    /**
-     * Callback for item usage. If the item does something special on right-clicking, he will have one of those. Return
-     * True if something happen and false if it don't. This is for ITEMS, not BLOCKS
-     */
+    @Override
     public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int p_77648_4_,
         int p_77648_5_, int p_77648_6_, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_) {
         if (!world.isRemote) {
@@ -60,6 +57,7 @@ public class BaseItemAKSpawnEgg extends BaseAKItem {
         return true;
     }
 
+    @Override
     public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer player) {
         if (!worldIn.isRemote) {
             MovingObjectPosition movingobjectposition = this.getMovingObjectPositionFromPlayer(worldIn, player, true);
@@ -98,32 +96,28 @@ public class BaseItemAKSpawnEgg extends BaseAKItem {
         return itemStackIn;
     }
 
-    /**
-     * Spawns the creature specified by the egg's type in the location specified by the last three parameters.
-     * Parameters: world, entityID, x, y, z.
-     */
-    public static Entity spawnCreature(World p_77840_0_, String i, double p_77840_2_, double p_77840_4_,
-        double p_77840_6_) {
-        if (!EntityList.stringToClassMapping.containsKey(DangerZone.SPAWING_PREFIX + i)) {
+    public static Entity spawnCreature(World world, String name, double x, double y,
+        double z) {
+        if (!EntityList.stringToClassMapping.containsKey(DangerZone.SPAWING_PREFIX + name)) {
             return null;
         } else {
             Entity entity = null;
 
             for (int j = 0; j < 1; ++j) {
-                entity = EntityList.createEntityByName(DangerZone.SPAWING_PREFIX + i, p_77840_0_);
+                entity = EntityList.createEntityByName(DangerZone.SPAWING_PREFIX + name, world);
 
                 if (entity instanceof EntityLivingBase) {
                     EntityLiving entityliving = (EntityLiving) entity;
                     entity.setLocationAndAngles(
-                        p_77840_2_,
-                        p_77840_4_,
-                        p_77840_6_,
-                        MathHelper.wrapAngleTo180_float(p_77840_0_.rand.nextFloat() * 360.0F),
+                        x,
+                        y,
+                        z,
+                        MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F),
                         0.0F);
                     entityliving.rotationYawHead = entityliving.rotationYaw;
                     entityliving.renderYawOffset = entityliving.rotationYaw;
                     entityliving.onSpawnWithEgg(null);
-                    p_77840_0_.spawnEntityInWorld(entity);
+                    world.spawnEntityInWorld(entity);
                     entityliving.playLivingSound();
                 }
             }

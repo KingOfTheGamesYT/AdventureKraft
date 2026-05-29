@@ -18,8 +18,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BaseAKFood extends ItemFood {
 
     private int useDuration = 32;
-    private final List<String> infoList = new ArrayList<>(8);
-    private final List<PotionEffect> potions = new ArrayList<>(8);
+    private final List<String> infoList = new ArrayList<>();
+    private final List<PotionEffect> potions = new ArrayList<>();
 
     public BaseAKFood(String name, int healAmm, float saturation, boolean wolfEat) {
         super(healAmm, saturation, wolfEat);
