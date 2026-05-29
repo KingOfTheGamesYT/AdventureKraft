@@ -20,6 +20,7 @@ public class DZConfig {
     };
 
     public static String[] finalMinerDreamList;
+    public static int minerDreamFlag;
 
     public static List<String> bannedBlockListAPI = new ArrayList<>(512);
 
@@ -41,6 +42,8 @@ public class DZConfig {
     public static void synchronizeConfiguration(File configFile) {
         Configuration configuration = new Configuration(configFile);
 
+        configuration.load();
+
         bannedBlocksStrings = configuration.getStringList("Miner Dream Category", "Miner dream breakable Block list", bannedBlocksStringsDefault, "In class or unlocalized name format.");
       //  minerX = configuration.getInt("Miner Dream Z Search", "Miner Dream Category", 50, Integer.MIN_VALUE, Integer.MAX_VALUE, "How deep on the Z axis will the miner's dream search?");
      //   minerY = configuration.getInt("Miner Dream Y Search", "Miner Dream Category", 5, Integer.MIN_VALUE, Integer.MAX_VALUE, "How deep on the Y axis will the miner's dream search?");
@@ -58,6 +61,8 @@ public class DZConfig {
 
          mantisMaxHp = configuration.getFloat(MOB_CATEGORY, "Mantis HP", 120f, 1f, 9000, "The HP of the Mantis");
          **/
+
+        minerDreamFlag = configuration.getInt("Miner dream flags", "Miner Dream Category", 2,2,3,"2 causes some minor bugs but is faster. 3 causes block updates but fixes bugs.", "en_us");
 
 
 
