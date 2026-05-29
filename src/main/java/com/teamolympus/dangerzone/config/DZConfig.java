@@ -22,7 +22,7 @@ public class DZConfig {
     public static String[] finalMinerDreamList;
     public static int minerDreamFlag;
 
-    public static List<String> bannedBlockListAPI = new ArrayList<>(512);
+    public static Set<String> bannedBlockListAPI = new HashSet<>(16);
 
     public static int krakenHurtTimer = 30;
     public static int pizzaFoodLevels = 4;
@@ -79,7 +79,7 @@ public class DZConfig {
 
         DZLogger.debug("Merged config and API list for Miner's dream.");
 
-        bannedBlockListAPI.clear();
+      //  bannedBlockListAPI.clear();
         bannedBlocksStrings = new String[0];
         bannedBlocksStringsDefault = new String[0];
     }

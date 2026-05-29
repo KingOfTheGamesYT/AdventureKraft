@@ -2,7 +2,6 @@ package com.teamolympus.dangerzone.items;
 
 import com.teamolympus.dangerzone.config.DZConfig;
 import com.teamolympus.dangerzone.items.base.BaseAKItem;
-import com.teamolympus.dangerzone.misc.DZLogger;
 import com.teamolympus.dangerzone.misc.DangerZone;
 import com.teamolympus.dangerzone.misc.TranslationHelper;
 import com.teamolympus.dangerzone.registry.RegistryHandler;
@@ -19,6 +18,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.Set;
 
 
 public class MinerDreamItem extends BaseAKItem {
@@ -56,6 +56,8 @@ public class MinerDreamItem extends BaseAKItem {
             int newY = playerY;
             int newZ = playerZ;
 
+           final int topPozY = playerY + 6;
+
             for (int x = -5; x <= 5; x++) {
                 for (int y = 0; y <= 5; y++) {
                     newY = playerY + y;
@@ -79,43 +81,28 @@ public class MinerDreamItem extends BaseAKItem {
                                 break;
                         }
 
+                        // our top block
+                        final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, newX, topPozY, newZ);
 
-                        if (!(y == 5)) {
-                            final Block blockBox = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
-                            if (newY <= 14 &&
-                                    blockBox == Blocks.air ||
-                                    blockBox == Blocks.lava
-                                    || blockBox == Blocks.flowing_lava
-                                    || blockBox == Blocks.water
-                                    || blockBox == Blocks.flowing_water
-                                    || blockBox == Blocks.gravel
-                                    || blockBox == Blocks.sand) {
-                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
-                            } else if (isValidBreakableBlock(blockBox)) {
-                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
-                                if (x == 0 && y == 0 && z % 5 == 0) {
-                                    BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, RegistryHandler.extremeTorch, 5, MINER_DREAM_FLAG);
-                                }
+                        if (isValidToReplaceWithCobble(topPozY, topBlock)) {
+                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+                        }
 
-                            }
-                        } else {
-                            int topPosY = newY + 1;
-                            final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, newX, topPosY, newZ);
+                        // everything else
+                        final Block boxBlock = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
 
-                            if (topPosY <= 14 &&
-                                    topBlock == Blocks.air ||
-                                    topBlock == Blocks.lava
-                                    || topBlock == Blocks.flowing_lava
-                                    || topBlock == Blocks.water
-                                    || topBlock == Blocks.flowing_water
-                                    || topBlock == Blocks.gravel
-                                    || topBlock == Blocks.sand) {
-                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPosY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
-                            } else {
-                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPosY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
+                        if (isValidToReplaceWithCobble(newY, boxBlock)) {
+                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+                        } else if (isValidBreakableBlock(boxBlock)) {
+                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
+                            if ( /**(z & 3) == 0 && **/x == 0 && y == 0 && z % 5 == 0) {
+                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, RegistryHandler.extremeTorch, 5, MINER_DREAM_FLAG);
                             }
 
                         }
+
+
+
 
                     }
 
@@ -127,15 +114,25 @@ public class MinerDreamItem extends BaseAKItem {
         return itemStackIn;
     }
 
+    protected boolean isValidToReplaceWithCobble(int height, Block block) {
+        return height <= 14 &&
+                block == Blocks.air ||
+                block == Blocks.lava ||
+                block == Blocks.flowing_lava ||
+                block == Blocks.water ||
+                block == Blocks.flowing_water ||
+                block == Blocks.gravel ||
+                block == Blocks.sand;
+    }
 
 
-    private boolean isValidBreakableBlock(Block block) {
+    protected boolean isValidBreakableBlock(Block block) {
 
         if (block.getMaterial() == Material.air) {
             return false;
         }
 
-        final String[] blockListArray = DZConfig.finalMinerDreamList;
+    /**    final String[] blockListArray = DZConfig.finalMinerDreamList;
         final int arrLen = blockListArray.length;
 
         final String blockName = Block.blockRegistry.getNameForObject(block);
@@ -145,7 +142,16 @@ public class MinerDreamItem extends BaseAKItem {
                 return true;
             }
         }
-        return false;
+
+     return false;
+     **/
+
+        final String blockName = Block.blockRegistry.getNameForObject(block);
+
+        final Set<String> list = DZConfig.bannedBlockListAPI;
+
+
+        return list.contains(blockName);
 
     }
 
