@@ -39,7 +39,7 @@ public class MinersDreamItem extends BaseAKItem {
             itemStackIn.stackSize--;
         }
 
-        player.worldObj.playSoundAtEntity(player, "random.explode", 1.0f, 1.5f);
+        player.worldObj.playSoundAtEntity(player, "random.explode", 4.0f, 2.5f);
 
         if (!worldIn.isRemote) {
             final int facingPos = MathHelper.floor_float((player.rotationYaw * 4.0F / 360.0F) + 0.5F) & 3;
@@ -49,9 +49,9 @@ public class MinersDreamItem extends BaseAKItem {
             final int NORTH = 2;
             final int EAST = 3;
 
-            final int playerX = (int) player.posX;
-            final int playerY = (int) player.posY;
-            final int playerZ = (int) player.posZ;
+            final int playerX = MathHelper.floor_double(player.posX);
+            final int playerY = MathHelper.floor_double(player.posY);
+            final int playerZ = MathHelper.floor_double(player.posZ);
 
             final int topPozY = playerY + 6;
 
