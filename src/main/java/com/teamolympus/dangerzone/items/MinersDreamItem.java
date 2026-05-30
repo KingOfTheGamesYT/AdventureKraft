@@ -24,13 +24,18 @@ import java.util.Set;
 
 public class MinersDreamItem extends BaseAKItem {
 
-    public static final int MINER_DREAM_FLAG = DZConfig.minerDreamFlag;
-    public static final int Y_START_SEARCH = 0;
-    public static final int Y_SEARCH = 5;
-    public static final int Z_START_SEARCH = 0;
-    public static final int Z_SEARCH = 50;
-    public static final int X_START_SEARCH = -5;
-    public static final int X_END_SEARCH = 5;
+    public static int MINER_DREAM_FLAG = DZConfig.minerDreamFlag;
+    public static int MINER_FLAG_COOBLESTONE_TOP = DZConfig.minerDreamFlag;
+    public static int MINER_FLAG_COOBLESTONE_BOTTOM = DZConfig.minerDreamFlag;
+    public static int MINER_FLAG_AIR_REPLACE = DZConfig.minerDreamFlag;
+    public static int MINER_FLAG_TORCH = DZConfig.minerDreamFlag;
+
+    public static int Y_START_SEARCH = 0;
+    public static int Y_SEARCH = 5;
+    public static int Z_START_SEARCH = 0;
+    public static int Z_SEARCH = 50;
+    public static int X_START_SEARCH = -5;
+    public static int X_END_SEARCH = 5;
 
     public MinersDreamItem(String name) {
         super(name);
@@ -193,7 +198,7 @@ public class MinersDreamItem extends BaseAKItem {
     }
 
     public void onTopReplaceWithCoobleHook(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
-        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_FLAG_COOBLESTONE_TOP);
     }
 
     public void onTopReplaceWithCoobleHookPost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
@@ -205,7 +210,7 @@ public class MinersDreamItem extends BaseAKItem {
     }
 
     public void onBottomReplaceWithCoobleHook(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
-        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_FLAG_COOBLESTONE_BOTTOM);
     }
 
     public void onBottomReplaceWithCoobleHookPost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
@@ -220,7 +225,7 @@ public class MinersDreamItem extends BaseAKItem {
     }
 
     public void onValidBreakableBlock(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
-        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
+        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.air, 0, MINER_FLAG_AIR_REPLACE);
     }
 
     public void onValidBreakableBlockPost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
@@ -233,7 +238,7 @@ public class MinersDreamItem extends BaseAKItem {
     }
 
     public void onTorchPlace(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
-        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, RegistryHandler.extremeTorch, 5, MINER_DREAM_FLAG);
+        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, RegistryHandler.extremeTorch, 5, MINER_FLAG_TORCH);
     }
 
     public void onTorchPlacePost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
