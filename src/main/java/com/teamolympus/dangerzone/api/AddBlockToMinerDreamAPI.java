@@ -23,6 +23,7 @@ public class AddBlockToMinerDreamAPI {
             Class.forName(SEARCHED_CLASS_NAME);
             com.teamolympus.dangerzone.config.DZConfig.bannedBlockListAPI.add(name);
         } catch (ClassNotFoundException e) {
+            throwErr(e);
             logErrMsg();
         }
     }
@@ -35,6 +36,7 @@ public class AddBlockToMinerDreamAPI {
             Class.forName(SEARCHED_CLASS_NAME);
             addOntoMinerdreamList(Block.blockRegistry.getNameForObject(name));
         } catch (ClassNotFoundException e) {
+            throwErr(e);
             logErrMsg();
         }
     }
@@ -47,6 +49,7 @@ public class AddBlockToMinerDreamAPI {
            Class.forName(SEARCHED_CLASS_NAME);
            com.teamolympus.dangerzone.config.DZConfig.bannedBlockListAPI.addAll(name);
        } catch (ClassNotFoundException e) {
+           throwErr(e);
            logErrMsg();
        }
     }
@@ -59,6 +62,7 @@ public class AddBlockToMinerDreamAPI {
            Class.forName(SEARCHED_CLASS_NAME);
             com.teamolympus.dangerzone.config.DZConfig.bannedBlockListAPI.addAll(Arrays.asList(name));
         } catch (ClassNotFoundException e) {
+            throwErr(e);
             logErrMsg();
         }
     }
@@ -75,6 +79,7 @@ public class AddBlockToMinerDreamAPI {
                 addOntoMinerdreamList(Block.blockRegistry.getNameForObject(name[i]));
             }
         } catch (ClassNotFoundException e) {
+            throwErr(e);
             logErrMsg();
         }
 
@@ -88,6 +93,7 @@ public class AddBlockToMinerDreamAPI {
             Class.forName(SEARCHED_CLASS_NAME);
             com.teamolympus.dangerzone.config.DZConfig.bannedBlockListAPI.addAll(name);
         } catch (ClassNotFoundException e) {
+            throwErr(e);
             logErrMsg();
         }
     }
@@ -103,12 +109,17 @@ public class AddBlockToMinerDreamAPI {
                 addOntoMinerdreamList( Block.blockRegistry.getNameForObject(name.get(i)));
             }
         } catch (ClassNotFoundException e) {
+            throwErr(e);
             logErrMsg();
+
         }
     }
 
+    private static void throwErr(Throwable throwable) {
+        com.teamolympus.dangerzone.misc.DZLogger.handleExceptionError(throwable);
+    }
 
     private static void logErrMsg() {
-        com.teamolympus.dangerzone.misc.DZLogger.fatal("AdventureKraft MinerDream API class was called when the class does not exists. This means a call was not isolated properly!!!");
+        com.teamolympus.dangerzone.misc.DZLogger.error("AdventureKraft MinerDream API class was called when the class does not exists. This means a call was not isolated properly!!!");
     }
 }
