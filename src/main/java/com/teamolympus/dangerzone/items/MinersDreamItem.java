@@ -25,7 +25,12 @@ import java.util.Set;
 public class MinersDreamItem extends BaseAKItem {
 
     public static final int MINER_DREAM_FLAG = DZConfig.minerDreamFlag;
-
+    public static final int Y_START_SEARCH = 0;
+    public static final int Y_SEARCH = 5;
+    public static final int Z_START_SEARCH = 0;
+    public static final int Z_SEARCH = 50;
+    public static final int X_START_SEARCH = -5;
+    public static final int X_END_SEARCH = 5;
 
     public MinersDreamItem(String name) {
         super(name);
@@ -59,10 +64,10 @@ public class MinersDreamItem extends BaseAKItem {
             int newY = playerY;
             int newZ = playerZ;
 
-            for (int x = -5; x <= 5; x++) {
-                for (int y = 0; y <= 5; y++) {
+            for (int x = X_START_SEARCH; x <= X_END_SEARCH; x++) {
+                for (int y = Y_START_SEARCH; y <= Y_SEARCH; y++) {
                     newY = playerY + y;
-                    for (int z = 0; z <= 50; z++) {
+                    for (int z = Z_START_SEARCH; z <= Z_SEARCH; z++) {
                         switch (facingPos) {
                             case SOUTH:
                               newX = playerX + x;
@@ -85,22 +90,53 @@ public class MinersDreamItem extends BaseAKItem {
                         // our top block
                         final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, newX, topPozY, newZ);
 
+                        onAfterGetTopBlock(itemStackIn, worldIn, player, topBlock);
+
                         if (isValidToReplaceWithCobble(topPozY, topBlock)) {
-                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+                            onTopReplaceWithCoobleHookPre(itemStackIn, worldIn,player, topBlock, newX, topPozY, newZ);
+
+                            onTopReplaceWithCoobleHook(itemStackIn, worldIn,player, topBlock, newX, topPozY, newZ);
+                          //  BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+
+                            onTopReplaceWithCoobleHookPost(itemStackIn, worldIn,player, topBlock, newX, topPozY, newZ);
                         }
 
                         // everything else
                         final Block boxBlock = BaseWorldHelper.fasterGetBlock(worldIn, newX, newY, newZ);
 
-                        if (isValidToReplaceWithCobble(newY, boxBlock)) {
-                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
-                        } else if (isValidBreakableBlock(boxBlock)) {
-                            BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
-                            if ( /**(z & 3) == 0 && **/x == 0 && y == 0 && z % 5 == 0) {
-                                BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, RegistryHandler.extremeTorch, 5, MINER_DREAM_FLAG);
-                            }
+                        onAfterGetBoxBlock(itemStackIn, worldIn, player, topBlock);
 
+                        if (isValidToReplaceWithCobble(newY, boxBlock)) {
+                            onBottomReplaceWithCoobleHookPre(itemStackIn, worldIn,player, boxBlock, newX, newY, newZ);
+
+                            onBottomReplaceWithCoobleHook(itemStackIn, worldIn, player, boxBlock, newX, newY, newZ);
+                          //  BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+
+                            onBottomReplaceWithCoobleHookPost(itemStackIn, worldIn,player, boxBlock, newX, newY, newZ);
+                        } else if (isValidBreakableBlock(boxBlock)) {
+                            onValidBreakableBlockPre(itemStackIn, worldIn, player, boxBlock);
+
+                            onValidBreakableBlock(itemStackIn, worldIn, player, boxBlock, newX, newY, newZ);
+
+                           // BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
+
+                            onValidBreakableBlockPost(itemStackIn, worldIn, player, boxBlock);
+                            if ( /**(z & 3) == 0 && **/x == 0 && y == 0 && z % 5 == 0) {
+                                onTorchPlacePre(itemStackIn, worldIn, player, boxBlock);
+
+                                onTorchPlace(itemStackIn, worldIn, player, boxBlock, newX, newY, newZ);
+
+                              //  BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, RegistryHandler.extremeTorch, 5, MINER_DREAM_FLAG);
+
+                                onTorchPlacePost(itemStackIn, worldIn, player, boxBlock);
+                            }
                         }
+
+
+                      //  if (boxBlock == RegistryHandler.extremeTorch) {
+                        //    DZLogger.info("I HAVE BEEN DETECTED!");
+                  //          BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
+                       // }
 
                     }
 
@@ -112,7 +148,7 @@ public class MinersDreamItem extends BaseAKItem {
         return itemStackIn;
     }
 
-    protected boolean isValidToReplaceWithCobble(int height, Block block) {
+    public boolean isValidToReplaceWithCobble(int height, Block block) {
         return height <= 14 &&
                 block == Blocks.air ||
                 block == Blocks.lava ||
@@ -124,7 +160,7 @@ public class MinersDreamItem extends BaseAKItem {
     }
 
 
-    protected boolean isValidBreakableBlock(Block block) {
+    public boolean isValidBreakableBlock(Block block) {
 
         if (block.getMaterial() == Material.air) {
             return false;
@@ -149,6 +185,66 @@ public class MinersDreamItem extends BaseAKItem {
         final Set<String> list = DZConfig.bannedBlockListAPI;
 
         return list.contains(blockName);
+
+    }
+
+    // top cobblestone hooks start
+    public void onTopReplaceWithCoobleHookPre(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
+    }
+
+    public void onTopReplaceWithCoobleHook(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
+        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+    }
+
+    public void onTopReplaceWithCoobleHookPost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
+    }
+    // top cobblestone hooks END
+
+    // BOX cobblestone hooks START
+    public void onBottomReplaceWithCoobleHookPre(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
+    }
+
+    public void onBottomReplaceWithCoobleHook(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
+        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+    }
+
+    public void onBottomReplaceWithCoobleHookPost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
+
+    }
+    // BOX cobblestone hooks END
+
+    // BREAKALE BLOCKS hooks START
+
+    public void onValidBreakableBlockPre(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
+
+    }
+
+    public void onValidBreakableBlock(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
+        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
+    }
+
+    public void onValidBreakableBlockPost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
+
+    }
+    // BREAKALE BLOCKS hooks END
+
+    public void onTorchPlacePre(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
+
+    }
+
+    public void onTorchPlace(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
+        BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, RegistryHandler.extremeTorch, 5, MINER_DREAM_FLAG);
+    }
+
+    public void onTorchPlacePost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
+
+    }
+
+    public void onAfterGetTopBlock(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
+
+    }
+
+    public void onAfterGetBoxBlock(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
 
     }
 
