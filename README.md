@@ -10,7 +10,7 @@ DangerZone is a game made by Richard Clark, which can be [downloaded here](https
 ___
 [Download link to the CurseForge page](https://www.curseforge.com/minecraft/mc-mods/adventurekraft)
 
-It is currently only available for 1.16.5, but other versions are being worked on. The main version that is currently being developed in 1.16.5.
+It is currently only available for 1.16.1,2,4,5, but other versions are being worked on. The main version that is currently being developed in 1.16.5.
 
 ## Building
 ___
