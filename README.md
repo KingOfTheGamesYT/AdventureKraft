@@ -18,7 +18,7 @@ To build the mod, you must `git checkout` the branch of the version you would li
 
 ## License
 our License is All Rights Reserved, so the following terms apply:
-- You may use this mod in modpacks that follow the [Mojang End-User License Agreement(EULA)](https://www.minecraft.net/en-us/eula).
+- You may use this mod in CurseForge modpacks that follow the [Mojang End-User License Agreement(EULA)](https://www.minecraft.net/en-us/eula).
 - You may use this mod in videos or showcases, provided there is a link back to the original download page so people may easily download the mod.
 - You may not copy/steal/redistribute any assets from our mod for use in another mod/add-on.
 - You may not claim authorship or ownership of this mod.
