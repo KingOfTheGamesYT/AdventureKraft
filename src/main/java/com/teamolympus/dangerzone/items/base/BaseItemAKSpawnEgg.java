@@ -3,12 +3,15 @@ package com.teamolympus.dangerzone.items.base;
 import com.teamolympus.dangerzone.misc.DangerZone;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.*;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Facing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 public class BaseItemAKSpawnEgg extends BaseAKItem {
@@ -16,10 +19,26 @@ public class BaseItemAKSpawnEgg extends BaseAKItem {
    String entName;
 
     public BaseItemAKSpawnEgg(String name) {
-        super(name + "_spawn_egg");
+        super(name);
+        this.setUnlocalizedName("monsterPlacer");
+        this.setCreativeTab(CreativeTabs.tabCombat);
         this.entName = name;
         this.setTextureName(DangerZone.SPAWN_EGG_PREFIX + name + "_spawn_egg");
     }
+
+    public String getItemStackDisplayName(ItemStack p_77653_1_)
+    {
+        String s = ("" + StatCollector.translateToLocal(this.getUnlocalizedName() + ".name")).trim();
+       // String s1 = EntityList.getStringFromID(p_77653_1_.getItemDamage());
+
+     //   if (s1 != null)
+    //    {
+            s = s + " " + StatCollector.translateToLocal("entity." + DangerZone.SPAWING_PREFIX + entName + ".name");
+     //   }
+
+        return s;
+    }
+
 
 
     @Override

@@ -58,16 +58,6 @@ itemGroup.dangerzoneTools=§fdangerzone Tools
 itemGroup.dangerzoneBlocks=§fdangerzone Blocks
 itemGroup.petrifiedOres=§fPetrified Ores Blocks
 
-#Spawn Eggs
-item.bodyguard_spawn_egg.name=BodyGuard Spawn Egg
-item.vortex_eye.name=Vortex Eye
-item.crystal_stick.name=Crystal Stick
-item.mantis_spawn_egg.name=Mantis Spawn Egg
-item.allosaurus_spawn_egg.name=Allosaurus Spawn Egg
-item.robot_ant_kit_spawn_egg.name=Robot Ant Kit
-item.kraken_spawn_egg.name=kraken Spawn Egg
-item.scorpion_spawn_egg.name=Scorpion Spawn Egg
-
 # Mobs
 entity.dangerzone.mantis.name=Mantis
 entity.dangerzone.allosaurus.name=Allosaurus
