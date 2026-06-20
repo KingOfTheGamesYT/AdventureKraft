@@ -10,6 +10,8 @@ import com.teamolympus.dangerzone.world.BaseWorldHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockTorch;
+import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -63,13 +65,16 @@ public class MinersDreamItem extends BaseAKItem {
             final int playerY = MathHelper.floor_double(player.posY);
             final int playerZ = MathHelper.floor_double(player.posZ);
 
-            final int topPozY = playerY + 6;
+            final int topPozY = playerY + Y_SEARCH + 1;
+            final int leftPosX = playerX - X_START_SEARCH - 1;
+            final int rightPosX = playerX + X_END_SEARCH + 1;
 
             int newX = playerX;
             int newY = playerY;
             int newZ = playerZ;
 
-            for (int x = X_START_SEARCH; x <= X_END_SEARCH; x++) {
+
+        /**    for (int x = X_START_SEARCH; x <= X_END_SEARCH; x++) {
                 for (int y = Y_START_SEARCH; y <= Y_SEARCH; y++) {
                     newY = playerY + y;
                     for (int z = Z_START_SEARCH; z <= Z_SEARCH; z++) {
@@ -94,16 +99,22 @@ public class MinersDreamItem extends BaseAKItem {
 
                         // our top block
                         final Block topBlock = BaseWorldHelper.fasterGetBlock(worldIn, newX, topPozY, newZ);
-
                         onAfterGetTopBlock(itemStackIn, worldIn, player, topBlock);
+                        final Block leftBlock = BaseWorldHelper.fasterGetBlock(worldIn, leftPosX, newY, newZ);
+                        onAfterGetLeftBlock(itemStackIn, worldIn, player, leftBlock);
+                        final Block rightBlock = BaseWorldHelper.fasterGetBlock(worldIn, rightPosX, newY, newZ);
+                        onAfterGetRightBlock(itemStackIn, worldIn, player, rightBlock);
 
                         if (isValidToReplaceWithCobble(topPozY, topBlock)) {
-                            onTopReplaceWithCoobleHookPre(itemStackIn, worldIn,player, topBlock, newX, topPozY, newZ);
-
                             onTopReplaceWithCoobleHook(itemStackIn, worldIn,player, topBlock, newX, topPozY, newZ);
-                          //  BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
+                        }
 
-                            onTopReplaceWithCoobleHookPost(itemStackIn, worldIn,player, topBlock, newX, topPozY, newZ);
+                        if (isValidToReplaceWithCobble(newY, leftBlock)) {
+                            onTopReplaceWithCoobleHook(itemStackIn, worldIn,player, leftBlock, leftPosX, newY, newZ);
+                        }
+
+                        if (isValidToReplaceWithCobble(newY, rightBlock)) {
+                            onTopReplaceWithCoobleHook(itemStackIn, worldIn,player, rightBlock, rightPosX, newY, newZ);
                         }
 
                         // everything else
@@ -112,42 +123,24 @@ public class MinersDreamItem extends BaseAKItem {
                         onAfterGetBoxBlock(itemStackIn, worldIn, player, topBlock);
 
                         if (isValidToReplaceWithCobble(newY, boxBlock)) {
-                            onBottomReplaceWithCoobleHookPre(itemStackIn, worldIn,player, boxBlock, newX, newY, newZ);
-
                             onBottomReplaceWithCoobleHook(itemStackIn, worldIn, player, boxBlock, newX, newY, newZ);
-                          //  BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.cobblestone, 0, MINER_DREAM_FLAG);
-
-                            onBottomReplaceWithCoobleHookPost(itemStackIn, worldIn,player, boxBlock, newX, newY, newZ);
                         } else if (isValidBreakableBlock(boxBlock)) {
-                            onValidBreakableBlockPre(itemStackIn, worldIn, player, boxBlock);
-
                             onValidBreakableBlock(itemStackIn, worldIn, player, boxBlock, newX, newY, newZ);
-
-                           // BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
-
-                            onValidBreakableBlockPost(itemStackIn, worldIn, player, boxBlock);
-                            if ( /**(z & 3) == 0 && **/x == 0 && y == 0 && z % 5 == 0) {
-                                onTorchPlacePre(itemStackIn, worldIn, player, boxBlock);
-
+                            if (x == 0 && y == 0 && z % 5 == 0) {
                                 onTorchPlace(itemStackIn, worldIn, player, boxBlock, newX, newY, newZ);
-
-                              //  BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, RegistryHandler.extremeTorch, 5, MINER_DREAM_FLAG);
-
-                                onTorchPlacePost(itemStackIn, worldIn, player, boxBlock);
                             }
                         }
 
-
-                      //  if (boxBlock == RegistryHandler.extremeTorch) {
-                        //    DZLogger.info("I HAVE BEEN DETECTED!");
-                  //          BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, newY, newZ, Blocks.air, 0, MINER_DREAM_FLAG);
-                       // }
+                        if (boxBlock instanceof BlockTorch || boxBlock instanceof IGrowable) {
+                        boxBlock.onNeighborBlockChange(worldIn, newX, newY, newZ, boxBlock);
+                        }
 
                     }
 
                 }
 
             }
+            **/
 
         }
         return itemStackIn;
@@ -171,20 +164,6 @@ public class MinersDreamItem extends BaseAKItem {
             return false;
         }
 
-    /**    final String[] blockListArray = DZConfig.finalMinerDreamList;
-        final int arrLen = blockListArray.length;
-
-        final String blockName = Block.blockRegistry.getNameForObject(block);
-
-        for (int i = 0; i < arrLen; ++i) {
-            if (blockName.equals(blockListArray[i])) {
-                return true;
-            }
-        }
-
-     return false;
-     **/
-
         final String blockName = Block.blockRegistry.getNameForObject(block);
 
         final Set<String> list = DZConfig.bannedBlockListAPI;
@@ -193,59 +172,34 @@ public class MinersDreamItem extends BaseAKItem {
 
     }
 
-    // top cobblestone hooks start
-    public void onTopReplaceWithCoobleHookPre(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
-    }
-
     public void onTopReplaceWithCoobleHook(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
         BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_FLAG_COOBLESTONE_TOP);
     }
 
-    public void onTopReplaceWithCoobleHookPost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
-    }
-    // top cobblestone hooks END
-
-    // BOX cobblestone hooks START
-    public void onBottomReplaceWithCoobleHookPre(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
-    }
 
     public void onBottomReplaceWithCoobleHook(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
         BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.cobblestone, 0, MINER_FLAG_COOBLESTONE_BOTTOM);
-    }
-
-    public void onBottomReplaceWithCoobleHookPost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
-
-    }
-    // BOX cobblestone hooks END
-
-    // BREAKALE BLOCKS hooks START
-
-    public void onValidBreakableBlockPre(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
-
     }
 
     public void onValidBreakableBlock(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
         BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, Blocks.air, 0, MINER_FLAG_AIR_REPLACE);
     }
 
-    public void onValidBreakableBlockPost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
-
-    }
-    // BREAKALE BLOCKS hooks END
-
-    public void onTorchPlacePre(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
-
-    }
 
     public void onTorchPlace(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block, int newX, int topPozY, int newZ) {
         BaseWorldHelper.setBlockFastNormalPars(worldIn, newX, topPozY, newZ, RegistryHandler.extremeTorch, 5, MINER_FLAG_TORCH);
     }
 
-    public void onTorchPlacePost(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
+
+    public void onAfterGetTopBlock(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
 
     }
 
-    public void onAfterGetTopBlock(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
+    public void onAfterGetLeftBlock(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
+
+    }
+
+    public void onAfterGetRightBlock(ItemStack itemStackIn, World worldIn, EntityPlayer player, Block block) {
 
     }
 
