@@ -28,7 +28,7 @@ public class BaseItemAKSpawnEgg extends BaseAKItem {
 
     public String getItemStackDisplayName(ItemStack p_77653_1_)
     {
-        String s = ("" + StatCollector.translateToLocal(this.getUnlocalizedName() + ".name")).trim();
+        String s = (StatCollector.translateToLocal(this.getUnlocalizedName() + ".name")).trim();
        // String s1 = EntityList.getStringFromID(p_77653_1_.getItemDamage());
 
      //   if (s1 != null)
