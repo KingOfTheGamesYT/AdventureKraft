@@ -19,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import net.minecraftforge.common.IPlantable;
 
 import java.util.List;
 import java.util.Set;
@@ -33,9 +34,9 @@ public class MinersDreamItem extends BaseAKItem {
     public static int MINER_FLAG_TORCH = DZConfig.minerDreamFlag;
 
     public static int Y_START_SEARCH = 0;
-    public static int Y_SEARCH = 5;
+    public static int Y_END_SEARCH = 5;
     public static int Z_START_SEARCH = 0;
-    public static int Z_SEARCH = 50;
+    public static int Z_END_SEARCH = 50;
     public static int X_START_SEARCH = -5;
     public static int X_END_SEARCH = 5;
 
@@ -65,19 +66,18 @@ public class MinersDreamItem extends BaseAKItem {
             final int playerY = MathHelper.floor_double(player.posY);
             final int playerZ = MathHelper.floor_double(player.posZ);
 
-            final int topPozY = playerY + Y_SEARCH + 1;
+            final int topPozY = playerY + Y_END_SEARCH + 1;
             final int leftPosX = playerX - X_START_SEARCH - 1;
             final int rightPosX = playerX + X_END_SEARCH + 1;
 
             int newX = playerX;
             int newY = playerY;
             int newZ = playerZ;
-
-
-        /**    for (int x = X_START_SEARCH; x <= X_END_SEARCH; x++) {
-                for (int y = Y_START_SEARCH; y <= Y_SEARCH; y++) {
+            
+            for (int x = X_START_SEARCH; x <= X_END_SEARCH; x++) {
+                for (int y = Y_START_SEARCH; y <= Y_END_SEARCH; y++) {
                     newY = playerY + y;
-                    for (int z = Z_START_SEARCH; z <= Z_SEARCH; z++) {
+                    for (int z = Z_START_SEARCH; z <= Z_END_SEARCH; z++) {
                         switch (facingPos) {
                             case SOUTH:
                               newX = playerX + x;
@@ -131,7 +131,7 @@ public class MinersDreamItem extends BaseAKItem {
                             }
                         }
 
-                        if (boxBlock instanceof BlockTorch || boxBlock instanceof IGrowable) {
+                        if (boxBlock instanceof BlockTorch || boxBlock instanceof IGrowable || boxBlock instanceof IPlantable) {
                         boxBlock.onNeighborBlockChange(worldIn, newX, newY, newZ, boxBlock);
                         }
 
@@ -140,7 +140,7 @@ public class MinersDreamItem extends BaseAKItem {
                 }
 
             }
-            **/
+
 
         }
         return itemStackIn;
