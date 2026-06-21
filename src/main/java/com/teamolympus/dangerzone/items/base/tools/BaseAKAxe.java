@@ -1,0 +1,47 @@
+package com.teamolympus.dangerzone.items.base.tools;
+
+import com.teamolympus.dangerzone.misc.TranslationHelper;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
+
+import com.teamolympus.dangerzone.misc.DangerZone;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BaseAKAxe extends ItemAxe {
+
+
+    public BaseAKAxe(String name, ToolMaterial material) {
+        super(material);
+        this.setUnlocalizedName(name);
+        this.setCreativeTab(DangerZone.TOOLS);
+        this.setTextureName(DangerZone.TOOL_PREFIX + name);
+    }
+
+    private final List<String> infoList = new ArrayList<>();
+    EnumChatFormatting formatting;
+    public Item addInfo(String desc, EnumChatFormatting formatting) {
+        infoList.add(desc);
+        this.formatting = formatting;
+        return this;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    @SuppressWarnings("unchecked")
+    public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean b)
+    {
+        super.addInformation(stack, player, info,b);
+        for (String string : infoList) {
+            info.add(formatting + TranslationHelper.translate(string));
+        }
+    }
+
+
+}

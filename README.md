@@ -1,15 +1,18 @@
-# CraftZone
+# AdventureKraft
 
- Adds Danger Zone to minecraft
+Adds TheyCallMeDanger's game, DangerZone, and its mods into Minecraft.
 
-Dangerzone is a game made by Richard Clark
+Original Game made by TheyCallMeDanger("Richard Clark"). You can find a download [here](https://www.orespawn.com/download/)
 
 ## Download
-___
-[Download link to the latest build (CurseForge)](https://www.curseforge.com/minecraft/mc-mods/dangerzone)
+[Download link to the CurseForge page](https://www.curseforge.com/minecraft/mc-mods/adventurekraft). This is the soon-to-be 1.7.10 port of AdventureKraft.
+## Authors
+Made by RedRoseWarrior1("DevMaster1015") and Jerios("VortexBlender", "RustyVortex").
+### LICENSE
+For information on the License, see: [The License Here](LICENSE)
 
-It is currently only available for 1.16, but other versions are being worked on
+## Code of Conduct
+For guidelines on behavior, see the [CODE OF CONDUCT](CODE_OF_CONDUCT.md)
 
-## Building
-___
-To build the mod, you must `git checkout` the branch of the version you would like to build.
+## AI Policy
+[Any obvious use of A.I. or LLMS is prohibited](CONTRIBUTING.md)
