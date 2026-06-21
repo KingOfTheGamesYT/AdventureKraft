@@ -73,7 +73,7 @@ public class MinersDreamItem extends BaseAKItem {
             int newX = playerX;
             int newY = playerY;
             int newZ = playerZ;
-            
+
             for (int x = X_START_SEARCH; x <= X_END_SEARCH; x++) {
                 for (int y = Y_START_SEARCH; y <= Y_END_SEARCH; y++) {
                     newY = playerY + y;
