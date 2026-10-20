@@ -165,19 +165,19 @@ public class RegistryHandler {
     public static final RegistryObject<EntityType<BaseAnt>> RAINBOWANT = ENTITIES
             .register("rainbow_ant",
                     () -> EntityType.Builder.<BaseAnt>create(BaseAnt::new, EntityClassification.CREATURE)
-                            .size(0.8f, 0.6f)
+                            .size(0.6f, 0.6f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "rainbow_ant").toString()));
 
     public static final RegistryObject<EntityType<BaseAnt>> RED_ANT = ENTITIES
             .register("red_ant",
                     () -> EntityType.Builder.<BaseAnt>create(BaseAnt::new, EntityClassification.CREATURE)
-                            .size(0.8f, 0.6f)
+                            .size(0.6f, 0.6f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "red_ant").toString()));
 
     public static final RegistryObject<EntityType<BaseAnt>> TERMITE = ENTITIES
             .register("termite",
                     () -> EntityType.Builder.<BaseAnt>create(BaseAnt::new, EntityClassification.CREATURE)
-                            .size(0.8f, 0.6f)
+                            .size(0.6f, 0.6f)
                             .build(new ResourceLocation(DangerZone.MOD_ID, "termite").toString()));
 
     //Bosses
@@ -401,7 +401,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> RAINBOW_ANT_EYE = ITEMS.register("rainbow_ant_eye", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A7C" + "oh gross" + "\u00A7C"));
     public static final RegistryObject<Item> RAINBOW_ANT_LEG = ITEMS.register("rainbow_ant_leg", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A72" + "It's still moving!!!!" + "\u00A72"));
     public static final RegistryObject<Item> RAINBOW_ANT_TOKEN = ITEMS.register("rainbow_ant_token", () -> new BaseToken(new Item.Properties().group(DangerZone.TAB), new BaseToken.TokenConfig(RegistryHandler.VILLAGES, () -> new BaseTeleporter(RegistryHandler.VILLAGES, 0), true, false, "\u00A7c" + "This is needed to get to the Villages Dimension" + "\u00A7c")));
-    //public static final RegistryObject<Item> RED_ANT_EYE = ITEMS.register("red_ant_eye", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A7c" + "Not Ice Cream" + "\u00A7c"));
+   // public static final RegistryObject<Item> RED_ANT_EYE = ITEMS.register("red_ant_eye", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A7c" + "Not Ice Cream" + "\u00A7c"));
     public static final RegistryObject<Item> RED_ANT_TOKEN = ITEMS.register("red_ant_token", () -> new BaseToken(new Item.Properties().group(DangerZone.TAB), new BaseToken.TokenConfig(RegistryHandler.DANGER, () -> new BaseTeleporter(RegistryHandler.DANGER, 70), true, false, "\u00A7c" + "This is needed to get to the Danger Dimension" + "\u00A7c")));
     public static final RegistryObject<Item> TERMITE_ABDOMEN = ITEMS.register("termite_abdomen", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A77" + "It's gross" + "\u00A77"));
     public static final RegistryObject<Item> TERMITE_EYE = ITEMS.register("termite_eye", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A77" + "It's a demon eye" + "\u00A77"));

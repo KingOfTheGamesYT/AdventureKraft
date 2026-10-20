@@ -12,8 +12,6 @@ import net.minecraft.util.ResourceLocation;
 public class BaseAntRender extends MobRenderer<BaseAnt, BaseAntModel<BaseAnt>> {
 
     private static final ResourceLocation RED_ANT_TEXTURE = new ResourceLocation(DangerZone.MOD_ID, "textures/entity/ants/red_ant.png");
-    private static final ResourceLocation RAINBOW_ANT_TEXTURE = new ResourceLocation(DangerZone.MOD_ID, "textures/entity/ants/rainbow_ant.png");
-    private static final ResourceLocation TERMITE_TEXTURE = new ResourceLocation(DangerZone.MOD_ID, "textures/entity/ants/termite.png");
 
     public BaseAntRender(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new BaseAntModel<>(), 0.3F);
@@ -23,14 +21,14 @@ public class BaseAntRender extends MobRenderer<BaseAnt, BaseAntModel<BaseAnt>> {
     public ResourceLocation getEntityTexture(BaseAnt entity) {
 
         if (entity.getType() == RegistryHandler.RED_ANT.get()) {
-            return RED_ANT_TEXTURE;
+            return new ResourceLocation(DangerZone.MOD_ID, "textures/entity/ants/red_ant/red_ant_" + entity.getRedAntVariant() + ".png");
         }
         if (entity.getType() == RegistryHandler.RAINBOWANT.get()) {
-            return RAINBOW_ANT_TEXTURE;
+            return new ResourceLocation(DangerZone.MOD_ID, "textures/entity/ants/rainbow_ant/rainbow_ant_" + entity.getRainbowAntVariant() + ".png");
         }
         if (entity.getType() == RegistryHandler.TERMITE.get()) {
-            return TERMITE_TEXTURE;
+            return new ResourceLocation(DangerZone.MOD_ID, "textures/entity/ants/termite/termite_1.png");
         }
-        return RED_ANT_TEXTURE; //fallback
+        return RED_ANT_TEXTURE;
     }
 }
