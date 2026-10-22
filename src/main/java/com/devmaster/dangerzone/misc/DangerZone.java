@@ -73,6 +73,10 @@ public class DangerZone {
         EntitySpawnPlacementRegistry.register(RegistryHandler.ATTACK_SQUID.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
         EntitySpawnPlacementRegistry.register(RegistryHandler.BIRD.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
         EntitySpawnPlacementRegistry.register(RegistryHandler.CAVE_FISHER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CaveFisher::canSpawn);
+        EntitySpawnPlacementRegistry.register(RegistryHandler.BUTTERFLY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> Butterfly.canSpawnOn(entityType, world, reason, pos, random) && world.canSeeSky(pos));
+        EntitySpawnPlacementRegistry.register(RegistryHandler.RED_ANT.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> BaseAnt.canSpawnOn(entityType, world, reason, pos, random) && world.canSeeSky(pos));
+        EntitySpawnPlacementRegistry.register(RegistryHandler.RAINBOWANT.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> BaseAnt.canSpawnOn(entityType, world, reason, pos, random) && world.canSeeSky(pos));
+        EntitySpawnPlacementRegistry.register(RegistryHandler.TERMITE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> BaseAnt.canSpawnOn(entityType, world, reason, pos, random) && world.canSeeSky(pos));
 
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), BaseYoutuber.getAttributes().create());
@@ -105,6 +109,7 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.TERMITE.get(), BaseAnt.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.EASTER_BUNNY.get(), EasterBunny.getAttributes().create());
         });
+
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

@@ -24,10 +24,13 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
+import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.util.ForgeSoundType;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -402,11 +405,12 @@ public class RegistryHandler {
     public static final RegistryObject<Item> RAINBOW_ANT_LEG = ITEMS.register("rainbow_ant_leg", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A72" + "It's still moving!!!!" + "\u00A72"));
     public static final RegistryObject<Item> RAINBOW_ANT_TOKEN = ITEMS.register("rainbow_ant_token", () -> new BaseToken(new Item.Properties().group(DangerZone.TAB), new BaseToken.TokenConfig(RegistryHandler.VILLAGES, () -> new BaseTeleporter(RegistryHandler.VILLAGES, 0), true, false, "\u00A7c" + "This is needed to get to the Villages Dimension" + "\u00A7c")));
    // public static final RegistryObject<Item> RED_ANT_EYE = ITEMS.register("red_ant_eye", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A7c" + "Not Ice Cream" + "\u00A7c"));
-    public static final RegistryObject<Item> RED_ANT_TOKEN = ITEMS.register("red_ant_token", () -> new BaseToken(new Item.Properties().group(DangerZone.TAB), new BaseToken.TokenConfig(RegistryHandler.DANGER, () -> new BaseTeleporter(RegistryHandler.DANGER, 70), true, false, "\u00A7c" + "This is needed to get to the Danger Dimension" + "\u00A7c")));
+    public static final RegistryObject<Item> RED_ANT_TOKEN = ITEMS.register("red_ant_token", () -> new BaseToken(new Item.Properties().group(DangerZone.TAB), new BaseToken.TokenConfig(RegistryHandler.PAST, () -> new BaseTeleporter(RegistryHandler.PAST, 0), true, false, "\u00A7c" + "This is needed to get to the Past Dimension" + "\u00A7c")));
     public static final RegistryObject<Item> TERMITE_ABDOMEN = ITEMS.register("termite_abdomen", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A77" + "It's gross" + "\u00A77"));
     public static final RegistryObject<Item> TERMITE_EYE = ITEMS.register("termite_eye", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A77" + "It's a demon eye" + "\u00A77"));
     public static final RegistryObject<Item> TERMITE_LEG = ITEMS.register("termite_leg", () -> new BaseItem(DangerZone.TAB).addInfo("\u00A70" + "It's dirty!" + "\u00A70"));
     public static final RegistryObject<Item> TERMITE_TOKEN = ITEMS.register("termite_token", () -> new BaseToken(new Item.Properties().group(DangerZone.TAB), new BaseToken.TokenConfig(RegistryHandler.CRYSTAL, () -> new BaseTeleporter(RegistryHandler.CRYSTAL, 0), true, true, "\u00A77" + "This is needed to get to the Crystal Dimension" + "\u00A77")));
+    public static final RegistryObject<Item> Unstable_ANT_TOKEN = ITEMS.register("unstable_ant_token", () -> new BaseToken(new Item.Properties().group(DangerZone.TAB), new BaseToken.TokenConfig(RegistryHandler.DANGER, () -> new BaseTeleporter(RegistryHandler.DANGER, 70), true, false, "\u00A7c" + "This is needed to get to the Danger Dimension" + "\u00A7c")));
 
     //Tools
     public static final RegistryObject<BaseTool> ALUMINIUM_AXE = ITEMS.register("aluminium_axe", () -> new BaseTool(new ToolTier(DZConfig.ALUMINIUM_AXE_DURABILITY.get(), DZConfig.ALUMINIUM_AXE_DAMAGE.get(), DZConfig.ALUMINIUM_AXE_EFFICIENCY.get(), DZConfig.ALUMINIUM_AXE_ATTACK_SPEED.get()).level(DZConfig.ALUMINIUM_AXE_HARVEST_LEVEL.get()).enchanting(DZConfig.ALUMINIUM_AXE_ENCHANTABILITY.get()).material(RegistryHandler.ALUMINIUM.get()), ImmutableSet.of(ToolType.AXE), DZConfig.ALUMINIUM_AXE_HIT_COST.get()).addInfo("§fIt's Bri'ish"));
@@ -569,4 +573,16 @@ public class RegistryHandler {
     public static boolean isLoaded(String modid) {
         return ModList.get().isLoaded(modid);
     }
+
+
+ @SubscribeEvent
+ public static void onCommonSetup(FMLCommonSetupEvent event) {
+  event.enqueueWork(() -> {
+   EntitySpawnPlacementRegistry.register(
+           RegistryHandler.BUTTERFLY.get(),
+           EntitySpawnPlacementRegistry.PlacementType.ON_GROUND,
+           Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+           (entityType, world, reason, pos, random) -> world.canSeeSky(pos));});
+ }
+
 }
