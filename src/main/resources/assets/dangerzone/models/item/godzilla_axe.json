@@ -1,4 +1,5 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "dangerzone:items/tool/godzilla_axe",
@@ -25,6 +26,15 @@
 		},
 		"thirdperson_lefthand": {
 			"rotation": [-27, 0, 0]
+		},
+		"firstperson_righthand": {
+			"rotation": [-58, 0, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-58, 0, 0]
+		},
+		"ground": {
+			"rotation": [0, 0, -90]
 		},
 		"gui": {
 			"rotation": [0, 39, 0],
