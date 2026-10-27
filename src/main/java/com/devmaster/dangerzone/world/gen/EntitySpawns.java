@@ -28,8 +28,12 @@ public class EntitySpawns {
             Biome biome = ForgeRegistries.BIOMES.getValue(event.getName());
             if (biome != null) {
                 RegistryKey<Biome> biomeKey = RegistryKey.getOrCreateKey(ForgeRegistries.Keys.BIOMES, event.getName());
+                List<BiomeDictionary.Type> DonutincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Donutinclude.get()));
+                List<BiomeDictionary.Type> DonutexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Donutexclude.get()));
                 List<BiomeDictionary.Type> CaveFisherincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherinclude.get()));
                 List<BiomeDictionary.Type> CaveFisherexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.CaveFisherexclude.get()));
+                List<BiomeDictionary.Type> GingerbreadincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Gingerbreadinclude.get()));
+                List<BiomeDictionary.Type> GingerbreadexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.Gingerbreadexclude.get()));
                 List<BiomeDictionary.Type> NotBreeBreeincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.NotBreeBreeinclude.get()));
                 List<BiomeDictionary.Type> NotBreeBreeexcludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.NotBreeBreeexclude.get()));
                 List<BiomeDictionary.Type> StampyLongNoseincludeList = Arrays.asList(BiomeDictionaryHelper.toBiomeTypeArray(DZConfig.StampyLongNoseinclude.get()));
@@ -78,6 +82,12 @@ public class EntitySpawns {
                     }
                     if (biomeTypes.stream().noneMatch(CaveFisherexcludeList::contains) && biomeTypes.stream().anyMatch(CaveFisherincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(RegistryHandler.CAVE_FISHER.get(), DZConfig.CaveFisherweight.get(), DZConfig.CaveFishermin.get(), DZConfig.CaveFishermax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(DonutexcludeList::contains) && biomeTypes.stream().anyMatch(DonutincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(RegistryHandler.DONUT.get(), DZConfig.Donutweight.get(), DZConfig.Donutmin.get(), DZConfig.Donutmax.get()));
+                    }
+                    if (biomeTypes.stream().noneMatch(GingerbreadexcludeList::contains) && biomeTypes.stream().anyMatch(GingerbreadincludeList::contains)) {
+                        event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(RegistryHandler.GINGERBREAD.get(), DZConfig.Gingerbreadweight.get(), DZConfig.Gingerbreadmin.get(), DZConfig.Gingerbreadmax.get()));
                     }
                     if (biomeTypes.stream().noneMatch(StampyLongNoseexcludeList::contains) && biomeTypes.stream().anyMatch(StampyLongNoseincludeList::contains)) {
                         event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(RegistryHandler.STAMPYLONGNOSE.get(), DZConfig.StampyLongNoseweight.get(), DZConfig.StampyLongNosemin.get(), DZConfig.StampyLongNosemax.get()));

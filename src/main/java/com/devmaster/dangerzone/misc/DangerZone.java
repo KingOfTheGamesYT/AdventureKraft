@@ -2,6 +2,7 @@ package com.devmaster.dangerzone.misc;
 
 import com.devmaster.dangerzone.client.render.*;
 import com.devmaster.dangerzone.CreativeTabs.*;
+import com.devmaster.dangerzone.client.render.model.GingerbreadRender;
 import com.devmaster.dangerzone.configs.BaseConfig;
 import com.devmaster.dangerzone.entity.*;
 import com.devmaster.dangerzone.items.SpawnEgg;
@@ -55,6 +56,7 @@ public class DangerZone {
     public static final ITag.INamedTag<Block> GODZILLA_DESTROYABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":godzilla_breakable");
     public static final ITag.INamedTag<Block> TERMITE_FOOD = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":termite_food");
     public static final ITag.INamedTag<Item> CRYSTAL_DIMENSION_ALLOWED_ITEMS = ItemTags.makeWrapperTag(DangerZone.MOD_ID+":crystal_dimension_allowed");
+    public static final ITag.INamedTag<Item> SWEETS = ItemTags.makeWrapperTag(DangerZone.MOD_ID+":sweets");
 
     public DangerZone() {
         ModLoadingContext.get().registerConfig(Type.COMMON, BaseConfig.COMMON, "dangerzone-common.toml");
@@ -79,6 +81,8 @@ public class DangerZone {
         EntitySpawnPlacementRegistry.register(RegistryHandler.TERMITE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> BaseAnt.canSpawnOn(entityType, world, reason, pos, random) && world.canSeeSky(pos));
 
         DeferredWorkQueue.runLater(() -> {
+            GlobalEntityTypeAttributes.put(RegistryHandler.DONUT.get(), Donut.getAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.GINGERBREAD.get(), Gingerbread.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.TEWTIY.get(), BaseYoutuber.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.STAMPYLONGNOSE.get(), BaseYoutuber.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.NOTBREEBREE.get(), BaseYoutuber.getAttributes().create());
@@ -109,12 +113,14 @@ public class DangerZone {
             GlobalEntityTypeAttributes.put(RegistryHandler.TERMITE.get(), BaseAnt.getAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.EASTER_BUNNY.get(), EasterBunny.getAttributes().create());
         });
-
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(RegistryHandler.STICKY_BLOCK.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.APPLE_LEAVES.get(), RenderType.getCutout());
+
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.DONUT.get(), DonutRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.GINGERBREAD.get(), GingerbreadRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TEWTIY.get(), BaseYoutuberRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ATTACK_SQUID.get(), AttackSquidRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.STAMPYLONGNOSE.get(), BaseYoutuberRender::new);

@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "dangerzone:boston_cream_donut",
+    "dangerzone:butter_candy",
+    "dangerzone:cake_sword",
+    "dangerzone:candy_cane",
+    "dangerzone:caramel_apple",
+    "dangerzone:chocolate_bar",
+    "dangerzone:chocolate_dipped_cherry",
+    "dangerzone:chocolate_donut",
+    "dangerzone:chocolate_milkshake",
+    "dangerzone:cotton_candy",
+    "dangerzone:cotton_candy_helmet",
+    "dangerzone:cotton_candy_chestplate",
+    "dangerzone:cotton_candy_leggings",
+    "dangerzone:cotton_candy_boots",
+    "dangerzone:donut_spawn_egg",
+    "dangerzone:fire_cake_sword",
+    "dangerzone:glazed_donut",
+    "dangerzone:gingerbread_spawn_egg",
+    "dangerzone:strawberry_milkshake",
+    "dangerzone:oreo",
+    "dangerzone:red_lollipop",
+    "dangerzone:titanium_cake",
+    "dangerzone:titanium_cake_sword",
+    "dangerzone:vanilla_milkshake"
+  ]
+}

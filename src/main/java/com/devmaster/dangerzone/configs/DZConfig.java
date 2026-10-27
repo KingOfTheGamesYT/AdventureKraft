@@ -65,6 +65,18 @@ public class DZConfig {
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzinclude;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> CaptainSparkelzexclude;
 
+    public static ForgeConfigSpec.IntValue Donutmin;
+    public static ForgeConfigSpec.IntValue Donutmax;
+    public static ForgeConfigSpec.IntValue Donutweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Donutinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Donutexclude;
+
+    public static ForgeConfigSpec.IntValue Gingerbreadmin;
+    public static ForgeConfigSpec.IntValue Gingerbreadmax;
+    public static ForgeConfigSpec.IntValue Gingerbreadweight;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Gingerbreadinclude;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> Gingerbreadexclude;
+
     public static ForgeConfigSpec.IntValue Termitemin;
     public static ForgeConfigSpec.IntValue Termitemax;
     public static ForgeConfigSpec.IntValue Termiteweight;
@@ -280,6 +292,34 @@ public class DZConfig {
     public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_ENCHANTABILITY;
     public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_TOUGHNESS;
     public static ForgeConfigSpec.IntValue COPPER_LEGGINGS_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_BOOTS_DURABILTY;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_BOOTS_HIT_COST;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_BOOTS_ARMOR;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_BOOTS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_BOOTS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_BOOTS_KNOCK_BACK_RESISTANCE;
+
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_CHESTPLATE_DURABILITY;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_CHESTPLATE_HIT_COST;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_CHESTPLATE_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_CHESTPLATE_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_CHESTPLATE_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_CHESTPLATE_ARMOR;
+
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_LEGGINGS_DURABILITY;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_LEGGINGS_HIT_COST;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_LEGGINGS_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_LEGGINGS_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_LEGGINGS_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_LEGGINGS_ARMOR;
+
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_HELMET_DURABILITY;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_HELMET_HIT_COST;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_HELMET_ENCHANTABILITY;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_HELMET_TOUGHNESS;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_HELMET_KNOCK_BACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue COTTON_CANDY_HELMET_ARMOR;
 
     public static ForgeConfigSpec.IntValue EMERALD_BOOTS_ARMOR;
     public static ForgeConfigSpec.IntValue EMERALD_BOOTS_DURABILITY;
@@ -639,6 +679,26 @@ public class DZConfig {
         CaveFisherexclude = builder.defineList("exclude CaveFisher", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
         builder.pop();
 
+        builder.push("Donut Spawn Chances");
+        Donutmin = builder.defineInRange("Donut Min", 1, 0, 640);
+        Donutmax = builder.defineInRange("Donut Max", 3, 0, 640);
+        Donutweight = builder.defineInRange("Donut Weight", 4, 0, 100);
+        builder.pop();
+        builder.push("Donut Biomes Whitelist/Blacklist");
+        Donutinclude = builder.defineList("include Donut", Arrays.asList(SNOWY.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        Donutexclude = builder.defineList("exclude donut", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
+
+        builder.push("Gingerbread Spawn Chances");
+        Gingerbreadmin = builder.defineInRange("Gingerbread Min", 1, 0, 640);
+        Gingerbreadmax = builder.defineInRange("Gingerbread Max", 3, 0, 640);
+        Gingerbreadweight = builder.defineInRange("Gingerbread Weight", 4, 0, 100);
+        builder.pop();
+        builder.push("Gingerbread Biomes Whitelist/Blacklist");
+        Gingerbreadinclude = builder.defineList("include Gingerbread", Arrays.asList(SNOWY.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        Gingerbreadexclude = builder.defineList("exclude Gingerbread", Arrays.asList(OCEAN.toString(), END.toString(), NETHER.toString()), o -> o instanceof String && (o.equals("") || BiomeDictionary.Type.getAll().contains(BiomeDictionaryHelper.getType(o.toString()))));
+        builder.pop();
+
         builder.push("Red Ant Spawn Chances");
         RedAntmin = builder.defineInRange("Red Ant Min", 1, 0, 640);
         RedAntmax = builder.defineInRange("Red Ant Max", 5, 0, 640);
@@ -981,6 +1041,35 @@ public class DZConfig {
         COPPER_BOOTS_ENCHANTABILITY = builder.comment("Copper Boots Enchantability").defineInRange("COPPER_BOOTS_ENCHANTABILITY", 6, 0, 1000);
         COPPER_BOOTS_TOUGHNESS = builder.comment("Copper Boots Toughness").defineInRange("COPPER_BOOTS_TOUGHNESS", 0, 0, 1000);
         COPPER_BOOTS_KNOCK_BACK_RESISTANCE = builder.comment("Copper Boots Knockback Resistance").defineInRange("COPPER_BOOTS_KNOCK_BACK_RESISTANCE", 0, 0, 1000);
+
+        builder.comment("Cotton Candy Set Attributes");
+        COTTON_CANDY_HELMET_ARMOR = builder.comment("How much armor the Cotton Candy Helmet Has").defineInRange("COTTON_CANDY_HELMET_ARMOR", 4, 0, 1000);
+        COTTON_CANDY_HELMET_ENCHANTABILITY = builder.comment("Cotton Candy Helmet Enchantability").defineInRange("COTTON_CANDY_HELMET_ENCHANTABILITY", 16, 0, 1000);
+        COTTON_CANDY_HELMET_TOUGHNESS = builder.comment("Cotton Candy Helmet Toughness").defineInRange("COTTON_CANDY_HELMET_TOUGHNESS", 3, 0, 1000);
+        COTTON_CANDY_HELMET_KNOCK_BACK_RESISTANCE = builder.comment("Cotton Candy Helmet Knockback Resistance").defineInRange("COTTON_CANDY_HELMET_KNOCK_BACK_RESISTANCE", 2, 0, 1000);
+        COTTON_CANDY_HELMET_DURABILITY = builder.comment("Cotton Candy Helmet Durability").defineInRange("COTTON_CANDY_HELMET_DURABILITY", 1456, 0, 10000);
+        COTTON_CANDY_HELMET_HIT_COST = builder.comment("How much durability a Cotton Candy helmet loses when a entity hits").defineInRange("COTTON_CANDY_HELMET_HIT_COST", 1, 0, 1000);
+
+        COTTON_CANDY_CHESTPLATE_ARMOR = builder.comment("How much armor the Cotton Candy Chestplate has").defineInRange("COTTON_CANDY_CHESTPLATE_ARMOR", 9, 0, 1000);
+        COTTON_CANDY_CHESTPLATE_ENCHANTABILITY = builder.comment("Cotton Candy Chestplate Enchantability").defineInRange("COTTON_CANDY_CHESTPLATE_ENCHANTABILITY", 16, 0, 1000);
+        COTTON_CANDY_CHESTPLATE_TOUGHNESS = builder.comment("Cotton Candy Boots Toughness").defineInRange("COTTON_CANDY_CHESTPLATE_TOUGHNESS", 3, 0, 1000);
+        COTTON_CANDY_CHESTPLATE_KNOCK_BACK_RESISTANCE = builder.comment("Cotton Candy Chestplate  Knockback Resistance").defineInRange("COTTON_CANDY_CHESTPLATE_KNOCK_BACK_RESISTANCE", 2, 0, 1000);
+        COTTON_CANDY_CHESTPLATE_DURABILITY = builder.comment("Cotton Candy Chestplate Durability").defineInRange("COTTON_CANDY_CHESTPLATE_DURABILITY", 1456, 0, 10000);
+        COTTON_CANDY_CHESTPLATE_HIT_COST = builder.comment("How much durability a Cotton Candy chestplate loses when a entity hits").defineInRange("COTTON_CANDY_CHESTPLATE_HIT_COST", 1, 0, 1000);
+
+        COTTON_CANDY_LEGGINGS_ARMOR = builder.comment("How much armor the Cotton Candy Leggings have").defineInRange("COTTON_CANDY_LEGGINGS_ARMOR", 7, 0, 1000);
+        COTTON_CANDY_LEGGINGS_ENCHANTABILITY = builder.comment("Cotton Candy Leggings Enchantability").defineInRange("COTTON_CANDY_LEGGINGS_ENCHANTABILITY", 16, 0, 1000);
+        COTTON_CANDY_LEGGINGS_TOUGHNESS = builder.comment("Cotton Candy Leggings Toughness").defineInRange("COTTON_CANDY_LEGGINGS_TOUGHNESS", 3, 0, 1000);
+        COTTON_CANDY_LEGGINGS_KNOCK_BACK_RESISTANCE = builder.comment("Cotton Candy Leggings Knockback Resistance").defineInRange("COTTON_CANDY_LEGGINGS_KNOCK_BACK_RESISTANCE", 2, 0, 1000);
+        COTTON_CANDY_LEGGINGS_DURABILITY = builder.comment("Cotton Candy Leggings Durability").defineInRange("COTTON_CANDY_LEGGINGS_DURABILITY", 1456, 0, 10000);
+        COTTON_CANDY_LEGGINGS_HIT_COST = builder.comment("How much durability the Cotton Candy leggings lose when a entity hits").defineInRange("COTTON_CANDY_LEGGINGS_HIT_COST", 1, 0, 1000);
+
+        COTTON_CANDY_BOOTS_DURABILTY = builder.comment("Cotton Candy Boots Durability").defineInRange("COTTON_CANDY_BOOTS_DURABILITY", 1456, 0, 10000);
+        COTTON_CANDY_BOOTS_HIT_COST = builder.comment("How much durability the Cotton Candy boots lose when a entity hits").defineInRange("COTTON_CANDY_BOOTS_HIT_COST", 1, 0, 1000);
+        COTTON_CANDY_BOOTS_ARMOR = builder.comment("How much armor the Cotton Candy boots have").defineInRange("COTTON_CANDY_BOOTS_ARMOR", 4, 0, 1000);
+        COTTON_CANDY_BOOTS_ENCHANTABILITY = builder.comment("Cotton Candy Boots Enchantability").defineInRange("COTTON_CANDY_BOOTS_ENCHANTABILITY", 16, 0, 1000);
+        COTTON_CANDY_BOOTS_TOUGHNESS = builder.comment("Cotton Candy Boots Toughness").defineInRange("COTTON_CANDY_BOOTS_TOUGHNESS", 3, 0, 1000);
+        COTTON_CANDY_BOOTS_KNOCK_BACK_RESISTANCE = builder.comment("Cotton Candy Boots Knockback Resistance").defineInRange("COTTON_CANDY_BOOTS_KNOCK_BACK_RESISTANCE", 2, 0, 1000);
 
         builder.comment("Emerald Set Attributes");
         EMERALD_AXE_DAMAGE = builder.comment("Emerald Axe Damage").defineInRange("EMERALD_AXE_DAMAGE", 16, 0, 1000);

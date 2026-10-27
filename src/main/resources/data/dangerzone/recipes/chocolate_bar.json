@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "CC ",
+    "## "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "C": {
+      "item": "minecraft:cocoa_beans"
+    }
+  },
+  "result": {
+    "item": "dangerzone:chocolate_bar",
+    "count": 1
+  }
+
+}
