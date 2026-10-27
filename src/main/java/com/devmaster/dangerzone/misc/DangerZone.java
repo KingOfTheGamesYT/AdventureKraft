@@ -51,6 +51,7 @@ public class DangerZone {
     public static final ItemGroup  BLOCKS = new DangerZoneBlocks();
     public static final ItemGroup  PETRIFIED_ORES = new DangerZonePetrifiedOres();
     public static final ItemGroup  FOOD = new DangerZoneFood();
+    public static final ItemGroup  SPAWN = new DangerZoneSpawnEggs();
     public static final ItemGroup WIP = new DangerZoneWIP();
     public static final ITag.INamedTag<Block> MINERS_DREAM_MINEABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":miners_dream_breakable");
     public static final ITag.INamedTag<Block> GODZILLA_DESTROYABLE = BlockTags.makeWrapperTag(DangerZone.MOD_ID+":godzilla_breakable");

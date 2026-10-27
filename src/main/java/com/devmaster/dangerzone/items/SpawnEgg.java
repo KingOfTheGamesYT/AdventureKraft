@@ -23,6 +23,7 @@ import java.util.*;
 
 public class SpawnEgg extends SpawnEggItem {
     protected static final List<SpawnEgg> UNADDED_EGGS = new ArrayList<>();
+    public static final List<SpawnEgg> ALL_SPAWN_EGGS = new ArrayList<>();
     private final Lazy<? extends EntityType<?>> entityTypeSupplier;
     private String[] info = new String[0];
 
@@ -30,12 +31,14 @@ public class SpawnEgg extends SpawnEggItem {
         super(null, primaryColor, secondaryColor, properties);
         this.entityTypeSupplier = Lazy.of(() -> entityType);
         UNADDED_EGGS.add(this);
+        ALL_SPAWN_EGGS.add(this);
     }
 
     public SpawnEgg(RegistryObject<? extends EntityType<?>> entityTypeSupplier, int primaryColor, int secondaryColor, Properties properties) {
         super(null, primaryColor, secondaryColor, properties);
         this.entityTypeSupplier = Lazy.of(entityTypeSupplier);
         UNADDED_EGGS.add(this);
+        ALL_SPAWN_EGGS.add(this);
     }
 
     public static void initSpawnEggs() {

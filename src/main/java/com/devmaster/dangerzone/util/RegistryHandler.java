@@ -538,47 +538,47 @@ public class RegistryHandler {
     //Spawn Eggs
 
     //Ambient
-    public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", () -> new SpawnEgg(RegistryHandler.BIRD, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<SpawnEgg> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg", () -> new SpawnEgg(RegistryHandler.BUTTERFLY, 0, 0, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<Item> BIRD_SPAWN_EGG = ITEMS.register("bird_spawn_egg", () -> new SpawnEgg(RegistryHandler.BIRD, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
+    public static final RegistryObject<SpawnEgg> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg", () -> new SpawnEgg(RegistryHandler.BUTTERFLY, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
     public static final RegistryObject<Item> FIRE_FISH_SPAWN_EGG = ITEMS.register("fire_fish_spawn_egg", () -> new BaseItem(DangerZone.WIP).addInfo("\u00A75" + "You can look but, not touch" + "\u00A75"));
 
     //Animals
     public static final RegistryObject<Item> BEAVER_SPAWN_EGG = ITEMS.register("beaver_spawn_egg", () -> new BaseItem(DangerZone.WIP).addInfo("\u00A76" + "How much wood does a beaver chuck?" + "\u00A76"));
-    public static final RegistryObject<SpawnEgg> EASTER_BUNNY_SPAWN_EGG = ITEMS.register("easter_bunny_spawn_egg", () -> new SpawnEgg(RegistryHandler.EASTER_BUNNY, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<SpawnEgg> RED_COW_SPAWN_EGG = ITEMS.register("red_cow_spawn_egg", () -> new SpawnEgg(RegistryHandler.RED_COW, 0, 0, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> EASTER_BUNNY_SPAWN_EGG = ITEMS.register("easter_bunny_spawn_egg", () -> new SpawnEgg(RegistryHandler.EASTER_BUNNY, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
+    public static final RegistryObject<SpawnEgg> RED_COW_SPAWN_EGG = ITEMS.register("red_cow_spawn_egg", () -> new SpawnEgg(RegistryHandler.RED_COW, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
 
     //Ants
-    public static final RegistryObject<SpawnEgg> RAINBOW_ANT_SPAWN_EGG = ITEMS.register("rainbow_ant_spawn_egg", () -> new SpawnEgg(RegistryHandler.RAINBOWANT, 0, 0, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> RAINBOW_ANT_SPAWN_EGG = ITEMS.register("rainbow_ant_spawn_egg", () -> new SpawnEgg(RegistryHandler.RAINBOWANT, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
     //public static final RegistryObject<SpawnEgg> RED_ANT_SPAWN_EGG = ITEMS.register("red_ant_spawn_egg", () -> new SpawnEgg(RegistryHandler.RED_ANT, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<SpawnEgg> TERMITE_SPAWN_EGG = ITEMS.register("termite_spawn_egg", () -> new SpawnEgg(RegistryHandler.TERMITE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> TERMITE_SPAWN_EGG = ITEMS.register("termite_spawn_egg", () -> new SpawnEgg(RegistryHandler.TERMITE, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
 
     //Bosses
-    public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", () -> new SpawnEgg(RegistryHandler.ALLOSAURUS, 0, 0, new Item.Properties().group(DangerZone.TAB)).addInfo("\u00A76" + "The dino that rivals the t-rex" + "\u00A76"));
-    public static final RegistryObject<Item> GODZILLA_SPAWN_EGG = ITEMS.register("godzilla_spawn_egg", () -> new SpawnEgg(RegistryHandler.GODZILLA, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<SpawnEgg> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEgg(RegistryHandler.REDROSEWARRIOR, 0, 0, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg", () -> new SpawnEgg(RegistryHandler.ALLOSAURUS, 0, 0, new Item.Properties().group(DangerZone.SPAWN)).addInfo("\u00A76" + "The dino that rivals the t-rex" + "\u00A76"));
+    public static final RegistryObject<Item> GODZILLA_SPAWN_EGG = ITEMS.register("godzilla_spawn_egg", () -> new SpawnEgg(RegistryHandler.GODZILLA, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
+    public static final RegistryObject<SpawnEgg> REDROSEWARRIOR_SPAWN_EGG = ITEMS.register("redrosewarrior_spawn_egg", () -> new SpawnEgg(RegistryHandler.REDROSEWARRIOR, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
     //public static final RegistryObject<Item> TREX_SPAWN_EGG = ITEMS.register("trex_spawn_egg", TrexSpawnEgg::new);
 
     //Hostile Land
-    public static final RegistryObject<SpawnEgg> DONUT_SPAWN_EGG = ITEMS.register("donut_spawn_egg", () -> new SpawnEgg(RegistryHandler.DONUT, 0, 0, new Item.Properties().group(DangerZone.TAB)).addInfo("\u00A76" + "Thank you for 21k downloads" + "\u00A76"));
-    public static final RegistryObject<SpawnEgg> ENT_SPAWN_EGG = ITEMS.register("ent_spawn_egg", () -> new SpawnEgg(RegistryHandler.ENT, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<SpawnEgg> GINGERBREAD_SPAWN_EGG = ITEMS.register("gingerbread_spawn_egg", () -> new SpawnEgg(RegistryHandler.GINGERBREAD, 0, 0, new Item.Properties().group(DangerZone.TAB)).addInfo("\u00A76" + "Thank you for 22k downloads <3" + "\u00A76"));
+    public static final RegistryObject<SpawnEgg> DONUT_SPAWN_EGG = ITEMS.register("donut_spawn_egg", () -> new SpawnEgg(RegistryHandler.DONUT, 0, 0, new Item.Properties().group(DangerZone.SPAWN)).addInfo("\u00A76" + "Thank you for 21k downloads" + "\u00A76"));
+    public static final RegistryObject<SpawnEgg> ENT_SPAWN_EGG = ITEMS.register("ent_spawn_egg", () -> new SpawnEgg(RegistryHandler.ENT, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
+    public static final RegistryObject<SpawnEgg> GINGERBREAD_SPAWN_EGG = ITEMS.register("gingerbread_spawn_egg", () -> new SpawnEgg(RegistryHandler.GINGERBREAD, 0, 0, new Item.Properties().group(DangerZone.SPAWN)).addInfo("\u00A76" + "Thank you for 22k downloads <3" + "\u00A76"));
     public static final RegistryObject<Item> MOLDY_SPAWN_EGG = ITEMS.register("moldy_spawn_egg", () -> new BaseItem(DangerZone.WIP).addInfo("\u00A7b" + "Yuck who knows what this spawns" + "\u00A7b"));
     public static final RegistryObject<Item> ROBO_BOMB_SPAWN_EGG = ITEMS.register("robo-bomb_spawn_egg", () -> new BaseItem(DangerZone.WIP).addInfo("\u00A70" + "Boom" + "\u00A70"));
     //public static final RegistryObject<Item> SCORPION_SPAWN_EGG = ITEMS.register("scorpion_spawn_egg", ScorpionSpawnEgg::new);
 
     //Hostile Water
-    public static final RegistryObject<SpawnEgg> ATTACK_SQUID_SPAWN_EGG = ITEMS.register("attack_squid_spawn_egg", () -> new SpawnEgg(RegistryHandler.ATTACK_SQUID, 0, 0,new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> ATTACK_SQUID_SPAWN_EGG = ITEMS.register("attack_squid_spawn_egg", () -> new SpawnEgg(RegistryHandler.ATTACK_SQUID, 0, 0,new Item.Properties().group(DangerZone.SPAWN)));
 
     //Neutural
     //public static final RegistryObject<Item> IRON_GOLEM_SPAWN_EGG = ITEMS.register("iron_golem_spawn_egg", () -> new SpawnEgg(EntityType.IRON_GOLEM, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", () -> new SpawnEgg(RegistryHandler.MERMAID, 0, 0, new Item.Properties().group(DangerZone.TAB)).addInfo("\u00A7b" + "The little mermaid" + "\u00A7b"));
+    public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg", () -> new SpawnEgg(RegistryHandler.MERMAID, 0, 0, new Item.Properties().group(DangerZone.SPAWN)).addInfo("\u00A7b" + "The little mermaid" + "\u00A7b"));
     //public static final RegistryObject<Item> SNOW_GOLEM_SPAWN_EGG = ITEMS.register("snow_golem_spawn_egg", () -> new SpawnEgg(EntityType.SNOW_GOLEM, 0, 0, new Item.Properties().group(DangerZone.TAB)));
 
     //Youtubers
-    public static final RegistryObject<SpawnEgg> NOTBREEBREE_SPAWN_EGG = ITEMS.register("notbreebree_spawn_egg", () -> new SpawnEgg(RegistryHandler.NOTBREEBREE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<SpawnEgg> STAMPYLONGNOSE_SPAWN_EGG = ITEMS.register("stampylongnose_spawn_egg", () -> new SpawnEgg(RegistryHandler.STAMPYLONGNOSE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<SpawnEgg> TECHNOBLADE_SPAWN_EGG = ITEMS.register("technoblade_spawn_egg", () -> new SpawnEgg(RegistryHandler.TECHNOBLADE, 0, 0, new Item.Properties().group(DangerZone.TAB)));
-    public static final RegistryObject<SpawnEgg> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEgg(RegistryHandler.TEWTIY, 0, 0, new Item.Properties().group(DangerZone.TAB)));
+    public static final RegistryObject<SpawnEgg> NOTBREEBREE_SPAWN_EGG = ITEMS.register("notbreebree_spawn_egg", () -> new SpawnEgg(RegistryHandler.NOTBREEBREE, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
+    public static final RegistryObject<SpawnEgg> STAMPYLONGNOSE_SPAWN_EGG = ITEMS.register("stampylongnose_spawn_egg", () -> new SpawnEgg(RegistryHandler.STAMPYLONGNOSE, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
+    public static final RegistryObject<SpawnEgg> TECHNOBLADE_SPAWN_EGG = ITEMS.register("technoblade_spawn_egg", () -> new SpawnEgg(RegistryHandler.TECHNOBLADE, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
+    public static final RegistryObject<SpawnEgg> TEWTIY_SPAWN_EGG = ITEMS.register("tewtiy_spawn_egg", () -> new SpawnEgg(RegistryHandler.TEWTIY, 0, 0, new Item.Properties().group(DangerZone.SPAWN)));
 
     //SOUNDS
     public static final RegistryObject<SoundEvent> AMOXICILLIN_AMBIENT = SOUNDS.register("amoxcillin_ambient", () -> new SoundEvent(new ResourceLocation(DangerZone.MOD_ID , "amoxcillin_ambient")));
